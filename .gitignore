@@ -1,0 +1,14 @@
+# Ignore generated assets
+_site
+
+# Ignore asset caches
+.jekyll-assets-cache
+.sass-cache
+
+# Ignore package manager stuff
+.bundle/gems
+node_modules
+npm-debug.log
+
+# Ignore other stuff
+.DS_Store
