@@ -59,7 +59,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
-    .pipe(gulp.dest('_includes'))
+    // .pipe(gulp.dest('_includes')) // uncomment to create inline CSS file
     .pipe(reload({stream: true}));
 });
 
