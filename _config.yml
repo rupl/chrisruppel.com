@@ -16,6 +16,7 @@ collections:
   trips:
     output: true
     permalink: /travel/:title/
+    layout: "trip"
 
 # Site-wide settings
 defaults:

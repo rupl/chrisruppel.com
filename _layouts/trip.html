@@ -1,0 +1,24 @@
+---
+layout: page
+---
+
+<article class="trip">
+  <h1 id="title">{{ page.title }}</h1>
+  <aside class="summary">{{ page.summary }}</aside>
+  {{ page.content }}
+
+  <section class="links">
+    <h2 id="links" class="element-invisible">Links</h2>
+    {% if page.links != null %}
+      <p>Here are some nice stops in {{ page.title }}</p>
+      <ul>
+        {% for link in page.links %}
+          <li><a class="type-{{ link.type }}" href="{{ link.href }}">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <ul></ul>
+  </section>
+
+  <a class="back" href="/travel/">Back to Travel</a>
+</article>

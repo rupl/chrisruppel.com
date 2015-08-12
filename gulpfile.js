@@ -86,7 +86,7 @@ gulp.task('bs', 'Run dev tasks:', ['sass', 'imagemin', 'jekyll', 'browser-sync',
 gulp.task('watch', 'Watch various files for changes and re-compile them.', function() {
   gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch('_img/**/*', ['imagemin']);
-  gulp.watch(['_config*', './**/*.{md,html}', '!./_site/**/*.*'], ['jekyll']);
+  gulp.watch(['_config*', '**/*.{md,html}', '!_site/**/*.*'], ['jekyll']);
 });
 
 // Add a default task to render the available commands.
