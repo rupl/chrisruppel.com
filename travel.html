@@ -1,0 +1,24 @@
+---
+title: Travel
+slug: travel
+---
+
+<section aria-labelledby="{{ page.slug }}">
+  <h1 id="{{ page.slug }}">Travel</h1>
+
+  <p>I love to travel with my girlfriend Karin. I started writing about our trips to help preserve the memories.</p>
+
+  <div class="trip-list">
+    {% for trip in site.trips reversed %}
+      <article class="teaser" about="{{ trip.url }}">
+        <h2><a href="{{ trip.url }}">{{ trip.title }}</a></h2>
+        <p>{{ trip.summary }}</p>
+        <ul class="links">
+          {% for link in trip.links %}
+            <li><a class="type-{{ link.type }}" href="{{ link.href }}" title="{{ link.text }}"></a></li>
+          {% endfor %}
+        </ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>
