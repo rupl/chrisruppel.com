@@ -11,6 +11,7 @@ var reload = bs.reload;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var minCSS = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
@@ -63,6 +64,16 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
     .pipe(reload({stream: true}));
 });
 
+//////////////////////////////
+// Minify images
+//////////////////////////////
+gulp.task('js', 'Lint, bundle, minify JS', function() {
+  return gulp.src('_js/**/*.js')
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('_site/js'));
+});
 
 //////////////////////////////
 // Minify images
@@ -80,12 +91,13 @@ gulp.task('imagemin', 'Compress images.', function() {
 //////////////////////////////
 // BrowserSync + Gulp watch
 //////////////////////////////
-gulp.task('bs', 'Run dev tasks:', ['sass', 'imagemin', 'jekyll', 'browser-sync', 'watch']);
+gulp.task('bs', 'Run dev tasks:', ['sass', 'js', 'imagemin', 'jekyll', 'browser-sync', 'watch']);
 
 // Watch Files For Changes
 gulp.task('watch', 'Watch various files for changes and re-compile them.', function() {
   gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch('_img/**/*', ['imagemin']);
+  gulp.watch('_js/**/*', ['js']);
   gulp.watch(['_config*', '**/*.{md,html}', '!_site/**/*.*'], ['jekyll']);
 });
 

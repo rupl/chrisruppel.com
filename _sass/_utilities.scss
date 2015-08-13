@@ -1,4 +1,11 @@
 //
+// box model
+//
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+//
 // Hide elements from all users.
 //
 // Used for elements which should not be immediately displayed to any user. An

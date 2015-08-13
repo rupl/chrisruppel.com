@@ -16,7 +16,7 @@ html, body {
 }
 
 main {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1em;
 }
@@ -64,8 +64,32 @@ main {
   .photos {
 
   }
+
+  .links {
+    padding: 1em;
+    background: #eee;
+    border-radius: 3px;
+
+    p:first-of-type {
+      margin-top: .5em;
+    }
+    ul:last-of-type {
+      margin-bottom: .5em;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .links {
+      float: left;
+      width: 50%;
+      margin-right: 1em;
+      margin-left: -15%;
+      margin-bottom: 1em;
+    }
+  }
 }
 
+// Global links styles
 .links {
   a {
     &::before {
