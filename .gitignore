@@ -1,6 +1,9 @@
 # Ignore generated assets
 _site
 
+# Development and test settings
+_config.dev.yml
+
 # Ignore asset caches
 .jekyll-assets-cache
 .sass-cache
