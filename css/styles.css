@@ -101,3 +101,7 @@ main {
 
 .links .type-water::before {
   content: '\26f5'; }
+
+.map {
+  width: 100%;
+  height: 400px; }

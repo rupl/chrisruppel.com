@@ -27,3 +27,6 @@ defaults:
 
 # Google Analytics — the dev config unsets this value
 ga: 'UA-432773-8'
+
+# Mapbox
+mapboxToken: ''

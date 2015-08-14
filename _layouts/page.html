@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <title>{{ page.title }} {% if page.title != null %}&nbsp;💞 {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">{% include main.min.css %}</style>
-    <!-- <link rel="stylesheet" type="text/css" href="/css/main.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+    {% if page.mapbox == true %}
+      <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
+    {% endif %}
   </head>
   <body>
     <main>
