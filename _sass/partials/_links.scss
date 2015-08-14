@@ -1,0 +1,30 @@
+// Global links styles
+.links {
+  a {
+    &::before {
+      display: inline-block;
+      padding-right: 4px;
+      font-size: 1.1em;
+      transform: translate(0, 3px);
+    }
+  }
+
+  .type-rest::before {
+    content: '\1f3e0';
+  }
+  .type-eat::before {
+    content: '\1f374';
+  }
+  .type-drink::before {
+    content: '\1f37b';
+  }
+  .type-camp::before {
+    content: '\26fa';
+  }
+  .type-outdoors::before {
+    content: '\1f304';
+  }
+  .type-water::before {
+    content: '\26f5';
+  }
+}
