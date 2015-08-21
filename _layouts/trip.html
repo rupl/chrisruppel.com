@@ -7,6 +7,10 @@ layout: page
   <aside class="summary">{{ page.summary }}</aside>
   {{ page.content }}
 
+  {% if page.map != null %}
+    {% include map.html %}
+  {% endif %}
+
   {% if page.links != null %}
   <section class="links">
     <h2 id="links" class="element-invisible">Links</h2>

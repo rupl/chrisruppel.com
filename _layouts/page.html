@@ -5,9 +5,10 @@
     <title>{{ page.title }} {% if page.title != null %}&nbsp;💞 {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/main.min.css">
-    {% if page.mapbox == true %}
+    {% if page.map != false %}
       <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
       <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
+      <script>L.mapbox.accessToken = '{{ site.mapboxToken }}';</script>
     {% endif %}
   </head>
   <body>

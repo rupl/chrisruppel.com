@@ -1,12 +1,11 @@
 ---
 title: map
-mapbox: true
+map: true
 ---
 
 <div id='map-init' class='map'> </div>
 
 <script>
-  L.mapbox.accessToken = '{{ site.mapboxToken }}';
   var map = L.mapbox.map('map-init', 'mapbox.streets');
 
   var geocoder = L.mapbox.geocoder('mapbox.places');
