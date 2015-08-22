@@ -33,3 +33,18 @@ main {
     opacity: 1;
   }
 }
+
+
+.back {
+  clear: both;
+  display: block;
+  text-align: center;
+
+  margin-top: 1em;
+  padding: 1em;
+  background: #eee;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  color: #444;
+  text-decoration: none;
+}

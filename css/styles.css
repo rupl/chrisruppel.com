@@ -51,6 +51,18 @@ main {
   .summary:hover {
     opacity: 1; }
 
+.back {
+  clear: both;
+  display: block;
+  text-align: center;
+  margin-top: 1em;
+  padding: 1em;
+  background: #eee;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  color: #444;
+  text-decoration: none; }
+
 .trip-list {
   perspective: 3000px; }
   .trip-list .teaser {
@@ -104,4 +116,9 @@ main {
 
 .map {
   width: 100%;
-  height: 400px; }
+  height: 0;
+  padding-top: 50%; }
+  @media (min-width: 1000px) {
+    .map {
+      width: 120%;
+      margin-left: -10%; } }
