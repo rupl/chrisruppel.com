@@ -19,7 +19,7 @@
   overflow: visible;
   height: auto; }
 
-.clearfix:after {
+.clearfix:after, .trip .story:after {
   content: ".";
   display: block;
   height: 0;
@@ -76,6 +76,9 @@ main {
     padding: 0; }
     .trip-list .links li {
       display: inline-block; }
+
+.trip .story {
+  margin-bottom: 1em; }
 
 @media (min-width: 1100px) {
   .trip .photos {
