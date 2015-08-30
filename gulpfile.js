@@ -68,11 +68,14 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
 // Minify images
 //////////////////////////////
 gulp.task('js', 'Lint, bundle, minify JS', function() {
+  bs.notify('Building JS...');
+
   return gulp.src('_js/**/*.js')
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
-    .pipe(gulp.dest('_site/js'));
+    .pipe(gulp.dest('_site/js'))
+    .pipe(reload({stream: true}));
 });
 
 //////////////////////////////
