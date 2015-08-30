@@ -8,6 +8,10 @@
 
   .photos {
     margin: 1em 0;
+    background: #fff;
+    box-shadow: 0 0 15px 10px #fff;
+    cursor: zoom-in;
+    transition: transform .25s ease-in-out;
 
     @media (min-width: 1100px) {
       width: 130%;
@@ -30,6 +34,11 @@
       @media (min-width: 1100px) {
         margin: 0 20%;
       }
+    }
+
+    &.photos--expanded {
+      cursor: zoom-out;
+      transform: scale(1.4);
     }
   }
 

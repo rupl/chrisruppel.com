@@ -17,6 +17,10 @@ html, body {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 main {
   max-width: 860px;
   margin: 0 auto;

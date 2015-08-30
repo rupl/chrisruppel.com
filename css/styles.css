@@ -28,7 +28,7 @@
 
 abbr[title] {
   border-bottom: 1px dotted;
-  cursor: pointer; }
+  cursor: help; }
 
 html, body {
   padding: 0;
@@ -41,6 +41,9 @@ html, body {
   @media (min-width: 1000px) {
     html, body {
       font-size: calc(.8em + .5vw); } }
+
+body {
+  overflow-x: hidden; }
 
 main {
   max-width: 860px;
@@ -81,7 +84,11 @@ main {
   margin-bottom: 1em; }
 
 .trip .photos {
-  margin: 1em 0; }
+  margin: 1em 0;
+  background: #fff;
+  box-shadow: 0 0 15px 10px #fff;
+  cursor: zoom-in;
+  transition: transform 0.25s ease-in-out; }
   @media (min-width: 1100px) {
     .trip .photos {
       width: 130%;
@@ -99,6 +106,9 @@ main {
     @media (min-width: 1100px) {
       .trip .photos figcaption {
         margin: 0 20%; } }
+  .trip .photos.photos--expanded {
+    cursor: zoom-out;
+    transform: scale(1.4); }
 
 .trip .links {
   padding: 1em;
