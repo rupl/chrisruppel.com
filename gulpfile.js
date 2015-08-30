@@ -4,6 +4,7 @@ var u = require('gulp-util');
 var log = u.log;
 var c = u.colors;
 var spawn = require('child_process').spawn;
+var plumber = require('gulp-plumber');
 
 // Include Our Plugins
 var bs = require('browser-sync');
@@ -71,6 +72,7 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
   bs.notify('Building JS...');
 
   return gulp.src('_js/**/*.js')
+    .pipe(plumber())
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
