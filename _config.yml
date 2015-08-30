@@ -2,6 +2,7 @@ name: Chris Ruppel
 permalink: pretty
 debug: false
 development: false
+url: http://chrisruppel.com
 
 # Jekyll config
 markdown: redcarpet
@@ -16,7 +17,7 @@ collections:
   trips:
     output: true
     permalink: /travel/:title/
-    layout: "trip"
+    layout: trip
     map: false
 
 # Site-wide settings
@@ -24,7 +25,7 @@ defaults:
   - scope:
       path: "" # all files within the project
     values:
-      layout: "default"
+      layout: default
 
 # Google Analytics — the dev config unsets this value
 ga: 'UA-432773-8'
