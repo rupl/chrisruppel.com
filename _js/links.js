@@ -1,6 +1,6 @@
 var trip = document.querySelector('.story');
 var paragraphs = document.querySelectorAll('.story > p');
-var links = document.querySelector('.links');
+var links = document.querySelector('.trip .links');
 
 // If the links were found
 if (links !== null) {
