@@ -10,6 +10,8 @@ if (links !== null) {
   // Remove original links from DOM
   links.parentNode.removeChild(links);
 
-  // Re-insert links shortly before the end of the story
-  trip.insertBefore(copy, paragraphs[paragraphs.length - 3]);
+  // Re-insert links shortly before the end of the story. If the story is very
+  // short, insert them after first paragraph.
+  var position = (paragraphs[paragraphs.length - 3] > 0) ? paragraphs[paragraphs.length - 3] : paragraphs[1];
+  trip.insertBefore(copy, position);
 }
