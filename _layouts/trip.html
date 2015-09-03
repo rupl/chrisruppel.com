@@ -4,10 +4,12 @@ layout: page
 
 <article class="trip">
   <h1 id="title">{{ page.title }}</h1>
+  <h2>{{ page.date | date: "%B %d, %Y" }} in {{ page.map.location }}</h2>
+
   <aside class="summary">{{ page.summary }}</aside>
 
   <div class="story">
-    {{ page.content }}
+    {{ content }}
   </div>
 
   {% if page.map != null %}

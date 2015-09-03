@@ -1,6 +1,6 @@
 name: Chris Ruppel
 url: http://chrisruppel.com
-permalink: pretty
+permalink: /:categories/:title/
 debug: false
 development: false
 
@@ -13,22 +13,19 @@ exclude: [README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.loc
 
 # Content types
 # - Set 'output' of any collection to `true` to generate individual pages.
-collections:
-  trips:
-    output: true
-    permalink: /travel/:title/
-    map: false
-    links: false
+# collections:
 
-# Site-wide settings
+# Set defaults for various pages
 defaults:
   - scope:
-      path: "" # all files within the project
+      path: ""
     values:
       layout: default
+      map: false
   - scope:
-      type: "trips"
+      path: "travel"
     values:
+      category: travel
       layout: trip
 
 # Google Analytics — the dev config unsets this value
