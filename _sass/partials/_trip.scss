@@ -1,6 +1,15 @@
 // Full trip
 .trip {
 
+  .title {
+    float: left;
+    margin-right: 1em;
+  }
+  .subtitle {
+    float: right;
+    vertical-align: text-bottom;
+  }
+
   .story {
     @extend .clearfix;
     margin-bottom: 1em;

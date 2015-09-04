@@ -34,6 +34,9 @@ abbr[title] {
   border-bottom: 1px dotted;
   cursor: help; }
 
+abbr[lang] {
+  font-style: italic; }
+
 html, body {
   padding: 0;
   margin: 0;
@@ -57,11 +60,33 @@ main {
 img {
   max-width: 100%; }
 
-.summary {
-  font-size: 1.6em;
+.wf-oswald .title {
+  font-family: Oswald, sans-serif; }
+
+.wf-loading .title {
+  letter-spacing: -3px; }
+
+.subtitle {
   font-style: italic;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  word-spacing: -1px; }
+  .wf-oswald .subtitle {
+    font-family: Oswald, sans-serif; }
+  .wf-loading .subtitle {
+    letter-spacing: -4px; }
+
+.summary {
+  clear: both;
   opacity: .5;
-  transition: opacity 2s ease-in-out; }
+  transition: opacity 2s ease-in-out;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 300; }
+  .wf-oswald .summary {
+    font-family: Oswald, sans-serif; }
+  .wf-loading .summary {
+    letter-spacing: -4px; }
   .summary:hover {
     opacity: 1; }
 
@@ -170,15 +195,19 @@ img {
   width: 100%;
   background-position: 0 25%; }
 
-.trip-list {
-  perspective: 3000px; }
-  .trip-list .teaser {
-    transform-style: preserve-3d; }
-  .trip-list .links {
-    margin: 0;
-    padding: 0; }
-    .trip-list .links li {
-      display: inline-block; }
+.trip-list .links {
+  margin: 0;
+  padding: 0; }
+  .trip-list .links li {
+    display: inline-block; }
+
+.trip .title {
+  float: left;
+  margin-right: 1em; }
+
+.trip .subtitle {
+  float: right;
+  vertical-align: text-bottom; }
 
 .trip .story {
   margin-bottom: 1em; }

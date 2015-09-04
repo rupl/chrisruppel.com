@@ -72,7 +72,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
 gulp.task('js', 'Lint, bundle, minify JS', function() {
   bs.notify('Building JS...');
 
-  return gulp.src('_js/**/*.js')
+  return gulp.src(['node_modules/fontfaceobserver/fontfaceobserver.js', '_js/**/*.js'])
     .pipe(plumber())
     .pipe(concat('main.min.js'))
     .pipe(uglify())

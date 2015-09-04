@@ -1,18 +1,17 @@
 ---
 title: Travel
-slug: travel
 permalink: /travel/
 ---
 
-<section aria-labelledby="{{ page.slug }}">
-  <h1 id="{{ page.slug }}">Travel</h1>
+<section aria-labelledby="travel">
+  <h1 id="travel" class="title">Travel</h1>
 
   <p class="summary">I love to travel with my girlfriend Karin. I started writing about our trips to help preserve the memories.</p>
 
   <div class="trip-list">
     {% for trip in site.categories.travel %}
       <article class="teaser" about="{{ trip.url }}">
-        <h2><a href="{{ trip.url }}">{{ trip.title }}</a></h2>
+        <h2 class="title"><a href="{{ trip.url }}">{{ trip.title }}</a></h2>
         <p>{{ trip.summary }}</p>
         <ul class="links">
           {% for link in trip.links %}

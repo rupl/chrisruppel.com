@@ -4,11 +4,6 @@
 
 // styles for trips in the listing
 .trip-list {
-  perspective: 3000px; // very shallow perspective.
-
-  .teaser {
-    transform-style: preserve-3d;
-  }
 
   .links {
     margin: 0;

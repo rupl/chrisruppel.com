@@ -58,3 +58,14 @@
     visibility: hidden;
   }
 }
+
+//
+// Qualified fonts
+//
+// @see http://www.zachleat.com/web/mitt-romney-webfont-problem/
+//
+@mixin font-oswald() {
+  .wf-oswald & {
+    font-family: Oswald, sans-serif;
+  }
+}
