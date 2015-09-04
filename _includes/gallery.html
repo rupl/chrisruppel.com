@@ -1,0 +1,14 @@
+{% if include.gallery.size > 0 %}
+<figure class="gallery{% if include.gallery[0].wide == true %} wide{% else %} tall{% endif %}">
+  {% for item in include.gallery %}
+    {% if item.src != null %}
+      <span class="photo{% if item.bgsize == 'contain' %} contain{% endif %}" style="background-image: url(/img/travel/{{ item.src }}); {% if item.bgpos != null %}background-position: {{ item.bgpos }};{% endif %}">
+        <img src="/img/travel/{{ item.src }}" alt="{{ item.alt }}" data-comment="{{ item.comment }}" class="element-invisible">
+      </span>
+    {% endif %}
+    {% if item.caption != null %}
+      <figcaption>{{ item.caption }}</figcaption>
+    {% endif %}
+  {% endfor %}
+</figure>
+{% endif %}

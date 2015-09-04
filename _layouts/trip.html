@@ -4,12 +4,13 @@ layout: page
 
 <article class="trip">
   <h1 id="title">{{ page.title }}</h1>
-  <h2>{{ page.date | date: "%B %d, %Y" }} in {{ page.map.location }}</h2>
+  <h2>{{ page.date | date: "%B %d, %Y" }} in {{ page.location }}</h2>
 
   <aside class="summary">{{ page.summary }}</aside>
 
   <div class="story">
     {{ content }}
+    <div class="the-end"></div>
   </div>
 
   {% if page.map != null %}
@@ -19,7 +20,7 @@ layout: page
   {% if page.links != null %}
   <aside class="links">
     <h2 id="links" class="element-invisible">Links</h2>
-      <p>Here are some nice stops in {{ page.title }}</p>
+      <p>Here are some nice stops in {{ page.location }}</p>
       <ul>
         {% for link in page.links %}
           <li><a class="type-{{ link.type }}" href="{{ link.href }}">{{ link.text }}</a></li>

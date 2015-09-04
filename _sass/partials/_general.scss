@@ -24,7 +24,11 @@ body {
 main {
   max-width: 860px;
   margin: 0 auto;
-  padding: 1em;
+  padding: 1em 1em 10em;
+}
+
+img {
+  max-width: 100%;
 }
 
 .summary {
@@ -50,4 +54,15 @@ main {
   border-radius: 5px;
   color: #444;
   text-decoration: none;
+}
+
+.the-end {
+  margin: 1.25em 0;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 1em;
+
+  &::after {
+    content: '×××';
+  }
 }

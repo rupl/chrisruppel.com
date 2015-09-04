@@ -43,6 +43,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
   bs.notify('Sass compiling...');
 
   return gulp.src('_sass/**/*.scss')
+    .pipe(plumber())
     .pipe(sass({
       outputStyle: 'nested',
       onSuccess: function(css) {
