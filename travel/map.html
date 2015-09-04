@@ -1,11 +1,16 @@
 ---
 title: map
 permalink: /travel/map/
-map: true
+location: "Freiburg, Germany"
+map: null
 ---
 
+{% include map-include.html %}
+
+<!-- map container -->
 <div id='map-init' class='map'> </div>
 
+<!-- initialize mapbox -->
 <script>
   var map = L.mapbox.map('map-init', 'mapbox.streets');
 
@@ -13,12 +18,12 @@ map: true
   geocoder.query('Freiburg 79115 Germany', showMap);
 
   function showMap(err, data) {
-      if (data.lbounds) {
-          map.fitBounds(data.lbounds);
-          var marker = L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
-      } else if (data.latlng) {
-          map.setView([data.latlng[0], data.latlng[1]], 1);
-          L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
-      }
+    if (data.lbounds) {
+      map.fitBounds(data.lbounds);
+      var marker = L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
+    } else if (data.latlng) {
+      map.setView([data.latlng[0], data.latlng[1]], 9);
+      L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
+    }
   }
 </script>

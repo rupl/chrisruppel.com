@@ -8,12 +8,6 @@
 
     <link rel="stylesheet" type="text/css" href="/css/main.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-
-    {% if page.map != false %}
-      <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
-      <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
-      <script>L.mapbox.accessToken = '{{ site.mapboxToken }}';</script>
-    {% endif %}
   </head>
   <body>
     <main>
