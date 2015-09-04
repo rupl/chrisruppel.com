@@ -13,16 +13,11 @@ permalink: /travel/
       <article class="teaser" about="{{ trip.url }}">
         <h2 class="title"><a href="{{ trip.url }}">{{ trip.title }}</a></h2>
         <p>{{ trip.summary }}</p>
-        <ul class="links">
-          {% for link in trip.links %}
-            <li><a class="type-{{ link.type }}" href="{{ link.href }}" title="{{ link.text }}"></a></li>
-          {% endfor %}
-        </ul>
+        {% include gallery.html gallery=trip.gallery %}
+        <div class="the-end"></div>
       </article>
     {% endfor %}
   </div>
-
-  <div class="the-end"></div>
 
   <a class="back" href="/">Back to the front</a>
 </section>
