@@ -80,10 +80,20 @@ img {
   margin-top: 1em;
   padding: 1em;
   background: #eee;
-  border: 2px solid #eee;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
   border-radius: 5px;
   color: #444;
   text-decoration: none;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-image: linear-gradient(to bottom, #fff, #d5d5d5);
+  }
+
+  &:active,
+  &:focus {
+    background-image: linear-gradient(to top, #fff, #eee);
+  }
 }
 
 .the-end {
