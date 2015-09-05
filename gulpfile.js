@@ -32,7 +32,8 @@ gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
 //////////////////////////////
 gulp.task('browser-sync', false, function() {
   bs({
-    server: './_site/'
+    server: './_site/',
+    open: false
   });
 });
 
