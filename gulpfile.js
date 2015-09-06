@@ -16,6 +16,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var minCSS = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
+var changed = require('gulp-changed');
 
 //////////////////////////////
 // Jekyll
@@ -68,7 +69,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
 });
 
 //////////////////////////////
-// Minify images
+// Combine/minify JS
 //////////////////////////////
 gulp.task('js', 'Lint, bundle, minify JS', function() {
   bs.notify('Building JS...');
@@ -87,6 +88,7 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
 //////////////////////////////
 gulp.task('imagemin', 'Compress images.', function() {
   return gulp.src('_img/**/*')
+    .pipe(changed('img'))
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}]
