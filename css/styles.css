@@ -114,7 +114,8 @@ img {
   text-align: center;
   letter-spacing: 1em; }
   .the-end::after {
-    content: '×××'; }
+    content: '×××';
+    speak: none; }
 
 .gallery {
   margin: 1em;
@@ -153,7 +154,7 @@ img {
   float: left;
   width: 49%;
   padding-bottom: 33.333%;
-  margin-top: 2%;
+  margin-bottom: 2%;
   margin-right: 0;
   margin-left: 2%; }
 
@@ -163,9 +164,6 @@ img {
   padding-bottom: 104%;
   background-position: 25% 0; }
 
-.tall .photo:nth-of-type(2) {
-  margin-top: 0; }
-
 .tall .photo:nth-of-type(5) {
   clear: left;
   margin-left: 0; }
@@ -173,6 +171,17 @@ img {
 .tall .photo:last-of-type:not(:nth-of-type(even)) {
   width: 100%;
   background-position: 0 25%; }
+
+.tall .photo.wide {
+  float: none;
+  clear: both;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  background-position: 0 calc(100% / 3); }
+
+.tall .photo.wide ~ .photo:nth-of-type(odd) {
+  margin-left: 0; }
 
 .wide .photo {
   float: left;

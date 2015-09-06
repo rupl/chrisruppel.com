@@ -71,7 +71,7 @@
     float: left;
     width: 49%;
     padding-bottom: 33.333%;
-    margin-top: 2%;
+    margin-bottom: 2%;
     margin-right: 0;
     margin-left: 2%;
   }
@@ -84,11 +84,6 @@
     background-position: 25% 0;
   }
 
-  // second photo
-  .photo:nth-of-type(2) {
-    margin-top: 0;
-  }
-
   // first column underneath tall photo
   .photo:nth-of-type(5) {
     clear: left;
@@ -99,6 +94,23 @@
   .photo:last-of-type:not(:nth-of-type(even)) {
     width: 100%;
     background-position: 0 25%;
+  }
+
+  //
+  // wide photos
+  //
+  .photo.wide {
+    float: none;
+    clear: both;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-position: 0 calc(100% / 3);
+  }
+
+  // reset the clearing after the photo
+  .photo.wide ~ .photo:nth-of-type(odd) {
+    margin-left: 0;
   }
 }
 
