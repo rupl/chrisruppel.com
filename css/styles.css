@@ -117,6 +117,10 @@ img {
     content: '×××';
     speak: none; }
 
+.websites dd {
+  margin: 0;
+  margin-bottom: 1em; }
+
 .gallery {
   margin: 1em 0;
   padding: 4%;
