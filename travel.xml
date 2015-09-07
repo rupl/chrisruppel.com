@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="{{ site.url }}/travel.xml" rel="self" type="application/rss+xml" />
+    <title>{{ site.name }}</title>
+    <link>{{ site.url }}</link>
+    <description>A travel blog detailing the adventures of Chris Ruppel.</description>
+    <language>en</language>
+
+    {% for trip in site.categories.travel limit:20 %}
+    <item>
+      <title>{{ trip.title }}</title>
+      <link>{{ trip.url }}</link>
+      <description>{{ trip.summary | xml_escape }}</description>
+      <guid isPermaLink="true">{{ site.url }}{{ trip.url }}</guid>
+      <pubDate>{{ trip.date | date_to_rfc822 }}</pubDate>
+    </item>
+    {% endfor %}
+
+  </channel>
+</rss>
