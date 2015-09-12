@@ -1,5 +1,8 @@
 # Ignore generated assets
 _site
+.publish
+img
+_includes/main.min.css
 
 # Development and test settings
 _config.dev.yml

@@ -19,9 +19,9 @@ var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 var deploy = require('gulp-gh-pages');
 
-//////////////////////////////
+// -----------------------------------------------------------------------------
 // Jekyll
-//////////////////////////////
+// -----------------------------------------------------------------------------
 gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
   bs.notify('Jekyll building...');
 
@@ -29,9 +29,9 @@ gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
     .on('close', reload);
 });
 
-//////////////////////////////
+// -----------------------------------------------------------------------------
 // BrowserSync
-//////////////////////////////
+// -----------------------------------------------------------------------------
 gulp.task('browser-sync', false, function() {
   bs({
     server: './_site/',
@@ -39,9 +39,9 @@ gulp.task('browser-sync', false, function() {
   });
 });
 
-//////////////////////////////
+// -----------------------------------------------------------------------------
 // Sass
-//////////////////////////////
+// -----------------------------------------------------------------------------
 gulp.task('sass', 'Compiles Sass using libsass.', function () {
   bs.notify('Sass compiling...');
 
@@ -69,9 +69,9 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
     .pipe(reload({stream: true}));
 });
 
-//////////////////////////////
+// -----------------------------------------------------------------------------
 // Combine/minify JS
-//////////////////////////////
+// -----------------------------------------------------------------------------
 gulp.task('js', 'Lint, bundle, minify JS', function() {
   bs.notify('Building JS...');
 
@@ -84,9 +84,9 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
     .pipe(reload({stream: true}));
 });
 
-//////////////////////////////
+// -----------------------------------------------------------------------------
 // Minify images
-//////////////////////////////
+// -----------------------------------------------------------------------------
 gulp.task('imagemin', 'Compress images.', function() {
   return gulp.src('_img/**/*')
     .pipe(changed('img'))
@@ -98,9 +98,9 @@ gulp.task('imagemin', 'Compress images.', function() {
 });
 
 
-//////////////////////////////
+// -----------------------------------------------------------------------------
 // BrowserSync + Gulp watch
-//////////////////////////////
+// -----------------------------------------------------------------------------
 gulp.task('bs', 'Run dev tasks:', ['sass', 'js', 'imagemin', 'jekyll', 'browser-sync', 'watch']);
 
 // Watch Files For Changes
@@ -114,9 +114,9 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
 // Add a default task to render the available commands.
 gulp.task('default', false, ['help']);
 
-//////////////////////////////
+// -----------------------------------------------------------------------------
 // Deploy to gh-pages
-//////////////////////////////
+// -----------------------------------------------------------------------------
 gulp.task('deploy', 'Deploy site to gh-pages', function() {
   return gulp.src('./_site/**/*')
     .pipe(deploy());
