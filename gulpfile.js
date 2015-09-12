@@ -29,6 +29,12 @@ gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
     .on('close', reload);
 });
 
+gulp.task('jekyll-deploy', 'Compiles Jekyll site to deploy.', function() {
+  bs.notify('Jekyll building...');
+
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'});
+});
+
 // -----------------------------------------------------------------------------
 // BrowserSync
 // -----------------------------------------------------------------------------
@@ -117,7 +123,7 @@ gulp.task('default', false, ['help']);
 // -----------------------------------------------------------------------------
 // Deploy to gh-pages
 // -----------------------------------------------------------------------------
-gulp.task('deploy', 'Deploy site to gh-pages', function() {
+gulp.task('deploy', 'Deploy site to gh-pages', ['jekyll-deploy'], function() {
   return gulp.src('./_site/**/*')
     .pipe(deploy());
 });
