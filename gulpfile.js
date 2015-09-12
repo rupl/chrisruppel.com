@@ -17,6 +17,7 @@ var uglify = require('gulp-uglify');
 var minCSS = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
+var deploy = require('gulp-gh-pages');
 
 //////////////////////////////
 // Jekyll
@@ -112,3 +113,11 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
 
 // Add a default task to render the available commands.
 gulp.task('default', false, ['help']);
+
+//////////////////////////////
+// Deploy to gh-pages
+//////////////////////////////
+gulp.task('deploy', 'Deploy site to gh-pages', function() {
+  return gulp.src('./_site/**/*')
+    .pipe(deploy());
+});
