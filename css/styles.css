@@ -76,18 +76,18 @@ img {
   .wf-loading .subtitle {
     letter-spacing: -4px; }
 
-.summary {
+.summary, .hello {
   clear: both;
   opacity: .5;
   transition: opacity 2s ease-in-out;
   font-size: 1.6em;
   font-style: normal;
   font-weight: 300; }
-  .wf-oswald .summary {
+  .wf-oswald .summary, .wf-oswald .hello {
     font-family: Oswald, sans-serif; }
-  .wf-loading .summary {
+  .wf-loading .summary, .wf-loading .hello {
     letter-spacing: -4px; }
-  .summary:hover {
+  .summary:hover, .hello:hover {
     opacity: 1; }
 
 .back {
@@ -117,6 +117,35 @@ img {
     content: '×××';
     speak: none; }
 
+.front-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.front-nav a {
+  display: block;
+  float: left;
+  width: 49%;
+  height: 0;
+  padding-top: 20%;
+  padding-bottom: 29%;
+  margin-right: 1%;
+  background: #f7f7f7;
+  background-image: linear-gradient(to bottom, #fafafa, #bbb);
+  border-radius: 2%;
+  box-shadow: inset 0 0 62px white, 0 0 1px 1px rgba(51, 51, 51, 0.1);
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #fff;
+  transition: background-position 1s ease-in-out; }
+  .wf-oswald .front-nav a {
+    font-family: Oswald, sans-serif; }
+
+.front-nav a:hover {
+  background: #ddd;
+  text-shadow: -1px -1px 1px #fff; }
+
 .websites dd {
   margin: 0;
   margin-bottom: 1em; }
@@ -124,7 +153,8 @@ img {
 .gallery {
   margin: 1em 0;
   padding: 4%;
-  background: #000; }
+  background: #000;
+  border-radius: 4px; }
   @media (min-width: 1100px) {
     .gallery {
       width: 140%;
@@ -295,7 +325,7 @@ img {
   background: #111;
   color: #ddd; }
 
-.dark .summary {
+.dark .summary, .dark .hello {
   opacity: .75; }
 
 .dark :link {

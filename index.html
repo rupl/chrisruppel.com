@@ -3,8 +3,15 @@ title: Howdy
 permalink: /
 ---
 
-<p>
-  I'm <strong>Chris Ruppel</strong>.
-  I'm a web developer and I love to <a href="/travel/">travel</a>.
-  Home is currently Freiburg, Germany.
+<p class="hello">
+  I'm <strong>Chris Ruppel</strong>.<br>
+  I'm a web developer and traveler.<br>
+  I'm currently in {{ site.categories.travel[0].location }}.<br>
 </p>
+
+<nav class="front-nav">
+  <ul>
+    <li><a href="/travel/">On the Road</a></li>
+    <li><a href="/work/">On the Internet</a></li>
+  </ul>
+</nav>
