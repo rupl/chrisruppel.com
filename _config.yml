@@ -32,4 +32,4 @@ defaults:
 ga: 'UA-432773-8'
 
 # Mapbox
-mapboxToken: ''
+mapboxToken: 'pk.eyJ1IjoicnVwbCIsImEiOiI3NDc5MWQ4ZWNjMTg1ZmZlYWQ5ZjMwMWVkNjI2MTJlZCJ9.Szn0ysZDc6AjmhKnxf8PkA'
