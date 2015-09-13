@@ -1,5 +1,5 @@
 ---
-title: Bristol
+title: Graffiti
 location: "Bristol, England"
 
 gallery:
