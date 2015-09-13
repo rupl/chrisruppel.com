@@ -9,7 +9,7 @@ markdown: redcarpet
 redcarpet:
   extensions: ["smart"]
 highlighter: pygments
-exclude: [README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.lock, node_modules, .bundle, update]
+exclude: [CNAME, README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.lock, node_modules, .bundle, update]
 
 # Content types
 # - Set 'output' of any collection to `true` to generate individual pages.
