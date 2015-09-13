@@ -13,7 +13,7 @@ layout: null
     {% for trip in site.categories.travel limit:20 %}
     <item>
       <title>{{ trip.title }}</title>
-      <link>{{ trip.url }}</link>
+      <link>{{ site.url }}{{ trip.url }}</link>
       <description>{{ trip.summary | xml_escape }}</description>
       <guid isPermaLink="true">{{ site.url }}{{ trip.url }}</guid>
       <pubDate>{{ trip.date | date_to_rfc822 }}</pubDate>

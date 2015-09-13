@@ -114,7 +114,7 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
   gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch('_img/**/*', ['imagemin']);
   gulp.watch('_js/**/*', ['js']);
-  gulp.watch(['_config*', '**/*.{md,html}', '!_site/**/*.*'], ['jekyll']);
+  gulp.watch(['_config*', '**/*.{md,html}', 'travel.xml', '!_site/**/*.*'], ['jekyll']);
 });
 
 // Add a default task to render the available commands.
