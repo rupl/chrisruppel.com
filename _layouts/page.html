@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <title>{{ page.title }} {% if page.title != null %}&nbsp;💞 {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="author" href="http://chrisruppel.com">
-    <link rel="alternate" type="application/rss+xml" title="Chris' Travels" href="/travel.xml">
+    <link rel="author" href="{{ site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="Chris' Travels" href="{{ site.url }}/travel.xml">
 
-    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <style type="text/css">{% include main.min.css %}</style>
+    <script>
+      function loadCSS(href,before,media){"use strict";var ss=window.document.createElement("link");var ref=before||window.document.getElementsByTagName("script")[0];var sheets=window.document.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";ref.parentNode.insertBefore(ss,ref);ss.onloadcssdefined=function(cb){var defined;for(var i=0;i<sheets.length;i++){if(sheets[i].href&&sheets[i].href===ss.href){defined=true}}if(defined){cb()}else{setTimeout(function(){ss.onloadcssdefined(cb)})}};ss.onloadcssdefined(function(){ss.media=media||"all"});return ss}
+      loadCSS('//fonts.googleapis.com/css?family=Oswald:400,300');
+    </script>
   </head>
   <body>
     <main>
