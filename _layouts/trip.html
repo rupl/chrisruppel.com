@@ -15,7 +15,7 @@ layout: page
     <div class="the-end" aria-label="The End."></div>
   </div>
 
-  {% if page.map != null %}
+  {% if page.map.location && page.map.zoom %}
     {% include map.html %}
   {% endif %}
 
