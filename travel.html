@@ -1,20 +1,24 @@
 ---
 title: Travel
 permalink: /travel/
+layout: page
 ---
 
 <section aria-labelledby="travel">
-  <h1 id="travel" class="title">Travel</h1>
+  <h1 id="travel" class="title">Travel <a class="alt" href="/travel/list/">(see a list)</a></h1>
 
-  <p class="summary">I love to travel with my girlfriend Karin. I started writing about our trips to help preserve the memories.</p>
+  <p class="summary">In 2015 and 2016, Karin and I are travelling the world.<br> Check out where we've been recently.</p>
 
   <div class="trip-list">
-    {% for trip in site.categories.travel %}
-      <article class="teaser" about="{{ trip.url }}">
-        <h2 class="title"><a href="{{ trip.url }}">{{ trip.title }}</a></h2>
+    {% for trip in site.categories.travel limit:2 %}
+      <article class="teaser" data-url="{{ site.url }}{{ trip.url }}">
+        <h2 class="title">
+          <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
+          <a href="{{ trip.url }}">{{ trip.title }}</a>
+          <span class="where">in {{ trip.location }}</span>
+        </h2>
         <p>{{ trip.summary }}</p>
         {% include gallery.html gallery=trip.gallery %}
-        <div class="the-end"></div>
       </article>
     {% endfor %}
   </div>
