@@ -2,15 +2,55 @@
 // Travel
 //
 
-// styles for trips in the listing
 .trip-list {
+  //
+  // List types
+  //
 
-  .links {
-    margin: 0;
-    padding: 0;
+  .teaser {
+    padding-bottom: 4em;
+  }
 
-    li {
-      display: inline-block;
+  .trip-title {
+    .title {
+      margin-top: 0;
+      margin-bottom: 4px;
+      font-size: 1.32em;
+      font-weight: 300;
     }
+    a {
+      font-weight: 400;
+    }
+    time {
+      color: rgba(#000, .5);
+    }
+  }
+
+  //
+  // Sub-components
+  //
+
+  .title {
+    @media (min-width: 1000px) {
+      margin-left: -5%;
+      margin-right: -5%;
+    }
+  }
+
+  time {
+    display: block;
+    min-width: 175px;
+    padding-right: 12px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(#000, .6);
+
+    @media (min-width: 1000px) {
+      display: inline-block;
+      text-align: right;
+    }
+  }
+
+  .summary {
   }
 }

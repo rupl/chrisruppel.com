@@ -35,6 +35,12 @@ img {
 .title {
   @include font-oswald;
 
+  .alt {
+    float: right;
+    font-size: 80%;
+    font-weight: 300;
+  }
+
   .wf-loading & {
     letter-spacing: -3px;
   }

@@ -1,0 +1,26 @@
+---
+title: Travel list
+permalink: /travel/list/
+layout: page
+---
+
+
+<section aria-labelledby="travel-list">
+  <h1 id="travel-list" class="title">Travel list <a class="alt" href="/travel/">(see pretty pictures)</a></h1>
+
+  <p class="summary">Here are all the places I've been. Almost.</p>
+
+  <div class="trip-list">
+    {% for trip in site.categories.travel %}
+      <article class="trip-title" data-url="{{ site.url }}{{ trip.url }}">
+        <h2 class="title">
+          <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
+          <a href="{{ trip.url }}">{{ trip.title }}</a>
+          <span class="where">in {{ trip.location }}</span>
+        </h2>
+      </article>
+    {% endfor %}
+  </div>
+
+  <a class="back" href="/">Back to the front</a>
+</section>
