@@ -6,10 +6,10 @@ layout: gallery
 gallery:
 - src: cowtown-1.jpg
   alt: A large silhouette statue of a historical figure in Texas.
-  comment: Big shoes to fill!
+  comment: Big shoes to fill.
   bgpos: 52% 0
 - src: cowtown-2.jpg
-  alt: There is are two daily cattle runs in the Stockyards. It's a small ordeal, but fun to watch.
+  alt: There are two daily cattle runs in the Stockyards. It's a small ordeal, but fun to watch.
   comment: The afternoon cattle run.
 - src: cowtown-3.jpg
   alt: People posing on a fake bull as if they were riding it.
