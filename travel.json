@@ -1,0 +1,35 @@
+---
+layout: null
+---
+{
+  "trips": [{% for trip in site.categories.travel %}
+    {
+      "url": "{{ site.url }}{{ trip.url }}",
+      "title": "{{ trip.title | escape }}",
+      "location": "{{ trip.location | escape }}",
+      "date": "{{ trip.date | escape }}",
+      {% if page.map.location && page.map.zoom %}
+        "map": {
+          "location": "{{ trip.map.location | escape }}",
+          "zoom": "{{ trip.map.zoom }}"
+        },
+      {% else %}
+        "map": null,
+      {% endif %}
+      "summary": "{{ trip.summary | escape }}",
+      "content": "{{ trip.content | escape | strip_newlines }}",
+      "gallery": [{% for photo in trip.gallery %}
+        {
+          "type": "{{ photo.type }}",
+          "src": "{{ photo.src }}",
+          "alt": "{{ photo.alt | escape }}",
+          "bgpos": "{{ photo.bgpos }}",
+          "bgpad": "{{ photo.bgpad }}",
+          "comment": "{{ photo.comment | escape }}"
+        }
+        {% if forloop.last %}{% else %},{% endif %}
+      {% endfor %}]
+    }
+    {% if forloop.last %}{% else %},{% endif %}
+  {% endfor %}]
+}
