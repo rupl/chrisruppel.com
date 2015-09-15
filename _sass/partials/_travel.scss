@@ -9,6 +9,7 @@
 
   .teaser {
     padding-bottom: 4em;
+    animation: fade-in 1s ease-in-out;
   }
 
   .trip-title {
@@ -17,6 +18,11 @@
       margin-bottom: 4px;
       font-size: 1.32em;
       font-weight: 300;
+
+      @media (min-width: 1000px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
     a {
       font-weight: 400;
@@ -32,8 +38,8 @@
 
   .title {
     @media (min-width: 1000px) {
-      margin-left: -5%;
-      margin-right: -5%;
+      margin-left: -10%;
+      margin-right: -10%;
     }
   }
 
@@ -52,5 +58,14 @@
   }
 
   .summary {
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -7,21 +7,23 @@ layout: page
 <section aria-labelledby="travel">
   <h1 id="travel" class="title">Travel <a class="alt" href="/travel/list/">(see a list)</a></h1>
 
-  <p class="summary">In 2015 and 2016, Karin and I are travelling the world.<br> Check out where we've been recently.</p>
+  <p class="intro summary">In 2015 and 2016, Karin and I are travelling the world.<br> Check out where we've been recently.</p>
 
-  <div class="trip-list">
+  <div id="trip-list" class="trip-list">
+    <!-- Load some initial content -->
     {% for trip in site.categories.travel limit:2 %}
-      <article class="teaser" data-url="{{ site.url }}{{ trip.url }}">
-        <h2 class="title">
-          <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
-          <a href="{{ trip.url }}">{{ trip.title }}</a>
-          <span class="where">in {{ trip.location }}</span>
-        </h2>
-        <p>{{ trip.summary }}</p>
-        {% include gallery.html gallery=trip.gallery %}
-      </article>
+      {% include gallery-list-item.html trip=trip site=site %}
     {% endfor %}
+
+    <!-- The rest will come from JSON using this template -->
+    <template id="gallery-list">
+      {% for trip in site.categories.travel offset:2 %}
+        {% include gallery-list-item.html trip=trip site=site %}
+      {% endfor %}
+    </template>
   </div>
 
-  <a class="back" href="/">Back to the front</a>
+  <div class="go">
+    <a class="btn back" href="/">Back to the front</a>
+  </div>
 </section>

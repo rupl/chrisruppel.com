@@ -4,6 +4,7 @@ layout: null
 {
   "trips": [{% for trip in site.categories.travel %}
     {
+      "id": "{{ trip.path | replace: '_posts/travel/','' | replace: '.md','' }}",
       "url": "{{ site.url }}{{ trip.url }}",
       "title": "{{ trip.title | escape }}",
       "location": "{{ trip.location | escape }}",

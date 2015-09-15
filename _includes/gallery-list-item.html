@@ -1,0 +1,9 @@
+<article class="teaser" id="{{ trip.path | replace: '_posts/travel/','' | replace: '.md','' }}">
+  <h2 class="title">
+    <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
+    <a rel="bookmark" href="{{ site.url }}{{ trip.url }}">{{ trip.title }}</a>
+    <span class="where">in {{ trip.location }}</span>
+  </h2>
+  <p class="summary">{{ trip.summary }}</p>
+  {% include gallery.html gallery=trip.gallery %}
+</article>
