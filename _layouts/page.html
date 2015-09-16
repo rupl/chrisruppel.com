@@ -7,6 +7,14 @@
     <link rel="author" href="{{ site.url }}">
     <link rel="alternate" type="application/rss+xml" title="Chris' Travels" href="{{ site.url }}/travel.xml">
 
+    {% if page.og != null %}
+      <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="{{ page.title | escape }}">
+      <meta property="og:description" content="{{ page.summary | escape }}">
+      <meta property="og:image" content="{{ site.url }}/img/travel/{{ page.gallery[0].src }}">
+    {% endif %}
+
     {% if site.development == false %}
     <style type="text/css">{% include main.min.css %}</style>
     <script>
