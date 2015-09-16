@@ -5,6 +5,7 @@ var log = u.log;
 var c = u.colors;
 var spawn = require('child_process').spawn;
 var plumber = require('gulp-plumber');
+var sequence = require('run-sequence');
 
 // Include Our Plugins
 var bs = require('browser-sync');
@@ -29,9 +30,8 @@ gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
     .on('close', reload);
 });
 
+// Add a second task for deploying
 gulp.task('jekyll-deploy', 'Compiles Jekyll site to deploy.', function() {
-  bs.notify('Jekyll building...');
-
   return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'});
 });
 
@@ -65,7 +65,6 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
         log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
       }
     }))
-    .pipe(gulp.dest('css'))
     .pipe(prefix("last 2 versions", "> 1%"))
     .pipe(minCSS())
     .pipe(rename('main.min.css'))
@@ -120,10 +119,23 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
 // Add a default task to render the available commands.
 gulp.task('default', false, ['help']);
 
+
+// -----------------------------------------------------------------------------
+// Build site completely
+// -----------------------------------------------------------------------------
+gulp.task('build', 'Do a complete build to prep for deploy.', function(cb) {
+  return sequence(
+    ['sass', 'js', 'imagemin'],
+    'jekyll-deploy',
+    cb
+  );
+});
+
+
 // -----------------------------------------------------------------------------
 // Deploy to gh-pages
 // -----------------------------------------------------------------------------
-gulp.task('deploy', 'Deploy site to gh-pages', ['jekyll-deploy'], function() {
+gulp.task('deploy', 'Deploy site to gh-pages', ['build'], function() {
   return gulp.src('./_site/**/*')
     .pipe(deploy());
 });
