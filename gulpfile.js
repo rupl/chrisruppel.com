@@ -106,7 +106,9 @@ gulp.task('imagemin', 'Compress images.', function() {
 // -----------------------------------------------------------------------------
 // BrowserSync + Gulp watch
 // -----------------------------------------------------------------------------
-gulp.task('bs', 'Run dev tasks:', ['sass', 'js', 'imagemin', 'jekyll', 'browser-sync', 'watch']);
+gulp.task('bs', 'Run dev tasks:', ['build-dev', 'browser-sync', 'watch'], function (cb) {
+  return cb;
+});
 
 // Watch Files For Changes
 gulp.task('watch', 'Watch various files for changes and re-compile them.', function() {
@@ -121,9 +123,9 @@ gulp.task('default', false, ['help']);
 
 
 // -----------------------------------------------------------------------------
-// Build site completely
+// Build site for deployment.
 // -----------------------------------------------------------------------------
-gulp.task('build', 'Do a complete build to prep for deploy.', function(cb) {
+gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb) {
   return sequence(
     ['sass', 'js', 'imagemin'],
     'jekyll-deploy',
@@ -133,9 +135,21 @@ gulp.task('build', 'Do a complete build to prep for deploy.', function(cb) {
 
 
 // -----------------------------------------------------------------------------
+// Build site for development.
+// -----------------------------------------------------------------------------
+gulp.task('build-dev', 'Do a complete build to begin development.', function(cb) {
+  return sequence(
+    ['sass', 'js', 'imagemin'],
+    'jekyll',
+    cb
+  );
+});
+
+
+// -----------------------------------------------------------------------------
 // Deploy to gh-pages
 // -----------------------------------------------------------------------------
-gulp.task('deploy', 'Deploy site to gh-pages', ['build'], function() {
+gulp.task('deploy', 'Deploy site to gh-pages', ['build-deploy'], function() {
   return gulp.src('./_site/**/*')
     .pipe(deploy());
 });
