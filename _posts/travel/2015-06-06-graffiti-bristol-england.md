@@ -1,6 +1,7 @@
 ---
 title: Graffiti
 location: "Bristol, England"
+layout: gallery
 
 gallery:
 - src: bristol-1.jpg
@@ -22,4 +23,3 @@ gallery:
 summary: I went to Frontend United in Bristol. They had some sweet graffiti.
 ---
 
-{% include gallery.html gallery=page.gallery %}

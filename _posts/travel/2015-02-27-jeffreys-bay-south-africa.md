@@ -1,6 +1,7 @@
 ---
 title: J-Bay
 location: "Jeffreys Bay, South Africa"
+layout: gallery
 
 gallery:
 - src: jeffreys-bay-1.jpg
@@ -23,5 +24,3 @@ gallery:
 
 summary: Jeffreys Bay is a popular surfing spot with great beaches. We took it easy here and just enjoyed the scenery.
 ---
-
-{% include gallery.html gallery=page.gallery %}

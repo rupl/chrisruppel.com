@@ -1,6 +1,7 @@
 ---
 title: Amakhala Game Reserve
 location: "Addo Elephant National Park"
+layout: gallery
 
 gallery:
 - src: amakhala-1.jpg
@@ -36,5 +37,3 @@ gallery:
 
 summary: We enjoyed a luxurious, thrilling safari on the Amakhala Game Reserve. We saw four of the Big 5 in their natural habitats, living freely under the protection of the game park we visited.
 ---
-
-{% include gallery.html gallery=page.gallery %}
