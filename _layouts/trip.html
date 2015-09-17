@@ -32,5 +32,14 @@ og: true
   </aside>
   {% endif %}
 
-  <a class="back" href="/travel/">Back to Travel</a>
+  <div class="go">
+    {% comment %}The back/next buttons are reversed from Jekyll's opinion of back/next...{% endcomment %}
+    {% if page.next.url %}
+      <a class="btn btn--prev" href="{{ page.next.url }}">Prev trip</a>
+    {% endif %}
+    <a class="btn btn--back" href="/travel/">Travel</a>
+    {% if page.previous.url %}
+      <a class="btn btn--next" href="{{ page.previous.url }}">Next trip</a>
+    {% endif %}
+  </div>
 </article>

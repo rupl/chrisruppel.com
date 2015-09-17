@@ -77,79 +77,14 @@ img {
   }
 }
 
-.go {
-  @extend .clearfix;
-  clear: both;
-  padding-top: 2em;
-  text-align: center;
-}
-
-.btn {
-  display: block;
-  text-align: center;
-
-  margin: 1em 0;
-  padding: 1em;
-  background: #eee;
-  background-image: linear-gradient(to bottom, #fff, #ddd);
-  border-radius: 5px;
-  color: #444;
-  text-decoration: none;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  user-select: none;
-
-  &:hover {
-    background-image: linear-gradient(to bottom, #fff, #d5d5d5);
-  }
-
-  &:active,
-  &:focus {
-    background-image: linear-gradient(to top, #fff, #eee);
-  }
-
-  &.disabled {
-    cursor: not-allowed;
-    background-image: linear-gradient(to bottom, #eee, #ddd) !important;
-  }
-}
-
-// when multiple buttons are present, put them on one line.
-.btn:nth-last-of-type(n+2),
-.btn:nth-last-of-type(n+2) ~ .btn {
-  float: left;
-  width: 47%;
-  margin-right: 6%;
-}
-
-.btn:last-of-type {
-  margin-right: 0 !important;
-}
-
-.btn--fixed--bottom {
-  @media (max-width: 860px) {
-    position: fixed;
-    bottom: 2em;
-    width: calc(100% - 2em);
-  }
-}
-
-.back {
-  @extend .btn;
-}
-
-.go {
-  margin-top: 2em;
-}
-
 .the-end {
   margin: 1.25em 0;
-  font-size: 1.2em;
+  padding: 0;
+  font-size: 1.32em;
   text-align: center;
-  letter-spacing: 1em;
 
   &::after {
-    content: '×××';
+    content: ' × \00a0\00a0 × \00a0\00a0 ×';
     speak: none;
   }
 }

@@ -19,7 +19,7 @@ if ('content' in document.createElement('template')) {
 
     // Create a 'load more' link
     var loadmore = document.createElement('a');
-    loadmore.classList.add('btn', 'load-more');
+    loadmore.classList.add('btn', 'btn--load');
     loadmore.textContent = 'Load More';
     document.querySelector('.go').appendChild(loadmore);
 
