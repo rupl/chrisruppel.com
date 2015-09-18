@@ -33,7 +33,7 @@ if ('content' in document.createElement('template')) {
       // If not, disable the button.
       else {
         loadmore.textContent = 'You reached the end!';
-        loadmore.classList.add('disabled');
+        loadmore.classList.add('btn--disabled');
         loadmore.removeEventListener('click', loadMore);
       }
     });

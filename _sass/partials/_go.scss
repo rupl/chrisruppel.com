@@ -6,47 +6,34 @@
   @extend .clearfix;
   clear: both;
   padding: 2em 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: stretch;
 
-  .btn {
-    flex-grow: 1;
-    margin: 0 2%;
-  }
+  @media (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
 
-  .btn--next {
-    order: 3;
-    flex-grow: 2;
-
-    &::before {
-      content: '\02192 \00a0';
+    .btn {
+      flex-grow: 1;
+      margin: 0 1em 1em;
     }
-  }
-  .btn--prev {
-    order: 2;
-    flex-grow: 2;
 
-    &::before {
-      content: '\02190 \00a0';
+    .btn--next {
+      order: 3;
+      flex-grow: 2;
     }
-  }
-  .btn--back {
-    order: 3;
-    flex-grow: 1;
-
-    &::before {
-      content: '\02191 \00a0';
+    .btn--prev {
+      order: 2;
+      flex-grow: 2;
     }
-  }
-  .btn--load {
-    order: 4; // show up AFTER "Back"
-    flex-grow: 2;
-
-    &::before {
-      content: '\02193 \00a0';
+    .btn--back {
+      order: 3;
+      flex-grow: 1;
+    }
+    .btn--load {
+      order: 4; // show up AFTER "Back"
+      flex-grow: 2;
     }
   }
 
@@ -57,7 +44,7 @@
 }
 
 .btn {
-  // display: inline-block;
+  display: block;
   text-align: center;
 
   margin: 1em 0;
@@ -80,9 +67,37 @@
   &:focus {
     background-image: linear-gradient(to top, #fff, #eee);
   }
+}
 
-  &.disabled {
-    cursor: not-allowed;
-    background-image: linear-gradient(to bottom, #eee, #ddd) !important;
+.btn--next {
+  &::before {
+    content: '\02192 \00a0';
+  }
+}
+
+.btn--prev {
+  &::before {
+    content: '\02190 \00a0';
+  }
+}
+
+.btn--back {
+  &::before {
+    content: '\02191 \00a0';
+  }
+}
+
+.btn--load {
+  &::before {
+    content: '\02193 \00a0';
+  }
+}
+
+.btn--disabled {
+  cursor: not-allowed;
+  background-image: linear-gradient(to bottom, #eee, #ddd) !important;
+
+  &::before {
+    content: '\02297 \00a0';
   }
 }
