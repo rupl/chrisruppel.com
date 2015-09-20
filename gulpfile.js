@@ -3,9 +3,12 @@ var gulp = require('gulp-help')(require('gulp'));
 var u = require('gulp-util');
 var log = u.log;
 var c = u.colors;
+var merge = require('merge-stream');
 var spawn = require('child_process').spawn;
 var plumber = require('gulp-plumber');
 var sequence = require('run-sequence');
+var parallel = require('concurrent-transform');
+var os = require('os');
 
 // Include Our Plugins
 var bs = require('browser-sync');
@@ -16,6 +19,7 @@ var prefix = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var minCSS = require('gulp-minify-css');
+var resize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 var deploy = require('gulp-gh-pages');
@@ -25,13 +29,12 @@ var deploy = require('gulp-gh-pages');
 // -----------------------------------------------------------------------------
 gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
   bs.notify('Jekyll building...');
-
   return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml'], {stdio: 'inherit'})
     .on('close', reload);
 });
 
 // Add a second task for deploying
-gulp.task('jekyll-deploy', 'Compiles Jekyll site to deploy.', function() {
+gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment to gh-pages.', function() {
   return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'});
 });
 
@@ -90,16 +93,104 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
 });
 
 // -----------------------------------------------------------------------------
+// Resize images
+// -----------------------------------------------------------------------------
+gulp.task('image-resize', 'Create different sizes for resposive images.', function () {
+
+  log(c.cyan('image-resize'), 'creating images @ 32...');
+  var img_32 = gulp.src('_img/**/*')
+    .pipe(changed('img/travel@32'))
+    .pipe(parallel(
+      resize({
+        width: 32,
+        height: 24,
+        crop: true,
+        upscale: false,
+        quality: 0.5,
+      }),
+      os.cpus().length
+    ))
+    .pipe(rename({
+      dirname: ''
+    }))
+    .pipe(gulp.dest('img/travel@32'));
+
+  log(c.cyan('image-resize'), 'creating images @ 640...');
+  var img_640 = gulp.src('_img/**/*')
+    .pipe(changed('img/travel@640'))
+    .pipe(parallel(
+      resize({
+        width: 640,
+        height: 640,
+        crop: true,
+        upscale: false,
+        quality: 0.5,
+      }),
+      os.cpus().length
+    ))
+    .pipe(rename({
+      dirname: ''
+    }))
+    .pipe(gulp.dest('img/travel@640'));
+
+  log(c.cyan('image-resize'), 'creating images @ 1024...');
+  var img_1024 = gulp.src('_img/**/*')
+    .pipe(changed('img/travel@1024'))
+    .pipe(parallel(
+      resize({
+        width: 1024,
+        height: 768,
+        crop: true,
+        upscale: false,
+        quality: 0.75,
+      }),
+      os.cpus().length
+    ))
+    .pipe(rename({
+      dirname: ''
+    }))
+    .pipe(gulp.dest('img/travel@1024'));
+
+    return merge(img_32, img_640, img_1024);
+});
+
+// -----------------------------------------------------------------------------
 // Minify images
 // -----------------------------------------------------------------------------
 gulp.task('imagemin', 'Compress images.', function() {
-  return gulp.src('_img/**/*')
-    .pipe(changed('img'))
+  var img_orig = gulp.src('img/travel/**/*')
+    .pipe(changed('img/travel'))
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}]
     }))
-    .pipe(gulp.dest('img'));
+    .pipe(gulp.dest('img/travel'));
+
+  var img_32 = gulp.src('img/travel@32/**/*')
+    // .pipe(changed('img/travel@32'))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('img/travel@32'));
+
+  var img_640 = gulp.src('img/travel@640/**/*')
+    // .pipe(changed('img/travel@640'))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('img/travel@640'));
+
+  var img_1024 = gulp.src('img/travel@1024/**/*')
+    // .pipe(changed('img/travel@1024'))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('img/travel@1024'));
+
+    return merge(img_orig, img_32, img_640, img_1024);
 });
 
 
@@ -107,13 +198,14 @@ gulp.task('imagemin', 'Compress images.', function() {
 // BrowserSync + Gulp watch
 // -----------------------------------------------------------------------------
 gulp.task('bs', 'Run dev tasks:', ['build-dev', 'browser-sync', 'watch'], function (cb) {
-  return cb;
+  return cb; // allows use within sequence()
 });
 
 // Watch Files For Changes
 gulp.task('watch', 'Watch various files for changes and re-compile them.', function() {
+  log(c.yellow('Waiting for changes...'));
   gulp.watch('_sass/**/*.scss', ['sass']);
-  gulp.watch('_img/**/*', ['imagemin']);
+  gulp.watch('_img/**/*', [sequence('image-resize', 'imagemin')]);
   gulp.watch('_js/**/*', ['js']);
   gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', '!_site/**/*.*'], ['jekyll']);
 });
@@ -127,7 +219,8 @@ gulp.task('default', false, ['help']);
 // -----------------------------------------------------------------------------
 gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb) {
   return sequence(
-    ['sass', 'js', 'imagemin'],
+    ['sass', 'js', 'image-resize'],
+    'imagemin',
     'jekyll-deploy',
     cb
   );
@@ -139,7 +232,8 @@ gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb
 // -----------------------------------------------------------------------------
 gulp.task('build-dev', 'Do a complete build to begin development.', function(cb) {
   return sequence(
-    ['sass', 'js', 'imagemin'],
+    ['sass', 'js', 'image-resize'],
+    'imagemin',
     'jekyll',
     cb
   );
