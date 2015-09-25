@@ -86,7 +86,7 @@
   }
 
   // first column underneath tall photo
-  .photo:nth-of-type(5) {
+  .photo:nth-of-type(n+5):nth-of-type(odd) {
     clear: left;
     margin-left: 0;
   }
