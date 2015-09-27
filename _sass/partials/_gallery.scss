@@ -135,9 +135,9 @@
   // special treatment for first image, or manual overrides
   .wide,
   .photo:first-of-type {
-    float: none;
+    float: left;
     clear: both;
-    width: 100%;
+    width: 100% !important;
     margin-right: 0;
     background-position: 0 calc(100% / 3);
   }
