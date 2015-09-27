@@ -4,9 +4,9 @@
     {% if item.src != null %}
       <span class="photo{% if item.bgsize == 'contain' %} contain{% endif %}{% if item.type != null %} {{ item.type }}{% endif %}"
             style="background-image: url(/img/travel/{{ item.src }}); {% if item.bgpos != null %}background-position: {{ item.bgpos }};{% endif %} {% if item.bgpad != null %}padding-bottom: {{ item.bgpad }}; {% endif %}"
-            title="{{ item.comment }}">
+            title="{{ item.comment | escape }}">
         <img src="/img/travel/{{ item.src }}"
-             alt="{{ item.alt }}"
+             alt="{{ item.alt | escape }}"
              class="element-invisible">
       </span>
     {% endif %}
