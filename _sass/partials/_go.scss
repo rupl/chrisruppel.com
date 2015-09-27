@@ -20,11 +20,11 @@
     }
 
     .btn--next {
-      order: 3;
+      order: 2;
       flex-grow: 2;
     }
     .btn--prev {
-      order: 2;
+      order: 3;
       flex-grow: 2;
     }
     .btn--back {
@@ -69,13 +69,13 @@
   }
 }
 
-.btn--next {
+.btn--prev {
   &::before {
     content: '\02192 \00a0';
   }
 }
 
-.btn--prev {
+.btn--next {
   &::before {
     content: '\02190 \00a0';
   }
