@@ -70,8 +70,11 @@
 }
 
 .btn--prev {
-  &::before {
-    content: '\02192 \00a0';
+  &::after {
+    content: '\00a0 \02192';
+  }
+  &:hover::after {
+    animation: bounce-right .42s ease-in-out;
   }
 }
 
@@ -79,17 +82,26 @@
   &::before {
     content: '\02190 \00a0';
   }
+  &:hover::before {
+    animation: bounce-left .42s ease-in-out;
+  }
 }
 
 .btn--back {
   &::before {
     content: '\02191 \00a0';
   }
+  &:hover::before {
+    animation: bounce-up .42s ease-in-out;
+  }
 }
 
 .btn--load {
   &::before {
     content: '\02193 \00a0';
+  }
+  &:hover::before {
+    animation: bounce-down .42s ease-in-out;
   }
 }
 
@@ -99,5 +111,29 @@
 
   &::before {
     content: '\02297 \00a0';
+  }
+}
+
+@keyframes bounce-up {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes bounce-right {
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes bounce-down {
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes bounce-left {
+  50% {
+    transform: translateX(-8px);
   }
 }
