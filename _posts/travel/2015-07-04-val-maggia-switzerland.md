@@ -1,6 +1,6 @@
 ---
 title: Camping on the River
-location: "Mal Vaggia, Switzerland"
+location: "Val Maggia, Switzerland"
 layout: gallery
 
 gallery:
