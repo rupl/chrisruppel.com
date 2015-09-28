@@ -25,14 +25,8 @@
 
     {% if site.development == false %}
       <style type="text/css">{% include main.min.css %}</style>
-      <script>
-        function loadCSS(href,before,media){"use strict";var ss=window.document.createElement("link");var ref=before||window.document.getElementsByTagName("script")[0];var sheets=window.document.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";ref.parentNode.insertBefore(ss,ref);ss.onloadcssdefined=function(cb){var defined;for(var i=0;i<sheets.length;i++){if(sheets[i].href&&sheets[i].href===ss.href){defined=true}}if(defined){cb()}else{setTimeout(function(){ss.onloadcssdefined(cb)})}};ss.onloadcssdefined(function(){ss.media=media||"all"});return ss}
-        loadCSS('//fonts.googleapis.com/css?family=Oswald:400,300');
-      </script>
-      <noscript><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300" type="text/css"></noscript>
     {% else %}
       <link rel="stylesheet" href="/css/main.min.css" type="text/css">
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
     {% endif %}
   </head>
   <body>
