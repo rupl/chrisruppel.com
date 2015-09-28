@@ -127,6 +127,7 @@ gulp.task('default', false, ['help']);
 // -----------------------------------------------------------------------------
 gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb) {
   return sequence(
+    'jekyll-deploy', // for whatever reason, I find this needing to be run before and after
     ['sass', 'js', 'imagemin'],
     'jekyll-deploy',
     cb
