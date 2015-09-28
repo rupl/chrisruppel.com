@@ -28,11 +28,23 @@
     {% else %}
       <link rel="stylesheet" href="/css/main.min.css" type="text/css">
     {% endif %}
+
+    <script>
+      // JS is able to start executing.
+      document.documentElement.classList.add('js');
+
+      // If the webfont cookie is found, use the fonts immediately.
+      if (!!document.cookie.match('wf-loaded')) {
+        document.documentElement.classList.remove('wf-loading');
+        document.documentElement.classList.add('wf-oswald');
+      }
+    </script>
   </head>
   <body>
     <main>
       {{ content }}
     </main>
+
     <script async src="/js/main.min.js"></script>
     {% if site.ga != null %}
     <script>
