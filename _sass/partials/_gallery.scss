@@ -70,17 +70,16 @@
   // all photos
   .photo {
     float: left;
-    width: 49%;
+    width: 48%;
     padding-bottom: 33.333%;
     margin-bottom: 2%;
-    margin-right: 0;
-    margin-left: 2%;
+    margin-right: 1%;
+    margin-left: 1%;
   }
 
   // special treatment for first image
   .photo:first-of-type {
     margin-top: 0;
-    margin-left: 0;
     padding-bottom: 104%;
     background-position: 25% 0;
   }
@@ -88,12 +87,11 @@
   // first column underneath tall photo
   .photo:nth-of-type(n+5):nth-of-type(odd) {
     clear: left;
-    margin-left: 0;
   }
 
   // last photo
   .photo:last-of-type:not(:nth-of-type(even)) {
-    width: 100%;
+    width: 98%;
     background-position: 0 25%;
   }
 
@@ -103,15 +101,15 @@
   .photo.wide {
     float: none;
     clear: both;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 98%;
     background-position: 0 calc(100% / 3);
   }
 
-  // reset the clearing after the photo
-  .photo.wide ~ .photo:nth-of-type(odd) {
-    margin-left: 0;
+  // override the last-photo treatment when a wide photo was placed.
+  .photo.wide:nth-last-of-type(3) ~ .photo {
+    float: left;
+    clear: none;
+    width: 48%;
   }
 }
 
