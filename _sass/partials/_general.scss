@@ -75,6 +75,11 @@ img {
   &:hover {
     opacity: 1;
   }
+
+  // don't break names in intros
+  em {
+    white-space: nowrap;
+  }
 }
 
 .the-end {
