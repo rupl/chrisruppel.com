@@ -31,8 +31,9 @@ gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
 });
 
 // Add a second task for deploying
-gulp.task('jekyll-deploy', 'Compiles Jekyll site to deploy.', function() {
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'});
+gulp.task('jekyll-deploy', 'Compiles Jekyll site to deploy.', function(cb) {
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'})
+    .on('close', cb);
 });
 
 // -----------------------------------------------------------------------------
