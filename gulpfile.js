@@ -67,7 +67,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
       }
     }))
     .pipe(prefix("last 2 versions", "> 1%"))
-    .pipe(minCSS())
+    .pipe(minCSS({processImport: false}))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
