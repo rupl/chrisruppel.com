@@ -81,11 +81,16 @@
     margin-left: 1%;
   }
 
-  // special treatment for first image
+  // special treatment for first image, or manual overrides
+  .tall,
   .photo:first-of-type {
     margin-top: 0;
     padding-bottom: 104%;
     background-position: 25% 0;
+  }
+
+  .photo:first-of-type {
+    margin-top: 0;
   }
 
   // first column underneath tall photo
