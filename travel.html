@@ -15,8 +15,8 @@ layout: page
       {% include gallery-list-item.html trip=trip site=site %}
     {% endfor %}
 
-    <!-- The rest will come from JSON using this template -->
-    <template id="gallery-list">
+    <!-- The rest will come from JS using this template -->
+    <template id="trip-list-lazyload">
       {% for trip in site.categories.travel offset:2 %}
         {% include gallery-list-item.html trip=trip site=site %}
       {% endfor %}
