@@ -112,6 +112,9 @@
   &::before {
     content: '\02297 \00a0';
   }
+  &:hover::before {
+    animation-name: no;
+  }
 }
 
 @keyframes bounce-up {
@@ -135,5 +138,14 @@
 @keyframes bounce-left {
   50% {
     transform: translateX(-8px);
+  }
+}
+
+@keyframes no {
+  25% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
   }
 }
