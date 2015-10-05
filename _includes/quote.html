@@ -1,0 +1,10 @@
+<blockquote class="quote">
+  <p>{{ include.quote.text }}</p>
+  <footer> —
+    <cite>
+      {% if include.quote.url %}<a href="{{ include.quote.url }}">{% endif %}
+        {{ include.quote.author }}
+      {% if include.quote.url %}</a>{% endif %}
+    </cite>
+  </footer>
+</blockquote>
