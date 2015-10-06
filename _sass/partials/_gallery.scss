@@ -2,16 +2,7 @@
 // Photo gallery
 //
 .gallery {
-  @extend .clearfix;
-  margin: 1em 0;
-  padding: 4%;
-  background: #000;
-  border-radius: 4px;
-
-  @media (min-width: 1100px) {
-    width: 140%;
-    margin-left: -20%;
-  }
+  @extend .media;
 
   // bottom caption
   figcaption {

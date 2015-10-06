@@ -6,6 +6,7 @@ var c = u.colors;
 var spawn = require('child_process').spawn;
 var plumber = require('gulp-plumber');
 var sequence = require('run-sequence');
+var merge = require('merge-stream');
 
 // Include Our Plugins
 var bs = require('browser-sync');
@@ -81,13 +82,29 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
 gulp.task('js', 'Lint, bundle, minify JS', function() {
   bs.notify('Building JS...');
 
-  return gulp.src(['node_modules/fontfaceobserver/fontfaceobserver.js', '_js/**/*.js'])
+  var main = gulp.src([
+      'node_modules/fontfaceobserver/fontfaceobserver.js',
+      '_js/*.js'
+    ])
     .pipe(plumber())
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
+
+  var three = gulp.src([
+      'node_modules/three/three.min.js',
+      '_js/threejs/*.js'
+    ])
+    .pipe(plumber())
+    .pipe(concat('photosphere.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('_site/js'))
+    .pipe(reload({stream: true}));
+
+  return merge(main, three);
 });
 
 // -----------------------------------------------------------------------------
