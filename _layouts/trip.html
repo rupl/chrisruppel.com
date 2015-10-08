@@ -1,6 +1,7 @@
 ---
 layout: page
 og: true
+tc: true
 ---
 
 <article class="trip">
@@ -33,13 +34,12 @@ og: true
   {% endif %}
 
   <div class="go">
-    {% comment %}The back/next buttons are reversed from Jekyll's opinion of back/next...{% endcomment %}
     {% if page.next.url %}
-      <a class="btn btn--prev" href="{{ page.next.url }}">Prev trip</a>
+      <a class="btn btn--next" href="{{ page.next.url }}" title="{{ page.next.title }}{% if page.next.location %} in {{ page.next.location }}{% endif %}">Next trip</a>
     {% endif %}
     <a class="btn btn--back" href="/travel/">Travel</a>
     {% if page.previous.url %}
-      <a class="btn btn--next" href="{{ page.previous.url }}">Next trip</a>
+      <a class="btn btn--prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}{% if page.previous.location %} in {{ page.previous.location }}{% endif %}">Prev trip</a>
     {% endif %}
   </div>
 </article>

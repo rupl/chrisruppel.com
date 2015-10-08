@@ -7,6 +7,7 @@ var merge = require('merge-stream');
 var spawn = require('child_process').spawn;
 var plumber = require('gulp-plumber');
 var sequence = require('run-sequence');
+var merge = require('merge-stream');
 var parallel = require('concurrent-transform');
 var os = require('os');
 
@@ -34,8 +35,9 @@ gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
 });
 
 // Add a second task for deploying
-gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment to gh-pages.', function() {
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'});
+gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment to gh-pages.', function(cb) {
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'})
+    .on('close', cb);
 });
 
 // -----------------------------------------------------------------------------
@@ -69,7 +71,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
       }
     }))
     .pipe(prefix("last 2 versions", "> 1%"))
-    .pipe(minCSS())
+    .pipe(minCSS({processImport: false}))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
@@ -83,13 +85,29 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
 gulp.task('js', 'Lint, bundle, minify JS', function() {
   bs.notify('Building JS...');
 
-  return gulp.src(['node_modules/fontfaceobserver/fontfaceobserver.js', '_js/**/*.js'])
+  var main = gulp.src([
+      'node_modules/fontfaceobserver/fontfaceobserver.js',
+      '_js/*.js'
+    ])
     .pipe(plumber())
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
+
+  var three = gulp.src([
+      'node_modules/three/three.min.js',
+      '_js/threejs/*.js'
+    ])
+    .pipe(plumber())
+    .pipe(concat('photosphere.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('_site/js'))
+    .pipe(reload({stream: true}));
+
+  return merge(main, three);
 });
 
 // -----------------------------------------------------------------------------
@@ -158,7 +176,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
 // Minify images
 // -----------------------------------------------------------------------------
 gulp.task('imagemin', 'Compress images.', function() {
-  var img_orig = gulp.src('img/travel/**/*')
+  var img_orig = gulp.src(['img/travel/**/*', '!img/travel/{IMG_,DSC_,DSCF}*'])
     .pipe(changed('img/travel'))
     .pipe(imagemin({
       progressive: true,
@@ -166,7 +184,7 @@ gulp.task('imagemin', 'Compress images.', function() {
     }))
     .pipe(gulp.dest('img/travel'));
 
-  var img_32 = gulp.src('img/travel@32/**/*')
+  var img_32 = gulp.src(['img/travel@32/**/*', '!img/travel@32/{IMG_,DSC_,DSCF}*'])
     // .pipe(changed('img/travel@32'))
     .pipe(imagemin({
       progressive: true,
@@ -174,7 +192,7 @@ gulp.task('imagemin', 'Compress images.', function() {
     }))
     .pipe(gulp.dest('img/travel@32'));
 
-  var img_640 = gulp.src('img/travel@640/**/*')
+  var img_640 = gulp.src(['img/travel@640/**/*', '!img/travel@640/{IMG_,DSC_,DSCF}*'])
     // .pipe(changed('img/travel@640'))
     .pipe(imagemin({
       progressive: true,
@@ -182,7 +200,7 @@ gulp.task('imagemin', 'Compress images.', function() {
     }))
     .pipe(gulp.dest('img/travel@640'));
 
-  var img_1024 = gulp.src('img/travel@1024/**/*')
+  var img_1024 = gulp.src(['img/travel@1024/**/*', '!img/travel@1024/{IMG_,DSC_,DSCF}*'])
     // .pipe(changed('img/travel@1024'))
     .pipe(imagemin({
       progressive: true,
@@ -217,7 +235,7 @@ gulp.task('default', false, ['help']);
 // -----------------------------------------------------------------------------
 // Build site for deployment.
 // -----------------------------------------------------------------------------
-gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb) {
+gulp.task('build-deploy', 'Do a complete build to prep for deploy.', ['jekyll-deploy'], function(cb) {
   return sequence(
     ['sass', 'js', 'image-resize'],
     'imagemin',

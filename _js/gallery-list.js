@@ -3,7 +3,7 @@
  */
 if ('content' in document.createElement('template')) {
   // All possible content is stored in this <template>
-  var template = document.querySelector('#gallery-list');
+  var template = document.querySelector('#trip-list-lazyload');
 
   // If <template> is not supported, the browser will just show the date.
   // When everything is working, it can load more using the contents.
