@@ -116,7 +116,7 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
 gulp.task('image-resize', 'Create different sizes for resposive images.', function () {
 
   log(c.cyan('image-resize'), 'creating images @ 32...');
-  var img_32 = gulp.src('_img/**/*')
+  var img_32 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF}*'])
     .pipe(changed('img/travel@32'))
     .pipe(parallel(
       resize({
@@ -128,31 +128,39 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
       }),
       os.cpus().length
     ))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
     .pipe(rename({
       dirname: ''
     }))
     .pipe(gulp.dest('img/travel@32'));
 
   log(c.cyan('image-resize'), 'creating images @ 640...');
-  var img_640 = gulp.src('_img/**/*')
+  var img_640 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF}*'])
     .pipe(changed('img/travel@640'))
     .pipe(parallel(
       resize({
         width: 640,
         height: 640,
-        crop: true,
+        crop: false,
         upscale: false,
         quality: 0.5,
       }),
       os.cpus().length
     ))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
     .pipe(rename({
       dirname: ''
     }))
     .pipe(gulp.dest('img/travel@640'));
 
   log(c.cyan('image-resize'), 'creating images @ 1024...');
-  var img_1024 = gulp.src('_img/**/*')
+  var img_1024 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF}*'])
     .pipe(changed('img/travel@1024'))
     .pipe(parallel(
       resize({
@@ -164,19 +172,17 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
       }),
       os.cpus().length
     ))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
     .pipe(rename({
       dirname: ''
     }))
     .pipe(gulp.dest('img/travel@1024'));
 
-    return merge(img_32, img_640, img_1024);
-});
-
-// -----------------------------------------------------------------------------
-// Minify images
-// -----------------------------------------------------------------------------
-gulp.task('imagemin', 'Compress images.', function() {
-  var img_orig = gulp.src(['img/travel/**/*', '!img/travel/{IMG_,DSC_,DSCF}*'])
+  log(c.cyan('image-resize'), 'minifying originals...');
+  var img_orig = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF}*'])
     .pipe(changed('img/travel'))
     .pipe(imagemin({
       progressive: true,
@@ -184,33 +190,8 @@ gulp.task('imagemin', 'Compress images.', function() {
     }))
     .pipe(gulp.dest('img/travel'));
 
-  var img_32 = gulp.src(['img/travel@32/**/*', '!img/travel@32/{IMG_,DSC_,DSCF}*'])
-    // .pipe(changed('img/travel@32'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
-    .pipe(gulp.dest('img/travel@32'));
-
-  var img_640 = gulp.src(['img/travel@640/**/*', '!img/travel@640/{IMG_,DSC_,DSCF}*'])
-    // .pipe(changed('img/travel@640'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
-    .pipe(gulp.dest('img/travel@640'));
-
-  var img_1024 = gulp.src(['img/travel@1024/**/*', '!img/travel@1024/{IMG_,DSC_,DSCF}*'])
-    // .pipe(changed('img/travel@1024'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
-    .pipe(gulp.dest('img/travel@1024'));
-
-    return merge(img_orig, img_32, img_640, img_1024);
+    return merge(img_32, img_640, img_1024, img_orig);
 });
-
 
 // -----------------------------------------------------------------------------
 // BrowserSync + Gulp watch
@@ -223,7 +204,7 @@ gulp.task('bs', 'Run dev tasks:', ['build-dev', 'browser-sync', 'watch'], functi
 gulp.task('watch', 'Watch various files for changes and re-compile them.', function() {
   log(c.yellow('Waiting for changes...'));
   gulp.watch('_sass/**/*.scss', ['sass']);
-  gulp.watch('_img/**/*', [sequence('image-resize', 'imagemin')]);
+  gulp.watch('_img/**/*', ['image-resize']);
   gulp.watch('_js/**/*', ['js']);
   gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', '!_site/**/*.*'], ['jekyll']);
 });
@@ -238,7 +219,6 @@ gulp.task('default', false, ['help']);
 gulp.task('build-deploy', 'Do a complete build to prep for deploy.', ['jekyll-deploy'], function(cb) {
   return sequence(
     ['sass', 'js', 'image-resize'],
-    'imagemin',
     'jekyll-deploy',
     cb
   );
@@ -251,7 +231,6 @@ gulp.task('build-deploy', 'Do a complete build to prep for deploy.', ['jekyll-de
 gulp.task('build-dev', 'Do a complete build to begin development.', function(cb) {
   return sequence(
     ['sass', 'js', 'image-resize'],
-    'imagemin',
     'jekyll',
     cb
   );
