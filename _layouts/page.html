@@ -9,10 +9,11 @@
 
     {% if page.og != null %}
       <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-      <meta property="og:type" content="article">
+      <meta property="og:type" content="website">
       <meta property="og:title" content="{{ page.title | escape }}">
       <meta property="og:description" content="{{ page.summary | escape }}">
       <meta property="og:image" content="{{ site.url }}/img/travel/{{ page.gallery[0].src }}">
+      <meta property="og:locale" content="en_US">
     {% endif %}
     {% if page.tc != null %}
       <meta property="twitter:card" content="summary_large_image">
