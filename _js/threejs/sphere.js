@@ -16,7 +16,7 @@ animate();
 
 function init() {
   var mesh;
-  camera = new THREE.PerspectiveCamera( 72, ASPECT_RATIO, 250, 650 );
+  camera = new THREE.PerspectiveCamera( 62, ASPECT_RATIO, 250, 650 );
   scene = new THREE.Scene();
 
   // Geometry & Material
