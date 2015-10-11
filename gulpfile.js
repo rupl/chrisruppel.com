@@ -95,6 +95,7 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
 
   var three = gulp.src([
       'node_modules/three/three.min.js',
+      'node_modules/screenfull/dist/screenfull.js',
       '_js/threejs/*.js'
     ])
     .pipe(plumber())

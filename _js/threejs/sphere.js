@@ -1,5 +1,6 @@
 var camera, scene, renderer;
-var container = document.getElementById('photosphere');
+var container = document.querySelector('#photosphere');
+var fullscreen = document.querySelector('#photosphere .fullscreen');
 var ASPECT_RATIO = 1.777777777;
 var viewport = {};
 
@@ -33,20 +34,24 @@ function init() {
   mesh.renderOrder = 1000.0;
   scene.add(mesh);
 
+  // Calculate container dimensions
   viewport.width = getContainerWidth(container);
   viewport.height = viewport.width / ASPECT_RATIO;
 
+  // Set up renderer
   renderer = webglAvailable() ? new THREE.WebGLRenderer() : new THREE.CanvasRenderer();
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setSize( viewport.width, viewport.height );
-  container.appendChild( renderer.domElement );
+  container.insertBefore( renderer.domElement, container.firstChild );
 
+  // Listen for user interaction
   container.addEventListener( 'mousedown', onDocumentMouseDown, false );
   container.addEventListener( 'mousemove', onDocumentMouseMove, false );
   container.addEventListener( 'mouseup', onDocumentMouseUp, false );
   container.addEventListener( 'touchstart', onDocumentTouchStart, false );
   container.addEventListener( 'touchmove', onDocumentTouchMove, false );
   window.addEventListener( 'resize', onWindowResize, false );
+  fullscreen.addEventListener( 'click', toggleFullscreen, false );
 }
 
 function onWindowResize() {
@@ -141,4 +146,9 @@ function getContainerWidth(element) {
                 parseFloat(styles.paddingRight);
 
   return element.clientWidth - padding;
+}
+
+function toggleFullscreen( event ) {
+  event.preventDefault();
+  screenfull.toggle(container);
 }

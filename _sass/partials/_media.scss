@@ -14,3 +14,27 @@
     margin-left: -20%;
   }
 }
+
+.caption {
+  display: block;
+  clear: both;
+  padding-top: 1em;
+  opacity: .6;
+  color: #ddd;
+  font-size: 80%;
+  font-style: italic;
+  text-align: center;
+
+  @media (min-width: 1100px) {
+    margin: 0 20%;
+  }
+
+  // There might be proper names inside captions. Don't let them break.
+  em {
+    white-space: nowrap;
+  }
+
+  a {
+    color: inherit;
+  }
+}
