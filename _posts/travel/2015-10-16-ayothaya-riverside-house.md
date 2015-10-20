@@ -15,11 +15,6 @@ gallery:
 - src: ayothaya-riverside-3.jpg
   alt: People sticking their feet in a river.
   comment: Ya treated us to his version of a Thai "fish spa" — he feeds the fish every day and lets them know he's coming by sticking his feet in. The other two ladies are Anna and Lina from Germany, who we met when we arrived.
-- src: ayothaya-riverside-5.jpg
-  alt: A boat anchored in place with evening sun shining on it.
-  comment: The evening sun on Ya's boat.
-  type: wide
-  bgpad: 50%
 - src: ayothaya-riverside-6.jpg
   alt: People singing songs and playing guitar.
   comment: Ya said the price of our dinner was that we had to sing songs with him. It was a really great way to break the ice and goof off with him.
@@ -27,6 +22,16 @@ gallery:
   alt: Man burning paper with a cigarette.
   comment: Ya taught us a "drinking" game — burn the toilet paper with a cigarette but don't let the coin fall in. Loser drinks a glass of warm water, which is a real punishment in the Thai summer!
   bgpos: 0 42%
+- src: ayothaya-riverside-5.jpg
+  alt: A boat anchored in place with evening sun shining on it.
+  comment: The evening sun on Ya's boat.
+  type: wide
+  bgpad: 50%
+- src: ayothaya-riverside-9.jpg
+  alt: People standing in front of the sleeping Buddha at Wat Lokayasutharam.
+  comment: Ya took us by the sleeping Buddha on the way back from the market and we asked another person to snap a group photo of us.
+  type: wide
+  bgpad: 51%
 
 links:
 - href: http://www.agoda.com/ayothaya-riverside-house/hotel/ayutthaya-th.html
