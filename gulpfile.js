@@ -112,7 +112,7 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
 // Minify images
 // -----------------------------------------------------------------------------
 gulp.task('imagemin', 'Compress images.', function() {
-  return gulp.src(['_img/**/*', '!_img/**/{IMG_,DSC_,DSCF}*'])
+  return gulp.src(['_img/**/*', '!_img/**/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img'))
     .pipe(imagemin({
       progressive: true,
