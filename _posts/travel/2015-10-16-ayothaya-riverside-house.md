@@ -45,6 +45,8 @@ After the insanity of Bangkok, we were looking forward to slowing things down in
 
 His name is Ya, and although we're less than two weeks into our trip, it will be seriously difficult to find a more memorable fella to hang out with. He built the boat house himself (the only boat guest house in Ayutthaya!) and the entire property is overflowing with his love for Thailand. When we got there he offered to take us to the market, cooked us dinner, and we spent the evening singing songs while he played guitar. His songbook was filled with classics that other visitors had written chords and lyrics for, and he told us he always loves learning a new song for your next visit.
 
+The other two in the photos are Anna and Lina. We checked in and shortly afterward they did too. We heard them speaking German and recognized the accents coming from our neck of the woods. We struck it up with them and ended up sticking together for a while.
+
 {% include gallery.html gallery=page.gallery %}
 
-We'll never forget Ya. He was more than a host, he was a true friend.
+We will never forget Ya. He was more than a host, he was a true friend.
