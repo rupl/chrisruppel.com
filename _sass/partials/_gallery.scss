@@ -26,6 +26,32 @@
     background-size: contain;
   }
 
+  // Captions on hover
+  &[data-comment] {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      font-size: .66em;
+      content: attr(data-comment);
+      color: white;
+      background: rgba(0, 0, 0, .66);
+
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1em;
+      transform: translateY(100%);
+      transition: transform .33333s ease-in-out;
+    }
+
+    &:hover::after {
+      transform: translateY(0);
+    }
+  }
+
   // State: JS-enabled
   .js & {
     // cursor: zoom-in;
