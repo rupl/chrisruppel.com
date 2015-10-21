@@ -31,14 +31,16 @@
     {% endif %}
 
     <script>
+      // loadCSS [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT.
+      function loadCSS(href,before,media){"use strict";var ss=window.document.createElement("link");var ref=before||window.document.getElementsByTagName("script")[0];var sheets=window.document.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";ref.parentNode.insertBefore(ss,ref);ss.onloadcssdefined=function(cb){var defined;for(var i=0;i<sheets.length;i++){if(sheets[i].href&&sheets[i].href===ss.href){defined=true}}if(defined){cb()}else{setTimeout(function(){ss.onloadcssdefined(cb)})}};ss.onloadcssdefined(function(){ss.media=media||"all"});return ss}
+      // load fonts
+      loadCSS('//fonts.googleapis.com/css?family=Oswald:400,300');
+    </script>
+    <noscript><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300" type="text/css"></noscript>
+
+    <script>
       // JS is able to start executing.
       document.documentElement.classList.add('js');
-
-      // If the webfont cookie is found, use the fonts immediately.
-      if (!!document.cookie.match('wf-loaded')) {
-        document.documentElement.classList.remove('wf-loading');
-        document.documentElement.classList.add('wf-oswald');
-      }
     </script>
   </head>
   <body>
