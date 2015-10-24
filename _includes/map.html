@@ -7,16 +7,30 @@
 <script>
   var map = L.mapbox.map('map-init', 'mapbox.streets');
 
-  var geocoder = L.mapbox.geocoder('mapbox.places');
-  geocoder.query('{{ page.map.location }}', showMap);
+  {% if page.map.kml %}
+    var runLayer = omnivore.kml('/maps/{{ page.map.kml }}')
+      .on('ready', function() {
+          map.fitBounds(runLayer.getBounds());
 
-  function showMap(err, data) {
-    // if (data.lbounds) {
-    //     map.fitBounds(data.lbounds);
-    //     var marker = L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
-    // } else if (data.latlng) {
-      map.setView([data.latlng[0], data.latlng[1]], {{ page.map.zoom }});
-      L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
-    // }
-  }
+          // Tooltip for markers.
+          // @see https://www.mapbox.com/mapbox.js/example/v1.0.0/omnivore-kml-tooltip/
+          runLayer.eachLayer(function(layer) {
+            layer.bindPopup(layer.feature.properties.name);
+          });
+      })
+      .addTo(map);
+  {% else %}
+    var geocoder = L.mapbox.geocoder('mapbox.places');
+    geocoder.query('{{ page.map.location }}', showMap);
+
+    function showMap(err, data) {
+      // if (data.lbounds) {
+      //     map.fitBounds(data.lbounds);
+      //     var marker = L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
+      // } else if (data.latlng) {
+        map.setView([data.latlng[0], data.latlng[1]], {{ page.map.zoom }});
+        L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
+      // }
+    }
+  {% endif %}
 </script>

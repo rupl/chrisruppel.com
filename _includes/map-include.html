@@ -1,4 +1,6 @@
 <!-- mapbox dependencies and config -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet'>
+{% if page.map.kml %}<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>{% endif %}
+
 <script>L.mapbox.accessToken = '{{ site.mapboxToken }}';</script>
