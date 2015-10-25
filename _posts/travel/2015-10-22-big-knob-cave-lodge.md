@@ -3,7 +3,7 @@ title: Big Knob
 location: Cave Lodge, Thailand
 
 map:
-  kml: big-knob.kml
+  kml: cave-lodge_big-knob.kml
 
 gallery:
 - src: big-knob-1.jpg

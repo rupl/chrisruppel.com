@@ -15,7 +15,7 @@
           // Tooltip for markers.
           // @see https://www.mapbox.com/mapbox.js/example/v1.0.0/omnivore-kml-tooltip/
           runLayer.eachLayer(function(layer) {
-            layer.bindPopup(layer.feature.properties.name);
+            layer.bindPopup('<h3>' + layer.feature.properties.name + '</h3><p>' + layer.feature.properties.description + '</p>');
           });
       })
       .addTo(map);
