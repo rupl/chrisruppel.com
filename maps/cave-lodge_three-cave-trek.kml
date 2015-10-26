@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2"><Document><name>Wilderness Caving and Walking</name><description>Day-long trek at Cave Lodge</description>
 <Style id="TrackStyle_9a41d9c8"><LineStyle><color>C8D9419A</color><width>5</width></LineStyle></Style>
+
 <Placemark><name>Fossil Cave</name><description>A cave filled with many old fossils.</description><Point><coordinates>98.245975,19.589945,828.756470</coordinates></Point></Placemark>
 <Placemark><name>Waterfall Cave</name><description>An extremely small, tight cave filled with water. At the end of the tunnel is a 35m waterfall.</description><Point><coordinates>98.244710,19.586765,823.274658</coordinates></Point></Placemark>
 <Placemark><name>Christmas Cave</name><description>A large, open cave with beautiful white formations like snow.</description><Point><coordinates>98.261875,19.583300,828.756470</coordinates></Point></Placemark>
 
-<Placemark><name>Beginning</name><description>We got dropped off at the road.</description><Point><coordinates>98.252959,19.592925,940.334473</coordinates></Point></Placemark>
+<Placemark><name>Beginning</name><description>We got dropped off at the road but I forgot to turn on GPS until about 10 minutes in.</description><Point><coordinates>98.252959,19.592925,940.334473</coordinates></Point></Placemark>
 <Placemark><name>End</name><description>Back safe at the lodge.</description><Point><coordinates>98.280620,19.572295,642.246603</coordinates></Point></Placemark>
 
 <Placemark><name>Wilderness Caving and Walking</name><description>Day-long trek at Cave Lodge</description>
