@@ -5,7 +5,7 @@
 
 <!-- mapbox init -->
 <script>
-  var map = L.mapbox.map('map-init', 'mapbox.streets');
+  var map = L.mapbox.map('map-init', '{% if page.map.style %}{{ page.map.style }}{% else %}mapbox.streets{% endif %}');
 
   {% if page.map.kml %}
     var runLayer = omnivore.kml('/maps/{{ page.map.kml }}')
