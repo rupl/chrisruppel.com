@@ -20,6 +20,11 @@ gallery:
   comment: The entrance to the main building, with paths leading to bungalows, the swimming hole, and other adventures.
   type: wide
   bgpad: 50%
+- src: cave-lodge-6.jpg
+  alt: Group of guests standing with John Spies
+  comment: We had to get a group photo with John before departing Cave Lodge!
+  type: wide
+  bgpad: 40%
 
 links:
 - href: http://www.cavelodge.com
