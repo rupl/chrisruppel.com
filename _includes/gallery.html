@@ -5,7 +5,7 @@
       {% capture imgsrc %}/img/travel@32/{{ item.src }}{% endcapture %}
       <span class="photo{% if item.bgsize == 'contain' %} contain{% endif %}{% if item.type != null %} {{ item.type }}{% endif %}"
             style="background-image: url({{ imgsrc }}); {% if item.bgpos != null %}background-position: {{ item.bgpos }};{% endif %} {% if item.bgpad != null %}padding-bottom: {{ item.bgpad }}; {% endif %}"
-            title="{{ item.comment | escape }}">
+            {% if item.comment %}data-comment="{{ item.comment | escape }}"{% endif %}>
         <img src="/img/travel/{{ item.src }}"
              alt="{{ item.alt | escape }}"
              class="element-invisible">

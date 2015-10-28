@@ -4,4 +4,18 @@
 
 #photosphere {
   @extend .media;
+  cursor: move;
+
+  // Link to view in fullscreen
+  .fullscreen {
+    @extend .caption;
+    display: none; // hide until feature tests positive
+    cursor: zoom-in;
+    text-decoration: underline;
+
+    // Modernizr test
+    .fullscreen & {
+      display: block;
+    }
+  }
 }

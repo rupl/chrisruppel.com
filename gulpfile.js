@@ -98,6 +98,7 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
 
   var three = gulp.src([
       'node_modules/three/three.min.js',
+      'node_modules/screenfull/dist/screenfull.js',
       '_js/threejs/*.js'
     ])
     .pipe(plumber())
@@ -116,7 +117,7 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
 gulp.task('image-resize', 'Create different sizes for resposive images.', function () {
 
   log(c.cyan('image-resize'), 'creating images @ 32...');
-  var img_32 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF}*'])
+  var img_32 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel@32'))
     .pipe(parallel(
       resize({
@@ -138,7 +139,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     .pipe(gulp.dest('img/travel@32'));
 
   log(c.cyan('image-resize'), 'creating images @ 640...');
-  var img_640 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF}*'])
+  var img_640 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel@640'))
     .pipe(parallel(
       resize({
@@ -160,7 +161,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     .pipe(gulp.dest('img/travel@640'));
 
   log(c.cyan('image-resize'), 'creating images @ 1024...');
-  var img_1024 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF}*'])
+  var img_1024 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel@1024'))
     .pipe(parallel(
       resize({
@@ -182,7 +183,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     .pipe(gulp.dest('img/travel@1024'));
 
   log(c.cyan('image-resize'), 'minifying originals...');
-  var img_orig = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF}*'])
+  var img_orig = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel'))
     .pipe(imagemin({
       progressive: true,
@@ -206,7 +207,7 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
   gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch('_img/**/*', ['image-resize']);
   gulp.watch('_js/**/*', ['js']);
-  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', '!_site/**/*.*'], ['jekyll']);
+  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], ['jekyll']);
 });
 
 // Add a default task to render the available commands.
