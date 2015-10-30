@@ -116,35 +116,37 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
 // -----------------------------------------------------------------------------
 gulp.task('image-resize', 'Create different sizes for resposive images.', function () {
 
-  log(c.cyan('image-resize'), 'creating images @ 32...');
-  var img_32 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
-    .pipe(changed('img/travel@32'))
-    .pipe(parallel(
-      resize({
-        width: 32,
-        height: 24,
-        crop: true,
-        upscale: false,
-        quality: 0.5,
-      }),
-      os.cpus().length
-    ))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
-    .pipe(rename({
-      dirname: ''
-    }))
-    .pipe(gulp.dest('img/travel@32'));
+  // Eventually I'd like to do some inlining of a tiny image upfront.
+  //
+  // log(c.cyan('image-resize'), 'creating images @ 32...');
+  // var img_32 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+  //   .pipe(changed('img/travel@32'))
+  //   .pipe(parallel(
+  //     resize({
+  //       width: 32,
+  //       height: 24,
+  //       crop: true,
+  //       upscale: false,
+  //       quality: 0.5,
+  //     }),
+  //     os.cpus().length
+  //   ))
+  //   .pipe(imagemin({
+  //     progressive: true,
+  //     svgoPlugins: [{removeViewBox: false}]
+  //   }))
+  //   .pipe(rename({
+  //     dirname: ''
+  //   }))
+  //   .pipe(gulp.dest('img/travel@32'));
 
-  log(c.cyan('image-resize'), 'creating images @ 640...');
-  var img_640 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
-    .pipe(changed('img/travel@640'))
+  log(c.cyan('image-resize'), 'creating images @ 320...');
+  var img_320 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+    .pipe(changed('img/travel@320'))
     .pipe(parallel(
       resize({
-        width: 640,
-        height: 640,
+        width: 320,
+        height: 320,
         crop: false,
         upscale: false,
         quality: 0.5,
@@ -158,29 +160,31 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     .pipe(rename({
       dirname: ''
     }))
-    .pipe(gulp.dest('img/travel@640'));
+    .pipe(gulp.dest('img/travel@320'));
 
-  log(c.cyan('image-resize'), 'creating images @ 1024...');
-  var img_1024 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
-    .pipe(changed('img/travel@1024'))
-    .pipe(parallel(
-      resize({
-        width: 1024,
-        height: 768,
-        crop: true,
-        upscale: false,
-        quality: 0.75,
-      }),
-      os.cpus().length
-    ))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
-    .pipe(rename({
-      dirname: ''
-    }))
-    .pipe(gulp.dest('img/travel@1024'));
+  // Unused for now
+  //
+  // log(c.cyan('image-resize'), 'creating images @ 640...');
+  // var img_640 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+  //   .pipe(changed('img/travel@640'))
+  //   .pipe(parallel(
+  //     resize({
+  //       width: 640,
+  //       height: 640,
+  //       crop: true,
+  //       upscale: false,
+  //       quality: 0.75,
+  //     }),
+  //     os.cpus().length
+  //   ))
+  //   .pipe(imagemin({
+  //     progressive: true,
+  //     svgoPlugins: [{removeViewBox: false}]
+  //   }))
+  //   .pipe(rename({
+  //     dirname: ''
+  //   }))
+  //   .pipe(gulp.dest('img/travel@640'));
 
   log(c.cyan('image-resize'), 'minifying originals...');
   var img_orig = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
@@ -191,7 +195,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     }))
     .pipe(gulp.dest('img/travel'));
 
-    return merge(img_32, img_640, img_1024, img_orig);
+    return merge(img_320, img_orig);
 });
 
 // -----------------------------------------------------------------------------
