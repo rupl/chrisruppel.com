@@ -2,8 +2,9 @@
 <figure class="gallery {% if include.gallery[0].type != null %} {{ include.gallery[0].type }}{% else %} tall{% endif %}">
   {% for item in include.gallery %}
     {% if item.src != null %}
+      {% capture imgsrc %}/img/travel@320/{{ item.src }}{% endcapture %}
       <span class="photo{% if item.bgsize == 'contain' %} contain{% endif %}{% if item.type != null %} {{ item.type }}{% endif %}"
-            style="background-image: url(/img/travel/{{ item.src }}); {% if item.bgpos != null %}background-position: {{ item.bgpos }};{% endif %} {% if item.bgpad != null %}padding-bottom: {{ item.bgpad }}; {% endif %}"
+            style="background-image: url({{ imgsrc }}); {% if item.bgpos != null %}background-position: {{ item.bgpos }};{% endif %} {% if item.bgpad != null %}padding-bottom: {{ item.bgpad }}; {% endif %}"
             {% if item.comment %}data-comment="{{ item.comment | escape }}"{% endif %}>
         <img src="/img/travel/{{ item.src }}"
              alt="{{ item.alt | escape }}"
