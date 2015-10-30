@@ -29,6 +29,10 @@ if ('content' in document.createElement('template')) {
       // If there's content, load it.
       if (next_trip) {
         trip_list.appendChild(next_trip);
+
+        // Process gallery images
+        var photos = next_trip.querySelectorAll('.photo');
+        processGalleryPhotos(photos);
       }
       // If not, disable the button.
       else {
