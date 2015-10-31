@@ -43,7 +43,7 @@ And that's when I noticed the leg. It had a decent gash. I couldn't feel it.
 
 Luckily I was by a stairwell and very calmly made my way back up the 15m of rock. People saw us and one of them was a French nurse. He had loads of stuff in his pack. Smart guy, this one. He came over to check me out.
 
-I'd picked a nice rock to prop my leg up on to see how bad I was bleeding and luckily it was really not bad at all. The wound was pretty bad looking but all the things you check for (pain, blood) were actually in mhy favor.
+I'd picked a nice rock to prop my leg up on to see how bad I was bleeding and luckily it was really not bad at all. The wound was pretty bad looking but all the things you check for (pain, blood) were actually in my favor.
 
 The nurse came and put a rudimentary bandage on my leg with gauze and small band-aids. He gave me two pills for when my adrenaline wore off and said: _"Go to the hospital. NOW."_ — yeah I'm with you dude.
 
