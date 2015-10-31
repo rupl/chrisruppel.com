@@ -14,7 +14,7 @@ gallery:
   comment: Post-stitches.
 - src: pai-waterfall-2.jpg
   alt: Two people pointing at EMERGENCY ROOM sign.
-  comment: What can you do except laugh it off?
+  comment: What can you do except laugh it off? By the way... the helmets are for our motorbikes, not the tumble down the waterfall... just in case you were wondering.
 
 summary: Ok the real truth behind our long stay in Pai... Lina and I fell down the waterfall. We're fine.
 ---
@@ -23,11 +23,11 @@ It was really not that difficult... There's a waterfall with two major tiers. Pe
 
 The second picture shows Anna, Lina, and myself enjoying the waterfall. We'd been there a whopping 10 minutes. I scrambled down to my spot almost immediately since the girls were in the higher pools. It wasn't so bad, but the edge of the flow had mossy, slippery rock.
 
-I'd just like to say that there really is a good 5 meters between me and the bottom. The picture doesn't show it. If it worked the way the picture showed it, this would have been a non-story.
+I avoided the rock by climbing down the dry part, stepping completely over the moss, and sitting in the moss-free waterfall. The swift moving water prevents build-up or something.
 
 {% include gallery.html gallery=page.gallery %}
 
-I avoided the rock by climbing down the dry part, stepping completely over the moss, and sitting in the moss-free waterfall. The swift moving water prevents build-up or something.
+I'd just like to say that there really is a good 5 meters between me and the bottom. The picture doesn't show it. If it worked the way the picture showed it, this would have been a non-story.
 
 _But anyway..._
 
@@ -49,7 +49,7 @@ The nurse came and put a rudimentary bandage on my leg with gauze and small band
 
 How'd we get there? On motorbikes, of course! So I rode back down the mountain with Karin who had motorbiked a whole two hours that day as her lifetime motorbike experience. She did great considering the circumstances.
 
-We made it back down to the hospital with me navigating via phone (no, not while riding), and checked into the hospital. 20 minutes, 5, stitches, and 972 baht later I was cleared to leave. I was very grateful for modern medicine on this day.
+We made it back down to the hospital with me navigating via phone (no, not while riding), and checked into the hospital. 20 minutes, 5 stitches, and 972 baht later I was cleared to leave. I was very grateful for modern medicine on this day.
 
 The checkups are quick. Yesterday, I showed a particularly large bruise I developed on my belly near my hip and asked if it needed any attention. The nurse simply said _"all fine, you're fat"_ — GREAT! She then said something else to me which I didn't hear, but on the third time she said it loud and clear: _"DIET"_
 
