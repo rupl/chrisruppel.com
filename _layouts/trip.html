@@ -2,6 +2,7 @@
 layout: page
 og: true
 tc: true
+comments: true
 ---
 
 <article class="trip">
@@ -31,6 +32,10 @@ tc: true
         {% endfor %}
       </ul>
   </aside>
+  {% endif %}
+
+  {% if page.comments %}
+    {% include disqus.html %}
   {% endif %}
 
   <div class="go">
