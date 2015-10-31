@@ -6,7 +6,7 @@ gallery:
 - src: pai-1.jpg
   alt: A waterfall near sundown.
   comment: This is the part you're supposed to slide down. Look how nice and slide-shaped it is!
-- src: pai-3.jpg
+- src: pai-waterfall-3.jpg
   alt: Three people sitting in a waterfall.
   comment: Lina gets up just moments before the incident. I'm looking back smiling as instructed by Karin.
 - src: pai-waterfall-1.jpg

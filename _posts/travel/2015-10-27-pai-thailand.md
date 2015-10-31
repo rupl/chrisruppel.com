@@ -11,8 +11,8 @@ gallery:
   alt: Afternoon rain falling on a field with sunbeams in the sky.
   comment: I read a book and listened to the rain one afternoon.
 - src: pai-3.jpg
-  alt: Three people sitting in a waterfall.
-  comment: Mor Pang was a fun waterfall to sit and listen to.
+  alt: Man playing cajon.
+  comment: We sat at an open-mic bar one night and I played cajon for a few songs.
 - src: pai-4.jpg
   alt: Four people posing for a group photo at a bus station.
   comment: We parted ways with Lina and Anna, but unlike many goodbyes we know where to find them when we return to Germany.
