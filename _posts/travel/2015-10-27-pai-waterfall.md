@@ -49,7 +49,7 @@ The nurse came and put a rudimentary bandage on my leg with gauze and small band
 
 How'd we get there? On motorbikes, of course! So I rode back down the mountain with Karin who had motorbiked a whole two hours that day as her lifetime motorbike experience. She did great considering the circumstances.
 
-We made it back down to the hospital with me navigating via phone (no, not while riding), and checked into the hospital. 20 minutes, 5 stitches, and 972 baht later I was cleared to leave. I was very grateful for modern medicine on this day.
+We made it back down to the hospital with me navigating via phone (no, not while riding), and checked into the hospital. 20 minutes, 5 stitches, and [972 baht](https://www.google.com/search?q=972+thb+usd&ie=UTF-8#q=972+thb+usd) later I was cleared to leave. I was very grateful for modern medicine on this day.
 
 The checkups are quick. Yesterday, I showed a particularly large bruise I developed on my belly near my hip and asked if it needed any attention. The nurse simply said _"all fine, you're fat"_ — GREAT! She then said something else to me which I didn't hear, but on the third time she said it loud and clear: _"DIET"_
 
