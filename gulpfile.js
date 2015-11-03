@@ -10,6 +10,7 @@ var sequence = require('run-sequence');
 var merge = require('merge-stream');
 var parallel = require('concurrent-transform');
 var os = require('os');
+var connect = require('gulp-connect');
 
 // Include Our Plugins
 var bs = require('browser-sync');
@@ -248,4 +249,15 @@ gulp.task('build-dev', 'Do a complete build to begin development.', function(cb)
 gulp.task('deploy', 'Deploy site to gh-pages', ['build-deploy'], function() {
   return gulp.src('./_site/**/*')
     .pipe(deploy());
+});
+
+// -----------------------------------------------------------------------------
+// Serve from Heroku
+// -----------------------------------------------------------------------------
+gulp.task('serve', function() {
+  connect.server({
+    root: '_site',
+    port: process.env.PORT || 5000,
+    livereload: false
+  });
 });
