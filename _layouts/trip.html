@@ -43,7 +43,7 @@ comments: true
       <a class="btn btn--prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}{% if page.previous.location %} in {{ page.previous.location }}{% endif %}">Prev trip</a>
     {% endif %}
 
-    <a id="comments-link" class="btn btn--comments" href="{{ site.url }}{{ page.url }}#disqus_thread" onclick="return loadDisqus();">Loading comment count...</a>
+    <a id="comments-link" class="btn btn--comments" href="http://chrisruppel.com{{ page.url }}#disqus_thread" onclick="return loadDisqus(event);">Loading comment count...</a>
   </div>
 
   {% if page.comments %}
