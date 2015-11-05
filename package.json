@@ -6,10 +6,8 @@
   "engines": {
     "node": "0.12.7"
   },
-  "devDependencies": {
-    "browser-sync": "^2.8.2"
-  },
   "dependencies": {
+    "browser-sync": "^2.8.2",
     "concurrent-transform": "^1.0.0",
     "fg-loadcss": "^0.1.8",
     "fontfaceobserver": "^1.5.1",
