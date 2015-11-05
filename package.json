@@ -32,6 +32,6 @@
     "three": "^0.72.0"
   },
   "scripts": {
-    "start": "node node_modules/gulp/bin/gulp build-deploy && node node_modules/gulp/bin/gulp serve"
+    "start": "npm rebuild node-sass && node node_modules/gulp/bin/gulp build-deploy && node node_modules/gulp/bin/gulp serve"
   }
 }
