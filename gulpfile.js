@@ -254,7 +254,7 @@ gulp.task('deploy', 'Deploy site to gh-pages', ['build-deploy'], function() {
 // -----------------------------------------------------------------------------
 // Serve from Heroku
 // -----------------------------------------------------------------------------
-gulp.task('serve', function() {
+gulp.task('serve', 'Serves the site from Heroku', function() {
   connect.server({
     root: '_site',
     port: process.env.PORT || 5000,
