@@ -222,7 +222,7 @@ gulp.task('default', false, ['help']);
 // -----------------------------------------------------------------------------
 // Build site for deployment.
 // -----------------------------------------------------------------------------
-gulp.task('build-deploy', 'Do a complete build to prep for deploy.', ['jekyll-deploy'], function(cb) {
+gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb) {
   return sequence(
     ['sass', 'js', 'image-resize'],
     'jekyll-deploy',
