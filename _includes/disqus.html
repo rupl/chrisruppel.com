@@ -1,5 +1,6 @@
 <div id="disqus_thread"></div>
 <script>
+function loadDisqus(e) {
   {% if site.development == true %}
   // Developer mode
   var disqus_developer = 1;
@@ -19,10 +20,15 @@
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
   })();
+
+  // Remove comment link
+  var comment_link = document.querySelector('#comments-link');
+  comment_link.parentNode.removeChild(comment_link);
+
+  e.preventDefault();
+}
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
-{% comment %}
-<!-- optional comment count script -->
+<!-- Comment count script -->
 <script id="dsq-count-scr" src="//rupl.disqus.com/count.js" async></script>
-{% endcomment %}

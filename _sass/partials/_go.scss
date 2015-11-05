@@ -35,6 +35,10 @@
       order: 4; // show up AFTER "Back"
       flex-grow: 2;
     }
+    .btn--comments {
+      order: 5;
+      flex-basis: 100%
+    }
   }
 
   abbr {
