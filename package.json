@@ -3,6 +3,9 @@
   "repository": "git@github.com:rupl/chrisruppel.com.git",
   "private": true,
   "license": "MIT",
+  "engines": {
+    "node": "0.12.7"
+  },
   "devDependencies": {
     "browser-sync": "^2.8.2"
   },
