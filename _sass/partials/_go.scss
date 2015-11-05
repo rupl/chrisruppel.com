@@ -109,6 +109,15 @@
   }
 }
 
+.btn--comments {
+  &::before {
+    content: '\1f4ac \00a0';
+  }
+  &:hover::before {
+    animation: bounce-left .42s ease-in-out;
+  }
+}
+
 .btn--disabled {
   cursor: not-allowed;
   background-image: linear-gradient(to bottom, #eee, #ddd) !important;
