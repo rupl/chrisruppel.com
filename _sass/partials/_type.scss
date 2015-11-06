@@ -16,3 +16,16 @@ abbr[title] {
 abbr[lang] {
   font-style: italic;
 }
+
+// Defaults for Trip content
+.story {
+
+  // Spruce up the lists a bit.
+  ul, ol {
+    li {
+      font-size: 95%;
+      margin-right: 5%;
+      margin-bottom: 1.5%;
+    }
+  }
+}
