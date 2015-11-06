@@ -2,10 +2,19 @@
 title: Books
 location: Pai, Thailand
 
+gallery:
+- src: pai-books-1.jpg
+  alt: First-person view of man reading book in hammock with a bandaged leg.
+  comment: My last week in one picture. Not terrible, I have to admit.
+  type: wide
+  bgpad: 50%
+
 summary: My reading list in Pai. See last entry.
 ---
 
 After our self-induced downtime, I did the only thing I could do: take antibiotics, read books, and enjoy the scenery. We found a really nice, quiet place to stay called Sabai Garden. So I sat outside as much as possible and read books.
+
+{% include gallery.html gallery=page.gallery %}
 
 I luckily had my Kindle all loaded up ahead of time and started asking for suggestions from friends once I'd gotten through most of my backlog. Here they are in reading order:
 
