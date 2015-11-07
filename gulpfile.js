@@ -195,7 +195,16 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     }))
     .pipe(gulp.dest('img/travel'));
 
-    return merge(img_320, img_orig);
+  log(c.cyan('image-resize'), 'minifying photospheres...');
+  var img_photosphere = gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
+    .pipe(changed('img/photosphere'))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('img/photosphere'));
+
+    return merge(img_320, img_orig, img_photosphere);
 });
 
 // -----------------------------------------------------------------------------
