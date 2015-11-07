@@ -24,7 +24,6 @@ var minCSS = require('gulp-minify-css');
 var resize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
-var deploy = require('gulp-gh-pages');
 
 // -----------------------------------------------------------------------------
 // Jekyll
@@ -36,7 +35,7 @@ gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
 });
 
 // Add a second task for deploying
-gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment to gh-pages.', function(cb) {
+gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment.', function(cb) {
   return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'})
     .on('close', cb);
 });
@@ -240,24 +239,4 @@ gulp.task('build-dev', 'Do a complete build to begin development.', function(cb)
     'jekyll',
     cb
   );
-});
-
-
-// -----------------------------------------------------------------------------
-// Deploy to gh-pages
-// -----------------------------------------------------------------------------
-gulp.task('deploy', 'Deploy site to gh-pages', ['build-deploy'], function() {
-  return gulp.src('./_site/**/*')
-    .pipe(deploy());
-});
-
-// -----------------------------------------------------------------------------
-// Serve from Heroku
-// -----------------------------------------------------------------------------
-gulp.task('serve', 'Serves the site from Heroku', function() {
-  connect.server({
-    root: '_site',
-    port: process.env.PORT || 5000,
-    livereload: false
-  });
 });
