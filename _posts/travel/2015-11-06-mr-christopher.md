@@ -17,22 +17,22 @@ The nurses are often not meeting the hygenic standards expected in the west. In 
 
 * Snip the ends off their gloves and continue on as if it were nothing.
 * Answer their cell phones after putting gloves on.
-* Pick at their own ear or clothing after putting gloves on.
+* Pick at their own ear, hair, or clothing after putting gloves on.
 * Pick things up after they fell on the floor.
 * Use surfaces immediately after another sick patient vacated them.
 * Ignore my clearly infected wound and just send us off without blinking.
 
-If stuff like this happens, asking them politely to discard something that might not be sanitary is your task, not theirs.
+If stuff like this happens and you're uncomfortable with the risk, don't hesitate to politely ask them to discard something.
 
 ### Trust your own judgement
 
 We went in and I got five stitches the first visit. It was pretty efficient and cheap compared to US or even German standards. We had high confidence in the staff after the initial visit.
 
-Then, the wound cleanings became faster and faster, with little attention being paid to the state of my leg. The first two days we just chalked it up to being low priority. But my leg was swollen and finally on the fifth day an older, more experienced nurse looked at my leg and asked how long it was like this, we said since day two. She said it's very infected and we need to do something.
+Then, the wound cleanings became faster and faster, with little attention being paid to the state of my leg. The first two days we just chalked it up to being low priority. But my leg was swollen. We didn't like how it looked and started getting nervous. Finally on the fifth day an older, more experienced nurse looked at my leg and asked how long it was like this, we said since day two. She said it's very infected and we need to do something.
 
-The doctor immediately had them pull stitches out and let my leg drain. It had an abscess. If we'd trusted our judgement and asked for a doctor sooner, the doctor would have started treating the infection sooner.
+The doctor immediately had them pull stitches out and let my leg drain. It had an abscess. **If we'd trusted our instincts and asked for a doctor sooner, the doctor would have started treating the infection sooner.**
 
-Now, I have some sympathy. No other westerners we saw ended up visiting more than three times total. They're all idiots who fell off their motorbikes, earning their so-called "Thailand tattoos" the process. My wound was not superficial. We are on day 10 and still have a ways to go. Due to our longer-term treatment, sometimes the staff seem like they're tired of seeing us.
+Now, I have some sympathy. No other westerners we saw ended up visiting more than three times total. They're all idiots who fell off their motorbikes, earning their so-called "Thailand tattoos" in the process. My wound was not superficial. We are on day 10 and still have a ways to go. Due to our longer-term treatment, sometimes the staff seem like they're tired of seeing us.
 
 So if you feel like there's a problem, be polite but assertive, and ask to see a doctor. Even the doctor might be apathetic so if you feel like your care isn't adequate and it's feasible for you to move cities, consider moving where you can get better care.
 
@@ -40,7 +40,7 @@ So if you feel like there's a problem, be polite but assertive, and ask to see a
 
 Our problem caused us to stay past our original 30-day <abbr title="Visa on arrival">VOA</abbr>. We only thought of and dealt with it a few days before the visa expired, and that caused us stress.
 
-Thailand has immigration offices in Maehongson, Chiang Mai, and Bangkok. We luckily went to Maehongson which is _waaaay_ out on the border of Thailand and Myanmar. From Pai, it's about the same distance to Chiang Mai, but due to its remoteness it's also **completely empty** (it also has a magnificent view being on top of a mountain). A trip to immigration could very well take you more than a day if there are long lines, so plan accordingly.
+Thailand has immigration offices in Mae Hong Son, Chiang Mai, and Bangkok. We luckily went to Mae Hong Son which is _waaaay_ out on the border of Thailand and Myanmar. From Pai, it's about the same distance to Chiang Mai, but due to its remoteness it's also **completely empty** (it also has a magnificent view being on top of a mountain). A trip to immigration could very well take you more than a day if there are long lines, so plan accordingly.
 
 When you go, bring the following:
 
@@ -51,7 +51,7 @@ When you go, bring the following:
 * **Passport photo**. We carry around extra copies with our passports, you should do this as a matter of habit.
 * **1900 baht per person** for the extension itself.
 
-The doctor requested 10 days on our document but immigration gave us 30. If you are travelling with a partner, the immigration have no problem issuing your partner an extension too. I'm not sure about bigger groups, but the policy indicates that one person can remain to accompany the person needing treatment.
+The doctor requested 10 days on our document but immigration gave us 30. If you are travelling with a partner, the immigration folks have no problem issuing your partner an extension too. I'm not sure about bigger groups, but the policy indicates that one person can remain to accompany the person needing treatment.
 
 Here are two documents we read while trying to sort this stuff out: [Thai Police Order 777/2551](http://www.thaivisa.com/forum/index.php?app=core&module=attach&section=attach&attach_id=153821) and [Immigration Bureau Order 305/2551](http://www.thaivisa.com/forum/post-a77473-immigration-bureau-order-305-2551-d.html/) (Many thanks to thaivisa.com forum members for posting them).
 
