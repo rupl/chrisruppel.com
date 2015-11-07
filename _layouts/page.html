@@ -9,8 +9,10 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.google-analytics.com">
+    {% if page.comments %}
     <link rel="preconnect" href="https://a.disquscdn.com" crossorigin>
     <link rel="preconnect" href="https://rupl.disqus.com">
+    {% endif %}
 
     {% if page.og != null %}
       <meta property="og:url" content="{{ site.url }}{{ page.url }}">
