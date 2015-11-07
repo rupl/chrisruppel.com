@@ -46,6 +46,7 @@ gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment.', function(cb) 
 gulp.task('browser-sync', false, function() {
   bs({
     server: './_site/',
+    port: 3456,
     open: false
   });
 });
