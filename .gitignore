@@ -5,6 +5,7 @@ img
 css
 js
 _includes/main.min.css
+/service-worker.js
 
 # Development and test settings
 _config.dev.yml
