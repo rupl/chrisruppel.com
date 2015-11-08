@@ -34,7 +34,7 @@ links:
 summary: Cave Lodge is an absolutely beautiful place to stay in north Thailand offering more adventures than we thought possible. Anyone passing through should make a stop here for at least a few nights!
 ---
 
-Cave Lodge is an incredible property situated on the side of a mountain in Pang Mapha, Thailand. It was started by an Australian named John Spies, who still runs it today.
+Cave Lodge is an incredible property situated on the side of a mountain near Soppong, part of the Pang Mapha district in Thailand. It was started in 1984 by an Australian named John Spies, who still runs it today.
 
 They started out as an exploration operation, having [explored and discovered dozens of caves](http://www.telegraph.co.uk/news/earth/earthpicturegalleries/9489825/Amazing-photographs-of-huge-cave-systems-in-Thailand.html) in the area. Not only do they map the caves and guide people through them, but they take samples of dirt and minerals, sending them for carbon dating to help improve scientific understanding of this area's geography.
 
