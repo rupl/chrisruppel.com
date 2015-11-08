@@ -6,7 +6,7 @@
       <span class="photo{% if item.bgsize == 'contain' %} contain{% endif %}{% if item.type != null %} {{ item.type }}{% endif %}"
             style="background-image: url({{ imgsrc }}); {% if item.bgpos != null %}background-position: {{ item.bgpos }};{% endif %} {% if item.bgpad != null %}padding-bottom: {{ item.bgpad }}; {% endif %}"
             {% if item.comment %}data-comment="{{ item.comment | escape }}"{% endif %}>
-        <img src="/img/travel/{{ item.src }}"
+        <img src="{{ imgsrc }}"
              alt="{{ item.alt | escape }}"
              class="element-invisible">
       </span>
