@@ -28,9 +28,11 @@ main {
 }
 
 footer[role="contentinfo"] {
+  clear: both;
   max-width: 860px;
   margin: 0 auto;
   font-size: .8em;
+  padding-top: 2em;
   padding-bottom: 20em;
   text-align: center;
   opacity: .666;
