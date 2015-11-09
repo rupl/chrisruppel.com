@@ -54,6 +54,9 @@
     <main>
       {{ content }}
     </main>
+    <footer role="contentinfo">
+      <p class="colophon">&#169; {{ 'now' | date: '%Y' }} Chris Ruppel</p>
+    </footer>
 
     <script async src="/js/main.min.js"></script>
     {% if page.photosphere %}<script async src="/js/photosphere.min.js"></script>{% endif %}
