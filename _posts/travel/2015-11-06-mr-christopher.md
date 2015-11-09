@@ -36,6 +36,8 @@ Now, I have some sympathy. No other westerners we saw ended up visiting more tha
 
 So if you feel like there's a problem, be polite but assertive, and ask to see a doctor. Even the doctor might be apathetic so if you feel like your care isn't adequate and it's feasible for you to move cities, consider moving where you can get better care.
 
+<aside class="update" data-date="2015-11-09"><p><strong>Update 2015-11-09:</strong> after a few more days we pieced together a better explanation.. It was only the young, neglectful nurse that ignored my infection who held a grudge against us. We think that our insistence on a doctor, plus the older nurse's report that my leg was infected for a long time ended up in a reprimand for the young nurse. As the leg got better, the staff were much more relaxed with us and very friendly, but she never comes near us now and sometimes gives me a cold, hard stare 😠</p></aside>
+
 ### Beware of visa issues
 
 Our problem caused us to stay past our original 30-day <abbr title="Visa on arrival">VOA</abbr>. We only thought of and dealt with it a few days before the visa expired, and that caused us stress.
