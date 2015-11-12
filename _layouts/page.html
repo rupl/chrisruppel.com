@@ -42,9 +42,9 @@
       // loadCSS [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT.
       function loadCSS(href,before,media){"use strict";var ss=window.document.createElement("link");var ref=before||window.document.getElementsByTagName("script")[0];var sheets=window.document.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";ref.parentNode.insertBefore(ss,ref);ss.onloadcssdefined=function(cb){var defined;for(var i=0;i<sheets.length;i++){if(sheets[i].href&&sheets[i].href===ss.href){defined=true}}if(defined){cb()}else{setTimeout(function(){ss.onloadcssdefined(cb)})}};ss.onloadcssdefined(function(){ss.media=media||"all"});return ss}
       // load fonts
-      loadCSS('//fonts.googleapis.com/css?family=Oswald:400,300');
+      loadCSS('https://fonts.googleapis.com/css?family=Oswald:400,300');
     </script>
-    <noscript><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300" type="text/css"></noscript>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css"></noscript>
 
     <script>
       // JS is able to start executing.
@@ -61,7 +61,7 @@
 
     <script async src="/js/main.min.js"></script>
     {% if page.photosphere %}<script async src="/js/photosphere.min.js"></script>{% endif %}
-    {% if page.comments %}<script id="dsq-count-scr" src="//rupl.disqus.com/count.js" async defer></script>{% endif %}
+    {% if page.comments %}<script id="dsq-count-scr" src="https://rupl.disqus.com/count.js" async defer></script>{% endif %}
 
     {% if site.ga != null %}
     <script>
