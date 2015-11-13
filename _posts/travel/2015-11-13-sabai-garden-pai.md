@@ -13,6 +13,12 @@ gallery:
 - src: sabai-garden-4.jpg
   alt: Bungalows and hammocks amongst jungle trees.
   comment: The view from our front porch. We strung our hammock up next to the blue one and had many nice reading days.
+- src: sabai-garden-8.jpg
+  alt: Rice ready for harvest. The field is partially harvested.
+  comment: When we got to Pai all the rice fields were bright green. In the few weeks we were there it became harvest time. It was fun to watch the progress.
+- src: sabai-garden-7.jpg
+  alt: Man laughing.
+  comment: Ben proclaims someone the winner during his round of charades.
 - src: sabai-garden-2.jpg
   alt: Sun setting behind mountains on the horizon.
   comment: We were treated to an excellent sunset behind the mountains most days. It was one of the few things I limped around to see during my hardest recovery days.
@@ -20,6 +26,7 @@ gallery:
   alt: Entrance to Sabai Garden.
   comment: Entrance to Sabai Garden.
   type: wide
+  bgpad: 36%
 - src: sabai-garden-6.jpg
   alt: Group photo with seven people.
   comment: Our family photo from when we left Sabai to continue toward Vietnam. From the left — Alex, Nilay, Karin, me, Taila, Ben, Cienna.
