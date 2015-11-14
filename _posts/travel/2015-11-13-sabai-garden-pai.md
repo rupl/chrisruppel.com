@@ -11,8 +11,8 @@ gallery:
   alt: Two people reading at a table.
   comment: Alex and Nilay did homework at this table in the common area. Sometimes :)
 - src: sabai-garden-4.jpg
-  alt: Bungalows and hammocks amongst jungle trees.
-  comment: The view from our front porch. We strung our hammock up next to the blue one and had many nice reading days.
+  alt: Roselle flowers that have yet to bloom.
+  comment: These Hibiscus flowers (called Roselle) were all over the property. Occasionally they would be gathered, dried, and turned into fresh tea.
 - src: sabai-garden-8.jpg
   alt: Rice ready for harvest. The field is partially harvested.
   comment: When we got to Pai all the rice fields were bright green. In the few weeks we were there it became harvest time. It was fun to watch the progress.
