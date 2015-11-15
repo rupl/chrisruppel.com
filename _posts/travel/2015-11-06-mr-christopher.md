@@ -2,7 +2,13 @@
 title: Mr. Christopher
 location: Pai, Thailand
 
-summary: Lessons learned from getting medical treatment for a moderate wound in Pai, Thailand.
+gallery:
+- src: mr-christopher-1.jpg
+  alt: Thai medical form with the name "Mr. Christopher" written.
+  comment: That's MISTER Christopher to you, buddy!
+  type: wide
+
+summary: Lessons learned from getting medical treatment for a moderately infected wound in Pai, Thailand.
 ---
 
 [I fell down Mo Paeng accidentally](/travel/pai-waterfall). Given the experience we've had at the local hospital over the past week and a half I wanted to offer a few suggestions for dealing with foreign hospitals.
