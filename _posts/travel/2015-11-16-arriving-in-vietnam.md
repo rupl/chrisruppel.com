@@ -31,9 +31,10 @@ gallery:
   comment: Iced beer is not a concept I thought would be good, but it's just too hot not to try. It was the right decision.
 - src: ho-chi-minh-8.jpg
   alt: A busy party street in District 1.
-  comment: We stayed in District 1, the most tourist-filled, party town you can imagine. The amount of insanity here is indescribable. If you're looking for an unforgettable night, do yourself a favor and stop through here. Walk the alleyways, not the main streets!
-  type: wide
-  bgpad: 45%
+  comment: We stayed in District 1, the most tourist-filled party town you can find in Saigon. The amount of insanity here is over the top. If you're looking for an unforgettable night, do yourself a favor and stop through here. Walk the alleyways, not the main streets!
+- src: ho-chi-minh-10.jpg
+  alt: District 1 during the day.
+  comment: The same street during the day, devoid of night life but still showing hints of chaos.
 
 summary: Ho Chi Minh City was quite the change of pace after our slow weeks in Thailand. It's a crazy, pulsing city that is no place for a newbie traveler. We had a blast checking it out and acting young for a few days.
 ---
