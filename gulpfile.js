@@ -166,20 +166,20 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
   log(c.cyan('image-resize'), 'creating images @ 320...');
   var img_320 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel@320'))
-    .pipe(parallel(
-      resize({
-        width: 320,
-        height: 320,
-        crop: false,
-        upscale: false,
-        quality: 0.5,
-      }),
-      os.cpus().length
-    ))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    // .pipe(parallel(
+    //   resize({
+    //     width: 320,
+    //     height: 320,
+    //     crop: false,
+    //     upscale: false,
+    //     quality: 0.5,
+    //   }),
+    //   os.cpus().length
+    // ))
+    // .pipe(imagemin({
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}]
+    // }))
     .pipe(rename({
       dirname: ''
     }))
@@ -212,19 +212,19 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
   log(c.cyan('image-resize'), 'minifying originals...');
   var img_orig = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    // .pipe(imagemin({
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}]
+    // }))
     .pipe(gulp.dest('img/travel'));
 
   log(c.cyan('image-resize'), 'minifying photospheres...');
   var img_photosphere = gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/photosphere'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    // .pipe(imagemin({
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}]
+    // }))
     .pipe(gulp.dest('img/photosphere'));
 
     return merge(img_320, img_orig, img_photosphere);
