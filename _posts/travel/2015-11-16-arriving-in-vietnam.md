@@ -26,6 +26,7 @@ gallery:
 - src: ho-chi-minh-6.jpg
   alt: A street filled with thousands of motorbikes during rush hour.
   comment: Rush hour was a trip. We definitely were not prepared to navigate the traffic!
+  bgpos: 50% 0%
 - src: ho-chi-minh-7.jpg
   alt: 333 Export beer, and a glass filled with iced beer.
   comment: Iced beer is not a concept I thought would be good, but it's just too hot not to try. It was the right decision.
