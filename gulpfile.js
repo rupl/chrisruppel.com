@@ -166,16 +166,16 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
   log(c.cyan('image-resize'), 'creating images @ 320...');
   var img_320 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel@320'))
-    // .pipe(parallel(
-    //   resize({
-    //     width: 320,
-    //     height: 320,
-    //     crop: false,
-    //     upscale: false,
-    //     quality: 0.5,
-    //   }),
-    //   os.cpus().length
-    // ))
+    .pipe(parallel(
+      resize({
+        width: 320,
+        height: 320,
+        crop: false,
+        upscale: false,
+        quality: 0.5,
+      }),
+      os.cpus().length
+    ))
     // .pipe(imagemin({
     //   progressive: true,
     //   svgoPlugins: [{removeViewBox: false}]
