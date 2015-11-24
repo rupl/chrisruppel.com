@@ -21,7 +21,7 @@ gallery:
   comment: The sunsets here were beautiful.
 - src: longson-mui-ne-5.jpg
   alt: Man smiling with children behind him.
-  comment: We took a local bus from Mui Ne town to the resort. It was quite fun and about 15% the cost of a motorbike taxi.
+  comment: We took the number 1 local bus from Mui Ne town to the resort. These kids had fun saying "Hello, my name is" without actually saying their names :D
 - src: longson-mui-ne-6.jpg
   alt: A maintained campground with palm trees and pathways.
   comment: When we set up our tent we were the only ones on the grounds. That's because most people set their tents up directly on the beach! The only tradeoff is that your alarm clock is the sun, and there's no snooze button when it rises at 5:45.
