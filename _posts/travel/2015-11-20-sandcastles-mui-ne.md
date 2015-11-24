@@ -1,6 +1,6 @@
 ---
 title: Sandcastles
-location: Mui Ne, Vietnam
+location: Mũi Né, Vietnam
 layout: gallery
 
 gallery:
