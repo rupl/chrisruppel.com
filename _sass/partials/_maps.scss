@@ -14,6 +14,19 @@
 
   // Only display map once initialized.
   &.leaflet-container {
-    padding-top: 50%;
+    padding-top: 150%;
+
+    // Change ratios when it makes sense
+    @media (min-width: 550px) {
+      padding-top: 100%;
+    }
+
+    @media (min-width: 800px) {
+      padding-top: 80%;
+    }
+
+    @media (min-width: 1100px) {
+      padding-top: 60%;
+    }
   }
 }
