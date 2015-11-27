@@ -10,7 +10,14 @@
   {% if page.map.kml %}
     var runLayer = omnivore.kml('/maps/{{ page.map.kml }}')
       .on('ready', function() {
+          // Center map on the plot.
           map.fitBounds(runLayer.getBounds());
+
+          // Set the styles for the plot.
+          runLayer.setStyle({
+            opacity: .75,
+            weight: 6
+          });
 
           // Tooltip for markers.
           // @see https://www.mapbox.com/mapbox.js/example/v1.0.0/omnivore-kml-tooltip/
