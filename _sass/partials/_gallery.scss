@@ -85,17 +85,12 @@
   .tall,
   .photo:first-of-type {
     margin-top: 0;
-    padding-bottom: 104%;
+    padding-bottom: 103.9%;
     background-position: 25% 0;
   }
 
   .photo:first-of-type {
     margin-top: 0;
-  }
-
-  // first column underneath tall photo
-  .photo:nth-of-type(n+5):nth-of-type(odd) {
-    clear: left;
   }
 
   // last photo
