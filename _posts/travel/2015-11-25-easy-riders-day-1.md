@@ -36,13 +36,20 @@ gallery:
 - src: easy-riders-day1-9.jpg
   alt: Four people smiling for the camera.
   comment: Group photo! From the left — Ut, Karin, Bom, and me.
+- caption: Day 1 of Easy Riders tour with Ut and Bom. <a href="http://www.easyrider-tours.com">Book with Dalat Easy Riders</a>.
+
+gallery2:
+- src: easy-riders-day1-11.jpg
+  alt: People riding a hand-pulled boat across a river.
+  comment: We just rode right onto these boats and got ferried across the river like it was nothing.
+  type: wide
+  bgpad: 40%
 - src: easy-riders-day1-10.jpg
   alt: Two people posing in front of the sunset.
   comment: Ut took our picture at the sunset bridge. It was fun to watch the fishing houseboats below.
   type: wide
   bgpad: 60%
   bgpos: 50% 100%
-- caption: Day 1 of Easy Riders tour with Ut and Bom. <a href="http://www.easyrider-tours.com">Book with Dalat Easy Riders</a>.
 
 links:
 - href: http://www.easyrider-tours.com
@@ -77,7 +84,11 @@ People would let us into their houses, give us a taste of coffee beans, persimmo
 
 Ut told us that they don't have a schedule or specific location for the various things they show us, they just stop when they see a good spot. For instance, when we stopped at the coffee farmer's house, Ut said he smelled the rice wine as we passed and knew what the guy would be up to. After he mentioned it, I started occasionally smelling that same smell as we passed a coffee field, and got the feel for the land in a way that I would have totally overlooked if not for his commentary on how they conduct the tour.
 
-As the day went on, we stopped less frequently and drove faster for longer stretches. After getting used to the bike for most of the day, it was quite fun to go fast! As the sun got lower, we stopped at a bridge to watch it dip below the horizon, then spent another hour racing toward our goal for the night, Lak Lake.
+One really fun surprise was a boat crossing! We were just riding along and out of nowhere is a river with no bridge. At first I didn't understand, but there were three boats each positioned under a rope that stretched across the river. Before we knew it, we were on the boats with people heaving us all the way across the river. How cool!
+
+{% include gallery.html gallery=page.gallery2 %}
+
+After the bridge crossing, we stopped less frequently and drove faster for longer stretches. After getting used to the bike for most of the day, it was quite fun to go fast! As the sun got lower, we stopped at a bridge to watch it dip below the horizon, then spent another hour racing toward our goal for the night, Lak Lake.
 
 We checked in, went back out for a delicious hotpot dinner, and went to bed super early. What a day we had! We went to sleep excited for the next adventure, feeling lucky that we'd stumbled into such a special tour. Not just the bike tour but Ut and Bom themselves. They are really great fellas and earned our respect with their knowledge and love for their homeland.
 
