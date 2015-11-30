@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2"><Document><name>Easy Rider Day 2</name><description></description>
-<Placemark><name>End of Day 2</name><description></description><Point><coordinates>108.340340,12.484877,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Market</name><description>Getting supplies for dinner.</description><Point><coordinates>108.338067,12.508002,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Pit stop</name><description>We tried sugar cane ade</description><Point><coordinates>108.168710,12.562444,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Walk along the lake</name><description>Just a post-lunch break</description><Point><coordinates>108.034232,12.600638,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Lunch</name><description>Delicious whole fried chickens</description><Point><coordinates>107.952312,12.620871,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Waterfall</name><description></description><Point><coordinates>107.890508,12.540797,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Cacao farm</name><description></description><Point><coordinates>107.996161,12.528429,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Coffee harvest</name><description></description><Point><coordinates>108.083858,12.477696,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Coffee grinding</name><description></description><Point><coordinates>108.140571,12.469585,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Elephants and lake</name><description></description><Point><coordinates>108.170469,12.412331,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Minority neighborhood</name><description></description><Point><coordinates>108.169662,12.409447,0.000000</coordinates></Point></Placemark>
-<Placemark><name>Thanksgiving chicken</name><description>Ut bought a live chicken, killed it, skinned it, and we cooked it over fire. The best Thanksgiving dinner ever!</description><Point><coordinates>108.340625,12.483170,470.693887</coordinates></Point></Placemark>
+<Placemark><name>End of Day 2</name><description>We stayed near a dam in "waterfall bungalows."</description><Point><coordinates>108.340340,12.484877,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Market</name><description>Getting supplies for dinner including a live chicken!</description><Point><coordinates>108.338067,12.508002,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Pit stop</name><description>We tried sugar cane ade instead of the normal iced coffee.</description><Point><coordinates>108.168710,12.562444,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Walk along the lake</name><description>Just a post-lunch break to stretch the legs.</description><Point><coordinates>108.034232,12.600638,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Lunch</name><description>Delicious whole fried chickens with rice.</description><Point><coordinates>107.952312,12.620871,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Waterfall</name><description>A wonderful stop just to enjoy the sights.</description><Point><coordinates>107.890508,12.540797,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Cacao farm</name><description>Red and white cacao beans.</description><Point><coordinates>107.996161,12.528429,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Coffee harvest</name><description>We helped harvest a coffee tree.</description><Point><coordinates>108.083858,12.477696,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Coffee grinding</name><description>I helped spread out the ground coffee beans to dry in the sun.</description><Point><coordinates>108.140571,12.469585,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Elephants and lake</name><description>There was an elephant riding attraction near the lake.</description><Point><coordinates>108.170469,12.412331,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Minority neighborhood</name><description>The so-called "minority" peoples of Vietnam are the mountain villagers.</description><Point><coordinates>108.169662,12.409447,0.000000</coordinates></Point></Placemark>
+<Placemark><name>Thanksgiving chicken</name><description>Ut bought a live chicken, killed it, skinned it, and Bom cooked it over fire. The best Thanksgiving dinner ever!</description><Point><coordinates>108.340625,12.483170,470.693887</coordinates></Point></Placemark>
 <Placemark><name>Easy Rider Day 2</name><description></description>
 <styleUrl>#TrackStyle_9a41d9c8</styleUrl><LineString><tessellate>1</tessellate><coordinates>
 108.178724,12.412464,445.836060
