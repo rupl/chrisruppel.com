@@ -13,21 +13,15 @@
     <link rel="preconnect" href="https://rupl.disqus.com">
     {% endif %}
 
-    {% if page.og != null %}
-      <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    {% if page.meta != null %}
       <meta property="og:type" content="website">
-      <meta property="og:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
-      <meta property="og:description" content="{{ page.summary | escape }}">
-      <meta property="og:image" content="{{ site.url }}/img/travel/{{ page.gallery[0].src }}">
-      <meta property="og:locale" content="en_US">
-    {% endif %}
-    {% if page.tc != null %}
-      <meta property="twitter:card" content="summary_large_image">
-      <meta property="twitter:site" content="@rupl">
-      <meta property="twitter:creator" content="@rupl">
-      <meta property="twitter:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
-      <meta property="twitter:description" content="{{ page.summary | escape }}">
-      <meta property="twitter:image" content="{{ site.url }}/img/travel/{{ page.gallery[0].src }}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@rupl">
+      <meta name="twitter:creator" content="@rupl">
+      <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}">
+      <meta name="twitter:title" property="og:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
+      <meta name="twitter:description" property="og:description" content="{{ page.summary | escape }}">
+      <meta name="twitter:image" property="og:image" content="{{ site.url }}/img/travel/{{ page.gallery[0].src }}">
     {% endif %}
 
     {% if site.development == false %}
