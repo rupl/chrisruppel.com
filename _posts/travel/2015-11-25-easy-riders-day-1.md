@@ -42,11 +42,11 @@ gallery:
   type: wide
   bgpad: 60%
   bgpos: 50% 100%
-- caption: Day 1 of Easy Riders tour with Ut and Bom. <a href="http://dalat-easyrider.com.vn/">Book with Dalat Easy Riders</a>.
+- caption: Day 1 of Easy Riders tour with Ut and Bom. <a href="http://www.easyrider-tours.com">Book with Dalat Easy Riders</a>.
 
 links:
-- href: http://dalat-easyrider.com.vn
-  text: Dalat Easy Riders
+- href: http://www.easyrider-tours.com
+  text: Dalat Easy Rider Club
   type: outdoors
 - href: http://www.hostelworld.com/hosteldetails.php/Dalat-Easy-Friends-Hostel/Da-Lat/91686
   text: Easy Friends Hostel
