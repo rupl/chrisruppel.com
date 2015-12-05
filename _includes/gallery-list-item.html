@@ -2,7 +2,7 @@
   <h2 class="title">
     <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
     <a rel="bookmark" href="{{ site.url }}{{ trip.url }}">{{ trip.title }}</a>
-    <span class="where">in {{ trip.location }}</span>
+    {% if trip.location %}<span class="where">in {{ trip.location }}</span>{% endif %}
   </h2>
 
   {% if trip.summary %}

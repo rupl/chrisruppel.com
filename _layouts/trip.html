@@ -1,14 +1,13 @@
 ---
 layout: page
-og: true
-tc: true
+meta: true
 comments: true
 ---
 
 <article class="trip">
   <header>
     <h1 class="title">{{ page.title }}</h1>
-    <h2 class="subtitle"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %d, %Y" }}</time> in {{ page.location }}</h2>
+    <h2 class="subtitle"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %d, %Y" }}</time> {% if page.location %}in {{ page.location }}{% endif %}</h2>
   </header>
 
   <aside class="intro summary">{{ page.summary }}</aside>
@@ -42,8 +41,9 @@ comments: true
     {% if page.previous.url %}
       <a class="btn btn--prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}{% if page.previous.location %} in {{ page.previous.location }}{% endif %}">Prev trip</a>
     {% endif %}
-
-    <a id="comments-link" class="btn btn--comments" href="{{ site.url }}{{ page.url }}#disqus_thread" onclick="return loadDisqus(event);">Loading comment count...</a>
+    {% if page.comments %}
+      <a id="comments-link" class="btn btn--comments" href="{{ site.url }}{{ page.url }}#disqus_thread" onclick="return loadDisqus(event);">Loading comment count...</a>
+    {% endif %}
   </div>
 
   {% if page.comments %}

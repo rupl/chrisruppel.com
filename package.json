@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": "0.12.7"
+    "node": "4.1.0"
   },
   "dependencies": {
     "browser-sync": "^2.8.2",

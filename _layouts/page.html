@@ -2,33 +2,26 @@
 <html class="wf-loading">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }} {% if page.title != null %}🌏 {% endif %}{{ site.name }}</title>
+    <title>{{ page.title }}{% if page.location %} in {{ page.location }}{% endif %}{% if page.title != null %} 🌏 {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="author" href="{{ site.url }}">
     <link rel="alternate" type="application/rss+xml" title="Chris' Travels" href="{{ site.url }}/travel.xml">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.google-analytics.com">
     {% if page.comments %}
     <link rel="preconnect" href="https://a.disquscdn.com" crossorigin>
     <link rel="preconnect" href="https://rupl.disqus.com">
     {% endif %}
 
-    {% if page.og != null %}
-      <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    {% if page.meta != null %}
       <meta property="og:type" content="website">
-      <meta property="og:title" content="{{ page.title | escape }}{% if page.location %} — {{ page.location | escape }}{% endif %}">
-      <meta property="og:description" content="{{ page.summary | escape }}">
-      <meta property="og:image" content="{{ site.url }}/img/travel/{{ page.gallery[0].src }}">
-      <meta property="og:locale" content="en_US">
-    {% endif %}
-    {% if page.tc != null %}
-      <meta property="twitter:card" content="summary_large_image">
-      <meta property="twitter:site" content="@rupl">
-      <meta property="twitter:creator" content="@rupl">
-      <meta property="twitter:title" content="{{ page.title | escape }}{% if page.location %} — {{ page.location | escape }}{% endif %}">
-      <meta property="twitter:description" content="{{ page.summary | escape }}">
-      <meta property="twitter:image" content="{{ site.url }}/img/travel/{{ page.gallery[0].src }}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@rupl">
+      <meta name="twitter:creator" content="@rupl">
+      <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}">
+      <meta name="twitter:title" property="og:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
+      <meta name="twitter:description" property="og:description" content="{{ page.summary | escape }}">
+      <meta name="twitter:image" property="og:image" content="{{ site.url }}/img/travel/{{ page.gallery[0].src }}">
     {% endif %}
 
     {% if site.development == false %}
@@ -41,9 +34,9 @@
       // loadCSS [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT.
       function loadCSS(href,before,media){"use strict";var ss=window.document.createElement("link");var ref=before||window.document.getElementsByTagName("script")[0];var sheets=window.document.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";ref.parentNode.insertBefore(ss,ref);ss.onloadcssdefined=function(cb){var defined;for(var i=0;i<sheets.length;i++){if(sheets[i].href&&sheets[i].href===ss.href){defined=true}}if(defined){cb()}else{setTimeout(function(){ss.onloadcssdefined(cb)})}};ss.onloadcssdefined(function(){ss.media=media||"all"});return ss}
       // load fonts
-      loadCSS('//fonts.googleapis.com/css?family=Oswald:400,300');
+      loadCSS('/css/fonts.min.css');
     </script>
-    <noscript><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300" type="text/css"></noscript>
+    <noscript><link rel="stylesheet" href="/css/fonts.min.css" type="text/css"></noscript>
 
     <script>
       // JS is able to start executing.
@@ -54,10 +47,13 @@
     <main>
       {{ content }}
     </main>
+    <footer role="contentinfo">
+      <p class="colophon">&#169; {{ 'now' | date: '%Y' }} Chris Ruppel</p>
+    </footer>
 
     <script async src="/js/main.min.js"></script>
     {% if page.photosphere %}<script async src="/js/photosphere.min.js"></script>{% endif %}
-    {% if page.comments %}<script id="dsq-count-scr" src="//rupl.disqus.com/count.js" async defer></script>{% endif %}
+    {% if page.comments %}<script id="dsq-count-scr" src="https://rupl.disqus.com/count.js" async defer></script>{% endif %}
 
     {% if site.ga != null %}
     <script>

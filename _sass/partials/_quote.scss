@@ -8,11 +8,30 @@ blockquote.quote {
   opacity: .6;
 
   p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-style: italic;
     margin-bottom: .5em;
+    position: relative;
+
+    &::before,
+    &::after {
+      display: inline-block;
+      font-size: 2em;
+      opacity: .666;
+      position: absolute;
+      transform: translateY(-.18em);
+    }
+
+    &::before {
+      content: '\201c\0020';
+      transform: translateX(-.666em) translateY(-.18em);
+    }
+    &::after {
+      content: '\201d';
+    }
   }
   cite {
     font-size: 0.9em;
   }
+
 }

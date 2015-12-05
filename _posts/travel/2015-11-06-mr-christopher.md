@@ -2,7 +2,13 @@
 title: Mr. Christopher
 location: Pai, Thailand
 
-summary: Lessons learned from getting medical treatment for a moderate wound in Pai, Thailand.
+gallery:
+- src: mr-christopher-1.jpg
+  alt: Thai medical form with the name "Mr. Christopher" written.
+  comment: That's MISTER Christopher to you, buddy!
+  type: wide
+
+summary: Lessons learned from getting medical treatment for a moderately infected wound in Pai, Thailand.
 ---
 
 [I fell down Mo Paeng accidentally](/travel/pai-waterfall). Given the experience we've had at the local hospital over the past week and a half I wanted to offer a few suggestions for dealing with foreign hospitals.
@@ -35,6 +41,8 @@ The doctor immediately had them pull stitches out and let my leg drain. It had a
 Now, I have some sympathy. No other westerners we saw ended up visiting more than three times total. They're all idiots who fell off their motorbikes, earning their so-called "Thailand tattoos" in the process. My wound was not superficial. We are on day 10 and still have a ways to go. Due to our longer-term treatment, sometimes the staff seem like they're tired of seeing us.
 
 So if you feel like there's a problem, be polite but assertive, and ask to see a doctor. Even the doctor might be apathetic so if you feel like your care isn't adequate and it's feasible for you to move cities, consider moving where you can get better care.
+
+<aside class="update" data-date="2015-11-09"><p><strong>Update 2015-11-09:</strong> after a few more days we pieced together a better explanation.. It was only the young, neglectful nurse that ignored my infection who held a grudge against us. We think that our insistence on a doctor, plus the older nurse's report that my leg was infected for a long time ended up in a reprimand for the young nurse. As the leg got better, the staff were much more relaxed with us and very friendly, but she never comes near us now and sometimes gives me a cold, hard stare 😠</p></aside>
 
 ### Beware of visa issues
 

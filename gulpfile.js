@@ -57,7 +57,7 @@ gulp.task('browser-sync', false, function() {
 gulp.task('sass', 'Compiles Sass using libsass.', function () {
   bs.notify('Sass compiling...');
 
-  return gulp.src('_sass/**/*.scss')
+  var sass_main = gulp.src('_sass/styles.scss')
     .pipe(plumber())
     .pipe(sass({
       outputStyle: 'nested',
@@ -76,8 +76,31 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
-    .pipe(gulp.dest('_includes'))
+    .pipe(gulp.dest('_includes')) // for the Jekyll include
     .pipe(reload({stream: true}));
+
+  var sass_fonts = gulp.src('_sass/fonts.scss')
+    .pipe(plumber())
+    .pipe(sass({
+      outputStyle: 'nested',
+      onSuccess: function(css) {
+        var dest = css.stats.entry.split('/');
+        log(c.green('sass'), 'compiled to', dest[dest.length - 1]);
+      },
+      onError: function(err, res) {
+        bs.notify('<span style="color: red">Fonts failed</span>');
+        log(c.red('Fonts failed to compile'));
+        log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
+      }
+    }))
+    .pipe(prefix("last 2 versions", "> 1%"))
+    .pipe(minCSS({processImport: false}))
+    .pipe(rename('fonts.min.css'))
+    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('_site/css'))
+    .pipe(reload({stream: true}));
+
+  return merge(sass_main, sass_fonts);
 });
 
 // -----------------------------------------------------------------------------
@@ -175,10 +198,10 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
       }),
       os.cpus().length
     ))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    // .pipe(imagemin({
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}]
+    // }))
     .pipe(rename({
       dirname: ''
     }))
@@ -211,19 +234,19 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
   log(c.cyan('image-resize'), 'minifying originals...');
   var img_orig = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    // .pipe(imagemin({
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}]
+    // }))
     .pipe(gulp.dest('img/travel'));
 
   log(c.cyan('image-resize'), 'minifying photospheres...');
   var img_photosphere = gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/photosphere'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    // .pipe(imagemin({
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}]
+    // }))
     .pipe(gulp.dest('img/photosphere'));
 
     return merge(img_320, img_orig, img_photosphere);

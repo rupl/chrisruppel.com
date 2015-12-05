@@ -6,13 +6,13 @@ layout: gallery
 gallery:
 - src: pai-1.jpg
   alt: A waterfall near sundown.
-  comment: We went to Mor Pang on our first afternoon.
+  comment: We went to Mo Paeng on our first afternoon.
 - src: pai-2.jpg
   alt: Afternoon rain falling on a field with sunbeams in the sky.
   comment: I read a book and listened to the rain one afternoon.
 - src: pai-3.jpg
-  alt: Man playing cajon.
-  comment: We sat at an open-mic bar one night and I played cajon for a few songs.
+  alt: Man playing cajón.
+  comment: We sat at an open-mic bar one night and I played cajón for a few songs.
 - src: pai-4.jpg
   alt: Four people posing for a group photo at a bus station.
   comment: We parted ways with Lina and Anna, but unlike many goodbyes we know where to find them when we return to Germany.

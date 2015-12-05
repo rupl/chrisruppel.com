@@ -2,12 +2,15 @@
 var oswaldLight = new FontFaceObserver('Oswald', {weight: 300});
 var oswaldRegular = new FontFaceObserver('Oswald', {weight: 400});
 
-window.Promise.all([oswaldLight.check(), oswaldRegular.check()])
-.then(function () {
+var observer = window.Promise.all([oswaldLight.check(), oswaldRegular.check()]);
+observer.then(function () {
   document.documentElement.classList.remove('wf-loading');
   document.documentElement.classList.add('wf-oswald');
-  document.cookie = 'wf-loaded=loaded';
 });
+observer.catch(function () {
+  document.documentElement.classList.remove('wf-loading');
+  document.documentElement.classList.add('wf-failed');
+})
 
 /*! modernizr 3.1.0 (Custom Build) | MIT *
  * http://modernizr.com/download/?-fullscreen !*/

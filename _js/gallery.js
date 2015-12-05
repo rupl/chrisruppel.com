@@ -5,9 +5,6 @@
 var gallery = document.querySelectorAll('.gallery .photo');
 var forEach = Array.prototype.forEach;
 
-// How big is the screen?
-var bigScreen = (window.innerWidth > 640) || false;
-
 // Did we find images?
 if (gallery.length > 0) {
   processGalleryPhotos(gallery)
@@ -16,7 +13,7 @@ if (gallery.length > 0) {
 // Process the gallery photos
 function processGalleryPhotos(photos) {
   forEach.call(photos, function (photo) {
-    if (bigScreen) {
+    if (bigScreen()) {
       var hiRes = photo.style.backgroundImage.replace('@320', '');
       photo.style.backgroundImage = hiRes;
     }
@@ -27,6 +24,11 @@ function processGalleryPhotos(photos) {
       this.classList.toggle('photo--caption');
     });
   });
+}
+
+// How big is the screen?
+function bigScreen() {
+  return (window.innerWidth > 640) || false;
 }
 
 function removeCaptions() {

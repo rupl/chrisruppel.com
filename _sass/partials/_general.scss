@@ -24,7 +24,19 @@ body {
 main {
   max-width: 860px;
   margin: 0 auto;
-  padding: 1em 1em 10em;
+  padding: 1em;
+}
+
+footer[role="contentinfo"] {
+  clear: both;
+  max-width: 860px;
+  margin: 0 auto;
+  font-size: .8em;
+  padding-top: 2em;
+  padding-bottom: 20em;
+  text-align: center;
+  opacity: .666;
+  font-style: italic;
 }
 
 img {
