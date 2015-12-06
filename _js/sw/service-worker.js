@@ -1,6 +1,12 @@
 //
 // Service Worker for chrisruppel.com
 //
+'use strict';
+
+// Cache polyfill
+importScripts('/js/cache-polyfill.js');
+
+// Config
 var SW = {
   cache_version: 'v1::template',
   offline_assets: [
@@ -17,8 +23,14 @@ self.addEventListener('install', function installer (event) {
   event.waitUntil(
     caches
       .open(SW.cache_version)
-      .then(function prefill (cache) {
-        cache.addAll(SW.offline_assets);
+      .then(function prefill(cache) {
+        // Attempt to cache assets
+        var cacheResult = cache.addAll(SW.offline_assets);
+
+        // Report result
+        console.info((!!cacheResult ? '👍' : '👎') + ' Caching process was ' + (!!cacheResult ? 'successful!' : 'not successful :('));
+
+        return cacheResult;
       })
   );
 });
@@ -32,7 +44,7 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
-      return response || new Response("Nothing in the cache for this request");
+      return response || fetch(event.request);
     })
   );
 });

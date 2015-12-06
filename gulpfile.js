@@ -106,7 +106,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
 // -----------------------------------------------------------------------------
 // Combine/minify JS
 // -----------------------------------------------------------------------------
-gulp.task('js', 'Lint, bundle, minify JS', ['js-main', 'js-sphere', 'js-sw']);
+gulp.task('js', 'Lint, bundle, minify JS', ['js-main', 'js-sphere', 'js-sw', 'js-swcp']);
 
 // Main
 gulp.task('js-main', 'Main JS', function() {
@@ -149,10 +149,22 @@ gulp.task('js-sw', 'Service Worker JS', function() {
       '_js/sw/service-worker.js'
     ])
     .pipe(plumber())
-    .pipe(concat('service-worker.js'))
-    // .pipe(uglify())
     .pipe(gulp.dest('')) // SW needs to be at site root
     .pipe(gulp.dest('_site')) // SW needs to be at site root
+    .pipe(reload({stream: true}));
+});
+
+// Service Worker cache polyfill
+gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
+  bs.notify('Building SW cache polyfill...');
+
+  return gulp.src([
+      'node_modules/serviceworker-cache-polyfill/index.js'
+    ])
+    .pipe(plumber())
+    .pipe(concat('cache-polyfill.js'))
+    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
 });
 
