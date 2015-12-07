@@ -1,6 +1,9 @@
-<!-- mapbox dependencies and config -->
+<!-- mapbox dependencies -->
+<script>loadCSS('https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css');</script>
+<noscript><link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet'></noscript>
+
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet'>
 {% if page.map.kml %}<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>{% endif %}
 
+<!-- mapbox config -->
 <script>L.mapbox.accessToken = '{{ site.mapboxToken }}';</script>
