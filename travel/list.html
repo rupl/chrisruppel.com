@@ -16,7 +16,7 @@ layout: page
         <h2 class="title">
           <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
           <a href="{{ trip.url }}">{{ trip.title }}</a>
-          <span class="where">in {{ trip.location }}</span>
+          {% if trip.location %}<span class="where">in {{ trip.location }}</span>{% endif %}
         </h2>
       </article>
     {% endfor %}
