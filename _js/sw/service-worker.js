@@ -11,10 +11,11 @@ var SW = {
   cache_version: 'v1::template',
   offline_assets: [
     '/',
+    '/work/',
     '/offline/',
     '/css/main.min.css',
-    '/js/main.min.js',
-    '//fonts.googleapis.com/css?family=Oswald:400,300'
+    '/css/fonts.min.css',
+    '/js/main.min.js'
   ]
 };
 
