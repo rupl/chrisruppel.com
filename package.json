@@ -32,6 +32,7 @@
     "merge-stream": "^1.0.0",
     "run-sequence": "^1.1.2",
     "screenfull": "^2.0.0",
+    "serviceworker-cache-polyfill": "^3.0.0",
     "three": "^0.72.0"
   },
   "scripts": {

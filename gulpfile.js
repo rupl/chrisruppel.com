@@ -46,6 +46,7 @@ gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment.', function(cb) 
 gulp.task('browser-sync', false, function() {
   bs({
     server: './_site/',
+    port: 3456,
     open: false
   });
 });
@@ -105,10 +106,13 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
 // -----------------------------------------------------------------------------
 // Combine/minify JS
 // -----------------------------------------------------------------------------
-gulp.task('js', 'Lint, bundle, minify JS', function() {
-  bs.notify('Building JS...');
+gulp.task('js', 'Lint, bundle, minify JS', ['js-main', 'js-sphere', 'js-sw', 'js-swcp']);
 
-  var main = gulp.src([
+// Main
+gulp.task('js-main', 'Main JS', function() {
+  bs.notify('Building main JS...');
+
+  return gulp.src([
       'node_modules/fontfaceobserver/fontfaceobserver.js',
       '_js/*.js'
     ])
@@ -118,8 +122,13 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
+});
 
-  var three = gulp.src([
+// Photosphere
+gulp.task('js-sphere', 'Photosphere JS', function() {
+  bs.notify('Building photosphere JS...');
+
+  return gulp.src([
       'node_modules/three/three.min.js',
       'node_modules/screenfull/dist/screenfull.js',
       '_js/threejs/*.js'
@@ -130,8 +139,33 @@ gulp.task('js', 'Lint, bundle, minify JS', function() {
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
+});
 
-  return merge(main, three);
+// Service Worker JS
+gulp.task('js-sw', 'Service Worker JS', function() {
+  bs.notify('Building SW JS...');
+
+  return gulp.src([
+      '_js/sw/service-worker.js'
+    ])
+    .pipe(plumber())
+    .pipe(gulp.dest('')) // SW needs to be at site root
+    .pipe(gulp.dest('_site')) // SW needs to be at site root
+    .pipe(reload({stream: true}));
+});
+
+// Service Worker cache polyfill
+gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
+  bs.notify('Building SW cache polyfill...');
+
+  return gulp.src([
+      'node_modules/serviceworker-cache-polyfill/index.js'
+    ])
+    .pipe(plumber())
+    .pipe(concat('cache-polyfill.js'))
+    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('_site/js'))
+    .pipe(reload({stream: true}));
 });
 
 // -----------------------------------------------------------------------------
@@ -242,7 +276,9 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
   log(c.yellow('Waiting for changes...'));
   gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch('_img/**/*', ['image-resize']);
-  gulp.watch('_js/**/*', ['js']);
+  gulp.watch('_js/threejs/*', ['js-sphere']);
+  gulp.watch('_js/sw/*', ['js-sw']);
+  gulp.watch('_js/*', ['js-main']);
   gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], ['jekyll']);
 });
 
