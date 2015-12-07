@@ -28,7 +28,11 @@ self.addEventListener('install', function installer (event) {
         var cacheResult = cache.addAll(SW.offline_assets);
 
         // Report result
-        console.info((!!cacheResult ? '👍' : '👎') + ' Caching process was ' + (!!cacheResult ? 'successful!' : 'not successful :('));
+        if (!!cacheResult) {
+          console.info('Service Worker: caching process was successful!');
+        } else {
+          console.error('Service Worker: caching process failed.');
+        }
 
         return cacheResult;
       })
@@ -37,7 +41,7 @@ self.addEventListener('install', function installer (event) {
 
 // Activation
 self.addEventListener('activate', function(event) {
-  console.log("SW activated");
+  console.info("Service Worker: activated");
 });
 
 // Intercept requests
