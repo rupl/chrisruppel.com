@@ -28,9 +28,6 @@ gallery:
 - src: longson-mui-ne-7.jpg
   alt: Waves crashing on the sand.
   comment: The view from the resort looking northeast. The area is made up of several bays all 5-15km in length. Ours was on the bigger end.
-- src: longson-mui-ne-8.jpg
-  alt: Starfish in the sand.
-  comment: Starfish were everywhere in the sand during the day.
 - src: longson-mui-ne-9.jpg
   alt: A large, live sand dollar.
   comment: We saw the biggest sand dollar ever on the beach. I picked it up to take it because I was so impressed, but it was alive! We set it back down and let it go about its business.
