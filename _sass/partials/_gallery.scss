@@ -84,13 +84,8 @@
   // special treatment for first image, or manual overrides
   .tall,
   .photo:first-of-type {
-    margin-top: 0;
     padding-bottom: 103.9%;
     background-position: 25% 0;
-  }
-
-  .photo:first-of-type {
-    margin-top: 0;
   }
 
   // last photo
@@ -127,11 +122,11 @@
   // all photos
   .photo {
     float: left;
-    width: calc(96% / 3); // 100 - 2% x 2 columns
+    width: calc(96% / 3); // 100 - (2% x 2 gutters)
     padding-bottom: calc(100% / 3);
-    margin-top: 2%;
-    margin-right: 2%;
-    margin-left: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 2%;
   }
 
   // special treatment for first image, or manual overrides
@@ -140,33 +135,18 @@
     float: left;
     clear: both;
     width: 100% !important;
-    margin-right: 0;
     background-position: 0 calc(100% / 3);
-  }
-
-  .photo:first-of-type {
-    margin-top: 0;
-  }
-
-  // last column of every row
-  .photo:nth-of-type(3n+1) {
-    margin-right: 0;
   }
 
   // tetris (when there are two photos in last row)
   .photo:nth-of-type(3n+2):nth-last-of-type(2),
   .photo:nth-of-type(3n+2):nth-last-of-type(2) ~ .photo {
     width: 49%;
-    margin-right: 2%;
-  }
-  .photo:nth-of-type(3n+2):nth-last-of-type(2) ~ .photo {
-    margin-right: 0;
   }
 
   // tetris (when there is one photo in last row)
   .photo:nth-of-type(3n+2):last-of-type {
     width: 100%;
-    margin-right: 0;
     background-position: 0 25%;
   }
 }
