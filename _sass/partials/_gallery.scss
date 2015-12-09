@@ -141,7 +141,7 @@
   // tetris (when there are two photos in last row)
   .photo:nth-of-type(3n+2):nth-last-of-type(2),
   .photo:nth-of-type(3n+2):nth-last-of-type(2) ~ .photo {
-    width: 49%;
+    width: 48%;
   }
 
   // tetris (when there is one photo in last row)
