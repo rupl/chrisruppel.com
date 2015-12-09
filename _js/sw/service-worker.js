@@ -8,7 +8,7 @@ importScripts('/js/cache-polyfill.js');
 
 // Config
 var SW = {
-  cache_version: 'v1::template',
+  cache_version: 'v1::main',
   offline_assets: [
     '/',
     '/work/',
