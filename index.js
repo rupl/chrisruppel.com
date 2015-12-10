@@ -16,15 +16,15 @@ app.use(helmet());
 app.use(csp({
   // Policy for chrisruppel.com
   defaultSrc: ["'self'"],
-  scriptSrc: ["'unsafe-inline'", "'*.google-analytics.com'", "'*.disqus.com'", "'*.disquscdn.com'", "'*.mapbox.com'"],
-  styleSrc: ["'unsafe-inline'", "'*.disqus.com'", "'*.disquscdn.com'", "'*.mapbox.com'"],
-  imgSrc: ["'*.google-analytics.com'", "'*.mapbox.com'", 'data:'],
-  fontSrc: [],
+  scriptSrc: ["'self'", "'unsafe-inline'", "'*.google-analytics.com'", "'*.disqus.com'", "'*.disquscdn.com'", "'*.mapbox.com'"],
+  styleSrc: ["'self'", "'unsafe-inline'", "'*.disqus.com'", "'*.disquscdn.com'", "'*.mapbox.com'"],
+  imgSrc: ["'self'", "'*.google-analytics.com'", "'*.mapbox.com'", 'data:'],
+  fontSrc: ["'self'", 'data:'],
   objectSrc: ["'youtube.com'"],
   mediaSrc: ["'youtube.com'"],
   frameSrc: [],
   connectSrc: ["'none'"],
-  sandbox: ['allow-scripts'],
+  sandbox: ['allow-scripts', 'allow-same-origin'],
 
   // Set to true if you only want browsers to report errors, not block them
   reportOnly: false,
