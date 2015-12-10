@@ -7,7 +7,7 @@ var compression = require('compression');
 // Initialize app
 var app = express();
 
-// Forse HTTPS on Heroku
+// Force HTTPS on Heroku
 app.use(enforce.HTTPS({trustProtoHeader: true}));
 
 // Compress all responses
