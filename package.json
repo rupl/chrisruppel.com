@@ -37,6 +37,6 @@
   },
   "scripts": {
     "images": "npm rebuild node-sass && node node_modules/gulp/bin/gulp image-resize",
-    "start": "node node_modules/gulp/bin/gulp build-deploy && node index.js"
+    "start": "npm rebuild node-sass && node node_modules/gulp/bin/gulp build-deploy && node index.js"
   }
 }

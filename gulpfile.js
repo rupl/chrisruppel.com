@@ -290,6 +290,9 @@ gulp.task('default', false, ['help']);
 
 // -----------------------------------------------------------------------------
 // Build site for deployment.
+//
+// No longer running image as part of build-deploy to reduce runtime. It happens
+// as part of deployment to Heroku.
 // -----------------------------------------------------------------------------
 gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb) {
   return sequence(
