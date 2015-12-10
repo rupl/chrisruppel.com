@@ -16,12 +16,12 @@ app.use(helmet());
 app.use(csp({
   // Policy for chrisruppel.com
   defaultSrc: ["'self'"],
-  scriptSrc: ["'self'", "'unsafe-inline'", "'*.google-analytics.com'", "'*.disqus.com'", "'*.disquscdn.com'", "'*.mapbox.com'"],
-  styleSrc: ["'self'", "'unsafe-inline'", "'*.disqus.com'", "'*.disquscdn.com'", "'*.mapbox.com'"],
-  imgSrc: ["'self'", "'*.google-analytics.com'", "'*.mapbox.com'", 'data:'],
+  scriptSrc: ["'self'", "'unsafe-inline'", "rupl.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com"],
+  styleSrc: ["'self'", "'unsafe-inline'", "rupl.disqus.com", "*.disquscdn.com", "*.mapbox.com"],
+  imgSrc: ["'self'", "*.google-analytics.com", "*.mapbox.com", 'data:'],
   fontSrc: ["'self'", 'data:'],
-  objectSrc: ["'youtube.com'"],
-  mediaSrc: ["'youtube.com'"],
+  objectSrc: ["youtube.com"],
+  mediaSrc: ["youtube.com"],
   frameSrc: [],
   connectSrc: ["'none'"],
   sandbox: ['allow-scripts', 'allow-same-origin'],
