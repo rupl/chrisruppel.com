@@ -4,7 +4,7 @@
   "website": "https://chrisruppel.com",
   "repository": "https://github.com/rupl/chrisruppel.com",
   "scripts": {
-    "postdeploy": "npm run images"
+    "postdeploy": "npm start"
   },
   "buildpacks": [
     {
