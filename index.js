@@ -22,7 +22,7 @@ app.use(csp({
   fontSrc: ["'self'", 'data:'],
   objectSrc: ["youtube.com"],
   mediaSrc: ["youtube.com"],
-  frameSrc: [],
+  frameSrc: ["disqus.com"],
   connectSrc: ["'self'", "*.mapbox.com"],
   sandbox: ['allow-scripts', 'allow-same-origin'],
 
