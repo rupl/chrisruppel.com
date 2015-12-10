@@ -25,10 +25,8 @@ var resize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 
-// Deployment config
-var app_dir = (process.env.NODE_ENV === 'production') ? 'app/' : '';
+// Deployment debugging
 log(c.yellow('Detected environment: ' + process.env.NODE_ENV));
-log(c.yellow('Assuming app directory: \'' + app_dir + '\''));
 
 // -----------------------------------------------------------------------------
 // Jekyll
@@ -102,7 +100,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
     .pipe(minCSS({processImport: false}))
     .pipe(rename('fonts.min.css'))
     .pipe(gulp.dest('css'))
-    .pipe(gulp.dest(app_dir + '_site/css'))
+    .pipe(gulp.dest('_site/css'))
     .pipe(reload({stream: true}));
 
   return merge(sass_main, sass_fonts);
@@ -125,7 +123,7 @@ gulp.task('js-main', 'Main JS', function() {
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
-    .pipe(gulp.dest(app_dir + '_site/js'))
+    .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
 });
 
@@ -142,7 +140,7 @@ gulp.task('js-sphere', 'Photosphere JS', function() {
     .pipe(concat('photosphere.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
-    .pipe(gulp.dest(app_dir + '_site/js'))
+    .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
 });
 
@@ -155,7 +153,7 @@ gulp.task('js-sw', 'Service Worker JS', function() {
     ])
     .pipe(plumber())
     .pipe(gulp.dest('')) // SW needs to be at site root
-    .pipe(gulp.dest(app_dir + '_site')) // SW needs to be at site root
+    .pipe(gulp.dest('_site')) // SW needs to be at site root
     .pipe(reload({stream: true}));
 });
 
@@ -169,7 +167,7 @@ gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
     .pipe(plumber())
     .pipe(concat('cache-polyfill.js'))
     .pipe(gulp.dest('js'))
-    .pipe(gulp.dest(app_dir + '_site/js'))
+    .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
 });
 
@@ -223,7 +221,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
       dirname: ''
     }))
     .pipe(gulp.dest('img/travel@320'))
-    .pipe(gulp.dest(app_dir + '_site/img/travel@320'));
+    .pipe(gulp.dest('_site/img/travel@320'));
 
   // Unused for now
   //
@@ -257,7 +255,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
       svgoPlugins: [{removeViewBox: false}]
     }))
     .pipe(gulp.dest('img/travel'))
-    .pipe(gulp.dest(app_dir + '_site/img/travel'));
+    .pipe(gulp.dest('_site/img/travel'));
 
   log(c.cyan('image-resize'), 'minifying photospheres...');
   var img_photosphere = gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
@@ -267,7 +265,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
       svgoPlugins: [{removeViewBox: false}]
     }))
     .pipe(gulp.dest('img/photosphere'))
-    .pipe(gulp.dest(app_dir + '_site/img/photosphere'));
+    .pipe(gulp.dest('_site/img/photosphere'));
 
     return merge(img_320, img_orig, img_photosphere);
 });
