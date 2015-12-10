@@ -246,20 +246,22 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
   log(c.cyan('image-resize'), 'minifying originals...');
   var img_orig = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel'))
-    // .pipe(imagemin({
-    //   progressive: true,
-    //   svgoPlugins: [{removeViewBox: false}]
-    // }))
-    .pipe(gulp.dest('img/travel'));
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('img/travel'))
+    .pipe(gulp.dest('_site/img/travel'));
 
   log(c.cyan('image-resize'), 'minifying photospheres...');
   var img_photosphere = gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/photosphere'))
-    // .pipe(imagemin({
-    //   progressive: true,
-    //   svgoPlugins: [{removeViewBox: false}]
-    // }))
-    .pipe(gulp.dest('img/photosphere'));
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('img/photosphere'))
+    .pipe(gulp.dest('_site/img/photosphere'));
 
     return merge(img_320, img_orig, img_photosphere);
 });
@@ -291,7 +293,7 @@ gulp.task('default', false, ['help']);
 // -----------------------------------------------------------------------------
 gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb) {
   return sequence(
-    ['sass', 'js', 'image-resize'],
+    ['sass', 'js'],
     'jekyll-deploy',
     cb
   );
