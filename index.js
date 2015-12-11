@@ -16,15 +16,15 @@ app.use(helmet());
 app.use(csp({
   // Policy for chrisruppel.com
   defaultSrc: ["'self'"],
-  scriptSrc: ["'self'", "'unsafe-inline'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "'unsafe-eval'"],
-  styleSrc: ["'self'", "'unsafe-inline'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com"],
-  imgSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.google-analytics.com", "*.mapbox.com", 'data:'],
-  fontSrc: ["'self'", 'data:'],
-  objectSrc: ["youtube.com"],
-  mediaSrc: ["youtube.com"],
-  frameSrc: ["disqus.com"],
-  connectSrc: ["'self'", "*.disqus.com", "*.google-analytics.com", "*.mapbox.com"],
-  sandbox: ['allow-scripts', 'allow-same-origin'],
+  scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "'unsafe-eval'", "'unsafe-inline'"],
+  styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "'unsafe-inline'"],
+  imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "data:"],
+  connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com"],
+  fontSrc:    ["'self'", 'data:'],
+  objectSrc:  ["youtube.com"],
+  mediaSrc:   ["youtube.com"],
+  frameSrc:   ["disqus.com"],
+  sandbox:    ['allow-scripts', 'allow-same-origin'],
 
   // Set to true if you only want browsers to report errors, not block them
   reportOnly: false,
