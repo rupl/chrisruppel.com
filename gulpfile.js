@@ -26,7 +26,7 @@ var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 
 // Deployment debugging
-log(c.yellow('Detected environment: ' + process.env.NODE_ENV));
+log(c.yellow('Detected environment: ' + (process.env.NODE_ENV || 'local')));
 
 // -----------------------------------------------------------------------------
 // Jekyll
