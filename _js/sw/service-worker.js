@@ -8,7 +8,7 @@ importScripts('/js/cache-polyfill.js');
 
 // Config
 var SW = {
-  cache_version: 'main_v1.0.2',
+  cache_version: 'main_v1.1.1',
   offline_assets: [
     '/',
     '/work/',
@@ -46,7 +46,30 @@ self.addEventListener('install', function installer (event) {
 // Activation. First-load and also when a new version of SW is detected.
 //
 self.addEventListener('activate', function(event) {
-  console.info("Service Worker: activated");
+  // Delete all caches that aren't named in SW.cache_version.
+  //
+  // @see https://github.com/GoogleChrome/samples/blob/e4df12c8642381243b6c1710c41394d85b33d82f/service-worker/prefetch/service-worker.js#L96-L117
+  var expectedCacheNames = [SW.cache_version];
+
+  // If you want multiple caches use this...
+  // var expectedCacheNames = Object.keys(SW.cache_version).map(function(key) {
+  //   return SW.cache_version[key];
+  // });
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (expectedCacheNames.indexOf(cacheName) == -1) {
+            // If this cache name isn't present in the array of "expected"
+            // cache names, then delete it.
+            console.info('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
 });
 
 //
