@@ -174,34 +174,10 @@ gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
 // -----------------------------------------------------------------------------
 // Resize images
 // -----------------------------------------------------------------------------
-gulp.task('image-resize', 'Create different sizes for resposive images.', function () {
+gulp.task('image-resize', 'Create different sizes for resposive images.', ['image-320', 'image-original', 'image-photosphere']);
 
-  // Eventually I'd like to do some inlining of a tiny image upfront.
-  //
-  // log(c.cyan('image-resize'), 'creating images @ 32...');
-  // var img_32 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
-  //   .pipe(changed('img/travel@32'))
-  //   .pipe(parallel(
-  //     resize({
-  //       width: 32,
-  //       height: 24,
-  //       crop: true,
-  //       upscale: false,
-  //       quality: 0.5,
-  //     }),
-  //     os.cpus().length
-  //   ))
-  //   .pipe(imagemin({
-  //     progressive: true,
-  //     svgoPlugins: [{removeViewBox: false}]
-  //   }))
-  //   .pipe(rename({
-  //     dirname: ''
-  //   }))
-  //   .pipe(gulp.dest('img/travel@32'));
-
-  log(c.cyan('image-resize'), 'creating images @ 320...');
-  var img_320 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+gulp.task('image-320', false, function () {
+  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel@320'))
     .pipe(parallel(
       resize({
@@ -222,33 +198,10 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     }))
     .pipe(gulp.dest('img/travel@320'))
     .pipe(gulp.dest('_site/img/travel@320'));
+});
 
-  // Unused for now
-  //
-  // log(c.cyan('image-resize'), 'creating images @ 640...');
-  // var img_640 = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
-  //   .pipe(changed('img/travel@640'))
-  //   .pipe(parallel(
-  //     resize({
-  //       width: 640,
-  //       height: 640,
-  //       crop: true,
-  //       upscale: false,
-  //       quality: 0.75,
-  //     }),
-  //     os.cpus().length
-  //   ))
-  //   .pipe(imagemin({
-  //     progressive: true,
-  //     svgoPlugins: [{removeViewBox: false}]
-  //   }))
-  //   .pipe(rename({
-  //     dirname: ''
-  //   }))
-  //   .pipe(gulp.dest('img/travel@640'));
-
-  log(c.cyan('image-resize'), 'minifying originals...');
-  var img_orig = gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+gulp.task('image-original', false, function () {
+  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/travel'))
     .pipe(imagemin({
       progressive: true,
@@ -256,9 +209,10 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     }))
     .pipe(gulp.dest('img/travel'))
     .pipe(gulp.dest('_site/img/travel'));
+});
 
-  log(c.cyan('image-resize'), 'minifying photospheres...');
-  var img_photosphere = gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
+gulp.task('image-photosphere', false, function () {
+  return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('img/photosphere'))
     .pipe(imagemin({
       progressive: true,
@@ -266,8 +220,6 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', functi
     }))
     .pipe(gulp.dest('img/photosphere'))
     .pipe(gulp.dest('_site/img/photosphere'));
-
-    return merge(img_320, img_orig, img_photosphere);
 });
 
 // -----------------------------------------------------------------------------
