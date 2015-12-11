@@ -8,7 +8,7 @@ importScripts('/js/cache-polyfill.js');
 
 // Config
 var SW = {
-  cache_version: 'main_v1.1.1',
+  cache_version: 'main_v1.1.2',
   offline_assets: [
     '/',
     '/work/',
@@ -63,7 +63,7 @@ self.addEventListener('activate', function(event) {
           if (expectedCacheNames.indexOf(cacheName) == -1) {
             // If this cache name isn't present in the array of "expected"
             // cache names, then delete it.
-            console.info('Deleting old cache:', cacheName);
+            console.info('Deleting old cache: ' + cacheName);
             return caches.delete(cacheName);
           }
         })
