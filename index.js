@@ -23,7 +23,7 @@ app.use(csp({
   objectSrc: ["youtube.com"],
   mediaSrc: ["youtube.com"],
   frameSrc: ["disqus.com"],
-  connectSrc: ["'self'", "*.mapbox.com"],
+  connectSrc: ["'self'", "*.google-analytics.com", "*.mapbox.com"],
   sandbox: ['allow-scripts', 'allow-same-origin'],
 
   // Set to true if you only want browsers to report errors, not block them
