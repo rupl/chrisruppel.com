@@ -150,3 +150,33 @@
     background-position: 0 25%;
   }
 }
+
+.flex-2 {
+  display: flex;
+  flex-flow: row wrap;
+
+  .photo {
+    flex: 1 0 48%;
+    padding-bottom: 50%;
+    margin: 0 1% 2% 1%;
+  }
+
+  .wide {
+    flex-basis: 98%;
+  }
+}
+
+.flex-3 {
+  display: flex;
+  flex-flow: row wrap;
+
+  .photo {
+    flex: 1 0 31%;
+    padding-bottom: 33%;
+    margin: 0 1% 2% 1%;
+  }
+
+  .wide {
+    flex-basis: 98%;
+  }
+}
