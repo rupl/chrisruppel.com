@@ -6,7 +6,7 @@ permalink: /
 <p class="hello intro">
   I'm <strong>Chris Ruppel</strong>.<br>
   I'm a web developer and traveler.<br>
-  I was most recently in {% for trip in site.categories.travel %}{% if trip.location %}{{ trip.location }}.<br>{% break %}{% endif %}{% endfor %}
+  I was last seen in {% for trip in site.categories.travel %}{% if trip.location %}{{ trip.location }}.<br>{% break %}{% endif %}{% endfor %}
 </p>
 
 <nav class="front-nav">
