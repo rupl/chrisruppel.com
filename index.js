@@ -2,6 +2,7 @@
 var express = require('express');
 var port = process.env.PORT || 5000;
 var helmet = require('helmet');
+var hsts = require('hsts');
 var csp = require('helmet-csp');
 var enforce = require('express-sslify');
 var compression = require('compression');
@@ -9,8 +10,17 @@ var compression = require('compression');
 // Initialize app
 var app = express();
 
-// HTTP headers: hidePoweredBy, hsts, ieNoOpen, noSniff, frameguard, xssFilter
+// HTTP headers: hidePoweredBy, ieNoOpen, noSniff, frameguard, xssFilter
 app.use(helmet());
+
+// HTTP header: Strict Transport Security
+var hsts_days = 90;
+app.use(hsts());
+app.use(hsts({
+  maxAge: (hsts_days * 60 * 60 * 24 * 1000),
+  includeSubDomains: true,
+  preload: true
+}));
 
 // HTTP header: contentSecurityPolicy
 app.use(csp({
