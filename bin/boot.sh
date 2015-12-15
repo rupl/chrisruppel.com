@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # debugging
-pwd
+node -v
 
 # For whatever reason when the slug compiles, it doesn't seem to use the latest
 # version of node so we have to rebuild the package to get Sass working
