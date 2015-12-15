@@ -2,8 +2,6 @@
 var express = require('express');
 var port = process.env.PORT || 5000;
 var helmet = require('helmet');
-var hsts = require('hsts');
-var csp = require('helmet-csp');
 var enforce = require('express-sslify');
 var compression = require('compression');
 
@@ -15,15 +13,14 @@ app.use(helmet());
 
 // HTTP header: Strict Transport Security
 var hsts_days = 90;
-app.use(hsts());
-app.use(hsts({
+app.use(helmet.hsts({
   maxAge: (hsts_days * 60 * 60 * 24 * 1000),
-  includeSubDomains: true,
+  includeSubdomains: true,
   preload: true
 }));
 
 // HTTP header: contentSecurityPolicy
-app.use(csp({
+app.use(helmet.csp({
   // Policy for chrisruppel.com
   defaultSrc: ["'self'"],
   scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "'unsafe-eval'", "'unsafe-inline'"],
