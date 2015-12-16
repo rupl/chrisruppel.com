@@ -10,6 +10,13 @@ gallery:
   bgpad: 65%
 - caption: Our bus was pretty darn packed — backpacks, postal packages, bags of feed made from fish, barbed wire, boxes of fruit, and one pissed off rooster trapped in a box... all bouncing around and constantly shifting.
 
+gallery2:
+- src: bus-to-laos-2.jpg
+  alt: Small snippet of text from Lonely Planet
+  comment: "If you're arriving by bus from Dien Bien Phu, please relax. This is Laos."
+  type: wide
+  bgpad: 25%
+
 summary: We survived an epic chain of transport from Cat Ba to Laos, and even enjoyed it despite the madness that ensued.
 ---
 
@@ -66,3 +73,7 @@ Not only do **the Laos border police at Tay Trang accept USD** — which we had 
 With all of that behind us and visas certified, we got back on our cramped, overstuffed bus and proceeded to finish the remaining bumpy 26km into Laos.
 
 We were so utterly relieved when we got to Muang Khua, a wonderful little town in the mountains. But more on that later!
+
+<ins class="update" datetime="2015-12-16"><p><strong>Update 2015-12-16:</strong> After a few days of hanging out in Muang Khua and thumbing through the Lonely Planet for Laos, we found a small but very funny note about this town. It says "if you came from Vietnam via bus.. relax, you're in Laos now." Glad to know we're not the only ones who've felt this way!</p></ins>
+
+{% include gallery.html gallery=page.gallery2 %}
