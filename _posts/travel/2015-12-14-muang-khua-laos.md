@@ -33,8 +33,10 @@ After getting our money we agreed we should check it out, so we went over to him
 
 {% include gallery.html gallery=page.gallery %}
 
-We quickly checked in and he told us there was a family dinner at 6pm every night. "We eat da bamboo, da vegetables, da rice, and WHISKEY" — and it was delicious! The whole hostel gathered for dinner and we had a great time meeting everyone.
+We quickly checked in and he told us there was a family dinner at 6pm every night. "We eat da bamboo, da vegetables, da rice, and da WHISKEY" — it was delicious! The whole hostel gathered for dinner and we had a great time meeting everyone. The whiskey was actually rice wine, and every time we drank we said "lao lao!"
 
-It turns out the greeting in Laos is "sabaidee" — strikingly similar to our favorite mantra we learned in Pai: "sabai, sabai." It means something different in Laos but from the moment we were first greeted we knew we would love it here.
+As if that weren't enough, we wandered next door and sang Lao karaoke with a few locals for over an hour. Their videos had latin-character phoenetic subtitles so that we could sing along with them despite not knowing a word of the language. It was a riot and we could see that we really made their night by giving it an honest try. Unforgettable night!
+
+It turns out the greeting in Laos is "sabaidee" — strikingly similar to our favorite mantra we learned in Pai: "sabai, sabai." It means something different in Laos but from the moment we first arrived we knew we would love it here.
 
 Back to slow days and good friends. Sabaidee from Laos!
