@@ -8,6 +8,7 @@ gallery:
 - src: phadeng-peak-1.jpg
   alt: Woman posing for camera with mountains behind her.
   comment: Karin poses for a shot before we got too dirty and sweaty. This hike was steep the whole way.
+  type: tall
 - src: phadeng-peak-2.jpg
   alt: Diagrams of the path at the base of the trail.
   comment: Our "map" for the hike. The trails are not really marked so if you don't have a bit of experience you could have trouble.
