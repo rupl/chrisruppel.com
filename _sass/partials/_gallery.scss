@@ -174,9 +174,32 @@
     flex: 1 0 31%;
     padding-bottom: 33%;
     margin: 0 1% 2% 1%;
+
+    // Be default pictures show up in grid format. This forces linear layout on
+    // smaller screens. It's not mobile-first because I can keep it to only one
+    // !important by doing it this way, and the stuff that supports flexbox is
+    // almost guaranteed to support media queries.
+    @media (max-width: 500px) {
+      flex-basis: 98% !important;
+      padding-bottom: 95%;
+      margin-bottom: 5%;
+    }
   }
 
-  .wide {
-    flex-basis: 98%;
+  .wide { //                #         #
+    flex-basis: calc(100% / 1 - (2% * 1));
+  }
+
+  .half { //                #         #
+    flex-basis: calc(100% / 2 - (2% * 2));
+  }
+
+  .third { //               #         #
+    flex-basis: calc(100% / 3 - (2% * 3));
+  }
+
+  .fourth { //              #         #
+    flex-basis: calc(100% / 4 - (2% * 4));
+    padding-bottom: 25%;
   }
 }
