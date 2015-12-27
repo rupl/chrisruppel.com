@@ -14,14 +14,14 @@
     {% endif %}
 
     {% if page.meta != null %}
-      <meta property="og:type" content="website">
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:site" content="@rupl">
       <meta name="twitter:creator" content="@rupl">
-      <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}">
-      <meta name="twitter:title" property="og:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
-      <meta name="twitter:description" property="og:description" content="{{ page.summary | escape }}">
-      <meta name="twitter:image" property="og:image" content="{{ site.url }}/img/travel/{% if page.gallery[0].src %}{{ page.gallery[0].src }}{% else %}{{ page.gallery[1].src }}{% endif %}">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+      <meta property="og:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
+      <meta property="og:description" content="{{ page.summary | escape }}">
+      <meta property="og:image" content="{{ site.url }}/img/travel/{% if page.gallery[0].src %}{{ page.gallery[0].src }}{% else %}{{ page.gallery[1].src }}{% endif %}">
     {% endif %}
 
     {% if site.development == false %}
