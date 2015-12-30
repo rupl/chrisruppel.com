@@ -8,11 +8,12 @@ importScripts('/js/cache-polyfill.js');
 
 // Config
 var SW = {
-  cache_version: 'main_v1.1.5',
+  cache_version: 'main_v1.1.6',
   offline_assets: [
     '/',
     '/work/',
     '/offline/',
+    '/travel/list/',
     '/css/main.min.css',
     '/css/fonts.min.css',
     '/js/main.min.js'
