@@ -11,8 +11,8 @@ echo "desired node: `.heroku/node/bin/node -v`"
 # npm rebuild node-sass
 
 # Image resizing spun off into background to avoid blocking web process
-.heroku/node/bin/node node_modules/gulp/bin/gulp image-resize &
+gulp image-resize &
 
 # Build jekyll and start Express
-.heroku/node/bin/node node_modules/gulp/bin/gulp build-deploy
-.heroku/node/bin/node index.js
+gulp build-deploy
+node index.js
