@@ -174,7 +174,7 @@ gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
 // -----------------------------------------------------------------------------
 // Resize images
 // -----------------------------------------------------------------------------
-gulp.task('image-resize', 'Create different sizes for resposive images.', ['image-320', 'image-original', 'image-photosphere']);
+gulp.task('image-resize', 'Create different sizes for responsive images.', ['image-320', 'image-640', 'image-original', 'image-photosphere']);
 
 // Image derivative: 320
 gulp.task('image-320', false, function () {
@@ -183,7 +183,6 @@ gulp.task('image-320', false, function () {
     .pipe(parallel(
       resize({
         width: 320,
-        height: 320,
         crop: false,
         upscale: false,
         quality: 0.5,
@@ -198,6 +197,29 @@ gulp.task('image-320', false, function () {
       dirname: ''
     }))
     .pipe(gulp.dest('_site/img/travel@320'));
+});
+
+// Image derivative: 640
+gulp.task('image-640', false, function () {
+  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+    .pipe(changed('_site/img/travel@640'))
+    .pipe(parallel(
+      resize({
+        width: 640,
+        crop: false,
+        upscale: false,
+        quality: 0.5,
+      }),
+      os.cpus().length
+    ))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(rename({
+      dirname: ''
+    }))
+    .pipe(gulp.dest('_site/img/travel@640'));
 });
 
 // Original images

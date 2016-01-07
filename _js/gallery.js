@@ -13,10 +13,15 @@ if (gallery.length > 0) {
 // Process the gallery photos
 function processGalleryPhotos(photos) {
   forEach.call(photos, function (photo) {
-    if (bigScreen()) {
-      var hiRes = photo.style.backgroundImage.replace('@320', '');
-      photo.style.backgroundImage = hiRes;
-    }
+    // Let the wisdom of the browser point us to the right image size, then set
+    // it as the background-image on the picture element so we can take advantage
+    // of all the nice CSS positioning built into the galleries pre-<picture>.
+    photo.style.backgroundImage = 'url(' + photo.querySelector('img').currentSrc + ')';
+
+    // Update background-image when currentSrc might have changed
+    // photo.addEventListener('orientationchange', function () {
+    //   photo.style.backgroundImage = 'url(' + photo.querySelector('img').currentSrc + ')';
+    // });
 
     // Attach listeners for image captions
     photo.addEventListener('touchend', function toggleCaptions() {
