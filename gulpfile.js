@@ -28,6 +28,15 @@ var changed = require('gulp-changed');
 // Deployment debugging
 log(c.yellow('Detected environment: ' + (process.env.NODE_ENV || 'local')));
 
+
+// -----------------------------------------------------------------------------
+// Help
+//
+// Shows a command listing when `gulp` is run without args.
+// -----------------------------------------------------------------------------
+gulp.task('default', false, ['help']);
+
+
 // -----------------------------------------------------------------------------
 // Jekyll
 // -----------------------------------------------------------------------------
@@ -43,16 +52,6 @@ gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment.', function(cb) 
     .on('close', cb);
 });
 
-// -----------------------------------------------------------------------------
-// BrowserSync
-// -----------------------------------------------------------------------------
-gulp.task('browser-sync', false, function() {
-  bs({
-    server: './_site/',
-    port: 3456,
-    open: false
-  });
-});
 
 // -----------------------------------------------------------------------------
 // Sass
@@ -176,6 +175,7 @@ gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
 // -----------------------------------------------------------------------------
 gulp.task('image-resize', 'Create different sizes for resposive images.', ['image-320', 'image-original', 'image-photosphere']);
 
+// Image derivative: 320
 gulp.task('image-320', false, function () {
   return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('_site/img/travel@320'))
@@ -199,6 +199,7 @@ gulp.task('image-320', false, function () {
     .pipe(gulp.dest('_site/img/travel@320'));
 });
 
+// Original images
 gulp.task('image-original', false, function () {
   return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('_site/img/travel'))
@@ -209,6 +210,7 @@ gulp.task('image-original', false, function () {
     .pipe(gulp.dest('_site/img/travel'));
 });
 
+// Photospheres
 gulp.task('image-photosphere', false, function () {
   return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
     .pipe(changed('_site/img/photosphere'))
@@ -219,9 +221,19 @@ gulp.task('image-photosphere', false, function () {
     .pipe(gulp.dest('_site/img/photosphere'));
 });
 
+
 // -----------------------------------------------------------------------------
-// BrowserSync + Gulp watch
+// Development tasks
 // -----------------------------------------------------------------------------
+gulp.task('browser-sync', false, function() {
+  bs({
+    server: './_site/',
+    port: 3456,
+    open: false
+  });
+});
+
+// Build site, run browser-sync, watch for changes.
 gulp.task('bs', 'Run dev tasks:', ['build-dev', 'browser-sync', 'watch'], function (cb) {
   return cb; // allows use within sequence()
 });
@@ -237,12 +249,9 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
   gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], ['jekyll']);
 });
 
-// Add a default task to render the available commands.
-gulp.task('default', false, ['help']);
-
 
 // -----------------------------------------------------------------------------
-// Build site for deployment.
+// Build site for deployment to live server.
 //
 // No longer running image as part of build-deploy to reduce runtime. It happens
 // as part of deployment to Heroku.
@@ -257,7 +266,7 @@ gulp.task('build-deploy', 'Do a complete build to prep for deploy.', function(cb
 
 
 // -----------------------------------------------------------------------------
-// Build site for development.
+// Build site for local development.
 // -----------------------------------------------------------------------------
 gulp.task('build-dev', 'Do a complete build to begin development.', function(cb) {
   return sequence(
