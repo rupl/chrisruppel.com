@@ -1,0 +1,42 @@
+---
+title: Travel QA
+permalink: /travel/qa/
+layout: page
+published: false
+---
+
+
+<section aria-labelledby="travel-qa">
+  <h1 id="travel-qa" class="title">Travel QA</h1>
+
+  <p class="summary">If you're reading this please <a href="https://github.com/rupl/chrisruppel.com/issues/new?title=Your+QA+page+is+published&body=Just+letting+you+know+per+the+instructions%3A+https%3A%2F%2Fchrisruppel.com%2Ftravel%2Fqa%2F">let me know I accidentally published it</a> 😳</p>
+
+  <ul class="trip-qa">
+    {% for trip in site.categories.travel %}
+      <li class="trip-title" data-url="{{ site.url }}{{ trip.url }}">
+        <p>
+          {% if trip.gallery %}
+            {% if trip.gallery[0].gridtype %}
+              {% case trip.gallery[0].gridtype %}
+                {% when "flex-2" or "flex-3" or "tall" %}
+                  <strong style="color: green; ">{{ trip.gallery[0].gridtype }}</strong>
+                {% else %}
+                  <strong style="color: goldenrod; ">invalid gridtype: {{ trip.gallery[0].gridtype }}</strong>
+              {% endcase %}
+            {% else %}
+              <strong style="color: red; ">no gridtype set</strong>
+            {% endif %}
+          {% else %}
+            <em style="color: #999; font-weight: 100;">no gallery</em>
+          {% endif %}
+          — <a href="{{ trip.url }}">{{ trip.title }}</a>
+<!--          {% if trip.location %}<span class="where">in {{ trip.location }}</span>{% endif %} -->
+        </p>
+      </li>
+    {% endfor %}
+  </div>
+
+  <div class="go">
+    <a class="btn btn--back" href="/">Back to the front</a>
+  </div>
+</section>
