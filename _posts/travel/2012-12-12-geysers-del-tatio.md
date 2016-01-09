@@ -1,12 +1,14 @@
 ---
 title: Geysers del Tatio
-location: "San Pedro de Atacama, Chile"
+location: San Pedro de Atacama, Chile
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: geysers-del-tatio-1.jpg
   alt: A couple standing in the main field of Geysers del Tatio
   comment: A shot of the two of us. It was cold.
+  type: tall
   bgpos: 50% 0
 - src: geysers-del-tatio-2.jpg
   alt: A geyser spewing steam before sunrise.
@@ -34,6 +36,7 @@ gallery:
   alt: A bright red mineral deposit within a tiny stream in the dirt.
   comment: One of my favorite pictures I took in Chile! This stream was unbelievably vivid and alien-looking.
   type: wide
+  bgpad: 36%
 - src: geysers-del-tatio-10.jpg
   alt: The vicuña feed on the grass.
   comment:  The vicuñas' instinct guides them to eat only half of each plant, so that it can grow back and replentish their food supply sustainably.

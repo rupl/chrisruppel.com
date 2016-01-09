@@ -1,12 +1,14 @@
 ---
 title: Cowtown
-location: "Fort Worth, Texas"
+location: Fort Worth, Texas
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: cowtown-1.jpg
   alt: A large silhouette statue of a historical figure in Texas.
   comment: Big shoes to fill.
+  type: tall
   bgpos: 52% 0
 - src: cowtown-2.jpg
   alt: There are two daily cattle runs in the Stockyards. It's a small ordeal, but fun to watch.

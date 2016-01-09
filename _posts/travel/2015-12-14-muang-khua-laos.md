@@ -3,6 +3,7 @@ title: Sabaidee
 location: Muang Khua, Laos
 
 gallery:
+- gridtype: tall
 - src: muang-khua-1.jpg
   alt: Houses along a river with a steep bank.
   comment: The view of one of the rivers from the suspension bridge.
@@ -25,8 +26,10 @@ gallery:
 - src: muang-khua-5.jpg
   alt: Panoramic from a suspension bridge over a river.
   comment: The view from the bridge. This was the first thing we did after arriving.
+  type: wide
 
 gallery2:
+- gridtype: flex-3
 - src: muang-khua-8.jpg
   alt: People singing karaoke
   comment: Karin sings along to Lao karaoke.

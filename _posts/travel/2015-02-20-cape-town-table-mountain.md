@@ -1,12 +1,14 @@
 ---
 title: Setting the table
-location: "Cape Town, South Africa"
+location: Cape Town, South Africa
 
 gallery:
+- gridtype: flex-3
 - src: table-mountain-1.jpg
   alt: People hiking a vast mountainside.
   comment: Enjoying the views of India Venster.
   type: wide
+  bgpad: 45%
 - src: table-mountain-2.jpg
   alt: A woman and a man on an upwards path.
   comment: Right after our lunch break before turning around the other side of Table Mountain.
@@ -20,6 +22,7 @@ gallery:
 - src: table-mountain-5.jpg
   alt: Mountainside.
   comment: Turning the corner on one of the apostles. Can you even see the others?
+  type: wide
 - caption: "Photos along the <em>India Venster</em> — or so we thought."
 
 gallery2:
@@ -30,6 +33,7 @@ gallery2:
   bgsize: contain
 - src: table-mountain-7.jpg
   alt: Happy couple posing in front of Lion's Head from the top of Table Mountain.
+  type: wide
   bgpos: 0 30%
   bgpad: 40%
 - caption: "Although we went very far off the trail, the day ended in success. We finished the long day with a beautiful view of Cape Town including <em>Lion's Head</em> mountain and Robben Island."

@@ -1,12 +1,14 @@
 ---
 title: Graffiti
-location: "Bristol, England"
+location: Bristol, England
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: bristol-1.jpg
   alt: Graffiti of a large mechanical dragon.
   comment: Robo-dragon
+  type: tall
 - src: bristol-2.jpg
   alt: Graffiti of a man wearing a gas mask.
   comment: This was in the large roundabout in the city center.
@@ -19,6 +21,8 @@ gallery:
 - src: bristol-5.jpg
   alt: Graffiti of indeterminate creatures.
   comment: blarg
+  type: wide
+  bgpad: 45%
 
 summary: I went to Frontend United in Bristol. They had some sweet graffiti.
 ---

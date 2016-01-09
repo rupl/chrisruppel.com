@@ -3,8 +3,8 @@ title: The Palace
 location: Versailles, France
 layout: gallery
 
-
 gallery:
+- gridtype: flex-3
 - src: versailles-1.jpg
   alt: A chapel lined with gold.
   comment: The chapel built by Louis XIV. You would not guess from this photo that I was surrounded by a dozen people also taking photos.
@@ -24,6 +24,7 @@ gallery:
 - src: versailles-5.jpg
   alt: A golden-plated portrait of Mars, the god of war.
   comment: Many rooms had either paintings or elaborate drawings embellished with all sorts of gold. This is depicting Mars, the god of war.
+  type: wide
   bgpad: 42%
 
 summary: We went to Versailles on our last day in Paris. Aside from the insane amount of tourists, it was pretty neat.

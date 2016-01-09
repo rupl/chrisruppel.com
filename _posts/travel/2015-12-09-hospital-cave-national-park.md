@@ -3,6 +3,7 @@ title: Caves and Parks
 location: Cat Ba, Vietnam
 
 gallery:
+- gridtype: flex-2
 - src: cat-ba-natl-park-1.jpg
   alt: Man posing for camera with jungle-covered mountain range in background.
   comment: Our prize for the hike, a beautiful 360° view of the mountains! That tower in the lower right was the observation tower but we went higher.
@@ -16,10 +17,13 @@ gallery:
 - src: cat-ba-natl-park-4.jpg
   alt: Man smiling into camera while standing on a mountain.
   comment: GoPro makes for great selfies even without those sticks.
-  bgpos: 20% 50%
+  type: wide
+  bgpad: 60%
+  bgpos: 20% 0%
 - caption: We only explored one of the paths in the park, but it took us up to the peak and it was definitely worth the hike!
 
 gallery2:
+- gridtype: flex-2
 - src: cat-ba-hospital-cave-1.jpg
   alt: Man-made stone walls embedded into a natural mountainside cave.
   comment: The exit of the cave was a block of concrete amongst otherwise natural-looking cave.

@@ -4,6 +4,7 @@ location: Muang Ngoy, Laos
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: muang-ngoy-1.jpg
   alt: Road leading to a mountain.
   comment: The main road in Muang Ngoy. You can see this mountain everyhere you go.

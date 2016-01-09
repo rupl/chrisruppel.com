@@ -5,9 +5,11 @@ location: Bangkok, Thailand
 photosphere: jim-thompson-house.jpg
 
 gallery:
+- gridtype: tall
 - src: bangkok-1.jpg
   alt: A colorful Hindu temple.
   comment: Wat Prasri Maha Umathewee, a rare Hindu temple in Bangkok.
+  type: tall
 - src: bangkok-2.jpg
   alt: A river walk along a canal.
   comment: Some canals offered walkways and public boats. We took the boat from this spot to Wat Saket (Golden Mount).

@@ -5,6 +5,7 @@ location: Nong Khiaw, Laos
 photosphere: phadeng-peak.jpg
 
 gallery:
+- gridtype: tall
 - src: phadeng-peak-1.jpg
   alt: Woman posing for camera with mountains behind her.
   comment: Karin poses for a shot before we got too dirty and sweaty. This hike was steep the whole way.

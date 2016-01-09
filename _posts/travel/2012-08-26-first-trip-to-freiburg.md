@@ -1,12 +1,14 @@
 ---
 title: First trip to Freiburg
-location: "Freiburg, Germany"
+location: Freiburg, Germany
 
 gallery:
+- gridtype: tall
 - src: freiburg-1.jpg
   alt: An old church tower with a clock.
   comment: The Freiburger Münster, the historical cathedral in the 'old town' of Freiburg.
   bgpos: 50% 0
+  type: tall
 - src: freiburg-2.jpg
   alt: A manhole cover with elaborate artwork of a castle.
   comment: These manhole covers are all over town. There is a water tower made in the image of these.
@@ -28,14 +30,18 @@ gallery:
   bgpos: 0 35%
 
 gallery2:
+- gridtype: wide
 - src: freiburg-8.jpg
   alt: A group of friends in a bar.
   comment: Me, Steph, and Morten enjoying Freiburg night life.
   bgpos: 0 40%
+  bgpad: 40%
   type: wide
 - src: freiburg-7.jpg
   alt: A happy couple in a bar.
   comment: The first photo of Karin and me! After they showed us around town we went out for drinks at Schlappen.
+  type: wide
+  bgpad: 50%
 
 summary: Freiburg was my first stop after DrupalCon Munich. Little did I know it would be the best place on my trip through Europe! This day was the catalyst for my moving to Europe to be with Karin.
 ---

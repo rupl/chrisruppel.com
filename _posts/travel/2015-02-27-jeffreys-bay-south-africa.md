@@ -4,6 +4,7 @@ location: "Jeffreys Bay, South Africa"
 layout: gallery
 
 gallery:
+- gridtype: flex-3
 - src: jeffreys-bay-1.jpg
   alt: Panoramic photo of the beach.
   type: wide
@@ -21,6 +22,7 @@ gallery:
 - src: jeffreys-bay-5.jpg
   alt: The beach at sunset.
   comment: Karin hunts for sea glass at sunset.
+  type: wide
 
 summary: Jeffreys Bay is a popular surfing spot with great beaches. We took it easy here and just enjoyed the scenery.
 ---

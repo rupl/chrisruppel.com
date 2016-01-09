@@ -4,9 +4,11 @@ location: Mui Ne, Vietnam
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: mui-ne-tour-1.jpg
   alt: Man standing in a stream in front of rocks.
   comment: Toward the end of the fairy stream, with interesting rock formations.
+  type: tall
 - src: mui-ne-tour-2.jpg
   alt: A pair of shoes in the sand during sunrise.
   comment: It looks quiet but it was not at all.

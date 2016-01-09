@@ -1,8 +1,9 @@
 ---
 title: Valle de la Muerte y Luna
-location: "San Pedro de Atacama, Chile"
+location: San Pedro de Atacama, Chile
 
 gallery:
+- gridtype: flex-3
 - src: valle-de-la-muerte-1.jpg
   alt: A panoramic view of Valle de la Muerte.
   comment: No matter what you want to call it, this valley was both Mars-like and very unforgiving towards life.
@@ -20,13 +21,14 @@ gallery:
 - src: valle-de-la-muerte-5.jpg
   alt: A man standing at the edge of a cliff with rocks stretching to the horizon.
   comment: One of my favorite pics of the trip. You might have recognized it on Four Kitchens' website.
-  type: wide
+  type: half
 - src: valle-de-la-muerte-6.jpg
   alt: A large rock with clear layers caused by geographic formation over an enormous scale of time.
   comment: Happy birthday, Earth. You're 4.6 billion years old!
-  type: wide
+  type: half
 
 gallery2:
+- gridtype: flex-3
 - src: valle-de-la-luna-1.jpg
   alt: Valle de la Luna in the afternoon.
   comment: One of the most recognizable landmarks of the valley.
@@ -43,6 +45,7 @@ gallery2:
 - src: valle-de-la-luna-5.jpg
   alt: Valle de la Luna during sunset.
   comment: The sun sets over the Valley, casting a noticeably blue hue over the red valley.
+  type: wide
 
 summary: Our first adventure in San Pedro was visiting Valle de la Muerte and Valle de la Luna. I was struck by the utter lack of vegetation and felt so insignificant compared to nature.
 ---

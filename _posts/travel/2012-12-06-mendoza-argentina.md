@@ -1,14 +1,15 @@
 ---
 title: Don't cry for me
-location: "Mendoza, Argentina"
+location: Mendoza, Argentina
 layout: gallery
 
 gallery:
+- gridtype: flex-3
 - src: mendoza-1.jpg
   alt: A fountain with pink water.
   comment: I think this has to do with wine, but th fountains were all pink when we walked around.
   type: wide
-  bgpos: 0 60%
+  bgpad: 38%
 - src: mendoza-2.jpg
   alt: Two backpackers in a mirror.
   comment: We didn't snap so many photos of ourselves at this point, but this is one of my favorites and I'm glad I convinced Karin to take it.

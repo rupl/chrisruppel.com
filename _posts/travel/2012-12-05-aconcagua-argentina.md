@@ -1,12 +1,14 @@
 ---
 title: Cerro Aconcagua
-location: "Mendoza, Argentina"
+location: Mendoza, Argentina
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: aconcagua-1.jpg
   alt: Karin and I standing in front of a sign for Cerro Aconcagua.
   comment: We made it!
+  type: tall
   bgpos: 45% 0
 - src: aconcagua-2.jpg
   alt: A bridge over a small river.
@@ -27,7 +29,9 @@ gallery:
 - src: aconcagua-7.jpg
   alt: A lake with mountains on the other side.
   comment: The views here were stunning and vast. there was little I could do to capture the scale of the surroundings.
+  bgpad: 50%
   bgpos: 0 50%
+  type: wide
 - caption: Hiking around Cerro Aconcagua was beautiful but watch out.. the altitude will catch you off guard if you're not careful. Drink water, bring snacks, and wear lots of sunscreen.
 
 summary: Starting from Mendoza, we took a day trip to see Cerro Aconcagua, the highest peak in the Americas.

@@ -1,9 +1,10 @@
 ---
 title: Exploring Barthelona
-location: "Barcelona, Spain"
+location: Barcelona, Spain
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: exploring-barcelona-1.jpg
   alt: Looking upward at balconies in a narrow alley
   comment: There were so many beautiful, skinny allies in Barcelona.

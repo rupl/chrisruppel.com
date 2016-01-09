@@ -4,6 +4,7 @@ location: Mui Ne, Vietnam
 layout: gallery
 
 gallery:
+- gridtype: flex-3
 - src: longson-mui-ne-1.jpg
   alt: Long exposure of a lightning storm at night on the beach.
   comment: We were treated to several nights of lightning storms while staying here. Not a single drop of rain thanks to a neat microclimate created by two nearby sand dunes that push hot air over us at night.
@@ -31,9 +32,11 @@ gallery:
 - src: longson-mui-ne-9.jpg
   alt: A large, live sand dollar.
   comment: We saw the biggest sand dollar ever on the beach. I picked it up to take it because I was so impressed, but it was alive! We set it back down and let it go about its business.
+  type: half
 - src: longson-mui-ne-10.jpg
   alt: Silhouettes of two people.
   comment: Shadow picture!
+  type: half
 - caption: Credit — Lightning storm photo taken by <a href="https://www.facebook.com/longsonmuinebeachclub/">Hayden from Longson Mui Ne</a>
 
 

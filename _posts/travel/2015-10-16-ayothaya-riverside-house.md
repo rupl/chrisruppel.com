@@ -3,9 +3,11 @@ title: Ayothaya Riverside House
 location: Ayutthaya, Thailand
 
 gallery:
+- gridtype: tall
 - src: ayothaya-riverside-1.jpg
   alt: Morning sun shining on a dark teak wood deck.
   comment: The morning sun on our deck.
+  type: tall
 - src: ayothaya-riverside-2.jpg
   alt: A house on the riverside with lush greenery.
   comment: A view from atop Ya's boat.

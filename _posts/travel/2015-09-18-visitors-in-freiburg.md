@@ -1,12 +1,14 @@
 ---
 title: Visitors
-location: "Freiburg, Germany"
+location: Freiburg, Germany
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: freiburg-visitors-1.jpg
   alt: A large gothic church.
   comment: Herz-Jesu-Kirche, the church nearest our apartment.
+  type: tall
   bgpos: 50% 0
 - src: freiburg-visitors-2.jpg
   alt: A bakery on a shady street filled with trees.

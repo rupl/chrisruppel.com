@@ -4,9 +4,11 @@ location: Pai, Thailand
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: pai-1.jpg
   alt: A waterfall near sundown.
   comment: We went to Mo Paeng on our first afternoon.
+  type: tall
 - src: pai-2.jpg
   alt: Afternoon rain falling on a field with sunbeams in the sky.
   comment: I read a book and listened to the rain one afternoon.

@@ -1,14 +1,16 @@
 ---
 title: Big Knob
-location: Cave Lodge, Thailand
+location: Soppong, Thailand
 
 map:
   kml: cave-lodge_big-knob.kml
 
 gallery:
+- gridtype: tall
 - src: big-knob-1.jpg
   alt: Woman sitting on mountaintop.
   comment: Maggie soaking in the sun at the top of Big Knob.
+  type: tall
 - src: big-knob-2.jpg
   alt: Hand-drawn map of Cave Lodge area.
   comment: Like a treasure map from childhood, this was our guide (along with about 4 sentences of cues for the trail). Except X marks the beginning on this map!

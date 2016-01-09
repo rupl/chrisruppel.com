@@ -4,9 +4,11 @@ location: Pai, Thailand
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: pai-cooking-1.jpg
   alt: Raw ingredients for red curry.
   comment: Step 1 — gather ingredients at the market.
+  type: tall
 - src: pai-cooking-2.jpg
   alt: Chopped ingredients for red curry.
   comment: Step 2 — finely chop all of it.

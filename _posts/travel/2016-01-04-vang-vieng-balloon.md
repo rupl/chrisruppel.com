@@ -4,6 +4,7 @@ location: Vang Vieng, Laos
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: vang-vieng-balloon-1.jpg
   alt: Close-up of a flame emitting heat into a hot air balloon.
   comment: Our chariot!

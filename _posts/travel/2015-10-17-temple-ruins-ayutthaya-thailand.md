@@ -4,6 +4,7 @@ location: Ayutthaya, Thailand
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: ayutthaya-1.jpg
   alt: A tall tower with cloisters lined by headless Buddha statues.
   comment: Wat Chaiwatthanaram was the biggest single temple and we got there early, letting us enjoy it almost completely to ourselves.

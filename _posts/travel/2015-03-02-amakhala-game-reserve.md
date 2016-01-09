@@ -1,14 +1,16 @@
 ---
 title: Amakhala Game Reserve
-location: "Addo Elephant National Park"
+location: Addo Elephant National Park
 layout: gallery
 
 gallery:
+- gridtype: flex-3
 - src: amakhala-1.jpg
   alt: Viewing the wilderness from a land rover.
   comment: Our view as we drove throughout the park.
   type: wide
-  bgpos: 0 38%
+  bgpad: 36%
+  bgpos: 0 35%
 - src: amakhala-2.jpg
   alt: A park guide for Amakhala.
   comment: "Our guide, Learnmore, who went by Lenny for short. He was extremely knowledgable and bold, getting us as close to the animals as possible while keeping us safe."

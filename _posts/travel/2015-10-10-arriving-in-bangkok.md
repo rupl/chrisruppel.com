@@ -3,6 +3,7 @@ title: Arriving
 location: Bangkok, Thailand
 
 gallery:
+- gridtype: flex-3
 - src: arriving-bangkok-1.jpg
   alt: Apartments along the Chao Phraya river.
   comment: We saw many apartments like these while taking the Chao Phraya Express Boat.
@@ -31,9 +32,11 @@ gallery:
 - src: arriving-bangkok-8.jpg
   alt: A man using his phone in front of a garage shutter with graffiti on it.
   comment: This man was ignoring the epic battle taking place behind him.
+  type: half
 - src: arriving-bangkok-7.jpg
   alt: Looking down a river from a bridge with trees on one side and apartments on the other.
   comment: There were many pedestrian bridges like this one.
+  type: half
 
 summary: Our first stop in Southeast Asia was Bangkok, the bustling capitol of Thailand. Bangkok is a busy, dirty city but it is filled with very friendly people who always greet you with a smile.
 ---

@@ -1,11 +1,13 @@
 ---
 title: La Mercè
-location: "Barcelona, Spain"
+location: Barcelona, Spain
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: merce-barcelona-2.jpg
   alt: A church lit by blue light.
+  type: tall
   bgpos: 20% 0
 - src: merce-barcelona-1.jpg
   alt: A church lit by purple light.
@@ -19,7 +21,8 @@ gallery:
   bgpos: 100% 0
 - src: merce-barcelona-5.jpg
   alt: An airplane fuselage lit by projectors.
-  bgpos: 0 40%
+  type: wide
+  bgpad: 40%
 
 summary: By coincidence, DrupalCon was exactly the same week as <em>La Mercè</em>, an annual festival in Barcelona. We were treated to extraordinary nightlife almost the entire time we were there.
 ---

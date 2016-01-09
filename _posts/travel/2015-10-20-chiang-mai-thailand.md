@@ -4,6 +4,7 @@ location: Chiang Mai, Thailand
 layout: gallery
 
 gallery:
+- gridtype: flex-3
 - src: chiang-mai-1.jpg
   alt: Long, steep stairs lined with ceramic in the style of dragon scales.
   comment: These stairs lead up to Wat Phrathat Doi Suthep.
@@ -29,13 +30,13 @@ gallery:
   comment: We took a photo at the highest point in the temple.
 - src: chiang-mai-8.jpg
   alt: Man and woman in a kayak as the sun is about to set.
-  comment: We went kayaking one afternoon using a local dock near our hostel. It was much better than booking a package!
+  comment: We went kayaking one afternoon using a local dock near our hostel. It was much better than booking a tour!
+  type: half
 - src: chiang-mai-9.jpg
   alt: An old city wall corner.
   comment: We walked by one of the corners of the old town while out one night.
-- src: chiang-mai-10.jpg
-  alt: A balcony overlooking trees and river.
-  comment: Our walkway up to our room was very pretty in the day.
+  type: half
+  bgpos: 50% 25%
 - src: chiang-mai-11.jpg
   alt: Panoramic of a hostel situated on the bank of a river.
   comment: Our hostel had a great spot right on the river. We ate breakfast and dinner here often.
