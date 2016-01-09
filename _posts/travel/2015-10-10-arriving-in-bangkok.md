@@ -51,7 +51,7 @@ The second day we got a little more ambitious, walking along a main road and eat
 
 To head towards the tourist district, we hopped on the Chao Phraya Express Boat. Just like an underground metro, passengers hop on and off at the many quick stops they make along the river docks. It even has a diagram showing the various "lines" available and which stops they make.
 
-We had planned to stop at the _Wat Arun_, or Temple of Dawn, but when we arrived at the proper stop it was under heavy construction and it didn't seem like waiting around for sunset would be worth our while. We stayed on the boat and got off at the end of the line. It appeared to be the nucleus of the tourism district, with a noticeably higher percentage of white folk walking around.
+We had planned to stop at the _Wat Arun_, or Temple of Dawn, but when we arrived at the proper stop it was under heavy construction and it didn't seem like waiting around for sunset would be worth our while. We stayed on the boat and got off at the end of the line. It appeared to be the nucleus of the tourism district, with a noticeably higher percentage of westerners walking around. <ins class="update" datetime="2016-01-10"><strong>Edit:</strong> we had indeed found Khao San Road, although we did not know about it at the time.</ins>
 
 The street vendors were still friendly but way pushier, with "plainclothes" people walking around subtly herding us toward the stalls. We have done enough regular tourism in Europe to know how to say no, but the friendliness of the thai people can sometimes make it more difficult. Still, a warm smile and a firm "no" get the job done.
 

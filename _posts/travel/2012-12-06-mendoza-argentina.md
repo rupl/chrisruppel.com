@@ -7,7 +7,7 @@ gallery:
 - gridtype: flex-3
 - src: mendoza-1.jpg
   alt: A fountain with pink water.
-  comment: I think this has to do with wine, but th fountains were all pink when we walked around.
+  comment: I think this has to do with wine, but the fountains were all pink when we walked around on this day.
   type: wide
   bgpad: 38%
 - src: mendoza-2.jpg

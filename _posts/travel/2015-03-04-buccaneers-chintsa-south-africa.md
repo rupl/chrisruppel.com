@@ -12,7 +12,7 @@ gallery:
   bgpos: 36% 0
 - src: buccaneers-2.jpg
   alt: A breakfast room with a balcony overlooking an ocean.
-  comment: The 'View of Africa' breakfast room at Buccaneers.
+  comment: The "View of Africa" breakfast room at Buccaneers.
 - src: buccaneers-3.jpg
   alt: Wooden bridge leading to land.
   comment: The bridge that took us from the beach to the lodge.

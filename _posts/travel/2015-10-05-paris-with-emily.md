@@ -7,7 +7,7 @@ photosphere: paris-catacombs.jpg
 gallery:
 - gridtype: tall
 - src: paris-with-emily-1.jpg
-  alt: 
+  alt: Building in a square.
   type: tall
   bgpos: 50% 0
 - src: paris-with-emily-2.jpg

@@ -30,6 +30,5 @@ gallery:
   type: wide
   bgpad: 50%
 
-summary: After our adventures at Cave Lodge we stopped in Pai to just relax a bit. It's a small town with very active markets and other signs of tourism. But it has lots of nice, quiet spots outside the town to relax.
+summary: After our adventures at Cave Lodge we stopped in Pai to just relax a bit. It's a small town with bustling tourism and a great vibe.
 ---
-

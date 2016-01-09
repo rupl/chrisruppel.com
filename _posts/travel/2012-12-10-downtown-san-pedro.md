@@ -19,11 +19,11 @@ gallery:
   bgpos: 0 30%
 - src: san-pedro-4.jpg
   alt: A road in San Pedro on a sunny day.
-  comment: A typical street in "downtown" San Pedro.
+  comment: One of the five streets that make up "downtown" San Pedro.
   bgpos: 0 40%
 - src: san-pedro-5.jpg
-  alt: Various Chilean bills — 20000, 10000, 5000, 2000, 1000
-  bgpos: 0 15%
+  alt: Various Chilean bills&#58; 20000, 10000, 5000, 2000, 1000
+  bgpos: 0 20%
 - src: san-pedro-7.jpg
   alt: Carved wooden door with the words "Hosteria San Pedro de Atacama"
   bgpos: 0 50%

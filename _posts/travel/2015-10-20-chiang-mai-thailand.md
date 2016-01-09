@@ -42,5 +42,5 @@ gallery:
   comment: Our hostel had a great spot right on the river. We ate breakfast and dinner here often.
   type: wide
 
-summary: Chiang Mai is a nice city in the North. It's pretty big but thankfully not nearly on the scale of Bangkok. We had fun checking it out for a few days.
+summary: Chiang Mai is the biggest city in the north, offering plenty of sights and activities. We had fun checking it out for a few days.
 ---

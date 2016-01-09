@@ -42,6 +42,6 @@ gallery:
   bgpad: 45%
 - caption: Credit — all GoPro helmet photos taken by <a href="http://www.reiskrabbels.nl/reisblog/lisanneopreis/#!/reisblog/">Lisanne Schaafsma</a>
 
-summary: We went kayaking twice in a row because it was so much fun! We did the shortest and longest trips Cave Lodge has to offer. The long one had a bit of caving thrown in for good measure.
+summary: We went kayaking twice in a row because it was so much fun! We did a short 2-hour and long 5-hour trip. The long one had a bit of caving thrown in for good measure.
 ---
 

@@ -29,7 +29,7 @@ gallery:
   comment: From the left, Mira, Mary, Maggie, Karin as we make our way back down.
 - src: big-knob-7.jpg
   alt: Panoramic view of many small pointy mountains covered in trees.
-  comment: Our Prize!
+  comment: Our Prize! A spectacular view of the valley where Cave Lodge is located.
   type: wide
 
 summary: Our first activity at Cave Lodge was an easy local spot called Big Knob. It's a short hike, no guide needed, and it can be done in about two hours.

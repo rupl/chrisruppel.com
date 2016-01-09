@@ -11,6 +11,7 @@ gallery:
   bgpad: 45%
 - src: bus-to-sanpedro-2.jpg
   alt: A dry riverbed.
+  comment: It was fascinating to look at all the old artifacts of past eras. There were many dry riverbeds and other signs of a once-active landscape that is no longer changing as fast (for now).
 - src: bus-to-sanpedro-3.jpg
   alt: Gast station in Argentina.
   comment: Typical scenery as we passed through many small towns.
