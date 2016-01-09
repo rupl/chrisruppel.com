@@ -18,32 +18,36 @@
 
       {% endcomment %}
 
-      {% capture imgsize_small %}
-        calc(100vw - 4% - 1em)
-      {% endcapture %}
-
-      {% capture imgsize_big %}
-        (min-width: 500px)
-        {% if item.type == "wide" %}
+      {% capture imgsize_small %}calc(100vw - 4% - 1em){% endcapture %}
+      {% capture imgsize_big %}(min-width: 500px)
+        {% if item.type == "wide" or item.type == "tall" %}
           {% comment %}
             When the image is wide, it always takes up the full width no matter
             what layout or breakpoint we're at. Force it to be the full width.
+
+            Tall images make a bit of a fib and claim to be twice as wide as
+            they are, since they are three times the height of a normal image
+            and will be presented much larger on the page.
+
+            Formula: 100vw - <main>-padding - gallery_padding - photo-margin
           {% endcomment %}
-          calc(100vw - 4% - 2% - 1em)
+          calc(100vw - 2em - 8% - 2%)
         {% elsif item.type == "half" %}
           {% comment %}
             Similar to wide, when image is half size, we know how much space it
             takes up on larger breakpoints without looking at gallery type.
+
+            Formula: 50vw - <main>-padding - gallery_padding - photo-margins
           {% endcomment %}
-          calc(50vw - 4% - 4% - 1em)
+          calc(50vw - 2em - 8% - 4%)
         {% else %}
           {% comment %}
-            If it's size is unspecified, check the gallery type to see how wide
+            If its size is unspecified, check the gallery type to see how wide
             the image might be. This is technically a guess, but it's correct
             about 90% of the time.
           {% endcomment %}
           {% case include.gallery[0].gridtype %}
-            {% when "flex-3" or "wide" %}
+            {% when "flex-3" %}
               30vw
             {% when "flex-2" or "tall" %}
               40vw
