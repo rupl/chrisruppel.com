@@ -6,8 +6,7 @@ var observer = window.Promise.all([oswaldLight.check(), oswaldRegular.check()]);
 observer.then(function () {
   document.documentElement.classList.remove('wf-loading');
   document.documentElement.classList.add('wf-oswald');
-});
-observer.catch(function () {
+}).catch(function () {
   document.documentElement.classList.remove('wf-loading');
   document.documentElement.classList.add('wf-failed');
 })
