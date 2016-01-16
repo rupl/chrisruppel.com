@@ -10,7 +10,6 @@ var sequence = require('run-sequence');
 var merge = require('merge-stream');
 var parallel = require('concurrent-transform');
 var os = require('os');
-var connect = require('gulp-connect');
 
 // Include Our Plugins
 var bs = require('browser-sync');
@@ -20,7 +19,7 @@ var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var minCSS = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var resize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
@@ -74,7 +73,7 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
       }
     }))
     .pipe(prefix("last 2 versions", "> 1%"))
-    .pipe(minCSS({processImport: false}))
+    .pipe(cssnano())
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
@@ -96,7 +95,6 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
       }
     }))
     .pipe(prefix("last 2 versions", "> 1%"))
-    .pipe(minCSS({processImport: false}))
     .pipe(rename('fonts.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
