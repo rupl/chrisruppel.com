@@ -29,7 +29,6 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "helmet": "^0.15.0",
-    "merge-stream": "^1.0.0",
     "run-sequence": "^1.1.2",
     "screenfull": "^2.0.0",
     "serviceworker-cache-polyfill": "^3.0.0",

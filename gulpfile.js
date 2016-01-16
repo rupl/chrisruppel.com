@@ -3,11 +3,9 @@ var gulp = require('gulp-help')(require('gulp'));
 var u = require('gulp-util');
 var log = u.log;
 var c = u.colors;
-var merge = require('merge-stream');
 var spawn = require('child_process').spawn;
 var plumber = require('gulp-plumber');
 var sequence = require('run-sequence');
-var merge = require('merge-stream');
 var parallel = require('concurrent-transform');
 var os = require('os');
 
@@ -55,20 +53,22 @@ gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment.', function(cb) 
 // -----------------------------------------------------------------------------
 // Sass
 // -----------------------------------------------------------------------------
-gulp.task('sass', 'Compiles Sass using libsass.', function () {
-  bs.notify('Sass compiling...');
+gulp.task('sass', 'Compiles Sass:', ['sass-main', 'sass-fonts']);
 
-  var sass_main = gulp.src('_sass/styles.scss')
+gulp.task('sass-main', false, function () {
+  bs.notify('sass-main compiling...');
+
+  return gulp.src('_sass/styles.scss')
     .pipe(plumber())
     .pipe(sass({
       outputStyle: 'nested',
       onSuccess: function(css) {
         var dest = css.stats.entry.split('/');
-        log(c.green('sass'), 'compiled to', dest[dest.length - 1]);
+        log(c.green('sass-main'), 'compiled to', dest[dest.length - 1]);
       },
       onError: function(err, res) {
-        bs.notify('<span style="color: red">Sass failed</span>');
-        log(c.red('Sass failed to compile'));
+        bs.notify('<span style="color: red">sass-main failed</span>');
+        log(c.red('sass-main failed to compile'));
         log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
       }
     }))
@@ -79,18 +79,22 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
     .pipe(gulp.dest('_site/css'))
     .pipe(gulp.dest('_includes')) // for the Jekyll include
     .pipe(reload({stream: true}));
+});
 
-  var sass_fonts = gulp.src('_sass/fonts.scss')
+gulp.task('sass-fonts', false, function () {
+  bs.notify('sass-fonts compiling...');
+
+  return gulp.src('_sass/fonts.scss')
     .pipe(plumber())
     .pipe(sass({
       outputStyle: 'nested',
       onSuccess: function(css) {
         var dest = css.stats.entry.split('/');
-        log(c.green('sass'), 'compiled to', dest[dest.length - 1]);
+        log(c.green('sass-fonts'), 'compiled to', dest[dest.length - 1]);
       },
       onError: function(err, res) {
-        bs.notify('<span style="color: red">Fonts failed</span>');
-        log(c.red('Fonts failed to compile'));
+        bs.notify('<span style="color: red">sass-fonts failed</span>');
+        log(c.red('sass-fonts failed to compile'));
         log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
       }
     }))
@@ -99,8 +103,6 @@ gulp.task('sass', 'Compiles Sass using libsass.', function () {
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
     .pipe(reload({stream: true}));
-
-  return merge(sass_main, sass_fonts);
 });
 
 // -----------------------------------------------------------------------------
