@@ -177,7 +177,7 @@ gulp.task('image-resize', 'Create different sizes for resposive images.', ['imag
 
 // Image derivative: 320
 gulp.task('image-320', false, function () {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/travel@320'))
     .pipe(parallel(
       resize({
@@ -201,7 +201,7 @@ gulp.task('image-320', false, function () {
 
 // Original images
 gulp.task('image-original', false, function () {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/travel'))
     .pipe(imagemin({
       progressive: true,
@@ -212,7 +212,7 @@ gulp.task('image-original', false, function () {
 
 // Photospheres
 gulp.task('image-photosphere', false, function () {
-  return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR}*'])
+  return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/photosphere'))
     .pipe(imagemin({
       progressive: true,
