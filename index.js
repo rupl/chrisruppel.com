@@ -62,5 +62,5 @@ app.use(express.static(__dirname + '/_site'));
 app.get('/portfolio/', function(req, res){ res.redirect(301, '/work/') });
 
 // Listen for traffic
-console.log('Express is listening for traffic.');
+console.log('Express is listening for traffic on port ' + port);
 app.listen(port);
