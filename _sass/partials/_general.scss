@@ -54,12 +54,6 @@ img {
 .title {
   @include font-oswald;
 
-  .alt {
-    float: right;
-    font-size: 80%;
-    font-weight: 300;
-  }
-
   .wf-loading & {
     letter-spacing: -3px;
   }
@@ -75,6 +69,19 @@ img {
   .wf-loading & {
     letter-spacing: -4px;
   }
+}
+
+.title--page {
+  width: 70%;
+  float: left;
+}
+
+.elsewhere {
+  margin-top: 1.66em;
+  width: 30%;
+  float: right;
+  font-weight: 300;
+  @include font-oswald;
 }
 
 .intro {

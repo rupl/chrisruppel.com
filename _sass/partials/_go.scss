@@ -118,6 +118,10 @@
   }
 }
 
+.btn--info {
+  cursor: help;
+}
+
 .btn--disabled {
   cursor: not-allowed;
   background-image: linear-gradient(to bottom, #eee, #ddd) !important;

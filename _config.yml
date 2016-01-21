@@ -28,6 +28,10 @@ defaults:
     values:
       category: travel
       layout: trip
+  - scope:
+      path: "about"
+    values:
+      layout: info
 
 # Google Analytics — the dev config unsets this value
 ga: 'UA-432773-8'

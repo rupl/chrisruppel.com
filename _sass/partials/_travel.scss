@@ -3,10 +3,6 @@
 //
 
 .trip-list {
-  //
-  // List types
-  //
-
   .teaser {
     padding-bottom: 4em;
     animation: fade-in 1s ease-in-out;
@@ -28,9 +24,11 @@
         margin-right: 0;
       }
     }
+
     a {
       font-weight: 400;
     }
+
     time {
       color: rgba(#000, .5);
     }
@@ -61,8 +59,7 @@
     }
   }
 
-  .summary {
-  }
+  .summary {}
 }
 
 @keyframes fade-in {
