@@ -1,6 +1,7 @@
 // Node/npm deps
 var express = require('express');
 var port = process.env.PORT || 5000;
+var fs = require('fs');
 var helmet = require('helmet');
 var enforce = require('express-sslify');
 var compression = require('compression');
@@ -55,6 +56,10 @@ app.use(compression());
 
 // Serve the static Jekyll site
 app.use(express.static(__dirname + '/_site'));
+
+// Legacy redirects.
+// app.get('/OLD_URL', function(req, res){ res.redirect(301, '/NEW_URL') });
+app.get('/portfolio/', function(req, res){ res.redirect(301, '/work/') });
 
 // Listen for traffic
 console.log('Express is listening for traffic.');
