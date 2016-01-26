@@ -117,9 +117,9 @@ self.addEventListener('fetch', function(event) {
   }
 
   // This request fell through all our conditions and is being ignored by SW.
-  else {
-    console.info('Fetch listener ignored ' + reqPath);
-  }
+  // else {
+  //   console.info('Fetch listener ignored ' + reqPath);
+  // }
 
 });
 

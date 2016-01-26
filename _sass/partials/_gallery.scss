@@ -7,6 +7,7 @@
   // bottom caption
   figcaption {
     @extend .caption;
+    flex-basis: 100%;
   }
 }
 
@@ -15,21 +16,20 @@
 //
 .photo {
   display: block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  transition: transform .25s ease-in-out;
+  overflow: hidden;
+  position: relative;
   z-index: 100;
+  transition: transform .25s ease-in-out;
 
-  &.contain {
-    background-size: contain;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   // Captions on hover/tap
   &[data-comment] {
-    position: relative;
-    overflow: hidden;
-
     &::after {
       font-size: .66em;
       content: attr(data-comment);
@@ -63,7 +63,6 @@
   .photo {
     float: left;
     width: 98%;
-    padding-bottom: 95%;
     margin-bottom: 4%;
     margin-right: 1%;
     margin-left: 1%;
@@ -78,7 +77,7 @@
   // special treatment for tall photos
   .tall {
     padding-bottom: 103.9%;
-    background-position: 25% 0;
+    object-position: 25% 0;
   }
 
   //
@@ -88,7 +87,28 @@
     float: none;
     clear: both;
     width: 98%;
-    background-position: 0 calc(100% / 3);
+    object-position: 50% calc(100% / 3);
+  }
+}
+
+//
+// LAYOUT: all flex-box grids
+//
+.grid-flex {
+  display: flex;
+  flex-flow: row wrap;
+
+  .photo {
+    margin: 0 1% 2%;
+
+    // Be default pictures show up in grid format. This forces linear layout on
+    // smaller screens. It's not mobile-first because I can keep it to only one
+    // !important by doing it this way, and the stuff that supports flexbox is
+    // almost guaranteed to support media queries.
+    @media (max-width: 500px) {
+      flex-basis: 98% !important;
+      padding-bottom: 95%;
+    }
   }
 }
 
@@ -96,45 +116,12 @@
 // LAYOUT: flex-box 2-col
 //
 .flex-2 {
-  display: flex;
-  flex-flow: row wrap;
+  @extend .grid-flex;
 
+  // Set number of cols + height
   .photo {
     flex: 1 0 48%;
     padding-bottom: 50%;
-    margin: 0 1% 2% 1%;
-
-    // Be default pictures show up in grid format. This forces linear layout on
-    // smaller screens. It's not mobile-first because I can keep it to only one
-    // !important by doing it this way, and the stuff that supports flexbox is
-    // almost guaranteed to support media queries.
-    @media (max-width: 500px) {
-      flex-basis: 98% !important;
-      padding-bottom: 95%;
-      margin-bottom: 5%;
-    }
-  }
-
-  .wide { //                #         #
-    flex-basis: calc(100% / 1 - (2% * 1));
-    padding-bottom: calc(100% / 3);
-  }
-
-  .half { //                #         #
-    flex-basis: calc(100% / 2 - (2% * 2));
-  }
-
-  .third { //               #         #
-    flex-basis: calc(100% / 3 - (2% * 3));
-  }
-
-  .fourth { //              #         #
-    flex-basis: calc(100% / 4 - (2% * 4));
-    padding-bottom: 25%;
-  }
-
-  figcaption {
-    flex-basis: 100%;
   }
 }
 
@@ -142,44 +129,36 @@
 // LAYOUT: flex-box 3-col
 //
 .flex-3 {
-  display: flex;
-  flex-flow: row wrap;
+  @extend .grid-flex;
 
+  // Set number of cols + height
   .photo {
     flex: 1 0 31%;
     padding-bottom: 33%;
-    margin: 0 1% 2% 1%;
-
-    // Be default pictures show up in grid format. This forces linear layout on
-    // smaller screens. It's not mobile-first because I can keep it to only one
-    // !important by doing it this way, and the stuff that supports flexbox is
-    // almost guaranteed to support media queries.
-    @media (max-width: 500px) {
-      flex-basis: 98% !important;
-      padding-bottom: 95%;
-      margin-bottom: 5%;
-    }
   }
+}
 
-  .wide { //                #         #
+//
+// Define some class-based overrides after all default gallery styles.
+// If these styles are declared before the gallery gridtypes, then the
+// default flex-basis for each grid will be set.
+//
+.photo {
+  &.wide { //               N         N
     flex-basis: calc(100% / 1 - (2% * 1));
     padding-bottom: calc(100% / 3);
   }
 
-  .half { //                #         #
-    flex-basis: calc(100% / 2 - (2% * 2));
+  &.half { //               N         N-1 ¯\_(ツ)_/¯
+    flex-basis: calc(100% / 2 - (2% * 1));
   }
 
-  .third { //               #         #
+  &.third { //              N         N
     flex-basis: calc(100% / 3 - (2% * 3));
   }
 
-  .fourth { //              #         #
+  &.fourth { //             N         N
     flex-basis: calc(100% / 4 - (2% * 4));
     padding-bottom: 25%;
-  }
-
-  figcaption {
-    flex-basis: 100%;
   }
 }

@@ -7,15 +7,13 @@
       {% capture imgsrc_orig %}/img/travel/{{ item.src }}{% endcapture %}
 
       {% comment %}
-
-        Image sizes are the complicated part to determine, but since we generate
-        HTML from the gallery YML we have all the info we need to dynamically
+        Image sizes are somewhat complicated to determine, but since we generate
+        HTML from the gallery YML we have most of the info we need to dynamically
         determine how wide each image is at any window size.
 
         Things that might drift out of sync and need to be checked periodically:
         - Gallery breakpoints. What window sizes cause galleries to be linear
           instead of "tiled" sets of images?
-
       {% endcomment %}
 
       {% capture imgsize_small %}calc(100vw - 4% - 1em){% endcapture %}
@@ -68,8 +66,7 @@
                 sizes="{{ imgsize_big }},
                        {{ imgsize_small }}">
 
-        <img alt="{{ item.alt | escape }}"
-             class="element-invisible">
+        <img alt="{{ item.alt | escape }}">
       </picture>
 
     {% endif %}
