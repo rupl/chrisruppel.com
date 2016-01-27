@@ -1,5 +1,5 @@
 {% if include.gallery.size > 0 %}
-<figure class="gallery {% if include.gallery[0].type != null %} {{ include.gallery[0].type }}{% else %} {% if include.gallery[0].gridtype %}{{ include.gallery[0].gridtype }}{% else %}tall{% endif %}{% endif %}">
+<figure class="gallery {% if include.gallery[0].type != null %} {{ include.gallery[0].type }}{% else %} {% if include.gallery[0].gridtype %}grid-{{ include.gallery[0].gridtype }}{% else %}grid-tall{% endif %}{% endif %}">
   {% for item in include.gallery %}
     {% if item.src != null %}
       {% capture imgsrc_320 %}/img/travel@320/{{ item.src }}{% endcapture %}
@@ -45,9 +45,9 @@
             about 90% of the time.
           {% endcomment %}
           {% case include.gallery[0].gridtype %}
-            {% when "flex-3" %}
+            {% when "col-3" %}
               30vw
-            {% when "flex-2" or "tall" %}
+            {% when "col-2" or "tall" %}
               40vw
           {% endcase %}
         {% endif %}
@@ -55,18 +55,16 @@
 
       <picture class="photo {% if item.type != null %}{{ item.type }}{% endif %}"
         {% if item.comment %}data-comment="{{ item.comment | escape }}"{% endif %}
-        style="{% if item.bgsize == 'contain' %}background-size: contain;{% endif %}
-               {% if item.bgpos != null %}background-position: {{ item.bgpos }};{% endif %}
-               {% if item.bgpad != null %}padding-bottom: {{ item.bgpad }};{% endif %}
-               {% if item.flex-basis %}flex-basis: {{ item.flex-basis }};{% endif %}">
+        style="{% if item.bgpad != null %}padding-bottom: {{ item.bgpad }};{% endif %}
+               {% if item.width %}width: {{ item.width }};{% endif %}">
 
-        <source srcset="{{ imgsrc_320 }} 320w,
-                        {{ imgsrc_640 }} 640w,
-                        {{ imgsrc_orig }} 1280w"
-                sizes="{{ imgsize_big }},
-                       {{ imgsize_small }}">
-
-        <img alt="{{ item.alt | escape }}">
+        <img alt="{{ item.alt | escape }}"
+          srcset="{{ imgsrc_320 }} 320w,
+                  {{ imgsrc_640 }} 640w,
+                  {{ imgsrc_orig }} 1280w"
+          sizes="{{ imgsize_big }},
+                 {{ imgsize_small }}"
+          style="{% if item.bgpos != null %}object-position: {{ item.bgpos }};{% endif %}">
       </picture>
 
     {% endif %}

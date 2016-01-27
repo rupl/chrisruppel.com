@@ -1,6 +1,11 @@
 //
 // Photo gallery
 //
+$grid-big: 500px;
+
+//
+// Inherit defaults from media
+//
 .gallery {
   @extend .media;
 
@@ -31,7 +36,7 @@
   // Captions on hover/tap
   &[data-comment] {
     &::after {
-      font-size: .66em;
+      font-size: .9em;
       content: attr(data-comment);
       color: white;
       background: rgba(0, 0, 0, .66);
@@ -54,30 +59,22 @@
   }
 }
 
-//
-// LAYOUT: tall
-//
-.tall {
 
-  // all photos
+//
+// LAYOUT PROTO: float. old faithful.
+//
+.grid-float {
   .photo {
     float: left;
     width: 98%;
-    margin-bottom: 4%;
+    padding-bottom: 98%;
     margin-right: 1%;
     margin-left: 1%;
+    margin-bottom: 5%;
 
-    @media (min-width: 500px) {
-      width: 48%;
-      padding-bottom: calc(100% / 3);
+    @media (min-width: $grid-big) {
       margin-bottom: 2%;
     }
-  }
-
-  // special treatment for tall photos
-  .tall {
-    padding-bottom: 103.9%;
-    object-position: 25% 0;
   }
 
   //
@@ -87,78 +84,110 @@
     float: none;
     clear: both;
     width: 98%;
-    object-position: 50% calc(100% / 3);
+    padding-bottom: calc(100% / 3);
+  }
+
+  @media (min-width: $grid-big) {
+    //
+    // half-wide photos
+    //
+    .photo.half {
+      width: 48%;
+    }
+
+    //
+    // 1/3
+    //
+    .photo.one-third {
+      width: calc(100% / 3 - 2%);
+    }
+
+    //
+    // 1/3
+    //
+    .photo.two-third {
+      width: calc(100% / 3 * 2 - 2%);
+    }
+
+    //
+    // tall photos
+    //
+    .photo.tall {
+      padding-bottom: 103.9%;
+    }
   }
 }
 
-//
-// LAYOUT: all flex-box grids
-//
-.grid-flex {
-  display: flex;
-  flex-flow: row wrap;
 
-  .photo {
-    margin: 0 1% 2%;
+//
+// LAYOUT: 2-column
+//
+.grid-col-2 {
+  @extend .grid-float;
 
-    // Be default pictures show up in grid format. This forces linear layout on
-    // smaller screens. It's not mobile-first because I can keep it to only one
-    // !important by doing it this way, and the stuff that supports flexbox is
-    // almost guaranteed to support media queries.
-    @media (max-width: 500px) {
-      flex-basis: 98% !important;
-      padding-bottom: 95%;
+  @media (min-width: $grid-big) {
+    // Set number of cols + height
+    .photo {
+      width: calc(100% / 2 - 2%);
+      padding-bottom: 48%;
     }
   }
 }
 
 //
-// LAYOUT: flex-box 2-col
+// LAYOUT: 2-column with shorter photos.
 //
-.flex-2 {
-  @extend .grid-flex;
+// This is patchwork from when I reverted away from flex-box galleries :{
+// I needed an easy way to provide a 2-col grid but have the photos be wider
+// instead of square.
+//
+.grid-col-2-short {
+  @extend .grid-col-2;
 
-  // Set number of cols + height
-  .photo {
-    flex: 1 0 48%;
-    padding-bottom: 50%;
+  @media (min-width: $grid-big) {
+    .photo {
+      padding-bottom: calc(100% / 3);
+    }
+  }
+}
+
+
+//
+// LAYOUT: 3-column
+//
+.grid-col-3 {
+  @extend .grid-float;
+
+  @media (min-width: $grid-big) {
+    // Set number of cols + height
+    .photo {
+      width: calc(100% / 3 - 2%);
+      padding-bottom: calc(100% / 3);
+    }
+
+    // special treatment for tall photos
+    .tall {
+      width: calc(100% / 3 * 2 - 2%);
+      padding-bottom: 103.9%;
+    }
   }
 }
 
 //
-// LAYOUT: flex-box 3-col
+// LAYOUT: tall
 //
-.flex-3 {
-  @extend .grid-flex;
+.grid-tall {
+  @extend .grid-col-2;
 
-  // Set number of cols + height
-  .photo {
-    flex: 1 0 31%;
-    padding-bottom: 33%;
-  }
-}
-
-//
-// Define some class-based overrides after all default gallery styles.
-// If these styles are declared before the gallery gridtypes, then the
-// default flex-basis for each grid will be set.
-//
-.photo {
-  &.wide { //               N         N
-    flex-basis: calc(100% / 1 - (2% * 1));
-    padding-bottom: calc(100% / 3);
+  @media (min-width: $grid-big) {
+    .photo {
+      width: 48%;
+      padding-bottom: calc(100% / 3);
+    }
   }
 
-  &.half { //               N         N-1 ¯\_(ツ)_/¯
-    flex-basis: calc(100% / 2 - (2% * 1));
-  }
-
-  &.third { //              N         N
-    flex-basis: calc(100% / 3 - (2% * 3));
-  }
-
-  &.fourth { //             N         N
-    flex-basis: calc(100% / 4 - (2% * 4));
-    padding-bottom: 25%;
+  // not inside MQ because it works fine on mobile.
+  .tall {
+    padding-bottom: 160%;
   }
 }
