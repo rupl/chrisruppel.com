@@ -5,19 +5,17 @@
 var gallery = document.querySelectorAll('.gallery .photo');
 var forEach = Array.prototype.forEach;
 
-// Did we find images?
+// Did we find images? If yes, process them immediately.
 if (gallery.length > 0) {
   processGalleryPhotos(gallery)
 }
 
 // Process the gallery photos
+//
+// Uses the result of the responsive images process to display properly-selected
+// background-images in our gallery slots.
 function processGalleryPhotos(photos) {
   forEach.call(photos, function (photo) {
-    if (bigScreen()) {
-      var hiRes = photo.style.backgroundImage.replace('@320', '');
-      photo.style.backgroundImage = hiRes;
-    }
-
     // Attach listeners for image captions
     photo.addEventListener('touchend', function toggleCaptions() {
       removeCaptions();
@@ -26,11 +24,7 @@ function processGalleryPhotos(photos) {
   });
 }
 
-// How big is the screen?
-function bigScreen() {
-  return (window.innerWidth > 640) || false;
-}
-
+// Helper function to close any captions that are currently open.
 function removeCaptions() {
   var captions = document.querySelectorAll('.photo--caption');
   forEach.call(captions, function (photo) {

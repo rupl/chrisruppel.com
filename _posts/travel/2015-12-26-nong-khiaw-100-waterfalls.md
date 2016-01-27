@@ -49,6 +49,7 @@ gallery:
 - src: 100-waterfalls-11.jpg
   alt: Woman with muddy legs carefully walking down a steep path.
   comment: Karin was declared the "winner" of our hike back down, which was quite steep and unfortunately very muddy from the morning rain.
+  type: wide
   bgpad: 55%
   bgpos: 50% 80%
   flex-basis: 64%

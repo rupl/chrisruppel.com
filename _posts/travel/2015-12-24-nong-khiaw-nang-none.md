@@ -4,6 +4,7 @@ location: Nong Khiaw, Laos
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: nang-none-1.jpg
   alt: Woman climbing down sharp rocks.
   comment: Karin scrambles down some sharp rocks near the end of the trail.

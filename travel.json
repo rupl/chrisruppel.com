@@ -6,6 +6,7 @@ layout: null
     {
       "id": "{{ trip.path | replace: '_posts/travel/','' | replace: '.md','' }}",
       "url": "{{ site.url }}{{ trip.url }}",
+      "layout": "{{ trip.layout }}",
       "title": "{{ trip.title | escape }}",
       "location": "{{ trip.location | escape }}",
       "date": "{{ trip.date | escape }}",
@@ -19,7 +20,8 @@ layout: null
       {% endif %}
       "summary": "{{ trip.summary | escape }}",
       "content": "{{ trip.content | escape | strip_newlines }}",
-      "gallery": [{% for photo in trip.gallery %}
+      "gallery-gridtype": "{{ trip.gallery[0].gridtype }}",
+      "gallery": [{% for photo in trip.gallery offset:1 %}
         {
           "type": "{{ photo.type }}",
           "src": "{{ photo.src }}",

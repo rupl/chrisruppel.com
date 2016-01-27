@@ -4,9 +4,11 @@ location: Pai, Thailand
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: sabai-garden-1.jpg
   alt: Painting that reads "Slowly, slowly. Music and friends"
   comment: All the painting at Sabai Garden was done by employees or guests, and we were encouraged to help out if we felt like it! 
+  type: tall
 - src: sabai-garden-3.jpg
   alt: Two people reading at a table.
   comment: Alex and Nilay did homework at this table in the common area. Sometimes :)

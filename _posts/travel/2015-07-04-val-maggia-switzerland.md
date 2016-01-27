@@ -1,12 +1,14 @@
 ---
 title: Camping on the River
-location: "Val Maggia, Switzerland"
+location: Val Maggia, Switzerland
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: val-maggia-1.jpg
   alt: Man overlooking a glacier-fed reservior in the Swiss Alps.
   comment: Fed by glaciers, this reservior was one of many at the top of Val Maggia.
+  type: tall
   bgpos: 70% 0
 - src: val-maggia-2.jpg
   alt: An old church on a winding mountain road.
@@ -22,12 +24,13 @@ gallery:
   alt: A woman sits on the edge of a river.
   comment: Karin overlooks our campsite's river. We couldn't get over how clean and pure the river was.
   type: wide
+  bgpad: 40%
 - src: val-maggia-6.jpg
   alt: A village high in the valley.
   comment: The houses all looked so charming and similar. We later found out by speaking with some locals that the valley has a strict building code to enforce the old, weathered look.
   type: wide
+  bgpad: 40%
   bgpos: 0 60%
 
 summary: We spent the 4th of July in Val Maggia, a stunning valley with superb camping.
 ---
-

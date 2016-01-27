@@ -3,9 +3,11 @@ title: The waterfall
 location: Pai, Thailand
 
 gallery:
+- gridtype: tall
 - src: pai-1.jpg
   alt: A waterfall near sundown.
   comment: This is the part you're supposed to slide down. Look how nice and slide-shaped it is!
+  type: tall
 - src: pai-waterfall-3.jpg
   alt: Three people sitting in a waterfall.
   comment: Lina gets up just moments before the incident. I'm looking back smiling as instructed by Karin.

@@ -4,6 +4,7 @@ location: Chiang Mai, Thailand
 layout: gallery
 
 gallery:
+- gridtype: flex-3
 - src: chiang-mai-p2-1.jpg
   alt: Pedestrian bridge over the old city wall moat in Chiang Mai.
   comment: At many points you can walk over the beautifully decorated pedestrian bridges along the old city wall.

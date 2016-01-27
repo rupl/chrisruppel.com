@@ -1,11 +1,14 @@
 ---
 title: Lion's Head
-location: "Cape Town, South Africa"
+location: Cape Town, South Africa
+layout: gallery
 
 gallery:
+- gridtype: tall
 - src: lions-head-1.jpg
   alt: Colorful rocks on a mountain.
   comment: The colors of the rocks on Lion's Head were so vivid.
+  type: tall
   bgpos: 70% 0
 - src: lions-head-2.jpg
   alt: The ocean, viewed from upon a mountain.
@@ -20,9 +23,7 @@ gallery:
 - src: lions-head-5.jpg
   alt: Man posing at the top of Lion's Head.
   comment: One of my favorite pictures of the trip. It captures the table cloth so well!
-- caption: Lion's Head was quite easy-going compared to India Venster, but it was no less beautiful.
+  type: wide
 
 summary: Lion's Head is an easy hike for people of all skill levels. We easily made the top in about an hour, and we heard it's a good spot for night hiking too.
 ---
-
-{% include gallery.html gallery=page.gallery %}

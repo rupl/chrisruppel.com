@@ -1,11 +1,13 @@
 ---
 title: Visiting Emily
-location: "Paris, France"
+location: Paris, France
+
 photosphere: paris-catacombs.jpg
 
 gallery:
+- gridtype: tall
 - src: paris-with-emily-1.jpg
-  alt: 
+  alt: Building in a square.
   type: tall
   bgpos: 50% 0
 - src: paris-with-emily-2.jpg
@@ -28,6 +30,7 @@ gallery:
 - src: paris-with-emily-7.jpg
   alt: A wall of skulls and bones piled up in an orderly fashion.
   comment: The catacombs were basically 10 blocks undergroud of solid bones and skulls.
+  type: wide
   bgpad: 50%
 
 summary: The first stop on our trip to Asia was actually Paris! My cousin Emily had just moved there and we wanted to get a visit in before leaving for 6 months.

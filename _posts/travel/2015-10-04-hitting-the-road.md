@@ -1,6 +1,6 @@
 ---
 title: Hitting the Road
-location: France
+location: Freiburg, Germany
 layout: quote
 
 quote:

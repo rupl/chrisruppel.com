@@ -6,6 +6,7 @@ map:
   kml: easy-rider-day-3.kml
 
 gallery:
+- gridtype: tall
 - src: easy-riders-day3-1.jpg
   alt: Rubber being extracted from a tree.
   comment: We visited a rubber farm with hundreds of trees. The large cut is made in a helix, then alternated over time to avoid killing the tree.
@@ -26,6 +27,7 @@ gallery:
   bgpad: 50%
 
 gallery2:
+- gridtype: flex-3
 - src: easy-riders-day3-10.jpg
   alt: Mountains with the tops obscured by clouds.
   comment: Another shot while riding, but no rain this time.

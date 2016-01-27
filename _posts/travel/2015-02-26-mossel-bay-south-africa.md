@@ -1,9 +1,9 @@
 ---
 title: Relaxing on the beach
-location: "Mossel Bay, South Africa"
+location: Mossel Bay, South Africa
 
 map:
-  location: "Mossel Bay, South Africa"
+  location: Mossel Bay, South Africa
   zoom: 9
 
 links:
@@ -12,9 +12,11 @@ links:
   type: rest
 
 gallery:
+- gridtype: tall
 - src: mossel-bay-1.jpg
   alt: An apartment view of the beach.
   comment: Our balcony view from Lillies & Leopards
+  type: tall
 - src: mossel-bay-2.jpg
   alt: Slugs feeding on a deceased jellyfish.
   comment: the grossies

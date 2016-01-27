@@ -3,6 +3,7 @@ title: Downtime
 location: Nha Trang, Vietnam
 
 gallery:
+- gridtype: flex-3
 - src: nha-trang-1.jpg
   alt: Sign in english and Russian.
   comment: One of the few signs in english... at a German beer bar.

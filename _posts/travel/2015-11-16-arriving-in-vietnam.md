@@ -4,6 +4,7 @@ location: Ho Chi Minh City, Vietnam
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: ho-chi-minh-1.jpg
   alt: Tangled telecom cables.
   comment: The telecom infrastructure represents the city quite well. I later saw a t-shirt that said "Vietnam Telecom" with a cartoon drawing exactly like this pole.

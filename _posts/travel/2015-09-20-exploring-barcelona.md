@@ -1,9 +1,10 @@
 ---
 title: Exploring Barthelona
-location: "Barcelona, Spain"
+location: Barcelona, Spain
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: exploring-barcelona-1.jpg
   alt: Looking upward at balconies in a narrow alley
   comment: There were so many beautiful, skinny allies in Barcelona.
@@ -22,6 +23,7 @@ gallery:
   comment: There were many beautiful churches in Barcelona.
 - src: exploring-barcelona-7.jpg
   alt: Panoramic of the Mediterranean sea from a stone dock.
+  comment: The Mediterranean Ocean, as Patrick called it.
   type: wide
   bgpad: 25%
   bgpos: 85% 0
@@ -32,4 +34,5 @@ gallery:
 - src: exploring-barcelona-6.jpg
   alt: A hole from a demolished building with graffiti all over it.
 
+summary: We played hooky from the conference and explored the city one day.
 ---

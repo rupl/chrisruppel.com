@@ -1,6 +1,6 @@
 ---
 title: Three Cave Trek
-location: Cave Lodge, Thailand
+location: Soppong, Thailand
 
 photosphere: xmas-cave.jpg
 
@@ -8,9 +8,11 @@ map:
   kml: cave-lodge_three-cave-trek.kml
 
 gallery:
+- gridtype: tall
 - src: three-cave-1.jpg
   alt: Man looking at a large stalagtite formation.
   comment: Our guide, Ang, explains how slowly the stalagtites grow. He said this particular cave was about one centimeter per year.
+  type: tall
 - src: three-cave-2.jpg
   alt: Small stalagtites with water drops on them.
   comment: Small live stalagtites in the process of forming.
@@ -22,6 +24,7 @@ gallery:
   comment: Ang told us to come back in 600 years if we wanted to see the column fully formed.
 
 gallery2:
+- gridtype: flex-3
 - src: three-cave-7.jpg
   alt: Panoramic of green Thai country side.
   comment: Our crew trots along through farm fields and jungle.

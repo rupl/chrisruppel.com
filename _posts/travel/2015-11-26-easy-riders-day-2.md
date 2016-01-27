@@ -6,9 +6,11 @@ map:
   kml: easy-rider-day-2.kml
 
 gallery:
+- gridtype: tall
 - src: easy-riders-day2-1.jpg
   alt: The view from the back of the motorbike as it heads toward mountains.
   comment: My view as I rode behind Bom on the motorbike. Yes, I took photos while the bike was moving.
+  type: tall
 - src: easy-riders-day2-2.jpg
   alt: Happy women smiling and picking coffee beans.
   comment: These ladies saw us and immediately started laughing and shouting. Ut told us that they love getting their picture taken!
@@ -29,6 +31,7 @@ gallery:
   type: wide
 
 gallery2:
+- gridtype: tall
 - src: easy-riders-day2-9.jpg
   alt: Man skewering a whole chicken over a fire.
   comment: After Ut killed and cleaned the chicken, Bom put it on a spit to cook.

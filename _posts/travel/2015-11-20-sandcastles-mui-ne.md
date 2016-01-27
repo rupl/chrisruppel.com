@@ -4,9 +4,11 @@ location: Mui Ne, Vietnam
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: longson-sandcastle-1.jpg
   alt: Crab-clown-shark building a sandcastle
   comment: Hayden and Yazmine made a clown-crab-shark that was in turn building his own sandcastle.
+  type: tall
 - src: longson-sandcastle-2.jpg
   alt: Crab castle.
   comment: Another group made a crab-shaped castle and luckily improvised a sturdy seawall then the tide rolled in during our competition.

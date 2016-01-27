@@ -3,6 +3,7 @@ title: Mr. Christopher
 location: Pai, Thailand
 
 gallery:
+- gridtype: flex-3
 - src: mr-christopher-1.jpg
   alt: Thai medical form with the name "Mr. Christopher" written.
   comment: That's MISTER Christopher to you, buddy!

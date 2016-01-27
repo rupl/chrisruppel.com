@@ -4,6 +4,7 @@ location: Muang Khua, Laos
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: muang-khua-market-1.jpg
   alt: Chile peppers and rice noodles for sale on a table.
   comment: Chiles, chiles everywhere!

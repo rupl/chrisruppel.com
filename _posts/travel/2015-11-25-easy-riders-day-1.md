@@ -6,6 +6,7 @@ map:
   kml: easy-rider-day-1.kml
 
 gallery:
+- gridtype: tall
 - src: easy-riders-day1-1.jpg
   alt: Coffee beans ready for harvest.
   comment: Arabica coffee beans ready for harvest. There are three major types of beans grown in Vietnam — Arabica, Cherry, and Robusta
@@ -39,6 +40,7 @@ gallery:
 - caption: Day 1 of Easy Riders tour with Ut and Bom. <a href="http://www.easyrider-tours.com">Book with Dalat Easy Riders</a>.
 
 gallery2:
+- gridtype: flex-2
 - src: easy-riders-day1-11.jpg
   alt: People riding a hand-pulled boat across a river.
   comment: We just rode right onto these boats and got ferried across the river like it was nothing.

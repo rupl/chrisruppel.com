@@ -1,12 +1,14 @@
 ---
 title: Mussels in Brussels
-location: "Brussels, Belgium"
+location: Brussels, Belgium
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: brussels-1.jpg
   alt: A street in Belgium at dusk
   comment: The night comes alive.
+  type: tall
 - src: brussels-2.jpg
   alt: A glass of beer.
   comment: Moeder Lambic, one of the two best bars in Brussels.

@@ -4,9 +4,11 @@ location: Pai, Thailand
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: pai-cooking-1.jpg
   alt: Raw ingredients for red curry.
   comment: Step 1 — gather ingredients at the market.
+  type: tall
 - src: pai-cooking-2.jpg
   alt: Chopped ingredients for red curry.
   comment: Step 2 — finely chop all of it.
@@ -28,7 +30,7 @@ gallery:
   type: wide
 - src: pai-cooking-8.jpg
   alt: Three people smiling for camera.
-  comment: Our group photo of the cooking class, with Mikaela from CA.
+  comment: Our group photo of the cooking class, with Mikaela from CA. Should we be on TV or what?
   type: wide
 
 summary: Once of the only things we'd planned for Pai was a cooking class. We picked a good one including a trip to the market, and had lots of fun making common Thai dishes from scratch.

@@ -1,9 +1,10 @@
 ---
 title: Parc Güell
-location: "Barcelona, Spain"
+location: Barcelona, Spain
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: park-guell-1.jpg
   alt: Escalators leading to Parc Güell from the southwest.
   type: tall
@@ -23,6 +24,7 @@ gallery:
   bgpos: 0 40%
 - src: park-guell-5.jpg
   alt: A panoramic of Barcelona from Parc Güell
+  type: wide
 
 summary: Parc Güell is an expansive, hilly park in the middle of town offering great views of the city and fun experiences with musicians of all types.
 ---

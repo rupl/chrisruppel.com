@@ -1,14 +1,16 @@
 ---
 title: Big Knob
-location: Cave Lodge, Thailand
+location: Soppong, Thailand
 
 map:
   kml: cave-lodge_big-knob.kml
 
 gallery:
+- gridtype: tall
 - src: big-knob-1.jpg
   alt: Woman sitting on mountaintop.
   comment: Maggie soaking in the sun at the top of Big Knob.
+  type: tall
 - src: big-knob-2.jpg
   alt: Hand-drawn map of Cave Lodge area.
   comment: Like a treasure map from childhood, this was our guide (along with about 4 sentences of cues for the trail). Except X marks the beginning on this map!
@@ -27,7 +29,7 @@ gallery:
   comment: From the left, Mira, Mary, Maggie, Karin as we make our way back down.
 - src: big-knob-7.jpg
   alt: Panoramic view of many small pointy mountains covered in trees.
-  comment: Our Prize!
+  comment: Our Prize! A spectacular view of the valley where Cave Lodge is located.
   type: wide
 
 summary: Our first activity at Cave Lodge was an easy local spot called Big Knob. It's a short hike, no guide needed, and it can be done in about two hours.

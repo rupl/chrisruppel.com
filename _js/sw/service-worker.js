@@ -66,7 +66,7 @@ self.addEventListener('activate', function(event) {
           if (expectedCacheNames.indexOf(cacheName) == -1) {
             // If this cache name isn't present in the array of "expected"
             // cache names, then delete it.
-            console.info('Deleting old cache: ' + cacheName);
+            console.info('Service Worker: deleting old cache: ' + cacheName);
             return caches.delete(cacheName);
           }
         })
@@ -96,6 +96,8 @@ self.addEventListener('fetch', function(event) {
     event.request.method === 'GET' &&
     SW.offline_assets.indexOf(reqPath) === -1
   ) {
+    // If the above conditional is met, the user loaded a URL that is not in our
+    // SW cache, so just return the Offline content.
     event.respondWith(
       fetch(event.request).catch(function(error) {
         return caches.open(SW.cache_version).then(function(cache) {
@@ -119,10 +121,9 @@ self.addEventListener('fetch', function(event) {
   // Uncaught
   //
   // This request fell through all our conditions and is being ignored by SW.
-  else {
-    console.info('Fetch listener ignored ' + reqPath);
-  }
-
+  // else {
+  //   console.info('Fetch listener ignored ' + reqPath);
+  // }
 });
 
 // Helper function to handle Fetch listener.

@@ -1,11 +1,13 @@
 ---
 title: Cave Lodge
-location: Pang Mapha, Thailand
+location: Soppong, Thailand
 
 gallery:
+- gridtype: tall
 - src: cave-lodge-1.jpg
   alt: Table and tree leaves lit by sunlight.
   comment: The view from one of the tables at the main building.
+  type: tall
 - src: cave-lodge-2.jpg
   alt: Wooden treehouses connected by bridges.
   comment: Overlooking the greenery from the main lodge building.

@@ -1,11 +1,13 @@
 ---
 title: Visiting Karin
-location: "Santiago de Chile"
+location: Santiago de Chile
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: santiago-1.jpg
   alt: A statue on a city street.
+  type: tall
   bgpos: 30% 0
 - src: santiago-2.jpg
   alt: A city square with buildings in the background.

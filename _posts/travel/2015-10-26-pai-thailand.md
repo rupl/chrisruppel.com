@@ -4,9 +4,11 @@ location: Pai, Thailand
 layout: gallery
 
 gallery:
+- gridtype: tall
 - src: pai-1.jpg
   alt: A waterfall near sundown.
   comment: We went to Mo Paeng on our first afternoon.
+  type: tall
 - src: pai-2.jpg
   alt: Afternoon rain falling on a field with sunbeams in the sky.
   comment: I read a book and listened to the rain one afternoon.
@@ -28,6 +30,5 @@ gallery:
   type: wide
   bgpad: 50%
 
-summary: After our adventures at Cave Lodge we stopped in Pai to just relax a bit. It's a small town with very active markets and other signs of tourism. But it has lots of nice, quiet spots outside the town to relax.
+summary: After our adventures at Cave Lodge we stopped in Pai to just relax a bit. It's a small town with bustling tourism and a great vibe.
 ---
-
