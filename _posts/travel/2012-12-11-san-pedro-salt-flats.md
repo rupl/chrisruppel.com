@@ -4,7 +4,7 @@ location: San Pedro de Atacama, Chile
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: salt-flats-1.jpg
   alt: A sinkhole in the middle of a desert.
   comment: Ojos del Salar, the Eyes of the Salt Flat. It's fresh water as opposed to the salt water found nearby.

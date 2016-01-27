@@ -4,7 +4,7 @@ location: Bangkok, Thailand
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: bangkok-p2-1.jpg
   alt: Opening credits for Star Wars The Force Awakens.
   comment: Finally! We managed to catch Star Wars while in Bangkok.

@@ -3,7 +3,7 @@ title: Setting the table
 location: Cape Town, South Africa
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: table-mountain-1.jpg
   alt: People hiking a vast mountainside.
   comment: Enjoying the views of India Venster.
@@ -30,7 +30,6 @@ gallery2:
   alt: Facing the Indian ocean from the top of Table Mountain.
   comment: After a long hike we were rewarded with this spectacular view of the Indian Ocean.
   type: wide
-  bgsize: contain
 - src: table-mountain-7.jpg
   alt: Happy couple posing in front of Lion's Head from the top of Table Mountain.
   type: wide

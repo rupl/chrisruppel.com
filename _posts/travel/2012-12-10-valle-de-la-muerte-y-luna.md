@@ -3,7 +3,7 @@ title: Valle de la Muerte y Luna
 location: San Pedro de Atacama, Chile
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: valle-de-la-muerte-1.jpg
   alt: A panoramic view of Valle de la Muerte.
   comment: No matter what you want to call it, this valley was both Mars-like and very unforgiving towards life.
@@ -28,7 +28,7 @@ gallery:
   type: half
 
 gallery2:
-- gridtype: flex-3
+- gridtype: col-3
 - src: valle-de-la-luna-1.jpg
   alt: Valle de la Luna in the afternoon.
   comment: One of the most recognizable landmarks of the valley.

@@ -24,7 +24,7 @@ gallery:
   comment: Ang told us to come back in 600 years if we wanted to see the column fully formed.
 
 gallery2:
-- gridtype: flex-3
+- gridtype: col-3
 - src: three-cave-7.jpg
   alt: Panoramic of green Thai country side.
   comment: Our crew trots along through farm fields and jungle.

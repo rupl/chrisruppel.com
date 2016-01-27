@@ -4,7 +4,7 @@ location: Singapore
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: singapore-1.jpg
   alt: Woman making ice cream with liquid nitrogen.
   comment: We wandered through a mall to escape the hot, humid night air and found a delicious futuristic treat — ice cream made with liquid nitrogen!

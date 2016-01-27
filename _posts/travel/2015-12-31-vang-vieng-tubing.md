@@ -4,7 +4,7 @@ location: Vang Vieng, Laos
 layout: gallery
 
 gallery:
-- gridtype: flex-2
+- gridtype: col-2
 - src: vang-vieng-tubing-1.jpg
   alt: People posing for camera.
   comment: Group photo!

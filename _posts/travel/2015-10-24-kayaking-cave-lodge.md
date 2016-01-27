@@ -4,7 +4,7 @@ location: Soppong, Thailand
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: cave-lodge-kayaking-1.jpg
   alt: First-person view of river rapids.
   comment: Day 1 — Lisanne goes down the rapids!

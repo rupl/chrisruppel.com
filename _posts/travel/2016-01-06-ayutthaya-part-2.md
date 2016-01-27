@@ -4,7 +4,7 @@ location: Ayutthaya, Thailand
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: ayutthaya-p2-1.jpg
   alt: An empty third-class train car from Bangkok to Ayutthaya.
   comment: Our night train actually stopped in Ayutthaya but we slept through the connection. But we caught an early train to Ayutthaya so it was pretty empty.

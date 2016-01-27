@@ -4,7 +4,7 @@ location: Mendoza, Argentina
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: mendoza-1.jpg
   alt: A fountain with pink water.
   comment: I think this has to do with wine, but the fountains were all pink when we walked around on this day.

@@ -3,7 +3,7 @@ title: Snorkeling
 location: Gili Air, Indonesia
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: gili-air-snorkeling-1.jpg
   alt: A sea worm creature.
   comment: ...and the 2016 Award for Grossest Thing Ever goes to... sea worm!

@@ -30,7 +30,7 @@ gallery:
   bgpos: 0 35%
 
 gallery2:
-- gridtype: flex-3
+- gridtype: col-3
 - src: freiburg-8.jpg
   alt: A group of friends in a bar.
   comment: Me, Steph, and Morten enjoying Freiburg night life.

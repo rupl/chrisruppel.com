@@ -4,7 +4,7 @@ location: Padang Bay, Bali
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: bali-padang-wsb-1.jpg
   alt: Panoramic shot of White Sand Beach in Padang Bay, Bali.
   comment: The establishing shot.

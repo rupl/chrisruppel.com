@@ -4,7 +4,7 @@ location: Versailles, France
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: versailles-1.jpg
   alt: A chapel lined with gold.
   comment: The chapel built by Louis XIV. You would not guess from this photo that I was surrounded by a dozen people also taking photos.

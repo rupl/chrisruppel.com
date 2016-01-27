@@ -3,7 +3,7 @@ title: Arriving
 location: Bangkok, Thailand
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: arriving-bangkok-1.jpg
   alt: Apartments along the Chao Phraya river.
   comment: We saw many apartments like these while taking the Chao Phraya Express Boat.

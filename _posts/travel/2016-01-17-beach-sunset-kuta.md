@@ -4,7 +4,7 @@ location: Kuta, Bali
 layout: gallery
 
 gallery:
-- gridtype: flex-2
+- gridtype: col-2
 - src: bali-kuta-beach-1.jpg
   alt: Surf boats anchored and unused.
   comment: Surf boats waiting for customers to hire them.

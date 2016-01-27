@@ -4,7 +4,7 @@ location: Luang Prabang, Laos
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: luang-prabang-grill-1.jpg
   alt: Refridgerator full of uncooked kebap.
   comment: A fridge full of various items ready to be grilled.
@@ -19,9 +19,11 @@ gallery:
 - src: luang-prabang-grill-4.jpg
   alt: Grilled skewers of food.
   comment: The final product.. That is, one of our three trays!
+  type: half
 - src: luang-prabang-grill-5.jpg
   alt: Empty, used skewers on a tray.
   comment: We ate a few things.
+  type: half
 - src: luang-prabang-grill-6.jpg
   alt: Men grilling skewers of food.
   comment: The awesome cooks. They were laughing because I was so overjoyed by the concept and outcome of our meal.

@@ -27,7 +27,7 @@ gallery:
   bgpad: 50%
 
 gallery2:
-- gridtype: flex-3
+- gridtype: col-3
 - src: easy-riders-day3-10.jpg
   alt: Mountains with the tops obscured by clouds.
   comment: Another shot while riding, but no rain this time.

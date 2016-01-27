@@ -7,7 +7,7 @@ map:
   style: mapbox.satellite
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: cat-ba-kayaking-1.jpg
   alt: Woman paddling in a kayak.
   comment: Karin paddles along as we head out to sea.
@@ -25,9 +25,11 @@ gallery:
 - src: cat-ba-kayaking-5.jpg
   alt: Wide shot of fishing village.
   comment: We very carefully paddled through a bustling fishing village. Many people waved and greeted us as they went about their day.
+  type: half
 - src: cat-ba-kayaking-6.jpg
   alt: View of Cat Ba Harbor from higher ground.
   comment: As we walked home we got to see where we'd just kayaked from higher and higher ground. What a treat!
+  type: half
 - src: cat-ba-kayaking-7.jpg
   alt: Woman kayaking in ocean.
   comment: Our view as we paddled back to the harbor.

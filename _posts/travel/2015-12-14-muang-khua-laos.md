@@ -29,7 +29,7 @@ gallery:
   type: wide
 
 gallery2:
-- gridtype: flex-3
+- gridtype: col-3
 - src: muang-khua-8.jpg
   alt: People singing karaoke
   comment: Karin sings along to Lao karaoke.

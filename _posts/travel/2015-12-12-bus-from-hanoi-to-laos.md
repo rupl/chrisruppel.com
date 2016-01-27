@@ -3,7 +3,7 @@ title: Bus to Laos
 location: Hanoi, Vietnam
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: bus-to-laos-1.jpg
   alt: A wall of baggage.
   comment: We were told to sit in the back, which we figured out is clearly the worst row since stuff kept falling on us during the bumpy ride.
@@ -12,7 +12,7 @@ gallery:
 - caption: Our bus was pretty darn packed — backpacks, postal packages, bags of feed made from fish, barbed wire, boxes of fruit, and one pissed off rooster trapped in a box... all bouncing around and constantly shifting.
 
 gallery2:
-- gridtype: flex-3
+- gridtype: col-3
 - src: bus-to-laos-2.jpg
   alt: Small snippet of text from Lonely Planet
   comment: "If you're arriving by bus from Dien Bien Phu, please relax. This is Laos."

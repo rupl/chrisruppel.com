@@ -4,7 +4,7 @@ location: Hoi An, Vietnam
 layout: gallery
 
 gallery:
-- gridtype: flex-2
+- gridtype: col-2
 - src: hoi-an-1.jpg
   alt: Dozens of lit lanterns at the night market in Hoi An.
   comment: There were tons of stands with these lanterns but this place was one of the biggest.

@@ -3,7 +3,7 @@ title: 100 Waterfalls
 location: Nong Khiaw, Laos
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: 100-waterfalls-1.jpg
   alt: Rainy dock with boats around it.
   comment: Our day started pretty rainy. The sky dumped 5cm of rain in about 40 minutes so our hopes were not high to start with.
@@ -40,19 +40,18 @@ gallery:
   alt: People overlooking a steep waterfall.
   comment: As we approached the top, we could see our prize, a beautiful tall waterfall.
   type: half
-  flex-basis: 50%
+  bgpad: 70%
 - src: 100-waterfalls-12.jpg
   alt: Couple posing in front of a waterfall.
   comment: We got to the top, and our hike ended with this spectacular large waterfall! It was a great backdrop for our victory photos.
-  bgpad: 70%
   type: half
+  bgpad: 70%
 - src: 100-waterfalls-11.jpg
   alt: Woman with muddy legs carefully walking down a steep path.
   comment: Karin was declared the "winner" of our hike back down, which was quite steep and unfortunately very muddy from the morning rain.
   type: wide
   bgpad: 55%
   bgpos: 50% 80%
-  flex-basis: 64%
 
 summary: We took a tour to the 100 Waterfalls. It was a moderate hike with a beautiful reward&#58; seemingly endless cascades of springs and waterfalls.
 ---

@@ -3,7 +3,7 @@ title: Balangan Beach
 location: Kuta, Bali
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: bali-balangan-1.jpg
   alt: A white sand beach photographed from above.
   comment: As we walked up we knew we'd done ourselves a favor.

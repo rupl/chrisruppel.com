@@ -4,7 +4,7 @@ location: Salta, Argentina
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: bus-to-sanpedro-1.jpg
   alt: Cumulus clouds hovering over a mountain made of red rock.
   type: wide

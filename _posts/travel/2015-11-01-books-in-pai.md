@@ -3,7 +3,7 @@ title: Books
 location: Pai, Thailand
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: pai-books-1.jpg
   alt: First-person view of man reading book in hammock with a bandaged leg.
   comment: My last week in one picture. Not terrible, I have to admit.

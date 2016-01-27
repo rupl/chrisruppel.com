@@ -4,7 +4,7 @@ location: Addo Elephant National Park
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: amakhala-1.jpg
   alt: Viewing the wilderness from a land rover.
   comment: Our view as we drove throughout the park.

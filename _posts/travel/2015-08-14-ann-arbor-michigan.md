@@ -3,7 +3,7 @@ title: Visiting Friends
 location: Ann Arbor, Michigan
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: ann-arbor-1.jpg
   alt: Picture of friends canoeing on a river.
   comment: A pelfie of the five of us. We stopped under a bridge to escape the sun for a while. From left to right — Karin, Jordan, Eric, Annette, Chris.

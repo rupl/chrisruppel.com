@@ -4,7 +4,7 @@ location: Chiang Mai, Thailand
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: chiang-mai-1.jpg
   alt: Long, steep stairs lined with ceramic in the style of dragon scales.
   comment: These stairs lead up to Wat Phrathat Doi Suthep.

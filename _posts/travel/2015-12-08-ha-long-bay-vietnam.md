@@ -4,7 +4,7 @@ location: Ha Long Bay, Vietnam
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: ha-long-bay-1.jpg
   alt: A panoramic of several connected mountains in Ha Long Bay.
   comment: Typical scenery in Ha Long Bay.

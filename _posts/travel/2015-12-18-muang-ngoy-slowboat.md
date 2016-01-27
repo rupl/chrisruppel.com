@@ -4,14 +4,15 @@ location: Muang Khua, Laos
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: muang-ngoy-slowboat-1.jpg
   alt: Sign with slow boat instructions.
   comment: The local slow boat schedule.
-  type: tall
+  type: half
 - src: muang-ngoy-slowboat-2.jpg
   alt: Slow boats docked along a river.
   comment: The "harbor" in Muang Khua.
+  type: half
 - src: muang-ngoy-slowboat-3.jpg
   alt: A large houseboat on the Ou River.
   comment: We don't know what these houseboats did, but they were constantly churning out water on one end.
@@ -31,19 +32,22 @@ gallery:
   comment: Checking out the scenery as we zoom along the river.
   type: wide
   bgpad: 45%
-- src: muang-ngoy-slowboat-8.jpg
-  alt: Rocks with water lines on them.
-  comment: The Chinese have started damming up the rivers that feed Laos, Thailand, and Myanmar. The water level is visibly affected. Word has it that these boat rides won't be possible in about ten years :(
-  flex-basis: 64%
 - src: muang-ngoy-slowboat-9.jpg
   alt: Trees growing along the river.
   comment: The vegetation, almost 100% green, was stunning. Barely a flower in sight, but so many varieties of trees.
+  type: one-third
+- src: muang-ngoy-slowboat-8.jpg
+  alt: Rocks with water lines on them.
+  comment: The Chinese have started damming up the rivers that feed Laos, Thailand, and Myanmar. The water level is visibly affected. Word has it that these boat rides won't be possible in about ten years :(
+  type: two-third
 - src: muang-ngoy-slowboat-10.jpg
   alt: Trees growing on a rock wall.
   comment: These trees sprung up from moss growing on the cliff.
+  type: two-third
 - src: muang-ngoy-slowboat-11.jpg
   alt: Misty mountain tops.
   comment: The whole day the mountains were covered in fog.
+  type: one-third
 - src: muang-ngoy-slowboat-12.jpg
   alt: Pamoramic view of the Muang Ngoy dock.
   comment: Finally! We made it to Muang Ngoy.

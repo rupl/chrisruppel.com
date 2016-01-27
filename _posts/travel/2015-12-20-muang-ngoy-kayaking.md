@@ -4,14 +4,15 @@ location: Muang Ngoy, Laos
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-2-short
 - src: muang-ngoy-kayak-1.jpg
   alt: People kayaking near a tree-covered mountain.
   comment: Karin and I kayak by a tree-covered mountain. This was our scenery for the day.
-  flex-basis: 60%
+  width: 64%
 - src: muang-ngoy-kayak-2.jpg
   alt: Photo of woman kayaking from behind.
   comment: Karin paddles while I take a few shots as we leave Muang Ngoy.
+  width: 32%
   bgpos: 100% 50%
 - src: muang-ngoy-kayak-3.jpg
   alt: Wide shot of kayak in front of hills.

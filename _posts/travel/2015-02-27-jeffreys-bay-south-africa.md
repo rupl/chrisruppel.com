@@ -4,7 +4,7 @@ location: "Jeffreys Bay, South Africa"
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: jeffreys-bay-1.jpg
   alt: Panoramic photo of the beach.
   type: wide

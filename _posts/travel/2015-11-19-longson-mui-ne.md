@@ -4,7 +4,7 @@ location: Mui Ne, Vietnam
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: longson-mui-ne-1.jpg
   alt: Long exposure of a lightning storm at night on the beach.
   comment: We were treated to several nights of lightning storms while staying here. Not a single drop of rain thanks to a neat microclimate created by two nearby sand dunes that push hot air over us at night.

@@ -4,7 +4,7 @@ location: Bali, Indonesia
 layout: gallery
 
 gallery:
-- gridtype: flex-3
+- gridtype: col-3
 - src: tirta-gangga-1.jpg
   alt: Sunrise from a building on a hill over a town.
   comment: This is not the temple, but the roosters had me up early in the morning so I caught the sunrise off our balcony in Padang Bay. Not too shabby.
