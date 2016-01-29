@@ -4,15 +4,18 @@ meta: true
 comments: true
 ---
 
-<article class="trip">
+<article class="trip h-entry">
   <header>
-    <h1 class="title">{{ page.title }}</h1>
-    <h2 class="subtitle"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %d, %Y" }}</time> {% if page.location %}in {{ page.location }}{% endif %}</h2>
+    <h1 class="title p-name">{{ page.title }}</h1>
+    <h2 class="subtitle">
+      <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %d, %Y" }}</time>
+      {% if page.location %}<span class="where">in <span class="p-location">{{ page.location }}</span></span>{% endif %}
+    </h2>
   </header>
 
-  <aside class="intro summary">{{ page.summary }}</aside>
+  <aside class="intro summary p-summary">{{ page.summary }}</aside>
 
-  <div class="story">
+  <div class="story e-content">
     {{ content }}
     <div class="the-end" aria-label="The End."></div>
   </div>
