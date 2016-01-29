@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }}{% if page.location %} in {{ page.location }}{% endif %}{% if page.title != null %} 🌏 {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="author" href="{{ site.url }}">
+    <link rel="home" href="{{ site.url }}">
 
     <!-- indieweb sign-in -->
     <link rel="me" href="https://twitter.com/rupl">
@@ -58,13 +58,13 @@
       document.documentElement.classList.add('js');
     </script>
   </head>
-  <body>
+  <body class="h-card vcard">
     <main>
       {{ content }}
     </main>
     <footer role="contentinfo">
       <p class="colophon">
-        &#169; {{ 'now' | date: '%Y' }} Chris Ruppel.
+        &#169; {{ 'now' | date: '%Y' }} <a class="p-name fn u-url" href="{{ site.url }}">Chris Ruppel</a>.
         <a href="/about/">About</a>
       </p>
     </footer>
