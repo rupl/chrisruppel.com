@@ -71,4 +71,28 @@
       transform: translateX(-50%) translateY(-50%);
     }
   }
+
+  // IndieWeb metadata
+  .trip-meta {
+    margin-top: 1em;
+
+    label {
+      font-size: 1em;
+    }
+
+    .uid {
+      width: calc(100% - 3em);
+      font-size: .9em;
+      font-family: monospace;
+      letter-spacing: -.75px;
+      color: #555;
+      background: #f9f9f9;
+      border: 1px solid #f4f4f4;
+
+      &:focus {
+        background: #eee;
+        border-color: #e9e9e9;
+      }
+    }
+  }
 }
