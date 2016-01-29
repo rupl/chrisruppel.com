@@ -49,6 +49,10 @@ $grid-big: 500px;
       padding: 1em;
       transform: translateY(100%);
       transition: transform .33333s ease-in-out;
+
+      @media (min-width: $grid-big) {
+        font-size: .7em;
+      }
     }
 
     // Display comment on hover or when photo is selected
