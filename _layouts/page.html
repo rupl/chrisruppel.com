@@ -15,29 +15,31 @@
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="Chris' Travels" href="{{ site.url }}/travel.xml">
 
+    <!-- Performance related tags -->
     <link rel="preload" href="/css/fonts.min.css" as="style">
     <link rel="preconnect" href="https://www.google-analytics.com">
-    {% if page.comments %}
+  {% if page.comments %}
     <link rel="preconnect" href="https://a.disquscdn.com" crossorigin>
     <link rel="preconnect" href="https://rupl.disqus.com">
-    {% endif %}
+  {% endif %}
 
-    {% if page.meta != null %}
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:site" content="@rupl">
-      <meta name="twitter:creator" content="@rupl">
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-      <meta property="og:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
-      <meta property="og:description" content="{{ page.summary | escape }}">
-      <meta property="og:image" content="{{ site.url }}/img/travel/{% if page.gallery[0].src %}{{ page.gallery[0].src }}{% else %}{{ page.gallery[1].src }}{% endif %}">
-    {% endif %}
+  {% if page.meta != null %}
+    <!-- Social tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rupl">
+    <meta name="twitter:creator" content="@rupl">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
+    <meta property="og:description" content="{{ page.summary | escape }}">
+    <meta property="og:image" content="{{ site.url }}/img/travel/{% if page.gallery[0].src %}{{ page.gallery[0].src }}{% else %}{{ page.gallery[1].src }}{% endif %}">
+  {% endif %}
 
-    {% if site.development == false %}
-      <style type="text/css">{% include main.min.css %}</style>
-    {% else %}
-      <link rel="stylesheet" href="/css/main.min.css" type="text/css">
-    {% endif %}
+  {% if site.development == false %}
+    <style type="text/css">{% include main.min.css %}</style>
+  {% else %}
+    <link rel="stylesheet" href="/css/main.min.css" type="text/css">
+  {% endif %}
 
     <script>
       // loadCSS [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT.
