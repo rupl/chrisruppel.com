@@ -6,7 +6,7 @@ location:
 layout: gallery
 
 links:
-- href: https://www.facebook.com/GoodTimes-Bungalow-1651173448484045/
+- href: http://www.tripadvisor.com/Hotel_Review-g664667-d9770221-Reviews-Goodtimes_Bungalows-Gili_Air_Gili_Islands_Lombok_West_Nusa_Tenggara.html
   text: Goodtimes Bungalows
   type: rest
 - href: http://www.tripadvisor.com/ShowUserReviews-g664667-d7654013-r251727701-Warung_Bambu_Gili_Air-Gili_Air_Gili_Islands_Lombok_West_Nusa_Tenggara.html
