@@ -1,6 +1,8 @@
 ---
 title: J-Bay
-location: "Jeffreys Bay, South Africa"
+location:
+  locality: Jeffreys Bay
+  country: South Africa
 layout: gallery
 
 gallery:

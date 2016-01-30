@@ -1,6 +1,8 @@
 ---
 title: Camping on the River
-location: Val Maggia, Switzerland
+location:
+  locality: Val Maggia
+  country: Switzerland
 layout: gallery
 
 gallery:

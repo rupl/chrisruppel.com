@@ -1,6 +1,8 @@
 ---
 title: Valle de la Muerte y Luna
-location: San Pedro de Atacama, Chile
+location:
+  locality: San Pedro de Atacama
+  country: Chile
 
 gallery:
 - gridtype: col-3

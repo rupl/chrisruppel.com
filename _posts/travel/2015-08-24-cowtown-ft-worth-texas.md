@@ -1,6 +1,8 @@
 ---
 title: Cowtown
-location: Fort Worth, Texas
+location:
+  locality: Fort Worth
+  region: Texas
 layout: gallery
 
 gallery:

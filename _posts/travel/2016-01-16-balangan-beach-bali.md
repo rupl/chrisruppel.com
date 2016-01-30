@@ -1,6 +1,8 @@
 ---
 title: Balangan Beach
-location: Kuta, Bali
+location:
+  locality: Kuta
+  region: Bali
 
 gallery:
 - gridtype: col-3

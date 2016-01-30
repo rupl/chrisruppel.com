@@ -1,6 +1,8 @@
 ---
 title: Sunrise tour
-location: Mui Ne, Vietnam
+location:
+  locality: Mui Ne
+  country: Vietnam
 layout: gallery
 
 gallery:

@@ -1,6 +1,8 @@
 ---
 title: Back again
-location: Bangkok, Thailand
+location:
+  locality: Bangkok
+  country: Thailand
 layout: gallery
 
 gallery:

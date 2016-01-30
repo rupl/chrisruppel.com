@@ -1,6 +1,8 @@
 ---
 title: Markets
-location: Muang Khua, Laos
+location:
+  locality: Muang Khua
+  country: Laos
 layout: gallery
 
 gallery:

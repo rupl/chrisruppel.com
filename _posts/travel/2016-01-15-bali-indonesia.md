@@ -1,6 +1,8 @@
 ---
 title: Beach time
-location: Bali, Indonesia
+location:
+  region: Bali
+  country: Indonesia
 layout: gallery
 
 gallery:

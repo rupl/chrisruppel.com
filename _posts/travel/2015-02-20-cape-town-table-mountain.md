@@ -1,6 +1,8 @@
 ---
 title: Setting the table
-location: Cape Town, South Africa
+location:
+  locality: Cape Town
+  country: South Africa
 
 gallery:
 - gridtype: col-3

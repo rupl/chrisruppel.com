@@ -1,6 +1,7 @@
 ---
 title: Long layover
-location: Singapore
+location:
+  country: Singapore
 layout: gallery
 
 gallery:

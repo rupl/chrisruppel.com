@@ -1,6 +1,6 @@
 ---
 title: Three Cave Trek
-location: Soppong, Thailand
+location: Cave Lodge
 
 photosphere: xmas-cave.jpg
 

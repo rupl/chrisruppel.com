@@ -1,6 +1,8 @@
 ---
 title: Ayothaya Riverside House
-location: Ayutthaya, Thailand
+location:
+  locality: Ayutthaya
+  country: Thailand
 
 gallery:
 - gridtype: tall

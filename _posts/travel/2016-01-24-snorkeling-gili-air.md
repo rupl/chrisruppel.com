@@ -1,6 +1,8 @@
 ---
 title: Snorkeling
-location: Gili Air, Indonesia
+location:
+  locality: Gili Air
+  country: Indonesia
 
 gallery:
 - gridtype: col-3

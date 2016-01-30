@@ -1,6 +1,8 @@
 ---
 title: 100 Waterfalls
-location: Nong Khiaw, Laos
+location:
+  locality: Nong Khiaw
+  country: Laos
 
 gallery:
 - gridtype: col-3

@@ -1,6 +1,8 @@
 ---
 title: Dalat Easy Riders Day 2
-location: Lak Lake, Vietnam
+location:
+  locality: Lak Lake
+  country: Vietnam
 
 map:
   kml: easy-rider-day-2.kml

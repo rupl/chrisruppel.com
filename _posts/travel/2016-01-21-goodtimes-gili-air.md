@@ -1,6 +1,8 @@
 ---
 title: Good times
-location: Gili Air, Indonesia
+location:
+  locality: Gili Air
+  country: Indonesia
 layout: gallery
 
 links:

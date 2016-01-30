@@ -1,6 +1,8 @@
 ---
 title: Tubing
-location: Vang Vieng, Laos
+location:
+  locality: Vang Vieng
+  country: Laos
 layout: gallery
 
 gallery:

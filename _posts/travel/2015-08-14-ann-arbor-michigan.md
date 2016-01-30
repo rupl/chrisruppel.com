@@ -1,6 +1,8 @@
 ---
 title: Visiting Friends
-location: Ann Arbor, Michigan
+location:
+  locality: Ann Arbor
+  region: Michigan
 
 gallery:
 - gridtype: col-3

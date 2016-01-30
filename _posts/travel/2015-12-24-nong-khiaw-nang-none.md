@@ -1,6 +1,8 @@
 ---
 title: Nang None viewpoint
-location: Nong Khiaw, Laos
+location:
+  locality: Nong Khiaw
+  country: Laos
 layout: gallery
 
 gallery:

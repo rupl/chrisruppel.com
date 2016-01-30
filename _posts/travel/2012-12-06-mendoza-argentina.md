@@ -1,6 +1,8 @@
 ---
 title: Don't cry for me
-location: Mendoza, Argentina
+location:
+  locality: Mendoza
+  country: Argentina
 layout: gallery
 
 gallery:

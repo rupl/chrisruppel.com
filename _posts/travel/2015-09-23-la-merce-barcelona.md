@@ -1,6 +1,8 @@
 ---
 title: La Mercè
-location: Barcelona, Spain
+location:
+  locality: Barcelona
+  country: Spain
 layout: gallery
 
 gallery:

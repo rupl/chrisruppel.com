@@ -1,6 +1,8 @@
 ---
 title: Slow boat to Muang Ngoy
-location: Muang Khua, Laos
+location:
+  locality: Muang Khua
+  country: Laos
 layout: gallery
 
 gallery:

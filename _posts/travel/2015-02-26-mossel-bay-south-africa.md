@@ -1,6 +1,8 @@
 ---
 title: Relaxing on the beach
-location: Mossel Bay, South Africa
+location:
+  locality: Mossel Bay
+  country: South Africa
 
 map:
   location: Mossel Bay, South Africa

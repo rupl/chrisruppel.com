@@ -1,6 +1,6 @@
 ---
 title: Big Knob
-location: Soppong, Thailand
+location: Cave Lodge
 
 map:
   kml: cave-lodge_big-knob.kml

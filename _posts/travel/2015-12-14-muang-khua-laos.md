@@ -1,6 +1,8 @@
 ---
 title: Sabaidee
-location: Muang Khua, Laos
+location:
+  locality: Muang Khua
+  country: Laos
 
 gallery:
 - gridtype: tall

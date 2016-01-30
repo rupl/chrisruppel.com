@@ -1,6 +1,8 @@
 ---
 title: Walking around
-location: Bangkok, Thailand
+location:
+  locality: Bangkok
+  country: Thailand
 
 photosphere: jim-thompson-house.jpg
 

@@ -1,6 +1,8 @@
 ---
 title: Lantern market
-location: Hoi An, Vietnam
+location:
+  locality: Hoi An
+  country: Vietnam
 layout: gallery
 
 gallery:
