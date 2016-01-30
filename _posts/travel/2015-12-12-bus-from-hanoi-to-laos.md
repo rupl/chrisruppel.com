@@ -1,6 +1,8 @@
 ---
 title: Bus to Laos
-location: Hanoi, Vietnam
+location:
+  locality: Hanoi
+  country: Vietnam
 
 gallery:
 - gridtype: col-3

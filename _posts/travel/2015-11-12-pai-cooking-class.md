@@ -1,6 +1,8 @@
 ---
 title: Cooking class
-location: Pai, Thailand
+location:
+  locality: Pai
+  country: Thailand
 layout: gallery
 
 gallery:

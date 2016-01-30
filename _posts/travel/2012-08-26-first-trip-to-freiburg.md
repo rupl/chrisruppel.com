@@ -1,6 +1,8 @@
 ---
 title: First trip to Freiburg
-location: Freiburg, Germany
+location:
+  locality: Freiburg
+  country: Germany
 
 gallery:
 - gridtype: tall

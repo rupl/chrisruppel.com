@@ -1,6 +1,8 @@
 ---
 title: Phadeng Peak
-location: Nong Khiaw, Laos
+location:
+  locality: Nong Khiaw
+  country: Laos
 
 photosphere: phadeng-peak.jpg
 

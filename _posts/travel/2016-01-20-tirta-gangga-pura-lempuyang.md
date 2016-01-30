@@ -1,6 +1,8 @@
 ---
 title: Tirta Gangga & Pura Lempuyang
-location: Bali, Indonesia
+location:
+  region: Bali
+  country: Indonesia
 layout: gallery
 
 gallery:

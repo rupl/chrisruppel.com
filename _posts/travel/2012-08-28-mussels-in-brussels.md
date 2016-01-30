@@ -1,6 +1,8 @@
 ---
 title: Mussels in Brussels
-location: Brussels, Belgium
+location:
+  locality: Brussels
+  country: Belgium
 layout: gallery
 
 gallery:

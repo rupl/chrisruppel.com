@@ -1,6 +1,8 @@
 ---
 title: Arriving
-location: Bangkok, Thailand
+location:
+  locality: Bangkok
+  country: Thailand
 
 gallery:
 - gridtype: col-3

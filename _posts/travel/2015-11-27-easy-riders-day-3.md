@@ -1,6 +1,8 @@
 ---
 title: Dalat Easy Riders Day 3
-location: Krong Kmar, Vietnam
+location:
+  locality: Krong Kmar
+  country: Vietnam
 
 map:
   kml: easy-rider-day-3.kml

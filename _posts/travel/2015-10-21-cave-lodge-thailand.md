@@ -1,6 +1,8 @@
 ---
 title: Cave Lodge
-location: Soppong, Thailand
+location:
+  locality: Soppong
+  country: Thailand
 
 gallery:
 - gridtype: tall

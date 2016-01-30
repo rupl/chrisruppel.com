@@ -1,6 +1,8 @@
 ---
 title: Kuta beach
-location: Kuta, Bali
+location:
+  locality: Kuta
+  region: Bali
 layout: gallery
 
 gallery:

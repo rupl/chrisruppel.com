@@ -1,6 +1,8 @@
 ---
 title: Buccaneers
-location: Cintsa Bay, South Africa
+location:
+  locality: Cintsa Bay
+  country: South Africa
 layout: gallery
 
 gallery:

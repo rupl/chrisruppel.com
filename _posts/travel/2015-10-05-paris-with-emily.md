@@ -1,6 +1,8 @@
 ---
 title: Visiting Emily
-location: Paris, France
+location:
+  locality: Paris
+  country: France
 
 photosphere: paris-catacombs.jpg
 

@@ -1,6 +1,8 @@
 ---
 title: Downtime
-location: Nha Trang, Vietnam
+location:
+  locality: Nha Trang
+  country: Vietnam
 
 gallery:
 - gridtype: col-3

@@ -1,6 +1,8 @@
 ---
 title: Walking around
-location: Chiang Mai, Thailand
+location:
+  locality: Chiang Mai
+  country: Thailand
 layout: gallery
 
 gallery:

@@ -1,6 +1,8 @@
 ---
 title: Dalat Easy Riders Day 1
-location: Da Lat, Vietnam
+location:
+  locality: Da Lat
+  country: Vietnam
 
 map:
   kml: easy-rider-day-1.kml

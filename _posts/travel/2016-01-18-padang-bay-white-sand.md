@@ -1,6 +1,8 @@
 ---
 title: White sand beach
-location: Padang Bay, Bali
+location:
+  locality: Padang Bay
+  region: Bali
 layout: gallery
 
 gallery:

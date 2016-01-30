@@ -1,6 +1,8 @@
 ---
 title: Cerro Aconcagua
-location: Mendoza, Argentina
+location:
+  locality: Mendoza
+  country: Argentina
 layout: gallery
 
 gallery:

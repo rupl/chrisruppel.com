@@ -1,6 +1,8 @@
 ---
 title: Lion's Head
-location: Cape Town, South Africa
+location:
+  locality: Cape Town
+  country: South Africa
 layout: gallery
 
 gallery:

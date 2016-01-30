@@ -2,7 +2,7 @@
 <html class="wf-loading">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}{% if page.location %} in {{ page.location }}{% endif %}{% if page.title != null %} 🌏 {% endif %}{{ site.name }}</title>
+    <title>{{ page.title }}{% if page.location %} in {% include location.html location=page.location %}{% endif %}{% if page.title != null %} 🌏 {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="home" href="{{ site.url }}">
 
@@ -31,7 +31,7 @@
     <meta name="twitter:creator" content="@rupl">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:title" content="{{ page.title | escape }}{% if page.location %} in {{ page.location | escape }}{% endif %}">
+    <meta property="og:title" content="{{ page.title | escape }}{% if page.location %} in {% include location.html location=page.location %}{% endif %}">
     <meta property="og:description" content="{{ page.summary | escape }}">
     <meta property="og:image" content="{{ site.url }}/img/travel/{% if page.gallery[0].src %}{{ page.gallery[0].src }}{% else %}{{ page.gallery[1].src }}{% endif %}">
   {% endif %}

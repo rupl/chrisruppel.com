@@ -1,6 +1,8 @@
 ---
 title: Boat tour
-location: Ha Long Bay, Vietnam
+location:
+  locality: Ha Long Bay
+  country: Vietnam
 layout: gallery
 
 gallery:

@@ -1,6 +1,8 @@
 ---
 title: Books
-location: Pai, Thailand
+location:
+  locality: Pai
+  country: Thailand
 
 gallery:
 - gridtype: col-3

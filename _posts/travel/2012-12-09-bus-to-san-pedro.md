@@ -1,6 +1,8 @@
 ---
 title: Bus to San Pedro
-location: Salta, Argentina
+location:
+  locality: Salta
+  country: Argentina
 layout: gallery
 
 gallery:

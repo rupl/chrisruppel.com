@@ -1,6 +1,8 @@
 ---
 title: Kayaking
-location: Lan Ha Bay, Vietnam
+location:
+  locality: Lan Ha Bay
+  country: Vietnam
 
 map:
   kml: cat-ba-kayaking.kml

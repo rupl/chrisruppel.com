@@ -1,6 +1,8 @@
 ---
 title: Parc Güell
-location: Barcelona, Spain
+location:
+  locality: Barcelona
+  country: Spain
 layout: gallery
 
 gallery:

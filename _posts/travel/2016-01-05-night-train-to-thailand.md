@@ -1,6 +1,8 @@
 ---
 title: Night train to Thailand
-location: Vientiane, Laos
+location:
+  locality: Vientiane
+  country: Laos
 layout: gallery
 
 gallery:

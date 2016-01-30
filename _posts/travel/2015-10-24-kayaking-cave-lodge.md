@@ -1,6 +1,8 @@
 ---
 title: Kayaking
-location: Soppong, Thailand
+location:
+  place: Cave Lodge
+  prep: at
 layout: gallery
 
 gallery:

@@ -1,6 +1,8 @@
 ---
 title: Caves and Parks
-location: Cat Ba, Vietnam
+location:
+  locality: Cat Ba
+  country: Vietnam
 
 gallery:
 - gridtype: col-2-short

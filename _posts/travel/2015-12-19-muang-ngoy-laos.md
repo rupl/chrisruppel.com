@@ -1,6 +1,8 @@
 ---
 title: Hiking
-location: Muang Ngoy, Laos
+location:
+  locality: Muang Ngoy
+  country: Laos
 layout: gallery
 
 gallery:

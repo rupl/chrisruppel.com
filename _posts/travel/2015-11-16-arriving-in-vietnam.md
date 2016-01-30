@@ -1,6 +1,8 @@
 ---
 title: Arriving
-location: Ho Chi Minh City, Vietnam
+location:
+  locality: Ho Chi Minh City
+  country: Vietnam
 layout: gallery
 
 gallery:

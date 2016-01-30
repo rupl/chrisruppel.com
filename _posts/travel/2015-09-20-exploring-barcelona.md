@@ -1,6 +1,8 @@
 ---
 title: Exploring Barthelona
-location: Barcelona, Spain
+location:
+  locality: Barcelona
+  country: Spain
 layout: gallery
 
 gallery:

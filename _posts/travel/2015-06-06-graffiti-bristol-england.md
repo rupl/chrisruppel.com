@@ -1,6 +1,8 @@
 ---
 title: Graffiti
-location: Bristol, England
+location:
+  locality: Bristol
+  country: England
 layout: gallery
 
 gallery:

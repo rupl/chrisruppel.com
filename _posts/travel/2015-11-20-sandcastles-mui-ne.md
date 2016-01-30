@@ -1,6 +1,8 @@
 ---
 title: Sandcastles
-location: Mui Ne, Vietnam
+location:
+  place: Longson Mui Ne
+  prep: at
 layout: gallery
 
 gallery:

@@ -1,6 +1,8 @@
 ---
 title: Temple Ruins
-location: Ayutthaya, Thailand
+location:
+  locality: Ayutthaya
+  country: Thailand
 layout: gallery
 
 gallery:

@@ -1,6 +1,8 @@
 ---
 title: Grill Buffet
-location: Luang Prabang, Laos
+location:
+  locality: Luang Prabang
+  country: Laos
 layout: gallery
 
 gallery:

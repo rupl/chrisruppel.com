@@ -1,6 +1,8 @@
 ---
 title: Visitors
-location: Freiburg, Germany
+location:
+  locality: Freiburg
+  country: Germany
 layout: gallery
 
 gallery:

@@ -1,6 +1,8 @@
 ---
 title: The Palace
-location: Versailles, France
+location:
+  locality: Versailles
+  country: France
 layout: gallery
 
 gallery:

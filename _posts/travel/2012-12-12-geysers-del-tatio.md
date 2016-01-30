@@ -1,6 +1,8 @@
 ---
 title: Geysers del Tatio
-location: San Pedro de Atacama, Chile
+location:
+  locality: San Pedro de Atacama
+  country: Chile
 layout: gallery
 
 gallery:
