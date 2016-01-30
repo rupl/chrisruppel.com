@@ -1,6 +1,8 @@
 ---
 title: Big Knob
-location: Cave Lodge
+location:
+  place: Cave Lodge
+  prep: at
 
 map:
   kml: cave-lodge_big-knob.kml

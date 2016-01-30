@@ -1,6 +1,7 @@
 ---
 title: Visiting Karin
-location: Santiago de Chile
+location:
+  locality: Santiago de Chile
 layout: gallery
 
 gallery:

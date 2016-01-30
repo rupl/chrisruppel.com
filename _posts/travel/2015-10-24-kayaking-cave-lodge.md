@@ -1,6 +1,8 @@
 ---
 title: Kayaking
-location: Cave Lodge
+location:
+  place: Cave Lodge
+  prep: at
 layout: gallery
 
 gallery:

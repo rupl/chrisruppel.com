@@ -1,6 +1,8 @@
 ---
 title: Amakhala Game Reserve
-location: Addo Elephant National Park
+location:
+  place: Addo Elephant National Park
+  prep: at
 layout: gallery
 
 gallery:

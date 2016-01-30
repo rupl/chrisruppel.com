@@ -10,10 +10,8 @@ comments: true
     <h2 class="subtitle">
       <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %d, %Y" }}</time>
       {% if page.location %}
-        <span class="where">in
-        <span class="p-location h-adr">
+        <span class="where p-location h-adr">
           {% include location-microformat.html location=page.location %}
-        </span>
         </span>
       {% endif %}
     </h2>
@@ -33,7 +31,7 @@ comments: true
   {% if page.links != null %}
   <aside class="links">
     <h2 id="links" class="element-invisible">Links</h2>
-      <p>Here are some nice stops in {% include location.html location=page.location %}</p>
+      <p>Here are some nice stops {% include location.html location=page.location %}</p>
       <ul>
         {% for link in page.links %}
           <li><a class="type-{{ link.type }}" href="{{ link.href }}">{{ link.text }}</a></li>
@@ -44,11 +42,11 @@ comments: true
 
   <div class="go">
     {% if page.next.url %}
-      <a class="btn btn--next" href="{{ page.next.url }}" title="{{ page.next.title }}{% if page.next.location %} in {% include location.html location=page.next.location %}{% endif %}">Next trip</a>
+      <a class="btn btn--next" href="{{ page.next.url }}" title="{{ page.next.title }}{% if page.next.location %} {% include location.html location=page.next.location %}{% endif %}">Next trip</a>
     {% endif %}
     <a class="btn btn--back" href="/travel/">Travel</a>
     {% if page.previous.url %}
-      <a class="btn btn--prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}{% if page.previous.location %} in {% include location.html location=page.previous.location %}{% endif %}">Prev trip</a>
+      <a class="btn btn--prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}{% if page.previous.location %} {% include location.html location=page.previous.location %}{% endif %}">Prev trip</a>
     {% endif %}
     {% if page.comments %}
       <a id="comments-link" class="btn btn--comments" href="{{ site.url }}{{ page.url }}#disqus_thread" onclick="return loadDisqus(event);">Loading comment count...</a>

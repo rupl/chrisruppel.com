@@ -1,6 +1,8 @@
 ---
 title: Three Cave Trek
-location: Cave Lodge
+location:
+  place: Cave Lodge
+  prep: at
 
 photosphere: xmas-cave.jpg
 
