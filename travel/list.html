@@ -19,7 +19,7 @@ layout: page
         <h2 class="title">
           <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
           <a href="{{ trip.url }}">{{ trip.title }}</a>
-          {% if trip.location %}<span class="where">in {{ trip.location }}</span>{% endif %}
+          {% if trip.location %}<span class="where">in {% include location.html location=trip.location %}</span>{% endif %}
         </h2>
       </article>
     {% endfor %}

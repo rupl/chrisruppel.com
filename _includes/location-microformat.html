@@ -1,0 +1,10 @@
+{% capture location_full %}
+  {% if include.location.locality %}
+    <span class="h-locality">{{ include.location.locality }}</span>{% if include.location.region or include.location.country %}, {% endif %}
+  {% endif %}
+  {% if include.location.region %}
+    <span class="h-region">{{ include.location.region }}</span>{% if include.location.country %}, {% endif %}
+  {% endif %}
+  {% if include.location.country %}<span class="h-country-name">{{ include.location.country }}</span>{% endif %}
+  {% if include.location.locality == null and include.location.region == null and include.location.country == null and include.location %}{{ include.location }}{% endif %}
+{% endcapture %}{{ location_full | strip_newlines | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' }}
