@@ -91,6 +91,13 @@ $grid-big: 500px;
     padding-bottom: calc(100% / 3);
   }
 
+  //
+  // tall photos
+  //
+  .tall {
+    padding-bottom: 160%;
+  }
+
   @media (min-width: $grid-big) {
     //
     // half-wide photos
@@ -172,7 +179,6 @@ $grid-big: 500px;
     // special treatment for tall photos
     .tall {
       width: calc(100% / 3 * 2 - 2%);
-      padding-bottom: 103.9%;
     }
   }
 }
@@ -188,10 +194,5 @@ $grid-big: 500px;
       width: 48%;
       padding-bottom: calc(100% / 3);
     }
-  }
-
-  // not inside MQ because it works fine on mobile.
-  .tall {
-    padding-bottom: 160%;
   }
 }
