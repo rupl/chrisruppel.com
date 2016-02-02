@@ -3,7 +3,6 @@ title: Good times
 location:
   locality: Gili Air
   country: Indonesia
-layout: gallery
 
 links:
 - href: http://www.tripadvisor.com/Hotel_Review-g664667-d9770221-Reviews-Goodtimes_Bungalows-Gili_Air_Gili_Islands_Lombok_West_Nusa_Tenggara.html
@@ -45,12 +44,16 @@ gallery:
   alt: Hammock and hanging wicker chair underneath a straw roof.
   comment: Each bungalow has a hammock and reading chair off to the side.
 
-summary: Instead of going to the main island of Lumbok, we chose a tiny paradise just off the coast called Gili Air. It is a 1km-wide island with quaint bungalows and charming restaurants.
+summary: Instead of going to the main island of Lombok, we chose a tiny paradise just off the coast called Gili Air. It is a 1km-wide island with quaint bungalows and charming restaurants.
 ---
 
 We took a ferry from Padang Bay directly to Gili Air. We heard from several people that it was a nice island with a few interesting features: very small size and no motorized vehicles.
 
 Indeed, the island is about 1km in diameter and we've seen zero fuel-powered vehicles, although horse-drawn carriages are allowed, and a lucky few have electric motorbikes.
+
+The island has a _very_ relaxed atmosphere. It only took a couple hours' walking around and overhearing music at several bars before we nicknamed Gili Air after its official soundtrack: _Jack Johnson Island_.
+
+{% include gallery.html gallery=page.gallery %}
 
 We found a really great place to stay called [Goodtimes Bungalows](http://www.goodtimesbungalow.com/). It's run by a Norwegian family and they are some of the friendliest, most generous people we've met on our whole trip.
 
