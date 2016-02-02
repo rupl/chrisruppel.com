@@ -2,7 +2,7 @@
 <html class="wf-loading">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}{% if page.location %} in {% include location.html location=page.location %}{% endif %}{% if page.title != null %} 🌏 {% endif %}{{ site.name }}</title>
+    <title>{{ page.title }}{% if page.location %} {% include location.html location=page.location %}{% endif %}{% if page.title != null %} 🌏 {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="home" href="{{ site.url }}">
 
