@@ -26,13 +26,13 @@ summary: Our host at Goodtimes Bungalows took me snorkeling in the coral reef ar
 
 We bought a snorkeling mask in Padang Bay because the crystal clear water basically demanded that we go exploring in the shallow waters. We took it out a few times and took turns snorkeling, but never ventured too far... the ocean is a big place and can be a bit scary.
 
-However, we heard from many folks that Gili Air is the place to snorkel. We got a tip from Garle, the owner of our bungalows, where good snorkeling could be done. But once again, going solo was a bit daunting. There are massive sea urchins everywhere in the shallow water and if you step on or kick one, you're done for a while. I ended up snorkeling twice in the shallow water, but never dared to head out farther where the reef was.
+However, we heard from many folks that Gili Air is the place to snorkel. We got a tip from Jarle, the owner of our bungalows, where good snorkeling could be done. But once again, going solo was a bit daunting. There are massive sea urchins everywhere in the shallow water and if you step on or kick one, you're done for a while. I ended up snorkeling twice in the shallow water, but never dared to head out farther where the reef was.
 
 I took some photos with my phone in the shallow water, but since I lost the GoPro in Padang Bay I didn't have a camera that could really stay under for a good length of time.
 
 {% include gallery.html gallery=page.gallery %}
 
-However, after our second morning of snorkeling we came back during the rain shower. Garle asked how it was and I said that today, once again, I was a bit intimidated by the sea urchins because I was alone. He jumped up out of his seat and said he'd be happy to go whenever I wanted, how about now?
+However, after our second morning of snorkeling we came back during the rain shower. Jarle asked how it was and I said that today, once again, I was a bit intimidated by the sea urchins because I was alone. He jumped up out of his seat and said he'd be happy to go whenever I wanted, how about now?
 
 I said sure, so we hopped on the bikes and went toward the harbor area. We put on our gear and after slowly walking about 50 meters backwards (walking forwards is hard with fins) we finally sank into the water and started snorkeling.
 
@@ -50,7 +50,7 @@ Somehow in just this one coral reef, mother nature managed to produce pretty muc
 
 I also started diving deeper, using the flippers to go five or six meters deep in the water to inspect the reef at a much closer level. It was surprisingly easy to figure out, you just have to keep the pressure in mind and make sure to save enough air to expel the water from your breathing tube when you surface. And diving down reveals so much richness. It was also fun to just hang in the water upside down, which is no trouble thanks to the nose piece on the mask. Free-diving is really good fun and I'd love to try it again.
 
-After about 90 minutes the clouds were finally starting to look like a real storm and Garle said he wanted to stop by his boat quickly before heading in. We turned toward the harbor and swam toward the boat.
+After about 90 minutes the clouds were finally starting to look like a real storm and Jarle said he wanted to stop by his boat quickly before heading in. We turned toward the harbor and swam toward the boat.
 
 For a while it was the same scenery but then it gradually tapered off. Before I knew it, I couldnt't see the ocean floor anymore; we were swimming in very deep water. It was slightly unnerving to swim into a flat wall of blue, but with another experienced diver there it was ok. I just focused on moving forward and peeked out of the water occasionally to look toward the harbor and gain my bearings.
 
@@ -60,6 +60,6 @@ I returned to the bungalows with a huge grin on my face and wildly retold our ad
 
 ---
 
-Later that night after Karin and I had eaten dinner we talked to them again in the common area, and with a smile Garle said there is nothing quite like the first dive in a coral reef. He said no matter where you dive afterward, it'll always feel the most special.
+Later that night after Karin and I had eaten dinner we talked to them again in the common area, and with a smile Jarle said there is nothing quite like the first dive in a coral reef. He said no matter where you dive afterward, it'll always feel the most special.
 
 I haven't even had a second dive yet and I already know what he means!
