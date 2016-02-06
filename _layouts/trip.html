@@ -8,7 +8,7 @@ comments: true
   <header>
     <h1 class="title p-name">{{ page.title }}</h1>
     <h2 class="subtitle">
-      <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %d, %Y" }}</time>
+      <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d 12:00:00" }}">{{ page.date | date: "%b %d, %Y" }}</time>
       {% if page.location %}
         <span class="where p-location h-adr">
           {% include location-microformat.html location=page.location %}
