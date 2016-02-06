@@ -71,53 +71,11 @@
       transform: translateX(-50%) translateY(-50%);
     }
   }
+}
 
-  // IndieWeb metadata
-  .trip-meta {
-    margin-top: 1em;
-    font-family: monospace;
-
-    label {
-      font-size: 1em;
-    }
-
-    .uid {
-      width: calc(100% - 4em);
-      font-size: .9em;
-      font-family: monospace;
-      letter-spacing: -.75px;
-      color: #555;
-      background: #f9f9f9;
-      border: 1px solid #f4f4f4;
-
-      &:focus {
-        background: #eee;
-        border-color: #aaa;
-      }
-    }
-
-    .filed {
-      font-size: .8em;
-
-      a {
-        color: inherit;
-      }
-
-      .categories {
-        display: inline;
-
-        .p-category {
-          display: inline;
-
-          &::after {
-            content: ', ';
-          }
-
-          &:last-child::after {
-            content: '.';
-          }
-        }
-      }
-    }
-  }
+// IndieWeb metadata
+.trip-meta {
+  margin-top: 1em;
+  font-family: monospace;
+  text-align: center;
 }

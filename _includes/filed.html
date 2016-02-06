@@ -1,10 +1,11 @@
 {% capture filed %}
-  <a rel="author" class="p-author" href="{{ site.url }}/about/">Chris</a> filed this entry
-  {% if page.categories %}
-    under
-    <span class="categories">
-      {% for category in page.categories %}
-        <span class="p-category">{{ category }}</span>
+  <a rel="author" class="p-author" href="{{ site.url }}/about/">Chris</a> filed this <strong class="p-category">{{ include.categories }}</strong> entry
+  {% if include.tags %}
+    and tagged it
+    <span class="tags">
+      {% for tag in include.tags %}
+        {% comment %}href="/tags/{{ tag }}/"{% endcomment %}
+        <a rel="tag" class="p-category">{{ tag }}</a>
       {% endfor %}
     </span>
   {% endif %}

@@ -1,0 +1,8 @@
+{% capture syndication %}
+  <ul class="syndication">
+  {% for link in include.syndication %}
+    <li><a rel="syndication" class="u-syndication type-{{ link.type | downcase }}" href="{{ link.href }}">{{ link.type }}</a></li>
+  {% endfor %}
+  </ul>
+{% endcapture %}
+{{ syndication | strip_newlines }}
