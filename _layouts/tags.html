@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<header>
+  <h1 class="title title--page">#{{ page.tag }}</h1>
+</header>
+
+<p class="intro summary">Content tagged with #{{ page.tag }}</p>
+
+<div class="tag-list">
+  {% for post in page.posts %}
+    {% include trip-listing.html trip=post %}
+  {% endfor %}
+</div>
+
+<div class="go">
+  {% if page.permalink == '/about/' %}
+    <a class="btn btn--info" href="/about/site/">About this site</a>
+  {% elsif page.permalink == '/about/site/' %}
+    <a class="btn btn--info" href="/about/">About me</a>
+  {% endif %}
+
+    <a class="btn btn--back" href="/">Back to the Front</a>
+</div>

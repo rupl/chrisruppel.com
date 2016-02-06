@@ -1,0 +1,7 @@
+<article class="trip-title" data-url="{{ site.url }}{{ include.trip.url }}">
+  <h2 class="title">
+    <time datetime="{{ include.trip.date | date: "%Y-%m-%d" }}">{{ include.trip.date | date: "%b %d, %Y" }}</time>
+    <a href="{{ include.trip.url }}">{{ include.trip.title }}</a>
+    {% if include.trip.location %}<span class="where">{% include location.html location=include.trip.location %}</span>{% endif %}
+  </h2>
+</article>

@@ -15,13 +15,7 @@ layout: page
 
   <div class="trip-list">
     {% for trip in site.categories.travel %}
-      <article class="trip-title" data-url="{{ site.url }}{{ trip.url }}">
-        <h2 class="title">
-          <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
-          <a href="{{ trip.url }}">{{ trip.title }}</a>
-          {% if trip.location %}<span class="where">{% include location.html location=trip.location %}</span>{% endif %}
-        </h2>
-      </article>
+      {% include trip-listing.html trip=trip %}
     {% endfor %}
   </div>
 
