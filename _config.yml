@@ -1,6 +1,6 @@
 name: Chris Ruppel
 url: https://chrisruppel.com
-permalink: /:categories/:title/
+permalink: /travel/:title/
 debug: false
 development: false
 
@@ -18,12 +18,14 @@ defaults:
       path: ""
     values:
       layout: default
-      map: false
   - scope:
+      type: "posts"
       path: "travel"
     values:
       category: travel
       layout: trip
+      comments: true
+      meta: true
   - scope:
       path: "about"
     values:
