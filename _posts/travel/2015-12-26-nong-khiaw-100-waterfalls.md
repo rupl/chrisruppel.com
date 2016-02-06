@@ -55,6 +55,13 @@ gallery:
   bgpad: 55%
   bgpos: 50% 80%
 
+tags:
+- trekking
+
+syndication:
+- type: Facebook
+  href: https://www.facebook.com/chris.ruppel/posts/10105823351723398
+
 summary: We took a tour to the 100 Waterfalls. It was a moderate hike with a beautiful reward&#58; seemingly endless cascades of springs and waterfalls.
 ---
 

@@ -174,7 +174,7 @@ gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
 // -----------------------------------------------------------------------------
 // Resize images
 // -----------------------------------------------------------------------------
-gulp.task('image-resize', 'Create different sizes for responsive images.', ['image-320', 'image-640', 'image-original', 'image-photosphere']);
+gulp.task('image-resize', 'Create different sizes for responsive images.', ['image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg']);
 
 // Image derivative: 320
 gulp.task('image-320', false, function () {
@@ -242,6 +242,17 @@ gulp.task('image-photosphere', false, function () {
       svgoPlugins: [{removeViewBox: false}]
     }))
     .pipe(gulp.dest('_site/img/photosphere'));
+});
+
+// SVG icons
+gulp.task('image-svg', false, function () {
+  return gulp.src(['_img/svg/*'])
+    .pipe(changed('_site/img/svg'))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('_site/img/svg'));
 });
 
 

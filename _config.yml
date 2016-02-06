@@ -1,14 +1,10 @@
 name: Chris Ruppel
 url: https://chrisruppel.com
-permalink: /:categories/:title/
+permalink: /travel/:title/
 debug: false
 development: false
 
 # Jekyll config
-markdown: redcarpet
-redcarpet:
-  extensions: ["smart"]
-highlighter: pygments
 exclude: [README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.lock, node_modules, .bundle, update, Procfile, vendor, index.js, bin, app.json]
 keep_files: [img]
 
@@ -22,12 +18,14 @@ defaults:
       path: ""
     values:
       layout: default
-      map: false
   - scope:
+      type: "posts"
       path: "travel"
     values:
       category: travel
       layout: trip
+      comments: true
+      meta: true
   - scope:
       path: "about"
     values:

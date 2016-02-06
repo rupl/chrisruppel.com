@@ -1,0 +1,34 @@
+//
+// Entry metadata
+//
+.filed {
+  font-size: .8em;
+
+  a {
+    color: inherit;
+  }
+
+  .categories {
+    display: inline;
+
+    .p-category {
+      display: inline;
+      font-weight: 700;
+
+      &::after {
+        content: ', ';
+      }
+
+      &:last-child::after {
+        content: '.';
+      }
+    }
+  }
+
+  a[rel="tag"] {
+    &::before {
+      content: '#';
+      text-decoration: none;
+    }
+  }
+}

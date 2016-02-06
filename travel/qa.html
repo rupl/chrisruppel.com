@@ -18,7 +18,7 @@ published: false
           {% if trip.gallery %}
             {% if trip.gallery[0].gridtype %}
               {% case trip.gallery[0].gridtype %}
-                {% when "flex-2" or "flex-3" or "tall" %}
+                {% when "col-2" or "col-3" or "col-2-short" or "tall" %}
                   <strong style="color: green; ">{{ trip.gallery[0].gridtype }}</strong>
                 {% else %}
                   <strong style="color: goldenrod; ">invalid gridtype: {{ trip.gallery[0].gridtype }}</strong>

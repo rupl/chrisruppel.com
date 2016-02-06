@@ -1,14 +1,12 @@
 ---
 layout: page
-meta: true
-comments: true
 ---
 
 <article class="trip h-entry">
   <header>
     <h1 class="title p-name">{{ page.title }}</h1>
     <h2 class="subtitle">
-      <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %d, %Y" }}</time>
+      <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d 12:00:00" }}">{{ page.date | date: "%b %d, %Y" }}</time>
       {% if page.location %}
         <span class="where p-location h-adr">
           {% include location-microformat.html location=page.location %}
@@ -60,5 +58,7 @@ comments: true
   <div class="trip-meta">
     <label for="uid">URL:</label>
     <input id="uid" class="u-url url u-uid uid bookmark" type="url" size="52" readonly value="{{ site.url }}{{ page.url }}">
+    {% include filed.html categories=page.categories tags=page.tags %}
+    {% include syndication.html syndication=page.syndication %}
   </div>
 </article>
