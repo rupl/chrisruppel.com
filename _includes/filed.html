@@ -1,0 +1,15 @@
+{% capture filed %}
+  <a rel="author" class="p-author" href="{{ site.url }}/about/">Chris</a> filed this entry
+  {% if page.categories %}
+    under
+    <span class="categories">
+      {% for category in page.categories %}
+        <span class="p-category">{{ category }}</span>
+      {% endfor %}
+    </span>
+  {% endif %}
+{% endcapture %}
+
+<p class="filed">
+  {{ filed | strip_newlines }}
+</p>

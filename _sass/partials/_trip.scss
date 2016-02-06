@@ -75,13 +75,14 @@
   // IndieWeb metadata
   .trip-meta {
     margin-top: 1em;
+    font-family: monospace;
 
     label {
       font-size: 1em;
     }
 
     .uid {
-      width: calc(100% - 3em);
+      width: calc(100% - 4em);
       font-size: .9em;
       font-family: monospace;
       letter-spacing: -.75px;
@@ -91,7 +92,31 @@
 
       &:focus {
         background: #eee;
-        border-color: #e9e9e9;
+        border-color: #aaa;
+      }
+    }
+
+    .filed {
+      font-size: .8em;
+
+      a {
+        color: inherit;
+      }
+
+      .categories {
+        display: inline;
+
+        .p-category {
+          display: inline;
+
+          &::after {
+            content: ', ';
+          }
+
+          &:last-child::after {
+            content: '.';
+          }
+        }
       }
     }
   }
