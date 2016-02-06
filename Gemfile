@@ -2,5 +2,5 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-# GitHub Pages
-gem 'github-pages'
+# Jekyll
+gem 'jekyll', '3.1.1'
