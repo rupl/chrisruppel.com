@@ -15,7 +15,7 @@ published: false
     {% for trip in site.categories.travel %}
       <li class="trip-title" data-url="{{ site.url }}{{ trip.url }}">
         <p>
-          {% if trip.gallery %}
+          <!-- {% if trip.gallery %}
             {% if trip.gallery[0].gridtype %}
               {% case trip.gallery[0].gridtype %}
                 {% when "col-2" or "col-3" or "col-2-short" or "tall" %}
@@ -28,6 +28,11 @@ published: false
             {% endif %}
           {% else %}
             <em style="color: #999; font-weight: 100;">no gallery</em>
+          {% endif %} -->
+          {% if trip.tags.size == 0 %}
+            <strong style="color: red; ">No tags</strong>
+          {% else %}
+            <strong style="color: green; ">{{ trip.tags | split: ' ' }}</strong>
           {% endif %}
           — <a href="{{ trip.url }}">{{ trip.title }}</a>
 <!--          {% if trip.location %}<span class="where">in {{ trip.location }}</span>{% endif %} -->
