@@ -20,5 +20,9 @@ gallery:
   alt: A fish lantern.
   comment: The main tourist bridge had these beautiful fish lanterns.
 
+tags:
+- cities
+- markets
+
 summary: Hoi An is known for two things — a night market featuring hand-made silk lanterns, and its tailor shops.
 ---

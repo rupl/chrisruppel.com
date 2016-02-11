@@ -55,6 +55,10 @@ gallery:
   comment: Finally! We made it to Muang Ngoy.
   type: wide
 
+tags:
+- boats
+- transport
+
 summary: We went on a four hour ride for our first slow boat trip, which took us down the Ou River from Muang Khua to Muang Ngoy. 
 ---
 

@@ -56,6 +56,7 @@ gallery:
   bgpos: 50% 80%
 
 tags:
+- tours
 - trekking
 
 syndication:

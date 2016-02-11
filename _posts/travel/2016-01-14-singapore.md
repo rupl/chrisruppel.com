@@ -21,6 +21,9 @@ gallery:
   comment: This art installment in the airport was mesmerizing. Each ball was individually controlled by a computer to create a wide array of shapes and motion sequences. No one else seemed to enjoy it but us.
   type: wide
 
+tags:
+- cities
+
 summary: Due to a minor flight complication we were only in Singapore for 18 hours and did not get to explore as much as we wanted. It was nice to use fast internet, drink tap water, and throw our TP in the toilet for one night though.
 ---
 

@@ -28,5 +28,9 @@ gallery:
   type: wide
   bgpad: 55%
 
+tags:
+- beaches
+- sunsets
+
 summary: Our hostel was quite close to a beach that was just down the coast from the main tourist strip. It was empty during the day but swelled with people as the sun set.
 ---

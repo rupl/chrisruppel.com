@@ -4,6 +4,10 @@ title: Easy Riders 3-day Trip
 map:
   kml: easy-rider-full-trip.kml
 
+tags:
+- motorbikes
+- tours
+
 summary: Full path of our trip with Dalat Easy Rider Club to Nha Trang.
 ---
 

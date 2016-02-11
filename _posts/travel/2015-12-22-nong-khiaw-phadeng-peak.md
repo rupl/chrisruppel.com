@@ -39,6 +39,11 @@ gallery:
   alt: Sign warning hikers about unexploded bombs that might lie just off the trail.
   comment: Only after returning from the hike did we see this warning about unexploded bombs if you deviate from the trail. Thanks, Obama! 🇺🇸
 
+tags:
+- sunsets
+- trekking
+- viewpoints
+
 summary: Phadeng Peak is a steep, moderate hike that ends with a great view of Nong Khiaw and the upstream river toward Muang Ngoy.
 ---
 

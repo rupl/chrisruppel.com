@@ -63,6 +63,10 @@ links:
   text: Easy Friends Hostel
   type: rest
 
+tags:
+- motorbikes
+- tours
+
 summary: Day 1 of our Dalat Easy Riders tour was a day trip through Da Lat followed by a beautiful ride through the countryside.
 ---
 

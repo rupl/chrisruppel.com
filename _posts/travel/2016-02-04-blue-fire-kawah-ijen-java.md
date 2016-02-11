@@ -49,8 +49,9 @@ gallery2:
   type: wide
 
 tags:
-- nature
+- danger
 - trekking
+- volcanos
 
 syndication:
 - type: Facebook

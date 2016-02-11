@@ -21,6 +21,9 @@ gallery:
   alt: Laos flag with sunset in background.
   comment: Last picture in Laos as we cross the border!
 
+tags:
+- transport
+
 summary: We took a night train from Laos back to Bangkok so we could catch a flight to Indonesia. It was a fun, safe, cheap way to travel!
 ---
 

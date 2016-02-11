@@ -39,6 +39,10 @@ gallery2:
   bgpad: 40%
 - caption: "Although we went very far off the trail, the day ended in success. We finished the long day with a beautiful view of Cape Town including <em>Lion's Head</em> mountain and Robben Island."
 
+tags:
+- danger
+- trekking
+
 summary: We hiked the India Venster on Table Mountain on our first day in South Africa. It was an unintentionally intense hike because we went off the trail.
 ---
 

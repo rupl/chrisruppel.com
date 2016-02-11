@@ -21,6 +21,9 @@ gallery:
   alt: Enormous piles of spare auto parts that are taller than an adult.
   comment: We walked down a random street and I was tickled by this huuuge pile of auto parts.
 
+tags:
+- cities
+
 summary: We made the best of our two days in Bangkok before flying to Singapore and Indonesia. Star Wars and massage, the good life!
 ---
 

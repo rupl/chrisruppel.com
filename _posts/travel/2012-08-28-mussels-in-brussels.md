@@ -32,5 +32,10 @@ gallery:
   comment: Drinking with Morten and Stephanie in Delirium Café.
   bgpos: 0 20%
 
+tags:
+- cities
+- beer
+- food
+
 summary: When I think of Brussels two things come to mind — the best beer in the world, and great food to soak it up.
 ---

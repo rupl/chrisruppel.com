@@ -35,6 +35,9 @@ links:
   text: Cave Lodge
   type: rest
 
+tags:
+- hostels
+
 summary: Cave Lodge is an absolutely beautiful place to stay in north Thailand offering more adventures than we thought possible. Anyone passing through should make a stop here for at least a few nights!
 ---
 

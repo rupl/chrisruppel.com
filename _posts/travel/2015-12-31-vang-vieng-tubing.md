@@ -24,6 +24,9 @@ gallery:
   comment: Typical views along the river.
   type: wide
 
+tags:
+- tubing
+
 summary: We did one of the most popular activities on New Years' Eve in Vang Vieng — tubing down the river!
 ---
 

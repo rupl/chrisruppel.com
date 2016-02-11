@@ -21,6 +21,10 @@ gallery2:
   type: wide
   bgpad: 25%
 
+tags:
+- advice
+- transport
+
 summary: We survived an epic chain of transport from Cat Ba to Laos, and even enjoyed it despite the madness that ensued.
 ---
 

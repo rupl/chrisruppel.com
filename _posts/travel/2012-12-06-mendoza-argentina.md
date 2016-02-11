@@ -22,6 +22,9 @@ gallery:
   alt: A statue of a man on the back of a bucking horse.
   comment: There were many fun statues in town.
 
+tags:
+- cities
+
 summary: We spent an extra day in Mendoza due to bus strikes. We used it well, finding a beautiful hotel and exploring more of the downtown area.
 ---
 

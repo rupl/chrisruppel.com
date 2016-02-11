@@ -39,5 +39,9 @@ gallery:
   type: wide
   bgpad: 50%
 
+tags:
+- history
+- temples
+
 summary: The temples in Ayutthaya are almost all ruins due to the Burmese sacking this former capital city in the late 18th century. The ruins were beautiful and mysterious due to their condition.
 ---

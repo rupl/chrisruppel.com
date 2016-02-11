@@ -34,6 +34,10 @@ gallery:
   comment: Our Prize! A spectacular view of the valley where Cave Lodge is located.
   type: wide
 
+tags:
+- trekking
+- viewpoints
+
 summary: Our first activity at Cave Lodge was an easy local spot called Big Knob. It's a short hike, no guide needed, and it can be done in about two hours.
 ---
 

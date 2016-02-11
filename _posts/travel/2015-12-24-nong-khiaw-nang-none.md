@@ -37,6 +37,10 @@ gallery:
   type: wide
   bgpad: 28%
 
+tags:
+- trekking
+- viewpoints
+
 summary: Nang None is a lesser-known viewpoint in Nong Khiaw. We thought it was an even better view of the area!
 ---
 

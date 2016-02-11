@@ -20,6 +20,11 @@ gallery:
   alt: Two people pointing at EMERGENCY ROOM sign.
   comment: What can you do except laugh it off? By the way... the helmets are for our motorbikes, not the tumble down the waterfall... just in case you were wondering.
 
+tags:
+- danger
+- motorbikes
+- waterfalls
+
 summary: Ok the real truth behind our long stay in Pai... Lina and I fell down the waterfall. We're fine.
 ---
 

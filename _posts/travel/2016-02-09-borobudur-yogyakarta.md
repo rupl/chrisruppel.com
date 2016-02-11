@@ -45,7 +45,7 @@ gallery3:
   comment: Group photo with the boys!
 
 tags:
-- motorbike
+- motorbikes
 - temples
 
 summary: We rode out to Borobudur, a large temple complex outside of Yogyakarta. It was an impressive area quite different than the other temples we've seen on this trip.

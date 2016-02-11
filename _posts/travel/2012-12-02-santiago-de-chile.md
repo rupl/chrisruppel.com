@@ -27,5 +27,8 @@ gallery:
   alt: The president's house in Santiago.
   comment: The Chilean Whitehouse. I kept doing double-takes at their flag since it's so similar to the Texas flag.
 
+tags:
+- cities
+
 summary: After meeting Karin in Freiburg, I decided to visit her in Chile where she was taking time off work to travel. My first destination was Santiago, where she lived at the time.
 ---

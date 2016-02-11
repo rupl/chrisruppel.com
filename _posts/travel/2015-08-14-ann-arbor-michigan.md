@@ -33,6 +33,9 @@ links:
   text: Pinball Pete's
   type: inside
 
+tags:
+- kayaking
+
 summary: We visited Jordan and Annette in Ann Arbor, Michigan. We had a fun week of hiking, canoeing, and furniture-building.
 ---
 

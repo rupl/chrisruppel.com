@@ -27,5 +27,8 @@ gallery:
   comment: One of my favorite pictures of the trip. It captures the table cloth so well!
   type: wide
 
+tags:
+- trekking
+
 summary: Lion's Head is an easy hike for people of all skill levels. We easily made the top in about an hour, and we heard it's a good spot for night hiking too.
 ---

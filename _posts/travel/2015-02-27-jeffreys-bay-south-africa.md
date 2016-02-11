@@ -26,5 +26,9 @@ gallery:
   comment: Karin hunts for sea glass at sunset.
   type: wide
 
+tags:
+- beaches
+- cities
+
 summary: Jeffreys Bay is a popular surfing spot with great beaches. We took it easy here and just enjoyed the scenery.
 ---

@@ -26,5 +26,11 @@ gallery:
   comment: The sun set before we got off our "ferry" — we felt dumb for falling for it, but it was a really nice ride in the end.
   type: wide
 
+tags:
+- boats
+- tours
+- scams
+- sunsets
+
 summary: We kinda got scammed into a tour through Ha Long Bay, but it's a pretty nice place to be tricked into staying all afternoon.
 ---

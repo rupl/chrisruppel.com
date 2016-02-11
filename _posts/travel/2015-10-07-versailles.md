@@ -29,5 +29,8 @@ gallery:
   type: wide
   bgpad: 42%
 
+tags:
+- tours
+
 summary: We went to Versailles on our last day in Paris. Aside from the insane amount of tourists, it was pretty neat.
 ---

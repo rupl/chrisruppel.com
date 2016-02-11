@@ -42,6 +42,8 @@ gallery2:
   alt: Man taking a selfie.
   comment: I managed to get a decent shot of myself after getting sufficiently sweaty.
 
+tags:
+- trekking
 
 summary: Our first big trek was a three-cave hike through the hills and mountains, with some jungle and swimming in between.
 ---

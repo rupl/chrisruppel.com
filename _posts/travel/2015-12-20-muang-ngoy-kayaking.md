@@ -39,6 +39,11 @@ gallery:
   type: wide
   bgpad: 45%
 
+tags:
+- kayaking
+- transport
+- sunsets
+
 summary: We kayaked to Nong Khiaw instead of taking a boat. It was a nice four hour trip and we got to really enjoy the sights and sounds of the Ou River.
 ---
 

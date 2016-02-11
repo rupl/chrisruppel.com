@@ -25,6 +25,11 @@ gallery:
   type: wide
   bgpad: 50%
 
+tags:
+- cities
+- beaches
+- thermal baths
+
 summary: After our motorbike tour we took it easy in Nha Trang for a couple days. It's a touristy city which is clearly dominated by Russians.
 ---
 

@@ -27,5 +27,8 @@ gallery:
   type: wide
   bgpad: 50%
 
+tags:
+- thermal baths
+
 summary: We stopped in Lovina on the way to Java and found a nice thermal bath to complement the relentless rainy season.
 ---

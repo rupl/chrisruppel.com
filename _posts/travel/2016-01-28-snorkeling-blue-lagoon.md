@@ -23,5 +23,9 @@ gallery:
   bgpos: 50% 0%
 - caption: Credit&#58; all photos taken by Jeroen Heeren
 
+tags:
+- beaches
+- snorkeling
+
 summary: Returning from Gili Air back to Padang Bay, we went snorkeling again in Blue Lagoon a few times. This time we were armed with our friend's camera and caught some great glimpes of underwater sea life.
 ---

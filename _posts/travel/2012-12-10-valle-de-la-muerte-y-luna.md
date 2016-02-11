@@ -49,6 +49,11 @@ gallery2:
   comment: The sun sets over the Valley, casting a noticeably blue hue over the red valley.
   type: wide
 
+tags:
+- sunsets
+- tours
+- trekking
+
 summary: Our first adventure in San Pedro was visiting Valle de la Muerte and Valle de la Luna. I was struck by the utter lack of vegetation and felt so insignificant compared to nature.
 ---
 

@@ -40,5 +40,9 @@ gallery:
   alt: District 1 during the day.
   comment: The same street during the day, devoid of night life but still showing hints of chaos.
 
+tags:
+- cities
+- night life
+
 summary: Ho Chi Minh City was quite the change of pace after our slow weeks in Thailand. It's a crazy, pulsing city that is no place for a newbie traveler. We had a blast checking it out and acting young for a few days.
 ---

@@ -13,7 +13,8 @@ gallery:
 - caption: The scenery was quite nice at our hotel near the park entrance... but the people were not.
 
 tags:
-- scam
+- advice
+- scams
 
 summary: We tried going to Bromo to do another sunrise volcano hike, but weather, volcanic activity, and scams got the best of us.
 ---

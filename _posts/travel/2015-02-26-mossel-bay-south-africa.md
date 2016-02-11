@@ -29,6 +29,10 @@ gallery:
   alt: A sunset on the beach.
   comment: Wonderful conclusion to our evening.
 
+tags:
+- beaches
+- cities
+
 summary: Mossel Bay is the east bookend of the Garden Route, offering a relaxing string of beaches. It's great for a private getaway.
 ---
 

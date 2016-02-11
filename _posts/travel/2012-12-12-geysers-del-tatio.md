@@ -46,5 +46,10 @@ gallery:
   alt: Man sitting on the edge of a canyon.
   comment: Hector took us to a canyon that he claimed had no name. Having lived in Arizona for 10 years he was fond of the Grand Canyon, and had named this canyon in its honor.
 
+tags:
+- tours
+- trekking
+- thermal baths
+
 summary: Our third day in San Pedro was the best of all! We visited the Geysers del Tatio, an extremely active area of geysers high up in the mountains.
 ---
