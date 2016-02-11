@@ -1,12 +1,14 @@
 {% capture title %}
 {% if page.title %}{{ page.title }}{% endif %}
+{% if page.location %} {% include location.html location=page.location %}{% endif %}
+{% if page.category == 'travel' %} 🌏 {% endif %}
 {% if page.tag %}#{{ page.tag }} | {% endif %}
 {% endcapture %}
 <!DOCTYPE html>
 <html class="wf-loading">
   <head>
     <meta charset="utf-8">
-    <title>{{ title | strip_newlines }}{% if page.location %} {% include location.html location=page.location %}{% endif %}{% if page.title != null %} 🌏 {% endif %}{{ site.name }}</title>
+    <title>{{ title | strip_newlines }} {{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="home" href="{{ site.url }}">
 

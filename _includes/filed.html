@@ -4,8 +4,7 @@
     and tagged it
     <span class="tags">
       {% for tag in include.tags %}
-        {% comment %}href="/tags/{{ tag }}/"{% endcomment %}
-        <a rel="tag" class="p-category">{{ tag }}</a>
+        <a rel="tag" class="p-category" href="/tags/{{ tag }}/">{{ tag }}</a>
       {% endfor %}
     </span>
   {% endif %}
