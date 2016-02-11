@@ -3,8 +3,8 @@ layout: default
 ---
 
 <section aria-labelledby="tag-list">
-  <h1 id="tag-list" class="title title--page">#{{ page.tag }}</h1>
-  <p class="intro summary">Travel stories involving {{ page.tag }}.</p>
+  <h1 id="tag-list" class="title title--page">#{{ page.tag | downcase | replace: ' ','' }}</h1>
+  <p class="intro summary">Travel stories involving {{ page.tag | downcase }}.</p>
 
   <div class="trip-list">
     {% for post in page.posts %}
