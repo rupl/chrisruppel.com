@@ -2,24 +2,18 @@
 layout: default
 ---
 
-<header>
-  <h1 class="title title--page">#{{ page.tag }}</h1>
-</header>
+<section aria-labelledby="tag-list">
+  <h1 id="tag-list" class="title title--page">#{{ page.tag }}</h1>
+  <p class="intro summary">Travel stories involving {{ page.tag }}.</p>
 
-<p class="intro summary">Content tagged with #{{ page.tag }}</p>
-
-<div class="tag-list">
-  {% for post in page.posts %}
-    {% include trip-listing.html trip=post %}
-  {% endfor %}
-</div>
+  <div class="trip-list">
+    {% for post in page.posts %}
+      {% include trip-listing.html trip=post %}
+    {% endfor %}
+  </div>
+</section>
 
 <div class="go">
-  {% if page.permalink == '/about/' %}
-    <a class="btn btn--info" href="/about/site/">About this site</a>
-  {% elsif page.permalink == '/about/site/' %}
-    <a class="btn btn--info" href="/about/">About me</a>
-  {% endif %}
-
-    <a class="btn btn--back" href="/">Back to the Front</a>
+  <a class="btn btn--back" href="/travel/">Travel</a>
+  <a class="btn btn--back" href="/">Back to the Front</a>
 </div>
