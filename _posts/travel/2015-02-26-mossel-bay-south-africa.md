@@ -4,10 +4,6 @@ location:
   locality: Mossel Bay
   country: South Africa
 
-map:
-  location: Mossel Bay, South Africa
-  zoom: 9
-
 links:
 - href: http://www.lilies-leopards.co.za/
   text: Lillies & Leopards bed and breakfast

@@ -3,6 +3,7 @@ title: Kayaking to Nong Khiaw
 location:
   locality: Muang Ngoy
   country: Laos
+  prep: from
 layout: gallery
 
 gallery:
