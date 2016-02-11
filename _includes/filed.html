@@ -4,7 +4,7 @@
     and tagged it
     <span class="tags">
       {% for tag in include.tags %}
-        <a rel="tag" class="p-category" href="/tags/{{ tag | replace: ' ','-' | downcase }}/">{{ tag | downcase }}</a>
+        <a rel="tag" class="p-category" href="/tags/{{ tag | replace: ' ','-' | downcase }}/">{{ tag | replace: ' ','' downcase }}</a>
       {% endfor %}
     </span>
   {% endif %}
