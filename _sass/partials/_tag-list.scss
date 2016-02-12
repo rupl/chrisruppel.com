@@ -1,4 +1,59 @@
 //
 // Lists of tagged content
 //
-.tag-list {}
+.tag-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+
+  a {
+    flex: 1 0 1%;
+    margin: 0;
+    padding: 0 .5em 0 0;
+    font-family: monospace;
+    color: inherit;
+    white-space: nowrap;
+    word-spacing: -.6em;
+
+    &::before {
+      content: '#';
+    }
+
+    // When the last line only has a couple tags, push them all to the side
+    // instead of spacing them out evenly.
+    &:last-child {
+      flex-basis: 50%;
+    }
+  }
+
+  .set-1 {
+    order: 5;
+    font-size: .8em;
+    text-align: center; // smallest are centered
+  }
+
+  .set-2 {
+    flex-basis: 5%;
+    order: 4;
+    font-size: 1.2em;
+  }
+
+  .set-3 {
+    flex-basis: 10%;
+    order: 3;
+    font-size: 1.6em;
+  }
+
+  .set-4 {
+    flex-basis: 10%;
+    order: 2;
+    font-size: 2.4em;
+  }
+
+  .set-5 {
+    flex-basis: 20%;
+    order: 1;
+    font-size: 3em;
+    text-align: center; // biggest are centered
+  }
+}
