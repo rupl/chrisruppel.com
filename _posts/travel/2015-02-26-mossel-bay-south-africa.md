@@ -4,10 +4,6 @@ location:
   locality: Mossel Bay
   country: South Africa
 
-map:
-  location: Mossel Bay, South Africa
-  zoom: 9
-
 links:
 - href: http://www.lilies-leopards.co.za/
   text: Lillies & Leopards bed and breakfast
@@ -28,6 +24,10 @@ gallery:
 - src: mossel-bay-4.jpg
   alt: A sunset on the beach.
   comment: Wonderful conclusion to our evening.
+
+tags:
+- beaches
+- sunsets
 
 summary: Mossel Bay is the east bookend of the Garden Route, offering a relaxing string of beaches. It's great for a private getaway.
 ---

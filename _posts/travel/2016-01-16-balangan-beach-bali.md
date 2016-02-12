@@ -34,6 +34,10 @@ gallery:
   type: wide
   bgpad: 60%
 
+tags:
+- beaches
+- sunsets
+
 summary: Balangan Beach is a gorgeous surfing beach a little off the beaten path in Kuta, Bali.
 ---
 

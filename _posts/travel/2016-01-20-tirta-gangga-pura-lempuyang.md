@@ -33,6 +33,9 @@ gallery:
   comment: The entrance to the bottom temple of Pura Lempuyang. Situated on a mountain, there were six temples in various locations along the mountainside.
   type: half
 
+tags:
+- temples
+
 summary: We went to a water palace called Taman Tirta Gangga, and then to a mountain temple called Pura Lempuyang. Both places featured old, impressive stone work.
 ---
 

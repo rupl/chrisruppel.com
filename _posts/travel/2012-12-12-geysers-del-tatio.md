@@ -29,7 +29,7 @@ gallery:
   comment: Some of the formations were surreal in their beauty.
 - src: geysers-del-tatio-7.jpg
   alt: A small pool fed by geyser water.
-  comment: Instead of swimming in the normal tourist pool, our guide Hector took us to a remote spot that had a large stream of cold water also being fed by geyser water.
+  comment: Instead of swimming in the normal tourist pool, our guide Hector took us to a remote spot that had a large stream of cold water also being fed by mineral-rich geyser water.
   bgpos: 0 30%
 - src: geysers-del-tatio-8.jpg
   alt: A streak of life cutting through the desert.
@@ -45,6 +45,13 @@ gallery:
 - src: geysers-del-tatio-11.jpg
   alt: Man sitting on the edge of a canyon.
   comment: Hector took us to a canyon that he claimed had no name. Having lived in Arizona for 10 years he was fond of the Grand Canyon, and had named this canyon in its honor.
+
+tags:
+- deserts
+- mountains
+- tours
+- trekking
+- thermal baths
 
 summary: Our third day in San Pedro was the best of all! We visited the Geysers del Tatio, an extremely active area of geysers high up in the mountains.
 ---

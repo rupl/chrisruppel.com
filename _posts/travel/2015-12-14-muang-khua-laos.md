@@ -38,6 +38,10 @@ gallery2:
   type: wide
   bgpad: 60%
 
+tags:
+- hostels
+- night life
+
 summary: After our crazy bus ride into Laos, the first stop was luckily the small, laid-back town of Muang Khua. We stayed here several days to recharge and relax.
 ---
 

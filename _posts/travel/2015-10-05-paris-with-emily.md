@@ -35,6 +35,10 @@ gallery:
   type: wide
   bgpad: 50%
 
+tags:
+- art
+- tours
+
 summary: The first stop on our trip to Asia was actually Paris! My cousin Emily had just moved there and we wanted to get a visit in before leaving for 6 months.
 ---
 

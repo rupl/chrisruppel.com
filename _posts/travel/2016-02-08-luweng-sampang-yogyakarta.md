@@ -36,7 +36,7 @@ gallery:
   type: half
 
 tags:
-- motorbike
+- motorbikes
 - waterfalls
 
 summary: Our first day in Yogyakarta we took a nice motorbike ride through the jungle-covered mountains to a waterfall.

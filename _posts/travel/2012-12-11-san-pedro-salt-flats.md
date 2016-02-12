@@ -26,5 +26,10 @@ gallery:
   type: wide
   bgpos: 50% 0
 
+tags:
+- deserts
+- sunsets
+- tours
+
 summary: Our second day in San Pedro we took a tour to the salt flats. We swam in the Ojos del Salar and watched the sunset at Salares themselves.
 ---

@@ -15,13 +15,13 @@ layout: page
   <div id="trip-list" class="trip-list">
     <!-- Load some initial content -->
     {% for trip in site.categories.travel limit:2 %}
-      {% include gallery-list-item.html trip=trip site=site %}
+      {% include gallery-list-item.html trip=trip %}
     {% endfor %}
 
     <!-- The rest will come from JS using this template -->
     <template id="trip-list-lazyload">
       {% for trip in site.categories.travel offset:2 %}
-        {% include gallery-list-item.html trip=trip site=site %}
+        {% include gallery-list-item.html trip=trip %}
       {% endfor %}
     </template>
   </div>

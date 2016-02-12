@@ -41,6 +41,9 @@ gallery:
   type: half
 - caption: Credit — Lightning storm photo taken by <a href="https://www.facebook.com/longsonmuinebeachclub/">Hayden from Longson Mui Ne</a>
 
+tags:
+- beaches
+- hostels
 
 summary: With my leg almost healed, it was finally time to hit the beach! We chose Mui Ne and had a great time at an awesome resort. The people there are great and the staff are dedicated to showing us how to have a good time.
 ---

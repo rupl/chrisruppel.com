@@ -1,0 +1,49 @@
+//
+// Trip teasers (including primary gallery)
+//
+.teaser--gallery {
+  padding-bottom: 4em;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+//
+// Title-only teaser
+//
+.teaser--title {
+  .title {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 1.32em;
+    font-weight: 300;
+
+    @media (min-width: 1000px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  a {
+    font-weight: 400;
+  }
+
+  time {
+    color: rgba(#000, .5);
+  }
+}
+
+//
+// Quote teasers
+//
+.teaser--quote {
+  padding-bottom: 0;
+}

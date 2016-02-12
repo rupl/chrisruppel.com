@@ -35,6 +35,10 @@ gallery:
   comment: Our group photo of the cooking class, with Mikaela from CA. Should we be on TV or what?
   type: wide
 
+tags:
+- food
+- tours
+
 summary: Once of the only things we'd planned for Pai was a cooking class. We picked a good one including a trip to the market, and had lots of fun making common Thai dishes from scratch.
 ---
 

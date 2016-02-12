@@ -32,5 +32,9 @@ gallery:
   type: wide
   bgpad: 50%
 
+tags:
+- hostels
+- night life
+
 summary: After our adventures at Cave Lodge we stopped in Pai to just relax a bit. It's a small town with bustling tourism and a great vibe.
 ---

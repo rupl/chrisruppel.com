@@ -26,6 +26,10 @@ gallery:
   type: wide
   bgpad: 45%
 
+tags:
+- beaches
+- sunsets
+
 summary: Finally after several major changes of plans, we made it to Indonesia! This was our original inspiration for taking the trip and we're excited to spend some lazy days in the sun.
 ---
 

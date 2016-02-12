@@ -37,5 +37,10 @@ gallery:
   type: wide
   bgpad: 40%
 
+tags:
+- deserts
+- mountains
+- transport
+
 summary: The bus ride from Mendoza to San Pedro is long but the scenery is absolutely stunning. We stopped overnight in Salta, Argentina. Otherwise we just enjoyed the earth rolling by, slowly turning from lush green into arid desert as we approached San Pedro.
 ---

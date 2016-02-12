@@ -8,6 +8,11 @@ development: false
 exclude: [README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.lock, node_modules, .bundle, update, Procfile, vendor, index.js, bin, app.json]
 keep_files: [img]
 
+# Jekyll plugin config
+tag_page_layout: tags
+tag_page_dir: tags
+tag_permalink_style: pretty
+
 # Content types
 # - Set 'output' of any collection to `true` to generate individual pages.
 # collections:

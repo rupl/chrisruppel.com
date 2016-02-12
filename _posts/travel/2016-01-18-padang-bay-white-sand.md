@@ -34,6 +34,9 @@ gallery:
   alt: Twilight with palm tree silhouettes in the foreground.
   comment: We stayed until nightfall both days so far.
 
+tags:
+- beaches
+
 summary: Padang Bay is a "pass-through" town with a beautiful gem of a beach. It's not a secret beach or anything, but both days we went there were max 15 people during the day.
 ---
 

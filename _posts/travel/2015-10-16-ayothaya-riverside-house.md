@@ -42,6 +42,9 @@ links:
   text: Ayothaya Riverside House
   type: rest
 
+tags:
+- hostels
+
 summary: We stayed at the Ayothaya Riverside House and made many great new friends.
 ---
 

@@ -25,6 +25,9 @@ gallery:
   comment: The full effect.
   type: wide
 
+tags:
+- beaches
+
 summary: We had a sandcastle contest one night. Such a blast! Karin and I were declared the winners based on our excellent teamwork 💗
 ---
 

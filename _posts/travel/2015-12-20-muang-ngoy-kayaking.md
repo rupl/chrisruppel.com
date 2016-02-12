@@ -3,6 +3,7 @@ title: Kayaking to Nong Khiaw
 location:
   locality: Muang Ngoy
   country: Laos
+  prep: from
 layout: gallery
 
 gallery:
@@ -38,6 +39,11 @@ gallery:
   comment: We saw a spectacular sunset over Nong Khiaw as we ate dinner by the bridge!
   type: wide
   bgpad: 45%
+
+tags:
+- kayaking
+- transport
+- sunsets
 
 summary: We kayaked to Nong Khiaw instead of taking a boat. It was a nice four hour trip and we got to really enjoy the sights and sounds of the Ou River.
 ---

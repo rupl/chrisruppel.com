@@ -40,6 +40,9 @@ gallery:
   alt: A digital display covering an entire side of a building.
   comment: This building was called "The Cube" and it had one entire side made of HDTVs. It showed various advertisements for the most part, but occasionally something cool like this world almanac thing.
 
+tags:
+- history
+
 summary: We did a lot of walking around in Bangkok. Here are some of the things we saw over the course of a few days.
 ---
 

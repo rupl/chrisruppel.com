@@ -34,5 +34,9 @@ gallery:
   bgpad: 40%
   bgpos: 0 60%
 
+tags:
+- camping
+- trekking
+
 summary: We spent the 4th of July in Val Maggia, a stunning valley with superb camping.
 ---

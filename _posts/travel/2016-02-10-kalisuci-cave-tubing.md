@@ -30,7 +30,7 @@ gallery2:
   comment: They said I looked like a gnome 😁
 
 tags:
-- motorbike
+- motorbikes
 - tubing
 
 summary: We tried to go white-water tubing through a cave, but the rainy season got the best of us once again 😦

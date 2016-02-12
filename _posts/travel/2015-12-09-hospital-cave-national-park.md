@@ -38,6 +38,10 @@ gallery2:
   alt: Empty, bare, concrete hallway.
   comment: Most of the cave looked the same as this photo — lit by simple lighting, but bare.
 
+tags:
+- motorbikes
+- parks
+
 summary: Our first day exploring Cat Ba Island we did the easy tourist sights — the Hospital Cave and the National Park.
 ---
 

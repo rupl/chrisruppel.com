@@ -21,6 +21,10 @@ gallery:
   comment: Can you even spot these fish? They're practically invisible even in real life.
 - caption: My meager snorkeling pictures from our first trip in the morning.
 
+tags:
+- beaches
+- snorkeling
+
 summary: Our host at Goodtimes Bungalows took me snorkeling in the coral reef around Gili Air. It was one of the most incredible displays of nature I've ever seen!
 ---
 

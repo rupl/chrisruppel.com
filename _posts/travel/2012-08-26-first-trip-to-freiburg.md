@@ -45,6 +45,9 @@ gallery2:
   type: wide
   bgpad: 50%
 
+tags:
+- night life
+
 summary: Freiburg was my first stop after DrupalCon Munich. Little did I know it would be the best place on my trip through Europe! This day was the catalyst for my moving to Europe to be with Karin.
 ---
 

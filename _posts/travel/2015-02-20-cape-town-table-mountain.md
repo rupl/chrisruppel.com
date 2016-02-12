@@ -28,6 +28,7 @@ gallery:
 - caption: "Photos along the <em>India Venster</em> — or so we thought."
 
 gallery2:
+- gridtype: col-3
 - src: table-mountain-6.jpg
   alt: Facing the Indian ocean from the top of Table Mountain.
   comment: After a long hike we were rewarded with this spectacular view of the Indian Ocean.
@@ -38,6 +39,12 @@ gallery2:
   bgpos: 0 30%
   bgpad: 40%
 - caption: "Although we went very far off the trail, the day ended in success. We finished the long day with a beautiful view of Cape Town including <em>Lion's Head</em> mountain and Robben Island."
+
+tags:
+- danger
+- mountains
+- trekking
+- viewpoints
 
 summary: We hiked the India Venster on Table Mountain on our first day in South Africa. It was an unintentionally intense hike because we went off the trail.
 ---

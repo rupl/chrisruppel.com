@@ -11,6 +11,9 @@ gallery:
   comment: That's MISTER Christopher to you, buddy!
   type: wide
 
+tags:
+- advice
+
 summary: Lessons learned from getting medical treatment for a moderately infected wound in Pai, Thailand.
 ---
 

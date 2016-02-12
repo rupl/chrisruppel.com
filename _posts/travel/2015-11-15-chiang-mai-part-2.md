@@ -37,5 +37,9 @@ gallery:
   type: wide
   bgpad: 40%
 
+tags:
+- markets
+- parks
+
 summary: After a relaxing time in Pai, our Vietnamese visa date quickly came upon us. We went back to Chiang Mai for two nights before grabbing a flight to Ho Chi Minh City.
 ---

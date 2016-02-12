@@ -26,5 +26,8 @@ gallery:
   type: wide
   bgpad: 50%
 
+tags:
+- markets
+
 summary: A few glimpses into the markets of Muang Khua. It's a rural town with some unusual choices of cuisine. Warning, strange dead animals in this post!
 ---

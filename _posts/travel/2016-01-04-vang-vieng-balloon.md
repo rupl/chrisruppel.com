@@ -35,6 +35,10 @@ syndication:
 - type: Facebook
   href: https://www.facebook.com/chris.ruppel/posts/10105855380507458
 
+tags:
+- tours
+- sunsets
+
 summary: We got a bit of gift money from my mom with clear instructions&#58; do something extraordinary so we could share the memories.
 ---
 

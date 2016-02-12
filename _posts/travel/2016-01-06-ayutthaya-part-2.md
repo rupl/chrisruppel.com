@@ -27,6 +27,9 @@ gallery:
   type: wide
   bgpad: 40%
 
+tags:
+- hostels
+
 summary: Instead of staying in Bangkok we went back to visit Ya in Ayutthaya. We had a nice time singing songs and just relaxing at his wonderful guest house.
 ---
 
