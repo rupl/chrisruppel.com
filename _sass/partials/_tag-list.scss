@@ -2,6 +2,7 @@
 // Lists of tagged content
 //
 .tag-list {
+  clear: both;
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;

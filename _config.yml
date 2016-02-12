@@ -10,7 +10,7 @@ keep_files: [img]
 
 # Jekyll plugin config
 tag_page_layout: tags
-tag_page_dir: tags
+tag_page_dir: travel/tags
 tag_permalink_style: pretty
 
 # Content types
