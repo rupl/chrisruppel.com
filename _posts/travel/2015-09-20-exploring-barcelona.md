@@ -36,8 +36,5 @@ gallery:
 - src: exploring-barcelona-6.jpg
   alt: A hole from a demolished building with graffiti all over it.
 
-tags:
-- cities
-
 summary: We played hooky from the conference and explored the city one day.
 ---

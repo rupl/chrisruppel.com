@@ -40,9 +40,6 @@ gallery:
   comment: There were many pedestrian bridges like this one.
   type: half
 
-tags:
-- cities
-
 summary: Our first stop in Southeast Asia was Bangkok, the bustling capitol of Thailand. Bangkok is a busy, dirty city but it is filled with very friendly people who always greet you with a smile.
 ---
 

@@ -27,6 +27,7 @@ gallery:
   bgpos: 50% 0
 
 tags:
+- deserts
 - sunsets
 - tours
 

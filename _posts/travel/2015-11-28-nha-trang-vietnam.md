@@ -26,7 +26,6 @@ gallery:
   bgpad: 50%
 
 tags:
-- cities
 - beaches
 - thermal baths
 

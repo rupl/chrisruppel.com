@@ -41,7 +41,9 @@ gallery2:
 
 tags:
 - danger
+- mountains
 - trekking
+- viewpoints
 
 summary: We hiked the India Venster on Table Mountain on our first day in South Africa. It was an unintentionally intense hike because we went off the trail.
 ---

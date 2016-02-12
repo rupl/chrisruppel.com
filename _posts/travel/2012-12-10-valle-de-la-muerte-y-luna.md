@@ -50,6 +50,7 @@ gallery2:
   type: wide
 
 tags:
+- deserts
 - sunsets
 - tours
 - trekking

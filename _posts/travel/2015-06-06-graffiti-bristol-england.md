@@ -27,7 +27,6 @@ gallery:
   bgpad: 45%
 
 tags:
-- cities
 - art
 
 summary: I went to Frontend United in Bristol. They had some sweet graffiti.

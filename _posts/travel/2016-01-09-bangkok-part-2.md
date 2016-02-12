@@ -22,7 +22,7 @@ gallery:
   comment: We walked down a random street and I was tickled by this huuuge pile of auto parts.
 
 tags:
-- cities
+- temples
 
 summary: We made the best of our two days in Bangkok before flying to Singapore and Indonesia. Star Wars and massage, the good life!
 ---

@@ -33,7 +33,6 @@ gallery:
   bgpos: 0 20%
 
 tags:
-- cities
 - beer
 - food
 

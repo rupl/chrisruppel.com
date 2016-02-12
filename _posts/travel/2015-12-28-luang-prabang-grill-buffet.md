@@ -33,7 +33,6 @@ gallery:
   bgpad: 55%
 
 tags:
-- cities
 - food
 
 summary: We got to Luang Prabang late, but immediately found a great type of food stand that should be everywhere.

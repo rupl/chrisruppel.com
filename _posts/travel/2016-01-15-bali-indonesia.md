@@ -27,7 +27,6 @@ gallery:
   bgpad: 45%
 
 tags:
-- cities
 - beaches
 - sunsets
 

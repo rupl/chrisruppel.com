@@ -45,8 +45,8 @@ gallery:
   type: wide
 
 tags:
-- cities
 - temples
+- tours
 
 summary: Chiang Mai is the biggest city in the north, offering plenty of sights and activities. We had fun checking it out for a few days.
 ---

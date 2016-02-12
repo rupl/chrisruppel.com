@@ -38,7 +38,6 @@ gallery:
   bgpad: 40%
 
 tags:
-- cities
 - markets
 - parks
 
