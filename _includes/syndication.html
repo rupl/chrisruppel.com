@@ -1,5 +1,5 @@
 {% capture syndication %}
-{% if syndication.size > 0 %}
+{% if include.syndication.size > 0 %}
   <ul class="syndication">
   {% for link in include.syndication %}
     <li><a rel="syndication" class="u-syndication type-{{ link.type | downcase }}" href="{{ link.href }}">{{ link.type }}</a></li>
