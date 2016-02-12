@@ -8,7 +8,7 @@ if ('content' in document.createElement('template')) {
   // If <template> is not supported, the browser will just show everything.
   // When everything is working, it can load more using the button.
   if (template !== null) {
-    var content = template.content.querySelectorAll('.teaser');
+    var content = template.content.querySelectorAll('.trip--teaser');
     var trip_list = document.querySelector('#trip-list');
     var trip_count = content.length;
     var current_trip = 0;
