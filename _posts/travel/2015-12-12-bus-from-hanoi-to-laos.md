@@ -24,6 +24,7 @@ gallery2:
 
 tags:
 - advice
+- immigration
 - transport
 
 summary: We survived an epic chain of transport from Cat Ba to Laos, and even enjoyed it despite the madness that ensued.

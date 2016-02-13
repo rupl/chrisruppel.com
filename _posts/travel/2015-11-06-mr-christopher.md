@@ -13,6 +13,7 @@ gallery:
 
 tags:
 - advice
+- immigration
 
 summary: Lessons learned from getting medical treatment for a moderately infected wound in Pai, Thailand.
 ---
