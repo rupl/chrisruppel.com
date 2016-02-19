@@ -44,6 +44,7 @@ links:
 
 tags:
 - hostels
+- friends
 
 summary: We stayed at the Ayothaya Riverside House and made many great new friends.
 ---

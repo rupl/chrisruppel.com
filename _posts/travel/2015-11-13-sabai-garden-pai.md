@@ -43,6 +43,7 @@ links:
 
 tags:
 - hostels
+- friends
 
 summary: Sabai Garden was our home for two weeks during my recovery. It was such a peaceful, relaxing place filled with lovely people.
 ---
