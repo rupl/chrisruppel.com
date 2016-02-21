@@ -26,6 +26,11 @@ gallery:
   alt: Stone-carved faces and people within a wall.
   comment: The inner walls of the monument had these intricate carvings in all four corners.
 
+links:
+- type: rest
+  text: Six Degrees Jakarta
+  href: http://jakarta-backpackers-hostel.com/
+
 tags:
 - hostels
 - history
