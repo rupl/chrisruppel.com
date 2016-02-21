@@ -30,9 +30,9 @@
             Formula: 100vw - <main>-padding - gallery_padding - photo-margin
           {% endcomment %}
           calc(100vw - 2em - 8% - 2%)
-        {% elsif item.type == "half" %}
+        {% elsif item.type == "half" or item.type == "two-third" %}
           {% comment %}
-            Similar to wide, when image is half size, we know how much space it
+            Similar to wide, when image is half or 2/3 size, we know how much space it
             takes up on larger breakpoints without looking at gallery type.
 
             Formula: 50vw - <main>-padding - gallery_padding - photo-margins
