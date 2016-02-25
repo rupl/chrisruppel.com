@@ -26,7 +26,7 @@ app.use(helmet.csp({
   defaultSrc: ["'self'"],
   scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "'unsafe-eval'", "'unsafe-inline'"],
   styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "'unsafe-inline'"],
-  imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "data:"],
+  imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "data:", "chrisruppel-assets-eu1.s3.amazonaws.com"],
   connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com"],
   fontSrc:    ["'self'", 'data:'],
   objectSrc:  ["youtube.com"],

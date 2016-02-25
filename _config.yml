@@ -1,10 +1,13 @@
 name: Chris Ruppel
-url: https://chrisruppel.com
-permalink: /travel/:title/
 debug: false
 development: false
 
+# Environment URLs
+url: https://chrisruppel.com
+img-host: https://chrisruppel-assets-eu1.s3.amazonaws.com
+
 # Jekyll config
+permalink: /travel/:title/
 exclude: [README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.lock, node_modules, .bundle, update, Procfile, vendor, index.js, bin, app.json]
 keep_files: [img]
 

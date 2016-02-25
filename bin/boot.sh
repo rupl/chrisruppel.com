@@ -11,7 +11,9 @@
 # npm rebuild node-sass
 
 ## Image resizing spun off into background to avoid blocking web process
-gulp image-resize &
+##
+## Disabled when all the image hosting was moved to S3
+# gulp image-resize &
 
 ## Compile Jekyll
 gulp jekyll-deploy
