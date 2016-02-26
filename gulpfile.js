@@ -246,13 +246,13 @@ gulp.task('image-photosphere', false, function () {
 
 // SVG icons
 gulp.task('image-svg', false, function () {
-  return gulp.src(['_img/svg/*'])
-    .pipe(changed('_site/img/svg'))
+  return gulp.src(['_svg/*'])
+    .pipe(changed('svg'))
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}]
     }))
-    .pipe(gulp.dest('_site/img/svg'));
+    .pipe(gulp.dest('svg'));
 });
 
 
@@ -291,7 +291,7 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
 // run this as postinstall after node buildpack is set up. Both processes run
 // inside bin/boot.sh now.
 // -----------------------------------------------------------------------------
-gulp.task('build-deploy', 'Do a partial build to prep for deploy.', ['sass', 'js']);
+gulp.task('build-deploy', 'Do a partial build to prep for deploy.', ['sass', 'js', 'image-svg']);
 
 
 // -----------------------------------------------------------------------------

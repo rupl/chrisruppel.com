@@ -4,6 +4,7 @@ _site
 img
 css
 js
+svg
 _includes/main.min.css
 /service-worker.js
 
