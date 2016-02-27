@@ -3,7 +3,6 @@ title: Sunrise to sunset
 location:
   region: Koh Lipe
   country: Thailand
-  prep: on
 layout: gallery
 
 gallery:
@@ -13,8 +12,8 @@ gallery:
   comment: We got up early a couple days to see the sunrise.. of course the best view is from sunrise beach.
   type: half
 - src: koh-lipe-beaches-2.jpg
-  alt: The early-morning sun shining over the ocean with boats on the shore.
-  comment: The sun shining over the fishing boats on sunrise beach.
+  alt: The sun moments before disappearing under the ocean horizon.
+  comment: Seeing the sun off from the sunset beach.
   type: half
 - src: koh-lipe-beaches-3.jpg
   alt: Blue waves breaking over the sand.
@@ -26,13 +25,9 @@ gallery:
   alt: People smiling into camera while swimming in ocean.
   comment: We got new polarized sunglasses right before coming here and it was a great decision. The sun is very powerful during the day.
 - src: koh-lipe-beaches-6.jpg
-  alt: The sunset seen as a reflection off of a sunglasses lens.
-  comment: Karin watches the sunset, now from the sunset beach.
-  type: half
-- src: koh-lipe-beaches-7.jpg
-  alt: The sun moments before disappearing under the ocean horizon.
-  comment: Goodbye, sun. Until tomorrow!
-  type: half
+  alt: Panoramic photo of Sunrise beach in the afternoon.
+  comment: We could stare at this all day.
+  type: wide
 
 tags:
 - beaches

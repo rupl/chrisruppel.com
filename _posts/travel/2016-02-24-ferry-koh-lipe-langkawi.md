@@ -15,10 +15,6 @@ gallery:
   alt: Shallow blue waters and white sand beach with fishing boats anchored in place.
   comment: We hurried to find a guesthouse then enjoy the last two hours of our first afternoon on Koh Lipe.
   bgpad: 60%
-- src: koh-lipe-ferry-3.jpg
-  alt: Panoramic photo of Sunrise beach in the afternoon.
-  comment: Everyone is an ace photographer on Sunrise beach!
-  type: wide
 
 tags:
 - beaches
