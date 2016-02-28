@@ -48,7 +48,7 @@ First it was a starfish that was 40cm wide. Next it was a growth of coral that w
 
 But after that I stopped focusing immediately downward and realized what was happening: we were entering the coral reef. It was clear once we passed the same type of coral as before, but this time it was the size of a car! I couldn't believe it. I got so excited I had to simply focus on breathing through the snorkel for a moment so I could keep my face down and look at the reef.
 
-We kept swimming and saw so many wonderful things: coral formations two stories tall, schools of fish swirling around and even following us, starfish colored the deepest blue imagineable, lionfish and eels hiding in the shadows, anemone that disappear into rocks when you reach toward them, and two giant turtles slowly swimming around just like us.
+We kept swimming and saw so many wonderful things: coral formations two stories tall, schools of fish swirling around and even following us, starfish colored the deepest blue imagineable, lionfish and eels hiding in the shadows, giant clams that disappear into rocks when you reach toward them, and two massive turtles slowly swimming around just like us.
 
 Somehow in just this one coral reef, mother nature managed to produce pretty much every color of the rainbow. I was in awe as we moved along, face rarely coming above water only when necessary to wipe the mask again.
 
