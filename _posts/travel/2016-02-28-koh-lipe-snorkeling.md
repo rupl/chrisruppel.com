@@ -8,7 +8,7 @@ gallery:
 - gridtype: col-2-short
 - src: koh-lipe-snorkeling-1.jpg
   alt: Man smiling into camera with ocean and islands in the background.
-  comment: The establishing shot. Our goal was to swim to the island in the middle-right of this photo.
+  comment: The establishing shot. Our goal was to swim to Koh Kra, the island in the middle-right of this photo.
   type: wide
   bgpad: 40%
 - src: koh-lipe-snorkeling-2.jpg
@@ -59,7 +59,7 @@ Cut to the next day, Karin and I went for our last breakfast at a swanky spot on
 
 Her friend left on the morning ferry and she was having a "downtime day" before going diving the next two days. We asker her if she wanted our snorkel masks since we're flying to Myanmar and don't really anticipate needing them for the rest of our travels. She said sure, picked one of the two, and then asked if we wanted to use them one last time.
 
-Karin was happy to sun herself on the beach but I joined her snorkeling. You can see this little island from the Sunrise beach and it looks like a fantastic snorkel spot, so we set our sights on it and swam out. Mirthe was equipped with a GoPro so luckily we got some photos of this dive!
+Karin was happy to sun herself on the beach but I joined her snorkeling. You can see Koh Kra, a tiny island from the Sunrise beach, and it looks like a fantastic snorkel spot, so we set our sights on it and swam out. Mirthe was equipped with a GoPro so luckily we got some photos of this dive!
 
 {% include gallery.html gallery=page.gallery %}
 
