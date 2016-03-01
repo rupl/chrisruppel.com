@@ -19,11 +19,11 @@
       margin: 0 1em 1em;
     }
 
-    .btn--next {
+    .btn--prev {
       order: 2;
       flex-grow: 2;
     }
-    .btn--prev {
+    .btn--next {
       order: 3;
       flex-grow: 2;
     }
@@ -73,7 +73,7 @@
   }
 }
 
-.btn--prev {
+.btn--next {
   &::after {
     content: '\00a0 \02192';
   }
@@ -82,7 +82,7 @@
   }
 }
 
-.btn--next {
+.btn--prev {
   &::before {
     content: '\02190 \00a0';
   }

@@ -12,6 +12,7 @@ permalink: /about/site/
 * Express - server for production site.
 * GitHub - code hosting and deployment.
 * Heroku - web hosting and deployment.
+* S3 - image hosting.
 
 ### Content
 

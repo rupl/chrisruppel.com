@@ -58,6 +58,7 @@ gallery:
 tags:
 - tours
 - trekking
+- waterfalls
 
 syndication:
 - type: Facebook

@@ -6,7 +6,7 @@ layout: page
   <header>
     <h1 class="title p-name">{{ page.title }}</h1>
     <h2 class="subtitle">
-      <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d 12:00:00" }}">{{ page.date | date: "%b %d, %Y" }}</time>
+      <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%b %d, %Y' }}</time>
       {% if page.location %}
         <span class="where p-location h-adr">
           {% include location-microformat.html location=page.location %}
@@ -39,12 +39,12 @@ layout: page
   {% endif %}
 
   <div class="go">
-    {% if page.next.url %}
-      <a class="btn btn--next" href="{{ page.next.url }}" title="{{ page.next.title }}{% if page.next.location %} {% include location.html location=page.next.location %}{% endif %}">Next trip</a>
+    {% if page.previous_in_category.url %}
+      <a class="btn btn--prev" href="{{ page.previous_in_category.url }}" title="{{ page.previous_in_category.title }}{% if page.previous_in_category.location %} {% include location.html location=page.previous_in_category.location %}{% endif %}">Prev trip</a>
     {% endif %}
     <a class="btn btn--back" href="/travel/">Travel</a>
-    {% if page.previous.url %}
-      <a class="btn btn--prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}{% if page.previous.location %} {% include location.html location=page.previous.location %}{% endif %}">Prev trip</a>
+    {% if page.next_in_category.url %}
+      <a class="btn btn--next" href="{{ page.next_in_category.url }}" title="{{ page.next_in_category.title }}{% if page.next_in_category.location %} {% include location.html location=page.next_in_category.location %}{% endif %}">Next trip</a>
     {% endif %}
     {% if page.comments %}
       <a id="comments-link" class="btn btn--comments" href="{{ site.url }}{{ page.url }}#disqus_thread" onclick="return loadDisqus(event);">Loading comment count...</a>
@@ -55,10 +55,5 @@ layout: page
     {% include disqus.html %}
   {% endif %}
 
-  <div class="trip-meta">
-    <label for="uid">URL:</label>
-    <input id="uid" class="u-url url u-uid uid bookmark" type="url" size="52" readonly value="{{ site.url }}{{ page.url }}">
-    {% include filed.html categories=page.categories tags=page.tags %}
-    {% include syndication.html syndication=page.syndication %}
-  </div>
+  {% include trip-meta.html %}
 </article>

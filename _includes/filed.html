@@ -1,7 +1,7 @@
 {% capture filed %}
   <a rel="author" class="p-author h-card" href="{{ site.url }}/about/">Chris</a> filed this <strong class="p-category">{{ include.categories }}</strong> entry
   {% if include.tags.size > 0 %}
-    and tagged it
+    under
     <span class="tags">
       {% for tag in include.tags %}
         <a rel="tag" class="p-category" href="/travel/tags/{{ tag | replace: ' ','-' | downcase }}/">{{ tag | downcase }}</a>

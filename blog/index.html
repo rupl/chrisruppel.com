@@ -1,0 +1,38 @@
+---
+title: Blog
+permalink: /blog/
+layout: page
+---
+
+<section aria-labelledby="blog">
+  <h1 id="blog" class="title title--page">Blog</h1>
+  <div class="elsewhere">
+    <a class="alt" href="{{ site.url }}/blog/archives/">(see archives)</a>
+  </div>
+
+  <p class="intro summary">One sentence describing my blog.</p>
+
+  <div id="blog-list" class="blog-list">
+    <!-- Load some initial content -->
+    {% for post in site.categories.blog limit:5 %}
+      <article>
+        <header>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">Posted on {{ post.date | date: '%d %B, %Y' }}</time>
+        </header>
+
+        <p class="summary">
+          {% if post.summary %}
+            {{ post.summary }}
+          {% else %}
+            {{ post.content | truncatewords: 50, '...' | strip_html }}
+          {% endif %}
+        </p>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div class="go">
+    <a class="btn btn--back" href="/">Back to the front</a>
+  </div>
+</section>
