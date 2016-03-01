@@ -1,0 +1,37 @@
+---
+layout: page
+---
+
+<article class="blog h-entry">
+  <header>
+    <h1 class="title p-name">{{ page.title }}</h1>
+    <h2 class="subtitle">
+      <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">Published on {{ page.date | date: '%B %d, %Y' }}</time>
+    </h2>
+  </header>
+
+  <aside class="intro summary p-summary">{{ page.summary }}</aside>
+
+  <div class="story e-content">
+    {{ content }}
+    <div class="the-end" aria-label="The End."></div>
+  </div>
+
+  {% if page.links != null %}
+  <aside class="links">
+    <h2 id="links" class="element-invisible">Links</h2>
+      <p>If you liked this article check these links out:</p>
+      <ul>
+        {% for link in page.links %}
+          <li><a class="type-{{ link.type }}" href="{{ link.href }}">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
+  </aside>
+  {% endif %}
+
+  {% if page.comments %}
+    {% include disqus.html %}
+  {% endif %}
+
+  {% include trip-meta.html %}
+</article>
