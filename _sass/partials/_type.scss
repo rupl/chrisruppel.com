@@ -17,9 +17,12 @@ abbr[lang] {
   font-style: italic;
 }
 
-// Defaults for Trip content
-.story {
+h3 {
+  @include font-oswald;
+}
 
+// This class is on the main content area of any page
+.e-content {
   // Spruce up the lists a bit.
   ul, ol {
     li {
