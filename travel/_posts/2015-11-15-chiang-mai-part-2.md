@@ -38,6 +38,7 @@ gallery:
   bgpad: 40%
 
 tags:
+- city walking
 - markets
 - parks
 

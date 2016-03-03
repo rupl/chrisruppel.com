@@ -26,6 +26,7 @@ gallery:
   type: wide
 
 tags:
+- city walking
 - history
 
 summary: My mom and I showed Karin around the Fort Worth Stockyards when we visited her before our trip to <abbr title="Southeast">S.E.</abbr> Asia. She had a blast checking out all them there Texans.

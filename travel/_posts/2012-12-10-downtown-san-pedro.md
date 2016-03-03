@@ -37,6 +37,7 @@ gallery:
 - caption: San Pedro was a beautiful little town. We loved walking through it each day.
 
 tags:
+- city walking
 - deserts
 
 summary: The town of San Pedro is quite small, but full of interesting sights. I expected it to be less modern given how remote it is, but the bustling tourism supports their economy very well.
