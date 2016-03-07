@@ -108,6 +108,19 @@ img {
   }
 }
 
+blockquote {
+  font-style: italic;
+  opacity: .8;
+  padding: .1em 1em;
+  margin: 0 .5em;
+  background: rgba(#000, .1);
+
+  @media (min-width: 600px) {
+    margin: 0 1em 0 2em;
+  }
+
+}
+
 .the-end {
   margin: 1.25em 0;
   padding: 0;

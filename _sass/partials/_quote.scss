@@ -6,6 +6,7 @@ blockquote.quote {
   @include font-oswald;
   margin-bottom: 2em;
   opacity: .6;
+  background-color: transparent;
 
   p {
     font-size: 1.4em;
@@ -30,6 +31,7 @@ blockquote.quote {
       content: '\201d';
     }
   }
+
   cite {
     font-size: 0.9em;
   }
