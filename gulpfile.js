@@ -276,7 +276,9 @@ gulp.task('bs', 'Run dev tasks:', ['build-dev', 'browser-sync', 'watch'], functi
 gulp.task('watch', 'Watch various files for changes and re-compile them.', function() {
   log(c.yellow('Waiting for changes...'));
   gulp.watch('_sass/**/*.scss', ['sass']);
-  gulp.watch('_img/**/*', ['image-resize']);
+  gulp.watch('_img/photosphere/*', ['image-photosphere']);
+  gulp.watch('_img/travel/*', ['image-original', 'image-320', 'image-640']);
+  gulp.watch('_svg/*', ['image-svg']);
   gulp.watch('_js/threejs/*', ['js-sphere']);
   gulp.watch('_js/sw/*', ['js-sw']);
   gulp.watch('_js/*', ['js-main']);
