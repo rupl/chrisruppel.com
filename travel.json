@@ -8,12 +8,20 @@ layout: null
       "url": "{{ site.url }}{{ trip.url }}",
       "layout": "{{ trip.layout }}",
       "title": "{{ trip.title | escape }}",
-      "location": "{{ trip.location | escape }}",
+      "location": {
+        "locality": "{{ trip.location.locality | escape }}",
+        "region": "{{ trip.location.region | escape }}",
+        "country": "{{ trip.location.country | escape }}",
+        "place": "{{ trip.location.place | escape }}",
+        "prep": "{{ trip.location.prep | escape }}"
+      },
       "date": "{{ trip.date | escape }}",
-      {% if page.map.location && page.map.zoom %}
+      {% if trip.map %}
         "map": {
           "location": "{{ trip.map.location | escape }}",
-          "zoom": "{{ trip.map.zoom }}"
+          "zoom": "{{ trip.map.zoom }}",
+          "kml": "{{ trip.map.kml | escape }}",
+          "style": "{{ trip.map.style | escape }}"
         },
       {% else %}
         "map": null,
