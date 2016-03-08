@@ -29,7 +29,7 @@ gallery:
 tags:
 - temples
 
-summary: Our second night in Yangon we visited the biggest temple in Myanmar. It has a long history dating back to the 11th centure and houses many relics.
+summary: Our second night in Yangon we visited the biggest temple in Myanmar. It has a long history dating back to the 11th century and houses many relics.
 ---
 
 We saw this place from afar during our taxi ride from the airport and decided we should visit at night. It's quite an attraction, pulling huge crowds that had the exact same idea as we did: shiny gold + night time = pretty.

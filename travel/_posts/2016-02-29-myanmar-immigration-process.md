@@ -98,3 +98,7 @@ Your departure card is the left section of the second form (the section containi
 ### Step 6: Enjoy Burma!
 
 It's a wonderful, bustling country filled with delightful people. It will certainly be different than most countries you've been to so hang on and enjoy the ride!
+
+## Alternative Visas
+
+If you happen to be in Bangkok, you can go directly to the Myanmar embassy and get a visa in person (you'll have to leave your passport with them for a few days). Though it's a bit more work to physically go in person, **the embassy-issued visa lets you cross land borders in addition to airport immigration**, avoiding costly flights and allowing more flexibility in your travel.
