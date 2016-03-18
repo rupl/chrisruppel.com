@@ -13,7 +13,7 @@
     "concurrent-transform": "^1.0.0",
     "express": "^4.13.3",
     "express-sslify": "^1.0.1",
-    "fg-loadcss": "^0.2.4",
+    "fg-loadcss": "^1.2.0",
     "fontfaceobserver": "^1.6.3",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
