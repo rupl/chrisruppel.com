@@ -1,4 +1,4 @@
-<article class="trip--teaser teaser--gallery{% if include.trip.quote.text %} teaser--quote{% endif %}" id="{{ include.trip.path | replace: '_posts/travel/','' | replace: '.md','' }}">
+<article class="trip--teaser teaser--gallery{% if include.trip.quote.text %} teaser--quote{% endif %}" id="{{ include.trip.path | replace: 'travel/_posts/','' | replace: '.md','' }}">
   <h2 class="title">
     <time datetime="{{ include.trip.date | date: '%Y-%m-%d' }}">{{ include.trip.date | date: "%b %d, %Y" }}</time>
     <a rel="bookmark" href="{{ site.url }}{{ include.trip.url }}">{{ include.trip.title }}</a>
