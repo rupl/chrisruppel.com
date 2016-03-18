@@ -39,6 +39,10 @@
       order: 5;
       flex-basis: 100%
     }
+    .btn--offline {
+      order: 6;
+      flex-basis: 100%
+    }
   }
 
   abbr {
@@ -51,6 +55,7 @@
   display: block;
   text-align: center;
 
+  font-size: inherit;
   margin: 1em 0;
   padding: 1em;
   border: 1px solid #ddd;
@@ -115,9 +120,22 @@
   }
 }
 
+.btn--offline {
+  &::before {
+    content: '\01f4be \00a0';
+    position: relative;
+    top: 2px;
+  }
+  &:hover::before {
+    animation: bounce-left .42s ease-in-out;
+  }
+}
+
 .btn--comments {
   &::before {
     content: '\1f4ac \00a0';
+    position: relative;
+    top: 1px;
   }
   &:hover::before {
     animation: bounce-left .42s ease-in-out;
