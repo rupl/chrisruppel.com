@@ -1,5 +1,12 @@
 {% capture location_full %}
-  {% if include.location.prep %}{{ include.location.prep }} {% else %}in {% endif %}
+  {% if include.prep != null %}
+    {{ include.prep }}
+  {% elsif include.prep == null and include.location.prep != null %}
+    {{ include.location.prep }}
+  {% else %}
+    in
+  {% endif %}
+
   {% if include.location.locality %}
     <span class="h-locality">{{ include.location.locality }}</span>{% if include.location.region or include.location.country %}, {% endif %}
   {% endif %}

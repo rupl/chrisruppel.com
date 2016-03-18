@@ -1,5 +1,12 @@
 {% capture location_full %}
-{% if include.location.prep %}{{ include.location.prep }} {% else %}in {% endif %}
+{% if include.prep != null %}
+  {{ include.prep }}&nbsp;
+{% elsif include.prep == null and include.location.prep != null %}
+  {{ include.location.prep }}&nbsp;
+{% else %}
+  in&nbsp;
+{% endif %}
+
 {% if include.location.locality %}
 {{ include.location.locality }}{% if include.location.region or include.location.country %}, {% endif %}
 {% endif %}
