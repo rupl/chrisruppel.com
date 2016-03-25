@@ -52,6 +52,6 @@ If you ever find yourself in Pai, skip all the hostels in the travel books and g
 
 It's the type of place where you always cook extra and offer dinner to whoever is around. Someone is always strumming on a guitar, and if you have a stack of books to read, they will be gone in no time.
 
-We met a lot of great people here and were really sad to say our goodbyes, but that's always a part of it. As Yan the owner said: <em>people come, people go ¯\\\_(ツ)\_/¯</em>.
+We met a lot of great people here and were really sad to say our goodbyes, but that's always a part of it. As Jong the owner said: <em>people come, people go ¯\\\_(ツ)\_/¯</em>.
 
 We were happy to have our time here and will always remember to go _slowly slowly_.
