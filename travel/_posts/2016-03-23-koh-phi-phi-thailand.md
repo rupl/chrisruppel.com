@@ -3,7 +3,7 @@ title: Ending with the beach
 location:
   locality: Koh Phi Phi
   country: Thailand
-  prep: on
+  prep: "on"
 layout: gallery
 
 gallery:
