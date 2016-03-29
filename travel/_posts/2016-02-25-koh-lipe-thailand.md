@@ -3,6 +3,7 @@ title: Sunrise to sunset
 location:
   region: Koh Lipe
   country: Thailand
+  prep: "on"
 layout: gallery
 
 gallery:
