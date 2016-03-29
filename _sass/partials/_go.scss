@@ -71,6 +71,12 @@
   &:focus {
     background-image: linear-gradient(to top, #fff, #eee);
   }
+
+  // Set some defaults to allow animating of pseudos
+  &::before,
+  &::after {
+    display: inline-block;
+  }
 }
 
 .btn--next {
