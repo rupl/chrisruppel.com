@@ -23,6 +23,7 @@ gallery:
 
 tags:
 - beaches
+- islands
 - snorkeling
 
 summary: Our host at Goodtimes Bungalows took me snorkeling in the coral reef around Gili Air. It was one of the most incredible displays of nature I've ever seen!

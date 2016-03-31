@@ -32,6 +32,7 @@ gallery:
 
 tags:
 - beaches
+- islands
 - sunsets
 
 summary: Koh Lipe is a small, gorgeous postcard of an island offering many beaches and beautiful views of both sunrise and sunset.

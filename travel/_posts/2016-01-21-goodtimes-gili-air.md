@@ -47,6 +47,7 @@ gallery:
 tags:
 - boats
 - hostels
+- islands
 
 summary: Instead of going to the main island of Lombok, we chose a tiny paradise just off the coast called Gili Air. It is a 1km-wide island with quaint bungalows and charming restaurants.
 ---

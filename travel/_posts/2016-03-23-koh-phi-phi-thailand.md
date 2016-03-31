@@ -21,6 +21,7 @@ gallery:
 
 tags:
 - beaches
+- islands
 
 summary: We decided to finish our trip off with a relaxing week at the beaches of south Thailand. Our first stop was Koh Phi Phi.
 ---

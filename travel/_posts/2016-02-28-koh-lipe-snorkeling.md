@@ -44,6 +44,7 @@ gallery2:
 
 tags:
 - beaches
+- islands
 - snorkeling
 
 summary: I went on an impromptu snorkeling dive on our last day in Koh Lipe and saw some really fantastic sea life.

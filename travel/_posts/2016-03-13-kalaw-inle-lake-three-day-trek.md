@@ -9,10 +9,8 @@ map:
   style: mapbox.satellite
 
 tags:
-- sunsets
 - trekking
 - tours
-- viewpoints
 
 summary: The full path of our three-day trek from Kalaw to Inle Lake.
 ---
