@@ -13,7 +13,7 @@ gallery:
   comment: The scenery as our ferry from Phuket arrived at Phi Phi.
 - src: koh-phi-phi-2.jpg
   alt: Thai longboats docked at the beach.
-  comment: The familiar Thai longboats tell you one thing&#58; it's beach time!
+  comment: The familiar Thai longboats tell you one thing... it's beach time!
 - src: koh-phi-phi-3.jpg
   alt: Panoramic of the Koh Phi Phi south beach.
   comment: The beach is marked off on both sides by steep mountains.
