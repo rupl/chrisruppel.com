@@ -289,11 +289,10 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
 // -----------------------------------------------------------------------------
 // Build site for deployment to live server.
 //
-// No longer running image-resize or Jekyll as part of build-deploy so we can
-// run this as postinstall after node buildpack is set up. Both processes run
-// inside bin/boot.sh now.
+// No longer running Jekyll as part of build-deploy in order to run this as
+// postinstall after node buildpack is set up. It runs inside bin/boot.sh now.
 // -----------------------------------------------------------------------------
-gulp.task('build-deploy', 'Do a partial build to prep for deploy.', ['sass', 'js', 'image-svg']);
+gulp.task('build-deploy', 'Do a partial build to prep for deploy.', ['sass', 'js', 'image-svg', 'image-photosphere']);
 
 
 // -----------------------------------------------------------------------------
