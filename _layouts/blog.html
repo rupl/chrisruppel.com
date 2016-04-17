@@ -6,7 +6,7 @@ layout: page
   <header>
     <h1 class="title p-name">{{ page.title }}</h1>
     <h2 class="subtitle">
-      <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">Published on {{ page.date | date: '%B %d, %Y' }}</time>
+      <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%B %d, %Y' }}</time>
     </h2>
   </header>
 
@@ -28,6 +28,19 @@ layout: page
       </ul>
   </aside>
   {% endif %}
+
+  <div class="go">
+    {% if page.previous_in_category.url %}
+      <a class="btn btn--prev" href="{{ page.previous_in_category.url }}" title="{{ page.previous_in_category.title }}{% if page.previous_in_category.location %} {% include location.html location=page.previous_in_category.location %}{% endif %}">Prev trip</a>
+    {% endif %}
+    <a class="btn btn--back" href="/blog/">Blog</a>
+    {% if page.next_in_category.url %}
+      <a class="btn btn--next" href="{{ page.next_in_category.url }}" title="{{ page.next_in_category.title }}{% if page.next_in_category.location %} {% include location.html location=page.next_in_category.location %}{% endif %}">Next trip</a>
+    {% endif %}
+    {% if page.comments %}
+      <a id="comments-link" class="btn btn--comments" href="{{ site.url }}{{ page.url }}#disqus_thread" onclick="return loadDisqus(event);">Loading comment count...</a>
+    {% endif %}
+  </div>
 
   {% if page.comments %}
     {% include disqus.html %}
