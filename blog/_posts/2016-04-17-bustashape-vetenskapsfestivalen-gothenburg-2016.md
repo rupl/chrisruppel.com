@@ -33,3 +33,5 @@ Bustashape allows people to create art together on a digital canvas using whatev
 The results were astounding! Understandably, most peoples' initial reaction was confusion, and many shapes were randomly pushed about. But out of chaos came something beautiful. Here are a few posters we created from all the various works that people made over the course of the festival:
 
 {% include gallery.html gallery=page.gallery %}
+
+<ins class="update" datetime="2016-04-19"><a href="http://afranoubarzadeh.se/bustashape_vetfest.html">Read Afra's thoughts on the event!</a></ins>
