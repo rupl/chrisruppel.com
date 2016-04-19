@@ -32,6 +32,19 @@ h3 {
     }
   }
 
+  // style updates
+  .update {
+    font-size: .9em;
+    font-style: italic;
+    color: #444;
+    text-decoration: none;
+
+    &::before {
+      content: "Update " attr(datetime) ": ";
+      font-weight: 700;
+    }
+  }
+
   // Subdue stricken text
   del {
     display: inline-block;

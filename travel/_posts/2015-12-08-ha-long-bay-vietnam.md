@@ -35,4 +35,4 @@ tags:
 summary: We kinda got scammed into a tour through Ha Long Bay, but it's a pretty nice place to be tricked into staying all afternoon.
 ---
 
-<ins class="update" datetime="2016-02-11"><strong>Update 2016-02-11:</strong> after scanning TripAdvisor thoroughly, we found the name of the fake company: "Castaway Island" — so if you see that name on the boat, be prepared!</ins>
+<ins class="update" datetime="2016-02-11">After scanning TripAdvisor thoroughly, we found the name of the fake company: "Castaway Island" — so if you see that name on the boat, be prepared!</ins>
