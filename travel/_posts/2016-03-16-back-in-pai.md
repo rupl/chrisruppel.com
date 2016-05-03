@@ -6,13 +6,15 @@ location:
 layout: gallery
 
 gallery:
-- gridtype: col-2
-- src: pai-p2-1.jpg
-  alt: Colorful stage with reggae band playing.
-  comment: Ben, one of our friends at Sabai, played a reggae show one night.
+- gridtype: col-3
 - src: pai-p2-2.jpg
   alt: Yarn wind ornament hanging on a bungalow porch.
   comment: The season was quite different but staying in the sabai bungalows felt very familiar.
+- src: pai-p2-1.jpg
+  alt: Colorful stage with reggae band playing.
+  comment: Ben, one of our friends at Sabai, played a reggae show one night.
+- src: pai-p2-4.jpg
+  alt: Wall mural reading 'slowly slowly'
 - src: pai-p2-3.jpg
   alt: First-person perspective from inside a hammock.
   comment: Quiet afternoons filled with books were a great way to puncuate all the hustle and bustle of Myanmar.
