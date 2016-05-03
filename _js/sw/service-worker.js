@@ -8,7 +8,7 @@ importScripts('/js/cache-polyfill.js');
 
 // Config
 var SW = {
-  cache_version: 'main_v1.3.1',
+  cache_version: 'main_v1.4.0',
   offline_assets: [
     '/',
     '/offline/',
@@ -63,6 +63,10 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.map(function(cacheName) {
+          // TODO: make this conditional compound, checking both the cache
+          //       version and also any caches with the prefix used in the
+          //       fetch listener. We don't want to delete content that the
+          //       visitor opted into.
           if (expectedCacheNames.indexOf(cacheName) == -1) {
             // If this cache name isn't present in the array of "expected"
             // cache names, then delete it.
@@ -85,25 +89,54 @@ self.addEventListener('fetch', function(event) {
   var reqPath = reqLocation.pathname;
 
   // Consolidate some conditions for re-use.
-  var requestIsHTML = event.request.headers.get('accept').includes('text/html');
+  var requestIsHTML = event.request.headers.get('accept').includes('text/html')
+                   && event.request.method === 'GET';
   var requestIsAsset = /^(\/css\/|\/js\/)/.test(reqPath);
 
-  // Offline HTML
+  // Find saved article caches.
+
+
+  // Saved articles
   //
-  // Intercept offline requests to uncached URLs and serve offline page instead.
+  // First, we check to see if the user has explicitly cached this HTML content.
+  // If no cached page is found, we fallback to the offline page.
   if (
-    requestIsHTML &&
-    event.request.method === 'GET' &&
-    SW.offline_assets.indexOf(reqPath) === -1
+    requestIsHTML
   ) {
-    // If the above conditional is met, the user loaded a URL that is not in our
-    // SW cache, so just return the Offline content.
     event.respondWith(
       fetch(event.request).catch(function(error) {
-        return caches.open(SW.cache_version).then(function(cache) {
-          console.info('Fetch listener served offline page.');
-          return cache.match('/offline/');
-        });
+        // First, we try looking through the user's saved articles. If we find
+        // one, we serve the article then update the cache in the background.
+        return caches.open('chrisruppel-offline--' + reqPath).then(function(cache) {
+          console.info('Fetch listener displayed a saved article: ' + reqPath);
+          return cache.match(reqPath);
+        }).catch(function(error) {
+          // If the script gets this far, we are loading a URL that is not in
+          // the user's saved article list. Just return the Offline page.
+          return caches.open(SW.cache_version).then(function(cache) {
+            console.info('Fetch listener served offline page.');
+            return cache.match('/offline/');
+          });
+        })
+      })
+    );
+  }
+
+  // MVW pages
+  //
+  // These pages constitute the "minimum viable website" and are all cached
+  // during the SW installation. They can be reliably served from the cache
+  // if the SW is activated.
+  else if (
+    requestIsHTML &&
+    SW.offline_assets.indexOf(reqPath) === -1
+  ) {
+    event.respondWith(
+      // Try the cache
+      caches.match(event.request).then(function(response) {
+        return response || fetch(event.request);
+      }).catch(function(error) {
+        return caches.match('/offline/');
       })
     );
   }
