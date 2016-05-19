@@ -36,7 +36,7 @@ gallery:
   bgpad: 50%
 
 tags:
-- art
+- artwork
 - tours
 
 syndication:

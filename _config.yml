@@ -12,8 +12,8 @@ exclude: [README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.loc
 keep_files: [img]
 
 # Jekyll plugin config
-tag_page_layout: tags
-tag_page_dir: travel/tags
+tag_page_layout: tag-list
+tag_page_dir: tags
 tag_permalink_style: pretty
 
 # Content types
@@ -36,6 +36,11 @@ defaults:
       comments: true
       meta: true
   - scope:
+      type: "pages"
+      path: "travel"
+    values:
+      category: travel
+  - scope:
       type: "posts"
       path: "blog"
     values:
@@ -45,9 +50,17 @@ defaults:
       comments: true
       meta: true
   - scope:
+      type: "pages"
+      path: "blog"
+    values:
+      category: blog
+  - scope:
       path: "about"
     values:
       layout: info
+
+# blank array for use within templates
+array: []
 
 # Google Analytics — the dev config unsets this value
 ga: 'UA-432773-8'

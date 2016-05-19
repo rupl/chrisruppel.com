@@ -26,7 +26,7 @@ gallery:
 
 
 tags:
-- art
+- artwork
 - parks
 - night life
 
