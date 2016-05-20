@@ -7,6 +7,7 @@
 importScripts('/js/cache-polyfill.js');
 
 // Config
+var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
   cache_version: 'main_v1.4.0',
   offline_assets: [
@@ -63,14 +64,17 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.map(function(cacheName) {
-          // TODO: make this conditional compound, checking both the cache
-          //       version and also any caches with the prefix used in the
-          //       fetch listener. We don't want to delete content that the
-          //       visitor opted into.
-          if (expectedCacheNames.indexOf(cacheName) == -1) {
+          // Two conditionals must be met in order to delete the cache:
+          //
+          // 1. It must NOT be found in the main SW cache list.
+          // 2. It must NOT be prefixed with our offline article prefix.
+          if (
+            expectedCacheNames.indexOf(cacheName) === -1 &&
+            cacheName.indexOf(OFFLINE_ARTICLE_PREFIX) === -1
+          ) {
             // If this cache name isn't present in the array of "expected"
             // cache names, then delete it.
-            console.info('Service Worker: deleting old cache: ' + cacheName);
+            console.info('Service Worker: deleting old cache ' + cacheName);
             return caches.delete(cacheName);
           }
         })
@@ -107,7 +111,7 @@ self.addEventListener('fetch', function(event) {
       fetch(event.request).catch(function(error) {
         // First, we try looking through the user's saved articles. If we find
         // one, we serve the article then update the cache in the background.
-        return caches.open('chrisruppel-offline--' + reqPath).then(function(cache) {
+        return caches.open(OFFLINE_ARTICLE_PREFIX + reqPath).then(function(cache) {
           console.info('Fetch listener displayed a saved article: ' + reqPath);
           return cache.match(reqPath);
         }).catch(function(error) {
