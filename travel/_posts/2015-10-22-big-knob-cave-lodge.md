@@ -38,6 +38,10 @@ tags:
 - trekking
 - viewpoints
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/657949594668568577
+
 summary: Our first activity at Cave Lodge was an easy local spot called Big Knob. It's a short hike, no guide needed, and it can be done in about two hours.
 ---
 

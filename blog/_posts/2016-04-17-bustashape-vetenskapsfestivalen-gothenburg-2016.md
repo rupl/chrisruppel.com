@@ -24,6 +24,11 @@ gallery:
   type: wide
   bgpad: 137%
 
+tags:
+- art
+- bustashape
+- web sockets
+
 ---
 
 I had the pleasure of participating in [Vetenskapsfestivalen Göteborg 2016](http://vetenskapsfestivalen.se/in-english/) (Vetfest for short). [Afra](http://afranoubarzadeh.se/) and I took part in an installation centering around [bustashape](http://bustashape.com), a site we're working on together.

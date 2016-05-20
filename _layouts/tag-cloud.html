@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<section aria-labelledby="tag-list">
+  <h1 id="tag-list" class="title title--page">{{ page.category | capitalize }} tags</h1>
+
+  <div class="tag-list">
+    {% assign rawtags = "" %}
+    {% for post in site.posts %}
+      {% if post.category == page.category %}
+        {% assign temp_tags = post.tags | join: '|' | append: '|' %}
+        {% assign rawtags = rawtags | append: temp_tags %}
+      {% endif %}
+    {% endfor %}
+    {% assign rawtags = rawtags | split: '|' | sort %}
+
+    {% assign tags = site.array %}
+    {% assign weights = site.array %}
+    {% assign current_weight = 1 %}
+    {% assign highest = 1 %}
+
+    {% for tag in rawtags %}
+      {% if tag != "" %}
+        {% comment %}
+          First iteration should always create the tag and set weight to 1.
+        {% endcomment %}
+        {% if forloop.first == true %}
+          {% assign tags = tags | push: tag %}
+          {% assign current_weight = 1 %}
+        {% endif %}
+
+        {% comment %}
+          If tag IS ALREADY in the array, increment its sub-array for weighting.
+        {% endcomment %}
+        {% if tags contains tag %}
+          {% assign current_weight = current_weight | plus: 1 %}
+        {% endif %}
+
+        {% comment %}
+          If tag is NOT in the array yet, add it and set weight to 1.
+        {% endcomment %}
+        {% unless tags contains tag %}
+          {% comment %}
+            The first command here is cleanup for the previous tag. This code
+            only runs on the first iteration of each tag, so we store the old
+            value for current weight as the final weight of the tag.
+          {% endcomment %}
+          {% assign weights = weights | push: current_weight %}
+
+          {% comment %}
+            Now set up the new tag.
+          {% endcomment %}
+          {% assign tags = tags | push: tag %}
+          {% assign current_weight = 1 %}
+        {% endunless %}
+
+        {% comment %}
+          Store highest count for later
+        {% endcomment %}
+        {% if highest < current_weight %}
+          {% assign highest = current_weight %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% comment %}
+      Finally, loop through one more time and weight each term now that we know
+      the counts of all tags.
+    {% endcomment %}
+    {% for tag in tags %}
+      {% assign weight = 4 | times: weights[forloop.index] | divided_by: highest | plus: 1 %}
+      <a class="set-{{ weight }}" href="/{{ page.category }}/tags/{{ tag | slugify }}/">{{ tag }}</a>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="go">
+  <a class="btn btn--back" href="/{{ page.category }}/">{{ page.category | capitalize }}</a>
+  <a class="btn btn--back" href="/">Back to the Front</a>
+</div>
