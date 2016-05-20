@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.4.0',
+  cache_version: 'main_v1.5.0',
   offline_assets: [
     '/',
     '/offline/',
@@ -96,66 +96,58 @@ self.addEventListener('fetch', function(event) {
   var requestIsHTML = event.request.headers.get('accept').includes('text/html')
                    && event.request.method === 'GET';
   var requestIsAsset = /^(\/css\/|\/js\/)/.test(reqPath);
+  var requestIsImage = /^(\/img\/)/.test(reqPath);
 
   // Find saved article caches.
 
 
-  // Saved articles
+  // Saved articles, MVW pages, Offline
   //
-  // First, we check to see if the user has explicitly cached this HTML content.
-  // If no cached page is found, we fallback to the offline page.
+  // First, we check to see if the user has explicitly cached this HTML content
+  // or if the page is in the "minimum viable website" list defined in the main
+  // SW.cache_version. If no cached page is found, we fallback to the network,
+  // and finally if both of those fail, serve the "Offline" page.
   if (
     requestIsHTML
   ) {
     event.respondWith(
-      fetch(event.request).catch(function(error) {
-        // First, we try looking through the user's saved articles. If we find
-        // one, we serve the article then update the cache in the background.
-        return caches.open(OFFLINE_ARTICLE_PREFIX + reqPath).then(function(cache) {
-          console.info('Fetch listener displayed a saved article: ' + reqPath);
-          return cache.match(reqPath);
-        }).catch(function(error) {
-          // If the script gets this far, we are loading a URL that is not in
-          // the user's saved article list. Just return the Offline page.
-          return caches.open(SW.cache_version).then(function(cache) {
-            console.info('Fetch listener served offline page.');
-            return cache.match('/offline/');
-          });
-        })
-      })
-    );
-  }
-
-  // MVW pages
-  //
-  // These pages constitute the "minimum viable website" and are all cached
-  // during the SW installation. They can be reliably served from the cache
-  // if the SW is activated.
-  else if (
-    requestIsHTML &&
-    SW.offline_assets.indexOf(reqPath) === -1
-  ) {
-    event.respondWith(
-      // Try the cache
-      caches.match(event.request).then(function(response) {
+      caches.match(event.request).then(function (response) {
+        // Look in the Cache and fall back to Network.
+        // console.info('Fetch listener tried cache-then-network for ' + event.request);
         return response || fetch(event.request);
       }).catch(function(error) {
+        // When the cache is empty and the network also fails, we fall back to a
+        // generic "Offline" page.
+        // console.info('Fetch listener served offline page.');
         return caches.match('/offline/');
       })
     );
   }
 
-  // Stale While Revalidate
+  // CSS/JS — Stale While Revalidate
   //
   // SW will respond with cache if there's a hit, but look for a new version
   // in the background so that the next page load will be fresh.
   //
   // @see http://12devsofxmas.co.uk/2016/01/day-9-service-worker-santas-little-performance-helper/
-  else if (requestIsHTML || requestIsAsset) {
+  else if (requestIsAsset) {
     event.respondWith(returnFromCacheOrFetch(event.request));
   }
 
-  // Uncaught
+  // Images
+  //
+  // Use a simple Cache-then-Network strategy.
+  else if (requestIsImage) {
+    event.respondWith(
+      caches.match(event.request).then(function (response) {
+        // Look in the Cache and fall back to Network.
+        // console.info('Fetch listener served image ' + reqPath);
+        return response || fetch(event.request);
+      })
+    );
+  }
+
+  // Uncaught — mostly for debugging
   //
   // This request fell through all our conditions and is being ignored by SW.
   // else {
