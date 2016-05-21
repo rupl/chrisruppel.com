@@ -27,12 +27,13 @@
     var currentURL = window.location.href;
     var currentPath = window.location.pathname;
     var $entry = $('.h-entry--main');
-    var $goButton = $('.btn--back');
+    var $commentButton = $('#comments-link');
 
-    if ($entry !== null && $goButton !== null) {
+    // If there seems to be a connection, the entry has content, and the
+    // location of the button can be targeted, create the cache button.
+    if (navigator.onLine && $entry !== null && $commentButton !== null) {
       // Create and insert 'Save Offline' button.
       var cacheButton = document.createElement('button');
-      cacheButton.setAttribute('role', 'button');
       cacheButton.setAttribute('id', 'cache-button');
       cacheButton.classList.add('btn', 'btn--offline');
 
@@ -49,7 +50,7 @@
       }
 
       // Insert button into DOM.
-      $goButton.parentNode.insertBefore(cacheButton, $goButton.nextSibling);
+      $commentButton.parentNode.insertBefore(cacheButton, $commentButton);
 
       // It would be really slick to calculate the amount of data that would be
       // stored when the save button is pushed. Maybe this number is possible to

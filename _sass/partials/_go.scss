@@ -37,11 +37,11 @@
     }
     .btn--comments {
       order: 5;
-      flex-basis: 100%
+      flex-basis: 40%
     }
     .btn--offline {
       order: 6;
-      flex-basis: 100%
+      flex-basis: 40%
     }
   }
 
@@ -52,6 +52,7 @@
 }
 
 .btn {
+  width: 100%;
   display: block;
   text-align: center;
 
@@ -67,6 +68,10 @@
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   user-select: none;
+
+  @media (min-width: 600px) {
+    width: auto;
+  }
 
   &:hover {
     background-image: linear-gradient(to bottom, #fff, #d5d5d5);
