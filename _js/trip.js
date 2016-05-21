@@ -87,6 +87,10 @@
             cacheButton.classList.remove('working');
             cacheButton.classList.add('saved');
             cacheButton.innerText = 'Article saved!';
+            cacheButton.disabled = true;
+
+            // Show notification confirming success
+            displayMessage('Article is now available offline. Hope it comes in handy!');
           });
         });
       });
