@@ -32,22 +32,45 @@
     // If there seems to be a connection, the entry has content, and the
     // location of the button can be targeted, create the cache button.
     if (navigator.onLine && $entry !== null && $commentButton !== null) {
-      // Create and insert 'Save Offline' button.
+      // Create cache button's basic properties.
       var cacheButton = document.createElement('button');
       cacheButton.setAttribute('id', 'cache-button');
       cacheButton.classList.add('btn', 'btn--offline');
 
-      // TODO: branch logic based on whether this page is already in the cache.
-      //       The URL path is the key, so it's easy to look before processing
-      //       the button.
+      // Default text is to simply save article. In the cacheNames Promise, this
+      // text might be overridden with 'Update' text.
+      cacheButton.innerText = 'Save article offline';
+
       //
-      //       Text/icon should change (Save => Update). When an entry is saved,
-      //       or the cache is present, provide a Delete button.
-      if (0) {
-        cacheButton.innerText = 'Update saved article';
-      } else {
-        cacheButton.innerText = 'Save article offline';
-      }
+      // Check the cache and build the UI based on whether we find an entry.
+      //
+      var articleAlreadyCached = false;
+      var cacheNames = caches.keys();
+
+      // Search the caches for a saved article corresponding to the current URL.
+      // If found, it will slightly alter the UI to indicate that the article is
+      // being updated instead of being saved for the first time.
+      cacheNames.then(function checkCacheNames(cacheNames) {
+        cacheNames.map(function checkCacheName(cacheName) {
+          if (cacheName.indexOf('chrisruppel-offline--' + currentPath) !== -1) {
+            articleAlreadyCached = true;
+            return articleAlreadyCached;
+          }
+        });
+      }).then(function updateButtonText() {
+        // We have to finish building the button inside of the cacheNames
+        // Promise in order to use the articleAlreadyCached flag that was
+        // determined in the previous step of the Promise.
+        if (articleAlreadyCached === true) {
+          cacheButton.innerText = 'Update saved article';
+          cacheButton.dataset.state = 'update';
+        }
+      });
+
+      // If something goes wrong looking up caches, catch the error and log it.
+      cacheNames.catch(function (error) {
+        console.error(error);
+      });
 
       // Insert button into DOM.
       $commentButton.parentNode.insertBefore(cacheButton, $commentButton);
@@ -77,21 +100,26 @@
         // TODO: maps... somehow cache MapBox tiles?
         // TODO: photosphere assets (img/JS)
 
-        // We're free to use Promises natively since SW spec has a dependency on
-        // Promises support.
+        // Open cache and save current assets. If the cache already exists it is
+        // overwriting the existing files.
         caches.open('chrisruppel-offline--' + currentPath).then(function(cache) {
           cache.addAll(pageResources).then(function() {
-            console.debug('Service Worker saved an entry offline: ' + currentPath);
-
-            // Reset the UI
+            // Update the button.
             blurAll();
             cacheButton.classList.remove('working');
             cacheButton.classList.add('saved');
-            cacheButton.innerText = 'Article saved!';
             cacheButton.disabled = true;
 
-            // Show notification confirming success
-            displayMessage('Article is now available offline. Hope it comes in handy!');
+            // Set UI text based on whether the article was cached already or not.
+            if (cacheButton.dataset.state === 'update') {
+              cacheButton.innerText = 'Article updated!';
+              displayMessage('Offline article has been updated. Glad it\'s useful!');
+            } else {
+              cacheButton.innerText = 'Article saved!';
+              displayMessage('Article is now available offline. Hope it comes in handy!');
+            }
+
+            console.info('Service Worker saved an entry offline: ' + currentPath);
           });
         });
       });
