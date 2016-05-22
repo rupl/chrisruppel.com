@@ -7,7 +7,7 @@ tags:
 - advice
 - immigration
 
-summary: We misunderstood Indonesian <abbr title="Visa on arrival">VOA</abbr> policy and ended up paying an overstay fee on our way out.
+summary: We misunderstood Indonesian visa-on-arrival policy and ended up paying an overstay fee on our way out.
 ---
 
 We had a minor, unpleasant surprise when flying out of Indonesia. We double-checked the dates ahead of time and picked a flight on the 30th day of our visa. Despite the preparation, once we arrived at the border control desk in Jakarta airport we were informed that we'd overstayed our visa.
