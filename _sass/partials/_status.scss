@@ -1,0 +1,53 @@
+//
+// Online Status
+//
+#status {
+  // Anchor to bottom of screen and make full-bleed
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  // Styles for showing/hiding. Default position is hidden
+  transform: translateY(110%);
+  transition: transform .25s ease-in-out;
+
+  // Visual styles
+  text-align: center;
+  background: rgba(#000, .9);
+  color: #eee;
+
+  // Class to toggle whether status bar is on or off the screen.
+  &.displayed {
+    transform: translateY(0);
+  }
+
+  // Notification content.
+  #message {
+    // 100% - margin - .dismiss
+    width: calc(100% - 2em - 50px);
+    float: left;
+    margin: 1em;
+    text-align: left;
+  }
+
+  // Button to dismiss the dialog and stop displaying
+  .dismiss {
+    width: 50px;
+    float: right;
+    background: transparent;
+    color: #eee;
+    border: 0;
+    font-size: 1em;
+    padding: .75em 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+
+    &::before {
+      content: '❌';
+    }
+  }
+}

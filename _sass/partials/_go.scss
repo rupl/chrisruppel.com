@@ -37,7 +37,11 @@
     }
     .btn--comments {
       order: 5;
-      flex-basis: 100%
+      flex-basis: 40%
+    }
+    .btn--offline {
+      order: 6;
+      flex-basis: 40%
     }
   }
 
@@ -48,9 +52,11 @@
 }
 
 .btn {
+  width: 100%;
   display: block;
   text-align: center;
 
+  font-size: inherit;
   margin: 1em 0;
   padding: 1em;
   border: 1px solid #ddd;
@@ -62,6 +68,10 @@
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   user-select: none;
+
+  @media (min-width: 600px) {
+    width: auto;
+  }
 
   &:hover {
     background-image: linear-gradient(to bottom, #fff, #d5d5d5);
@@ -115,9 +125,22 @@
   }
 }
 
+.btn--offline {
+  &::before {
+    content: '\01f4be \00a0';
+    position: relative;
+    top: 2px;
+  }
+  &:hover::before {
+    animation: bounce-left .42s ease-in-out;
+  }
+}
+
 .btn--comments {
   &::before {
     content: '\1f4ac \00a0';
+    position: relative;
+    top: 1px;
   }
   &:hover::before {
     animation: bounce-left .42s ease-in-out;

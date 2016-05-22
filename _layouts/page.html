@@ -68,8 +68,6 @@
         loadCSS('/css/fonts.min.css');
       }
     </script>
-    <script></script>
-
     <script>
       // JS is able to start executing.
       document.documentElement.classList.add('js');
@@ -85,6 +83,11 @@
         <a href="/about/">About</a>
       </p>
     </footer>
+
+    <div id="status" role="alert" aria-live="assertive">
+      <p id="message"></p>
+      <button class="dismiss"><span class="element-invisible">Close this message</span></button>
+    </div>
 
     <script async defer src="/js/main.min.js"></script>
     {% if page.photosphere %}<script async src="/js/photosphere.min.js"></script>{% endif %}

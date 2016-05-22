@@ -7,8 +7,9 @@
 importScripts('/js/cache-polyfill.js');
 
 // Config
+var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.3.1',
+  cache_version: 'main_v1.5.0',
   offline_assets: [
     '/',
     '/offline/',
@@ -63,10 +64,17 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.map(function(cacheName) {
-          if (expectedCacheNames.indexOf(cacheName) == -1) {
+          // Two conditionals must be met in order to delete the cache:
+          //
+          // 1. It must NOT be found in the main SW cache list.
+          // 2. It must NOT be prefixed with our offline article prefix.
+          if (
+            expectedCacheNames.indexOf(cacheName) === -1 &&
+            cacheName.indexOf(OFFLINE_ARTICLE_PREFIX) === -1
+          ) {
             // If this cache name isn't present in the array of "expected"
             // cache names, then delete it.
-            console.info('Service Worker: deleting old cache: ' + cacheName);
+            console.info('Service Worker: deleting old cache ' + cacheName);
             return caches.delete(cacheName);
           }
         })
@@ -85,40 +93,61 @@ self.addEventListener('fetch', function(event) {
   var reqPath = reqLocation.pathname;
 
   // Consolidate some conditions for re-use.
-  var requestIsHTML = event.request.headers.get('accept').includes('text/html');
+  var requestIsHTML = event.request.headers.get('accept').includes('text/html')
+                   && event.request.method === 'GET';
   var requestIsAsset = /^(\/css\/|\/js\/)/.test(reqPath);
+  var requestIsImage = /^(\/img\/)/.test(reqPath);
 
-  // Offline HTML
+  // Find saved article caches.
+
+
+  // Saved articles, MVW pages, Offline
   //
-  // Intercept offline requests to uncached URLs and serve offline page instead.
+  // First, we check to see if the user has explicitly cached this HTML content
+  // or if the page is in the "minimum viable website" list defined in the main
+  // SW.cache_version. If no cached page is found, we fallback to the network,
+  // and finally if both of those fail, serve the "Offline" page.
   if (
-    requestIsHTML &&
-    event.request.method === 'GET' &&
-    SW.offline_assets.indexOf(reqPath) === -1
+    requestIsHTML
   ) {
-    // If the above conditional is met, the user loaded a URL that is not in our
-    // SW cache, so just return the Offline content.
     event.respondWith(
-      fetch(event.request).catch(function(error) {
-        return caches.open(SW.cache_version).then(function(cache) {
-          console.info('Fetch listener served offline page.');
-          return cache.match('/offline/');
-        });
+      caches.match(event.request).then(function (response) {
+        // Look in the Cache and fall back to Network.
+        // console.info('Fetch listener tried cache-then-network for ' + event.request);
+        return response || fetch(event.request);
+      }).catch(function(error) {
+        // When the cache is empty and the network also fails, we fall back to a
+        // generic "Offline" page.
+        // console.info('Fetch listener served offline page.');
+        return caches.match('/offline/');
       })
     );
   }
 
-  // Stale While Revalidate
+  // CSS/JS — Stale While Revalidate
   //
   // SW will respond with cache if there's a hit, but look for a new version
   // in the background so that the next page load will be fresh.
   //
   // @see http://12devsofxmas.co.uk/2016/01/day-9-service-worker-santas-little-performance-helper/
-  else if (requestIsHTML || requestIsAsset) {
+  else if (requestIsAsset) {
     event.respondWith(returnFromCacheOrFetch(event.request));
   }
 
-  // Uncaught
+  // Images
+  //
+  // Use a simple Cache-then-Network strategy.
+  else if (requestIsImage) {
+    event.respondWith(
+      caches.match(event.request).then(function (response) {
+        // Look in the Cache and fall back to Network.
+        // console.info('Fetch listener served image ' + reqPath);
+        return response || fetch(event.request);
+      })
+    );
+  }
+
+  // Uncaught — mostly for debugging
   //
   // This request fell through all our conditions and is being ignored by SW.
   // else {
