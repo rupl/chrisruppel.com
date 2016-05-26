@@ -16,7 +16,7 @@ _config.dev.yml
 .sass-cache
 
 # Ignore package manager stuff
-.bundle/gems
+.bundle
 node_modules
 npm-debug.log
 
