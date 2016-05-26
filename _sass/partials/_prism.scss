@@ -135,3 +135,30 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+
+//
+// Modifications for chrisruppel.com
+//
+
+// Reduce font-size of Prism blocks and make the <pre> tag a bit prettier.
+pre[class*=language-] {
+  font-size: .9em;
+  border-radius: 7px;
+}
+
+// Generic fenced code blocks not controlled by Prism.
+//
+// Often used for displaying logs, error messages, and other computer output
+// that is not a specific programming language.
+pre[class*=language-undefined],
+code[class*=language-undefined] {
+  font-size: .9em;
+  padding: .5em 1em;
+  border-radius: 7px;
+  white-space: normal;
+  background: #ddd;
+  text-shadow: none;
+}
+code[class*=language-undefined] {
+  padding: 0;
+}

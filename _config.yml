@@ -10,6 +10,9 @@ img-host: https://chrisruppel-assets-eu1.s3.amazonaws.com
 permalink: /:title/
 exclude: [README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.lock, node_modules, .bundle, update, Procfile, vendor, index.js, bin, app.json]
 keep_files: [img]
+markdown: redcarpet
+redcarpet:
+  extensions: ["with_toc_data", "fenced_code_blocks"]
 
 # Jekyll plugin config
 tag_page_layout: tag-list
