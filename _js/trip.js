@@ -37,38 +37,25 @@
       cacheButton.setAttribute('id', 'cache-button');
       cacheButton.classList.add('btn', 'btn--offline');
 
-      // Default text is to simply save article. In the cacheNames Promise, this
-      // text might be overridden with 'Update' text.
+      // Default text is to simply save article. In the pageCache Promise, this
+      // text might be overridden with 'Update' text and attribute.
       cacheButton.innerText = 'Save article offline';
 
       //
-      // Check the cache and build the UI based on whether we find an entry.
+      // Check the cache and alter the UI based on whether we find an entry.
+      // Instead of looking for cache key, we match on the current URL to be
+      // sure that we already have an actual cached copy of the page.
       //
-      var articleAlreadyCached = false;
-      var cacheNames = caches.keys();
-
-      // Search the caches for a saved article corresponding to the current URL.
-      // If found, it will slightly alter the UI to indicate that the article is
-      // being updated instead of being saved for the first time.
-      cacheNames.then(function checkCacheNames(cacheNames) {
-        cacheNames.map(function checkCacheName(cacheName) {
-          if (cacheName.indexOf('chrisruppel-offline--' + currentPath) !== -1) {
-            articleAlreadyCached = true;
-            return articleAlreadyCached;
-          }
-        });
-      }).then(function updateButtonText() {
-        // We have to finish building the button inside of the cacheNames
-        // Promise in order to use the articleAlreadyCached flag that was
-        // determined in the previous step of the Promise.
-        if (articleAlreadyCached === true) {
+      var pageCache = caches.match(currentURL);
+      pageCache.then(function updateButtonText(response) {
+        if (typeof response !== 'undefined') {
           cacheButton.innerText = 'Update saved article';
           cacheButton.dataset.state = 'update';
         }
       });
 
       // If something goes wrong looking up caches, catch the error and log it.
-      cacheNames.catch(function (error) {
+      pageCache.catch(function (error) {
         console.error(error);
       });
 
@@ -88,10 +75,10 @@
         // Set a 'working' class on the button to display interaction
         cacheButton.classList.add('working');
 
-        // Build an array of the page-specific resources right here.
+        // Build an array of the page-specific resources.
         var pageResources = [currentPath];
 
-        // Loop through any galleries and save images.
+        // Loop through any gallery images and save to pageResources array.
         var images = $$('.gallery img');
         Array.prototype.map.call(images, function (img) {
           pageResources.push(img.currentSrc);
