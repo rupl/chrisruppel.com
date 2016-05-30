@@ -90,13 +90,17 @@
         // Open cache and save current assets. If the cache already exists it is
         // overwriting the existing files.
         caches.open('chrisruppel-offline--' + currentPath).then(function(cache) {
-          cache.addAll(pageResources).then(function() {
-            // Update the button.
-            blurAll();
-            cacheButton.classList.remove('working');
-            cacheButton.classList.add('saved');
-            cacheButton.disabled = true;
+          var updateCache = cache.addAll(pageResources);
 
+          // Update UI to indicate progress.
+          blurAll();
+          cacheButton.classList.remove('working');
+          cacheButton.classList.add('saved');
+          cacheButton.innerText = 'Fetching content...';
+          cacheButton.disabled = true;
+
+          // Update UI to indicate success.
+          updateCache.then(function() {
             // Set UI text based on whether the article was cached already or not.
             if (cacheButton.dataset.state === 'update') {
               cacheButton.innerText = 'Article updated!';
@@ -108,6 +112,11 @@
 
             console.info('Service Worker saved an entry offline: ' + currentPath);
           });
+
+          // Catch any errors and report.
+          updateCache.catch(function (error) {
+            console.error(error);
+          })
         });
       });
     }
