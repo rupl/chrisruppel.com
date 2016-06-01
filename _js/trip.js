@@ -100,15 +100,18 @@
             cacheButton.classList.remove('btn--working');
             cacheButton.classList.add('btn--success');
 
-            // Set UI text based on whether the article was cached already or not.
+            // Provide feedback to user and log event in analytics.
             if (cacheButton.dataset.state === 'update') {
               cacheButton.innerText = 'Article updated!';
               displayMessage('Offline article has been updated. Glad it\'s useful!');
+              ga('send', 'event', 'Offline', 'updated', currentPath);
             } else {
               cacheButton.innerText = 'Article saved!';
               displayMessage('Article is now available offline. Hope it comes in handy!');
+              ga('send', 'event', 'Offline', 'saved', currentPath);
             }
 
+            // Log the event.
             console.info('Service Worker saved an entry offline: ' + currentPath);
           });
 
@@ -120,8 +123,9 @@
             cacheButton.innerText = 'Couldn\'t save article';
             displayMessage('The article could not be saved offline. Refresh and try again?');
 
-            // debug
+            // Log the event.
             console.error(error);
+            ga('send', 'event', 'Offline', 'error', currentPath);
           })
         });
       });
