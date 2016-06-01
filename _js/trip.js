@@ -72,8 +72,11 @@
       cacheButton.on('click', function(event) {
         event.preventDefault();
 
-        // Set a 'working' class on the button to display interaction
-        cacheButton.classList.add('working');
+        // Update UI to indicate pending action.
+        blurAll();
+        cacheButton.classList.add('btn--working');
+        cacheButton.innerText = 'Fetching content...';
+        cacheButton.disabled = true;
 
         // Build an array of the page-specific resources.
         var pageResources = [currentPath];
@@ -92,15 +95,11 @@
         caches.open('chrisruppel-offline--' + currentPath).then(function(cache) {
           var updateCache = cache.addAll(pageResources);
 
-          // Update UI to indicate progress.
-          blurAll();
-          cacheButton.classList.remove('working');
-          cacheButton.classList.add('saved');
-          cacheButton.innerText = 'Fetching content...';
-          cacheButton.disabled = true;
-
           // Update UI to indicate success.
           updateCache.then(function() {
+            cacheButton.classList.remove('btn--working');
+            cacheButton.classList.add('btn--success');
+
             // Set UI text based on whether the article was cached already or not.
             if (cacheButton.dataset.state === 'update') {
               cacheButton.innerText = 'Article updated!';
@@ -115,6 +114,13 @@
 
           // Catch any errors and report.
           updateCache.catch(function (error) {
+            // Update UI to indicate failure. boo.
+            cacheButton.classList.remove('btn--working');
+            cacheButton.classList.add('btn--failed');
+            cacheButton.innerText = 'Couldn\'t save article';
+            displayMessage('The article could not be saved offline. Refresh and try again?');
+
+            // debug
             console.error(error);
           })
         });

@@ -32,16 +32,16 @@
       flex-grow: 1;
     }
     .btn--load {
-      order: 4; // show up AFTER "Back"
+      order: 4;
       flex-grow: 2;
     }
     .btn--comments {
       order: 5;
-      flex-basis: 40%
+      flex-basis: 45%;
     }
     .btn--offline {
       order: 6;
-      flex-basis: 40%
+      flex-basis: 45%;
     }
   }
 
@@ -89,6 +89,13 @@
   }
 }
 
+//
+// Button types
+//
+// Various buttons have icons and animations. The icon and animation depends
+// on the position of the button.
+//
+
 .btn--next {
   &::after {
     content: '\00a0 \02192';
@@ -129,7 +136,7 @@
   &::before {
     content: '\01f4be \00a0';
     position: relative;
-    top: 2px;
+    top: 1px;
   }
   &:hover::before {
     animation: bounce-left .42s ease-in-out;
@@ -162,6 +169,29 @@
     animation-name: no;
   }
 }
+
+//
+// Button states
+//
+// Sometimes a button is updated to indicate success or failure of an action.
+//
+
+.btn--success {
+  &::before {
+    content: '👍 \00a0';
+    top: 0;
+  }
+}
+
+.btn--failed {
+  color: #800;
+
+  &::before {
+    content: '❌ \00a0';
+    top: 0;
+  }
+}
+
 
 @keyframes bounce-up {
   50% {
