@@ -33,10 +33,14 @@
     "run-sequence": "^1.1.2",
     "screenfull": "^2.0.0",
     "serviceworker-cache-polyfill": "^3.0.0",
-    "three": "^0.72.0"
+    "three": "^0.72.0",
+    "snyk": "^1.14.3"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
-    "start": "./bin/boot.sh"
-  }
+    "start": "./bin/boot.sh",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
