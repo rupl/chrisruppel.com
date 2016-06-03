@@ -57,7 +57,7 @@ After getting our money we agreed we should check it out, so we went over to him
 
 We quickly checked in and he told us there was a family dinner at 6pm every night. "We eat da bamboo, da vegetables, da rice, and da WHISKEY" — it was delicious! The whole hostel gathered for dinner and we had a great time meeting everyone. The whiskey was actually rice <del datetime="2015-12-18">wine</del>, and every time we drank we said "lao-Lao!"
 
-<ins class="update" datetime="2015-12-18">(whoops, [it really is whiskey](https://en.wikipedia.org/wiki/Lao-Lao))</ins>
+<ins class="update" datetime="2015-12-18">(whoops, <a href="https://en.wikipedia.org/wiki/Lao-Lao">it really is whiskey</a>)</ins>
 
 As if that weren't enough, we wandered next door and sang Lao karaoke with a few locals for over an hour. Their videos had latin-character phoenetic subtitles so that we could sing along with them despite not knowing a word of the language. It was a riot and we could see that we really made their night by giving it an honest try. Unforgettable night!
 

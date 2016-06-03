@@ -82,7 +82,7 @@ Not only do **the Laos border police at Tay Trang accept USD** — which we had 
 
 With all of that behind us and visas certified, we got back on our cramped, overstuffed bus and proceeded to finish the remaining bumpy 26km into Laos.
 
-We were so utterly relieved when we got to Muang Khua, a wonderful little town in the mountains. But more on that later!
+We were so utterly relieved when we got to [Muang Khua](/travel/muang-khua-laos/), a wonderful little town in the mountains. But more on that later!
 
 <ins class="update" datetime="2015-12-16">After a few days of hanging out in Muang Khua and thumbing through the Lonely Planet for Laos, we found a small but very funny note about this town. It says "if you came from Vietnam via bus.. relax, you're in Laos now." Glad to know we're not the only ones who've felt this way!</ins>
 
