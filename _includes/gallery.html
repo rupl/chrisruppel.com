@@ -18,7 +18,7 @@
 
       {% capture imgsize_small %}calc(100vw - 4% - 1em){% endcapture %}
       {% capture imgsize_big %}(min-width: 500px)
-        {% if item.type == "wide" or item.type == "tall" or item.type == "two-third" %}
+        {% if item.type contains "wide" or item.type contains "tall" or item.type contains "two-third" %}
           {% comment %}
             When the image is wide, it always takes up the full width no matter
             what layout or breakpoint we're at. Force it to be the full width.
@@ -33,7 +33,7 @@
             Formula: 100vw - <main>-padding - gallery_padding - photo-margin
           {% endcomment %}
           calc(100vw - 2em - 8% - 2%)
-        {% elsif item.type == "half" %}
+        {% elsif item.type contains "half" %}
           {% comment %}
             Similar to wide, when image is half size, we know how much space it
             takes up on larger breakpoints without looking at gallery type.
