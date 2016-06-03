@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.5.0',
+  cache_version: 'main_v1.5.1',
   offline_assets: [
     '/',
     '/offline/',
@@ -64,7 +64,7 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.map(function(cacheName) {
-          // Two conditionals must be met in order to delete the cache:
+          // Two conditions must be met in order to delete the cache:
           //
           // 1. It must NOT be found in the main SW cache list.
           // 2. It must NOT be prefixed with our offline article prefix.
