@@ -20,7 +20,7 @@
 });
 
 //
-// Cache button. Depends on SW support
+// Cache button. Depends on SW support.
 //
 (function (Modernizr) {
   if (Modernizr.serviceworker) {
@@ -82,8 +82,7 @@
         var pageResources = [currentPath];
 
         // Loop through any gallery images and save to pageResources array.
-        var images = $$('.gallery img');
-        Array.prototype.map.call(images, function (img) {
+        var images = $$('.gallery img').forEach(function (img) {
           pageResources.push(img.currentSrc);
         });
 
@@ -126,7 +125,7 @@
             // Log the event.
             console.error(error);
             ga('send', 'event', 'Offline', 'error', currentPath);
-          })
+          });
         });
       });
     }
