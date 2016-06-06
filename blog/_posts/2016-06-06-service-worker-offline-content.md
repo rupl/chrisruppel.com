@@ -24,6 +24,7 @@ I already have HTTPS and a basic Service Worker on the site. If you need help wi
 
 Helpful tutorials on [caching strategy for HTML content](https://www.smashingmagazine.com/2016/02/making-a-service-worker/#html-content-implementing-a-network-first-strategy) have been written, but there's normally an assumption that they need to cache every page that is viewed. How much storage you're allowed is up to a browser, so my goal is to keep the cache as minimal as possible. I'd rather keep it small and avoid getting axed when the browser (or user) needs to free up memory on the device.
 
+
 ### Cache on user-interaction
 
 Enter an innocent-looking entry in Jake Archibald's Offline Cookbook: [cache on user interaction](https://jakearchibald.com/2014/offline-cookbook/#on-user-interaction). Jake points out that although the Service Worker is separate from your page, its cache is accessible from within your page's JavaScript.
@@ -64,6 +65,7 @@ if ('serviceWorker' in navigator && navigator.onLine) {
 Note the feature test wrapping both the creation of the button and its event listener. If the user can't view content offline, it would be pretty annoying to tease them with a button, wouldn't it?
 
 It's also worth noting that [`navigator.onLine`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/onLine) is only trustworthy when equal to `false`. Since we're crafting an offline experience, it's still worth including as a condition. If a visitor returns to an article while offline, the button offering to update the content should NOT appear.
+
 
 ### Collecting assets from the DOM
 
@@ -128,11 +130,40 @@ if (cacheButton.dataset.state === 'update') {
 
 Depending on the logic of your web page, it might make sense to fire off completely different save/update functions. But for simple caching of static content, the cache works the same whether its the first time or a repeat.
 
-### Notify the visitor on success
 
-Finally after the cache is updated, I fire off a notification and change the text of the button to indicate success. The button also becomes disabled to avoid hitting it twice on the same page load.
+### Serving offline HTML
 
-My notification is based on Heydon Pickering's [Practical ARIA example for alerts](http://heydonworks.com/practical_aria_examples/#offline-alert). This part isn't Service Worker specific, but I figured if I'm implementing alerts, I should do it in an accessible manner.
+This is the part involving Service Worker. In the `fetch` event listener, we need to return HTML either from the cache or from the network. Since each user can save a unique set of URLs, we must use a generic page as a final fallback.
+
+Just like the save/update code above, we can do a simple URL match on all caches to find relevant content. There's no need to open each cache and iterate on them to manually find cached content. You can do that, of course, and a more complex site probably will. But for a static site, `caches.match()` gets you to the finish line:
+
+```js
+// in the Service Worker
+self.addEventListener('fetch', function(event) {
+  if (
+    event.request.headers.get('accept').includes('text/html') &&
+    event.request.method === 'GET'
+  ) {
+    event.respondWith(
+      caches.match(event.request).then(function (response) {
+        // Look in the Cache and fall back to Network.
+        return response || fetch(event.request);
+      }).catch(function(error) {
+        // When the cache is empty and the network also fails,
+        // we fall back to a generic "Offline" page.
+        return caches.match('/offline/');
+      })
+    );
+  }
+});
+```
+
+This code example uses the [cache falling back to network](https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network) strategy to serve the HTML. Although this strategy can result in stale content being served, my primary goal was to **quickly serve offline content in situations where the network might be spotty.**
+
+Given that the person decided to save the page, they will probably still find the stale version useful. I'd rather serve that content immediately instead of waiting on the network, which can take ages to timeout before giving the cache a chance to display its contents.
+
+I plan to improve this part in the future to reduce stale content while keeping it snappy on unreliable networks. Read that whole Offline cookbook if you're looking for more complex caching or serving strategies. It's a fantastic resource.
+
 
 ### Caching on first page load
 
