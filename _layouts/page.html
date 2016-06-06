@@ -89,10 +89,6 @@
       <button class="dismiss"><span class="element-invisible">Close this message</span></button>
     </div>
 
-    <script async defer src="/js/main.min.js"></script>
-    {% if page.photosphere %}<script async src="/js/photosphere.min.js"></script>{% endif %}
-    {% if page.comments %}<script id="dsq-count-scr" src="https://rupl.disqus.com/count.js" async defer></script>{% endif %}
-
     {% if site.ga != '' %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -103,5 +99,9 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
+
+    <script async defer src="/js/main.min.js"></script>
+    {% if page.photosphere %}<script async defer src="/js/photosphere.min.js"></script>{% endif %}
+    {% if page.comments %}<script async defer src="https://rupl.disqus.com/count.js" id="dsq-count-scr"></script>{% endif %}
   </body>
 </html>
