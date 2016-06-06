@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="{{ site.url }}/travel.xml" rel="self" type="application/rss+xml" />
+    <title>{{ site.name }}</title>
+    <link>{{ site.url }}</link>
+    <description>Chris Ruppel's blog. Web development, digital art, and everything in between.</description>
+    <language>en</language>
+
+    {% for post in site.categories.blog limit:20 %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <description>{{ post.summary | xml_escape }}</description>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+    </item>
+    {% endfor %}
+
+  </channel>
+</rss>
