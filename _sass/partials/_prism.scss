@@ -142,7 +142,7 @@ pre[class*="language-"] {
 
 // Reduce font-size of Prism blocks and make the <pre> tag a bit prettier.
 pre[class*=language-] {
-  font-size: .9em;
+  font-size: .86em;
   border-radius: 7px;
 }
 
@@ -151,14 +151,21 @@ pre[class*=language-] {
 // Often used for displaying logs, error messages, and other computer output
 // that is not a specific programming language.
 pre[class*=language-undefined],
-code[class*=language-undefined] {
-  font-size: .9em;
+code[class*=language-undefined],
+pre[class*=language-wrap],
+code[class*=language-wrap] {
   padding: .5em 1em;
-  border-radius: 7px;
-  white-space: normal;
   background: #ddd;
   text-shadow: none;
 }
 code[class*=language-undefined] {
+  padding: 0;
+}
+
+pre[class*=language-wrap],
+code[class*=language-wrap] {
+  white-space: normal;
+}
+code[class*=language-wrap] {
   padding: 0;
 }

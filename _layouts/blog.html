@@ -1,8 +1,9 @@
 ---
 layout: page
+comments: true
 ---
 
-<article class="blog h-entry">
+<article class="blog h-entry h-entry--main">
   <header>
     <h1 class="title p-name">{{ page.title }}</h1>
     <h2 class="subtitle">
@@ -31,11 +32,11 @@ layout: page
 
   <div class="go">
     {% if page.previous_in_category.url %}
-      <a class="btn btn--prev" href="{{ page.previous_in_category.url }}" title="{{ page.previous_in_category.title }}{% if page.previous_in_category.location %} {% include location.html location=page.previous_in_category.location %}{% endif %}">Prev trip</a>
+      <a class="btn btn--prev" href="{{ page.previous_in_category.url }}" title="{{ page.previous_in_category.title }}{% if page.previous_in_category.location %} {% include location.html location=page.previous_in_category.location %}{% endif %}">Prev post</a>
     {% endif %}
     <a class="btn btn--back" href="/blog/">Blog</a>
     {% if page.next_in_category.url %}
-      <a class="btn btn--next" href="{{ page.next_in_category.url }}" title="{{ page.next_in_category.title }}{% if page.next_in_category.location %} {% include location.html location=page.next_in_category.location %}{% endif %}">Next trip</a>
+      <a class="btn btn--next" href="{{ page.next_in_category.url }}" title="{{ page.next_in_category.title }}{% if page.next_in_category.location %} {% include location.html location=page.next_in_category.location %}{% endif %}">Next post</a>
     {% endif %}
     {% if page.comments %}
       <a id="comments-link" class="btn btn--comments" href="{{ site.url }}{{ page.url }}#disqus_thread" onclick="return loadDisqus(event);">Loading comment count...</a>

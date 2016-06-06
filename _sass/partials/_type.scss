@@ -17,12 +17,12 @@ abbr[lang] {
   font-style: italic;
 }
 
-h3 {
-  @include font-oswald;
-}
-
 // This class is on the main content area of any page
 .e-content {
+  h1, h2, h3 {
+    @include font-oswald;
+  }
+
   // Spruce up the lists a bit.
   ul, ol {
     li {
@@ -93,5 +93,23 @@ h3 {
     //     transform: translateX(-.1em) translateY(-.06em) rotateZ(-6deg) scale(1.08);
     //   }
     // }
+  }
+
+  code {
+    display: inline-block;
+    padding: 0 .2em;
+    border-radius: .2em;
+    background: #ddd;
+  }
+
+  aside.note {
+    font-size: .8em;
+    margin: 0 1em;
+    font-style: italic;
+    opacity: .9;
+
+    @media(min-width: 1147px) {
+      margin: 0 3em;
+    }
   }
 }
