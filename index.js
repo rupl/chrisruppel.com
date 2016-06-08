@@ -24,10 +24,10 @@ app.use(helmet.hsts({
 app.use(helmet.csp({
   // Policy for chrisruppel.com
   defaultSrc: ["'self'"],
-  scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "'unsafe-eval'", "'unsafe-inline'"],
-  styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "'unsafe-inline'"],
-  imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "chrisruppel-assets-eu1.s3.amazonaws.com", "data:"],
-  connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "chrisruppel-assets-eu1.s3.amazonaws.com"],
+  scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "'unsafe-eval'", "'unsafe-inline'"],
+  styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "'unsafe-inline'"],
+  imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com", "data:"],
+  connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com"],
   fontSrc:    ["'self'", 'data:'],
   objectSrc:  ["youtube.com"],
   mediaSrc:   ["youtube.com"],
@@ -58,8 +58,8 @@ app.use(compression());
 app.use(express.static(__dirname + '/_site'));
 
 // Legacy redirects.
-// app.get('/OLD_URL', function(req, res){ res.redirect(301, '/NEW_URL') });
-app.get('/portfolio/', function(req, res){ res.redirect(301, '/work/') });
+// app.get('/OLD_URL', function(req, res){ res.redirect(301, '/NEW_URL'); });
+app.get('/portfolio/', function(req, res){ res.redirect(301, '/work/'); });
 
 // Listen for traffic
 console.log('Express is listening for traffic on port ' + port);
