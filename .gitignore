@@ -12,6 +12,7 @@ _includes/main.min.css
 _config.dev.yml
 
 # Ignore asset caches
+.jekyll-metadata
 .jekyll-assets-cache
 .sass-cache
 
