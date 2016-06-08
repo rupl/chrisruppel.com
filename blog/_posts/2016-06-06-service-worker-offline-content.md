@@ -1,7 +1,5 @@
 ---
 title: Offline Content with Service Worker
-category: blog
-layout: blog
 
 tags:
 - offline
