@@ -26,6 +26,14 @@ abbr[lang] {
     @include font-oswald;
   }
 
+  h4 {
+    font-weight: 200;
+    font-style: italic;
+    border-radius: 1em / 4em;
+    border-left: 1.5em solid rgba(#f82, .8);
+    padding-left: .5em;
+  }
+
   // Spruce up the lists a bit.
   ul, ol {
     li {
@@ -114,6 +122,23 @@ abbr[lang] {
 
     @media(min-width: 1147px) {
       margin: 0 3em;
+    }
+  }
+
+  aside.warning {
+    font-style: italic;
+    font-weight: 200;
+    padding: .2em 5%;
+    background-color: rgba(#fd0, .4);
+    border-radius: 7px;
+
+    @media (min-width: 1147px) {
+      width: 110%;
+      margin-left: -5%; // match L/R padding above
+    }
+
+    > p::before {
+      content: '⚠ ';
     }
   }
 }
