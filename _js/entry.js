@@ -1,5 +1,7 @@
 //
-// Trip entry enhancements
+// Entry enhancements
+//
+// All entries regardless of category: travel, blog.
 //
 
 //

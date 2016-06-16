@@ -1,5 +1,7 @@
-// Full trip
-.trip {
+// Entry
+//
+// Generic page styles for entries of all types: travel, blog.
+.h-entry--main {
 
   .title {
     float: left;
@@ -64,11 +66,4 @@
       transform: translateX(-50%) translateY(-50%);
     }
   }
-}
-
-// IndieWeb metadata
-.trip-meta {
-  margin-top: 1em;
-  font-family: monospace;
-  text-align: center;
 }
