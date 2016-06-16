@@ -2,9 +2,9 @@
 layout: page
 ---
 
-<article class="trip h-entry h-entry--main" id="{{ page.path | replace: 'travel/_posts/','' | replace: '.md','' }}">
+<article class="h-entry h-entry--main entry--trip" id="{{ page.path | replace: 'travel/_posts/','' | replace: '.md','' }}">
   <header>
-    <h1 class="title p-name">{{ page.title }}</h1>
+    <h1 class="title--main p-name">{{ page.title }}</h1>
     <h2 class="subtitle">
       <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%b %d, %Y' }}</time>
       {% if page.location %}

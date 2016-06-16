@@ -37,8 +37,7 @@ img {
   max-width: 100%;
 }
 
-
-.title {
+.title--main {
   @include font-oswald;
 
   .wf-loading & {
