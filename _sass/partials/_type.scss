@@ -11,6 +11,23 @@ p {
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
+  position: relative;
+  margin-right: .5em;
+  text-decoration: none;
+
+  &:after {
+    content: '(?)';
+    vertical-align: top;
+    vertical-align: super;
+    line-height: 0;
+    font-family: serif;
+    font-size: 0.5em;
+    font-weight: 700;
+    letter-spacing: 0;
+    position: absolute;
+    top: .5em;
+    right: -1.25em;
+  }
 }
 
 abbr[lang] {
