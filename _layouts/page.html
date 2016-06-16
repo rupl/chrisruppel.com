@@ -79,10 +79,21 @@
       {{ content }}
     </main>
     <footer role="contentinfo">
-      <p class="colophon">
-        &#169; {{ 'now' | date: '%Y' }} <a class="p-name fn u-url" href="{{ site.url }}">Chris Ruppel</a>.
-        <a href="/about/">About</a>
-      </p>
+      <section>
+        <img alt="my face" class="me"
+          width="160" height="173"
+          src="/static/chris-ruppel-2015@320.jpg"
+          srcset="/static/chris-ruppel-2015@640.jpg 2x">
+
+        <p class="p-role">
+          Hello, I'm <a class="p-name fn u-url" href="{{ site.url }}/about/">Chris Ruppel</a>,
+          a frontend <span class="p-category">developer</span> and world <span class="p-category">traveler</span>
+          last seen {% include last-seen.html %}.<br>
+        </p>
+        <p class="colophon">
+          &#169; <a href="{{ site.license-url }}">MIT or CC-BY-SA 3.0</a>
+        </p>
+      </section>
     </footer>
 
     <div id="status" role="alert" aria-live="assertive">

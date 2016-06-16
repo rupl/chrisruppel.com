@@ -33,24 +33,11 @@ main {
   padding: 1em;
 }
 
-footer[role="contentinfo"] {
-  clear: both;
-  max-width: 860px;
-  margin: 0 auto;
-  font-size: .8em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  text-align: center;
-  opacity: .666;
-  font-style: italic;
-}
-
 img {
   max-width: 100%;
 }
 
-
-.title {
+.title--main {
   @include font-oswald;
 
   .wf-loading & {
@@ -130,8 +117,4 @@ blockquote {
     content: ' × \00a0\00a0 × \00a0\00a0 ×';
     speak: none;
   }
-}
-
-footer a {
-  color: inherit;
 }

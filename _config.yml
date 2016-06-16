@@ -5,6 +5,7 @@ development: false
 # Environment URLs
 url: https://chrisruppel.com
 img-host: https://chrisruppel-assets-eu1.s3.amazonaws.com
+license-url: https://github.com/rupl/chrisruppel.com/blob/master/LICENSE.md
 
 # Jekyll config
 permalink: /:title/

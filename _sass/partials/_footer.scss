@@ -1,0 +1,44 @@
+//
+// Global footer
+//
+footer[role="contentinfo"] {
+  @extend .clearfix;
+  clear: both;
+  font-size: .8em;
+  font-style: italic;
+  font-weight: 200;
+  padding: 2em 1em;
+  color: white;
+  background: #111;
+
+  // Footer content
+  section {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  // my smug mug
+  img.me {
+    float: left;
+    margin-right: 2em;
+    border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
+    transition: border-radius 4s ease-in-out;
+  }
+
+  // just for funsies
+  img.me:hover {
+    border-radius: 750px 250px 750px 250px / 250px 750px 250px 750px;
+  }
+
+  .p-role {
+    padding: 1em;
+  }
+
+  // Ensure links are readable regardless of state or browsing history.
+  a {
+    color: inherit;
+  }
+  a:visited {
+    opacity: .666;
+  }
+}
