@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.6.0',
+  cache_version: 'main_v1.6.1',
   offline_assets: [
     '/',
     '/offline/',
@@ -19,7 +19,9 @@ var SW = {
     '/travel/list/',
     '/css/main.min.css',
     '/css/fonts.min.css',
-    '/js/main.min.js'
+    '/js/main.min.js',
+    '/static/chris-ruppel-2015@320.jpg',
+    '/static/chris-ruppel-2015@640.jpg'
   ]
 };
 
@@ -95,7 +97,7 @@ self.addEventListener('fetch', function(event) {
   // Consolidate some conditions for re-use.
   var requestIsHTML = event.request.headers.get('accept').includes('text/html')
                    && event.request.method === 'GET';
-  var requestIsAsset = /^(\/css\/|\/js\/)/.test(reqPath);
+  var requestIsAsset = /^(\/css\/|\/js\/|\/static\/)/.test(reqPath);
   var requestIsImage = /^(\/img\/)/.test(reqPath);
 
 
