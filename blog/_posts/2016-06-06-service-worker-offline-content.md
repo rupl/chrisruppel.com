@@ -25,7 +25,9 @@ Helpful tutorials on [caching strategy for HTML content](https://www.smashingmag
 
 ### Cache on user-interaction
 
-Enter an innocent-looking entry in Jake Archibald's Offline Cookbook: [cache on user interaction](https://jakearchibald.com/2014/offline-cookbook/#on-user-interaction). Jake points out that although the Service Worker is separate from your page, its cache is accessible from within your page's JavaScript.
+Enter an innocent-looking entry in Jake Archibald's Offline Cookbook: [cache on user interaction](https://jakearchibald.com/2014/offline-cookbook/#on-user-interaction). Jake points out that although the Service Worker is separate from your page, its cache is accessible from within your page's JavaScript ([relevant part of spec](https://www.w3.org/TR/service-workers/#cache)):
+
+> Multiple separate objects implementing the `Cache` interface across document environments and worker environments can all be associated with the same request to response map simultaneously.
 
 That means you can write a normal event listener in your application code and have it interact with the cache: reading, writing, it's up to you.
 
