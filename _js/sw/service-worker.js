@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.5.2',
+  cache_version: 'main_v1.6.0',
   offline_assets: [
     '/',
     '/offline/',
@@ -98,8 +98,6 @@ self.addEventListener('fetch', function(event) {
   var requestIsAsset = /^(\/css\/|\/js\/)/.test(reqPath);
   var requestIsImage = /^(\/img\/)/.test(reqPath);
 
-  // Find saved article caches.
-
 
   // Saved articles, MVW pages, Offline
   //
@@ -124,10 +122,11 @@ self.addEventListener('fetch', function(event) {
     );
   }
 
-  // CSS/JS — Stale While Revalidate
+  // CSS/JS
   //
   // SW will respond with cache if there's a hit, but look for a new version
-  // in the background so that the next page load will be fresh.
+  // in the background so that the next page load will be fresh. We only want
+  // to manage first-party assets for now.
   //
   // @see http://12devsofxmas.co.uk/2016/01/day-9-service-worker-santas-little-performance-helper/
   else if (requestIsAsset) {
@@ -174,8 +173,12 @@ function returnFromCacheOrFetch(request) {
 
     // Kick off the update request in the background.
     var fetchPromise = fetch(request).then(function(fetchResponse) {
-      // If the resource is unchanged, skip the caching process.
-      if (fetchResponse.status !== 304) {
+      // First, determine whether this is first or third-party request.
+      var requestIsFirstParty = fetchResponse.type === 'basic';
+
+      // If the resource is in our control, and there was a valid response,
+      // update the cache with the new response.
+      if (requestIsFirstParty && fetchResponse.status === 200) {
         // Cache the updated file and then return the response
         cache.put(request, fetchResponse.clone());
         console.info('Fetch listener updated ' + reqPath);
