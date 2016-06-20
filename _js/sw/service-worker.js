@@ -202,17 +202,17 @@ function staleWhileRevalidate(request, updateUserCache) {
     var requestIsInUserCache = typeof userResponse !== 'undefined';
 
     // Kick off the update request in the background.
-    var fetchPromise = fetch(request).then(function(fetchResponse) {
+    var fetchResponse = fetch(request).then(function(response) {
       // Determine whether this is first or third-party request.
-      var requestIsFirstParty = fetchResponse.type === 'basic';
+      var requestIsFirstParty = response.type === 'basic';
 
       // IF the DEFAULT cache already has an entry for this asset,
       // AND the resource is in our control,
       // AND there was a valid response,
       // THEN update the cache with the new response.
-      if (requestIsInDefaultCache && requestIsFirstParty && fetchResponse.status === 200) {
+      if (requestIsInDefaultCache && requestIsFirstParty && response.status === 200) {
         // Cache the updated file and then return the response
-        defaultCache.put(request, fetchResponse.clone());
+        defaultCache.put(request, response.clone());
         console.info('Fetch listener updated ' + reqPath);
       }
 
@@ -221,21 +221,21 @@ function staleWhileRevalidate(request, updateUserCache) {
       // AND there was a valid response,
       // AND the function options allow user cache updating,
       // THEN update the cache with the new response.
-      else if (updateUserCache && requestIsInUserCache && requestIsFirstParty && fetchResponse.status === 200) {
+      else if (updateUserCache && requestIsInUserCache && requestIsFirstParty && response.status === 200) {
         // Cache the updated file and then return the response
-        userCache.put(request, fetchResponse.clone());
+        userCache.put(request, response.clone());
         console.info('Fetch listener updated ' + reqPath);
       } else {
         console.info('Fetch listener skipped ' + reqPath);
       }
 
       // Return response regardless of caching outcome.
-      return fetchResponse;
+      return response;
     });
 
     // Return any cached responses if we have one, otherwise wait for the
     // network response to come back.
-    return defaultResponse || userResponse || fetchPromise;
+    return defaultResponse || userResponse || fetchResponse;
   });
 }
 
