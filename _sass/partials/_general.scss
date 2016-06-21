@@ -1,7 +1,15 @@
 //
+// Vars
+//
+
+// Footer height might need adjusting from time to time based on content.
+$footer-height: 236px;
+
+//
 // General styles
 //
 html, body {
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
@@ -29,8 +37,23 @@ a, button, input, select, textarea, label, summary {
 
 main {
   max-width: 860px;
+  min-height: 100%;
   margin: 0 auto;
+  margin-bottom: 0 - $footer-height;
   padding: 1em;
+
+  &::after {
+    content: "";
+    display: block;
+    height: $footer-height;
+  }
+}
+
+// This facilitates the "sticky" footer. When the content doesn't fill the page,
+// the footer will still lock to the bottom.
+footer[role="contentinfo"] {
+  height: $footer-height;
+  //! Set ALL other props in _footer.scss
 }
 
 img {

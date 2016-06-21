@@ -10,9 +10,11 @@ footer[role="contentinfo"] {
   padding: 2em 1em;
   color: white;
   background: #111;
+  //! height is set in _general.scss
 
   // Footer content
   section {
+    @extend .clearfix;
     max-width: 860px;
     margin: 0 auto;
   }
@@ -23,6 +25,12 @@ footer[role="contentinfo"] {
     margin-right: 2em;
     border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
     transition: border-radius 4s ease-in-out;
+
+    @media (min-width: 400px) {
+      margin-top: -1.2em;
+      width: 160px;
+      height: auto;
+    }
   }
 
   // just for funsies
@@ -32,6 +40,14 @@ footer[role="contentinfo"] {
 
   .p-role {
     padding: 1em;
+  }
+
+  .colophon {
+    opacity: .25;
+    transition: opacity .25s ease-in-out;
+  }
+  .colophon:hover {
+    opacity: 1;
   }
 
   // Ensure links are readable regardless of state or browsing history.
