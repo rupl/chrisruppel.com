@@ -31,13 +31,13 @@ gallery:
   bgpos: 0 50%
 - src: paris-with-emily-7.jpg
   alt: A wall of skulls and bones piled up in an orderly fashion.
-  comment: The catacombs were basically 10 blocks undergroud of solid bones and skulls.
+  comment: The catacombs were 10 blocks of underground maze constructed out of solid bones and skulls.
   type: wide
   bgpad: 50%
 
 tags:
 - artwork
-- tours
+- city walking
 
 syndication:
 - type: Twitter
