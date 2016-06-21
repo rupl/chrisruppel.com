@@ -16,6 +16,29 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: snyk
         expires: '2016-07-02T14:49:54.331Z'
+  'npm:minimatch:20160620':
+    - gulp-sass > node-sass > node-gyp > minimatch:
+        reason: snyk
+        expires: '2016-07-21T15:42:17.016Z'
+    - gulp-sass > node-sass > gaze > globule > glob > minimatch:
+        reason: snyk
+        expires: '2016-07-21T15:42:17.017Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        reason: snyk
+        expires: '2016-07-21T15:42:17.018Z'
+    - gulp-sass > node-sass > gaze > globule > minimatch:
+        reason: snyk
+        expires: '2016-07-21T15:42:17.018Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        reason: snyk
+        expires: '2016-07-21T15:42:17.018Z'
+  'npm:negotiator:20160616':
+    - browser-sync > serve-index > accepts > negotiator:
+        reason: snyk
+        expires: '2016-07-21T15:42:17.018Z'
+    - browser-sync > socket.io > engine.io > accepts > negotiator:
+        reason: snyk
+        expires: '2016-07-21T15:42:17.020Z'
 patch:
   'npm:request:20160119':
     - browser-sync > localtunnel > request:
