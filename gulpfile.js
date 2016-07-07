@@ -108,7 +108,7 @@ gulp.task('sass-fonts', false, function () {
 // -----------------------------------------------------------------------------
 // Combine/minify JS
 // -----------------------------------------------------------------------------
-gulp.task('js', 'Lint, bundle, minify JS', ['js-main', 'js-sphere', 'js-sw', 'js-swcp']);
+gulp.task('js', 'Lint, bundle, minify JS', ['js-main', 'js-sphere', 'js-sw', 'js-swcp', 'js-custom']);
 
 // Main
 gulp.task('js-main', 'Main JS', function() {
@@ -166,6 +166,17 @@ gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
     ])
     .pipe(plumber())
     .pipe(concat('cache-polyfill.js'))
+    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('_site/js'))
+    .pipe(reload({stream: true}));
+});
+
+// Custom scripts, usually used on a single page
+gulp.task('js-custom', 'Custom scripts', function() {
+  bs.notify('Building custom scripts...');
+
+  return gulp.src(['_js/custom/*.js'])
+    .pipe(plumber())
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
@@ -282,6 +293,7 @@ gulp.task('watch', 'Watch various files for changes and re-compile them.', funct
   gulp.watch('_js/threejs/*', ['js-sphere']);
   gulp.watch('_js/sw/*', ['js-sw']);
   gulp.watch('_js/*', ['js-main']);
+  gulp.watch('_js/custom/*', ['js-custom']);
   gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], ['jekyll']);
 });
 
