@@ -3,19 +3,19 @@ ignore:
   'npm:connect:20130701':
     - browser-sync > browser-sync-ui > weinre > express > connect:
         reason: snyk
-        expires: '2016-07-02T14:49:54.331Z'
+        expires: '2016-08-10T18:55:26.726Z'
   'npm:express:20140912':
     - browser-sync > browser-sync-ui > weinre > express:
         reason: snyk
-        expires: '2016-07-02T14:49:54.331Z'
+        expires: '2016-08-10T18:55:26.727Z'
   'npm:qs:20140806':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: snyk
-        expires: '2016-07-02T14:49:54.331Z'
+        expires: '2016-08-10T18:55:26.727Z'
   'npm:qs:20140806-1':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: snyk
-        expires: '2016-07-02T14:49:54.331Z'
+        expires: '2016-08-10T18:55:26.727Z'
   'npm:minimatch:20160620':
     - gulp-sass > node-sass > node-gyp > minimatch:
         reason: snyk
@@ -43,3 +43,25 @@ patch:
   'npm:request:20160119':
     - browser-sync > localtunnel > request:
         patched: '2016-06-02T14:47:28.509Z'
+  'npm:minimatch:20160620':
+    - browser-sync > chokidar > fsevents > node-pre-gyp > rimraf > glob > minimatch:
+        patched: '2016-07-11T18:53:23.603Z'
+    - browser-sync > chokidar > fsevents > node-pre-gyp > tar > fstream > rimraf > glob > minimatch:
+        patched: '2016-07-11T18:53:23.603Z'
+    - browser-sync > chokidar > fsevents > node-pre-gyp > tar-pack > fstream > rimraf > glob > minimatch:
+        patched: '2016-07-11T18:53:23.603Z'
+    - browser-sync > chokidar > fsevents > node-pre-gyp > tar-pack > fstream-ignore > fstream > rimraf > glob > minimatch:
+        patched: '2016-07-11T18:53:23.603Z'
+    - browser-sync > chokidar > fsevents > node-pre-gyp > tar-pack > tar > fstream > rimraf > glob > minimatch:
+        patched: '2016-07-11T18:53:23.603Z'
+    - browser-sync > chokidar > fsevents > node-pre-gyp > tar-pack > rimraf > glob > minimatch:
+        patched: '2016-07-11T18:53:23.603Z'
+    - browser-sync > chokidar > fsevents > node-pre-gyp > tar-pack > fstream-ignore > minimatch:
+        patched: '2016-07-11T18:53:23.603Z'
+    - browser-sync > resp-modifier > minimatch:
+        patched: '2016-07-11T18:53:23.603Z'
+  'npm:ws:20160624':
+    - browser-sync > socket.io > socket.io-client > engine.io-client > ws:
+        patched: '2016-07-11T18:53:23.603Z'
+    - browser-sync > socket.io > engine.io > ws:
+        patched: '2016-07-11T18:53:23.603Z'
