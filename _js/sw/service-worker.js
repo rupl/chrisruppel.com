@@ -177,8 +177,12 @@ function staleWhileRevalidate(request, updateUserCache) {
   // different format than the default because we need to use the .has() method
   // before opening the cache. Using .open() directly causes many empty caches
   // to be created for each irrelevant request that runs the code.
+  //
+  // @TODO: patch this block so that checking the cache does not create empty
+  //        caches. Currently, my code will create an empty cache for every URL
+  //        visited which doesn't have a cache entry.
   if (updateUserCache) {
-    var userCachePromise = caches.has(OFFLINE_ARTICLE_PREFIX + reqPath).then(function maybeOpenCache(res) {
+    var userCachePromise = caches.has(OFFLINE_ARTICLE_PREFIX + reqPath).then(function maybeOpenCache(cacheExists) {
       return caches.open(OFFLINE_ARTICLE_PREFIX + reqPath);
     }).catch(function () {
       console.error('No user cache entry for ' + reqPath);
