@@ -15,6 +15,7 @@
     <link rel="manifest" href="/manifest.json">
 
     <!-- indieweb sign-in -->
+    <link rel="me" href="{{ site.url }}">
     <link rel="me" href="https://twitter.com/rupl">
     <link rel="me" href="https://github.com/rupl">
     <link rel="me" href="https://drupal.org/u/rupl">
@@ -94,13 +95,13 @@
     </main>
     <footer role="contentinfo">
       <section>
-        <img alt="my face" class="me"
+        <img alt="my face" class="me u-photo"
           width="120" height="129"
           src="/static/chris-ruppel-2015@320.jpg"
           srcset="/static/chris-ruppel-2015@640.jpg 2x">
 
-        <p class="p-role">
-          Hello, I'm <a class="p-name fn u-url" href="{{ site.url }}/about/">Chris Ruppel</a>,
+        <p class="p-role p-note">
+          Hello, I'm <a class="p-name fn u-url" href="{{ site.url }}">Chris Ruppel</a>,
           a frontend <span class="p-category">developer</span> and world <span class="p-category">traveler</span>
           last seen {% include last-seen.html %}.<br>
         </p>
