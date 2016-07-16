@@ -173,17 +173,29 @@ function staleWhileRevalidate(request, updateUserCache) {
     return cache.match(request);
   });
 
-  // Find any user-saved articles so we can update outdated content. We use a
-  // different format than the default because we need to use the .has() method
-  // before opening the cache. Using .open() directly causes many empty caches
-  // to be created for each irrelevant request that runs the code.
-  //
-  // @TODO: patch this block so that checking the cache does not create empty
-  //        caches. Currently, my code will create an empty cache for every URL
-  //        visited which doesn't have a cache entry.
+  // Find any user-saved articles so we can update outdated content.
   if (updateUserCache) {
     var userCachePromise = caches.has(OFFLINE_ARTICLE_PREFIX + reqPath).then(function maybeOpenCache(cacheExists) {
-      return caches.open(OFFLINE_ARTICLE_PREFIX + reqPath);
+      // This conditional exists because, per spec, caches.has() resolves whether
+      // the cache is found or not. The Promise value returns true or false based
+      // on whether the cache was found. Rejections only occur when something
+      // exceptional has occurred, not just because a cache is missing.
+      //
+      // @see https://www.w3.org/TR/service-workers/#cache-storage-has
+      //
+      // In cases where the cache was NOT found, I had extreme difficulty getting
+      // pages to load, since manually rejecting caused the Promise.all() below
+      // to fail, resulting in the Offline page even when something omre useful
+      // should have displayed.
+      //
+      // My band-aid is to load the main cache when no user cache was found,
+      // sending along a similar object that won't ever be touched again since
+      // the userMatchPromise will never match content URLs in the main cache.
+      if (cacheExists) {
+        return caches.open(OFFLINE_ARTICLE_PREFIX + reqPath);
+      } else {
+        return caches.open(SW.cache_version);
+      }
     }).catch(function () {
       console.error('No user cache entry for ' + reqPath);
     });
