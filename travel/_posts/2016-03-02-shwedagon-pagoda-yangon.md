@@ -27,6 +27,7 @@ gallery:
   bgpad: 50%
 
 tags:
+- monuments
 - temples
 
 summary: Our second night in Yangon we visited the biggest temple in Myanmar. It has a long history dating back to the 11th century and houses many relics.
