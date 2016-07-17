@@ -200,7 +200,6 @@ function staleWhileRevalidate(request, updateUserCache) {
       console.error('Error while trying to load user cache for ' + reqPath);
     });
     var userMatchPromise = userCachePromise.then(function matchUserCache(cache) {
-      console.info('cache', cache);
       return cache.match(request);
     });
   }
