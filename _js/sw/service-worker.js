@@ -197,7 +197,7 @@ function staleWhileRevalidate(request, updateUserCache) {
         return caches.open(SW.cache_version);
       }
     }).catch(function () {
-      console.error('No user cache entry for ' + reqPath);
+      console.error('Error while trying to load user cache for ' + reqPath);
     });
     var userMatchPromise = userCachePromise.then(function matchUserCache(cache) {
       console.info('cache', cache);
