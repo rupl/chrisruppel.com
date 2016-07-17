@@ -153,8 +153,7 @@ gulp.task('js-sw', 'Service Worker JS', function() {
     ])
     .pipe(plumber())
     .pipe(gulp.dest('')) // SW needs to be at site root
-    .pipe(gulp.dest('_site')) // SW needs to be at site root
-    .pipe(reload({stream: true}));
+    .pipe(gulp.dest('_site')); // SW needs to be at site root
 });
 
 // Service Worker cache polyfill
