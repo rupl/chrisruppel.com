@@ -114,7 +114,7 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
       caches.match(event.request).then(function (response) {
         // Show old content while revalidating URL in background if necessary.
-        return staleWhileRevalidate(event.request, true);
+        return staleWhileRevalidate(event.request);
       }).catch(function(error) {
         // When the cache is empty and the network also fails, we fall back to a
         // generic "Offline" page.
@@ -131,7 +131,7 @@ self.addEventListener('fetch', function(event) {
   //
   // @see http://12devsofxmas.co.uk/2016/01/day-9-service-worker-santas-little-performance-helper/
   else if (requestIsAsset) {
-    event.respondWith(staleWhileRevalidate(event.request, false));
+    event.respondWith(staleWhileRevalidate(event.request));
   }
 
   // Images
@@ -158,9 +158,7 @@ self.addEventListener('fetch', function(event) {
 // Stale While Revalidate
 //
 // Helper function to manage cache updates in the background.
-function staleWhileRevalidate(request, updateUserCache) {
-  updateUserCache = updateUserCache || false;
-
+function staleWhileRevalidate(request) {
   // Build a hostname-free version of request path.
   var reqLocation = getLocation(request.url);
   var reqPath = reqLocation.pathname;
@@ -174,35 +172,33 @@ function staleWhileRevalidate(request, updateUserCache) {
   });
 
   // Find any user-saved articles so we can update outdated content.
-  if (updateUserCache) {
-    var userCachePromise = caches.has(OFFLINE_ARTICLE_PREFIX + reqPath).then(function maybeOpenCache(cacheExists) {
-      // This conditional exists because, per spec, caches.has() resolves whether
-      // the cache is found or not. The Promise value returns true or false based
-      // on whether the cache was found. Rejections only occur when something
-      // exceptional has occurred, not just because a cache is missing.
-      //
-      // @see https://www.w3.org/TR/service-workers/#cache-storage-has
-      //
-      // In cases where the cache was NOT found, I had extreme difficulty getting
-      // pages to load, since manually rejecting caused the Promise.all() below
-      // to fail, resulting in the Offline page even when something omre useful
-      // should have displayed.
-      //
-      // My band-aid is to load the main cache when no user cache was found,
-      // sending along a similar object that won't ever be touched again since
-      // the userMatchPromise will never match content URLs in the main cache.
-      if (cacheExists) {
-        return caches.open(OFFLINE_ARTICLE_PREFIX + reqPath);
-      } else {
-        return caches.open(SW.cache_version);
-      }
-    }).catch(function () {
-      console.error('Error while trying to load user cache for ' + reqPath);
-    });
-    var userMatchPromise = userCachePromise.then(function matchUserCache(cache) {
-      return cache.match(request);
-    });
-  }
+  var userCachePromise = caches.has(OFFLINE_ARTICLE_PREFIX + reqPath).then(function maybeOpenCache(cacheExists) {
+    // This conditional exists because, per spec, caches.has() resolves whether
+    // the cache is found or not. The Promise value returns true or false based
+    // on whether the cache was found. Rejections only occur when something
+    // exceptional has occurred, not just because a cache is missing.
+    //
+    // @see https://www.w3.org/TR/service-workers/#cache-storage-has
+    //
+    // In cases where the cache was NOT found, I had extreme difficulty getting
+    // pages to load, since manually rejecting caused the Promise.all() below
+    // to fail, resulting in the Offline page even when something omre useful
+    // should have displayed.
+    //
+    // My band-aid is to load the main cache when no user cache was found,
+    // sending along a similar object that won't ever be touched again since
+    // the userMatchPromise will never match content URLs in the main cache.
+    if (cacheExists) {
+      return caches.open(OFFLINE_ARTICLE_PREFIX + reqPath);
+    } else {
+      return caches.open(SW.cache_version);
+    }
+  }).catch(function () {
+    console.error('Error while trying to load user cache for ' + reqPath);
+  });
+  var userMatchPromise = userCachePromise.then(function matchUserCache(cache) {
+    return cache.match(request);
+  });
 
   return Promise.all([defaultCachePromise, defaultMatchPromise, userCachePromise, userMatchPromise]).then(function(promiseResults) {
     // When ES2015 isn't behind a flag anymore, move these vars to an array
@@ -236,7 +232,7 @@ function staleWhileRevalidate(request, updateUserCache) {
       // AND there was a valid response,
       // AND the function options allow user cache updating,
       // THEN update the cache with the new response.
-      else if (updateUserCache && requestIsInUserCache && requestIsFirstParty && response.status === 200) {
+      else if (requestIsInUserCache && requestIsFirstParty && response.status === 200) {
         // Cache the updated file and then return the response
         userCache.put(request, response.clone());
         console.info('Fetch listener updated ' + reqPath);
