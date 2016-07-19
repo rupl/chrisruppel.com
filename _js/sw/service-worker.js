@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.6.2',
+  cache_version: 'main_v1.7.0',
   offline_assets: [
     '/',
     '/offline/',
@@ -19,14 +19,17 @@ var SW = {
     '/travel/list/',
     '/css/main.min.css',
     '/css/fonts.min.css',
-    '/js/main.min.js'
+    '/js/main.min.js',
+    '/static/chris-ruppel-2015@320.jpg',
+    '/static/chris-ruppel-2015@640.jpg'
   ]
 };
+
 
 //
 // Installation
 //
-self.addEventListener('install', function installer (event) {
+self.addEventListener('install', function installer(event) {
   event.waitUntil(
     caches
       .open(SW.cache_version)
@@ -95,7 +98,7 @@ self.addEventListener('fetch', function(event) {
   // Consolidate some conditions for re-use.
   var requestIsHTML = event.request.headers.get('accept').includes('text/html')
                    && event.request.method === 'GET';
-  var requestIsAsset = /^(\/css\/|\/js\/)/.test(reqPath);
+  var requestIsAsset = /^(\/css\/|\/js\/|\/static\/)/.test(reqPath);
   var requestIsImage = /^(\/img\/)/.test(reqPath);
 
 
@@ -110,13 +113,11 @@ self.addEventListener('fetch', function(event) {
   ) {
     event.respondWith(
       caches.match(event.request).then(function (response) {
-        // Look in the Cache and fall back to Network.
-        // console.info('Fetch listener tried cache-then-network for ' + event.request);
-        return response || fetch(event.request);
+        // Show old content while revalidating URL in background if necessary.
+        return staleWhileRevalidate(event.request);
       }).catch(function(error) {
         // When the cache is empty and the network also fails, we fall back to a
         // generic "Offline" page.
-        // console.info('Fetch listener served offline page.');
         return caches.match('/offline/');
       })
     );
@@ -130,7 +131,7 @@ self.addEventListener('fetch', function(event) {
   //
   // @see http://12devsofxmas.co.uk/2016/01/day-9-service-worker-santas-little-performance-helper/
   else if (requestIsAsset) {
-    event.respondWith(returnFromCacheOrFetch(event.request));
+    event.respondWith(staleWhileRevalidate(event.request));
   }
 
   // Images
@@ -154,50 +155,103 @@ self.addEventListener('fetch', function(event) {
   // }
 });
 
-// Helper function to handle Fetch listener.
-function returnFromCacheOrFetch(request) {
+// Stale While Revalidate
+//
+// Helper function to manage cache updates in the background.
+function staleWhileRevalidate(request) {
   // Build a hostname-free version of request path.
   var reqLocation = getLocation(request.url);
   var reqPath = reqLocation.pathname;
 
-  var cachePromise = caches.open(SW.cache_version);
-  var matchPromise = cachePromise.then(function(cache) {
+  // Open the default cache and look for this request. We have to restrict this
+  // lookup to one cache because we want to make sure we don't add new entries
+  // unless really necessary (third-party assets, unsaved content, etc).
+  var defaultCachePromise = caches.open(SW.cache_version);
+  var defaultMatchPromise = defaultCachePromise.then(function(cache) {
     return cache.match(request);
   });
 
-  return Promise.all([cachePromise, matchPromise]).then(function(promiseResults) {
-    // When ES2015 isn't behind a flag anymore, move these two vars to an array
+  // Find any user-saved articles so we can update outdated content.
+  var userCachePromise = caches.has(OFFLINE_ARTICLE_PREFIX + reqPath).then(function maybeOpenCache(cacheExists) {
+    // This conditional exists because, per spec, caches.has() resolves whether
+    // the cache is found or not. The Promise value returns true or false based
+    // on whether the cache was found. Rejections only occur when something
+    // exceptional has occurred, not just because a cache is missing.
+    //
+    // @see https://www.w3.org/TR/service-workers/#cache-storage-has
+    //
+    // In cases where the cache was NOT found, I had extreme difficulty getting
+    // pages to load, since manually rejecting caused the Promise.all() below
+    // to fail, resulting in the Offline page even when something omre useful
+    // should have displayed.
+    //
+    // My band-aid is to load the main cache when no user cache was found,
+    // sending along a similar object that won't ever be touched again since
+    // the userMatchPromise will never match content URLs in the main cache.
+    if (cacheExists) {
+      return caches.open(OFFLINE_ARTICLE_PREFIX + reqPath);
+    } else {
+      return caches.open(SW.cache_version);
+    }
+  }).catch(function () {
+    console.error('Error while trying to load user cache for ' + reqPath);
+  });
+  var userMatchPromise = userCachePromise.then(function matchUserCache(cache) {
+    return cache.match(request);
+  });
+
+  return Promise.all([defaultCachePromise, defaultMatchPromise, userCachePromise, userMatchPromise]).then(function(promiseResults) {
+    // When ES2015 isn't behind a flag anymore, move these vars to an array
     // in the function signature to destructure the results of the Promise.
-    var cache = promiseResults[0];
-    var cacheResponse = promiseResults[1];
+    var defaultCache = promiseResults[0];
+    var defaultResponse = promiseResults[1];
+    var userCache = promiseResults[2];
+    var userResponse = promiseResults[3];
+
+    // Determine whether any cache holds data for this request.
+    var requestIsInDefaultCache = typeof defaultResponse !== 'undefined';
+    var requestIsInUserCache = typeof userResponse !== 'undefined';
 
     // Kick off the update request in the background.
-    var fetchPromise = fetch(request).then(function(fetchResponse) {
-      // First, determine whether this is first or third-party request.
-      var requestIsFirstParty = fetchResponse.type === 'basic';
+    var fetchResponse = fetch(request).then(function(response) {
+      // Determine whether this is first or third-party request.
+      var requestIsFirstParty = response.type === 'basic';
 
-      // If the resource is in our control, and there was a valid response,
-      // update the cache with the new response.
-      if (requestIsFirstParty && fetchResponse.status === 200) {
+      // IF the DEFAULT cache already has an entry for this asset,
+      // AND the resource is in our control,
+      // AND there was a valid response,
+      // THEN update the cache with the new response.
+      if (requestIsInDefaultCache && requestIsFirstParty && response.status === 200) {
         // Cache the updated file and then return the response
-        cache.put(request, fetchResponse.clone());
+        defaultCache.put(request, response.clone());
         console.info('Fetch listener updated ' + reqPath);
       }
-      else {
+
+      // IF the USER cache already has an entry for this asset,
+      // AND the resource is in our control,
+      // AND there was a valid response,
+      // AND the function options allow user cache updating,
+      // THEN update the cache with the new response.
+      else if (requestIsInUserCache && requestIsFirstParty && response.status === 200) {
+        // Cache the updated file and then return the response
+        userCache.put(request, response.clone());
+        console.info('Fetch listener updated ' + reqPath);
+      } else {
         console.info('Fetch listener skipped ' + reqPath);
       }
 
       // Return response regardless of caching outcome.
-      return fetchResponse;
+      return response;
     });
 
-    // Return the cached response if we have it, otherwise wait for the
-    // actual response to come back.
-    return cacheResponse || fetchPromise;
+    // Return any cached responses if we have one, otherwise wait for the
+    // network response to come back.
+    return defaultResponse || userResponse || fetchResponse;
   });
 }
 
-
+// Polyfill for window.location
+//
 // @see http://stackoverflow.com/a/21553982/175551
 function getLocation(href) {
   var match = href.match(/^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)(\/[^?#]*)(\?[^#]*|)(#.*|)$/);

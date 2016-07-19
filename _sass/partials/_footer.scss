@@ -24,18 +24,15 @@ footer[role="contentinfo"] {
     float: left;
     margin-right: 2em;
     border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
-    transition: border-radius 4s ease-in-out;
+
+    // just for funsies
+    animation: blobby 10s ease-in-out alternate infinite;
 
     @media (min-width: 400px) {
       margin-top: -1.2em;
       width: 160px;
       height: auto;
     }
-  }
-
-  // just for funsies
-  img.me:hover {
-    border-radius: 750px 250px 750px 250px / 250px 750px 250px 750px;
   }
 
   .p-role {
@@ -56,5 +53,14 @@ footer[role="contentinfo"] {
   }
   a:visited {
     opacity: .666;
+  }
+}
+
+@keyframes blobby {
+  50% {
+    border-radius: 750px 550px 350px 750px / 350px 750px 550px 450px;
+  }
+  100% {
+    border-radius: 750px 250px 750px 250px / 250px 750px 250px 750px;
   }
 }

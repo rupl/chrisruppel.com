@@ -5,14 +5,14 @@ permalink: /about/site/
 
 ### Tech
 
-* Gulp - task manager for development and parts of deployment.
-* Sass - light preprocessing of my CSS.
-* Jekyll - content management and site generator.
-* Mapbox - displaying maps and GPS data.
-* Express - server for production site.
-* GitHub - code hosting and deployment.
-* Heroku - web hosting and deployment.
-* S3 - image hosting.
+* **Gulp** for task manager for development and parts of deployment.
+* **Sass** for light preprocessing of CSS.
+* **Jekyll** for content management and site generator.
+* **Mapbox** for displaying maps and GPS data.
+* **Express** for server.
+* **GitHub** for code hosting and deployment.
+* **Heroku** for web hosting and deployment.
+* **S3** for image hosting.
 
 ### Content
 
