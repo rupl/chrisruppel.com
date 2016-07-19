@@ -2,6 +2,51 @@
 // Work
 //
 
+.availability {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+  }
+
+  // General slot styles
+  > [class*="-slot"] {
+    display: block;
+    flex-grow: 1;
+    margin: 0;
+    padding: 1em 0;
+    border: .5px solid rgba(#000, .333);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    text-align: center;
+    font-size: .8em;
+  }
+
+  // Availability styles
+  .past-slot {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  .full-slot {
+    background: #e64;
+    cursor: not-allowed;
+  }
+  .half-slot {
+    background: #ec3;
+    cursor: context-menu;
+  }
+  .open-slot {
+    background: #6c6;
+    cursor: context-menu;
+  }
+}
+
 .websites {
   dd {
     margin: 0;
