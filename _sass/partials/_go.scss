@@ -72,6 +72,7 @@
 
   @media (min-width: 600px) {
     width: auto;
+    flex: 1;
   }
 
   &:hover {
@@ -152,6 +153,17 @@
   }
   &:hover::before {
     animation: bounce-left .42s ease-in-out;
+  }
+}
+
+.btn--mail {
+  &::before {
+    content: '\1f4e8 \00a0';
+    position: relative;
+    top: 1px;
+  }
+  &:hover::before {
+    animation: bounce-down .42s ease-in-out;
   }
 }
 
