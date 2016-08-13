@@ -16,7 +16,7 @@ permalink: /work/
   {% if slottime < nowunix %}
     <li class="past-slot">{{ slot.date | date: '%b' }}<br></li>
   {% else if slottime > nowunix %}
-    <li class="{{ slot.status }}-slot">{{ slot.date | date: '%b' }}<br></li>
+    <li class="{{ slot.status }}-slot {% if slot.status != full %}available{% endif %}">{{ slot.date | date: '%b' }}<br></li>
   {% endif %}
 {% endfor %}
 </ul>
@@ -42,6 +42,6 @@ permalink: /work/
 {% endcomment %}
 
 <div class="go">
-  <a class="btn btn--mail" href="mailto:chris.ruppel@gmail.com?subject=[Work+Inquiry]+for+YOUR+NAME+HERE">Contact me</a>
+  <a class="btn btn--mail" href="mailto:chris.ruppel@gmail.com?subject=[Work+Inquiry]+for+YOUR+NAME+HERE" target="_blank">Contact me</a>
   <a class="btn btn--back" href="/">Back to the Front</a>
 </div>
