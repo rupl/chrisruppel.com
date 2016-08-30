@@ -182,7 +182,7 @@ function staleWhileRevalidate(request) {
     //
     // In cases where the cache was NOT found, I had extreme difficulty getting
     // pages to load, since manually rejecting caused the Promise.all() below
-    // to fail, resulting in the Offline page even when something omre useful
+    // to fail, resulting in the Offline page even when something more useful
     // should have displayed.
     //
     // My band-aid is to load the main cache when no user cache was found,
@@ -196,6 +196,7 @@ function staleWhileRevalidate(request) {
   }).catch(function () {
     console.error('Error while trying to load user cache for ' + reqPath);
   });
+
   var userMatchPromise = userCachePromise.then(function matchUserCache(cache) {
     return cache.match(request);
   });
@@ -230,13 +231,15 @@ function staleWhileRevalidate(request) {
       // IF the USER cache already has an entry for this asset,
       // AND the resource is in our control,
       // AND there was a valid response,
-      // AND the function options allow user cache updating,
       // THEN update the cache with the new response.
       else if (requestIsInUserCache && requestIsFirstParty && response.status === 200) {
         // Cache the updated file and then return the response
         userCache.put(request, response.clone());
         console.info('Fetch listener updated ' + reqPath);
-      } else {
+      }
+
+      // None of the conditions were met. Just skip the caching phase.
+      else {
         console.info('Fetch listener skipped ' + reqPath);
       }
 
