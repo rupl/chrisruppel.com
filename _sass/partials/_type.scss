@@ -8,6 +8,14 @@ p {
   line-height: 1.4;
 }
 
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
