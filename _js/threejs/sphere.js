@@ -23,7 +23,7 @@ function init() {
   // Geometry & Material
   var imagepath = container.dataset.image;
   var geometry = new THREE.SphereGeometry(600, 100, 100);
-  var texture = THREE.ImageUtils.loadTexture(imagepath);
+  var texture = new THREE.TextureLoader().load(imagepath);
   texture.minFilter = THREE.NearestFilter;
   var material = new THREE.MeshBasicMaterial({map: texture, overdraw: 0.5});
 
