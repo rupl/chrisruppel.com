@@ -132,7 +132,7 @@ gulp.task('js-sphere', 'Photosphere JS', function() {
   bs.notify('Building photosphere JS...');
 
   return gulp.src([
-      'node_modules/three/three.min.js',
+      'node_modules/three/build/three.min.js',
       'node_modules/screenfull/dist/screenfull.js',
       '_js/threejs/*.js'
     ])
