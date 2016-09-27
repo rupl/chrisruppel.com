@@ -34,7 +34,7 @@
     "screenfull": "^2.0.0",
     "serviceworker-cache-polyfill": "^3.0.0",
     "snyk": "^1.14.3",
-    "three": "^0.72.0"
+    "three": "^0.80.1"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
