@@ -256,7 +256,7 @@ gulp.task('image-photosphere', false, function () {
 
 // SVG icons
 gulp.task('image-svg', false, function () {
-  return gulp.src(['_svg/*'])
+  return gulp.src(['_svg/**/*'])
     .pipe(changed('svg'))
     .pipe(imagemin({
       progressive: true,

@@ -3,34 +3,60 @@
 //
 
 .availability {
-  display: flex;
   margin: 0;
   padding: 0;
-  box-shadow: 0 5px 15px rgba(#000, .16);
+  box-shadow: 5px 5px 15px rgba(#000, .16);
+  transition: box-shadow .1666s linear;
 
-  @media (min-width: 600px) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+
+  &:hover {
+    box-shadow: 5px 5px 15px rgba(#000, .25);
   }
 
   // General slot styles
   > [class*="-slot"] {
     display: block;
     flex-grow: 1;
+    width: 100%;
     margin: 0;
-    padding: 1em 0;
+    padding: 1em;
     border: .5px solid rgba(#000, .333);
     border-top-width: 1px;
     border-bottom-width: 1px;
     text-align: center;
     font-size: .8em;
+    transition: border-color .1666s linear;
+
+    &:hover {
+      border-color: rgba(#000, .666);
+    }
   }
+
+  > [class*="-slot"]:first-child {
+    border-left-width: 1px;
+  }
+  > [class*="-slot"]:last-child {
+    border-right-width: 1px;
+  }
+
+  // Big-screen styles
+  @media (min-width: 600px) {
+    flex-wrap: nowrap;
+
+    > [class*="-slot"] {
+      width: auto;
+    }
+  }
+
 
   // Availability styles
   .past-slot {
+    color: #666;
     background: #ccc;
     cursor: not-allowed;
   }
@@ -48,9 +74,18 @@
   }
 }
 
-.websites {
-  dd {
+.client-list {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+
+  .client {
+    flex: 1 0 33.3333%;
+    min-width: 120px;
     margin: 0;
-    margin-bottom: 1em;
+    padding: 0;
+    text-align: center;
   }
 }

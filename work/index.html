@@ -5,9 +5,21 @@ permalink: /work/
 
 <h1 class="title--main">Hire me!</h1>
 
-<p class="intro summary">
-  I'm available for hire <strong>soon</strong>.
-</p>
+<h2 class="intro summary">Let me speed up your site</h2>
+
+<p>I help organizations build faster, more stable websites. I specialize in consulting related to <strong>frontend performance</strong> and <strong>automated testing</strong>.</p>
+<p>I've helped some big brands achieve their performance goals while producing sites that hold up to prime-time levels of traffic.</p>
+
+<ul class="client-list">
+{% for client in site.clients reversed %}
+  <li class="client"><img width="179" height="179" src="/svg/work/logos/{{ client.src }}" alt="{{ client.alt }}"></li>
+{% endfor %}
+</ul>
+
+<p>However, I'm not only interested in bigger sites. Any site in need of performance tuning is a job for me! Please contact me using the button below and we can start a conversation about your project.</p>
+
+
+<h2 class="intro summary">I'm available for hire <strong>soon</strong></h2>
 
 <ul class="availability">
 {% for slot in site.categories.calendar reversed %}
@@ -16,14 +28,33 @@ permalink: /work/
   {% if slottime < nowunix %}
     <li class="past-slot">{{ slot.date | date: '%b' }}<br></li>
   {% else if slottime > nowunix %}
-    <li class="{{ slot.status }}-slot {% if slot.status != full %}available{% endif %}">{{ slot.date | date: '%b' }}<br></li>
+    <li
+      class="{{ slot.status }}-slot {% if slot.status != full %}available{% endif %}"
+      title="{{ slot.date | date: '%b %Y' }}: {{ slot.status }}"
+    >{{ slot.date | date: '%b' }}<br></li>
   {% endif %}
 {% endfor %}
 </ul>
-
-<p>I can help your organization build faster, more stable websites. I specialize in consulting related to <strong>frontend performance</strong> and <strong>automated testing</strong>.</p>
+<br><br>
 
 {% comment %}
+<p>If you have an interesting project in need of any of the following things I'm a great person to contact! Please use the button below to email me and we can begin a conversation.</p>
+
+<ul class="Services">
+  <li><strong>Frontend development</strong> — If it's the part of the app that lives in the browser, I'm all about it. I'm most familiar with React, Jekyll, and Drupal, but I'm pretty comfortable in any language or framework. I'm happy to augment your team and build accessible, performant frontend code for your website or app.</li>
+  <li><strong>Frontend performance</strong> — I'll give your site a thorough inspection and deliver a report containing an actionable plan to improve your loading times.</li>
+  <li><strong>Implementing audits</strong> — I am almost always willing to take on short-term development contracts to implement the improvement plans I recommend, as long as the tech stack is something I'm comfortable with.</li>
+  <li><strong>Training workshops</strong> — You can hire me to do on-site training at your company or event. I have been training people to build performant, responsive websites since 2011 and would love to help your team next!</li>
+</ul>
+
+<h2>I can't help you with...</h2>
+<p>I'm not a designer, I'm not great at application programming, and I'm not looking for a full-time position as an employee.</p>
+<p>In order to be the best frontend developer I can be, I choose not to take any of these roles which are often associated with or coupled to frontend development.</p>
+<p>I'm happy to refer you to others who will work with me, but right now I only accept work for projects that directly involve frontend development.</p>
+
+<h2>Still with me?</h2>
+<p>Go ahead and hit that contact button!</p>
+
 <!--
 <p>At <a href="https://fourkitchens.com">Four Kitchens</a>, I helped improve clients' frontend performance. I was part of teams which helped many organizations including NBC Universal, Time Inc., Turner Broadcasting, ICANN, <em>The Economist</em>, and Stanford University.</p>
 <p>I've written extensively about <a href="https://fourword.fourkitchens.com/blog/series/webperf-wednesday">frontend performance</a> and contributed to many open source tools in the space.</p>
@@ -42,6 +73,6 @@ permalink: /work/
 {% endcomment %}
 
 <div class="go">
-  <a class="btn btn--mail" href="mailto:chris.ruppel@gmail.com?subject=[Work+Inquiry]+for+YOUR+NAME+HERE" target="_blank">Contact me</a>
+  <a class="btn btn--mail" href="mailto:chris.ruppel@gmail.com?subject=[Work+Inquiry]+YOUR+NAME+HERE" target="_blank">Contact me</a>
   <a class="btn btn--back" href="/">Back to the Front</a>
 </div>

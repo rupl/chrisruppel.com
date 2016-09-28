@@ -23,7 +23,10 @@ tag_permalink_style: pretty
 
 # Content types
 # - Set 'output' of any collection to `true` to generate individual pages.
-# collections:
+collections:
+  clients:
+    output: false
+    permalink: /clients/:path/
 
 # Set defaults for various pages
 defaults:
