@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.7.1',
+  cache_version: 'main_v1.7.2',
   offline_assets: [
     '/',
     '/offline/',
@@ -22,7 +22,13 @@ var SW = {
     '/css/fonts.min.css',
     '/js/main.min.js',
     '/static/chris-ruppel-2015@320.jpg',
-    '/static/chris-ruppel-2015@640.jpg'
+    '/static/chris-ruppel-2015@640.jpg',
+    '/svg/work/logos/economist.svg',
+    '/svg/work/logos/nbc.svg',
+    '/svg/work/logos/stanford.svg',
+    '/svg/work/logos/timeinc.svg',
+    '/svg/work/logos/turner.svg',
+    '/svg/work/logos/yale.svg',
   ]
 };
 
@@ -99,7 +105,7 @@ self.addEventListener('fetch', function(event) {
   // Consolidate some conditions for re-use.
   var requestIsHTML = event.request.headers.get('accept').includes('text/html')
                    && event.request.method === 'GET';
-  var requestIsAsset = /^(\/css\/|\/js\/|\/static\/)/.test(reqPath);
+  var requestIsAsset = /^(\/css\/|\/js\/|\/static\/|\/svg\/)/.test(reqPath);
   var requestIsImage = /^(\/img\/)/.test(reqPath);
 
 
