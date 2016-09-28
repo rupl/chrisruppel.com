@@ -5,13 +5,18 @@
 .availability {
   margin: 0;
   padding: 0;
-  box-shadow: 0 5px 15px rgba(#000, .16);
+  box-shadow: 5px 5px 15px rgba(#000, .16);
+  transition: box-shadow .1666s linear;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: stretch;
+
+  &:hover {
+    box-shadow: 5px 5px 15px rgba(#000, .25);
+  }
 
   // General slot styles
   > [class*="-slot"] {
@@ -25,6 +30,11 @@
     border-bottom-width: 1px;
     text-align: center;
     font-size: .8em;
+    transition: border-color .1666s linear;
+
+    &:hover {
+      border-color: rgba(#000, .666);
+    }
   }
 
   > [class*="-slot"]:first-child {
@@ -64,9 +74,18 @@
   }
 }
 
-.websites {
-  dd {
+.client-list {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+
+  .client {
+    flex: 1 0 33.3333%;
+    min-width: 120px;
     margin: 0;
-    margin-bottom: 1em;
+    padding: 0;
+    text-align: center;
   }
 }
