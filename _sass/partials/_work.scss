@@ -80,6 +80,7 @@
   flex-flow: row wrap;
   margin: 0;
   padding: 0;
+  animation: fade-in 1s ease-in-out;
 
   .client {
     flex: 1 0 33.3333%;
