@@ -1,0 +1,11 @@
+#offline {
+  overflow: hidden;
+  height: 0;
+  max-height: 0;
+  transition: max-height 1.5s ease-in-out;
+
+  &.is-active {
+    height: auto;
+    max-height: 1000px;
+  }
+}
