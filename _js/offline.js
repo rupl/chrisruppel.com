@@ -15,7 +15,7 @@
           if (cacheName.indexOf(OFFLINE_ARTICLE_PREFIX) !== -1) {
             // The cache name indicates that it was saved by the user.
             var cacheEntry = document.createElement('li');
-            cacheEntry.innerHTML = '<a href="' + cacheName.split('--')[1] + '">' + cacheName.split('/')[2] + '</a>';
+            cacheEntry.innerHTML = '<a href="' + cacheName.split('--')[1] + '">' + cacheName.split('/')[2].split('-').join(' ') + '</a>';
 
             // Append to DOM.
             if (!!offlineContentEntry) {
