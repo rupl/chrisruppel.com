@@ -1,4 +1,10 @@
 //
+// Variables shared across files.
+//
+var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
+
+
+//
 // bling.js but using both qS and qSA
 //
 window.$ = document.querySelector.bind(document);
@@ -15,6 +21,7 @@ NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn
     elem.on(name, fn);
   });
 }
+
 
 //
 // Blur all form fields

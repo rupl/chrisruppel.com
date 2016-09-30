@@ -96,7 +96,7 @@
 
         // Open cache and save current assets. If the cache already exists it is
         // overwriting the existing files.
-        caches.open('chrisruppel-offline--' + currentPath).then(function(cache) {
+        caches.open(OFFLINE_ARTICLE_PREFIX + currentPath).then(function(cache) {
           var updateCache = cache.addAll(pageResources);
 
           // Update UI to indicate success.
