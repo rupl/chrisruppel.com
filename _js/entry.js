@@ -86,8 +86,8 @@
         // Build an array of the page-specific resources.
         var pageResources = [currentPath];
 
-        // Loop through any gallery images and save to pageResources array.
-        var images = $$('.gallery img').forEach(function (img) {
+        // Loop through any content images and save to pageResources array.
+        var images = $$('main img').forEach(function (img) {
           pageResources.push(img.currentSrc);
         });
 
