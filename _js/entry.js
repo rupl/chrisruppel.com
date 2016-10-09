@@ -86,8 +86,8 @@
         // Build an array of the page-specific resources.
         var pageResources = [currentPath];
 
-        // Loop through any gallery images and save to pageResources array.
-        var images = $$('.gallery img').forEach(function (img) {
+        // Loop through any content images and save to pageResources array.
+        var images = $$('main img').forEach(function (img) {
           pageResources.push(img.currentSrc);
         });
 
@@ -96,7 +96,7 @@
 
         // Open cache and save current assets. If the cache already exists it is
         // overwriting the existing files.
-        caches.open('chrisruppel-offline--' + currentPath).then(function(cache) {
+        caches.open(OFFLINE_ARTICLE_PREFIX + currentPath).then(function(cache) {
           var updateCache = cache.addAll(pageResources);
 
           // Update UI to indicate success.

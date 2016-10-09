@@ -234,6 +234,10 @@ To fix, I initially set it up to whitelist my domain, but it seemed to cause int
 If you have a resource which is not under your control, the Fetch API allows you to set `mode: 'no-cors'` and [receive the opaque response](https://jakearchibald.com/2015/thats-so-fetch/#no-cors-and-opaque-responses).
 
 
-### 💾 Save this article for later
+### 💾 Save this article now...
 
 So... that's where I am with offline content. If your browser supports it, try the button below! As with many folks on the web, I am very excited to see what other super powers the Service Worker will bring to the web. If you have ideas for improvement or questions about how it works, please drop me a comment!
+
+### ...and view it later
+
+<ins class="update" datetime="2016-10-05">I've published another walkthrough which allows you to <a href="/blog/service-worker-offline-content-list/">display the list of saved articles</a> to each visitor when they return.</ins>

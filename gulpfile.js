@@ -39,7 +39,7 @@ gulp.task('default', false, ['help']);
 // -----------------------------------------------------------------------------
 gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
   bs.notify('Jekyll building...');
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml', '--drafts', '--incremental'], {stdio: 'inherit'})
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml', '--drafts'], {stdio: 'inherit'})
     .on('close', reload);
 });
 
@@ -184,7 +184,7 @@ gulp.task('js-custom', 'Custom scripts', function() {
 // -----------------------------------------------------------------------------
 // Resize images
 // -----------------------------------------------------------------------------
-gulp.task('image-resize', 'Create different sizes for responsive images.', ['image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg']);
+gulp.task('image-resize', 'Create different sizes for responsive images.', ['image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg', 'image-blog']);
 
 // Image derivative: 320
 gulp.task('image-320', false, function () {
@@ -263,6 +263,17 @@ gulp.task('image-svg', false, function () {
       svgoPlugins: [{removeViewBox: false}]
     }))
     .pipe(gulp.dest('svg'));
+});
+
+// Blog images - some stuff just isn't gallery-friendly.
+gulp.task('image-blog', false, function () {
+  return gulp.src(['_img/blog/*', '!_img/blog/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
+    .pipe(changed('_site/img/blog'))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('_site/img/blog'));
 });
 
 
