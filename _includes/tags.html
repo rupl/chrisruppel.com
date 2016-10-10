@@ -1,0 +1,6 @@
+<span class="tags">
+  {% for tag in include.tags %}
+    <a rel="tag" class="p-category" href="/{{ include.category }}/tags/{{ tag | replace: ' ','-' | downcase }}/">{{ tag | downcase }}</a>
+  {% endfor %}
+</span>
+

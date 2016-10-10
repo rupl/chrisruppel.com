@@ -1,0 +1,13 @@
+//
+// Individual tags
+//
+
+a[rel="tag"] {
+  word-spacing: -.5em;
+  color: #333;
+
+  &::before {
+    content: '#';
+    text-decoration: none;
+  }
+}

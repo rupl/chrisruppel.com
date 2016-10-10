@@ -24,13 +24,4 @@
       }
     }
   }
-
-  a[rel="tag"] {
-    word-spacing: -.6em;
-
-    &::before {
-      content: '#';
-      text-decoration: none;
-    }
-  }
 }

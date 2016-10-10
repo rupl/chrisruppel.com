@@ -1,6 +1,7 @@
 ---
 title: Howdy
 permalink: /
+bodyclass: page--front
 ---
 
 <p class="hello intro p-role">
@@ -11,7 +12,25 @@ permalink: /
 
 <nav class="front-nav">
   <ul>
-    <li><a href="/travel/">On the Road</a></li>
-    <li><a href="/work/">On the Internet</a></li>
+    <li><a class="nav--travel" href="/travel/">On the Road</a></li>
+    <li><a class="nav--blog" href="/blog/">On the Internet</a></li>
+    <li><a class="nav--work" href="/work/">Hire Me!</a></li>
   </ul>
 </nav>
+
+<section aria-labelledby="blog">
+  <h1 id="blog" class="title--main">Latest posts</h1>
+
+  <div id="blog-list" class="blog-list">
+    {% for post in site.categories.blog limit:5 reversed %}
+      <article data-url="{{ site.url }}{{ post.url }}">
+        <header>
+          <h2 class="title--main">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h2>
+        </header>
+      </article>
+    {% endfor %}
+  </div>
+</section>

@@ -7,7 +7,7 @@ footer[role="contentinfo"] {
   font-size: .8em;
   font-style: italic;
   font-weight: 200;
-  padding: 2em 1em;
+  padding: 1em;
   color: white;
   background: #111;
   //! height is set in _general.scss
@@ -22,14 +22,14 @@ footer[role="contentinfo"] {
   // my smug mug
   img.me {
     float: left;
-    margin-right: 2em;
+    margin-right: 1.6em;
     border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
 
     // just for funsies
     animation: blobby 10s ease-in-out alternate infinite;
 
     @media (min-width: 400px) {
-      margin-top: -1.2em;
+      // margin-top: -1.2em;
       width: 160px;
       height: auto;
     }
@@ -37,12 +37,20 @@ footer[role="contentinfo"] {
 
   .p-role {
     padding: 1em;
+    padding-right: 0;
   }
 
   .colophon {
+    text-align: center;
     opacity: .25;
     transition: opacity .25s ease-in-out;
+    white-space: nowrap;
+
+    @media (min-width: 400px) {
+      text-align: left;
+    }
   }
+
   .colophon:hover {
     opacity: 1;
   }

@@ -28,7 +28,6 @@ gallery:
 
 tags:
 - boats
-- farming
 - islands
 
 summary: I tagged along with John and his friend as they fished for Bonitos
