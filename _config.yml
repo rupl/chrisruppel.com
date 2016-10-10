@@ -66,6 +66,10 @@ defaults:
       path: "about"
     values:
       layout: info
+  - scope:
+      path: "sandbox"
+    values:
+      layout: "naked"
 
 # blank array for use within templates
 array: []
