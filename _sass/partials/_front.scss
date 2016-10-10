@@ -1,30 +1,38 @@
 //
 // Front page
 //
-.front-nav {
-  margin-bottom: 5em;
+.page--front {
+  .front-nav,
+  #blog-list {
+    margin-bottom: 4rem;
+  }
+}
 
+
+
+.front-nav {
   ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
-    margin: 0 -1%;
+    margin: 0 -.5rem;
   }
 
   li {
-    flex: 1 0 33.3333%;
+    flex: 1 0 45%; // this should be 50% and I should be smarter.
     min-width: 120px;
-    margin: 0 .5em;
+    margin: 0 .5rem;
     padding: 0;
   }
 
   a {
     display: block;
     // height: 0;
+    font-size: 1.2em;
     padding: 33% 0;
-    margin-bottom: 1em; // double the `li` margin L/R
+    margin-bottom: 1rem; // double the `li` margin L/R
 
     background: #ccc;
     border-radius: .5%;
@@ -34,5 +42,18 @@
     text-shadow: 1px 1px 1px #fff;
     transition: background-position 1s ease-in-out;
     @include font-oswald;
+  }
+
+  .nav--work {
+    padding: 16.666% 0;
+  }
+}
+
+//
+// Front-page blog tweaks
+//
+.page--front {
+  #blog-list {
+    font-size: .9em;
   }
 }
