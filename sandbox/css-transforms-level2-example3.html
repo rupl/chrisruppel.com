@@ -1,0 +1,88 @@
+---
+title: CSS Transforms Level 2 — Example 3
+---
+
+<!-- {{ site.url }}/blog/css-transforms-level2-translate-scale-rotate/ -->
+
+<style type="text/css">
+  body {
+    background:  white;
+  }
+
+  .sandbox {
+    padding: 35px 25px;
+    perspective: 500px;
+    transform-origin: 200px 175px;
+  }
+
+  .sandbox > * {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px 80px;
+    background: transparent;
+    border: 5px dashed #ddd;
+    border-radius: 5px;
+    font-family:  monospace;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+
+  .sandbox > * > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #789;
+    border: 1px solid #345;
+    border-radius: 5px;
+    opacity: 0.8;
+    font-weight: 900;
+  }
+
+  /*
+   * Animate using valid CSS Transforms Level 1 syntax.
+   *
+   * Must repeat the entire transformation instead of overwriting the specific
+   * properties we are changing.
+   */
+  .classic .transform {
+    transform: translate(0, 0) scale(1.333) rotate3d(0, 1, 0, 45deg);
+    animation:  classic 4s alternate infinite;
+  }
+
+  @keyframes classic {
+    50% {
+      transform: translate(0, 100px) scale(1.333) rotate3d(0, 1, 0, 45deg);
+    }
+  }
+
+  /*
+   * CSS Transforms Level 2 syntax.
+   *
+   * Individual transform functions can be animated without interfering!
+   */
+  .shorthand .transform {
+    scale: 1.333;
+    transform: rotate3d(0, 1, 0, 45deg);
+    animation: shorthand 4s alternate infinite;
+  }
+
+  @keyframes shorthand {
+    50% {
+      translate: 0 100px;
+    }
+  }
+</style>
+
+<div class="sandbox">
+  <div class="classic">
+    <div class="transform">.classic</div>
+  </div>
+  <div class="shorthand">
+    <div class="transform">.shorthand</div>
+  </div>
+</div>

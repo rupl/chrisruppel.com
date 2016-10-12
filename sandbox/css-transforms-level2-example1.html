@@ -1,0 +1,70 @@
+---
+title: CSS Transforms Level 2 — Example 1
+---
+
+<!-- {{ site.url }}/blog/css-transforms-level2-translate-scale-rotate/ -->
+
+<style type="text/css">
+  body {
+    background:  white;
+  }
+
+  .sandbox {
+    padding: 35px 25px;
+  }
+
+  .sandbox > * {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px 40px;
+    background: white;
+    border: 5px dashed #ddd;
+    border-radius: 5px;
+    font-family:  monospace;
+    position: relative;
+  }
+
+  .sandbox > * > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #789;
+    border: 1px solid #345;
+    border-radius: 5px;
+    opacity: 0.8;
+    font-weight: 900;
+  }
+
+  /*
+   * Valid syntax for CSS Transforms Level 1
+   */
+  .classic .transform {
+    transform: translate(45px) scale(1.333) rotate(45deg);
+  }
+
+  /*
+   * Wrong syntax, but feels right
+   */
+  .shorthand .transform {
+    translate: 45px;
+    scale: 1.333;
+    rotate: 45deg;
+  }
+</style>
+
+<div class="sandbox">
+  <div class="unchanged">
+    <div class="transform">.unchanged</div>
+  </div>
+  <div class="classic">
+    <div class="transform">.classic</div>
+  </div>
+  <div class="shorthand">
+    <div class="transform">.shorthand</div>
+  </div>
+</div>
