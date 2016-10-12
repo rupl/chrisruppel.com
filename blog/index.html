@@ -23,7 +23,7 @@ layout: page
           {% if post.summary %}
             {{ post.summary }}
           {% else %}
-            {{ post.content | truncatewords: 50, '...' | strip_html }}
+            {{ post.content | strip_html | truncatewords: 47, '...' }}
           {% endif %}
         </p>
       </article>
