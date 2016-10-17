@@ -1,12 +1,12 @@
 // Utilities, helpers, etc.
 @import 'utilities';
+@import 'animations';
 
 // Site-wide styles.
 @import 'partials/type';
 @import 'partials/general';
 @import 'partials/status';
 @import 'partials/footer';
-@import 'partials/animations';
 
 // Content-specific styles.
 @import 'partials/front';
@@ -34,4 +34,4 @@
 @import 'partials/maps';
 
 // Themes
-// @import 'partials/dark';
+// @import 'themes/dark';
