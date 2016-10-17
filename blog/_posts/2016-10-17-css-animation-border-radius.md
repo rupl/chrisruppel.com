@@ -83,11 +83,16 @@ I was trying to make my footer more personable and included my headshot, as one 
 
 <style type="text/css">
   img.avatar-wobble {
-    float: left;
     margin: .1em 1em;
     border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
     transform: rotate(-2deg);
     animation: wobble-article 12s ease-in-out alternate infinite;
+  }
+
+  @media (min-width: 680px) {
+    img.avatar-wobble {
+      float: left;
+    }
   }
 
   @keyframes wobble-article {
@@ -101,7 +106,7 @@ I was trying to make my footer more personable and included my headshot, as one 
   }
 </style>
 
-By using `animation-direction: alternate` I get the benefit of running the animation forwards and backwards continuously, making it look a bit more random. The `100%` marker is the inverse of the initial starting point, and using `ease-in-out` as my timing function means it will briefly appear to pause at the two ends of the animation where it's more regular looking. But the middle chunk is pretty wobbly and creates a nice, subtle effect if you end up finding yourself unable to escape my gaze.
+Using `animation-direction: alternate` means the animation runs forwards then backwards, making it look a bit more random. The `100%` marker is the inverse of the initial starting point, and using `ease-in-out` as my timing function means it will briefly appear to pause at the two ends of the animation where it's more regular looking. But the middle chunk is pretty wobbly and creates a nice, subtle effect if you end up finding yourself unable to escape my gaze.
 
 Unlike Tiffany's button effect, I stuck with high numbers to avoid creating any sharp corners. I wanted my avatar to be a nebulous blob at all times.
 
