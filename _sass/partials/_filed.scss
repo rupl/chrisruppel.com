@@ -2,10 +2,14 @@
 // Entry metadata
 //
 .filed {
-  font-size: .8em;
+  font-size: .75em;
 
   a {
     color: inherit;
+  }
+
+  .dt-published {
+    white-space: nowrap;
   }
 
   .categories {

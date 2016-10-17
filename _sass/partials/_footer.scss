@@ -42,7 +42,7 @@ footer[role="contentinfo"] {
 
   .colophon {
     text-align: center;
-    opacity: .25;
+    opacity: .16;
     transition: opacity .25s ease-in-out;
     white-space: nowrap;
 
@@ -52,7 +52,7 @@ footer[role="contentinfo"] {
   }
 
   .colophon:hover {
-    opacity: 1;
+    opacity: .75;
   }
 
   // Ensure links are readable regardless of state or browsing history.
