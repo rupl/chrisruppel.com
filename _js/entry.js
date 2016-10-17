@@ -19,7 +19,7 @@
   function copyUid() {
     document.querySelector('#uid').select();
   }
-});
+})();
 
 //
 // Cache button. Depends on SW support.
