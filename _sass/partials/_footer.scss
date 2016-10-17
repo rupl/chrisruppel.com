@@ -24,12 +24,12 @@ footer[role="contentinfo"] {
     float: left;
     margin-right: 1.6em;
     border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
+    transform: rotate(-2deg);
 
     // just for funsies
-    animation: blobby 10s ease-in-out alternate infinite;
+    animation: wobble 17s ease-in-out alternate infinite;
 
     @media (min-width: 400px) {
-      // margin-top: -1.2em;
       width: 160px;
       height: auto;
     }
@@ -64,11 +64,12 @@ footer[role="contentinfo"] {
   }
 }
 
-@keyframes blobby {
+@keyframes wobble {
   50% {
     border-radius: 750px 550px 350px 750px / 350px 750px 550px 450px;
   }
   100% {
     border-radius: 750px 250px 750px 250px / 250px 750px 250px 750px;
+    transform: rotate(2deg);
   }
 }
