@@ -24,14 +24,14 @@ app.use(helmet.hsts({
 app.use(helmet.csp({
   // Policy for chrisruppel.com
   defaultSrc: ["'self'"],
-  scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "'unsafe-inline'", "'unsafe-eval'"],
+  scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "assets.codepen.io", "'unsafe-inline'", "'unsafe-eval'"],
   styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "'unsafe-inline'"],
   imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com", "data:", "blob:"],
   connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com"],
   fontSrc:    ["'self'", 'data:'],
   objectSrc:  ["youtube.com"],
   mediaSrc:   ["youtube.com"],
-  frameSrc:   ["'self'", "disqus.com"],
+  frameSrc:   ["'self'", "disqus.com", "codepen.io"],
   sandbox:    ['allow-scripts', 'allow-same-origin', 'allow-popups'],
 
   // Set to true if you only want browsers to report errors, not block them
