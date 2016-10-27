@@ -22,6 +22,32 @@
 })();
 
 //
+// Web Share API
+//
+// Origin Trial is good until 2016-12-06
+//
+if (navigator.share !== undefined) {
+  // Create share button.
+  var share = document.createElement('a');
+  share.id = 'share';
+  share.innerText = 'Share';
+  share.classList.add('btn', 'btn--share');
+  $('.go').appendChild(share);
+
+  // Set up event listener.
+  share.addEventListener('click', function() {
+    navigator.share({
+      title: $('meta[property="og:title"]').content,
+      // text: $('meta[property="og:description"]').content,
+      url: window.location.href,
+    })
+    .then(function () { console.info('Web Share API: success!') })
+    .catch(function (error) { console.error('Web Share API: ', error) });
+  });
+}
+
+
+//
 // Cache button. Depends on SW support.
 //
 (function (Modernizr) {

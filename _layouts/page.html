@@ -49,7 +49,7 @@
     <meta name="twitter:creator" content="@rupl">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:title" content="{{ page.title | escape }}{% if page.location %} {% include location.html location=page.location %}{% endif %}">
+    <meta property="og:title" content="{{ page.title | escape | strip_newlines }}{% if page.location %} {% include location.html location=page.location %}{% endif %}">
     <meta property="og:description" content="{% if page.summary %}{{ page.summary | strip_html | escape }}{% else %}{{ page.content | truncatewords: 50, '...' | strip_html | escape }}{% endif %}">
     <meta property="og:image" content="{{ site.img-host }}/img/travel/{% if page.gallery[0].src %}{{ page.gallery[0].src }}{% else %}{{ page.gallery[1].src }}{% endif %}">
   {% endif %}

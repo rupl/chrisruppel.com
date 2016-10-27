@@ -36,12 +36,16 @@
       order: 4;
       flex-grow: 2;
     }
-    .btn--comments {
+    .btn--offline {
       order: 5;
       flex-basis: 100%;
     }
-    .btn--offline {
+    .btn--share {
       order: 6;
+      flex-basis: 100%;
+    }
+    .btn--comments {
+      order: 7;
       flex-basis: 100%;
     }
   }
@@ -59,7 +63,7 @@
 
   font-size: inherit;
   margin: 1em 0;
-  padding: 1em;
+  padding: .75em 1em;
   border: 1px solid #ddd;
   background: #eee;
   background-image: linear-gradient(to bottom, #fff, #e4e4e4);
@@ -155,6 +159,26 @@
     animation: bounce-left .42s ease-in-out;
   }
 }
+
+.btn--share {
+  &::before {
+    content: '\1f4e3 \00a0';
+    position: relative;
+    top: 1px;
+  }
+  &:hover::before {
+    animation: bounce-left .42s ease-in-out;
+  }
+}
+
+.btn--working {
+  &::before {
+    content: '\231b \00a0';
+    position: relative;
+    top: 1px;
+  }
+}
+
 
 .btn--mail {
   &::before {
