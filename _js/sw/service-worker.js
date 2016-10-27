@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.8.0',
+  cache_version: 'main_v1.8.1',
   offline_assets: [
     '/',
     '/offline/',
@@ -44,12 +44,15 @@ self.addEventListener('install', function installer(event) {
         // Attempt to cache assets
         var cacheResult = cache.addAll(SW.offline_assets);
 
-        // Report result
-        if (!!cacheResult) {
-          console.info('Service Worker: caching process was successful!');
-        } else {
-          console.error('Service Worker: caching process failed.');
-        }
+        // Success
+        cacheResult.then(function () {
+          console.info('Service Worker: Installation successful!');
+        });
+
+        // Failure
+        cacheResult.catch(function () {
+          console.error('Service Worker: Installation failed.');
+        });
 
         return cacheResult;
       })
