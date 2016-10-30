@@ -25,6 +25,11 @@ gallery:
   comment: Along the way we passed many other boats taking advantage of the sunny afternoon.
   type: wide
   bgpad: 50%
+- src: mv-fishing-5.jpg
+  alt: Sushi ingredients on a table.
+  comment: Our feast!
+  type: wide
+  bgpad: 50%
 
 tags:
 - boats
