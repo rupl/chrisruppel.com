@@ -54,6 +54,7 @@ tags:
 - trekking
 - tours
 - boats
+- lakes
 
 summary: Day 3 of our three-day trek involved a 14km hike within the Inle Lake park zone, followed by a boat ride to our final destination at a town north of the lake.
 ---

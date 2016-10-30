@@ -37,6 +37,7 @@ gallery:
 tags:
 - camping
 - trekking
+- lakes
 
 summary: We spent the 4th of July in Val Maggia, a stunning valley with superb camping.
 ---

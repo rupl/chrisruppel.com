@@ -38,6 +38,7 @@ gallery:
 tags:
 - boats
 - friends
+- lakes
 - viewpoints
 
 summary: We visited our friends Jordan and Annette, spending a relaxing pre-fourth up at their cottage in north Michigan.
