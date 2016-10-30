@@ -188,7 +188,7 @@ gulp.task('image-resize', 'Create different sizes for responsive images.', ['ima
 
 // Image derivative: 320
 gulp.task('image-320', false, function () {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
+  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
     .pipe(changed('_site/img/travel@320'))
     .pipe(parallel(
       resize({
@@ -211,7 +211,7 @@ gulp.task('image-320', false, function () {
 
 // Image derivative: 640
 gulp.task('image-640', false, function () {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR}*'])
+  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
     .pipe(changed('_site/img/travel@640'))
     .pipe(parallel(
       resize({
@@ -234,7 +234,7 @@ gulp.task('image-640', false, function () {
 
 // Original images
 gulp.task('image-original', false, function () {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
+  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
     .pipe(changed('_site/img/travel'))
     .pipe(imagemin({
       progressive: true,
@@ -297,6 +297,7 @@ gulp.task('bs', 'Run dev tasks:', ['build-dev', 'browser-sync', 'watch'], functi
 gulp.task('watch', 'Watch various files for changes and re-compile them.', function() {
   log(c.yellow('Waiting for changes...'));
   gulp.watch('_sass/**/*.scss', ['sass']);
+  gulp.watch('_img/blog/*', ['image-blog']);
   gulp.watch('_img/photosphere/*', ['image-photosphere']);
   gulp.watch('_img/travel/*', ['image-original', 'image-320', 'image-640']);
   gulp.watch('_svg/*', ['image-svg']);
