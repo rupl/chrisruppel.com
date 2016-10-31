@@ -20,7 +20,6 @@ gallery:
 
 tags:
 - churches
-- metal
 
 summary: We visited a chapel filled with skulls while in Milan.
 ---

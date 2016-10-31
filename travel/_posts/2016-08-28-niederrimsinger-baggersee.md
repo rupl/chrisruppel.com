@@ -9,7 +9,7 @@ gallery:
 - gridtype: col-2
 - src: niederrimsinger-1.jpg
   alt: Man and boy swimming in water.
-  comment: Karin's dad teaches his gradson Ify to paddle in the water.
+  comment: Karin's dad teaches his grandson Ify to paddle in the water.
 - src: niederrimsinger-2.jpg
   alt: The sunset over the lake.
   comment: The sunset over the lake.

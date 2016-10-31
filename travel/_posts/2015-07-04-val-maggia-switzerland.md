@@ -1,5 +1,5 @@
 ---
-title: Camping on the River
+title: Camping on the river
 location:
   locality: Val Maggia
   country: Switzerland
@@ -36,8 +36,9 @@ gallery:
 
 tags:
 - camping
-- trekking
 - lakes
+- mountains
+- trekking
 
 summary: We spent the 4th of July in Val Maggia, a stunning valley with superb camping.
 ---
