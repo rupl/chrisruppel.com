@@ -16,7 +16,7 @@ permalink: /about/site/
 
 ### Content
 
-All original content is licensed [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/us/). Basically, you're free to use or remix the content, but give me visible credit on your copy.
+All original content is licensed [CC BY-NC-SA 3.0 US](https://creativecommons.org/licenses/by-nc-sa/3.0/us/). Basically, you're free to use or remix the content, but give me visible credit on your copy.
 
 ### Code
 
