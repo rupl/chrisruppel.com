@@ -12,4 +12,5 @@
 
   // Swap out the title.
   title.innerHTML = output;
+  title.style.whiteSpace = 'nowrap';
 })();
