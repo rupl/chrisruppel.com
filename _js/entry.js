@@ -28,14 +28,14 @@
 //
 if (navigator.share !== undefined) {
   // Create share button.
-  var share = document.createElement('a');
-  share.id = 'share';
-  share.innerText = 'Share';
-  share.classList.add('btn', 'btn--share');
-  $('.go').appendChild(share);
+  var shareButton = document.createElement('a');
+  shareButton.id = 'share';
+  shareButton.innerText = 'Share';
+  shareButton.classList.add('btn', 'btn--share');
+  $('.go').appendChild(shareButton);
 
   // Set up event listener.
-  share.addEventListener('click', function() {
+  shareButton.addEventListener('click', function() {
     navigator.share({
       title: $('meta[property="og:title"]').content,
       // text: $('meta[property="og:description"]').content,
