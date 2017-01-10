@@ -21,30 +21,30 @@
   }
 })();
 
-//
-// Web Share API
-//
-// Origin Trial is good until 2016-12-06
-//
-if (navigator.share !== undefined) {
-  // Create share button.
-  var shareButton = document.createElement('a');
-  shareButton.id = 'share';
-  shareButton.innerText = 'Share';
-  shareButton.classList.add('btn', 'btn--share');
-  $('.go').appendChild(shareButton);
+// //
+// // Web Share API
+// //
+// // Origin Trial is good until 2016-12-06
+// //
+// if (navigator.share !== undefined) {
+//   // Create share button.
+//   var shareButton = document.createElement('a');
+//   shareButton.id = 'share';
+//   shareButton.innerText = 'Share';
+//   shareButton.classList.add('btn', 'btn--share');
+//   $('.go').appendChild(shareButton);
 
-  // Set up event listener.
-  shareButton.addEventListener('click', function() {
-    navigator.share({
-      title: $('meta[property="og:title"]').content,
-      // text: $('meta[property="og:description"]').content,
-      url: window.location.href,
-    })
-    .then(function () { console.info('Web Share API: success!') })
-    .catch(function (error) { console.error('Web Share API: ', error) });
-  });
-}
+//   // Set up event listener.
+//   shareButton.addEventListener('click', function() {
+//     navigator.share({
+//       title: $('meta[property="og:title"]').content,
+//       // text: $('meta[property="og:description"]').content,
+//       url: window.location.href,
+//     })
+//     .then(function () { console.info('Web Share API: success!') })
+//     .catch(function (error) { console.error('Web Share API: ', error) });
+//   });
+// }
 
 
 //
