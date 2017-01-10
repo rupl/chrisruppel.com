@@ -9,7 +9,7 @@ tags:
 - debugging
 ---
 
-I am a beginner with Arduino. [Last time I played with an ambient light sensor](/blog/lilypad-arduino-light-sensor-pulse-width-modulation/). I eventually came to the point where I wanted to smooth the input data in order to get a more steady output indicator LED. I found this plotting tool within the Arduino IDE to help me.
+I am a beginner with Arduino. While experimenting with various sensors I eventually came to the point where I wanted to smooth input data in order to get a more steady readings. I found this plotting tool within the Arduino IDE to help me.
 
 ## Debugging wobbly input data
 

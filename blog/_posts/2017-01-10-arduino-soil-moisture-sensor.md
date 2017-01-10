@@ -38,7 +38,7 @@ Once everything is connected you are ready to program the Arduino!
 
 ## Talking to plants
 
-The code to get a reading is delightfully simple. Just initialize the `A0` pin as an input then do an `analogRead()`  to monitor the signal. Opening the Arduino IDE's serial plotter will show you a real-time reading of your soil moisture.
+The code to get a reading is delightfully simple. Just initialize the `A0` pin as an input then do an `analogRead()`  to monitor the signal. Opening the [Arduino IDE serial plotter](/blog/arduino-serial-plotter-debugging/) will show you a real-time reading of your soil moisture.
 
 ```clike
 const int soil = A0;

@@ -139,6 +139,6 @@ int smooth(){
 
 The `smooth` function can then be used within the original program instead of a direct call to `analogRead` (and the subsequent division by 4).
 
-The result is a more stable signal with less noise. If you plug this into the original program, you will probably notice the output LED holds a more consistent brightness with less flicker. See the smoothing tutorial for even more advanced methods of reducing noise in your sampling data. <ins class="update" datetime="2017-01-05">You can visually test how well your input smoothing works by using the [**Serial Plotter** to graph your input data](/blog/arduino-serial-plotter-debugging/).</ins>
+The result is a more stable signal with less noise. If you plug this into the original program, you will probably notice the output LED holds a more consistent brightness with less flicker. See the smoothing tutorial for even more advanced methods of reducing noise in your sampling data. Visual learners can easily oberve input smoothing by [using the **Serial Plotter** to graph input data](/blog/arduino-serial-plotter-debugging/).
 
 Hopefully documenting my steps as an Arduino beginner will be useful to anyone else getting started. If you found anything confusing or would like me to expand a section let me know in the comments!
