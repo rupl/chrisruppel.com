@@ -139,16 +139,6 @@ int smooth(){
 
 The `smooth` function can then be used within the original program instead of a direct call to `analogRead` (and the subsequent division by 4).
 
-The result is a more stable signal with less noise. If you plug this into the original program, you will probably notice the output LED holds a more consistent brightness with less flicker. See the smoothing tutorial for even more advanced methods of reducing noise in your sampling data.
-
-## Debugging wobbly input data
-
-Arduino IDE has a **Serial Plotter** which is a fantastic debugging tool to complement the raw logging monitor. The original **Serial Monitor** displays text data only, and while a stream of numbers can be quite useful, pictures are worth a thousand words, or numbers in this case.
-
-As of version 1.6.6 the IDE comes with a built in plotter that accepts a stream of numbers from `Serial.println` and graphs them over time, auto-scaling the Y-axis to include your highest and lowest sample values.
-
-<img src="{{ site.img-host }}/img/blog/arduino-serial-plotter.gif" alt="Screenshot of Arduino IDE v1.6.16 serial plotter."/>
-
-As a visually-oriented person this made me so happy to find! If you're debugging analog sensor data, I'd highly recommend enabling the plotter to make sense of the readings. It also makes easy work of determining when you have unsteady input, as I had with the light sensor. If the plotter shows inconsistent data, producing jagged lines, then perhaps it's time to try input smoothing to achieve a less noisy, smoother line in the plotter.
+The result is a more stable signal with less noise. If you plug this into the original program, you will probably notice the output LED holds a more consistent brightness with less flicker. See the smoothing tutorial for even more advanced methods of reducing noise in your sampling data. <ins class="update" datetime="2017-01-05">You can visually test how well your input smoothing works by using the [**Serial Plotter** to graph your input data](/blog/arduino-serial-plotter-debugging/).</ins>
 
 Hopefully documenting my steps as an Arduino beginner will be useful to anyone else getting started. If you found anything confusing or would like me to expand a section let me know in the comments!
