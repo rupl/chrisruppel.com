@@ -4,6 +4,7 @@ title: LilyPad Arduino LED Purse
 summary: Learning how to program Arduino in the open. This project used the LilyPad Arduino to decorate a purse with LEDs.
 
 tags:
+- lilypad
 - arduino
 - electronics
 ---

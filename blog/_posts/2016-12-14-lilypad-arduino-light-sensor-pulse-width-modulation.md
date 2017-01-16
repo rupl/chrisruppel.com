@@ -8,11 +8,12 @@ syndication:
   href: https://twitter.com/rupl/status/809100980432289796
 
 tags:
+- lilypad
 - arduino
 - electronics
 ---
 
-I found the [LilyPad Arduino](https://www.arduino.cc/en/Main/ArduinoBoardLilyPadUSB) products while challenging myself to hand-make something for my sister as a gift. The LilyPad is designed especially for textile electronics. In time had made a purse with a blinking heart on it. My sister was thrilled with the final product, and I had stepped outside my developer comfort zone.
+I found the [LilyPad Arduino](https://www.arduino.cc/en/Main/ArduinoBoardLilyPadUSB) products while challenging myself to hand-make something for my sister as a gift. The LilyPad is designed especially for textile electronics. In time had made a [purse with a blinking LED heart](/blog/lilypad-arduino-led-purse/). My sister was thrilled with the final product, and I had stepped outside my developer comfort zone.
 
 Aside from sewing the thing there was plenty of learning to do. As someone who learned to program on the web, many of the benefits of a high-level language like PHP or JS quickly became apparent. But after a couple evenings debugging and learning, I'd brought the LEDs to life in a fun way by getting them to blink in two halves.
 
