@@ -14,6 +14,10 @@ gallery:
   type: wide
   bgpad: 60%
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/820955689367601152
+
 tags:
 - arduino
 - electronics
