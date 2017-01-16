@@ -135,7 +135,7 @@ void loop() {
 
 The main program loop has a counter that starts at 59 and counts down to 0. When it reaches 0, it takes a reading and resets the counter. By only powering the moisture sensor for 10 milliseconds out of every minute, we are significantly delaying corrosion caused by excessive current.
 
-Run the program, open the serial plotter, and come back after a few minutes. You should have your first few readings!
+Run the program, [open the Arduino IDE serial plotter](/blog/arduino-serial-plotter-debugging/), and go make yourself a tea. After a few minutes you should have your first few readings!
 
 ## Building on this sensor
 
