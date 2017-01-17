@@ -142,8 +142,12 @@ pre[class*="language-"] {
 
 // Reduce font-size of Prism blocks and make the <pre> tag a bit prettier.
 pre[class*=language-] {
-  font-size: .86em;
+  font-size: .66em;
   border-radius: 7px;
+
+  @media (min-width: 580px) {
+    font-size: .8em;
+  }
 }
 
 // Generic fenced code blocks not controlled by Prism.
