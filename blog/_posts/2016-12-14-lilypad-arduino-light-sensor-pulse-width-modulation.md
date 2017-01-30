@@ -100,6 +100,6 @@ void loop() {
 }
 ```
 
-Now we have our LED responding to the light sensor input! But can we make this even better? [Perhaps use input smoothing to stabilize the signal](/blog/arduino-analog-signal-input-smoothing)?
+Now we have our LED responding to the light sensor input! But can we make this even better? [Perhaps use input smoothing to stabilize the signal](/blog/arduino-analog-signal-input-smoothing/)?
 
 Hopefully documenting my steps as an Arduino beginner will be useful to anyone else getting started. If you found anything confusing or would like me to expand a section let me know in the comments!
