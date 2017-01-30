@@ -137,6 +137,23 @@ The main program loop has a counter that starts at 59 and counts down to 0. When
 
 Run the program, [open the Arduino IDE serial plotter](/blog/arduino-serial-plotter-debugging/), and go make yourself a tea. After a few minutes you should have your first few readings!
 
+## Reading logs
+
+Once you are taking readings, it's important to figure out what the bounds for your plant are. Using 3.3V power here are some readings I measured over the course of a few days. The SparkFun sensor outputs a 10-bit signal meaning 1023 is the upper limit:
+
+* 0-45 — completely dry soil
+* 890 — immediately after watering dry soil
+* 875 — second day
+* 872 — third day
+* 823 — fourth day
+* 460 — fifth day
+
+This sharp drop on the last day indicates to me that most of the soil surrounding my sensor is pretty dry. There is probably some moisture near the bottom of the pot, but if the sensor is pushed deeply enough into the dirt, then it's a good indication that the plant actually needs some water.
+
+I noticed that my sensor gives very reliable readings in the 800 range, but has some rather wide oscillations as the moisture drops. I couldn't find a reason online that helped me resolve the problem. It could be my connections, the intervals that I'm taking the data, or something I haven't even heard of yet. Regardless, if you see some oscillation in the data, [try using input smoothing](/blog/arduino-analog-signal-input-smoothing/).
+
+While looking into reference data for soil moisture, I found an incredible [collection of data provided by SparkFun](https://data.sparkfun.com). It is an open database that you can participate in! I found a few streams of data related to soil moisture, but since they are user-generated there's no guarantee they'll persist if I link to them. Just use the site's search and find one.
+
 ## Building on this sensor
 
-After getting your first successful reading, the next step is to display the data somehow. This could be an LED display, notifications on your phone, or even a self-watering system that dispenses a few drops of water when the plant is in need of a drink. The sky's really the limit so use your imagination!
+After getting your first successful reading, the next step is to display the data somehow. This could be an LED display, saved to a data logger, sending notifications to your phone, or even a self-watering system that dispenses a few drops of water when the plant is in need of a drink. The sky's really the limit so use your imagination!
