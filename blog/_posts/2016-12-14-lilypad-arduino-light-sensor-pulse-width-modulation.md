@@ -100,50 +100,6 @@ void loop() {
 }
 ```
 
-Now we have our LED responding to the light sensor input! But can we make this even better?
-
-## Input smoothing
-
-While testing I noticed that the light sensor can produce some pretty inconsistent numbers on each measurement. While putting a tiny delay can stabilize things a bit, I wanted to make the sensor data a steady as possible.
-
-_Input smoothing_ is one such way of stabilizing a signal. By taking a measurement several times and blending the values into an average, we can send better data less frequently.
-
-Keep in mind that an Arduino operates roughly at 500Hz. Even if we reduce our cycle by a factor of 10, that's still 50Hz which is good enough for movies and television to look smooth. So it will be plenty for our LED.
-
-I wrote my own code to do this, but later found an even better function in the [Arduino tutorial section](https://www.arduino.cc/en/Tutorial/Smoothing). I will use my own code here instead of reproducing theirs, but check both out and see which one suits you.
-
-```clike
-//
-// Helper function to smooth out the light sensor data.
-// Takes any number of readings and smoothes out the data to an average value.
-//
-// Returns 8-bit value (0-255).
-//
-int smooth(){
-  int i;
-  int value = 0;
-  int numReadings = 10;
-
-  for (i = 0; i < numReadings; i++){
-    // Read light sensor data.
-    value = value + analogRead(sensor);
-
-    // 1ms pause adds more stability between reads.
-    delay(1);
-  }
-
-  // Take an average of all the readings.
-  value = value / numReadings;
-
-  // Scale to 8 bits (0 - 255).
-  value = value / 4;
-
-  return value;
-}
-```
-
-The `smooth` function can then be used within the original program instead of a direct call to `analogRead` (and the subsequent division by 4).
-
-The result is a more stable signal with less noise. If you plug this into the original program, you will probably notice the output LED holds a more consistent brightness with less flicker. See the smoothing tutorial for even more advanced methods of reducing noise in your sampling data. Visual learners can easily oberve input smoothing by [using the **Serial Plotter** to graph input data](/blog/arduino-serial-plotter-debugging/).
+Now we have our LED responding to the light sensor input! But can we make this even better? [Perhaps use input smoothing to stabilize the signal](/blog/arduino-analog-signal-input-smoothing)?
 
 Hopefully documenting my steps as an Arduino beginner will be useful to anyone else getting started. If you found anything confusing or would like me to expand a section let me know in the comments!
