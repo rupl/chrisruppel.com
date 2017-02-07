@@ -16,7 +16,7 @@ Lucky for web developers, there is a fantastic platform available that has done 
 
 To get started with Johnny Five, try the [excellent examples on the official website](http://johnny-five.io/examples/).
 
-## Enter the NeoPixel
+## NeoPixels, addressable LEDs
 
 There is a fantastic line of products from AdaFruit called [NeoPixels](https://www.adafruit.com/category/168). NeoPixels come in many form factors, but underneath each product functions the same way: as a single strip of addressable LEDs. This makes it very simple to switch between form factors — for example from a 12 LED ring to 64 LED 8x8 matrix.
 
@@ -78,9 +78,14 @@ node hello-neopixel.js
 You should see all LEDs on your NeoPixel light up with a nice pink color. Try using the interactive REPL to change the color.
 
 ```js
-strip.color('#930'); // nothing will happen yet
-strip.show(); // strip should display orange!
+strip.color('#930');
+// nothing will happen yet
+
+strip.show();
+// strip should display orange!
 ```
+
+Notice how the color I supplied is a CSS shorthand hexadecimal color. The maintainer has gone out of the way to make everything easy for web developers. The color function also takes an array of RGB values, CSS named colors (e.g. `white`, `goldenrod`, `papayawhip`) or a valid CSS RGB string: `rgb(153, 51, 0)`.
 
 For most commands, you have to treat them like a queue, and when you're done making changes you update the NeoPixel with the `strip.show()` command. However a few commands automatically trigger a refresh, such as `strip.off()` which turns the whole string of LEDs off.
 
@@ -89,12 +94,27 @@ For most commands, you have to treat them like a queue, and when you're done mak
 Showing one color is great, but the real fun is setting up custom patterns of lights or colors. Individually addressing a LED on your string is almost as easy.
 
 ```js
-strip.pixel(0).color('#074'); // nothing will happen yet
-strip.pixel(6).color('#074'); // nothing will happen yet
-strip.show(); // first and seventh pixel should appear turquoise!
+strip.pixel(0).color('#074');
+// nothing will happen yet
+
+strip.pixel(6).color('#074');
+// nothing will happen yet
+
+strip.show();
+// first and seventh LED should appear turquoise!
 ```
 
-You can do this any number of times before sending the new instructions with `strip.show()`, meaning you can use `for` loops and other common programming tools to update the LEDs any way you see fit!
+You can do this any number of times before sending the new instructions with `strip.show()`, meaning you can use loops, conditionals, switches, and other common programming tools to control the LEDs any way you see fit! Color, brightness, and so forth can all be independently controlled, too.
+
+## Shifting and wrapping
+
+Once you've gotten the hang of loops to create a pattern, the next step is animating it. While running `for` loops continuously and using `strip.show()` in between each one works, it can be a lot of extra work if you simply want the pattern to shift or rotate.
+
+You are also bound to a specific framerate when manually drawing the whole array of LEDs, because the instructions for each one is time-based. Shifting is one simple instruction instead of one per LED, so it can be significantly faster.
+
+To move the whole pattern without changing an individual LED, use the `shift()` command. It has three arguments: the amount of LEDs to shift, the direction, and whether the pattern should wrap. Wrapping means when a pixel is shifted off the edge of the LED array, it gets put back into place in the beginning. It's most intuitive when using a circular ring of LEDs instead of a matrix.
+
+The wrapping effect is demonstrated below in the GIF.
 
 ```js
 strip.shift(1, pixel.FORWARD, true); // nothing will happen yet
