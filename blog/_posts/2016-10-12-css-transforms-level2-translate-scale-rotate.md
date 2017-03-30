@@ -136,7 +136,7 @@ At the time of writing, the shorthand syntax for 3D rotation is not supported ev
 
 ## Feature detection
 
-[I've opened a PR](https://github.com/Modernizr/Modernizr/pull/2100) to detect these new properties in Modernizr, but in the mean time you can test by using CSS Supports:
+[Modernizr now detects CSS Transforms Level 2](https://github.com/Modernizr/Modernizr/pull/2100), but you can also detect the feature using CSS Supports:
 
 ```css
 /*
