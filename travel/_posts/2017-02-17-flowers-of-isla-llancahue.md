@@ -37,7 +37,7 @@ gallery3:
 - gridtype: col-2-short
 - src: flowers-of-isla-llancahue-4.jpg
   alt: Bumblebee working on some pea blossoms.
-  comment: There are peas along the garden fence. Although they're not very good to eat, they provide food for the beas, which in turn provide us with honey.
+  comment: There are peas along the garden fence. Although they're not very good to eat, they provide food for the bees, which in turn provide us with honey.
 - src: flowers-of-isla-llancahue-5.jpg
   alt: A bright pink, spikey ball of a flower.
   comment: I don't know the name of this flower, but it frequently houses small spiders that spin a web between the betals.
