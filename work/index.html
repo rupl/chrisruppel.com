@@ -19,22 +19,10 @@ permalink: /work/
 <p>However, I'm not only interested in bigger sites. Any site in need of performance tuning is a job for me! Please contact me using the button below and we can start a conversation about your project.</p>
 <p>Want more info right away? <a href="/work/services/">Read about my services.</a></p>
 
-<h2 class="intro summary">I'm available for hire <strong>soon</strong></h2>
+<div id="calendar">
+  {% include calendar.html %}
+</div>
 
-<ul class="availability">
-{% for slot in site.categories.calendar reversed %}
-  {% capture nowunix %}{{ 'now' | date: '%s' }}{% endcapture %}
-  {% capture slottime %}{{ slot.date | date: '%s' }}{% endcapture %}
-  {% if slottime < nowunix %}
-    <li class="past-slot">{{ slot.date | date: '%b' }}<br></li>
-  {% else if slottime > nowunix %}
-    <li
-      class="{{ slot.status }}-slot {% if slot.status != full %}available{% endif %}"
-      title="{{ slot.date | date: '%b %Y' }}: {{ slot.status }}"
-    >{{ slot.date | date: '%b' }}<br></li>
-  {% endif %}
-{% endfor %}
-</ul>
 <br><br>
 
 {% comment %}
