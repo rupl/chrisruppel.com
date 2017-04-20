@@ -29,9 +29,9 @@ app.use(helmet.csp({
   imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com", "data:", "blob:"],
   connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com"],
   fontSrc:    ["'self'", 'data:'],
-  objectSrc:  ["youtube.com"],
-  mediaSrc:   ["youtube.com"],
-  frameSrc:   ["'self'", "disqus.com", "codepen.io"],
+  objectSrc:  ["youtube.com", "youtube-nocookie.com"],
+  mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
+  frameSrc:   ["'self'", "youtube.com", "youtube-nocookie.com", "disqus.com", "codepen.io"],
   sandbox:    ['allow-scripts', 'allow-same-origin', 'allow-popups'],
 
   // Set to true if you only want browsers to report errors, not block them
