@@ -31,7 +31,7 @@ app.use(helmet.csp({
   fontSrc:    ["'self'", 'data:'],
   objectSrc:  ["youtube.com", "youtube-nocookie.com"],
   mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
-  frameSrc:   ["'self'", "youtube.com", "youtube-nocookie.com", "disqus.com", "codepen.io"],
+  frameSrc:   ["'self'", "https://www.youtube.com", "https://www.youtube-nocookie.com", "disqus.com", "codepen.io"],
   sandbox:    ['allow-scripts', 'allow-same-origin', 'allow-popups'],
 
   // Set to true if you only want browsers to report errors, not block them
