@@ -11,14 +11,19 @@
       return data.text();
     }).then(function (text) {
       var calendar = $('#calendar');
-      calendar.innerHTML = text;
-      console.info('Updated calendar successfully.');
+      if (!!calendar) {
+        calendar.innerHTML = text;
+        console.info('Updated calendar successfully.');
+      }
     }).catch(function (error) {
       console.error(error);
+      var calendar = $('#calendar');
       var warning = document.createElement('p');
       warning.classList.add('warning');
       warning.innerHTML = '<em><strong>Note:</strong></em> The latest calendar could not be fetched.';
-      $('#calendar').appendChild(warning);
+      if (!!calendar) {
+        calendar.appendChild(warning);
+      }
     });
   }
 })();
