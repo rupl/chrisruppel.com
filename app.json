@@ -5,13 +5,5 @@
   "repository": "https://github.com/rupl/chrisruppel.com",
   "scripts": {
     "postdeploy": "npm start"
-  },
-  "buildpacks": [
-    {
-      "url": "https://github.com/ddollar/heroku-buildpack-multi"
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
-    }
-  ]
+  }
 }
