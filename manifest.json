@@ -13,6 +13,18 @@
       "sizes": "32x32"
     },
     {
+      "src": "/static/chris-ruppel-2015@144x144.jpg",
+      "sizes": "144x144",
+      "density": 1,
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/static/chris-ruppel-2015@192x192.jpg",
+      "sizes": "192x192",
+      "density": 1,
+      "type": "image/jpeg"
+    },
+    {
       "src": "/static/chris-ruppel-2015@320.jpg",
       "sizes": "320x345",
       "density": 1,
