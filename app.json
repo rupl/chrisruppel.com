@@ -8,10 +8,13 @@
   },
   "buildpacks": [
     {
-      "url": "https://github.com/ddollar/heroku-buildpack-multi"
+      "url": "https://github.com/mcollina/heroku-buildpack-graphicsmagick"
     },
     {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/nodejs"
     }
   ]
 }
