@@ -30,5 +30,15 @@
   }
 
   .summary {}
+
+  // When offline, hide uncached entries.
+  &.is-offline .teaser--title {
+    display: none;
+  }
+
+  // When offline, restore cached entries.
+  &.is-offline .teaser--title.is-cached {
+    display: block;
+  }
 }
 
