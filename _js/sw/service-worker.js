@@ -102,7 +102,7 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', function(event) {
   // Build a hostname-free version of request path.
   var reqLocation = getLocation(event.request.url);
-  var reqHost = reqLocation.hostname;
+  // var reqHost = reqLocation.hostname;
   var reqPath = reqLocation.pathname;
 
   // Consolidate some conditions for re-use.
