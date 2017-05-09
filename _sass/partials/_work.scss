@@ -7,6 +7,7 @@
   padding: 0;
   box-shadow: 5px 5px 15px rgba(#000, .16);
   transition: box-shadow .1666s linear;
+  --cal-radius: 7px;
 
   display: flex;
   flex-direction: row;
@@ -39,9 +40,11 @@
 
   > [class*="-slot"]:first-child {
     border-left-width: 1px;
+    border-radius: var(--cal-radius) 0 0 var(--cal-radius);
   }
   > [class*="-slot"]:last-child {
     border-right-width: 1px;
+    border-radius: 0 var(--cal-radius) var(--cal-radius) 0;
   }
 
   // Big-screen styles
