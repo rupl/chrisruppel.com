@@ -13,7 +13,7 @@
       <li class="past-slot">{{ slot.date | date: '%b' }}<br></li>
     {% else if slottime > nowunix %}
       <li
-        class="{{ slot.status }}-slot {% if slot.status != full %}available{% endif %}"
+        class="{{ slot.status }}-slot{% if slot.status != 'full' %} available{% endif %}"
         title="{{ slot.date | date: '%b %Y' }}: {{ slot.status }}"
       >{{ slot.date | date: '%b' }}<br></li>
     {% endif %}
