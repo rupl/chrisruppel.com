@@ -40,6 +40,7 @@ gallery:
 tags:
 - trekking
 - lakes
+- animals
 
 summary: We hiked to nearby Lago Pellaifa on a hot day.
 ---

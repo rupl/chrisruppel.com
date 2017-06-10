@@ -37,6 +37,7 @@ gallery:
 tags:
 - trekking
 - viewpoints
+- animals
 
 syndication:
 - type: Twitter
