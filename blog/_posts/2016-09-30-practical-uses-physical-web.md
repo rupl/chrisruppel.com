@@ -1,4 +1,6 @@
 ---
+published: false
+
 title: Practical uses for the Physical Web
 
 tags:
