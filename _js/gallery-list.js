@@ -10,7 +10,7 @@ if ('content' in document.createElement('template')) {
   if (template !== null) {
     var content = template.content.querySelectorAll('.trip--teaser');
     var trip_list = document.querySelector('#trip-list');
-    var trip_count = content.length;
+    var trip_count = content.length - 1;
     var current_trip = 0;
 
     // Create a 'load more' link
@@ -22,13 +22,16 @@ if ('content' in document.createElement('template')) {
     // Click handler for 'load more' link
     loadmore.addEventListener('click', function loadMore () {
       // Every time we load more content, current_trip is incremented so that
-      // the next click will yield a new piece of content.
-      var next_trip = document.importNode(content[current_trip++], true);
+      // the next click will yield a new piece of content. This button should
+      // stop working and disable itself when the content runs out.
+      if (current_trip <= trip_count) {
 
-      // If there's still content, load it.
-      if (next_trip) {
+        // If there's still content, load it.
+        var next_trip = document.importNode(content[current_trip++], true);
+
         // Add to DOM.
         trip_list.appendChild(next_trip);
+
         // Let Picturefill do its magic.
         picturefill();
 
