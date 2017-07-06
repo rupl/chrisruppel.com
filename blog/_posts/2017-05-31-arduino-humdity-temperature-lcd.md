@@ -9,9 +9,9 @@ tags:
 - gardening
 ---
 
-My friend [Afra](http://afranoubarzadeh.se/) invited me to participate in a conference in Sweden involving sustainable urban greenhouse solutions. A group of students from Rice University in Texas — in partnership with Chalmers University in Gothenburg — flew over to build a greenhouse.
+My friend [Afra](http://afranoubarzadeh.se/) invited me to participate in a conference in Sweden involving sustainable urban greenhouse solutions. <em lang="sv">[Så Ett Frö](http://saettfro.com/vaxthus/)</em> (_Plant a Seed_) is a collaboration with [HSB Living Lab](https://www.hsb.se/hsblivinglab/), a 10-year-long experiment which uses technology to help build more sustainable housing building.
 
-The greenhouse tech is part of the [HSB Living Lab](https://www.hsb.se/hsblivinglab/), a 10-year-long experiment which uses technology to help build more sustainable housing. My job was to start automating the greenhouse which the students from Rice built.
+My job was to automate a small greenhouse using my budding Arduino skills. The main objective of <em lang="sv">Så Ett Frö</em> is education amongst grades 7-9. So for now we haven't spent time calculating economic value or carbon footprint. Future iterations will hopefully allow us to tackle these engineering issues which will make the greenhouse more sustainable.
 
 ## Temperature and humidity readings
 
@@ -100,7 +100,7 @@ The LCD's `setCursor` command is zero-based, meaning the 16th column is `15` and
 
 We attempted to use the degrees symbol for the temperature, but the display output other characters instead. The symbol does happen to be in the display's character set, but it's good to be aware that the display doesn't contain all the modern conveniences that make text so easy to render on a word processor or web page.
 
-We noticed when the readings dropped to single digits that the last character in the display seemed to br printed twice. That's not quite right; the real issue is that when the shorter string is printed, it doesn't automatically overwrite the previous string. Adding a `lcd.clear()` caused a small but noticeable blink in the display, so I opted to pad the output with spaces in the case that the readings change from double to single digit. This solves the visual glitch while maintaining persistence for the static labels on the display.
+We noticed when the readings dropped to single digits that the last character in the display seemed to be printed twice. But they aren't, the real issue is that when the shorter string is printed, it doesn't automatically overwrite the previous string. Adding a `lcd.clear()` caused a small but noticeable blink in the display, so I opted to pad the output with spaces in the case that the readings change from double to single digit. This solves the visual glitch while maintaining persistence for the static labels on the display.
 
 ## Reading results
 
