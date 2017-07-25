@@ -29,6 +29,7 @@ gallery:
 tags:
 - artwork
 - city walking
+- speaking
 
 summary: I went to Frontend United in Bristol. They had some sweet graffiti.
 ---
