@@ -7,7 +7,7 @@
   padding: 0;
   box-shadow: 5px 5px 15px rgba(#000, .16);
   transition: box-shadow .1666s linear;
-  --cal-radius: 7px;
+  --cal-radius: 0;
 
   display: flex;
   flex-direction: row;
@@ -50,6 +50,7 @@
   // Big-screen styles
   @media (min-width: 600px) {
     flex-wrap: nowrap;
+    --cal-radius: 7px;
 
     > [class*="-slot"] {
       width: auto;
