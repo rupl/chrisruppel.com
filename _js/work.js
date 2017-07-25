@@ -20,7 +20,7 @@
       var calendar = $('#calendar');
       var warning = document.createElement('p');
       warning.classList.add('warning');
-      warning.innerHTML = '<em><strong>Note:</strong></em> The latest calendar could not be fetched.';
+      warning.innerHTML = '<em><strong>Note:</strong></em> This calendar might be slightly out of date.';
       if (!!calendar) {
         calendar.appendChild(warning);
       }
