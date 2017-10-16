@@ -5,6 +5,7 @@
 .availability {
   margin: 0;
   padding: 0;
+  border-radius: 7px; // at some point white corners appeared, quick fix instead of complicating CSS vars
   box-shadow: 5px 5px 15px rgba(#000, .16);
   transition: box-shadow .1666s linear;
   --cal-radius: 0;
