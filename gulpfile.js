@@ -39,7 +39,7 @@ gulp.task('default', false, ['help']);
 // -----------------------------------------------------------------------------
 gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
   bs.notify('Jekyll building...');
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml', '--drafts', '--incremental'], {stdio: 'inherit'})
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml', '--drafts'], {stdio: 'inherit'})
     .on('close', reload);
 });
 
