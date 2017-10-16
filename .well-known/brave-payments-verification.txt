@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: chrisruppel.com
+Token: 736f36872ea066cd469f22489ee0b94b7654441ec6aa50fcf4b40067869bd5cd

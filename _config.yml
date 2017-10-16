@@ -10,6 +10,7 @@ license-url: https://github.com/rupl/chrisruppel.com/blob/master/LICENSE.md
 # Jekyll config
 future: true # mainly for Availability calendar
 permalink: /:title/
+include: [.well-known]
 exclude: [README.md, LICENSE.md, package.json, gulpfile.js, Gemfile, Gemfile.lock, node_modules, .bundle, update, Procfile, vendor, index.js, bin, app.json]
 keep_files: [img]
 markdown: redcarpet
