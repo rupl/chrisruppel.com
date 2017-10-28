@@ -35,8 +35,8 @@ These sites just shrug off an increasingly important societal issue and justify 
 I really want to focus on the Payments part, so if you're interested in the bigger picture you can read the [official roadmap for Brave ad replacement](https://www.brave.com/about-ad-replacement/). In a nutshell this is their plan to transition the web off of third-party ads:
 
 1. Block third-party ads and tracking by default.
-2. Display Brave ads when a third-party component is blocked. Additionally, YOU get paid a small amount for viewing the Brave ads.
-3. Show NO ads (third-party or Brave) when the user opts into the Brave Payments program by funding their BAT wallet and making direct monthly payouts.
+2. Opt-in to Brave Ads when a third-party component is blocked. When you view Brave Ads, you get paid a small portion of the proceeds from the ad sale.
+3. Opt-in to Brave Payments and directly route your earnings back to publishers. You can also add additional funds to your BAT wallet to ensure payouts happen monthly.
 
 ## Basic Attention Token
 
