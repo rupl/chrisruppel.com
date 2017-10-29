@@ -30,6 +30,7 @@ As I got more accustomed to browsing the web without JS, I switched my desktop b
 
 These sites just shrug off an increasingly important societal issue and justify their individual existences without considering the net effect. Luckily Brave have been working towards fixing the bigger problem in the form of **Brave Payments**.
 
+
 ## Brave ad replacement
 
 I really want to focus on the Payments part, so if you're interested in the bigger picture you can read the [official roadmap for Brave ad replacement](https://www.brave.com/about-ad-replacement/). In a nutshell this is their plan to transition the web off of third-party ads:
@@ -37,6 +38,7 @@ I really want to focus on the Payments part, so if you're interested in the bigg
 1. Block third-party ads and tracking by default.
 2. Opt-in to Brave Ads when a third-party component is blocked. When you view Brave Ads, you get paid a small portion of the proceeds from the ad sale.
 3. Opt-in to Brave Payments and directly route your earnings back to publishers. You can also add additional funds to your BAT wallet to ensure payouts happen monthly.
+
 
 ## Basic Attention Token
 
@@ -56,6 +58,7 @@ As you can see, I spent a significant portion of my time this month learning Vue
 
 As a developer using open source software, I quite like the idea that documentation sites, which normally receive zero compensation from casual users, can start to receive some income for the barrage of traffic they get for being popular, free resources on the web.
 
+
 ## Better than 3rd-party advertising?
 
 As a web developer with many years' experience deploying 3rd-party ads on an otherwise nice website, I am so excited to give this a try. I spent years advocating for frontend performance, and was [rewarded with clients](/work/) who sought to use my skills... only to cannibalize the performance gains by adding ever-greedier ads and tracking. It really made the work seem pointless at times.
@@ -63,6 +66,7 @@ As a web developer with many years' experience deploying 3rd-party ads on an oth
 Furthermore, without straying too far into the details, there is such a strong, pervasive negative side to ads that I feel that people are better off without them. The crappy UX of ad overload, battery drain on phones, security complications from third parties, privacy concerns, and psychological implications of immoral ads are a few major concerns I have.
 
 A browser which actively blocks them by default will return some control to regular users who don't have time or expertise to install extensions and harden their personal security. And allowing people to set their own compensation budget makes for a more honest market whose value is derived from supply/demand instead of inflated startup valuations or over-competitive keyword bidding.
+
 
 ## How is privacy preserved?
 
@@ -75,6 +79,17 @@ Brave Ads prevent this ad brokering process between multiple outside parties fro
 Containing this process to the browser also means that someone with enough knowledge and know-how can customize their ad-brokering process. In the future I think we'll see this, with additional preferences available in the browser for what type of ads you want to promote or restrict. Again this is similar to today's Google ad prefs, but strictly within your control, and not used for additional tracking purposes.
 
 
+## Sustainable self-publishing
+
+Organizations who choose not to invade our lives with ads must always struggle to financially support their endeavor. The annual donation drive for Wikipedia is a well-known example. Just think, if every person browsing Wikipedia pitched in a few cents each month, I have no doubt their financial position would be much better.
+
+Brave Payments isn't just designed for high-traffic websites, but also for small, independent publishers. As time goes on, we see larger and larger chunks of the web surrender their publishing process to walled gardens like Facebook and Twitter. I've also enjoyed these services for the reach they provide, and others have embraced these large social networks for the revenue that comes with increased exposure. It's almost too easy, so people surrender control of their content in the name of convenience.
+
+However, the web was meant to be decentralized. Each person can control their own identity, content, discussions, and so forth. A personal domain name is the key upon which it all rests.
+
+Brave Payments will put pressure on content creators to truly own their content. It's quite simple: unless you own the domain where the content is hosted, nobody can pay you! So if you're the type who writes long-form text on Medium, then Medium will collect your payments, not you. As it becomes more popular, Brave Payments will apply an ever-stronger financial incentive to decentralize content once again.
+
+
 ## Ok I'm sold, how do I start?
 
 Eventually there will be two ways to fill your Brave wallet. One is to simply view Brave ads, but in reality this will not earn you a significant amount until the system is orders of magnitude more popular. Plus, the compensation mechanism is scheduled for a later release.
@@ -82,7 +97,5 @@ Eventually there will be two ways to fill your Brave wallet. One is to simply vi
 For now, you can fill your wallet by turning some fiat (USD, EUR, etc) into a popular cryptocurrency, and then sending it to your Brave wallet. As of October 2017 any of the currencies on Coinbase can be used to fund your Brave wallet. Just open the browser preferences, go to Payments section, and start by clicking the orange _Add funds..._ button to see your options.
 
 Be aware that cryptocurrency requires some education to really grasp. There are many security and privacy issues that must be understood to protect your funds. Consider reading about them before converting a significant amount of money into digital currency. Converting a few bucks to try Brave Payments is not so risky, so if this is your first time buying don't overdo it.
-
-I'm definitely no expert, however I will mention one important thing that is easy to overlook, and that is the wallet backup option in the settings for Brave Payments. Be sure to securely backup your wallet seed. It should absolutely be encrypted before being backed up to a USB stick, the cloud, or wherever, because anyone with your seed can spend your money forever, and your only option to regain sole control of the wallet will be to make a new one with a new seed.
 
 Once you're up and running, come back to this page and re-read this article using Brave as your way of saying thanks 😊
