@@ -22,18 +22,20 @@ app.use(helmet.hsts({
 }));
 
 // HTTP header: contentSecurityPolicy
-app.use(helmet({
+app.use(helmet.contentSecurityPolicy({
   // Policy for chrisruppel.com
-  defaultSrc: ["'self'"],
-  scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "codepen.io", "*.codepen.io", "'unsafe-inline'", "'unsafe-eval'"],
-  styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "'unsafe-inline'"],
-  imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com", "data:", "blob:"],
-  connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com"],
-  fontSrc:    ["'self'", 'data:'],
-  objectSrc:  ["youtube.com", "youtube-nocookie.com"],
-  mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
-  frameSrc:   ["'self'", "https://www.youtube.com", "https://www.youtube-nocookie.com", "disqus.com", "codepen.io"],
-  sandbox:    ['allow-scripts', 'allow-same-origin', 'allow-popups'],
+  directives:  {
+    defaultSrc: ["'self'"],
+    scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "codepen.io", "*.codepen.io", "analytics.chrisruppel.com", "'unsafe-inline'", "'unsafe-eval'"],
+    styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "'unsafe-inline'"],
+    imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com", "analytics.chrisruppel.com", "data:", "blob:"],
+    connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "chrisruppel-assets-eu1.s3.amazonaws.com"],
+    fontSrc:    ["'self'", 'data:'],
+    objectSrc:  ["youtube.com", "youtube-nocookie.com"],
+    mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
+    frameSrc:   ["'self'", "https://www.youtube.com", "https://www.youtube-nocookie.com", "disqus.com", "codepen.io"],
+    sandbox:    ['allow-scripts', 'allow-same-origin', 'allow-popups'],
+  },
 
   // Set to true if you only want browsers to report errors, not block them
   reportOnly: false,
