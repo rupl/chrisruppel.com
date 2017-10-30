@@ -78,6 +78,9 @@ array: []
 # Google Analytics — the dev config unsets this value
 ga: 'UA-432773-8'
 
+# Piwik — dev also unsets this value
+piwik: '2'
+
 # Mapbox
 mapboxToken: 'pk.eyJ1IjoicnVwbCIsImEiOiI3NDc5MWQ4ZWNjMTg1ZmZlYWQ5ZjMwMWVkNjI2MTJlZCJ9.Szn0ysZDc6AjmhKnxf8PkA'
 
