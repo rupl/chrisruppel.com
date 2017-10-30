@@ -8,7 +8,7 @@
     "npm": "5.5.1"
   },
   "dependencies": {
-    "browser-sync": "^2.18.8",
+    "browser-sync": "^2.18.13",
     "compression": "^1.6.2",
     "concurrent-transform": "^1.0.0",
     "express": "^4.15.2",
@@ -28,12 +28,12 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.4",
     "gulp-util": "^3.0.8",
-    "helmet": "^0.15.0",
+    "helmet": "^3.8.2",
     "picturefill": "^3.0.1",
     "run-sequence": "^1.2.2",
     "screenfull": "^2.0.0",
     "serviceworker-cache-polyfill": "^3.0.0",
-    "snyk": "^1.29.0",
+    "snyk": "^1.47.0",
     "three": "^0.80.1"
   },
   "scripts": {
