@@ -9,7 +9,8 @@ var compression = require('compression');
 // Initialize app
 var app = express();
 
-// HTTP headers: hidePoweredBy, ieNoOpen, noSniff, frameguard, xssFilter
+// Default settings
+//   @see https://helmetjs.github.io/docs/
 app.use(helmet());
 
 // HTTP header: Strict Transport Security
@@ -21,7 +22,7 @@ app.use(helmet.hsts({
 }));
 
 // HTTP header: contentSecurityPolicy
-app.use(helmet.csp({
+app.use(helmet({
   // Policy for chrisruppel.com
   defaultSrc: ["'self'"],
   scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "codepen.io", "*.codepen.io", "'unsafe-inline'", "'unsafe-eval'"],
