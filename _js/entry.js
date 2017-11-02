@@ -109,24 +109,16 @@
         cacheButton.innerText = 'Fetching content...';
         cacheButton.disabled = true;
 
-        // Build an array of the page-specific resources.
-        var pageResources = [currentPath];
-
-        // Loop through any content images and save to pageResources array.
-        var images = $$('main img').forEach(function (img) {
-          pageResources.push(img.currentSrc);
-        });
-
-        // TODO: maps... somehow cache MapBox tiles?
-        // TODO: photosphere assets (img/JS)
-
-        // Open cache and save current assets. If the cache already exists it is
-        // overwriting the existing files.
+        // Open cache. If cache already exists it overwrites existing files.
         caches.open(OFFLINE_ARTICLE_PREFIX + currentPath).then(function(cache) {
-          var updateCache = cache.addAll(pageResources);
+          // Collect mandatory page resources. If any of these fail, the user will
+          // see an error. Less vital resources (like images) will be stored in
+          // the cache in a later step.
+          var pageContent = [currentPath];
+          var addContent = cache.addAll(pageContent);
 
-          // Update UI to indicate success.
-          updateCache.then(function() {
+          // Update UI to indicate outcome of basic page content.
+          addContent.then(function() {
             cacheButton.classList.remove('btn--working');
             cacheButton.classList.add('btn--success');
 
@@ -142,11 +134,12 @@
             }
 
             // Log the event.
-            console.info('Service Worker saved an entry offline: ' + currentPath);
+            console.info('Service Worker: saved offline entry for ' + currentPath);
           });
 
-          // Catch any errors and report.
-          updateCache.catch(function (error) {
+          // Catch any errors and report. This is only for main HTML content so
+          // failure means we didn't meet user expectations at all.
+          addContent.catch(function (error) {
             // Update UI to indicate failure. boo.
             cacheButton.classList.remove('btn--working');
             cacheButton.classList.add('btn--failed');
@@ -154,8 +147,33 @@
             displayMessage('The article could not be saved offline. Refresh and try again?');
 
             // Log the event.
-            console.error(error);
+            console.error(error.message);
             ga('send', 'event', 'Offline', 'error', currentPath);
+          });
+
+          // Now save images to cache. We won't treat failure so strictly this
+          // time because the HTML/CSS will always load and the basic content
+          // is available offline.
+          var pageResources = [];
+
+          // Loop through any content images and save to pageResources array.
+          $$('main img').forEach(function (img) {
+            pageResources.push(img.currentSrc);
+          });
+
+          // TODO: maps... somehow cache MapBox tiles?
+          // TODO: photosphere assets (img/JS)
+
+          var addResources = cache.addAll(pageResources);
+
+          addResources.then(function () {
+            appendMessage('The images were saved.')
+            console.info('SW: images saved to cache.')
+          });
+
+          addResources.catch(function (error) {
+            appendMessage('The images could\'t be saved.');
+            console.error(error.message);
           });
         });
       });
