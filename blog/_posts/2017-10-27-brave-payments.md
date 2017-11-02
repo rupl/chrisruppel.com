@@ -67,10 +67,12 @@ Furthermore, without straying too far into the details, there is such a strong, 
 
 A browser which actively blocks them by default will return some control to regular users who don't have time or expertise to install extensions and harden their personal security. And allowing people to set their own compensation budget makes for a more honest market whose value is derived from supply/demand instead of inflated startup valuations or over-competitive keyword bidding.
 
+Finally, there's the issue of free, ad-supported services turning their users into the product. By blocking malicious trackers and directly paying websites, we skip the middleman. Unlike plain ad-blockers, which offer nothing to publishers in place of the blocked ads, Brave users can pay out of pocket. Now the publisher gets paid, the user is no longer the product, and content is once again king.
+
 
 ## How is privacy preserved?
 
-Improving the most concerning of these issues, privacy, is a major goal of the Brave team. The way they preserve your privacy is by moving much of the machinery that is normally done by third parties (like Google) into Brave itself.
+Improving privacy, the most concerning of the above-listed issues, is a major goal of the Brave team. The way they preserve your privacy is by moving much of the machinery that is normally done by third parties (like Google) into Brave itself.
 
 Normally when you view a website which features Google AdWords, during the page load there is a bidding process that occurs. Depending on what you searched for to arrive on the page, and what other advertisers have bid on certain keywords, Google determines which ads it will show you. But in the process it passes a lot of your personal information along to these bidders. Your page load is earning multiple people money, and you pay with your attention instead of directly with money. You actually do pay with money via battery energy and mobile data plan, but that's not related to the privacy issue.
 
