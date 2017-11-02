@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/rupl
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://chrisruppel.com
+  * I am rupl (https://keybase.io/rupl) on keybase.
+  * I have a public key ASBJ5Kg18-StJUZUlN_qgReYd2buApAqCdTjui4FVxqEago
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012049e4a835f3e4ad25465494dfea8117987766ee02902a09d4e3ba2e05571a846a0a",
+      "host": "keybase.io",
+      "kid": "012049e4a835f3e4ad25465494dfea8117987766ee02902a09d4e3ba2e05571a846a0a",
+      "uid": "0b67987747a2cb6f18c71d64252ef100",
+      "username": "rupl"
+    },
+    "merkle_root": {
+      "ctime": 1509614551,
+      "hash": "3e0b13dabd50475e235fb6b27eb950e796ed4368bdcd3f6ab8c6b00ff74ef82947488fb85185f33d75d8cf93385a7313b407d2649ada191165b43bdf3b068a03",
+      "hash_meta": "4d04c055244fcaf08860acb55c4d8c7708421a783c4dbbc71a52ada2ed27a4c4",
+      "seqno": 1658086
+    },
+    "service": {
+      "hostname": "chrisruppel.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.34"
+  },
+  "ctime": 1509614592,
+  "expire_in": 504576000,
+  "prev": "3f78c631133a80e6b17a4565bafa723b2c620f8a60318882ad6c8091ceeed349",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgSeSoNfPkrSVGVJTf6oEXmHdm7gKQKgnU47ouBVcahGoKp3BheWxvYWTFA0N7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNDllNGE4MzVmM2U0YWQyNTQ2NTQ5NGRmZWE4MTE3OTg3NzY2ZWUwMjkwMmEwOWQ0ZTNiYTJlMDU1NzFhODQ2YTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNDllNGE4MzVmM2U0YWQyNTQ2NTQ5NGRmZWE4MTE3OTg3NzY2ZWUwMjkwMmEwOWQ0ZTNiYTJlMDU1NzFhODQ2YTBhIiwidWlkIjoiMGI2Nzk4Nzc0N2EyY2I2ZjE4YzcxZDY0MjUyZWYxMDAiLCJ1c2VybmFtZSI6InJ1cGwifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDk2MTQ1NTEsImhhc2giOiIzZTBiMTNkYWJkNTA0NzVlMjM1ZmI2YjI3ZWI5NTBlNzk2ZWQ0MzY4YmRjZDNmNmFiOGM2YjAwZmY3NGVmODI5NDc0ODhmYjg1MTg1ZjMzZDc1ZDhjZjkzMzg1YTczMTNiNDA3ZDI2NDlhZGExOTExNjViNDNiZGYzYjA2OGEwMyIsImhhc2hfbWV0YSI6IjRkMDRjMDU1MjQ0ZmNhZjA4ODYwYWNiNTVjNGQ4Yzc3MDg0MjFhNzgzYzRkYmJjNzFhNTJhZGEyZWQyN2E0YzQiLCJzZXFubyI6MTY1ODA4Nn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJjaHJpc3J1cHBlbC5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zNCJ9LCJjdGltZSI6MTUwOTYxNDU5MiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiIzZjc4YzYzMTEzM2E4MGU2YjE3YTQ1NjViYWZhNzIzYjJjNjIwZjhhNjAzMTg4ODJhZDZjODA5MWNlZWVkMzQ5Iiwic2Vxbm8iOjgsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RALzFVbogfTShyPITBx4Z2XRwIZuqZQhksg8b4SeRRit67r3aR+p9hf3tyJvU3iVWVERah4OlOfk77Fs2fhouJBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMpyPAVaRRXGlHEIOvF+X2p1YpqgTV2ffV2Epw6zV3CZo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rupl
+
+==================================================================
