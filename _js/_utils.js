@@ -34,3 +34,18 @@ function blurAll() {
   tmp.focus();
   document.body.removeChild(tmp);
 }
+
+
+//
+// Avoid analytics errors during local development.
+//
+var ga = window.ga || function () {
+  console.log('💁 GA would have logged:', [].slice.call(arguments).join(', '));
+};
+
+var _paq = window._paq || function () {};
+if (typeof _paq.push !== 'function') {
+  _paq.push = function () {
+    console.log('💁 Piwik would have logged:', arguments[0].join(', '));
+  };
+}

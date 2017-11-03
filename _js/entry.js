@@ -51,10 +51,6 @@
 // Cache button. Depends on SW support.
 //
 (function (Modernizr) {
-  // Avoid errors during local development.
-  var ga = window.ga || function () {};
-  var _paq = window._paq || function () {};
-
   if (Modernizr.serviceworker) {
     var currentURL = window.location.href;
     var currentPath = window.location.pathname;
