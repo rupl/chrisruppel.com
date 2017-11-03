@@ -51,8 +51,9 @@
 // Cache button. Depends on SW support.
 //
 (function (Modernizr) {
-  // For local development...
+  // Avoid errors during local development.
   var ga = window.ga || function () {};
+  var _paq = window._paq || function () {};
 
   if (Modernizr.serviceworker) {
     var currentURL = window.location.href;
@@ -127,10 +128,12 @@
               cacheButton.innerText = 'Article updated!';
               displayMessage('Offline article has been updated. Glad it\'s useful!');
               ga('send', 'event', 'Offline', 'updated', currentPath);
+              _paq.push(['trackEvent', 'Offline', 'updated', currentPath]);
             } else {
               cacheButton.innerText = 'Article saved!';
               displayMessage('Article is now available offline. Hope it comes in handy!');
               ga('send', 'event', 'Offline', 'saved', currentPath);
+              _paq.push(['trackEvent', 'Offline', 'saved', currentPath]);
             }
 
             // Log the event.
@@ -149,6 +152,7 @@
             // Log the event.
             console.error(error.message);
             ga('send', 'event', 'Offline', 'error', currentPath);
+            _paq.push(['trackEvent', 'Offline', 'error', currentPath]);
           });
 
           // Now save images to cache. We won't treat failure so strictly this
