@@ -6,6 +6,7 @@ development: false
 url: https://chrisruppel.com
 img-host: https://chrisruppel-assets-eu1.s3.amazonaws.com
 license-url: https://github.com/rupl/chrisruppel.com/blob/master/LICENSE.md
+feedback-url: https://github.com/rupl/chrisruppel.com/issues/new?title=[Visitor+Feedback]+Your+title+here&body=Your+feedback+goes+here.+Thanks+for+taking+the+time+to+help+improve+my+website.&labels=Feedback
 
 # Jekyll config
 future: true # mainly for Availability calendar
