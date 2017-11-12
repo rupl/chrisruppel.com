@@ -38,6 +38,7 @@ tags:
 - trekking
 - viewpoints
 - animals
+- maps
 
 syndication:
 - type: Twitter

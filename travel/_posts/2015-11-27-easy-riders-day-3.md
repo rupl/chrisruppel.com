@@ -68,6 +68,7 @@ links:
 tags:
 - motorbikes
 - tours
+- maps
 
 summary: Day 3 of our Easy Rider tour took us through the mountains to visit the highlanders, more farmers growing bamboo, black pepper, rubber and honey, and a fair bit of rain thrown in to make it interesting before arriving in Nha Trang to end our journey.
 ---

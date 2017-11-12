@@ -11,6 +11,7 @@ map:
 tags:
 - trekking
 - tours
+- maps
 
 summary: The full path of our three-day trek from Kalaw to Inle Lake.
 ---

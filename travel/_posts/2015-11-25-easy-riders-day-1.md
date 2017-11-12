@@ -66,6 +66,7 @@ links:
 tags:
 - motorbikes
 - tours
+- maps
 
 summary: Day 1 of our Dalat Easy Riders tour was a day trip through Da Lat followed by a beautiful ride through the countryside.
 ---

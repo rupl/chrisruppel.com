@@ -34,6 +34,7 @@ gallery:
 
 tags:
 - transport
+- maps
 
 summary: The Yangon circular railway is a local train that makes a large loop around the city. It's great for people-watching and seeing parts of Yangon that aren't polished for tourism.
 ---

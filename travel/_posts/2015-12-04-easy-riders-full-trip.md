@@ -9,6 +9,7 @@ map:
 tags:
 - motorbikes
 - tours
+- maps
 
 summary: Full path of our trip with Dalat Easy Rider Club from Da Lat to Nha Trang.
 ---

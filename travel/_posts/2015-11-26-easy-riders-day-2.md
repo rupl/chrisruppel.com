@@ -57,6 +57,7 @@ links:
 tags:
 - motorbikes
 - tours
+- maps
 
 summary: Day 2 of our Easy Rider tour brought us to many stages of the coffee production process, a waterfall, and an unexpected Thanksgiving feast!
 ---

@@ -52,6 +52,7 @@ tags:
 - danger
 - trekking
 - volcanos
+- maps
 
 syndication:
 - type: Facebook

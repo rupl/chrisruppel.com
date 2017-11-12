@@ -40,6 +40,8 @@ gallery:
 
 tags:
 - kayaking
+- beaches
+- maps
 
 summary: We went kayaking in the ocean around Cat Ba Island! We kayaked around some of the islands, stopped at one of the beaches on Monkey Island, and went through a fishing village.
 ---

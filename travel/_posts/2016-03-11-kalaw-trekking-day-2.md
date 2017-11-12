@@ -59,6 +59,7 @@ gallery:
 tags:
 - trekking
 - tours
+- maps
 
 summary: Day 2 of our three-day trek involved a hike along the highlands with a nice long break at a swimming hole. We walked over 18km and slept in a Buddhist monastery.
 ---

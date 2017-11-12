@@ -4,6 +4,10 @@ location:
   locality: Nong Khiaw
   country: Laos
 
+map:
+  kml: nong-khiaw-100-waterfalls.kml
+  style: mapbox.satellite
+
 gallery:
 - gridtype: col-3
 - src: 100-waterfalls-1.jpg
@@ -59,6 +63,7 @@ tags:
 - tours
 - trekking
 - waterfalls
+- maps
 
 syndication:
 - type: Facebook
@@ -68,6 +73,8 @@ summary: We took a tour to the 100 Waterfalls. It was a moderate hike with a bea
 ---
 
 We almost didn't go on this trek due to the intense rain that poured down in the morning. We figured it would be cancelled, but they sent us off anyway. Although it was rainy in the morning, it cleared up and the sky was lightly overcast for most of the day. It turned out to be alright; we were still sweating as we hiked the trail.
+
+{% include map.html map=page.map %}
 
 The biggest surprise were the leeches. They never made mention of it while describing the trek, and the guide only mentioned it when it was finally necessary. We were all a little paranoid, especially after we started finding them on our legs. A couple of us got stuck by them but it's really not painful... an ant bite is much worse in comparison. But still, leeches are _gross_.
 
