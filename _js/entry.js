@@ -168,7 +168,7 @@
 
           addResources.then(function () {
             appendMessage('The images were saved.')
-            console.info('SW: images saved to cache.')
+            console.info('Service Worker: images saved to cache.')
           });
 
           addResources.catch(function (error) {

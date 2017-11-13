@@ -8,7 +8,6 @@
       var offlineContentList = $('#offline');
       var offlineContentEntry = $('#offline-content');
       var travelList = $('.trip-list');
-      var travelContentEntries = $('.teaser--title');
       var offlineContentFound = false;
 
       return Promise.all(
@@ -36,9 +35,10 @@
 
             // Set the Travel list to offline mode when Offline, but tag the
             // cached entries so they stay visible.
-            if (!navigator.onLine && !!travelContentEntries) {
+            if (!navigator.onLine && !!travelList) {
               travelList.classList.add('is-offline');
-              var cachedEntry = $('.teaser--title[data-url="' + cachedURL + '"');
+              var cachedEntry = $('.teaser--title[data-url="' + window.location.origin + cachedURL + '"');
+
               if (!!cachedEntry) {
                 cachedEntry.classList.add('is-cached');
                 offlineContentFound = true;
@@ -46,14 +46,14 @@
             }
           }
         })
-      ).then(function () {
+      ).then(function displayOfflineContent() {
         if (offlineContentFound) {
           // Append a message telling the user the list was filtered. Give them
           // the option to remove the filter.
           var message = document.createElement('aside');
           message.id = 'travel-list-filter-message';
           message.classList.add('warning');
-          message.innerHTML = '<p>This list has been reduced to show you only the stuff you personally have saved. <a href="#all" id="travel-list-show-all">Want to see it all?</a></p>';
+          message.innerHTML = '<p>It seems like you\'re offline, so the list is only showing the entries you saved for offline viewing. <a href="#all" id="travel-list-show-all">Want to see it all?</a></p>';
           travelList.appendChild(message);
 
           // Set up listener for button to show all entries.
