@@ -88,3 +88,5 @@ It can be remedied by keeping an [IndexedDB table](https://developer.mozilla.org
 Really though, that's it! If you wanted to get really fancy, you could pull an image from your articles, or put the date it was saved (provided you stored it somewhere when saving!). But really I think a simple list is much, much better than nothing, so I'll save the incremental improvements for later.
 
 Try it out by using the *Save Article Offline* button below, then temporarily disabling your network to see the Offline page. Let me know in the comments if you have any questions or ideas to improve the code!
+
+<p><ins class="update" datetime="2017-11-13">I've implemented a second approach on my site which <a href="/blog/service-worker-offline-content-list-filter/">filters static HTML to show only cached content</a>. You can try it out on my <a href="/travel/list/">travel list</a>.</ins></p>

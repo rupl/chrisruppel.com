@@ -240,4 +240,6 @@ So... that's where I am with offline content. If your browser supports it, try t
 
 ### ...and view it later
 
-<ins class="update" datetime="2016-10-05">I've published another walkthrough which allows you to <a href="/blog/service-worker-offline-content-list/">display the list of saved articles</a> to each visitor when they return.</ins>
+<p><ins class="update" datetime="2016-10-05">I've published another walkthrough which allows you to <a href="/blog/service-worker-offline-content-list/">display the list of saved articles</a> to each visitor when they return.</ins></p>
+
+<p><ins class="update" datetime="2017-11-13">Yet another short howto which allows you to <a href="/blog/service-worker-offline-content-list-filter/">filter static HTML to show only cached content</a></ins></p>
