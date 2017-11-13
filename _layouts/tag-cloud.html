@@ -6,15 +6,33 @@ layout: default
   <h1 id="tag-list" class="title title--page">{{ page.category | capitalize }} tags</h1>
 
   <div class="tag-list">
-    {% assign rawtags = "" %}
+    {% comment %}
+      The weighting loop seems to function much better when an empty value is
+      at the beginning of the `rawtags` var. So we begin with a pipe, the char
+      used to separate tags as we compile them into an array.
+    {% endcomment %}
+    {% assign rawtags = "|" %}
+
+    {% comment %}
+      Loop through all posts in this category (either blog/travel) and append
+      the tags we find. We're compiling a pipe-separated string.
+    {% endcomment %}
     {% for post in site.posts %}
       {% if post.category == page.category %}
         {% assign temp_tags = post.tags | join: '|' | append: '|' %}
         {% assign rawtags = rawtags | append: temp_tags %}
       {% endif %}
     {% endfor %}
+
+    {% comment %}
+      Split the string along the pipes and create an array.
+    {% endcomment %}
     {% assign rawtags = rawtags | split: '|' | sort %}
 
+    {% comment %}
+      Initialize some variables to store all the weights we will calculate in
+      the next step.
+    {% endcomment %}
     {% assign tags = site.array %}
     {% assign weights = site.array %}
     {% assign current_weight = 1 %}
