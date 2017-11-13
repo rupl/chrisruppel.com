@@ -51,6 +51,7 @@ gallery2:
 
 tags:
 - deserts
+- mountains
 - sunsets
 - tours
 - trekking

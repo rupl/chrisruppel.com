@@ -12,6 +12,9 @@ gallery:
   type: wide
   bgpad: 50%
 
+tags:
+- resting
+
 summary: My reading list in Pai. See last entry.
 ---
 
