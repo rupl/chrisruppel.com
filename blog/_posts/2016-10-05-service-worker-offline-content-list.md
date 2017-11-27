@@ -1,12 +1,12 @@
 ---
 title: Displaying a user's offline content list
 
+summary: Learn how to display a list of user-saved articles when they return to your website while offline.
+
 tags:
 - offline
 - javascript
 - service worker
-
-summary: Learn how to display a list of user-saved articles when they return to your website while offline.
 ---
 
 In a previous article, I detailed how I enabled my website visitors to [choose which of my articles to save offline](/blog/service-worker-offline-content/) so they can read them later without a connection. By and large that code is unchanged. I did tweak it by adding a Stale-While-Revalidate policy to the content, but overall it remains as the post describes.

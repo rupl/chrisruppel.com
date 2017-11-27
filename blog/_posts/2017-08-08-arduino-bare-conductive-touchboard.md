@@ -1,6 +1,8 @@
 ---
 title: Getting started with Bare Conductive TouchBoard
 
+summary: Learning how to program Arduino in the open. This time I'm learning how to use the Bare Conductive TouchBoard Pro kit.
+
 gallery:
 - gridtype: col-3
 - src: bare-conductive-1.jpg
@@ -13,8 +15,6 @@ tags:
 - electronics
 - arduino
 - music
-
-summary: Learning how to program Arduino in the open. This time I'm learning how to use the Bare Conductive TouchBoard Pro kit.
 ---
 
 [Bare Conductive](https://www.bareconductive.com) built a board especially designed for capacitive touch. It connects your Arduino to regular objects around you. Anything that conducts electricity will work: spoons, plants, furniture... anything! They also offer a conductive paint so you can make a drawing or painting come to life and interact with the Arduino.

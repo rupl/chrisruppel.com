@@ -1,6 +1,8 @@
 ---
 title: Brave Payments
 
+summary: Brave offers a new compensation model for web publishing. Instead of relying on third-party advertising, sites can be paid directly by visitors using digital currency.
+
 gallery:
 - gridtype: col-2
 - src: brave-payments-1.png
@@ -18,8 +20,6 @@ tags:
 - privacy
 - ads
 - blockchain
-
-summary: Brave offers a new compensation model for web publishing. Instead of relying on third-party advertising, sites can be paid directly by visitors using digital currency.
 ---
 
 I'm a web developer so I've known for years how extensively individuals are tracked on the web. For a long time I assumed it was a necessary evil, but as tracking is revealed to be more and more extensive, enough is enough.
