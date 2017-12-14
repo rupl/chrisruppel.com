@@ -4,8 +4,8 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": "8.9.0",
-    "npm": "5.5.1"
+    "node": "8.9.3",
+    "npm": "5.6.0"
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
@@ -28,12 +28,12 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.4",
     "gulp-util": "^3.0.8",
-    "helmet": "^3.8.2",
+    "helmet": "^3.9.0",
     "picturefill": "^3.0.1",
     "run-sequence": "^1.2.2",
     "screenfull": "^2.0.0",
     "serviceworker-cache-polyfill": "^3.0.0",
-    "snyk": "^1.47.0",
+    "snyk": "^1.59.0",
     "three": "^0.80.1"
   },
   "scripts": {
