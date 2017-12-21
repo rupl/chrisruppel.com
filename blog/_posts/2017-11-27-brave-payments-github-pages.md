@@ -3,6 +3,10 @@ title: Collecting Brave Payments on GitHub Pages
 
 summary: Brave offers a new compensation model for web publishing, but people often publish on subdomains they don't directly control. Learn how to verify your USER.github.io domain with Brave Publishers.
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/940925878518861827
+
 tags:
 - browsers
 - privacy
