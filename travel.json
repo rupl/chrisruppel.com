@@ -15,7 +15,7 @@ layout: null
         "place": "{{ trip.location.place | escape }}",
         "prep": "{{ trip.location.prep | escape }}"
       },
-      "date": "{{ trip.date | escape }}",
+      "date": "{{ trip.date | date: '%s' | escape }}",
       {% if trip.map %}
         "map": {
           "location": "{{ trip.map.location | escape }}",
