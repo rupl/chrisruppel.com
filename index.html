@@ -22,7 +22,7 @@ bodyclass: page--front
   <h1 id="blog" class="title--main">Latest posts</h1>
 
   <div id="blog-list" class="blog-list">
-    {% for post in site.categories.blog limit:5 reversed %}
+    {% for post in site.categories.blog limit:5 %}
       <article data-url="{{ site.url }}{{ post.url }}">
         <header>
           <h2 class="title--main">
