@@ -14,10 +14,11 @@ var bs = require('browser-sync');
 var reload = bs.reload;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
+var prefix = require('autoprefixer');
 var concat = require('gulp-concat');
+var cssnano = require('cssnano');
+var postcss = require('gulp-postcss');
 var uglify = require('gulp-uglify');
-var cssnano = require('gulp-cssnano');
 var resize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
@@ -60,20 +61,14 @@ gulp.task('sass-main', false, function () {
 
   return gulp.src('_sass/styles.scss')
     .pipe(plumber())
-    .pipe(sass({
-      outputStyle: 'nested',
-      onSuccess: function(css) {
-        var dest = css.stats.entry.split('/');
-        log(c.green('sass-main'), 'compiled to', dest[dest.length - 1]);
-      },
-      onError: function(err, res) {
-        bs.notify('<span style="color: red">sass-main failed</span>');
-        log(c.red('sass-main failed to compile'));
-        log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
-      }
-    }))
-    .pipe(prefix("last 2 versions", "> 1%"))
-    .pipe(cssnano())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([
+      prefix({
+        browsers: ['last 2 versions'],
+        cascade: false,
+      }),
+      cssnano(),
+    ]))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
@@ -86,19 +81,7 @@ gulp.task('sass-fonts', false, function () {
 
   return gulp.src('_sass/fonts.scss')
     .pipe(plumber())
-    .pipe(sass({
-      outputStyle: 'nested',
-      onSuccess: function(css) {
-        var dest = css.stats.entry.split('/');
-        log(c.green('sass-fonts'), 'compiled to', dest[dest.length - 1]);
-      },
-      onError: function(err, res) {
-        bs.notify('<span style="color: red">sass-fonts failed</span>');
-        log(c.red('sass-fonts failed to compile'));
-        log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
-      }
-    }))
-    .pipe(prefix("last 2 versions", "> 1%"))
+    .pipe(sass().on('error', sass.logError))
     .pipe(rename('fonts.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
