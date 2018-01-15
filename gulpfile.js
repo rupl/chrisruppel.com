@@ -205,10 +205,11 @@ gulp.task('image-320', false, function () {
       }),
       os.cpus().length
     ))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(rename({
       dirname: ''
     }))
@@ -228,10 +229,11 @@ gulp.task('image-640', false, function () {
       }),
       os.cpus().length
     ))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(rename({
       dirname: ''
     }))
@@ -242,10 +244,11 @@ gulp.task('image-640', false, function () {
 gulp.task('image-original', false, function () {
   return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
     .pipe(changed('_site/img/travel'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(gulp.dest('_site/img/travel'));
 });
 
@@ -253,10 +256,11 @@ gulp.task('image-original', false, function () {
 gulp.task('image-photosphere', false, function () {
   return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/photosphere'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(gulp.dest('_site/img/photosphere'));
 });
 
@@ -264,10 +268,14 @@ gulp.task('image-photosphere', false, function () {
 gulp.task('image-svg', false, function () {
   return gulp.src(['_svg/**/*'])
     .pipe(changed('svg'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.svgo({
+          plugins: [
+              {removeViewBox: true},
+              {cleanupIDs: false}
+          ]
+      })
+    ]))
     .pipe(gulp.dest('svg'));
 });
 
@@ -275,10 +283,11 @@ gulp.task('image-svg', false, function () {
 gulp.task('image-blog', false, function () {
   return gulp.src(['_img/blog/*', '!_img/blog/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/blog'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(gulp.dest('_site/img/blog'));
 });
 
