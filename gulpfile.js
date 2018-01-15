@@ -14,10 +14,11 @@ var bs = require('browser-sync');
 var reload = bs.reload;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
+var prefix = require('autoprefixer');
 var concat = require('gulp-concat');
+var cssnano = require('cssnano');
+var postcss = require('gulp-postcss');
 var uglify = require('gulp-uglify');
-var cssnano = require('gulp-cssnano');
 var resize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
@@ -60,20 +61,14 @@ gulp.task('sass-main', false, function () {
 
   return gulp.src('_sass/styles.scss')
     .pipe(plumber())
-    .pipe(sass({
-      outputStyle: 'nested',
-      onSuccess: function(css) {
-        var dest = css.stats.entry.split('/');
-        log(c.green('sass-main'), 'compiled to', dest[dest.length - 1]);
-      },
-      onError: function(err, res) {
-        bs.notify('<span style="color: red">sass-main failed</span>');
-        log(c.red('sass-main failed to compile'));
-        log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
-      }
-    }))
-    .pipe(prefix("last 2 versions", "> 1%"))
-    .pipe(cssnano())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([
+      prefix({
+        browsers: ['last 2 versions'],
+        cascade: false,
+      }),
+      cssnano(),
+    ]))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
@@ -86,19 +81,7 @@ gulp.task('sass-fonts', false, function () {
 
   return gulp.src('_sass/fonts.scss')
     .pipe(plumber())
-    .pipe(sass({
-      outputStyle: 'nested',
-      onSuccess: function(css) {
-        var dest = css.stats.entry.split('/');
-        log(c.green('sass-fonts'), 'compiled to', dest[dest.length - 1]);
-      },
-      onError: function(err, res) {
-        bs.notify('<span style="color: red">sass-fonts failed</span>');
-        log(c.red('sass-fonts failed to compile'));
-        log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
-      }
-    }))
-    .pipe(prefix("last 2 versions", "> 1%"))
+    .pipe(sass().on('error', sass.logError))
     .pipe(rename('fonts.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
@@ -108,15 +91,38 @@ gulp.task('sass-fonts', false, function () {
 // -----------------------------------------------------------------------------
 // Combine/minify JS
 // -----------------------------------------------------------------------------
-gulp.task('js', 'Lint, bundle, minify JS', ['js-main', 'js-sphere', 'js-sw', 'js-swcp', 'js-custom']);
+gulp.task('js', 'Lint, bundle, minify JS:', ['js-head', 'js-ffo', 'js-main', 'js-sphere', 'js-sw', 'js-swcp', 'js-custom']);
+
+// Head JS
+gulp.task('js-head', 'Head JS', function() {
+  return gulp.src([
+      'node_modules/fg-loadcss/src/loadCSS.js',
+      'node_modules/fg-loadcss/src/cssrelpreload.js',
+    ])
+    .pipe(plumber())
+    .pipe(concat('_head.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('_includes'))
+    .pipe(reload({stream: true}));
+});
+
+// Head JS
+gulp.task('js-ffo', 'FFO JS', function() {
+  return gulp.src([
+      'node_modules/fontfaceobserver/fontfaceobserver.js',
+    ])
+    .pipe(plumber())
+    .pipe(concat('_ffo.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('_includes'))
+    .pipe(reload({stream: true}));
+});
 
 // Main
 gulp.task('js-main', 'Main JS', function() {
   bs.notify('Building main JS...');
 
   return gulp.src([
-      'node_modules/fontfaceobserver/fontfaceobserver.js',
-      'node_modules/picturefill/dist/picturefill.min.js',
       '_js/*.js'
     ])
     .pipe(plumber())
@@ -199,10 +205,11 @@ gulp.task('image-320', false, function () {
       }),
       os.cpus().length
     ))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(rename({
       dirname: ''
     }))
@@ -222,10 +229,11 @@ gulp.task('image-640', false, function () {
       }),
       os.cpus().length
     ))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(rename({
       dirname: ''
     }))
@@ -236,10 +244,11 @@ gulp.task('image-640', false, function () {
 gulp.task('image-original', false, function () {
   return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
     .pipe(changed('_site/img/travel'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(gulp.dest('_site/img/travel'));
 });
 
@@ -247,10 +256,11 @@ gulp.task('image-original', false, function () {
 gulp.task('image-photosphere', false, function () {
   return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/photosphere'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(gulp.dest('_site/img/photosphere'));
 });
 
@@ -258,10 +268,14 @@ gulp.task('image-photosphere', false, function () {
 gulp.task('image-svg', false, function () {
   return gulp.src(['_svg/**/*'])
     .pipe(changed('svg'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.svgo({
+          plugins: [
+              {removeViewBox: true},
+              {cleanupIDs: false}
+          ]
+      })
+    ]))
     .pipe(gulp.dest('svg'));
 });
 
@@ -269,10 +283,11 @@ gulp.task('image-svg', false, function () {
 gulp.task('image-blog', false, function () {
   return gulp.src(['_img/blog/*', '!_img/blog/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/blog'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(gulp.dest('_site/img/blog'));
 });
 
