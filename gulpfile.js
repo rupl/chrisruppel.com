@@ -116,7 +116,6 @@ gulp.task('js-main', 'Main JS', function() {
 
   return gulp.src([
       'node_modules/fontfaceobserver/fontfaceobserver.js',
-      'node_modules/picturefill/dist/picturefill.min.js',
       '_js/*.js'
     ])
     .pipe(plumber())
