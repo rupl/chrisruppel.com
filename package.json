@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": "8.9.3",
+    "node": "8.9.4",
     "npm": "5.6.0"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
     "postinstall": "node_modules/.bin/gulp build-deploy",
     "start": "./bin/boot.sh",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect"
   },
   "snyk": true
 }
