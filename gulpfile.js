@@ -91,14 +91,38 @@ gulp.task('sass-fonts', false, function () {
 // -----------------------------------------------------------------------------
 // Combine/minify JS
 // -----------------------------------------------------------------------------
-gulp.task('js', 'Lint, bundle, minify JS', ['js-main', 'js-sphere', 'js-sw', 'js-swcp', 'js-custom']);
+gulp.task('js', 'Lint, bundle, minify JS:', ['js-head', 'js-ffo', 'js-main', 'js-sphere', 'js-sw', 'js-swcp', 'js-custom']);
+
+// Head JS
+gulp.task('js-head', 'Head JS', function() {
+  return gulp.src([
+      'node_modules/fg-loadcss/src/loadCSS.js',
+      'node_modules/fg-loadcss/src/cssrelpreload.js',
+    ])
+    .pipe(plumber())
+    .pipe(concat('_head.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('_includes'))
+    .pipe(reload({stream: true}));
+});
+
+// Head JS
+gulp.task('js-ffo', 'FFO JS', function() {
+  return gulp.src([
+      'node_modules/fontfaceobserver/fontfaceobserver.js',
+    ])
+    .pipe(plumber())
+    .pipe(concat('_ffo.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('_includes'))
+    .pipe(reload({stream: true}));
+});
 
 // Main
 gulp.task('js-main', 'Main JS', function() {
   bs.notify('Building main JS...');
 
   return gulp.src([
-      'node_modules/fontfaceobserver/fontfaceobserver.js',
       '_js/*.js'
     ])
     .pipe(plumber())

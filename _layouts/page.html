@@ -6,7 +6,7 @@
 {% if page.category == 'blog' %} — {% endif %}
 {% endcapture %}
 <!DOCTYPE html>
-<html class="wf-loading" lang="en-US">
+<html class="no-js wf-loading" lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>{{ title | strip_newlines }} {{ site.name }}</title>
@@ -30,10 +30,10 @@
     <link rel="alternate" type="application/rss+xml" title="Chris' Travels" href="{{ site.url }}/travel.xml">
     <link rel="alternate" type="application/rss+xml" title="Chris' Blog" href="{{ site.url }}/blog.xml">
 
-    <!-- Stylesheets preloaded -->
-    <noscript><link rel="stylesheet" href="/css/fonts.min.css" type="text/css"></noscript>
-    <link rel="preload" href="/css/main.min.css" as="style" onload="this.rel='stylesheet'">
+    <!-- Preload CSS -->
+    {% comment %}<link rel="preload" href="/css/main.min.css" as="style" onload="this.rel='stylesheet'">{% endcomment %}
     <link rel="preload" href="/css/fonts.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/fonts.min.css" type="text/css"></noscript>
 
     <!-- Performance-related tags -->
     <link rel="preconnect" href="https://www.google-analytics.com">
@@ -63,25 +63,41 @@
   {% if site.development == false %}
     <style type="text/css">{% include main.min.css %}</style>
   {% else %}
+    <!-- load using <link> on local so I can inject new styles -->
     <link rel="stylesheet" href="/css/main.min.css" type="text/css">
   {% endif %}
 
     <script>
-      // loadCSS/onloadCSS/csspreload 1.3.1 [c]2017 @scottjehl, @zachleat, Filament Group, Inc. Licensed MIT.
-      (function(w){"use strict";var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}setTimeout(function(){onloadcssdefined(cb)})};function loadCB(){if(ss.addEventListener){ss.removeEventListener("load",loadCB)}ss.media=media||"all"}if(ss.addEventListener){ss.addEventListener("load",loadCB)}ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(loadCB);return ss};if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}})(typeof global!=="undefined"?global:this);function onloadCSS(ss,callback){var called;function newcb(){if(!called&&callback){called=true;callback.call(ss)}}if(ss.addEventListener){ss.addEventListener("load",newcb)}if(ss.attachEvent){ss.attachEvent("onload",newcb)}if("isApplicationInstalled"in navigator&&"onloadcssdefined"in ss){ss.onloadcssdefined(newcb)}}(function(w){if(!w.loadCSS){return}var rp=loadCSS.relpreload={};rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){return false}};rp.poly=function(){var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"){w.loadCSS(link.href,link,link.getAttribute("media"));link.rel=null}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}if(w.attachEvent){w.attachEvent("onload",function(){w.clearInterval(run)})}}})(this);
-
-      // load fonts async by default, load sync from SW cache when available.
-      if ('serviceWorker' in navigator && navigator.serviceWorker.controller !== null && navigator.serviceWorker.controller.state === 'activated') {
-        document.write('<link rel="stylesheet" href="/css/fonts.min.css" type="text/css">');
-        document.documentElement.classList.remove('wf-loading');
-        document.documentElement.classList.add('wf-oswald');
-      } else {
-        loadCSS('/css/fonts.min.css');
-      }
-    </script>
-    <script>
       // JS is able to start executing.
+      document.documentElement.classList.remove('no-js');
       document.documentElement.classList.add('js');
+
+      {% include _head.js %}
+
+      (function iife() {
+        'use strict';
+
+        // Optimization for Repeat Views
+        if (sessionStorage.fontsLoadedFoutWithClassPolyfill) {
+          document.documentElement.classList.remove('wf-loading');
+          document.documentElement.classList.add('wf-oswald');
+          return;
+        }
+
+        {% include _ffo.js %}
+
+        // Load and observe fonts
+        var oswaldLight = new FontFaceObserver('Oswald', {weight: 300});
+        var oswaldRegular = new FontFaceObserver('Oswald', {weight: 400});
+
+        Promise.all([oswaldLight.load(), oswaldRegular.load()]).then(function() {
+          document.documentElement.classList.remove('wf-loading');
+          document.documentElement.classList.add('wf-oswald');
+
+          // Optimization for Repeat Views
+          sessionStorage.fontsLoadedFoutWithClassPolyfill = true;
+        });
+      })();
     </script>
 
     {% if site.ga != '' %}
