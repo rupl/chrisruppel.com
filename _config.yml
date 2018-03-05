@@ -76,11 +76,13 @@ defaults:
 # blank array for use within templates
 array: []
 
-# Google Analytics — the dev config unsets this value
+# Google Analytics
 ga: 'UA-432773-8'
 
-# Piwik — dev also unsets this value
-piwik: '2'
+# Matomo self-hosted analytics
+matomo:
+  url: https://analytics.chrisruppel.com
+  id: '2'
 
 # Mapbox
 mapboxToken: 'pk.eyJ1IjoicnVwbCIsImEiOiI3NDc5MWQ4ZWNjMTg1ZmZlYWQ5ZjMwMWVkNjI2MTJlZCJ9.Szn0ysZDc6AjmhKnxf8PkA'

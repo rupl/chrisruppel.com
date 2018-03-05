@@ -109,7 +109,7 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
-    {% if site.piwik != '' %}
+    {% if site.matomo.id != '' %}
       <!--
         Please excuse my double-tracking while I transition to Piwik.
         I'm moving off Google Analytics to increase your privacy as a visitor!
@@ -121,14 +121,14 @@
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         (function() {
-          var u="https://analytics.chrisruppel.com/";
+          var u="{{ site.matomo.url }}/";
           _paq.push(['setTrackerUrl', u+'piwik.php']);
-          _paq.push(['setSiteId', '{{ site.piwik }}']);
+          _paq.push(['setSiteId', '{{ site.matomo.id }}']);
           var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
           g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
         })();
       </script>
-      <noscript><p><img src="https://analytics.chrisruppel.com/piwik.php?idsite={{ site.piwik }}&rec=1" style="border:0;" alt="" /></p></noscript>
+      <noscript><img src="{{ site.matomo.url }}/piwik.php?idsite={{ site.matomo.id }}&rec=1" style="border: 0;" alt="" /></noscript>
       <!-- End Piwik Code -->
     {% endif %}
   </head>
