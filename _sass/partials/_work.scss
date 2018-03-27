@@ -1,6 +1,14 @@
 //
 // Work
 //
+.page--work {
+  .intro:hover {
+    strong {
+      display: inline-block;
+      animation: wiggle 1s ease-in-out;
+    }
+  }
+}
 
 .availability {
   margin: 0;
@@ -93,5 +101,39 @@
     margin: 0;
     padding: 0;
     text-align: center;
+  }
+}
+
+
+@keyframes wiggle {
+  10% {
+    transform: rotate(2deg);
+  }
+  20% {
+    transform: rotate(-2deg);
+  }
+  30% {
+    transform: rotate(4deg) scale(1.03);
+  }
+  40% {
+    transform: rotate(-4deg) scale(1.06);
+  }
+  50% {
+    transform: rotate(6deg) scale(1.09);
+  }
+  60% {
+    transform: rotate(-6deg) scale(1.12);
+  }
+  70% {
+    transform: rotate(4deg) scale(1.09);
+  }
+  80% {
+    transform: rotate(-4deg) scale(1.06);
+  }
+  90% {
+    transform: rotate(2deg) scale(1.03);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

@@ -1,9 +1,9 @@
 {% comment %}
-  The calendar is calculated before the heading because eventually I'd like to
-  automatically generate the emphasized word by comparing the time of generation
-  to the first slot with availability. So it would generate now/soon/whenever on
-  its own without me having to keep it up to date.
+  The calendar is calculated before any output so I can automatically put my
+  next availability in the header. If by some crazy chance there's none left
+  for the whole year, it falls back to outputting "soon"
 {% endcomment %}
+{% capture first_availability %}soon{% endcapture %}
 
 {% capture calendar %}
   {% for slot in site.categories.calendar reversed %}
@@ -12,16 +12,22 @@
     {% if slottime < nowunix %}
       <li class="past-slot">{{ slot.date | date: '%b' }}<br></li>
     {% else if slottime > nowunix %}
+      {% comment %}
+        Output one entry for each Calendar post.
+      {% endcomment %}
       <li
-        class="{{ slot.status }}-slot {% if slot.status != full %}available{% endif %}"
+        class="{{ slot.status }}-slot{% if slot.status != 'full' %} available{% endif %}"
         title="{{ slot.date | date: '%b %Y' }}: {{ slot.status }}"
-      >{{ slot.date | date: '%b' }}<br></li>
+      >{{ slot.date | date: '%b' }}</li>
+      {% comment %}
+        Store first month of availability for output within heading.
+      {% endcomment %}
+      {% if slot.status != 'full' and first_availability == 'soon' %}{% capture first_availability %}in <strong>{{ slot.date | date: '%B' }}</strong>{% endcapture %}{% endif %}
     {% endif %}
   {% endfor %}
 {% endcapture %}
 
-<h2 class="intro summary">I'm available for hire <strong>soon</strong></h2>
-
+<h2 class="intro summary">I'm available for hire {{ first_availability }}</h2>
 <ul class="availability">
   {{ calendar }}
 </ul>
