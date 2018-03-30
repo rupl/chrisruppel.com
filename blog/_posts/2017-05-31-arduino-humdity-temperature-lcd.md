@@ -35,7 +35,7 @@ After connecting everything for the LCD, we chose digital `6` for our DHT11 sign
 
 ## Formatting data for display
 
-We did a quick Serial Plotter test to ensure everything was working correctly, and then wrote the following code to send the data to the LCD.
+We did a quick [Serial Plotter](/blog/arduino-serial-plotter-debugging/) test to ensure everything was working correctly, and then wrote the following code to send the data to the LCD.
 
 ```clike
 #include <SimpleDHT.h>
