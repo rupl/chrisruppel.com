@@ -4,6 +4,7 @@ var u = require('gulp-util');
 var log = u.log;
 var c = u.colors;
 var spawn = require('child_process').spawn;
+var gulpif = require('gulp-if');
 var plumber = require('gulp-plumber');
 var sequence = require('run-sequence');
 var parallel = require('concurrent-transform');
@@ -26,7 +27,7 @@ var changed = require('gulp-changed');
 
 // Deployment debugging
 log(c.yellow('Detected environment: ' + (process.env.NODE_ENV || 'local')));
-
+var isProduction = process.env.NODE_ENV === 'production';
 
 // -----------------------------------------------------------------------------
 // Help
@@ -62,7 +63,7 @@ gulp.task('sass-main', false, function () {
 
   return gulp.src('_sass/styles.scss')
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!isProduction, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       prefix({
@@ -72,7 +73,7 @@ gulp.task('sass-main', false, function () {
       cssnano(),
     ]))
     .pipe(rename('main.min.css'))
-    .pipe(sourcemaps.write('./'))
+    .pipe(gulpif(!isProduction, sourcemaps.write('./')))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
     .pipe(gulp.dest('_includes')) // for the Jekyll include
