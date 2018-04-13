@@ -21,16 +21,7 @@ bodyclass: page--front
 <section aria-labelledby="blog">
   <h1 id="blog" class="title--main">Latest posts</h1>
 
-  <div id="blog-list" class="blog-list">
-    {% for post in site.categories.blog limit:5 %}
-      <article data-url="{{ site.url }}{{ post.url }}">
-        <header>
-          <h2 class="title--main">
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h2>
-        </header>
-      </article>
-    {% endfor %}
+  <div id="blog-list" class="blog-list" data-autoupdate="true">
+    {% include blog-latest.html %}
   </div>
 </section>
