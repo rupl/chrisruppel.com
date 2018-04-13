@@ -9,6 +9,7 @@ _includes/main.min.css
 _includes/_head.js
 _includes/_ffo.js
 /service-worker.js
+*.css.map
 
 # Development and test settings
 _config.dev.yml

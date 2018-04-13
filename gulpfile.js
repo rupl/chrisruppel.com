@@ -14,6 +14,7 @@ var bs = require('browser-sync');
 var reload = bs.reload;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('autoprefixer');
 var concat = require('gulp-concat');
 var cssnano = require('cssnano');
@@ -61,6 +62,7 @@ gulp.task('sass-main', false, function () {
 
   return gulp.src('_sass/styles.scss')
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       prefix({
@@ -70,6 +72,7 @@ gulp.task('sass-main', false, function () {
       cssnano(),
     ]))
     .pipe(rename('main.min.css'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
     .pipe(gulp.dest('_includes')) // for the Jekyll include
