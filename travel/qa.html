@@ -1,7 +1,6 @@
 ---
 title: Travel QA
 permalink: /travel/qa/
-layout: page
 published: false
 ---
 
@@ -15,27 +14,37 @@ published: false
     {% for trip in site.categories.travel %}
       <li class="trip-title" data-url="{{ site.url }}{{ trip.url }}">
         <p>
-          <!-- {% if trip.gallery %}
-            {% if trip.gallery[0].gridtype %}
-              {% case trip.gallery[0].gridtype %}
-                {% when "col-2" or "col-3" or "col-2-short" or "tall" %}
-                  <strong style="color: green; ">{{ trip.gallery[0].gridtype }}</strong>
-                {% else %}
-                  <strong style="color: goldenrod; ">invalid gridtype: {{ trip.gallery[0].gridtype }}</strong>
-              {% endcase %}
+          <a href="{{ trip.url }}">{{ trip.title }}</a>
+          <!--
+            {% if trip.gallery %}
+              {% if trip.gallery[0].gridtype %}
+                {% case trip.gallery[0].gridtype %}
+                  {% when "col-2" or "col-3" or "col-2-short" or "tall" %}
+                    <strong style="color: green; ">{{ trip.gallery[0].gridtype }}</strong>
+                  {% else %}
+                    <strong style="color: goldenrod; ">invalid gridtype: {{ trip.gallery[0].gridtype }}</strong>
+                {% endcase %}
+              {% else %}
+                <strong style="color: red; ">no gridtype set</strong>
+              {% endif %}
             {% else %}
-              <strong style="color: red; ">no gridtype set</strong>
+              <em style="color: #999; font-weight: 100;">no gallery</em>
             {% endif %}
-          {% else %}
-            <em style="color: #999; font-weight: 100;">no gallery</em>
-          {% endif %} -->
-          {% if trip.tags.size == 0 %}
-            <strong style="color: red; ">No tags</strong>
-          {% else %}
-            <strong style="color: green; ">{{ trip.tags | split: ' ' }}</strong>
-          {% endif %}
-          — <a href="{{ trip.url }}">{{ trip.title }}</a>
-<!--          {% if trip.location %}<span class="where">in {{ trip.location }}</span>{% endif %} -->
+          -->
+          <!--
+            {% if trip.tags.size == 0 %}
+              <strong style="color: red; ">No tags</strong>
+            {% else %}
+              <strong style="color: green; ">{{ trip.tags | split: ' ' }}</strong>
+            {% endif %}
+          -->
+          <!--
+            {% if trip.location %}<span class="where">in {{ trip.location }}</span>{% endif %}
+          -->
+          <!--
+            <br>
+            {% if trip.map %}{{ trip.map }}{% endif %}
+          -->
         </p>
       </li>
     {% endfor %}

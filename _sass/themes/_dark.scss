@@ -1,46 +1,8 @@
 //
 // Dark theme. if that's your thing.
 //
-.dark {
-  body {
-    background: #111;
-    color: #ddd;
-  }
-
-  .summary {
-    opacity: .75;
-  }
-
-  :link {
-    color: #69f;
-  }
-  :visited {
-    color: #bdf;
-  }
-  :focus,
-  :active {
-    color: #fff;
-  }
-
-  .back {
-    background: #444;
-    background-image: linear-gradient(to bottom, #666, #222);
-    border: 0;
-    color: #000;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
-
-    &:hover,
-    &:focus {
-      background-image: linear-gradient(to bottom, #777, #222);
-    }
-
-    &:active {
-      background-image: linear-gradient(to top, #666, #444);
-    }
-  }
-
-  .photo {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
+// Depends on a class on the document root.
+//
+.theme--dark {
+  // TBD with CSS Custom Props
 }

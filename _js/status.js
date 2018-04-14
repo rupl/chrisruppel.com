@@ -1,10 +1,10 @@
 //
 // Status notifications
 //
-(function() {
+(function iife() {
   // Hide status messages when dismissed.
   $('#status .dismiss').on('click', function() {
-    $('#status').classList.remove('displayed');
+    $('#status').classList.remove('is-displayed');
   });
 })();
 
@@ -13,7 +13,7 @@
 //
 function displayMessage(message) {
   $('#message').innerText = message;
-  $('#status').classList.add('displayed');
+  $('#status').classList.add('is-displayed');
 }
 
 //

@@ -1,5 +1,5 @@
 //
-// Vars
+// General page styles
 //
 
 // Footer height might need adjusting from time to time based on content.
@@ -40,7 +40,7 @@ main {
   min-height: 100%;
   margin: 0 auto;
   margin-bottom: 0 - $footer-height;
-  padding: 1em;
+  padding: 1rem;
 
   &::after {
     content: "";
@@ -54,86 +54,4 @@ main {
 footer[role="contentinfo"] {
   height: $footer-height;
   //! Set ALL other props in _footer.scss
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.title--main {
-  @include font-oswald;
-
-  .wf-loading & {
-    letter-spacing: -3px;
-  }
-}
-
-.subtitle {
-  @include font-oswald;
-  font-style: italic;
-  font-weight: 300;
-  letter-spacing: -0.5px;
-  word-spacing: -1px;
-
-  .wf-loading & {
-    letter-spacing: -4px;
-  }
-}
-
-.title--page {
-  width: 70%;
-  float: left;
-}
-
-.elsewhere {
-  margin-top: 1.66em;
-  width: 30%;
-  float: right;
-  font-weight: 300;
-  @include font-oswald;
-}
-
-.intro {
-  clear: both;
-  opacity: .5;
-  transition: opacity 2s ease-in-out;
-
-  @include font-oswald;
-  font-size: 1.6em;
-  font-style: normal;
-  font-weight: 300;
-
-  .wf-loading & {
-    letter-spacing: -3px;
-  }
-
-  &:hover {
-    opacity: 1;
-  }
-
-  // don't break names in intros
-  em {
-    white-space: nowrap;
-  }
-}
-
-blockquote {
-  font-style: italic;
-  opacity: .8;
-  padding: .1em 1em;
-  margin: 0 .5em;
-  background: rgba(#000, .1);
-
-  @media (min-width: 600px) {
-    margin: 0 1em 0 2em;
-  }
-}
-
-
-.yes {
-  color: #070;
-}
-.no {
-  color: #700;
 }

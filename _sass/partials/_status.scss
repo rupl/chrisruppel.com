@@ -1,5 +1,7 @@
 //
-// Online Status
+// Status Messages
+//
+// @see _js/status.js
 //
 #status {
   // Anchor to bottom of screen and make full-bleed
@@ -10,7 +12,7 @@
   z-index: 100;
 
   // Styles for showing/hiding. Default position is hidden
-  transform: translateY(120%);
+  transform: translateY(300%);
   transition: transform .25s ease-in-out;
 
   // Visual styles
@@ -19,7 +21,7 @@
   color: #eee;
 
   // Class to toggle whether status bar is on or off the screen.
-  &.displayed {
+  &.is-displayed {
     transform: translateY(0);
   }
 

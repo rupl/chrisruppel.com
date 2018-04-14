@@ -9,6 +9,8 @@
 @import 'partials/footer';
 
 // Content-specific styles.
+@import 'partials/titles';
+@import 'partials/intro';
 @import 'partials/front';
 @import 'partials/work';
 @import 'partials/travel';
@@ -32,6 +34,3 @@
 @import 'partials/gallery';
 @import 'partials/photosphere';
 @import 'partials/maps';
-
-// Themes
-// @import 'themes/dark';

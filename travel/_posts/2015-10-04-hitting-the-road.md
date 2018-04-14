@@ -9,7 +9,7 @@ layout: quote
 quote:
   text: As much as anything, vagabonding is about time — our only real commodity — and how we choose to use it.
   author: Rolf Potts
-  url: http://vagabonding.net/
+  url: https://vagabonding.net/
 
 tags:
 - advice
