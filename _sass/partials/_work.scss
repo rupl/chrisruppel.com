@@ -1,140 +1,20 @@
 //
-// Work
+// Work page
 //
-.page--work {
-  .intro:hover {
-    strong {
-      display: inline-block;
-      animation: wiggle 1s ease-in-out;
-    }
-  }
-}
 
-.availability {
-  margin: 0;
-  padding: 0;
-  border-radius: 7px; // at some point white corners appeared, quick fix instead of complicating CSS vars
-  box-shadow: 5px 5px 15px rgba(#000, .16);
-  transition: box-shadow .1666s linear;
-  --cal-radius: 0;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: stretch;
-
-  &:hover {
-    box-shadow: 5px 5px 15px rgba(#000, .25);
-  }
-
-  // General slot styles
-  > [class*="-slot"] {
-    display: block;
-    flex-grow: 1;
-    width: 100%;
-    margin: 0;
-    padding: 1em;
-    border: .5px solid rgba(#000, .333);
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    text-align: center;
-    font-size: .8em;
-    transition: border-color .1666s linear;
-
-    &:hover {
-      border-color: rgba(#000, .666);
-    }
-  }
-
-  > [class*="-slot"]:first-child {
-    border-left-width: 1px;
-    border-radius: var(--cal-radius) 0 0 var(--cal-radius);
-  }
-  > [class*="-slot"]:last-child {
-    border-right-width: 1px;
-    border-radius: 0 var(--cal-radius) var(--cal-radius) 0;
-  }
-
-  // Big-screen styles
-  @media (min-width: 600px) {
-    margin-bottom: 2rem;
-    flex-wrap: nowrap;
-    --cal-radius: 7px;
-
-    > [class*="-slot"] {
-      width: auto;
-    }
-  }
-
-
-  // Availability styles
-  .past-slot {
-    color: #666;
-    background: #ccc;
-    cursor: not-allowed;
-  }
-  .full-slot {
-    background: #e64;
-    cursor: not-allowed;
-  }
-  .half-slot {
-    background: #ec3;
-    cursor: context-menu;
-  }
-  .open-slot {
-    background: #6c6;
-    cursor: context-menu;
-  }
-}
-
-.client-list {
+.clients {
   list-style-type: none;
   display: flex;
   flex-flow: row wrap;
   margin: 0;
   padding: 0;
   animation: fade-in 1s ease-in-out;
-
-  .client {
-    flex: 1 0 33.3333%;
-    min-width: 120px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
 }
 
-
-@keyframes wiggle {
-  10% {
-    transform: rotate(2deg);
-  }
-  20% {
-    transform: rotate(-2deg);
-  }
-  30% {
-    transform: rotate(4deg) scale(1.03);
-  }
-  40% {
-    transform: rotate(-4deg) scale(1.06);
-  }
-  50% {
-    transform: rotate(6deg) scale(1.09);
-  }
-  60% {
-    transform: rotate(-6deg) scale(1.12);
-  }
-  70% {
-    transform: rotate(4deg) scale(1.09);
-  }
-  80% {
-    transform: rotate(-4deg) scale(1.06);
-  }
-  90% {
-    transform: rotate(2deg) scale(1.03);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.client {
+  flex: 1 0 33.3333%;
+  min-width: 160px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }

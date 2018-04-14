@@ -1,0 +1,87 @@
+//
+// Work availability calendar
+//
+.availability {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+
+  margin: 0;
+  padding: 0;
+  border-radius: 7px; // at some point white corners appeared, quick fix instead of complicating CSS vars
+  box-shadow: 5px 5px 15px rgba(#000, .16);
+  transition: box-shadow .1666s linear;
+  --cal-radius: 0;
+
+  // Big-screen styles
+  @media (min-width: 600px) {
+    margin-bottom: 2rem;
+    flex-wrap: nowrap;
+    --cal-radius: 7px;
+  }
+
+  &:hover {
+    box-shadow: 5px 5px 15px rgba(#000, .25);
+  }
+}
+
+// Draw attention to first available hire date when cursor is nearby
+.availability__date {
+  display: inline-block;
+
+  .intro:hover & {
+    animation: wiggle 1s ease-in-out;
+  }
+}
+
+//
+// Calendar slot styles
+//
+.slot {
+  display: block;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  border: .5px solid rgba(#000, .333);
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  text-align: center;
+  font-size: .8em;
+  transition: border-color .1666s linear;
+
+  &:hover {
+    border-color: rgba(#000, .666);
+  }
+
+  // Formatting for wide screens
+  &:first-child {
+    border-left-width: 1px;
+    border-radius: var(--cal-radius) 0 0 var(--cal-radius);
+  }
+  &:last-child {
+    border-right-width: 1px;
+    border-radius: 0 var(--cal-radius) var(--cal-radius) 0;
+  }
+
+  // Availability styles
+  &--past {
+    color: #666;
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  &--full {
+    background: #e64;
+    cursor: not-allowed;
+  }
+  &--half {
+    background: #ec3;
+    cursor: context-menu;
+  }
+  &--open {
+    background: #6c6;
+    cursor: context-menu;
+  }
+}
