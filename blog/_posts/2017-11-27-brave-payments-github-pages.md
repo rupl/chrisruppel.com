@@ -15,7 +15,7 @@ tags:
 
 I'm a big fan of [Brave Payments](https://brave.com/publishers), a system I think will revolutionize how content is monetized on the web, bringing privacy and independence to a system that's currently dominated by a couple of big players.
 
-If you've never heard of it, [read about Brave Payments](/blog/brave-payments).
+If you've never heard of it, [read my take on Brave Payments](/blog/brave-payments).
 
 ## Publishing on GitHub Pages
 

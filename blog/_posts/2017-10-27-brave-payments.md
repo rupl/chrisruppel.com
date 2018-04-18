@@ -56,7 +56,7 @@ Take a look at my payments screen for October. As long as you keep a balance in 
 
 As you can see, I spent a significant portion of my time this month learning Vue. Brave recognizes this and both CSS Tricks and the vue.js website will receive the _lion's share_ of my budget, provided they register with [Brave Publishers](https://brave.com/publishers/) to receive payments.
 
-As a developer using open source software, I quite like the idea that documentation sites, which normally receive zero compensation from casual users, can start to receive some income for the barrage of traffic they get for being popular, free resources on the web.
+As a developer using open source software, I quite like the idea that documentation sites, which normally receive zero compensation from casual users, can start to receive some income from the barrage of traffic they get for offering popular, free resources on the web. I wrote up a quick guide to [verify Brave Payments on any GitHub Pages domain](/blog/brave-payments-github-pages/), which is very frequently used by open source projects to publish their docs.
 
 
 ## Better than 3rd-party advertising?
