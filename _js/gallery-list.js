@@ -39,8 +39,7 @@ if ('content' in document.createElement('template')) {
         var photos = next_trip.querySelectorAll('.photo');
         processGalleryPhotos(photos);
 
-        // TODO: Log to GA
-        // ga('send', 'travel--loadmore');
+        // TODO: Log to analytics
       }
 
       // If there's no content, disable the button.
@@ -49,8 +48,7 @@ if ('content' in document.createElement('template')) {
         loadmore.classList.add('btn--disabled');
         loadmore.removeEventListener('click', loadMore);
 
-        // TODO: Log to GA
-        // ga('send', 'travel--loadmore--end');
+        // TODO: Log to analytics
       }
     });
   }
