@@ -76,9 +76,6 @@ defaults:
 # blank array for use within templates
 array: []
 
-# Google Analytics
-ga: 'UA-432773-8'
-
 # Matomo self-hosted analytics
 matomo:
   url: https://analytics.chrisruppel.com

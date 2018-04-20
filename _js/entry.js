@@ -123,12 +123,10 @@
             if (cacheButton.dataset.state === 'update') {
               cacheButton.innerText = 'Article updated!';
               displayMessage('Offline article has been updated. Glad it\'s useful!');
-              ga('send', 'event', 'Offline', 'updated', currentPath);
               _paq.push(['trackEvent', 'Offline', 'updated', currentPath]);
             } else {
               cacheButton.innerText = 'Article saved!';
               displayMessage('Article is now available offline. Hope it comes in handy!');
-              ga('send', 'event', 'Offline', 'saved', currentPath);
               _paq.push(['trackEvent', 'Offline', 'saved', currentPath]);
             }
 
@@ -147,7 +145,6 @@
 
             // Log the event.
             console.error(error.message);
-            ga('send', 'event', 'Offline', 'error', currentPath);
             _paq.push(['trackEvent', 'Offline', 'error', currentPath]);
           });
 
