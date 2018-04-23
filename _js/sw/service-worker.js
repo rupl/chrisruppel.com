@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.8.3',
+  cache_version: 'main_v1.8.4',
   offline_assets: [
     '/',
     '/offline/',
