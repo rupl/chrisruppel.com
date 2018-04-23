@@ -26,10 +26,10 @@ app.use(helmet.contentSecurityPolicy({
   // Policy for chrisruppel.com
   directives:  {
     defaultSrc: ["'self'"],
-    scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "codepen.io", "*.codepen.io", "analytics.chrisruppel.com", "'unsafe-inline'", "'unsafe-eval'"],
-    styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "'unsafe-inline'"],
-    imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "assets.chrisruppel.com", "analytics.chrisruppel.com", "data:", "blob:"],
-    connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.google-analytics.com", "*.twitter.com", "*.twimg.com", "assets.chrisruppel.com"],
+    scriptSrc:  ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.twitter.com", "*.twimg.com", "codepen.io", "*.codepen.io", "analytics.chrisruppel.com", "'unsafe-inline'", "'unsafe-eval'"],
+    styleSrc:   ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.twitter.com", "*.twimg.com", "'unsafe-inline'"],
+    imgSrc:     ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.twitter.com", "*.twimg.com", "assets.chrisruppel.com", "analytics.chrisruppel.com", "data:", "blob:"],
+    connectSrc: ["'self'", "*.disqus.com", "*.disquscdn.com", "*.mapbox.com", "*.twitter.com", "*.twimg.com", "assets.chrisruppel.com"],
     fontSrc:    ["'self'", 'data:'],
     objectSrc:  ["youtube.com", "youtube-nocookie.com"],
     mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
