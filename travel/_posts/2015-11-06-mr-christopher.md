@@ -22,6 +22,8 @@ summary: Lessons learned from getting medical treatment for a moderately infecte
 
 This unofficial advice is just to tell our story. Maybe it will help you too.
 
+{% include gallery.html gallery=page.gallery %}
+
 ### Look after your own issues
 
 They never asked if I was taking the antibiotics, and when mine ran out we had to ask for more. If we hadn't asked, there would have been a lapse in my regimen which renders the medicine useless.
@@ -68,11 +70,11 @@ When you go, bring the following:
 
 The doctor requested 10 days on our document but immigration gave us 30. If you are travelling with a partner, the immigration folks have no problem issuing your partner an extension too. I'm not sure about bigger groups, but the policy indicates that one person can remain to accompany the person needing treatment.
 
-Here are two documents we read while trying to sort this stuff out: [Thai Police Order 777/2551](http://www.thaivisa.com/forum/index.php?app=core&module=attach&section=attach&attach_id=153821) and [Immigration Bureau Order 305/2551](http://www.thaivisa.com/forum/post-a77473-immigration-bureau-order-305-2551-d.html/) (Many thanks to thaivisa.com forum members for posting them).
+Here are two documents we read while trying to sort this stuff out: [Thai Police Order 777/2551](http://asean.org/storage/2016/08/Thailand172.pdf) and [Immigration Bureau Order 305/2551](http://thailand.expubwebsites.net/Content/Archive/377/immigration-new-policy-305-2551-english-translation-72141.pdf).
 
 ### Donate a bit of money
 
-Aside from the initial cost of stitches [which was something like $27](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=972%20thb%20usd), the follow-up care we received cost literally $3 per day. Medicine was mere pennies.
+Aside from the initial cost of stitches [which was something like $27](https://duckduckgo.com/?q=972+thb+usd&ia=currency), the follow-up care we received cost literally $3 per day. Medicine was mere pennies.
 
 I don't know how these facilities work financially, but many other Thai people were using the donation boxes at the payment counter. I decided to start putting money in too as we paid each day and the people were genuinely appreciative, thanking us many times.
 
@@ -80,9 +82,9 @@ Given the low impact it has on your wallet, consider helping others and dropping
 
 ### Be polite and calm, and have a sense of humor
 
-Thai people seem to truly value a polite, friendly demeanor. Never lose your cool. Never raise your voice. This wasn't a problem for us, but we saw other westerners doing it and it was very out of place.
+Thai people seem to truly value a polite, friendly demeanor. Greet people with respect. Never lose your cool. Never raise your voice. This wasn't a problem for us, but we saw other westerners losing it and it felt very out of place.
 
-Every day we go in, and wait for my name to come over the loud speaker: 
+Thai custom is to address people the reverse of western custom: family-first, given-last. So every day we go in, and wait for my name to come over the loud speaker:
 
 <blockquote class="quote"><p>MIS-TAH CHRIS-TO-FAH</p></blockquote>
 
