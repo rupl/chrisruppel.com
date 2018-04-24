@@ -34,3 +34,17 @@
     content: '\01F527';
   }
 }
+
+.e-content {
+  a[href^="http://"] {
+    position: relative;
+    margin-right: 4.5em;
+
+    &::after {
+      width: 6em;
+      content: ' (⚠️ insecure)';
+      position: absolute;
+      transform: translate(-.5em) scale(.75);
+    }
+  }
+}
