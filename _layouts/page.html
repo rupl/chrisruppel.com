@@ -39,11 +39,6 @@
   {% if site.img-host != '' %}
     <link rel="preconnect" href="{{ site.img-host }}">
   {% endif %}
-  {% if page.comments %}
-    <link rel="preload" href="https://rupl.disqus.com/count.js" as="script">
-    <link rel="preconnect" href="https://a.disquscdn.com" crossorigin>
-    <link rel="preconnect" href="https://rupl.disqus.com">
-  {% endif %}
 
   {% if page.meta != null %}
     <!-- Social tags -->
@@ -146,7 +141,6 @@
 
     <script async defer src="/js/main.min.js"></script>
     {% if page.photosphere %}<script async defer src="/js/photosphere.min.js"></script>{% endif %}
-    {% if page.comments %}<script async defer src="https://rupl.disqus.com/count.js" id="dsq-count-scr"></script>{% endif %}
     {% if page.js %}<script async defer src="/js/{{ page.js }}"></script>{% endif %}
   </body>
 </html>

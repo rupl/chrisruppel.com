@@ -35,13 +35,10 @@ comments: true
     {% if page.next_in_category.url %}
       <a class="btn btn--next" href="{{ page.next_in_category.url }}" title="{{ page.next_in_category.title }}{% if page.next_in_category.location %} {% include location.html location=page.next_in_category.location %}{% endif %}">Next post</a>
     {% endif %}
-    {% if page.comments %}
-      <a id="comments-link" class="btn btn--comments" href="{{ site.url }}{{ page.url }}#disqus_thread" onclick="return loadDisqus(event);">Loading comment count...</a>
-    {% endif %}
   </div>
 
   {% if page.comments %}
-    {% include disqus.html %}
+    {% include webmentions.html %}
   {% endif %}
 
   {% include entry-meta.html %}
