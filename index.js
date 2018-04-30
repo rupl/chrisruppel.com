@@ -11,6 +11,8 @@ var pool = new Pool({
   ssl: true
 });
 var DATABASE_WEBMENTIONS = process.env.DATABASE_WEBMENTIONS || 'test_webmentions';
+var Microformats = require('microformat-node');
+var fetch = require('node-fetch');
 
 // Initialize app
 var app = express();
@@ -63,6 +65,10 @@ app.use(enforce.HTTPS({trustProtoHeader: true}));
 // Compress all responses
 app.use(compression());
 
+// Allow processing of HTML content when receiving webmentions
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Serve the static Jekyll site
 app.use(express.static(__dirname + '/_site'));
 
@@ -71,12 +77,12 @@ app.use(express.static(__dirname + '/_site'));
 app.get('/portfolio/', function(req, res){ res.redirect(301, '/work/'); });
 
 // Webmentions: Get all mentions for an entry
-app.get('/webmentions/get', async function (req, res) {
+app.get('/webmentions/get/', async function (req, res) {
   try {
     if (req.query.target !== 'undefined') {
       const client = await pool.connect();
       const result = await client.query(
-        `SELECT * FROM ${DATABASE_WEBMENTIONS} WHERE target=$1`,
+        `SELECT * FROM ${DATABASE_WEBMENTIONS} WHERE target=$1;`,
         [req.query.target]
       );
       res.status(200);
@@ -89,7 +95,62 @@ app.get('/webmentions/get', async function (req, res) {
   } catch (err) {
     console.error(err);
     res.status(500);
-    res.send("Error " + err);
+    res.send(`${err}`);
+  }
+});
+
+// Webmentions: receive new webmentions
+app.post('/webmentions/post/', async function (req, res) {
+  try {
+    if (req.body.source !== 'undefined' && req.body.target !== 'undefined') {
+      const source = await fetch(req.body.source);
+      const html = await source.text();
+      const options = {};
+      options.html = html;
+      options.filter = ['h-entry'];
+
+      // Parse source URL for microformats
+      Microformats.get(options, async function(err, mf) {
+        try {
+          // Determine if source contains target
+          var sourceContainsTarget = html.indexOf(req.body.target) !== -1;
+
+          // If target was found, add to DB. The microformats are optional
+          if (sourceContainsTarget) {
+            var wmContent = mf.items[0].properties.content[0].value || '';
+            var wmWho = mf.items[0].properties.author[0].value || 'someone';
+            var wmAt = mf.items[0].properties.published[0] || 'NOW()';
+
+            // Attempt DB insert.
+            const client = await pool.connect();
+            const result = await client.query(
+              `INSERT INTO ${DATABASE_WEBMENTIONS} (target, source, who, at, content) VALUES ($1, $2, $3, $4, $5);`,
+              [req.body.target, req.body.source, wmWho, wmAt, wmContent]
+            ).catch(function () {
+              throw new Error('Duplicate source URL: ' + req.body.source);
+            });
+            client.release();
+          }
+        } catch (err) {
+          console.log(`${err}`);
+        }
+      });
+
+      res.status(202);
+      res.send();
+    }
+    // When the request didn't meet our requirements, send 400 BAD REQUEST.
+    else {
+      console.error(err);
+      res.status(400);
+      res.send();
+    }
+  }
+  // When something went wrong with our code, send 500 INTERNAL ERROR.
+  catch (err) {
+    console.error(err);
+    res.status(500);
+    res.send();
   }
 });
 

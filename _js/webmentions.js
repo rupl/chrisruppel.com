@@ -33,7 +33,7 @@
       thisWebmention.classList.add('p-comment');
       thisWebmention.classList.add('h-entry');
       thisWebmention.id = 'comment-' + row.id;
-      thisWebmention.innerHTML = '<div class="e-content">' + row.content + '</div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + row.source + '">' + row.who + '</a></cite> at <time class="dt-published" datetime="' + row.at + '">' + row.at.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
+      thisWebmention.innerHTML = '<div class="e-content"><p>' + row.content + '</p></div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + row.source + '">' + row.who + '</a></cite> at <time class="dt-published" datetime="' + row.at + '">' + row.at.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
       wm_container.appendChild(thisWebmention);
     });
   }).catch(function () {
