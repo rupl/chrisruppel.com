@@ -42,7 +42,7 @@ app.use(helmet.contentSecurityPolicy({
     objectSrc:  ["youtube.com", "youtube-nocookie.com"],
     mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
     frameSrc:   ["'self'", "https://www.youtube.com", "https://www.youtube-nocookie.com", "codepen.io"],
-    sandbox:    ['allow-scripts', 'allow-same-origin', 'allow-popups'],
+    sandbox:    ['allow-scripts', 'allow-same-origin', 'allow-popups', 'allow-forms'],
   },
 
   // Set to true if you only want browsers to report errors, not block them
@@ -132,7 +132,7 @@ app.post('/webmentions/post/', async function (req, res) {
             client.release();
           }
           else {
-            var errText = `Target URL (${req.body.target}) was not found within HTML response of Source URL (${req.body.source}). Rejecting Webmention submission.`;
+            var errText = `Target URL (${req.body.target}) was not found within HTML response of Source URL (${req.body.source}).`;
             console.error(errText);
             res.status(400);
             res.send(errText);
