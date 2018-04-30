@@ -2,7 +2,8 @@
 // Variables shared across files.
 //
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
-
+var WEBMENTIONS_GET = '/webmentions/get/';
+var WEBMENTIONS_POST = '/webmentions/post/';
 
 //
 // bling.js but using both qS and qSA

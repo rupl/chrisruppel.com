@@ -55,11 +55,11 @@
     var currentURL = window.location.href;
     var currentPath = window.location.pathname;
     var $entry = $('.h-entry--main');
-    var $commentButton = $('#comments-link');
+    var $entryActions = $('.go');
 
     // If there seems to be a connection, the entry has content, and the
     // location of the button can be targeted, create the cache button.
-    if (navigator.onLine && $entry !== null && $commentButton !== null) {
+    if (navigator.onLine && $entry !== null && $entryActions !== null) {
       // Create cache button's basic properties.
       var cacheButton = document.createElement('button');
       cacheButton.setAttribute('id', 'cache-button');
@@ -88,7 +88,7 @@
       });
 
       // Insert button into DOM.
-      $commentButton.parentNode.insertBefore(cacheButton, $commentButton);
+      $entryActions.appendChild(cacheButton);
 
       // It would be really slick to calculate the amount of data that would be
       // stored when the save button is pushed. Maybe this number is possible to

@@ -32,6 +32,9 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "helmet": "^3.12.0",
+    "microformat-node": "^2.0.1",
+    "node-fetch": "^2.1.2",
+    "pg": "^7.4.1",
     "run-sequence": "^2.2.1",
     "screenfull": "^3.3.2",
     "serviceworker-cache-polyfill": "^4.0.0",
@@ -40,9 +43,13 @@
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
-    "start": "./bin/boot.sh",
+    "start": "node_modules/.bin/gulp jekyll-deploy; node index.js",
+    "dev": "node_modules/.bin/gulp jekyll; nodemon index.js",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
-  "snyk": true
+  "snyk": true,
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
 }

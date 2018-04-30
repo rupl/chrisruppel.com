@@ -1,0 +1,106 @@
+//
+// Webmentions section
+//
+.webmentions {
+  font-size: .9em;
+  padding: 1em 2em;
+  margin-bottom: 2em;
+  background: #eee;
+}
+
+.webmentions__loading {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//
+// Form to submit a new Webmention
+//
+.webmentions__submit {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2em;
+
+  .webmentions__explainer {
+    flex: 1 0 100%;
+  }
+
+  input[name="source"] {
+    display: inline-block;
+    flex: 1 0 75%;
+    font-size: 1rem;
+    font-family: monospace;
+    position: relative;
+
+    &:valid::after {
+      content: '👍';
+      position: absolute;
+      right: 0;
+    }
+    &:invalid::after {
+      content: '⚠️';
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  input[type="submit"] {
+    display: inline-block;
+    flex: 1 0 25%;
+    font-size: 1rem;
+    font-family: monospace;
+    border: .5px solid white;
+    border-radius: 0 5px 5px 0;
+    background-color: #222;
+    color: #ddd;
+    cursor: pointer;
+
+    &[disabled] {
+      background-color: #666;
+    }
+  }
+}
+
+.webmentions__message {
+  opacity: 0;
+  font-style: italic;
+
+  &.is-active {
+    opacity: 1;
+    transition: opacity .1666s ease-in-out;
+  }
+
+  &.is-error {
+    color: red;
+  }
+}
+
+//
+// List of submitted Webmentions
+//
+.webmentions__list {
+  min-height: 2em;
+  position: relative;
+
+  //
+  // Individual Webmention
+  //
+  .p-comment {
+    // Webmention content
+    .e-content {
+      border-left: 1em solid #ccc;
+      padding-left: 1em;
+    }
+
+    // Webmention meta
+    footer {
+      font-family: monospace;
+      font-size: .8em;
+      text-align: right;
+      opacity: .9;
+
+      position: relative;
+      top: -.5em;  }
+  }
+}
