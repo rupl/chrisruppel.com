@@ -131,6 +131,12 @@ app.post('/webmentions/post/', async function (req, res) {
             });
             client.release();
           }
+          else {
+            var errText = `Target URL (${req.body.target}) was not found within HTML response of Source URL (${req.body.source}). Rejecting Webmention submission.`;
+            console.error(errText);
+            res.status(400);
+            res.send(errText);
+          }
         } catch (err) {
           console.log(`${err}`);
         }
