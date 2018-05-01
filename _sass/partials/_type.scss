@@ -22,25 +22,31 @@ img {
   height: auto;
 }
 
+//
+// Superscript shouldn't disrupt line-height
+//
+sup {
+  vertical-align: top;
+}
 
 // Acronymns and abbreviations should indicate that the expanded meaning can be
 // seen by displaying a (?) which will reveal title text on mouseover.
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
-  position: relative;
   margin-right: .5em;
   text-decoration: none;
+  position: relative;
 
   &:after {
     content: '(?)';
     vertical-align: top;
-    vertical-align: super;
     line-height: 0;
     font-family: serif;
     font-size: 0.5em;
     font-weight: 700;
     letter-spacing: 0;
+
     position: absolute;
     top: .5em;
     right: -1.25em;
