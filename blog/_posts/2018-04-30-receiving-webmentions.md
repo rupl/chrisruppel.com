@@ -3,6 +3,10 @@ title: Receiving Webmentions
 
 summary: I've moved exclusively to Webmentions instead of using a more traditional commenting system. Respond to this entry by linking to it from your own website!
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/991259412621873153
+
 tags:
 - indieweb
 - privacy
