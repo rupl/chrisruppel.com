@@ -7,7 +7,7 @@
 (function iife() {
   var wmContainer = $('.webmentions__list');
   var wmTarget = $('.webmentions__list[data-webmention-target]').dataset.webmentionTarget;
-  var wmQuery = WEBMENTIONS_GET + '?target=' + wmTarget;
+  var wmQuery = WEBMENTIONS_GET + '?target=' + wmTarget + '&timestamp=' + Date.now();
 
   // Clear out the no-js message.
   wmContainer.innerHTML = '<p class="webmentions__loading">Loading existing Webmentions...</p>';
