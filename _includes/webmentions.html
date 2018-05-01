@@ -1,5 +1,5 @@
 <section class="webmentions" id="webmentions">
-  <form method="POST" action="/webmentions/post/" class="webmentions__submit">
+  <form method="POST" action="{{ site.url }}/webmentions/post/" class="webmentions__submit">
     <p class="webmentions__explainer">Have you linked to this page from your site? Submit the URL here and it will appear in the list below:</p>
     <input type="url" name="source" placeholder="https://yoursite.com" required>
     <input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">

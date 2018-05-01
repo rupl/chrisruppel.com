@@ -1,66 +1,31 @@
 /*
  * Webmentions
  *
- * Queries our endpoint for webmentions when the appropriate markup is found on
- * the page.
+ * All code related to querying or submitting Webmentions.
  */
 (function iife() {
-  var wmContainer = $('.webmentions__list');
-  var wmTarget = $('.webmentions__list[data-webmention-target]').dataset.webmentionTarget;
-  var wmQuery = WEBMENTIONS_GET + '?target=' + wmTarget + '&timestamp=' + Date.now();
+  // Load Webmentions for this URL on page load.
+  webmentionsList();
 
-  // Clear out the no-js message.
-  wmContainer.innerHTML = '<p class="webmentions__loading">Loading existing Webmentions...</p>';
-
-  // Fetch existing Webmentions for this entry.
-  var wm_fetch = fetch(wmQuery).then(function(response) {
-    return response.json();
-  });
-
-  // Catch any errors fetching data from the endpoint
-  wm_fetch.catch(function () {
-    console.error('😢 Query to the Webmention endpoint failed.');
-  });
-
-  // Handle results of Webmention query.
-  wm_fetch.then(function(data) {
-    // Clear out the loading message.
-    wmContainer.innerHTML = '';
-
-    // Populate list with each Webmention.
-    data.forEach(function (row) {
-      var thisWebmention = document.createElement('article');
-      thisWebmention.classList.add('p-comment');
-      thisWebmention.classList.add('h-entry');
-      thisWebmention.id = 'comment-' + row.id;
-      thisWebmention.innerHTML = '<div class="e-content"><p>' + row.content + '</p></div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + row.source + '">' + row.who + '</a></cite> at <time class="dt-published" datetime="' + row.at + '">' + row.at.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
-      wmContainer.appendChild(thisWebmention);
-    });
-  }).catch(function () {
-    console.error('😢 Assembling Webmention markup failed.');
-    wmContainer.innerHTML = '<p class="warning">Webmentions couldn\'t be fetched. Sorry!</p>';
-  });
-
-  // Listen for form input on Webmention submission
-  var wmForm = $('.webmentions__submit');
-  var wmInput = $('.webmentions__submit input[name="source"]');
-  var wmSubmit = $('.webmentions__submit input[type="submit"]');
-  var wmMsg = $('.webmentions__message');
-  var wmReason = '';
-
-  // Listen for submissions and validate before POSTing.
-  wmForm.addEventListener('submit', wmValidate, false);
+  // Listen for form submissions and validate before POSTing.
+  $('.webmentions__submit').addEventListener('submit', wmSubmit);
 
   /**
    * Validate and POST Webmention submissions.
    */
-  function wmValidate(e) {
-    // Always prevent default. We will manually POST to the endpoint using JS
-    // and let the visitor stay on the page.
+  function wmSubmit(e) {
+    var wmTarget = $('.webmentions__submit input[name="target"]');
+    var wmSource = $('.webmentions__submit input[name="source"]');
+    var wmSubmit = $('.webmentions__submit input[type="submit"]');
+    var wmMsg = $('.webmentions__message');
+    var wmStatus = '';
+
+    // Always prevent default when JS is enabled. We will manually POST to the
+    // endpoint using JS and display any feedback to the visitor.
     e.preventDefault();
 
     // Check if URL is a valid format according to browser.
-    if (wmInput.validity.valid) {
+    if (wmSource.validity.valid) {
       wmMsg.innerHTML = '&nbsp;';
       wmMsg.classList.remove('is-active');
       wmMsg.classList.remove('is-error');
@@ -72,22 +37,20 @@
         headers: {
           'content-type': 'application/x-www-form-urlencoded'
         },
-        body: 'target='+ wmTarget +'&source='+ wmInput.value
+        body: 'target='+ wmTarget.value +'&source='+ wmSource.value
       }).then(function(response) {
-        return {
-          status: response.status,
-          info: response.text().then(function(text) {wmReason = text;})
-        };
-      }).then(function(data) {
-        if (data.status === 202) {
+        wmStatus = response.status;
+        return response.text();
+      }).then(function(reason) {
+        if (wmStatus === 202) {
           wmMsg.innerHTML = 'Webmention was accepted for processing and should appear shortly.';
           wmMsg.classList.remove('is-error');
         }
-        if (data.status === 400) {
-          wmMsg.innerHTML = 'Webmention was rejected because: ' + wmReason;
+        if (wmStatus === 400) {
+          wmMsg.innerHTML = 'Webmention was rejected because: ' + reason;
           wmMsg.classList.add('is-error');
         }
-        if (data.status === 500) {
+        if (wmStatus === 500) {
           wmMsg.innerHTML = 'There was a server error. Seems like it was our fault.';
           wmMsg.classList.add('is-error');
         }
@@ -95,9 +58,59 @@
         // Show feedback
         wmMsg.classList.add('is-active');
 
-        // Finally, re-enable form submissions
+        // Re-enable form submissions
         wmSubmit.disabled = false;
+
+        // Wait a moment and reload Webmentions in case the new one already
+        // finished processing
+        setTimeout(webmentionsList, 1000);
+
+        // Log result to analytics
+        _paq.push('trackEvent', 'Webmentions', 'submit', window.location.pathname, wmStatus);
       });
     }
+  }
+
+  /**
+   * Load Webmentions.
+   *
+   * This function can be fired whenever we want to refresh the list.
+   */
+  function webmentionsList() {
+    var wmlContainer = $('.webmentions__list');
+    var wmlTarget = $('[data-webmention-target]').dataset.webmentionTarget;
+    var wmlQuery = WEBMENTIONS_GET + '?target=' + wmlTarget + '&timestamp=' + Date.now();
+
+    // Clear out the no-js message.
+    wmlContainer.innerHTML = '<p class="webmentions__loading">Loading existing Webmentions...</p>';
+
+    // Fetch existing Webmentions for this entry.
+    var wm_fetch = fetch(wmlQuery).then(function(response) {
+      return response.json();
+    });
+
+    // Catch any errors fetching data from the endpoint
+    wm_fetch.catch(function () {
+      console.error('😢 Query to the Webmention endpoint failed.');
+    });
+
+    // Handle results of Webmention query.
+    wm_fetch.then(function(data) {
+      // Clear out the existing content.
+      wmlContainer.innerHTML = '';
+
+      // Populate list with each Webmention.
+      data.forEach(function (row) {
+        var thisWebmention = document.createElement('article');
+        thisWebmention.classList.add('p-comment');
+        thisWebmention.classList.add('h-entry');
+        thisWebmention.id = 'comment-' + row.id;
+        thisWebmention.innerHTML = '<div class="e-content"><p>' + row.content + '</p></div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + row.source + '">' + row.who + '</a></cite> at <time class="dt-published" datetime="' + row.at + '">' + row.at.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
+        wmlContainer.appendChild(thisWebmention);
+      });
+    }).catch(function () {
+      console.error('😢 Assembling Webmention markup failed.');
+      wmlContainer.innerHTML = '<p class="warning">Webmentions couldn\'t be fetched. Sorry!</p>';
+    });
   }
 })();

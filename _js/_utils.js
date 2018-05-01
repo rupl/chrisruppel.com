@@ -40,7 +40,7 @@ function blurAll() {
 //
 // Avoid analytics errors during local development.
 //
-var _paq = window._paq || function () {};
+var _paq = window._paq || {};
 if (typeof _paq.push !== 'function') {
   _paq.push = function () {
     console.log('💁 Matomo would have logged:', arguments[0].join(', '));

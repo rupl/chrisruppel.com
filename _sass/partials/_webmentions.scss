@@ -29,7 +29,7 @@
   input[name="source"] {
     display: inline-block;
     flex: 1 0 75%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: monospace;
     position: relative;
 
@@ -48,7 +48,7 @@
   input[type="submit"] {
     display: inline-block;
     flex: 1 0 25%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: monospace;
     border: .5px solid white;
     border-radius: 0 5px 5px 0;
@@ -63,6 +63,7 @@
 }
 
 .webmentions__message {
+  flex: 1 0 100%;
   opacity: 0;
   font-style: italic;
 
