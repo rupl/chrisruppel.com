@@ -1,6 +1,7 @@
 // Node/npm deps
 var express = require('express');
-var port = process.env.PORT || 5000;
+var NODE_ENV = process.env.NODE_ENV || 'local';
+var PORT = process.env.PORT || 5000;
 var fs = require('fs');
 var helmet = require('helmet');
 var enforce = require('express-sslify');
@@ -22,12 +23,14 @@ var app = express();
 app.use(helmet());
 
 // HTTP header: Strict Transport Security
-var hsts_days = 90;
-app.use(helmet.hsts({
-  maxAge: (hsts_days * 60 * 60 * 24 * 1000),
-  includeSubdomains: true,
-  preload: true
-}));
+if (NODE_ENV === 'production') {
+  var hsts_days = 90;
+  app.use(helmet.hsts({
+    maxAge: (hsts_days * 60 * 60 * 24 * 1000),
+    includeSubdomains: true,
+    preload: true
+  }));
+}
 
 // HTTP header: contentSecurityPolicy
 app.use(helmet.contentSecurityPolicy({
@@ -60,7 +63,9 @@ app.use(helmet.contentSecurityPolicy({
 }));
 
 // Redirect HTTP to HTTPS on Heroku
-app.use(enforce.HTTPS({trustProtoHeader: true}));
+if (NODE_ENV === 'production') {
+  app.use(enforce.HTTPS({trustProtoHeader: true}));
+}
 
 // Compress all responses
 app.use(compression());
@@ -167,5 +172,5 @@ app.use(function(req, res, next) {
 });
 
 // Listen for traffic
-console.log('Express is listening for traffic on port ' + port);
-app.listen(port);
+console.log('Express is listening for traffic on port ' + PORT);
+app.listen(PORT);
