@@ -50,8 +50,8 @@
           wmMsg.innerHTML = 'Webmention was rejected because: ' + reason;
           wmMsg.classList.add('is-error');
         }
-        if (wmStatus === 500) {
-          wmMsg.innerHTML = 'There was a server error. Seems like it was our fault.';
+        if (wmStatus === 404 || wmStatus === 500) {
+          wmMsg.innerHTML = 'There was an internal server error. Our fault, not yours!';
           wmMsg.classList.add('is-error');
         }
 
@@ -99,18 +99,26 @@
       // Clear out the existing content.
       wmlContainer.innerHTML = '';
 
-      // Populate list with each Webmention.
-      data.forEach(function (row) {
-        var thisWebmention = document.createElement('article');
-        thisWebmention.classList.add('p-comment');
-        thisWebmention.classList.add('h-entry');
-        thisWebmention.id = 'comment-' + row.id;
-        thisWebmention.innerHTML = '<div class="e-content"><p>' + row.content + '</p></div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + row.source + '">' + row.who + '</a></cite> at <time class="dt-published" datetime="' + row.at + '">' + row.at.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
-        wmlContainer.appendChild(thisWebmention);
-      });
+      if (data.length === 0) {
+        var wmlEmpty = document.createElement('div');
+        wmlEmpty.classList.add('webmentions__empty');
+        wmlEmpty.innerHTML = '<p>There aren\'t any Webmentions for this entry yet. Be the first!</p>';
+        wmlContainer.appendChild(wmlEmpty);
+      }
+      else {
+        // Populate list with each Webmention.
+        data.forEach(function (row) {
+          var thisWebmention = document.createElement('article');
+          thisWebmention.classList.add('p-comment');
+          thisWebmention.classList.add('h-entry');
+          thisWebmention.id = 'comment-' + row.id;
+          thisWebmention.innerHTML = '<div class="e-content"><p>' + row.content + '</p></div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + row.source + '">' + row.who + '</a></cite> at <time class="dt-published" datetime="' + row.at + '">' + row.at.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
+          wmlContainer.appendChild(thisWebmention);
+        });
+      }
     }).catch(function () {
       console.error('😢 Assembling Webmention markup failed.');
-      wmlContainer.innerHTML = '<p class="warning">Webmentions couldn\'t be fetched. Sorry!</p>';
+      wmlContainer.innerHTML = '<p class="warning">Webmentions couldn\'t be fetched.</p>';
     });
   }
 })();
