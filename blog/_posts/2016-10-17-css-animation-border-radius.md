@@ -55,7 +55,7 @@ This is where things start getting interesting. I saw a great demo from [Tiffany
 <p data-height="360" data-theme-id="light" data-slug-hash="VeRvKX" data-default-tab="result" data-user="tmrDevelops" data-embed-version="2" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/tmrDevelops/pen/VeRvKX/">Imperfect Buttons</a> by Tiffany Rayside (<a href="https://codepen.io/tmrDevelops">@tmrDevelops</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
 
-Combine this technique with the right typeface and you can really pull off the [hand-drawn vibe](https://malakahostel.com/about/). But what else can you do?
+Combine this technique with the right typeface and you can really pull off the hand-drawn vibe. But what else can you do?
 
 ## Animating border-radius
 
