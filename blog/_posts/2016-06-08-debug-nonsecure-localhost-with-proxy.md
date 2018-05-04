@@ -6,6 +6,10 @@ tags:
 - testing
 - service worker
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/740553359451639809
+
 summary: Certain new features of the Web Platform require a secure origin, complicating local development and testing. Use a network proxy to make testing localhost on real devices easy!
 ---
 
@@ -31,10 +35,9 @@ Service Worker causes that system to break down unless the development server is
 
 ### Solutions
 
-I thought I might be missing something so I put out a Twitter poll to see how people deal with testing Service Worker on real devices:
+I thought I might be missing something so I put out a Twitter poll to see how people deal with testing Service Worker on real devices. Click the date to see the poll on twitter itself:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How does everyone else manage Service Worker testing on real devices during local development? (sans HTTPS)</p><p>&mdash; Chris Ruppel (<a href="https://twitter.com/rupl">@rupl</a>) <a href="https://twitter.com/rupl/status/738164517599739909">June 2, 2016</a></p></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The majority of folks said that they skip out on real devices entirely, just using DevTools. The folks who said "Other" didn't reply with the method they used, so the one solution I came up with was a network proxy.
 

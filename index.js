@@ -37,10 +37,10 @@ app.use(helmet.contentSecurityPolicy({
   // Policy for chrisruppel.com
   directives:  {
     defaultSrc: ["'self'"],
-    scriptSrc:  ["'self'", "*.mapbox.com", "*.twitter.com", "*.twimg.com", "codepen.io", "*.codepen.io", "analytics.chrisruppel.com", "'unsafe-inline'", "'unsafe-eval'"],
-    styleSrc:   ["'self'", "*.mapbox.com", "*.twitter.com", "*.twimg.com", "'unsafe-inline'"],
-    imgSrc:     ["'self'", "*.mapbox.com", "*.twitter.com", "*.twimg.com", "assets.chrisruppel.com", "analytics.chrisruppel.com", "data:", "blob:"],
-    connectSrc: ["'self'", "*.mapbox.com", "*.twitter.com", "*.twimg.com", "assets.chrisruppel.com"],
+    scriptSrc:  ["'self'", "*.mapbox.com", "codepen.io", "*.codepen.io", "analytics.chrisruppel.com", "'unsafe-inline'", "'unsafe-eval'"],
+    styleSrc:   ["'self'", "*.mapbox.com", "'unsafe-inline'"],
+    imgSrc:     ["'self'", "*.mapbox.com", "assets.chrisruppel.com", "analytics.chrisruppel.com", "data:", "blob:"],
+    connectSrc: ["'self'", "*.mapbox.com", "assets.chrisruppel.com"],
     fontSrc:    ["'self'", 'data:'],
     objectSrc:  ["youtube.com", "youtube-nocookie.com"],
     mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
