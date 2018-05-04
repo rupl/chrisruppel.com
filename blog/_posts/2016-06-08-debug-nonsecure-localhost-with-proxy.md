@@ -43,6 +43,8 @@ The majority of folks said that they skip out on real devices entirely, just usi
 
 Using a network proxy is a great way to accomplish many development tasks, including traffic analysis, <abbr title="Single point of failure">SPOF</abbr> simulation, and throttling. This testing use-case is the most simple of all, since nothing is being done to the proxied traffic except the re-routing itself.
 
+The best part about using a proxy is that it is totally technology-agnostic. This solution works for any type of phone testing any type of website. There are many browser-specific solutions, but for flexible, reliable testing across _all_ mobile platforms, a proxy is the best method.
+
 ### Set up the network proxy
 
 My favorite proxy is [Charles](https://www.charlesproxy.com/), a very comprehensive solution that covers any normal development need. If you're looking for a longer list check an older post of mine: [Throttled Thursdays](https://fourkitchens.com/blog/article/throttled-thursdays).
