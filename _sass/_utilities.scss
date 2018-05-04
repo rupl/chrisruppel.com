@@ -58,6 +58,17 @@
   }
 }
 
+
+//
+// System fonts
+//
+// These are by definition web-safe so they can be directly loaded without any
+// download or painting penalty.
+//
+// @see https://css-tricks.com/snippets/css/system-font-stack/
+//
+@import 'node_modules/system-font-css/_system-font.scss';
+
 //
 // Qualified fonts
 //

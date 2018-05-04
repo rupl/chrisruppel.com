@@ -73,8 +73,8 @@ blockquote {
 
 // Main content area. We want some defaults but not applied to header or footer.
 main {
-  font-weight: 200;
-  letter-spacing: -.333px;
+  font-weight: 300;
+  // letter-spacing: -.5px;
 
   h1, h2, h3 {
     @include font-oswald;

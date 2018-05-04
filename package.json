@@ -39,6 +39,7 @@
     "screenfull": "^3.3.2",
     "serviceworker-cache-polyfill": "^4.0.0",
     "snyk": "^1.71.0",
+    "system-font-css": "^2.0.2",
     "three": "^0.80.1"
   },
   "scripts": {
