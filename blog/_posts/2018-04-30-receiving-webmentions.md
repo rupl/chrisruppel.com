@@ -10,6 +10,7 @@ syndication:
 tags:
 - indieweb
 - privacy
+- web standards
 ---
 
 [Webmentions](https://webmention.net) are the "commenting system" of the IndieWeb, a set of conventions and web standards that allow more structured independent publishing on the web.
