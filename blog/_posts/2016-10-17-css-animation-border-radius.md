@@ -122,6 +122,6 @@ Bingo.
 
 I recently read about the [Cicada principle](https://www.sitepoint.com/the-cicada-principle-and-why-it-matters-to-web-designers/) which which uses `:nth-child` and prime numbers to simulate randomness on large groups of elements.
 
-This principle was used on the [2016 UX London speakers page](http://2016.uxlondon.com/speakers) to accomplish this exact effect: irregular border radius settings applied semi-randomly to the various avatars. The designer even randomized the `:hover` state, meaning a wall of 20+ avatars has seemingly no duplicate effects applied to any of them. You could sit there and eventually find a pattern, but at a quick glance both the initial and hover states appear to be random.
+This principle was used on the [2016 UX London speakers page](https://2016.uxlondon.com/speakers) to accomplish this exact effect: irregular border radius settings applied semi-randomly to the various avatars. The designer even randomized the `:hover` state, meaning a wall of 20+ avatars has seemingly no duplicate effects applied to any of them. You could sit there and eventually find a pattern, but at a quick glance both the initial and hover states appear to be random.
 
 Hopefully the simplicity of this technique unlocks other possibilities in your mind. If you have other examples please drop them in the comments!

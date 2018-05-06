@@ -38,13 +38,14 @@
 .e-content {
   a[href^="http://"] {
     position: relative;
-    margin-right: 4.5em;
+    margin-right: 4.75em;
 
     &::after {
-      width: 6em;
+      width: 5em;
       content: ' (⚠️ insecure)';
       position: absolute;
       transform: translate(-.5em) scale(.75);
+      white-space: nowrap;
     }
   }
 }
