@@ -66,7 +66,7 @@
         setTimeout(webmentionsList, 1000);
 
         // Log result to analytics
-        _paq.push('trackEvent', 'Webmentions', 'submit', window.location.pathname, wmStatus);
+        _paq.push(['trackEvent', 'Webmentions', 'submit', window.location.pathname, wmStatus]);
       });
     }
   }

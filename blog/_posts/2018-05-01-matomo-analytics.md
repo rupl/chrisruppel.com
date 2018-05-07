@@ -52,7 +52,7 @@ I'd been collecting a few Events within GA and transitioning to Matomo was a sna
 ga('send', 'event', 'Category', 'Action', 'Label', optionalValue);
 
 // Matomo
-_paq.push('trackEvent', 'Category', 'Action', 'Name', optionalValue);
+_paq.push(['trackEvent', 'Category', 'Action', 'Name', optionalValue]);
 ```
 
 Couldn't be much more similar, right? You can [read the official Matomo docs](https://matomo.org/docs/event-tracking/) if you're also implementing event tracking and want more info.
