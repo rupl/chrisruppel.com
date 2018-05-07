@@ -169,6 +169,19 @@ main {
     }
   }
 
+  aside.info {
+    font-style: italic;
+    font-weight: 200;
+    padding: .2em 5%;
+    background-color: rgba(#79f, .4);
+    border-radius: 7px;
+
+    @media (min-width: 1147px) {
+      width: 110%;
+      margin-left: -5%; // match L/R padding above
+    }
+  }
+
   aside.warning {
     font-style: italic;
     font-weight: 200;

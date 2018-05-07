@@ -27,11 +27,15 @@ It's not limited to single sites either. You can manage multiple unrelated websi
 
 One thing <abbr title="Google Analytics">GA</abbr> doesn't do is respect your **Do Not Track** header, or <abbr title="Do Not Track">DNT</abbr> for short.
 
-DNT is a setting in many web browsers that _theoretically_ allows people to opt-out of being tracked across the web. Except it's completely optional to respect the setting, and there's no way to enforce it across the web. The best you can do is use a privacy-oriented browser like [Brave](https://brave.com) or [Tor](https://www.torproject.org) and block as much as you can locally.
+DNT is a setting in many web browsers that _theoretically_ allows people to opt-out of being tracked across the web. Except it's completely optional to respect the setting, and there's no way to enforce it across the web. As a consumer of the web, the only way to protect yourself from bad actors is to use a privacy-oriented browser like [Brave](https://brave.com) or [Tor](https://www.torproject.org) and block as much as you can locally.
 
-Matomo allows administrators to honor DNT with one toggle in the settings. Then, even though the script might be fetched from the server, Matomo will not log your activity in its database. The only equivalent in GA would be wrapping your tracking code with custom JS to check the header before initializing, a difficult ask for non-coders.
+However, people using Matomo to collect data can be good web citizens.
 
-I respect your privacy, so **my site will not log your traffic at all** when you enable DNT.
+With one toggle in the settings Motomo honors the DNT preference of visitors. Then, even though the script might be fetched from the server, Matomo will not log visitors' activity in its database. The only equivalent in GA would be wrapping the tracking code with custom JS to check the header before initializing, a difficult ask for non-coders.
+
+<aside class="info">
+  <p>I respect your privacy. When you enable DNT, <strong>I will not log your visit at all</strong>.</p>
+</aside>
 
 ## No-JS tracking
 
