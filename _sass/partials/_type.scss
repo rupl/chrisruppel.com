@@ -107,7 +107,8 @@ main {
 
     &::before {
       content: "Update " attr(datetime) ": ";
-      font-weight: 700;
+      font-weight: 500;
+      color: black;
     }
   }
 

@@ -243,3 +243,5 @@ So... that's where I am with offline content. If your browser supports it, try t
 <p><ins class="update" datetime="2016-10-05">I've published another walkthrough which allows you to <a href="/blog/service-worker-offline-content-list/">display the list of saved articles</a> to each visitor when they return.</ins></p>
 
 <p><ins class="update" datetime="2017-11-13">Yet another short howto which allows you to <a href="/blog/service-worker-offline-content-list-filter/">filter static HTML to show only cached content</a></ins></p>
+
+<ins class="update" datetime="2018-05-07">Jeremy Keith has wrangled up an excellent collection of other relevant <a href="https://adactio.com/journal/13821">Service Worker resources</a> as part of his new book <a href="https://abookapart.com/products/going-offline">Going offline</a>. 
