@@ -32,9 +32,6 @@ if ('content' in document.createElement('template')) {
         // Add to DOM.
         trip_list.appendChild(next_trip);
 
-        // Let Picturefill do its magic.
-        picturefill();
-
         // Process gallery images
         var photos = next_trip.querySelectorAll('.photo');
         processGalleryPhotos(photos);
