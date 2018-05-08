@@ -16,6 +16,7 @@ var pool = new Pool({
 var DATABASE_WEBMENTIONS = process.env.DATABASE_WEBMENTIONS || 'test_webmentions';
 
 // Microformats
+var url = require('url');
 var Microformats = require('microformat-node');
 var fetch = require('node-fetch');
 var jq = require('json-query');
@@ -139,18 +140,21 @@ app.post('/webmentions/post/', async function (req, res) {
             var tmpSummary = jq('items[type=h-entry].properties.summary[0]', {data:mf}).value;
             var tmpContent = jq('items[type=h-entry].properties.content[0].value', {data:mf}).value;
             var tmpTrimmedContent = [];
+            var tmpTrimmedContentStr = '';
             if (tmpContent !== null) {
               tmpTrimmedContent = tmpContent.split(' ');
               tmpTrimmedContent.length = (tmpTrimmedContent.length > 36) ? 36 : tmpTrimmedContent.length;
+              tmpTrimmedContentStr = entities.decode(tmpTrimmedContent.join(' ') + '&hellip;');
             }
-            var wmSummary = (!!tmpSummary) ? tmpSummary : entities.decode(tmpTrimmedContent.join(' ') + '&hellip;');
+            var wmSummary = (!!tmpSummary) ? tmpSummary : tmpTrimmedContentStr;
 
             // Who
             var entryAuthorName = jq('items[type=h-entry].properties.author[0].properties.name[0]', {data:mf}).value;
             var entryAuthorUrl = jq('items[type=h-entry].properties.author[0].properties.url[0]', {data:mf}).value;
             var hCardName = jq('items[type=h-card].properties.name[0]', {data:mf}).value;
             var hCardUrl = jq('items[type=h-card].properties.url[0]', {data:mf}).value;
-            var wmAuthorName = (!!entryAuthorName) ? entryAuthorName : (hCardName) ? hCardName : 'someone';
+            var targetUrl = url.parse(req.body.target);
+            var wmAuthorName = (!!entryAuthorName) ? entryAuthorName : (hCardName) ? hCardName : targetUrl.hostname;
             var wmAuthorUrl = (!!entryAuthorUrl) ? entryAuthorUrl : (hCardUrl) ? hCardUrl : '';
 
             // Publish date
