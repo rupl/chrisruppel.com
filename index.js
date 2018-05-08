@@ -94,7 +94,7 @@ app.get('/webmentions/get/', async function (req, res) {
     if (req.query.target !== 'undefined') {
       const client = await pool.connect();
       const result = await client.query(
-        `SELECT * FROM ${DATABASE_WEBMENTIONS} WHERE target=$1;`,
+        `SELECT * FROM ${DATABASE_WEBMENTIONS} WHERE target=$1 ORDER BY published ASC;`,
         [req.query.target]
       );
       res.status(200);
