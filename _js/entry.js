@@ -54,7 +54,7 @@
   if (Modernizr.serviceworker) {
     var currentURL = window.location.href;
     var currentPath = window.location.pathname;
-    var $entry = $('.h-entry--main');
+    var $entry = $('.entry--main');
     var $entryActions = $('.go');
 
     // If there seems to be a connection, the entry has content, and the

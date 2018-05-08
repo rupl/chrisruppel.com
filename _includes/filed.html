@@ -1,5 +1,5 @@
 {% capture filed %}
-  <a rel="author" class="p-author h-card" href="{{ site.url }}/about/">Chris</a> filed this <strong class="p-category">{{ include.categories }}</strong> entry
+  <a rel="author" class="h-card p-author u-url" href="{{ site.url }}">Chris Ruppel</a> filed this <strong class="p-category">{{ include.categories[0] }}</strong> entry
   {% if page.category == 'blog' %}
     on <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%B %d, %Y' }}</time>
   {% endif %}

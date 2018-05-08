@@ -110,11 +110,11 @@
       <noscript><img src="{{ site.matomo.url }}/piwik.php?idsite={{ site.matomo.id }}&rec=1" style="border: 0;" alt="" /></noscript>
     {% endif %}
   </head>
-  <body class="h-card vcard {{ page.bodyclass }}">
+  <body class="{{ page.bodyclass }}">
     <main>
       {{ content }}
     </main>
-    <footer role="contentinfo">
+    <footer role="contentinfo" class="h-card vcard">
       <section>
         <img alt="my face" class="me u-photo"
           width="120" height="129"
