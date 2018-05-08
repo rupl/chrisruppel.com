@@ -20,7 +20,7 @@ if ('content' in document.createElement('template')) {
     document.querySelector('.go').appendChild(loadmore);
 
     // Click handler for 'load more' link
-    loadmore.addEventListener('click', function loadMore () {
+    loadmore.addEventListener('click', function loadMore() {
       // Every time we load more content, current_trip is incremented so that
       // the next click will yield a new piece of content. This button should
       // stop working and disable itself when the content runs out.
@@ -36,7 +36,8 @@ if ('content' in document.createElement('template')) {
         var photos = next_trip.querySelectorAll('.photo');
         processGalleryPhotos(photos);
 
-        // TODO: Log to analytics
+        // Log to analytics
+        _paq.push(['trackEvent', 'TripListing', 'lazyload', 'more']);
       }
 
       // If there's no content, disable the button.
@@ -45,7 +46,8 @@ if ('content' in document.createElement('template')) {
         loadmore.classList.add('btn--disabled');
         loadmore.removeEventListener('click', loadMore);
 
-        // TODO: Log to analytics
+        // Log to analytics
+        _paq.push(['trackEvent', 'TripListing', 'lazyload', 'all']);
       }
     });
   }
