@@ -1,4 +1,4 @@
-// Node/npm deps
+// Server
 var express = require('express');
 var NODE_ENV = process.env.NODE_ENV || 'local';
 var PORT = process.env.PORT || 5000;
@@ -6,14 +6,21 @@ var fs = require('fs');
 var helmet = require('helmet');
 var enforce = require('express-sslify');
 var compression = require('compression');
+
+// DB
 var { Pool } = require('pg');
 var pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: true
 });
 var DATABASE_WEBMENTIONS = process.env.DATABASE_WEBMENTIONS || 'test_webmentions';
+
+// Microformats
 var Microformats = require('microformat-node');
 var fetch = require('node-fetch');
+var jq = require('json-query');
+var Entities = require('html-entities').AllHtmlEntities;
+var entities = new Entities();
 
 // Initialize app
 var app = express();
@@ -110,9 +117,10 @@ app.post('/webmentions/post/', async function (req, res) {
     if (req.body.source !== 'undefined' && req.body.target !== 'undefined') {
       const source = await fetch(req.body.source);
       const html = await source.text();
-      const options = {};
-      options.html = html;
-      options.filter = ['h-entry'];
+      const options = {
+        html: html,
+        textFormat: 'normalised',
+      };
 
       // Parse source URL for microformats
       Microformats.get(options, async function(err, mf) {
@@ -120,19 +128,41 @@ app.post('/webmentions/post/', async function (req, res) {
           // Determine if source contains target
           var sourceContainsTarget = html.indexOf(req.body.target) !== -1;
 
-          // If target was found, add to DB. The microformats are optional
+          // If target was found, extract desired data and add to DB.
+          // The microformats are optional and hopefully fall back to either an
+          // empty string or a generic word. Parsing code is very likely naïve.
           if (sourceContainsTarget) {
-            var wmContent = mf.items[0].properties.content[0].value || '';
-            var wmWho = mf.items[0].properties.author[0].value || 'someone';
-            var wmAt = mf.items[0].properties.published[0] || 'NOW()';
+            // Title
+            var wmTitle = jq('items[type=h-entry].properties.name[0]', {data:mf}).value || '';
+
+            // Summary
+            var tmpSummary = jq('items[type=h-entry].properties.summary[0]', {data:mf}).value;
+            var tmpContent = jq('items[type=h-entry].properties.content[0].value', {data:mf}).value;
+            var tmpTrimmedContent = [];
+            if (tmpContent !== null) {
+              tmpTrimmedContent = tmpContent.split(' ');
+              tmpTrimmedContent.length = (tmpTrimmedContent.length > 36) ? 36 : tmpTrimmedContent.length;
+            }
+            var wmSummary = (!!tmpSummary) ? tmpSummary : entities.decode(tmpTrimmedContent.join(' ') + '&hellip;');
+
+            // Who
+            var entryAuthorName = jq('items[type=h-entry].properties.author[0].properties.name[0]', {data:mf}).value;
+            var entryAuthorUrl = jq('items[type=h-entry].properties.author[0].properties.url[0]', {data:mf}).value;
+            var hCardName = jq('items[type=h-card].properties.name[0]', {data:mf}).value;
+            var hCardUrl = jq('items[type=h-card].properties.url[0]', {data:mf}).value;
+            var wmAuthorName = (!!entryAuthorName) ? entryAuthorName : (hCardName) ? hCardName : 'someone';
+            var wmAuthorUrl = (!!entryAuthorUrl) ? entryAuthorUrl : (hCardUrl) ? hCardUrl : '';
+
+            // Publish date
+            var wmPubdate = jq('items[type=h-entry].properties.published[0]', {data:mf}).value || 'NOW()';
 
             // Attempt DB insert.
             const client = await pool.connect();
             const result = await client.query(
-              `INSERT INTO ${DATABASE_WEBMENTIONS} (target, source, who, at, content) VALUES ($1, $2, $3, $4, $5);`,
-              [req.body.target, req.body.source, wmWho, wmAt, wmContent]
+              `INSERT INTO ${DATABASE_WEBMENTIONS} (target, source, title, summary, author_name, author_url, published) VALUES ($1, $2, $3, $4, $5, $6, $7);`,
+              [req.body.target, req.body.source, wmTitle, wmSummary, wmAuthorName, wmAuthorUrl, wmPubdate]
             ).catch(function () {
-              throw new Error('Duplicate source URL: ' + req.body.source);
+              throw new Error('Duplicate target/source combination: \ntarget: '+ req.body.target +'\nsource: '+ req.body.source);
             });
             client.release();
           }

@@ -8,7 +8,10 @@
   webmentionsList();
 
   // Listen for form submissions and validate before POSTing.
-  $('.webmentions__submit').addEventListener('submit', wmSubmit);
+  var wmSubmitForm = $('.webmentions__submit');
+  if (wmSubmitForm) {
+    wmSubmitForm.addEventListener('submit', wmSubmit);
+  }
 
   /**
    * Validate and POST Webmention submissions.
@@ -78,7 +81,14 @@
    */
   function webmentionsList() {
     var wmlContainer = $('.webmentions__list');
-    var wmlTarget = $('[data-webmention-target]').dataset.webmentionTarget;
+    var wmlTargetSelector = $('[data-webmention-target]');
+
+    // If there's no selector then stop.
+    if (!wmlTargetSelector) {
+      return;
+    }
+
+    var wmlTarget = wmlTargetSelector.dataset.webmentionTarget;
     var wmlQuery = WEBMENTIONS_GET + '?target=' + wmlTarget + '&timestamp=' + Date.now();
 
     // Clear out the no-js message.
@@ -112,7 +122,7 @@
           thisWebmention.classList.add('p-comment');
           thisWebmention.classList.add('h-entry');
           thisWebmention.id = 'comment-' + row.id;
-          thisWebmention.innerHTML = '<div class="e-content"><p>' + row.content + '</p></div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + row.source + '">' + row.who + '</a></cite> at <time class="dt-published" datetime="' + row.at + '">' + row.at.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
+          thisWebmention.innerHTML = '<h3><a href="'+ row.source +'">'+ row.title+'</a></h3><div class="e-content"><p>' + row.summary + '</p></div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + (row.author_url || row.source) + '">' + row.author_name + '</a></cite> at <time class="dt-published" datetime="' + row.published + '">' + row.published.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
           wmlContainer.appendChild(thisWebmention);
         });
       }
