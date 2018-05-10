@@ -6,16 +6,16 @@ summary: To eliminate third-party tracking on my website I have transitioned off
 tags:
 - privacy
 - javascript
-- ads
+- tracking
 ---
 
 Around the time I published my thoughts on [Brave Payments](/blog/brave-payments/) I realized that despite my enthusiasm for a tracking-free web, I was still relying on multiple services that tracked my visitors. How rude!
 
-I quickly looked around for alternatives and found Piwik, which recently rebranded to [Matomo](https://matomo.org). It's a drop-in replacement for Google Analytics. However, it's a far more private option since the data stays within my domain name.
+I looked around for alternatives and found Piwik, which recently rebranded to [Matomo](https://matomo.org). It's a drop-in replacement for Google Analytics, or <abbr title="Google Analytics">GA</abbr> for short. However, it's a far more private option since the data stays within my domain.
 
-For someone doing casual monitoring of their site traffic, the transition is quite simple. Of course if you're doing extensive A/B testing then it will be more of an endeavor.
+For someone like me doing casual monitoring of their site traffic, the transition is quite simple. Of course if you're doing extensive monitoring then it will be more of an endeavor, but Matomo has a rich selection of paid plugins available to provide pretty much any function that Google provides.
 
-Read on for a few of the Matomo features I found delightful.
+Here are a few of the Matomo features I found delightful.
 
 ## Self-hosted domains
 
@@ -25,13 +25,15 @@ It's not limited to single sites either. You can manage multiple unrelated websi
 
 ## Respecting DNT headers
 
-One thing <abbr title="Google Analytics">GA</abbr> doesn't do is respect your **Do Not Track** header, or <abbr title="Do Not Track">DNT</abbr> for short.
+One thing GA doesn't do is respect your **Do Not Track** header.
 
-DNT is a setting in many web browsers that _theoretically_ allows people to opt-out of being tracked across the web. Except it's completely optional to respect the setting, and there's no way to enforce it across the web. As a consumer of the web, the only way to protect yourself from bad actors is to use a privacy-oriented browser like [Brave](https://brave.com) or [Tor](https://www.torproject.org) and block as much as you can locally.
+<abbr title="Do Not Track">DNT</abbr> is a setting in many web browsers that _theoretically_ allows people to opt-out of being tracked across the web. Except it's completely optional to respect the setting, and there's no way to enforce it across the web. As a consumer of the web, the only way to protect yourself from bad actors is to use a privacy-oriented browser like [Brave](https://brave.com) or [Tor](https://www.torproject.org) and block as much as you can locally.
 
 However, people using Matomo to collect data can be good web citizens.
 
-With one toggle in the settings Motomo honors the DNT preference of visitors. Then, even though the script might be fetched from the server, Matomo will not log visitors' activity in its database. The only equivalent in GA would be wrapping the tracking code with custom JS to check the header before initializing, a difficult ask for non-coders.
+With one toggle in the settings Motomo honors the DNT preference of visitors. Look in **Privacy &raquo; Users opt-out** to change the setting. With DNT support enabled, even though the script might be fetched from the server, Matomo will not log visitors' activity in its database. If you want to take it even further, there is a setting to detect DNT on the client-side and avoid making any requests to Matomo.
+
+With GA one would have to wrap the tracking code with custom JS to check the `navigator.doNotTrack` setting before initializing. However that's a difficult ask for non-coders, and it's nice that Matomo offers the option as part of the tracking code generator.
 
 <aside class="info">
   <p>I respect your privacy. When you enable DNT, <strong>I will not log your visit at all</strong>.</p>
@@ -62,6 +64,8 @@ Couldn't be much more similar, right? You can [read the official Matomo docs](ht
 Coming soon to an EU near you, the <abbr title="General Data Protection Regulation">GDPR</abbr> (in Germany it's called the <abbr lang="de" title="Datenschutz-Grundverordnung">DS-GVO</abbr>) means there are stricter laws governing what data you can store about a user. They also require you to remove data at the user's request. While of course Google will comply with the regulations, they're a gigantor company and have absolutely no excuse not to.
 
 Despite their status as a relatively small open source project, Matomo are rolling out updates to facilitate the regulations in time for the May 25<sup>th</sup> deadline. If you're a web developer and need more info, [read more about GDPR at the official website](https://www.eugdpr.org).
+
+<ins class="update" datetime="2018-05-10"><a href="https://matomo.org/changelog/matomo-3-5-0/">Matomo 3.5.0 has just been released</a> with a suite of tools to facilitate compliance with the GDPR.</ins>
 
 ## Give Matomo a spin
 
