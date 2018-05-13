@@ -55,14 +55,6 @@ gallery2:
   bgpad: 60%
   bgpos: 50% 100%
 
-links:
-- href: http://www.easyrider-tours.com
-  text: Dalat Easy Rider Club
-  type: outdoors
-- href: http://www.hostelworld.com/hosteldetails.php/Dalat-Easy-Friends-Hostel/Da-Lat/91686
-  text: Easy Friends Hostel
-  type: rest
-
 tags:
 - motorbikes
 - tours
@@ -71,11 +63,11 @@ tags:
 summary: Day 1 of our Dalat Easy Riders tour was a day trip through Da Lat followed by a beautiful ride through the countryside.
 ---
 
-We picked a hostel mostly at random in Da Lat. It simply had cheap rooms and the reviews said the staff were very friendly. On the bus ride from Mui Ne, the driver kept talking to us about Easy Rider tours. We'd never really heard of it but it sounded pretty neat.
+We picked a hostel mostly at random in Da Lat. It simply had cheap rooms and the reviews said the staff were very friendly. On the bus ride from Mui Ne, the driver kept talking to us about [Easy Rider tours](http://easyrider-tours.com). We'd never really heard of it but it sounded pretty neat.
 
 The concept is simple: you ride on a motorbike with a Vietnamese guide who knows the countryside in and out, stopping in many spots along the way to give you history and culture lessons. It's the best way to see the real face of Vietnam, and is eye-opening in a way that a bus ride between major cities could never be.
 
-When we got to the Easy Friends Hostel, we were greeted by Ut, who helped us with our bags and chatted with us over coffee about their tours. We'd already been approached by others in Da Lat near the bus station so we were a bit hesitant, but Ut's friendliness won us over and the next day we decided to book the 3-day tour to Nha Trang.
+When we got to the [Easy Friends Hostel](http://www.hostelworld.com/hosteldetails.php/Dalat-Easy-Friends-Hostel/Da-Lat/91686), we were greeted by Ut, who helped us with our bags and chatted with us over coffee about their tours. We'd already been approached by others in Da Lat near the bus station so we were a bit hesitant, but Ut's friendliness won us over and the next day we decided to book the 3-day tour to Nha Trang.
 
 The next day we strapped our bags to the bikes and hopped on, wondering if we'd survive three days riding motorbikes through the backroads of Vietnam.
 

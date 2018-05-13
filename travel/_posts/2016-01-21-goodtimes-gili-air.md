@@ -4,14 +4,6 @@ location:
   locality: Gili Air
   country: Indonesia
 
-links:
-- href: http://www.tripadvisor.com/Hotel_Review-g664667-d9770221-Reviews-Goodtimes_Bungalows-Gili_Air_Gili_Islands_Lombok_West_Nusa_Tenggara.html
-  text: Goodtimes Bungalows
-  type: rest
-- href: http://www.tripadvisor.com/ShowUserReviews-g664667-d7654013-r251727701-Warung_Bambu_Gili_Air-Gili_Air_Gili_Islands_Lombok_West_Nusa_Tenggara.html
-  text: Warung Bambu
-  type: eat
-
 gallery:
 - gridtype: tall
 - src: gili-air-goodtimes-1.jpg
@@ -60,7 +52,7 @@ The island has a _very_ relaxed atmosphere. It only took a couple hours' walking
 
 {% include gallery.html gallery=page.gallery %}
 
-We found a really great place to stay called [Goodtimes Bungalows](http://www.goodtimesbungalow.com/). It's run by a Norwegian family and they are some of the friendliest, most generous people we've met on our whole trip.
+We found a really great place to stay called [Goodtimes Bungalows](https://www.tripadvisor.com/Hotel_Review-g664667-d9770221-Reviews-Goodtimes_Bungalows-Gili_Air_Gili_Islands_Lombok_West_Nusa_Tenggara.html). It's run by a Norwegian family and they are some of the friendliest, most generous hosts we've met on our whole trip.
 
 They built a great property and have done it according to all the customs of the locals, which not all businesses do. They are very eco-friendly, with the hot water coming from a solar panel, and they plan to eventually power the entire property by solar+batteries.
 

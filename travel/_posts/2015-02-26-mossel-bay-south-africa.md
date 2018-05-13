@@ -4,11 +4,6 @@ location:
   locality: Mossel Bay
   country: South Africa
 
-links:
-- href: http://www.lilies-leopards.co.za/
-  text: Lillies & Leopards bed and breakfast
-  type: rest
-
 gallery:
 - gridtype: tall
 - src: mossel-bay-1.jpg
@@ -34,7 +29,7 @@ summary: Mossel Bay is the east bookend of the Garden Route, offering a relaxing
 
 Mossel Bay was one of our only stops along the Garden Route. We stayed in Cape Town as long as possible and as a result saw much of the Route from the car.
 
-We found a charming <abbr title="Bed and Breakfast">B&B</abbr> called _Lillies & Leopards_ on the south-facing edge of the bay. It was fairly close to a private beach, whose waters were a bit too rough to go swimming that day. Happy to just relax and watch the sunset, we stayed out until it was dark.
+We found a charming <abbr title="Bed and Breakfast">B&B</abbr> called [Lillies & Leopards](https://www.lilies-leopards.co.za/) on the south-facing edge of the bay. It was fairly close to a private beach, whose waters were a bit too rough to go swimming that day. Happy to just relax and watch the sunset, we stayed out until it was dark.
 
 We found these strange slugs all over the beach feeding on jellyfish. Karin couldn't stand to look at them, and dubbed them "grossies"
 

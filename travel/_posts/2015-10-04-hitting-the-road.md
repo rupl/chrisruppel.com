@@ -17,7 +17,7 @@ tags:
 
 Before [Mark went to travel through South America](http://tunafish.es), he recommended a book he'd read and re-read which had helped him decide, prepare, and ultimately travel the world with nothing but a backpack.
 
-It's entitled _[Vagabonding](http://vagabonding.net/)_.
+It's entitled _[Vagabonding](https://vagabonding.net/)_.
 
 I read part of it in 2013, but the book contained numerous warnings to avoid finishing it unless you're really ready to heed the advice. I put it down until after our trip to South Africa earlier this year, knowing it was finally time to finish it. Now that Karin and I are on a bus with nothing but our backpacks, I decided it was time to read it again.
 

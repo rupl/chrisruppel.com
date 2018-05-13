@@ -49,11 +49,6 @@ gallery2:
   comment: Our Thanksgiving feast! It was the best coincidence I could have asked for.
 - caption: Bom and Ut treated us to an unexpectedly legit Thanksgiving dinner!
 
-links:
-- href: http://www.easyrider-tours.com
-  text: Dalat Easy Rider Club
-  type: outdoors
-
 tags:
 - motorbikes
 - tours

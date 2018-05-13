@@ -22,17 +22,6 @@ gallery:
   comment: Jordan, Annette, and Bama in their canoe.
   bgpos: 30% 0
 
-links:
-- href: http://www.fritabatidos.com
-  text: Frita Batidos
-  type: eat
-- href: http://www.a2gov.org/departments/Parks-Recreation/parks-places/argo/Pages/default.aspx
-  text: Argo Canoe Livery
-  type: water
-- href: http://www.pinballpetes.net
-  text: Pinball Pete's
-  type: inside
-
 tags:
 - kayaking
 - friends
@@ -43,7 +32,7 @@ summary: We visited Jordan and Annette in Ann Arbor, Michigan. We had a fun week
 
 We visited our long-time friends Jordan and Annette at their new house in Ann Arbor, Michigan. Eric flew in from San Francisco too. We stayed for a week, just catching up.
 
-They live near the Argo Canoe Livery along the Huron river and we went out on the water twice. The first time, Karin and I went with stand-up paddleboards while Jordan, Eric, and Annette went canoeing. The sun was hot but there were a few bridges offering some shade where we could take a break.
+They live near the [Argo Canoe Livery](https://www.a2gov.org/departments/Parks-Recreation/parks-places/argo/Pages/default.aspx) along the Huron river and we went out on the water twice. The first time, Karin and I went with stand-up paddleboards while Jordan, Eric, and Annette went canoeing. The sun was hot but there were a few bridges offering some shade where we could take a break.
 
 {% include gallery.html gallery=page.gallery %}
 
@@ -53,6 +42,6 @@ We both agreed it's a little more work to row a canoe; with paddleboards you're 
 
 We also went hiking and geocaching in the nearby parks (Barton Nature Area and Bird Hill Nature Area). We were bummed that we didn't find any of the geocaches we hunted for, but it was still fun to try and find them.
 
-We went to a few really great restaurants, but my favorite was **Frita Batidos**, serving cuban-inspired street food. The main attractions are chorizo hamburgers served with fried egg and shoestring fries on top, and shakes made of tropical fruits like coconut and mango (enhanced by a splash of dark rum, of course).
+We went to a few really great restaurants, but my favorite was [Frita Batidos](http://www.fritabatidos.com), serving cuban-inspired street food. The main attractions are chorizo hamburgers served with fried egg and shoestring fries on top, and shakes made of tropical fruits like coconut and mango (enhanced by a splash of dark rum, of course).
 
-Karin wanted to visit an arcade while in the States, and we found **Pinball Pete's** to be the perfect mix of old and new. We played some classics like Pac-Man and Centipede and ended up winning some sweet prizes after playing Skee-ball and other ticket games. Karin walked away with a bouncy ball and a finger trap!
+Karin wanted to visit an arcade while in the States, and we found [Pinball Pete's](http://www.pinballpetes.net) to be the perfect mix of old and new. We played some classics like Pac-Man and Centipede and ended up winning some sweet prizes after playing Skee-ball and other ticket games. Karin walked away with a bouncy ball and a finger trap!

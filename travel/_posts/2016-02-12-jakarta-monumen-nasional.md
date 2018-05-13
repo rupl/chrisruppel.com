@@ -26,11 +26,6 @@ gallery:
   alt: Stone-carved faces and people within a wall.
   comment: The inner walls of the monument had these intricate carvings in all four corners.
 
-links:
-- type: rest
-  text: Six Degrees Jakarta
-  href: http://jakarta-backpackers-hostel.com/
-
 tags:
 - hostels
 - history
@@ -39,7 +34,7 @@ tags:
 summary: We made a quick stop in Jakarta before flying out of the country and visited a well-known national monument in the city center.
 ---
 
-We only had one day in Jakarta before our visa expired. We were recommended a place in the center of town called Six Degrees and it was a really great hostel to meet people and socialize. I'd recommend staying there if you pass through Jakarta.
+We only had one day in Jakarta before our visa expired. We were recommended a place in the center of town called [Six Degrees](http://jakarta-backpackers-hostel.com/) and it was a bustling hostel to meet people and socialize. I'd recommend staying there if you pass through Jakarta.
 
 On our only full day, we took a walk to the national monument, which also contains a small museum describing the history or Indonesia. We enjoyed seeing the dioramas explaining the history starting from pre-historic, skipping to Dutch colonial times, then finally explaining how their modern, federated republic came to be.
 

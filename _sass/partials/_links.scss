@@ -1,41 +1,8 @@
+//
 // Global links styles
-.links {
-  a {
-    &::before {
-      display: inline-block;
-      padding-right: 4px;
-      font-size: 1.1em;
-      transform: translate(0, 3px);
-    }
-  }
-
-  .type-rest::before {
-    content: '\1f3e0';
-  }
-  .type-eat::before {
-    content: '\1f374';
-  }
-  .type-drink::before {
-    content: '\1f37b';
-  }
-  .type-camp::before {
-    content: '\26fa';
-  }
-  .type-outdoors::before {
-    content: '\1f304';
-  }
-  .type-water::before {
-    content: '\01F6A3';
-  }
-  .type-inside::before {
-    content: '\01F3B1';
-  }
-  .type-tool::before {
-    content: '\01F527';
-  }
-}
-
-.e-content {
+//
+main {
+  // Clearly mark insecure outbound links within content.
   a[href^="http://"] {
     position: relative;
     margin-right: 4.75em;
@@ -43,9 +10,34 @@
     &::after {
       width: 5em;
       content: ' (⚠️ insecure)';
+      font-weight: 300;
+      white-space: nowrap;
       position: absolute;
       transform: translate(-.5em) scale(.75);
-      white-space: nowrap;
+    }
+  }
+}
+
+.e-content {
+  .link--primary {
+    background: #eee;
+    border-radius: 5px;
+    position: relative;
+    overflow-x: hidden;
+
+    a {
+      display: block;
+      font-size: 1.1em;
+      padding: 1em 1em 1em 4em;
+    }
+
+    &::before {
+      content: '🔗 ';
+      font-size: 2em;
+      position: absolute;
+      left: .75em;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

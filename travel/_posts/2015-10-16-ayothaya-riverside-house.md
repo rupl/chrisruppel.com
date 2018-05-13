@@ -37,11 +37,6 @@ gallery:
   type: wide
   bgpad: 51%
 
-links:
-- href: http://www.agoda.com/ayothaya-riverside-house/hotel/ayutthaya-th.html
-  text: Ayothaya Riverside House
-  type: rest
-
 tags:
 - hostels
 - friends
@@ -51,7 +46,7 @@ summary: We stayed at the Ayothaya Riverside House and made many great new frien
 
 After the insanity of Bangkok, we were looking forward to slowing things down in Ayutthaya. We found a hostel on google maps that was along the river, a bit outside of town, and figured it would be a good escape. What we found was so much better: the most friendly, kind, and sincere host I've met on any travel! 
 
-His name is Ya, and although we're less than two weeks into our trip, it will be seriously difficult to find a more memorable fella to hang out with. He built the boat house himself (the only guesthouse boat in Ayutthaya!) and the entire property is overflowing with his love for Thailand. When we got there he offered to take us to the market, cooked us dinner, and we spent the evening singing songs while he played guitar. His songbook was filled with classics that other visitors had written chords and lyrics for, and he told us he always loves learning a new song for your next visit.
+His name is Ya, and although we're less than two weeks into our trip, it will be seriously difficult to find a more memorable fella to hang out with. He built the boat house himself (the only [guesthouse boat in Ayutthaya](https://www.agoda.com/ayothaya-riverside-house/hotel/ayutthaya-th.html)!) and the entire property is overflowing with his love for Thailand. When we got there he offered to take us to the market, cooked us dinner, and we spent the evening singing songs while he played guitar. His songbook was filled with classics that other visitors had written chords and lyrics for, and he told us he always loves learning a new song for your next visit.
 
 The other two in the photos are Anna and Lina. We checked in and shortly afterward they did too. We heard them speaking German and recognized the accents coming from our neck of the woods. We struck it up with them and ended up sticking together for a while.
 

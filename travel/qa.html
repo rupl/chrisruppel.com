@@ -45,6 +45,13 @@ published: false
             <br>
             {% if trip.map %}{{ trip.map }}{% endif %}
           -->
+          <!--
+          <ul>
+          {% for link in trip.links %}
+            <li><a class="type-{{ link.type }}" href="{{ link.href }}">{{ link.text }}</a></li>
+          {% endfor %}
+          </ul>
+          -->
         </p>
       </li>
     {% endfor %}

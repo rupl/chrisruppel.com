@@ -30,11 +30,6 @@ gallery:
   type: wide
   bgpad: 40%
 
-links:
-- href: http://www.cavelodge.com
-  text: Cave Lodge
-  type: rest
-
 tags:
 - hostels
 
@@ -45,9 +40,9 @@ syndication:
 summary: Cave Lodge is an absolutely beautiful place to stay in north Thailand offering more adventures than we thought possible. Anyone passing through should make a stop here for at least a few nights!
 ---
 
-Cave Lodge is an incredible property situated on the side of a mountain near Soppong, part of the Pang Mapha district in Thailand. It was started in 1984 by an Australian named John Spies, who still runs it today.
+[Cave Lodge](https://www.cavelodge.com) is an incredible property situated on the side of a mountain near Soppong, part of the Pang Mapha district in Thailand. It was started in 1984 by an Australian named John Spies, who still runs it today.
 
-They started out as an exploration operation, having [explored and discovered dozens of caves](http://www.telegraph.co.uk/news/earth/earthpicturegalleries/9489825/Amazing-photographs-of-huge-cave-systems-in-Thailand.html) in the area. Not only do they map the caves and guide people through them, but they take samples of dirt and minerals, sending them for carbon dating to help improve scientific understanding of this area's geography.
+They started out as an exploration operation, having [explored and discovered dozens of caves](https://www.telegraph.co.uk/news/earth/earthpicturegalleries/9489825/Amazing-photographs-of-huge-cave-systems-in-Thailand.html) in the area. Not only do they map the caves and guide people through them, but they take samples of dirt and minerals, sending them for carbon dating to help improve scientific understanding of this area's geography.
 
 Over time the operation grew to be what it is today, offering travelers the experience of a lifetime up in the most northern edge of Thailand possible (which means the weather is superb!). The lodge is a home base for a huge array of activites: caving, kayaking, hiking and trekking, swimming, sunrise hikes, and more.
 

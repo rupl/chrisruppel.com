@@ -60,11 +60,6 @@ gallery2:
   type: wide
   bgpad: 40%
 
-links:
-- href: http://www.easyrider-tours.com
-  text: Dalat Easy Rider Club
-  type: outdoors
-
 tags:
 - motorbikes
 - tours
@@ -73,7 +68,7 @@ tags:
 summary: Day 3 of our Easy Rider tour took us through the mountains to visit the highlanders, more farmers growing bamboo, black pepper, rubber and honey, and a fair bit of rain thrown in to make it interesting before arriving in Nha Trang to end our journey.
 ---
 
-On our third and final day, we "slept in" and started around 8:30. The plan was exciting: we were taking a set of roads so tiny and unkept that they don't show up on most maps (although Galileo had it! Ut and Bom were impressed). On these roads we'd see many groups of [minority people](https://en.wikipedia.org/wiki/List_of_ethnic_groups_in_Vietnam) and learn how the people of the highlands live.
+On our third and final day, we "slept in" and started around 8:30. The plan was exciting: we were taking a set of roads so tiny and unkept that they don't show up on most maps (although Galileo had it! Ut and Bom were impressed). On these roads we'd see many groups of [ethnic minorities](https://en.wikipedia.org/wiki/List_of_ethnic_groups_in_Vietnam) and learn how the people of the highlands live.
 
 {% include map.html map=page.map %}
 
@@ -113,4 +108,4 @@ We got back on the bikes for our last leg, sad to see the trip come to an end af
 
 ---
 
-I have to say just one more time, if you're ever in Vietnam please do yourself a favor and take one of these [Easy Rider motorbike tours](http://www.easyrider-tours.com). There simply is no other way to see how the majority of the Vietnamese live their lives. Not only do the cities shield you from the general type of work, but without a guide there is no way to befriend and learn from these hardworking, honest, friendly people. We felt so lucky to have taken this trip with Bom and Ut, and unfortunately these stories are the only small gesture of thanks I can offer them for their time and effort they spent showing us their view of Vietnam.
+I have to say just one more time, if you're ever in Vietnam please do yourself a favor and take one of these [Easy Rider motorbike tours](http://easyrider-tours.com). There simply is no other way to see how the majority of the Vietnamese live their lives. Not only do the cities shield you from the general type of work, but without a guide there is no way to befriend and learn from these hardworking, honest, friendly people. We felt so lucky to have taken this trip with Bom and Ut, and unfortunately these stories are the only small gesture of thanks I can offer them for their time and effort they spent showing us their view of Vietnam.
