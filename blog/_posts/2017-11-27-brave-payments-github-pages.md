@@ -8,9 +8,9 @@ syndication:
   href: https://twitter.com/rupl/status/940925878518861827
 
 tags:
+- ads
 - browsers
 - privacy
-- ads
 ---
 
 I'm a big fan of [Brave Payments](https://brave.com/publishers), a system I think will revolutionize how content is monetized on the web, bringing privacy and independence to a system that's currently dominated by a couple of big players.

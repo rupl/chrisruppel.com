@@ -5,10 +5,11 @@ summary: Learning to program Arduino in the open. This experiment involved the J
 
 tags:
 - arduino
-- electronics
-- johnny five
-- javascript
 - bustashape
+- electronics
+- javascript
+- johnny five
+- mobile
 - web sockets
 ---
 

@@ -5,6 +5,7 @@ tags:
 - art
 - bustashape
 - javascript
+- mobile
 - web sockets
 
 summary: A tech overview of my side project for creating art on the web.

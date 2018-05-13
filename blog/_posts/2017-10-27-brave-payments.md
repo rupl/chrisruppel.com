@@ -16,10 +16,11 @@ syndication:
   href: https://twitter.com/rupl/status/923858036673966080
 
 tags:
-- browsers
-- privacy
 - ads
 - blockchain
+- browsers
+- privacy
+- tracking
 ---
 
 I'm a web developer so I've known for years how extensively individuals are tracked on the web. For a long time I assumed it was a necessary evil, but as tracking is revealed to be more and more extensive, enough is enough.

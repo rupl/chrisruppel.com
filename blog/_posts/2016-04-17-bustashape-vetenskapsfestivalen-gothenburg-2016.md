@@ -23,6 +23,7 @@ gallery:
 tags:
 - art
 - bustashape
+- mobile
 - web sockets
 ---
 
