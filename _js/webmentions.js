@@ -118,11 +118,18 @@
       else {
         // Populate list with each Webmention.
         data.forEach(function (row) {
+          var thisContent = '';
           var thisWebmention = document.createElement('article');
           thisWebmention.classList.add('p-comment');
           thisWebmention.classList.add('h-entry');
           thisWebmention.id = 'comment-' + row.id;
-          thisWebmention.innerHTML = '<h3><a href="'+ row.source +'">'+ row.title+'</a></h3><div class="e-content"><p>' + row.summary + '</p></div><footer>Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + (row.author_url || row.source) + '">' + row.author_name + '</a></cite> on <time class="dt-published" datetime="' + row.published + '">' + row.published.split('T')[0] + '</time> <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a></footer>';
+          thisContent += (row.title) ? '<h3><a href="'+ row.source +'">'+ row.title +'</a></h3>' : '';
+          thisContent += (row.summary) ? '<div class="e-content"><p>' + row.summary + '</p></div>' : '';
+          thisContent += '<footer>';
+          thisContent += 'Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + (row.author_url || row.source) + '">' + row.author_name + '</a></cite> on <time class="dt-published" datetime="' + row.published + '">' + row.published.split('T')[0] + '</time>';
+          thisContent += '<a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a>';
+          thisContent += '</footer>';
+          thisWebmention.innerHTML = thisContent;
           wmlContainer.appendChild(thisWebmention);
         });
       }
