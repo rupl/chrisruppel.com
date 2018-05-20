@@ -6,7 +6,7 @@
   "description": "Chris Ruppel's Personal Site. Travel and tech blog.",
   "scope": "/",
   "display": "minimal-ui",
-  "start_url": "/",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "/favicon.ico",
