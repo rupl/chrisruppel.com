@@ -43,8 +43,8 @@ main {
   padding: 1rem;
 
   &::after {
-    content: "";
+    content: '';
     display: block;
-    height: $footer-height;
+    height: $footer-height - 1px;
   }
 }
