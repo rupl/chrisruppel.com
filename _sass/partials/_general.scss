@@ -48,10 +48,3 @@ main {
     height: $footer-height;
   }
 }
-
-// This facilitates the "sticky" footer. When the content doesn't fill the page,
-// the footer will still lock to the bottom.
-footer[role="contentinfo"] {
-  height: $footer-height;
-  //! Set ALL other props in _footer.scss
-}

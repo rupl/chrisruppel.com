@@ -4,13 +4,14 @@
 footer[role="contentinfo"] {
   @extend .clearfix;
   clear: both;
-  font-size: .8em;
+  min-height: $footer-height;
+  font-size: .9em;
   font-style: italic;
   font-weight: 200;
   padding: 1rem;
   color: white;
   background: #111;
-  //! height is set in _general.scss
+  transform: translateY(1px);
 
   // Footer content
   section {
@@ -22,6 +23,7 @@ footer[role="contentinfo"] {
   // my smug mug
   img.me {
     float: left;
+    width: 100px;
     margin-right: 1.6em;
     border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
     transform: rotate(-2deg);
@@ -42,28 +44,21 @@ footer[role="contentinfo"] {
 
   .colophon {
     text-align: center;
+    color: #666;
 
     @media (min-width: 400px) {
       text-align: left;
     }
 
     a {
-      opacity: .16;
       transition: opacity .25s ease-in-out;
       white-space: nowrap;
-    }
-
-    a:hover {
-      opacity: .75;
     }
   }
 
   // Ensure links are readable regardless of state or browsing history.
   a {
     color: inherit;
-  }
-  a:visited {
-    opacity: .666;
   }
 }
 
