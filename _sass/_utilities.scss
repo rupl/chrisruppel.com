@@ -44,17 +44,13 @@
 }
 
 //
-// Markup free clearing.
-//
-// @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+// Markup free float-clearing.
 //
 .clearfix {
   &:after {
-    content: ".";
-    display: block;
-    height: 0;
     clear: both;
-    visibility: hidden;
+    content: '';
+    display: table;
   }
 }
 
