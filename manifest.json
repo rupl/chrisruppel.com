@@ -4,39 +4,30 @@
   "name": "Chris Ruppel",
   "short_name": "rupl",
   "description": "Chris Ruppel's Personal Site. Travel and tech blog.",
-  "scope": "/",
   "display": "minimal-ui",
-  "start_url": "/index.html",
+  "scope": "/",
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/favicon.ico",
       "sizes": "32x32"
     },
     {
-      "src": "/static/chris-ruppel-2015@144x144.jpg",
-      "sizes": "144x144",
-      "density": 1,
-      "type": "image/jpeg"
-    },
-    {
       "src": "/static/chris-ruppel-2015@192x192.jpg",
       "sizes": "192x192",
-      "density": 1,
       "type": "image/jpeg"
     },
     {
-      "src": "/static/chris-ruppel-2015@320.jpg",
-      "sizes": "320x345",
-      "density": 1,
+      "src": "/static/chris-ruppel-2015@384x384.jpg",
+      "sizes": "384x384",
       "type": "image/jpeg"
     },
     {
-      "src": "/static/chris-ruppel-2015@640.jpg",
-      "sizes": "640x690",
-      "density": 2,
+      "src": "/static/chris-ruppel-2015@512x512.jpg",
+      "sizes": "512x512",
       "type": "image/jpeg"
     }
-  ],
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  ]
 }
