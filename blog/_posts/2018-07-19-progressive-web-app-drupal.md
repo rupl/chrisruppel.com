@@ -12,7 +12,7 @@ tags:
 
 Announcing a new Drupal module: [Progressive Web App](https://www.drupal.org/project/pwa)!
 
-As the name suggests, it brings foundational aspects of a Progressive Web App (PWA) to any Drupal 7 site. With [over one million Drupal 7 sites](https://www.drupal.org/project/usage/drupal) out there, the module aims to bring modern mobile functionality in the form of:
+As the name suggests, it brings foundational aspects of a Progressive Web App (PWA) to any Drupal 7 site. With [almost one million Drupal 7 sites](https://www.drupal.org/project/usage/drupal) out there, the module aims to bring modern mobile functionality in the form of:
 
 * **Offline support** — the module provides a modest Service Worker which adapts automatically to your Drupal site, providing an offline experience with very little configuration needed.
 * **Add to Homescreen** — the module also provides a `manifest.json` with all the required metadata to warrant the homescreen prompt.
@@ -56,9 +56,14 @@ If the pre-caching doesn't cover everything, the visitor's next few page loads w
 
 Both the `install` and `fetch` listener use the `no-cors` mode to fetch assets, making it friendly to third-party requests. This means it can cache assets on your primary domain in addition to CDNs like Google Fonts.
 
+Additionally, the `fetch` listener checks for the [`Save-Data` header](https://wicg.github.io/netinfo/#save-data-request-header-field), and avoids caching images when it is present. Data usage comes in many forms and while we don't provide server integration for the header, we try to respect it by not consuming too much cache space.
+
+
+## Additional Service Worker features
+
 For now, and probably the life of PWA 1.0, the Service Worker won't do a lot more than cache the assets you request by browsing around on the site.
 
-We have intentionally avoided implementing more advanced features like push notifications and background sync, preferring to leave those to another more advanced module (see the [Future Plans](#future-plans) section below).
+We have intentionally avoided implementing more advanced features like push notifications and background sync, preferring to leave those to a dedicated module (see the [Future Plans](#future-plans) section below).
 
 
 ## Add to Homescreen
@@ -93,7 +98,9 @@ function mytheme_pwa_manifest_alter(&$manifest) {
 }
 ```
 
-The nice part about this is that _any module in your website_ can make modifications to the manifest. The code sample above can be implemented in any Drupal theme to provide I have seen manifests hardcoded into particular contrib themes, but that deters customization and makes modifications difficult.
+The nice part about this is that _any module in your website_ can make modifications to the manifest. The code sample above can be implemented in any Drupal module or theme to provide customizations while allowing other parts of the site the chance to modify or provide extra metadata.
+
+I have seen manifests hardcoded into particular contrib themes, but that deters customization and makes modifications difficult. Often people might customize a file that comes with a theme, but the changes get overwritten the next time an update is downloaded. Other times, multiple modules/themes try to provide the manifest file and conflict with each other.
 
 Offering a centralized API means that multiple modules and themes can co-exist by supplying only the metadata they require, and releasing control of the other metadata to the site admin.
 
