@@ -1,3 +1,5 @@
+/* PrismJS 1.15.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+c+cpp+arduino+markup-templating+php+scss */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -104,7 +106,7 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #a67f59;
+  color: #9a6e3a;
   background: hsla(0, 0%, 100%, .5);
 }
 
@@ -114,7 +116,8 @@ pre[class*="language-"] {
   color: #07a;
 }
 
-.token.function {
+.token.function,
+.token.class-name {
   color: #DD4A68;
 }
 
@@ -134,42 +137,4 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help;
-}
-
-//
-// Modifications for chrisruppel.com
-//
-
-// Reduce font-size of Prism blocks and make the <pre> tag a bit prettier.
-pre[class*=language-] {
-  font-size: .66em;
-  border-radius: 7px;
-
-  @media (min-width: 580px) {
-    font-size: .8em;
-  }
-}
-
-// Generic fenced code blocks not controlled by Prism.
-//
-// Often used for displaying logs, error messages, and other computer output
-// that is not a specific programming language.
-pre[class*=language-undefined],
-code[class*=language-undefined],
-pre[class*=language-wrap],
-code[class*=language-wrap] {
-  padding: .5em 1em;
-  background: #ddd;
-  text-shadow: none;
-}
-code[class*=language-undefined] {
-  padding: 0;
-}
-
-pre[class*=language-wrap],
-code[class*=language-wrap] {
-  white-space: normal;
-}
-code[class*=language-wrap] {
-  padding: 0;
 }
