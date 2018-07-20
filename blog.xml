@@ -5,10 +5,12 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <atom:link href="{{ site.url }}/blog.xml" rel="self" type="application/rss+xml" />
-    <title>{{ site.name }}</title>
-    <link>{{ site.url }}</link>
+    <title>{{ site.name }}'s Blog</title>
+    <link>{{ site.url }}/blog/</link>
     <description>Chris Ruppel's blog. Web development, digital art, and everything in between.</description>
     <language>en</language>
+    <managingEditor>chris.ruppel@gmail.com (Chris Ruppel)</managingEditor>
+    <webMaster>chris.ruppel@gmail.com (Chris Ruppel)</webMaster>
 
     {% for post in site.categories.blog limit:20 %}
     <item>

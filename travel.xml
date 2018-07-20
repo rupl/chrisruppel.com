@@ -5,10 +5,12 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <atom:link href="{{ site.url }}/travel.xml" rel="self" type="application/rss+xml" />
-    <title>{{ site.name }}</title>
-    <link>{{ site.url }}</link>
+    <title>{{ site.name }}'s Travels</title>
+    <link>{{ site.url }}/travel/</link>
     <description>A travel blog detailing the adventures of Chris Ruppel.</description>
     <language>en</language>
+    <managingEditor>chris.ruppel@gmail.com (Chris Ruppel)</managingEditor>
+    <webMaster>chris.ruppel@gmail.com (Chris Ruppel)</webMaster>
 
     {% for trip in site.categories.travel limit:20 %}
     <item>
