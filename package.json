@@ -49,7 +49,9 @@
     "start": "node_modules/.bin/gulp jekyll-deploy; node index.js",
     "dev": "node_modules/.bin/gulp jekyll; nodemon index.js",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "imgs-test": "aws s3 sync ./_site/img s3://assets.chrisruppel.com/img --region eu-central-1 --acl public-read --dryrun",
+    "imgs-live": "aws s3 sync ./_site/img s3://assets.chrisruppel.com/img --region eu-central-1 --acl public-read"
   },
   "snyk": true,
   "devDependencies": {
