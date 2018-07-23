@@ -23,15 +23,11 @@ gallery:
 - src: lisbon-tile-5.jpg
   alt: Detailed stone work on a sidewalk.
   comment: Keep your head down or you'll miss something good.
-  type: tall
+  type: tall-half half
 - src: lisbon-tile-6.jpg
   alt: Detailed, patterned stone work in a city square.
   comment: This is the site of a major square but I forgot to get the name of it.
-  type: tall-half
-- src: lisbon-tile-7.jpg
-  alt: wood-work integrated with stone
-  comment: This was the entry way of a bank. See the secret panel?
-  type: tall-half
+  type: tall-half half
 
 tags:
 - artwork
