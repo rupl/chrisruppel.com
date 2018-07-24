@@ -112,6 +112,22 @@ While developing the module we took care to ensure that a website which already 
 My hope is that we can continue keeping up with industry expectations for _Add to Homescreen_ and ensure that Drupal sites have an easy way to achieve it without maintaining extensive frontend knowledge.
 
 
+## Leave no trace
+
+The main bug that held up the official module release was **self-uninstallation of the Service Worker**. Since the SW takes over requests (and in some browsers) could live on forever, having a leftover influence on a website that no longer needs or wants the Service Worker can be a nuisiance at least and catastrophic at worst.
+
+There are many reasons why a Service Worker might no longer be wanted but I'll list a few of the most common situations generated during our discussion about self-uninstallation:
+
+* The contrib module is uninstalled
+* The site is migrated to a new Drupal site without the module
+* The site is migrated to a new CMS or tech stack entirely
+* A domain is sold or otherwise transferred to a new owner
+
+Particularly when the module itself is uninstalled, we shouldn't be leaving leftover Service Workers that have an influence on site behavior. Uninstalling a Drupal module means its functionality should go away. Completely.
+
+I'm happy to report we [resolved this issue](https://www.drupal.org/project/pwa/issues/2913023) before shipping 1.0 and you can confidently install the module on a website with the expectation that uninstalling the module will also remove the SW from each visitor's browser whenever they return to your site, no matter how far in the future they return.
+
+
 ## Future plans
 
 As I mentioned before, the PWA module will aim to work out of the box with minimal configuration. Hopefully by making this module available we can gather more data about how Drupal sites are used and provide more support for other Web Platform features when it makes sense to do so. If you have any questions or suggestions feel free to [file an issue on drupal.org](https://www.drupal.org/project/issues/pwa?text=&status=Open&priorities=All&categories=All&version=7.x&component=All).
