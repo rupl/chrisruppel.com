@@ -83,7 +83,7 @@ I was trying to make my footer more personable and included my headshot, as one 
 <img alt="my face"
   class="avatar-wobble"
   width="160" height="172.5"
-  src="/static/chris-ruppel-2015@320.jpg">
+  src="/static/chris-ruppel-2015@384x384.jpg">
 
 <style type="text/css">
   img.avatar-wobble {
