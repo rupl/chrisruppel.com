@@ -13,8 +13,18 @@
 
 .client {
   flex: 1 0 33.3333%;
-  min-width: 160px;
+  min-width: 179px;
+  min-height: 179px;
   margin: 0;
   padding: 0;
   text-align: center;
+
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 66.66%;
+}
+
+
+.client--unocha {
+  background-size: 45%;
 }

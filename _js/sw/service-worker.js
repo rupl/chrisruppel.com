@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.8.5',
+  cache_version: 'main_v1.8.6',
   offline_assets: [
     '/',
     '/offline/',
@@ -28,7 +28,7 @@ var SW = {
     '/svg/work/logos/stanford.svg',
     '/svg/work/logos/timeinc.svg',
     '/svg/work/logos/turner.svg',
-    '/svg/work/logos/ithaca.svg',
+    '/svg/work/logos/unocha.svg',
   ]
 };
 
