@@ -126,8 +126,11 @@ app.post('/webmentions/post/', async function (req, res) {
       // Parse source URL for microformats
       Microformats.get(options, async function(err, mf) {
         try {
+          // Don't require trailing slash when we confirm a webmention.
+          const target = req.body.target.replace(/\/$/, '');
+
           // Determine if source contains target
-          var sourceContainsTarget = html.indexOf(req.body.target) !== -1;
+          const sourceContainsTarget = html.indexOf(target) !== -1;
 
           // If target was found, extract desired data and add to DB.
           // The microformats are optional and hopefully fall back to either an
