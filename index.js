@@ -156,14 +156,17 @@ app.post('/webmentions/post/', async function (req, res) {
             var entryAuthorUrl = jq('items[type=h-entry].properties.author[0].properties.url[0]', {data:mf}).value;
             var hCardName = jq('items[type=h-card].properties.name[0]', {data:mf}).value;
             var hCardUrl = jq('items[type=h-card].properties.url[0]', {data:mf}).value;
-            var targetUrl = url.parse(req.body.target);
-            var wmAuthorName = (!!entryAuthorName) ? entryAuthorName : (hCardName) ? hCardName : targetUrl.hostname;
-            var wmAuthorUrl = (!!entryAuthorUrl) ? entryAuthorUrl : (hCardUrl) ? hCardUrl : '';
+            var sourceUrl = url.parse(req.body.source);
+            var wmAuthorName = (!!entryAuthorName) ? entryAuthorName : (hCardName) ? hCardName : sourceUrl.hostname;
+            var wmAuthorUrl = (!!entryAuthorUrl) ? entryAuthorUrl : (hCardUrl) ? hCardUrl : sourceUrl;
 
             // Publish date
             var wmPubdate = jq('items[type=h-entry].properties.published[0]', {data:mf}).value || 'NOW()';
 
             // Attempt DB insert.
+            //
+            // TODO: first select the DB for the source, if found we can update
+            //       the existing entry.
             const client = await pool.connect();
             const result = await client.query(
               `INSERT INTO ${DATABASE_WEBMENTIONS} (target, source, title, summary, author_name, author_url, published) VALUES ($1, $2, $3, $4, $5, $6, $7);`,
