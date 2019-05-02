@@ -6,6 +6,7 @@
   "scripts": {
     "postdeploy": "npm start"
   },
+  "stack": "heroku-18",
   "buildpacks": [
     {
       "url": "https://github.com/mcollina/heroku-buildpack-graphicsmagick"
