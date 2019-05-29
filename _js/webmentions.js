@@ -123,10 +123,10 @@
           thisWebmention.classList.add('p-comment');
           thisWebmention.classList.add('h-entry');
           thisWebmention.id = 'comment-' + row.id;
-          thisContent += (row.title) ? '<h3><a href="'+ row.source +'">'+ row.title +'</a></h3>' : '';
-          thisContent += (row.summary) ? '<div class="e-content"><p>' + row.summary + '</p></div>' : '';
+          thisContent += (row.title) ? '<h3><a href="'+ row.source +'">'+ htmlDecode(row.title) +'</a></h3>' : '';
+          thisContent += (row.summary) ? '<div class="e-content"><p>' + htmlDecode(row.summary) + '</p></div>' : '';
           thisContent += '<footer>';
-          thisContent += 'Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + (row.author_url || row.source) + '">' + row.author_name + '</a></cite> on <time class="dt-published" datetime="' + row.published + '">' + row.published.split('T')[0] + '</time>';
+          thisContent += 'Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + (row.author_url || row.source) + '">' + htmlDecode(row.author_name) + '</a></cite> on <time class="dt-published" datetime="' + row.published + '">' + row.published.split('T')[0] + '</time>';
           thisContent += '<a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a>';
           thisContent += '</footer>';
           thisWebmention.innerHTML = thisContent;
@@ -137,5 +137,11 @@
       console.error('😢 Assembling Webmention markup failed.');
       wmlContainer.innerHTML = '<p class="warning">Webmentions couldn\'t be fetched.</p>';
     });
+  }
+
+  // @see https://stackoverflow.com/a/34064434
+  function htmlDecode(input) {
+    var doc = new DOMParser().parseFromString(input, "text/html");
+    return doc.documentElement.textContent;
   }
 })();
