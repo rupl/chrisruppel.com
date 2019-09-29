@@ -6,7 +6,7 @@
 {% if page.category == 'blog' %} — {% endif %}
 {% endcapture %}
 <!DOCTYPE html>
-<html class="no-js wf-loading" lang="en-US">
+<html class="no-js" lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>{{ title | strip_newlines }} {{ site.name }}</title>
@@ -69,33 +69,6 @@
       // JS is able to start executing.
       document.documentElement.classList.remove('no-js');
       document.documentElement.classList.add('js');
-
-      {% include _head.js %}
-
-      (function iife() {
-        'use strict';
-
-        // Optimization for Repeat Views
-        if (sessionStorage.fontsLoadedFoutWithClassPolyfill) {
-          document.documentElement.classList.remove('wf-loading');
-          document.documentElement.classList.add('wf-oswald');
-          return;
-        }
-
-        {% include _ffo.js %}
-
-        // Load and observe fonts
-        var oswaldLight = new FontFaceObserver('Oswald', {weight: 300});
-        var oswaldRegular = new FontFaceObserver('Oswald', {weight: 400});
-
-        Promise.all([oswaldLight.load(), oswaldRegular.load()]).then(function() {
-          document.documentElement.classList.remove('wf-loading');
-          document.documentElement.classList.add('wf-oswald');
-
-          // Optimization for Repeat Views
-          sessionStorage.fontsLoadedFoutWithClassPolyfill = true;
-        });
-      })();
     </script>
 
     {% if site.matomo.id != '' %}

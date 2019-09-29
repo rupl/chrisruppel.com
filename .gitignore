@@ -6,8 +6,6 @@ css
 js
 svg
 _includes/main.min.css
-_includes/_head.js
-_includes/_ffo.js
 /service-worker.js
 *.css.map
 
