@@ -60,6 +60,8 @@ How'd we get there? On motorbikes, of course! So I rode back down the mountain w
 
 We made it back down to the hospital with me navigating via phone (no, not while riding), and checked into the hospital. 20 minutes, 5 stitches, and [972 baht](https://duckduckgo.com/?q=972+thb+usd&ia=currency) later I was cleared to leave. I was very grateful for modern medicine on this day.
 
+---
+
 The checkups are quick. Yesterday, I showed a particularly large bruise I developed on my belly near my hip and asked if it needed any attention. The nurse simply said _"all fine, you're fat"_ — GREAT! She then said something else to me which I didn't hear, but on the third time she said it loud and clear: _"DIET"_
 
 Wonderful consultation, I'll see you tomorrow!

@@ -7,14 +7,11 @@
   opacity: .5;
   transition: opacity 2s ease-in-out;
 
-  @include font-oswald;
-  font-size: 1.6em;
+  @include font-heading;
+  font-size: 1.5em;
   font-style: normal;
   font-weight: 300;
-
-  .wf-loading & {
-    letter-spacing: -3px;
-  }
+  letter-spacing: -1.5px;
 
   &:hover {
     opacity: 1;

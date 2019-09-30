@@ -3,7 +3,7 @@
 //
 
 blockquote.quote {
-  @include font-oswald;
+  @include font-heading;
   margin-bottom: 2em;
   opacity: .6;
   background-color: transparent;

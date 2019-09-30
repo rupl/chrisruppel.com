@@ -8,25 +8,34 @@
   // Sub-components
   //
 
-  .title--main {
+  .teaser--title .title--main {
+    font-size: 1.25em;
+
     @media (min-width: 1000px) {
-      margin-left: -10%;
-      margin-right: -10%;
+      margin-left: -3rem;
+      margin-right: -3rem;
     }
   }
 
   time {
     display: block;
-    min-width: 175px;
+    min-width: 220px;
     padding-right: 12px;
     font-style: italic;
     font-weight: 300;
     color: rgba(#000, .6);
 
-    @media (min-width: 1000px) {
+    @media (min-width: 900px) {
       display: inline-block;
       text-align: right;
     }
+  }
+
+  .where {
+    @include font-copy;
+    font-size: .8em;
+    font-style: italic;
+    opacity: .8;
   }
 
   .summary {}

@@ -7,7 +7,7 @@ p {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 em {
@@ -77,15 +77,23 @@ main {
   // letter-spacing: -.5px;
 
   h1, h2, h3 {
-    @include font-oswald;
+    @include font-heading;
   }
 
   h4 {
     font-weight: 200;
     font-style: italic;
     border-radius: 1em / 4em;
-    border-left: 1.5em solid rgba(#f82, .8);
-    padding-left: .5em;
+    border-left: 1.5rem solid rgba(#f82, .8);
+    padding-left: .5rem;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: .9em;
   }
 
   // Spruce up the lists a bit.

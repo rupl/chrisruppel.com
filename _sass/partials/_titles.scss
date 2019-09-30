@@ -5,23 +5,16 @@
 .title {}
 
 .title--main {
-  @include font-oswald;
-
-  .wf-loading & {
-    letter-spacing: -3px;
-  }
+  @include font-heading;
 }
 
 .subtitle {
-  @include font-oswald;
+  @include font-copy;
   font-style: italic;
   font-weight: 300;
-  letter-spacing: -0.5px;
+  opacity: .8;
+  letter-spacing: -1px;
   word-spacing: -1px;
-
-  .wf-loading & {
-    letter-spacing: -4px;
-  }
 }
 
 .title--page {

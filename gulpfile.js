@@ -56,7 +56,7 @@ gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment.', function(cb) 
 // -----------------------------------------------------------------------------
 // Sass
 // -----------------------------------------------------------------------------
-gulp.task('sass', 'Compiles Sass:', ['sass-main', 'sass-fonts']);
+gulp.task('sass', 'Compiles Sass:', ['sass-main']);
 
 gulp.task('sass-main', false, function () {
   bs.notify('sass-main compiling...');
@@ -77,18 +77,6 @@ gulp.task('sass-main', false, function () {
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
     .pipe(gulp.dest('_includes')) // for the Jekyll include
-    .pipe(reload({stream: true}));
-});
-
-gulp.task('sass-fonts', false, function () {
-  bs.notify('sass-fonts compiling...');
-
-  return gulp.src('_sass/fonts.scss')
-    .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(rename('fonts.min.css'))
-    .pipe(gulp.dest('css'))
-    .pipe(gulp.dest('_site/css'))
     .pipe(reload({stream: true}));
 });
 

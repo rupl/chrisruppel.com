@@ -41,7 +41,7 @@
     text-decoration: none;
     text-shadow: 1px 1px 1px #fff;
     transition: background-position 1s ease-in-out;
-    @include font-oswald;
+    @include font-heading;
   }
 
   .nav--work {

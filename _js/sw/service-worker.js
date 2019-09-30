@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.8.6',
+  cache_version: 'main_v1.9.0',
   offline_assets: [
     '/',
     '/offline/',
@@ -18,8 +18,6 @@ var SW = {
     '/about/',
     '/about/site/',
     '/travel/list/',
-    '/css/main.min.css',
-    '/css/fonts.min.css',
     '/js/main.min.js',
     '/static/chris-ruppel-2015@384x384.jpg',
     '/static/chris-ruppel-2015@512x512.jpg',

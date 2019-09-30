@@ -81,6 +81,8 @@ Marching on another 20 minutes we found a sign for... the India Venster 😆
 
 It wasn't too long until we were back in the thick of the tourism near the cable car. We gladly blended into the crowd, grabbing ice cream and drinks, feeling lucky to be alive. Our cable car ride to the bottom was pleasantly uneventful.
 
+---
+
 We later figured out that we'd gone off the trail even before sitting down for lunch, which is why Anthony was the only other hiker we saw after our meal. In total, we hiked around three of the 12 apostles, and the real Venster takes hikers around none! 
 
 With the whole ordeal behind us, it was invigorating and made us feel quite accomplished. It raised my tolerance for hiking situations, and made me appreciate having proper supplies for a given trek.

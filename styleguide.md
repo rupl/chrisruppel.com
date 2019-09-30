@@ -2,13 +2,15 @@
 title: Styleguide
 permalink: /styleguide/
 published: false
+layout: blog
+summary: "✒ Styleguide for chrisruppel.com"
 ---
-
-<p class="intro">✒ Styleguide for chrisruppel.com</p>
 
 This is a paragraph of text. It's just regular text and should be followed by another paragraph or two so I can check spacing in between them. I'd love to use some filler text or copy/paste the same thing but writing real content is more natural.
 
-This is a second paragraph with **bold text for emphasis**. It's generated using markdown to make sure it's consistent with regular articles.
+This is a second paragraph with **bold text for emphasis**. It's generated using markdown to make sure it's consistent with regular articles. Next comes an `<hr>` tag to separate sections of paragraphs.
+
+---
 
 This is the third paragraph with _italicized text for second voice_. Hopefully three paragraphs is enough to check the spacing between multiple blocks of text. This one isn't long enough yet so here's one more sentence.
 
@@ -51,3 +53,23 @@ One more paragraph to break the blockquotes up and ensure they're not interferin
 
 ###### Heading level 6
 
+Let's use some code blocks. Here's an `inline-code.block` and using Prism you can also syntax-highlight multiple types of code:
+
+```html
+<!-- HTML -->
+<p>This is HTML <em>markup</em></p>
+```
+
+```css
+/* This is CSS */
+.my-selector {
+  --prop: 3px;
+}
+```
+
+```js
+// Is this JavaScript?
+(function () {
+  return true;
+})();
+```
