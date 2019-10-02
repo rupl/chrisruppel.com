@@ -49,7 +49,7 @@ app.use(helmet.contentSecurityPolicy({
     styleSrc:   ["'self'", "*.mapbox.com", "'unsafe-inline'"],
     imgSrc:     ["'self'", "*.mapbox.com", "assets.chrisruppel.com", "analytics.chrisruppel.com", "data:", "blob:"],
     connectSrc: ["'self'", "*.mapbox.com", "assets.chrisruppel.com"],
-    fontSrc:    ["'self'", 'data:'],
+    fontSrc:    ["'self'", "fonts.googleapis.com", "fonts.gstatic.com"],
     objectSrc:  ["youtube.com", "youtube-nocookie.com"],
     mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
     frameSrc:   ["'self'", "https://www.youtube.com", "https://www.youtube-nocookie.com", "codepen.io"],
