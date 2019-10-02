@@ -11,7 +11,7 @@ layout: page
   <div id="blog-list" class="blog-list">
     <!-- Load some initial content -->
     {% for post in site.categories.blog %}
-      <article>
+      <article class="teaser--title">
         <header>
           <h2 class="title--main">
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>
