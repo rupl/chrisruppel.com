@@ -46,10 +46,10 @@ app.use(helmet.contentSecurityPolicy({
   directives:  {
     defaultSrc: ["'self'"],
     scriptSrc:  ["'self'", "*.mapbox.com", "codepen.io", "*.codepen.io", "analytics.chrisruppel.com", "'unsafe-inline'", "'unsafe-eval'"],
-    styleSrc:   ["'self'", "*.mapbox.com", "'unsafe-inline'"],
+    styleSrc:   ["'self'", "*.mapbox.com", "fonts.googleapis.com", "'unsafe-inline'"],
     imgSrc:     ["'self'", "*.mapbox.com", "assets.chrisruppel.com", "analytics.chrisruppel.com", "data:", "blob:"],
     connectSrc: ["'self'", "*.mapbox.com", "assets.chrisruppel.com"],
-    fontSrc:    ["'self'", "fonts.googleapis.com", "fonts.gstatic.com"],
+    fontSrc:    ["'self'", "fonts.gstatic.com"],
     objectSrc:  ["youtube.com", "youtube-nocookie.com"],
     mediaSrc:   ["youtube.com", "youtube-nocookie.com"],
     frameSrc:   ["'self'", "https://www.youtube.com", "https://www.youtube-nocookie.com", "codepen.io"],
