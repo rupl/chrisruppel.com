@@ -1,5 +1,5 @@
 {% for post in site.categories.blog limit:5 %}
-  <article data-url="{{ site.url }}{{ post.url }}">
+  <article class="teaser--title" data-url="{{ site.url }}{{ post.url }}">
     <header>
       <h2 class="title--main">
         <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>

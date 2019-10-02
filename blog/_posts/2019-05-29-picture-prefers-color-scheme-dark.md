@@ -1,5 +1,5 @@
 ---
-title: Combining &lt;picture&gt; with prefers-color-scheme media query
+title: "&lt;picture&gt; with prefers-color-scheme media query"
 
 summary: Another way to adapt your media to dark mode.
 
