@@ -8,7 +8,7 @@ permalink: /offline/
 <p>It seems like your internet connection has gone away...</p>
 
 <div id="offline">
-  <p>...however, you did save the following pages for offline viewing!</p>
+  <p class="offline-message">...however, you did save the following pages for offline viewing!</p>
   <ul id="offline-content">
     <!-- Filled in by SW -->
   </ul>
@@ -22,3 +22,92 @@ permalink: /offline/
   <a class="btn" href="/about/" title="About">About</a>
   <a class="btn" href="/travel/list/" title="Travel list">Travel list</a>
 </div>
+
+<script>
+(function offline() {
+  "use strict";
+
+  // Get all Cache entries for this user.
+  caches.keys().then(async function getCacheNames(cacheNames) {
+    // Define these just once instead of in the loop.
+    const offlineContentList = document.querySelector('#offline');
+    const offlineContentEntry = document.querySelector('#offline-content');
+    const travelList = document.querySelector('.trip-list');
+    const offlineContentFound = false;
+    const parser = new DOMParser();
+
+    return Promise.all(
+      // Loop through Cache entries.
+      cacheNames.map(async function populateOfflineList(cacheName) {
+        // Check if any have the offline article naming convention.
+        if (cacheName.indexOf('chrisruppel-offline--') !== -1) {
+          // Extract the URL from cache name
+          const cachedURL = cacheName.split('--')[1];
+
+          // Fetch the cached HTML so we can make a richer summary
+          const response = await caches.match(cachedURL);
+          const cacheHTML = await response.text();
+          const dom = parser.parseFromString(cacheHTML, 'text/html');
+          const entry = {};
+          entry.title = dom.querySelector('.entry--main .title--main').innerText;
+          entry.summary = dom.querySelector('.entry--main .p-summary').innerText;
+          entry.datetime = dom.querySelector('.entry--main .dt-published').getAttribute('datetime');
+          entry.published = dom.querySelector('.entry--main .dt-published').innerText;
+          entry.url = dom.querySelector('.entry--main .u-uid').value;
+
+          // Make our summary HTML
+          var cacheEntry = document.createElement('li');
+          cacheEntry.innerHTML = `
+            <article class="h-entry--offline">
+              <a class="u-url--offline" href="${cachedURL}">${entry.title}</a>
+              <p class="p-summary--offline">${entry.summary}</p>
+              <footer class="entry-meta--offline">Published <time datetime="${entry.datetime}" class="dt-published">${entry.published}</time></footer>
+            </article>`;
+
+          // Append to DOM.
+          if (!!offlineContentEntry) {
+            console.info('Service Worker: found user-cached content ' + cacheName);
+            offlineContentEntry.appendChild(cacheEntry);
+          }
+
+          // Set the offline box to display since we found something
+          if (!!offlineContentList) {
+            offlineContentList.classList.add('is--active');
+          }
+
+          // Set the Travel list to offline mode when Offline, but tag the
+          // cached entries so they stay visible.
+          if (!navigator.onLine && !!travelList) {
+            travelList.classList.add('is-offline');
+            var cachedEntry = document.querySelector('.teaser--title[data-url="' + window.location.origin + cachedURL + '"');
+
+            if (!!cachedEntry) {
+              cachedEntry.classList.add('is-cached');
+              offlineContentFound = true;
+            }
+          }
+        }
+      })
+    ).then(function displayOfflineContent() {
+      if (offlineContentFound) {
+        // Append a message telling the user the list was filtered. Give them
+        // the option to remove the filter.
+        var message = document.createElement('aside');
+        message.id = 'travel-list-filter-message';
+        message.classList.add('warning');
+        message.innerHTML = '<p>It seems like you\'re offline, so the list is only showing the entries you saved for offline viewing. <a href="#all" id="travel-list-show-all">Want to see it all?</a></p>';
+        travelList.appendChild(message);
+
+        // Set up listener for button to show all entries.
+        var allButton = document.querySelector('#travel-list-show-all');
+        if (!!allButton) {
+          allButton.on('click', function () {
+            travelList.classList.remove('is-offline');
+            message.parentNode.removeChild(message);
+          });
+        }
+      }
+    });
+  });
+})();
+</script>

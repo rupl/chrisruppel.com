@@ -70,6 +70,11 @@
       // JS is able to start executing.
       document.documentElement.classList.remove('no-js');
       document.documentElement.classList.add('js');
+
+      // Tell CSS if we're definitely offline.
+      if (!navigator.onLine) {
+        document.documentElement.classList.add('is--offline');
+      }
     </script>
 
     {% if site.matomo.id != '' %}

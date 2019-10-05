@@ -6,13 +6,43 @@
   transition: 1.5s ease-in-out;
   transition-property: max-height, opacity;
 
-  &.is-active {
+  &.is--active {
     opacity: 1;
     height: auto;
     max-height: 1000px;
   }
 
-  a {
-    text-transform: capitalize;
+  .offline-message {
+    margin-top: 0;
+  }
+
+  #offline-content {
+    margin: 0;
+    padding: 0;
+
+    @media(min-width: 36em) {
+      padding-left: 1.5em;
+    }
+  }
+
+
+  li {
+    // reset the reset
+    font-size: 100%;
+  }
+
+  // Offline list styling
+  .u-url--offline {
+    font-size: 1.1em;
+  }
+
+  .p-summary--offline {
+    margin: .5rem 0;
+  }
+
+  .entry-meta--offline {
+    font-size: .8em;
+    font-style: italic;
+    opacity: .5
   }
 }

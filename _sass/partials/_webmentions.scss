@@ -7,6 +7,10 @@
   margin-bottom: 2em;
   background: #eee;
   border-radius: 5px;
+
+  .is--offline & {
+    display: none;
+  }
 }
 
 .webmentions__loading,
@@ -17,6 +21,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 //
 // Form to submit a new Webmention
