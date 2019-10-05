@@ -9,7 +9,7 @@ importScripts('/js/cache-polyfill.js');
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v1.9.1',
+  cache_version: 'main_v1.9.2',
   offline_assets: [
     '/',
     '/offline/',
@@ -36,6 +36,10 @@ var SW = {
 // Installation
 //
 self.addEventListener('install', function installer(event) {
+  // Don't wait to take control.
+  self.skipWaiting();
+
+  // Set up our cache.
   event.waitUntil(
     caches
       .open(SW.cache_version)
