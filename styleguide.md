@@ -1,7 +1,7 @@
 ---
 title: Styleguide
 permalink: /styleguide/
-published: false
+published: true
 layout: blog
 summary: "✒ Styleguide for chrisruppel.com"
 ---
@@ -39,7 +39,7 @@ One more paragraph to break the blockquotes up and ensure they're not interferin
 
 One more paragraph to break the blockquotes up and ensure they're not interfering with each other within the styleguide.
 
-<aside class="update" datetime="2016-01-01"><p>This is an update to an entry. It unfortunately cannot be created with markdown but at least having this in the styleguide lets me check on it</p></aside>
+<ins class="update" datetime="2016-01-01"><p>This is an update to an entry. It unfortunately cannot be created with markdown but at least having this in the styleguide lets me check on it</p></ins>
 
 # Heading level 1
 
