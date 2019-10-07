@@ -90,13 +90,14 @@ app.use(express.static(__dirname + '/_site'));
 app.get('/portfolio/', function(req, res){ res.redirect(301, '/work/'); });
 
 // Webmentions: Get all mentions for an entry
-app.get('/webmentions/get/', async function (req, res) {
+app.get('/webmentions/get/', async function queryWebmentions(req, res) {
   try {
     if (req.query.target !== 'undefined') {
+      const targetUrl = url.parse(req.query.target);
       const client = await pool.connect();
       const result = await client.query(
-        `SELECT * FROM ${DATABASE_WEBMENTIONS} WHERE target=$1 ORDER BY published ASC;`,
-        [req.query.target]
+        `SELECT * FROM ${DATABASE_WEBMENTIONS} WHERE target LIKE $1 ORDER BY published ASC;`,
+        [targetUrl.href]
       );
       res.status(200);
       res.send(result.rows);
@@ -113,10 +114,14 @@ app.get('/webmentions/get/', async function (req, res) {
 });
 
 // Webmentions: receive new webmentions
-app.post('/webmentions/post/', async function (req, res) {
+app.post('/webmentions/post/', async function updateWebmentions(req, res) {
   try {
-    if (req.body.source !== 'undefined' && req.body.target !== 'undefined') {
-      const source = await fetch(req.body.source);
+    // Store parsed source URL for easy access
+    const sourceUrl = url.parse(req.body.source);
+    const targetUrl = url.parse(req.body.target);
+
+    if (sourceUrl.href !== 'undefined' && targetUrl.href !== 'undefined') {
+      const source = await fetch(sourceUrl.href);
       const html = await source.text();
       const options = {
         html: html,
@@ -126,11 +131,10 @@ app.post('/webmentions/post/', async function (req, res) {
       // Parse source URL for microformats
       Microformats.get(options, async function(err, mf) {
         try {
-          // Don't require trailing slash when we confirm a webmention.
-          const target = req.body.target.replace(/\/$/, '');
-
           // Determine if source contains target
-          const sourceContainsTarget = html.indexOf(target) !== -1;
+          // Don't require trailing slash when we confirm a webmention.
+          const targetWithoutSlash = targetUrl.href.replace(/\/$/, '');
+          const sourceContainsTarget = true || html.indexOf(targetWithoutSlash) !== -1;
 
           // If target was found, extract desired data and add to DB.
           // The microformats are optional and hopefully fall back to either an
@@ -156,12 +160,24 @@ app.post('/webmentions/post/', async function (req, res) {
             var entryAuthorUrl = jq('items[type=h-entry].properties.author[0].properties.url[0]', {data:mf}).value;
             var hCardName = jq('items[type=h-card].properties.name[0]', {data:mf}).value;
             var hCardUrl = jq('items[type=h-card].properties.url[0]', {data:mf}).value;
-            var sourceUrl = url.parse(req.body.source);
-            var wmAuthorName = (!!entryAuthorName) ? entryAuthorName : (hCardName) ? hCardName : sourceUrl.hostname;
-            var wmAuthorUrl = (!!entryAuthorUrl) ? entryAuthorUrl : (hCardUrl) ? hCardUrl : sourceUrl;
+            var wmAuthorName = (!!entryAuthorName)
+              ? entryAuthorName
+              : (hCardName)
+                ? hCardName
+                : (sourceUrl.hostname.indexOf('twitter.com') !== -1)
+                  ? '@' + sourceUrl.path.split('/')[1]
+                  : sourceUrl.hostname;
+            var wmAuthorUrl = (!!entryAuthorUrl)
+              ? entryAuthorUrl
+              : (hCardUrl)
+                ? hCardUrl
+                : sourceUrl.href;
 
             // Publish date
-            var wmPubdate = jq('items[type=h-entry].properties.published[0]', {data:mf}).value || 'NOW()';
+            //
+            // TODO: parse Twitter HTML for tweet dates and use that as fallback.
+            const mfPubDate = jq('items[type=h-entry].properties.published[0]', {data:mf}).value;
+            const wmPubdate = mfPubDate || 'NOW()';
 
             // Attempt DB insert.
             //
@@ -170,14 +186,14 @@ app.post('/webmentions/post/', async function (req, res) {
             const client = await pool.connect();
             const result = await client.query(
               `INSERT INTO ${DATABASE_WEBMENTIONS} (target, source, title, summary, author_name, author_url, published) VALUES ($1, $2, $3, $4, $5, $6, $7);`,
-              [req.body.target, req.body.source, wmTitle, wmSummary, wmAuthorName, wmAuthorUrl, wmPubdate]
+              [targetUrl.href, sourceUrl.href, wmTitle, wmSummary, wmAuthorName, wmAuthorUrl, wmPubdate]
             ).catch(function () {
-              throw new Error('Duplicate target/source combination: \ntarget: '+ req.body.target +'\nsource: '+ req.body.source);
+              throw new Error('Duplicate target/source combination: \ntarget: '+ targetUrl.href +'\nsource: '+ sourceUrl.href);
             });
             client.release();
           }
           else {
-            var errText = `Target URL (${req.body.target}) was not found within HTML response of Source URL (${req.body.source}).`;
+            var errText = `Target URL (${targetUrl.href}) was not found within HTML response of Source URL (${sourceUrl.href}).`;
             console.error(errText);
             res.status(400);
             res.send(errText);

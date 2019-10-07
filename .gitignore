@@ -10,6 +10,7 @@ _includes/main.min.css
 *.css.map
 
 # Development and test settings
+.env
 _config.dev.yml
 
 # Ignore asset caches
