@@ -18,26 +18,25 @@ main {
   }
 }
 
-.e-content {
-  .link--primary {
-    background: #eee;
-    border-radius: 5px;
-    position: relative;
-    overflow-x: hidden;
+.link--external {
+  background: #eee;
+  border-radius: 5px;
+  position: relative;
+  overflow-x: hidden;
+  margin-top: 1em;
 
-    a {
-      display: block;
-      font-size: 1.1em;
-      padding: 1em 1em 1em 4em;
-    }
+  a {
+    display: block;
+    font-size: 1.1em;
+    padding: 1em 1em 1em 3em;
+  }
 
-    &::before {
-      content: '🔗 ';
-      font-size: 2em;
-      position: absolute;
-      left: .75em;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  &::before {
+    content: '🔗 ';
+    font-size: 1.6em;
+    position: absolute;
+    left: .75em;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
