@@ -11,10 +11,6 @@ gallery:
   bgpad: 65%
 - caption: Screenshot of my Brave Payments settings, activated with a monthly budget of 50 BAT. Sites are listed according to how much of my budget they receive.
 
-syndication:
-- type: Twitter
-  href: https://twitter.com/rupl/status/923858036673966080
-
 tags:
 - ads
 - blockchain

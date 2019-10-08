@@ -45,15 +45,11 @@ gallery:
 - src: freiburg-visitors-10.jpg
   alt: Group photo of friends from the top of Schlossberg.
   comment: One of Taylor's famous felfies (fisheye selfies) from the top of Schlossberg.
-- caption: Credit&#58; all photos taken by <a href="http://thetravelsof.tsmith512.com/">Taylor Smith</a> and <a href="https://twitter.com/alwaysworking">Matt Grill</a>.
+- caption: Credit&#58; all photos taken by <a href="http://thetravelsof.tsmith512.com/">Taylor Smith</a> and <a href="https://matthewgrill.com/">Matt Grill</a>.
 
 tags:
 - friends
 - city walking
-
-syndication:
-- type: Twitter
-  href: https://twitter.com/rupl/status/649233730838659072
 
 summary: Before DrupalCon Barcelona three of my dear colleagues from Four Kitchens came to visit Freiburg. It was fun being the tour guide and showing them around the town I call home.
 ---

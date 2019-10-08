@@ -32,10 +32,6 @@ tags:
 - scams
 - sunsets
 
-syndication:
-- type: Twitter
-  href: https://twitter.com/rupl/status/675354232803880961
-
 summary: We kinda got scammed into a tour through Ha Long Bay, but it's a pretty nice place to be tricked into staying all afternoon.
 ---
 

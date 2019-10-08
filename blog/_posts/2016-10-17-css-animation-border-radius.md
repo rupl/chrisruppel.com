@@ -3,10 +3,6 @@ title: Using CSS to animate border-radius
 
 summary: A fun little technique to add depth and subtlety to your design.
 
-syndication:
-- type: Twitter
-  href: https://twitter.com/rupl/status/787986342949089281
-
 tags:
 - css
 - animation

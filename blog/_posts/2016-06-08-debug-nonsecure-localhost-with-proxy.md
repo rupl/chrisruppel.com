@@ -6,10 +6,6 @@ tags:
 - testing
 - service worker
 
-syndication:
-- type: Twitter
-  href: https://twitter.com/rupl/status/740553359451639809
-
 summary: Certain new features of the Web Platform require a secure origin, complicating local development and testing. Use a network proxy to make testing localhost on real devices easy!
 ---
 

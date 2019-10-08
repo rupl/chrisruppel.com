@@ -31,10 +31,6 @@ gallery:
   comment: As the sun set over the mountains we could see so many layers of mountains. It was great!
   type: wide
 
-syndication:
-- type: Facebook
-  href: https://www.facebook.com/chris.ruppel/posts/10105855380507458
-
 tags:
 - tours
 - sunsets

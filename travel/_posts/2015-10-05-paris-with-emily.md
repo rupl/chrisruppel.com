@@ -39,10 +39,6 @@ tags:
 - artwork
 - city walking
 
-syndication:
-- type: Twitter
-  href: https://twitter.com/rupl/status/651545255083380737
-
 summary: The first stop on our trip to Asia was actually Paris! My cousin Emily had just moved there and we wanted to get a visit in before leaving for 6 months.
 ---
 
