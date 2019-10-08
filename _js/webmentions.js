@@ -124,10 +124,10 @@
           thisWebmention.classList.add('h-entry');
           thisWebmention.id = 'comment-' + row.id;
           thisContent += (row.title) ? '<h3><a href="'+ row.source +'">'+ htmlDecode(row.title) +'</a></h3>' : '';
-          thisContent += (row.summary) ? '<div class="e-content"><p>' + htmlDecode(row.summary) + '</p></div>' : '';
+          thisContent += (row.summary) ? '<div class="e-content"><p>' + enrichSummary(row.source, htmlDecode(row.summary)) + '</p></div>' : '';
           thisContent += '<footer>';
           thisContent += 'Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="' + (row.author_url || row.source) + '">' + htmlDecode(row.author_name) + '</a></cite> on <time class="dt-published" datetime="' + row.published + '">' + row.published.split('T')[0] + '</time>';
-          thisContent += '<a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a>';
+          thisContent += ' <a href="#comment-'+ row.id +'" rel="bookmark" title="Permalink to this comment">#</a>';
           thisContent += '</footer>';
           thisWebmention.innerHTML = thisContent;
           wmlContainer.appendChild(thisWebmention);
@@ -143,5 +143,20 @@
   function htmlDecode(input) {
     var doc = new DOMParser().parseFromString(input, "text/html");
     return doc.documentElement.textContent;
+  }
+
+  // Enrich the summary
+  function enrichSummary(source, summary) {
+    var isSourceTwitter = source.indexOf('twitter.com') !== -1;
+    var output = summary;
+
+    if (isSourceTwitter) {
+      // Hashtags
+      output = output.replace(/#(\w+)/g, '<a href="https://twitter.com/hashtag/$1">#$1</a>');
+      // Users
+      output = output.replace(/@(\w+)/g, '<a href="https://twitter.com/$1">@$1</a>');
+    }
+
+    return output;
   }
 })();
