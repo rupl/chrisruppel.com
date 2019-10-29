@@ -1,17 +1,18 @@
 ---
-title: Collecting Brave Payments on GitHub Pages
+title: Collecting Brave Rewards on GitHub Pages
 
-summary: Brave offers a new compensation model for web publishing, but people often publish on subdomains they don't directly control. Learn how to verify your USER.github.io domain with Brave Publishers.
+summary: A guide to verify your USER.github.io domain with Brave Creators.
 
 tags:
 - ads
 - browsers
+- monetization
 - privacy
 ---
 
-I'm a big fan of [Brave Payments](https://brave.com/publishers), a system I think will revolutionize how content is monetized on the web, bringing privacy and independence to a system that's currently dominated by a couple of big players.
+I'm a big fan of [Brave Rewards](https://brave.com/brave-rewards/), a system I think will revolutionize how content is monetized on the web, bringing privacy and independence to a system that's currently dominated by a couple of big players.
 
-If you've never heard of it, [read my take on Brave Payments](/blog/brave-payments).
+If you've never heard of it, [read my take on Brave Rewards](/blog/brave-rewards/).
 
 ## Publishing on GitHub Pages
 
@@ -19,26 +20,26 @@ I'm a web developer so publishing to my own blog is a time-honored tradition. Bu
 
 A good example is GitHub Pages, which let you create a static website for any repository hosted on GitHub. The hosting is free, reliable, and provides near instant updates. The URL structure is dictated by the repository name as follows:
 
-<pre><code class="language-none"># Pattern:
+<pre class="language-none"># Pattern:
 https://github.com/<strong style="color: #ff33bb">USER</strong>/<strong style="color: #ff9911">REPO-SLUG</strong>/
 https://<strong style="color: #ff33bb">USER</strong>.github.io/<strong style="color: #ff9911">REPO-SLUG</strong>/
 
 # Real example:
 https://github.com/<strong style="color: #ff33bb">rupl</strong>/<strong style="color: #ff9911">unfold</strong>/
 https://<strong style="color: #ff33bb">rupl</strong>.github.io/<strong style="color: #ff9911">unfold</strong>/
-</code></pre>
+</pre>
 
 This simple convention allows anyone to find a GitHub Pages site if they know the repository URL (and it indeed exists). The most common use-case is providing docs and demos for open-source software.
 
-However, there are other uses. People use GitHub Pages as a blogging service, and in my case I often develop and publish slide decks on GitHub Pages to accompany presentations at conferences. Since the slide decks get considerably more traffic than my personal blog, I thought I'd try to register for Brave Payments.
+However, there are other uses. People use GitHub Pages as a blogging service, and in my case I often develop and publish slide decks on GitHub Pages to accompany presentations at conferences. Since the slide decks get considerably more traffic than my personal blog, I thought I'd try to register the domain for Brave Rewards.
 
 ## Verify your content on GitHub Pages
 
 Brave supports two methods of verification. One is based on DNS, but in this case the individual users don't control DNS, only GitHub can do that. We need to use the other method: uploading a file to prove we own the subdomain.
 
-### Step 1: Register with Brave Publishers
+### Step 1: Register with Brave Creators
 
-Register your subdomain by following the instructions at the [Brave Payments portal](https://publishers.basicattentiontoken.org/). In this case you'll want to register `YOU.github.io` as the domain, where `YOU` is your GitHub username.
+Register your subdomain by following the instructions at the [Brave Creators portal](https://creators.brave.com/). In this case you'll want to register `YOU.github.io` as the domain, where `YOU` is your GitHub username.
 
 They will guide you through some account setup, then give you the choice of either DNS or file upload verification. We're using the file upload method.
 
@@ -48,18 +49,18 @@ GitHub allows people who [create a repo with the name `USER.github.io`](https://
 
 Create a repo called `YOU.github.io`. When I created mine, I also added an index file so casual visitors will have something to look at. If you've previously created the repository, then just continue to the next step.
 
-### Step 3: Add Brave Payments verification file
+### Step 3: Add Brave Rewards verification file
 
-Add a directory called `.well-known` — including the dot at the beginning — to the top-level of the repository. In the directory, put the file you received from Brave Publishers portal. It will only contain a few lines of text. Here is an example, but do NOT copy this text, you MUST use the unique file Brave provides you:
+Add a directory called `.well-known` — including the dot at the beginning — to the top-level of the repository. In the directory, put the file you received from Brave Creators portal. It will only contain a few lines of text. Here is an example, but do NOT copy this text, you MUST use the unique file Brave provides you:
 
 ```none
-This is a Brave Payments publisher verification file.
+This is a Brave Rewards publisher verification file.
 
 Domain: YOU.github.io
 Token: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
 ```
 
-Make sure the file is named `brave-payments-verification.txt`
+Make sure the file is named `brave-rewards-verification.txt`
 
 ### Step 4: Bypass Jekyll
 
@@ -73,4 +74,4 @@ Hopefully after a day or two, you'll see the verified publisher icon next to you
 
 ## Example repo
 
-If you'd like to see a real example, look at my repository for [`rupl.github.io`](https://github.com/rupl/rupl.github.io).
+If you'd like to see a real example, look at my repository for [`rupl.github.io`](https://github.com/rupl/rupl.github.io/tree/master/.well-known).

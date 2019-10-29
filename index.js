@@ -85,9 +85,11 @@ app.use(express.urlencoded({ extended: true }));
 // Serve the static Jekyll site
 app.use(express.static(__dirname + '/_site'));
 
-// Legacy redirects.
+// Redirects
 // app.get('/OLD_URL', function(req, res){ res.redirect(301, '/NEW_URL'); });
 app.get('/portfolio/', function(req, res){ res.redirect(301, '/work/'); });
+app.get('/blog/brave-payments/', function(req, res){ res.redirect(301, '/blog/brave-rewards/'); });
+app.get('/blog/brave-payments-github-pages/', function(req, res){ res.redirect(301, '/blog/brave-rewards-github-pages/'); });
 
 // Webmentions: Get all mentions for an entry
 app.get('/webmentions/get/', async function queryWebmentions(req, res) {
