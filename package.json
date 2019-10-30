@@ -4,8 +4,8 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": "8.15.1",
-    "npm": "6.4.1"
+    "node": "8.16.2",
+    "npm": "6.12.1"
   },
   "dependencies": {
     "compression": "^1.7.2",
