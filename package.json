@@ -8,13 +8,22 @@
     "npm": "6.4.1"
   },
   "dependencies": {
-    "autoprefixer": "^7.2.6",
-    "browser-sync": "^2.23.6",
     "compression": "^1.7.2",
     "concurrent-transform": "^1.0.0",
-    "cssnano": "^3.10.0",
     "express": "^4.16.3",
     "express-sslify": "^1.0.1",
+    "helmet": "^3.12.0",
+    "html-entities": "^1.2.1",
+    "json-query": "^2.2.2",
+    "microformat-node": "^2.0.1",
+    "node-fetch": "^2.1.2",
+    "pg": "^7.4.1",
+    "snyk": "^1.71.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "browser-sync": "^2.23.6",
+    "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
     "gulp-changed": "^3.2.0",
     "gulp-concat": "^2.6.1",
@@ -29,31 +38,22 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "helmet": "^3.12.0",
-    "html-entities": "^1.2.1",
-    "json-query": "^2.2.2",
-    "microformat-node": "^2.0.1",
-    "node-fetch": "^2.1.2",
-    "pg": "^7.4.1",
+    "nodemon": "^1.17.3",
     "run-sequence": "^2.2.1",
     "screenfull": "^3.3.2",
     "serviceworker-cache-polyfill": "^4.0.0",
-    "snyk": "^1.71.0",
     "system-font-css": "^2.0.2",
     "tar": ">=4.4.2",
     "three": "^0.80.1"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
-    "start": "node_modules/.bin/gulp jekyll-deploy; node index.js",
+    "start": "bundle exec jekyll build --config=_config.yml && node ./index.js",
     "dev": "node_modules/.bin/gulp jekyll; nodemon index.js",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect",
     "imgs-test": "aws s3 sync ./_site/img s3://assets.chrisruppel.com/img --region eu-central-1 --acl public-read --dryrun",
     "imgs-sync": "aws s3 sync ./_site/img s3://assets.chrisruppel.com/img --region eu-central-1 --acl public-read"
   },
-  "snyk": true,
-  "devDependencies": {
-    "nodemon": "^1.17.3"
-  }
+  "snyk": true
 }
