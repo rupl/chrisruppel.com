@@ -44,7 +44,6 @@
     "nodemon": "^1.17.3",
     "run-sequence": "^2.2.1",
     "screenfull": "^3.3.2",
-    "serviceworker-cache-polyfill": "^4.0.0",
     "set-value": ">=2.0.1",
     "system-font-css": "^2.0.2",
     "tar": ">=4.4.2",
