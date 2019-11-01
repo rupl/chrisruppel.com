@@ -40,13 +40,6 @@ function jekyllDev() {
 };
 module.exports['jekyll-dev'] = jekyllDev;
 
-// Add a second task for deploying
-function jekyllDeploy (cb) {
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'})
-    .on('close', cb);
-};
-module.exports['jekyll-deploy'] = jekyllDeploy;
-
 
 // -----------------------------------------------------------------------------
 // Sass
