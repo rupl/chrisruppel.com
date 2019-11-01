@@ -1,8 +1,7 @@
 // Gulp utils
 var gulp = require('gulp');
-var u = require('gulp-util');
-var log = u.log;
-var c = u.colors;
+var log = require('fancy-log');
+var c = require('chalk');
 var spawn = require('child_process').spawn;
 var gulpif = require('gulp-if');
 var plumber = require('gulp-plumber');
