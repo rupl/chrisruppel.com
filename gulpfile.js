@@ -14,6 +14,7 @@ var bs = require('browser-sync');
 var reload = bs.reload;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+sass.compiler = require('node-sass'); // forward compat in case default changes
 var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('autoprefixer');
 var concat = require('gulp-concat');
