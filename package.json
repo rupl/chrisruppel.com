@@ -35,7 +35,7 @@
     "gulp-help": "^1.6.0",
     "gulp-if": "^2.0.2",
     "gulp-image-resize": "^0.13.0",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-imagemin": "^6.1.1",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
