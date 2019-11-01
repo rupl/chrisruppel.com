@@ -1,8 +1,7 @@
 // Gulp utils
-var gulp = require('gulp-help')(require('gulp'));
-var u = require('gulp-util');
-var log = u.log;
-var c = u.colors;
+var gulp = require('gulp');
+var log = require('fancy-log');
+var c = require('chalk');
 var spawn = require('child_process').spawn;
 var gulpif = require('gulp-if');
 var plumber = require('gulp-plumber');
@@ -15,6 +14,7 @@ var bs = require('browser-sync');
 var reload = bs.reload;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+sass.compiler = require('node-sass'); // forward compat in case default changes
 var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('autoprefixer');
 var concat = require('gulp-concat');
@@ -26,39 +26,25 @@ var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 
 // Deployment debugging
-log(c.yellow('Detected environment: ' + (process.env.NODE_ENV || 'local')));
+log(c.yellow('Detected environment: ' + c.black.bgYellow((process.env.NODE_ENV || 'local'))));
 var isProduction = process.env.NODE_ENV === 'production';
-
-// -----------------------------------------------------------------------------
-// Help
-//
-// Shows a command listing when `gulp` is run without args.
-// -----------------------------------------------------------------------------
-gulp.task('default', false, ['help']);
 
 
 // -----------------------------------------------------------------------------
 // Jekyll
 // -----------------------------------------------------------------------------
-gulp.task('jekyll', 'Compiles Jekyll site in dev mode.', function() {
+function jekyllDev() {
   bs.notify('Jekyll building...');
   return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml', '--drafts'], {stdio: 'inherit'})
     .on('close', reload);
-});
-
-// Add a second task for deploying
-gulp.task('jekyll-deploy', 'Compiles Jekyll site for deployment.', function(cb) {
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml'], {stdio: 'inherit'})
-    .on('close', cb);
-});
+};
+module.exports['jekyll-dev'] = jekyllDev;
 
 
 // -----------------------------------------------------------------------------
 // Sass
 // -----------------------------------------------------------------------------
-gulp.task('sass', 'Compiles Sass:', ['sass-main']);
-
-gulp.task('sass-main', false, function () {
+gulp.task('sass', () => {
   bs.notify('sass-main compiling...');
 
   return gulp.src('_sass/styles.scss')
@@ -79,14 +65,15 @@ gulp.task('sass-main', false, function () {
     .pipe(gulp.dest('_includes')) // for the Jekyll include
     .pipe(reload({stream: true}));
 });
+module.exports.sass = gulp.series('sass');
+
 
 // -----------------------------------------------------------------------------
 // Combine/minify JS
 // -----------------------------------------------------------------------------
-gulp.task('js', 'Lint, bundle, minify JS:', ['js-main', 'js-sphere', 'js-sw', 'js-swcp', 'js-custom']);
 
 // Main
-gulp.task('js-main', 'Main JS', function() {
+gulp.task('js-main', () => {
   bs.notify('Building main JS...');
 
   return gulp.src([
@@ -101,7 +88,7 @@ gulp.task('js-main', 'Main JS', function() {
 });
 
 // Photosphere
-gulp.task('js-sphere', 'Photosphere JS', function() {
+gulp.task('js-sphere', () => {
   bs.notify('Building photosphere JS...');
 
   return gulp.src([
@@ -118,33 +105,19 @@ gulp.task('js-sphere', 'Photosphere JS', function() {
 });
 
 // Service Worker JS
-gulp.task('js-sw', 'Service Worker JS', function() {
+gulp.task('js-sw', () => {
   bs.notify('Building SW JS...');
 
   return gulp.src([
       '_js/sw/service-worker.js'
     ])
     .pipe(plumber())
-    .pipe(gulp.dest('')) // SW needs to be at site root
+    .pipe(gulp.dest('./')) // SW needs to be at site root
     .pipe(gulp.dest('_site')); // SW needs to be at site root
 });
 
-// Service Worker cache polyfill
-gulp.task('js-swcp', 'Service Worker cache polyfill', function() {
-  bs.notify('Building SW cache polyfill...');
-
-  return gulp.src([
-      'node_modules/serviceworker-cache-polyfill/index.js'
-    ])
-    .pipe(plumber())
-    .pipe(concat('cache-polyfill.js'))
-    .pipe(gulp.dest('js'))
-    .pipe(gulp.dest('_site/js'))
-    .pipe(reload({stream: true}));
-});
-
 // Custom scripts, usually used on a single page
-gulp.task('js-custom', 'Custom scripts', function() {
+gulp.task('js-custom', () => {
   bs.notify('Building custom scripts...');
 
   return gulp.src(['_js/custom/*.js'])
@@ -154,13 +127,16 @@ gulp.task('js-custom', 'Custom scripts', function() {
     .pipe(reload({stream: true}));
 });
 
+const jsTask = gulp.task('js', gulp.parallel('js-main', 'js-sphere', 'js-sw', 'js-custom'));
+
+module.exports.js = jsTask;
+
 // -----------------------------------------------------------------------------
 // Resize images
 // -----------------------------------------------------------------------------
-gulp.task('image-resize', 'Create different sizes for responsive images.', ['image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg', 'image-blog']);
 
 // Image derivative: 320
-gulp.task('image-320', false, function () {
+gulp.task('image-320', () => {
   return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
     .pipe(changed('_site/img/travel@320'))
     .pipe(parallel(
@@ -184,7 +160,7 @@ gulp.task('image-320', false, function () {
 });
 
 // Image derivative: 640
-gulp.task('image-640', false, function () {
+gulp.task('image-640', () => {
   return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
     .pipe(changed('_site/img/travel@640'))
     .pipe(parallel(
@@ -208,7 +184,7 @@ gulp.task('image-640', false, function () {
 });
 
 // Original images
-gulp.task('image-original', false, function () {
+gulp.task('image-original', () => {
   return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
     .pipe(changed('_site/img/travel'))
     .pipe(imagemin([
@@ -220,7 +196,7 @@ gulp.task('image-original', false, function () {
 });
 
 // Photospheres
-gulp.task('image-photosphere', false, function () {
+gulp.task('image-photosphere', () => {
   return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/photosphere'))
     .pipe(imagemin([
@@ -232,7 +208,7 @@ gulp.task('image-photosphere', false, function () {
 });
 
 // SVG icons
-gulp.task('image-svg', false, function () {
+gulp.task('image-svg', () => {
   return gulp.src(['_svg/**/*'])
     .pipe(changed('svg'))
     .pipe(imagemin([
@@ -247,7 +223,7 @@ gulp.task('image-svg', false, function () {
 });
 
 // Blog images - some stuff just isn't gallery-friendly.
-gulp.task('image-blog', false, function () {
+gulp.task('image-blog', () => {
   return gulp.src(['_img/blog/*', '!_img/blog/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
     .pipe(changed('_site/img/blog'))
     .pipe(imagemin([
@@ -258,55 +234,59 @@ gulp.task('image-blog', false, function () {
     .pipe(gulp.dest('_site/img/blog'));
 });
 
-
-// -----------------------------------------------------------------------------
-// Development tasks
-// -----------------------------------------------------------------------------
-gulp.task('browser-sync', false, function() {
-  bs({
-    server: './_site/',
-    port: 3456,
-    open: false
-  });
-});
-
-// Build site, run browser-sync, watch for changes.
-gulp.task('bs', 'Run dev tasks:', ['build-dev', 'browser-sync', 'watch'], function (cb) {
-  return cb; // allows use within sequence()
-});
-
-// Watch Files For Changes
-gulp.task('watch', 'Watch various files for changes and re-compile them.', function() {
-  log(c.yellow('Waiting for changes...'));
-  gulp.watch('_sass/**/*.scss', ['sass']);
-  gulp.watch('_img/blog/*', ['image-blog']);
-  gulp.watch('_img/photosphere/*', ['image-photosphere']);
-  gulp.watch('_img/travel/*', ['image-original', 'image-320', 'image-640']);
-  gulp.watch('_svg/*', ['image-svg']);
-  gulp.watch('_js/threejs/*', ['js-sphere']);
-  gulp.watch('_js/sw/*', ['js-sw']);
-  gulp.watch('_js/*', ['js-main']);
-  gulp.watch('_js/custom/*', ['js-custom']);
-  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], ['jekyll']);
-});
+const imageResizeTask = gulp.task('image-resize', gulp.parallel('image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg', 'image-blog'));
+module.exports['image-resize'] = imageResizeTask;
 
 
 // -----------------------------------------------------------------------------
 // Build site for deployment to live server.
 //
 // No longer running Jekyll as part of build-deploy in order to run this as
-// postinstall after node buildpack is set up. It runs inside bin/boot.sh now.
+// postinstall after node buildpack is set up. We also don't run all image tasks
+// since most of them are hosted on S3 now.
+//
+// This is run as postinstall before slug gets compiled. Jekyll gets generated
+// before spinning up the Express.js process.
 // -----------------------------------------------------------------------------
-gulp.task('build-deploy', 'Do a partial build to prep for deploy.', ['sass', 'js', 'image-svg', 'image-photosphere']);
-
+const buildDeployTask = gulp.task('build-deploy', gulp.parallel('sass', 'js', 'image-svg', 'image-photosphere'));
+module.exports['build-deploy'] = buildDeployTask;
 
 // -----------------------------------------------------------------------------
 // Build site for local development.
 // -----------------------------------------------------------------------------
-gulp.task('build-dev', 'Do a complete build to begin development.', function(cb) {
-  return sequence(
-    ['sass', 'js', 'image-resize'],
-    'jekyll',
-    cb
-  );
+gulp.task('build-dev', gulp.series(
+  gulp.parallel('sass', 'js', 'image-resize'),
+  jekyllDev,
+));
+
+// -----------------------------------------------------------------------------
+// Development tasks
+//
+// Build site, run browser-sync, watch for changes.
+// -----------------------------------------------------------------------------
+
+gulp.task('browser-sync', () => {
+  return bs({
+    server: './_site/',
+    port: 3456,
+    open: false
+  });
 });
+
+// Watch Files For Changes
+gulp.task('watch', (done) => {
+  log(c.yellow('Waiting for changes...'));
+  gulp.watch('_sass/**/*.scss', gulp.series('sass'));
+  gulp.watch('_img/blog/*', gulp.series('image-blog'));
+  gulp.watch('_img/photosphere/*', gulp.series('image-photosphere'));
+  gulp.watch('_img/travel/*', gulp.parallel('image-original', 'image-320', 'image-640'));
+  gulp.watch('_svg/*', gulp.series('image-svg'));
+  gulp.watch('_js/threejs/*', gulp.series('js-sphere'));
+  gulp.watch('_js/sw/*', gulp.series('js-sw'));
+  gulp.watch('_js/*', gulp.series('js-main'));
+  gulp.watch('_js/custom/*', gulp.series('js-custom'));
+  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], jekyllDev);
+  done();
+});
+
+module.exports.bs = gulp.series('build-dev', 'watch', 'browser-sync');
