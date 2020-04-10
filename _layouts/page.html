@@ -60,7 +60,7 @@
   {% endif %}
 
   {% if site.development == false %}
-    {% comment %}<style type="text/css">{% include main.min.css %}</style>{% endcomment %}
+    <style type="text/css">{% include main.min.css %}</style>
   {% else %}
     <!-- load using <link> on local so I can inject new styles -->
     <link rel="stylesheet" href="/css/main.min.css" type="text/css">
