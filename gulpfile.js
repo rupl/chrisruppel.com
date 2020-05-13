@@ -24,15 +24,16 @@ var uglify = require('gulp-uglify');
 var resize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
+var toGeoJson = require('./_gulp/togeojson.js');
 
 // Deployment debugging
 log(c.yellow('Detected environment: ' + c.black.bgYellow((process.env.NODE_ENV || 'local'))));
 var isProduction = process.env.NODE_ENV === 'production';
 
 
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 // Jekyll
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 function jekyllDev() {
   bs.notify('Jekyll building...');
   return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml', '--drafts'], {stdio: 'inherit'})
@@ -41,9 +42,9 @@ function jekyllDev() {
 module.exports['jekyll-dev'] = jekyllDev;
 
 
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 // Sass
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 gulp.task('sass', () => {
   bs.notify('sass-main compiling...');
 
@@ -68,9 +69,9 @@ gulp.task('sass', () => {
 module.exports.sass = gulp.series('sass');
 
 
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 // Combine/minify JS
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 
 // Main
 gulp.task('js-main', () => {
@@ -131,9 +132,9 @@ const jsTask = gulp.task('js', gulp.parallel('js-main', 'js-sphere', 'js-sw', 'j
 
 module.exports.js = jsTask;
 
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 // Resize images
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 
 // Image derivative: 320
 gulp.task('image-320', () => {
@@ -237,8 +238,17 @@ gulp.task('image-blog', () => {
 const imageResizeTask = gulp.task('image-resize', gulp.parallel('image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg', 'image-blog'));
 module.exports['image-resize'] = imageResizeTask;
 
+//——————————————————————————————————————————————————————————————————————————————
+// Convert KML to GeoJSON
+//——————————————————————————————————————————————————————————————————————————————
+gulp.task('kml-to-geojson', () => {
+  return gulp.src('maps/*.kml')
+    .pipe(toGeoJson())
+    .pipe(rename({ extname: '.json' }))
+    .pipe(gulp.dest('maps/'));
+});
 
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 // Build site for deployment to live server.
 //
 // No longer running Jekyll as part of build-deploy in order to run this as
@@ -247,23 +257,23 @@ module.exports['image-resize'] = imageResizeTask;
 //
 // This is run as postinstall before slug gets compiled. Jekyll gets generated
 // before spinning up the Express.js process.
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 const buildDeployTask = gulp.task('build-deploy', gulp.parallel('sass', 'js', 'image-svg', 'image-photosphere'));
 module.exports['build-deploy'] = buildDeployTask;
 
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 // Build site for local development.
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 gulp.task('build-dev', gulp.series(
   gulp.parallel('sass', 'js', 'image-resize'),
   jekyllDev,
 ));
 
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 // Development tasks
 //
 // Build site, run browser-sync, watch for changes.
-// -----------------------------------------------------------------------------
+//——————————————————————————————————————————————————————————————————————————————
 
 gulp.task('browser-sync', () => {
   return bs({
