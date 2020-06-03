@@ -258,7 +258,7 @@ gulp.task('kml-to-geojson', () => {
 // This is run as postinstall before slug gets compiled. Jekyll gets generated
 // before spinning up the Express.js process.
 //——————————————————————————————————————————————————————————————————————————————
-const buildDeployTask = gulp.task('build-deploy', gulp.parallel('sass', 'js', 'image-svg', 'image-photosphere'));
+const buildDeployTask = gulp.task('build-deploy', gulp.parallel('sass', 'js', 'image-svg', 'image-photosphere', 'kml-to-geojson'));
 module.exports['build-deploy'] = buildDeployTask;
 
 //——————————————————————————————————————————————————————————————————————————————
