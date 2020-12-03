@@ -6,12 +6,10 @@
 <!-- mapbox init -->
 <script>
   var geojson = {% include maps/{{ page.map.json }} %};
-
-  // TODO: scan the data for the LineString instead of looking in the first
-  // array item. Sometimes it's a marker.
+  var geoJsonLineStrings = geojson.features.filter(f => f.geometry.type === 'LineString' && true);
   var mapStart = [
-    geojson.features[0].geometry.geometries[0].coordinates[0][0],
-    geojson.features[0].geometry.geometries[0].coordinates[0][1],
+    geoJsonLineStrings[0].geometry.coordinates[0][0],
+    geoJsonLineStrings[0].geometry.coordinates[0][1],
   ];
   var zoomStart = {{ page.map.zoom | default: 12 }};
 
@@ -48,9 +46,7 @@
     //
     // Zoom to GeoJSON bounds
     //
-    // TODO: figure out how to pull this generically out of the files.
-    //
-    var coordinates = geojson.features[0].geometry.geometries[0].coordinates;
+    var coordinates = geoJsonLineStrings.map(set => set.geometry.coordinates).flat();
     var boundsPadding = window.innerWidth > 600 ? 50 : 20;
 
     // Pass the first coordinates in the LineString to `lngLatBounds` &
