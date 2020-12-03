@@ -242,10 +242,10 @@ module.exports['image-resize'] = imageResizeTask;
 // Convert KML to GeoJSON
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('kml-to-geojson', () => {
-  return gulp.src('maps/*.kml')
+  return gulp.src('_includes/maps/*.kml')
     .pipe(toGeoJson())
     .pipe(rename({ extname: '.json' }))
-    .pipe(gulp.dest('maps/'));
+    .pipe(gulp.dest('_includes/maps/'));
 });
 
 //——————————————————————————————————————————————————————————————————————————————
