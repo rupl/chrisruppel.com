@@ -5,8 +5,8 @@ location:
   country: Myanmar
 
 map:
-  kml: kalaw-trekking-full-trip.kml
-  style: mapbox.satellite
+  json: kalaw-trekking-full-trip.json
+  style: satellite-v9
 
 tags:
 - trekking

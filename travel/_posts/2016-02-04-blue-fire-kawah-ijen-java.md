@@ -5,8 +5,8 @@ location:
   region: Java
 
 map:
-  kml: blue-fire-kawah-ijen-java.kml
-  style: mapbox.satellite
+  json: blue-fire-kawah-ijen-java.json
+  style: satellite-v9
 
 gallery:
 - gridtype: col-3

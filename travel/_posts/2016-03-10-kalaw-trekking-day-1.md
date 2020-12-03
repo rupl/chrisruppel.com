@@ -6,7 +6,7 @@ location:
   prep: from
 
 map:
-  kml: kalaw-trekking-day1.kml
+  json: kalaw-trekking-day1.json
 
 gallery:
 - gridtype: col-2-short

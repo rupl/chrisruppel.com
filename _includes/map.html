@@ -1,43 +1,54 @@
 {% include map-include.html %}
 
 <!-- mapbox container -->
-<div id="map-init" class="map"> </div>
+<div id="map" class="map"></div>
 
 <!-- mapbox init -->
 <script>
-  var map = L.mapbox.map('map-init', '{% if page.map.style %}{{ page.map.style }}{% else %}mapbox.streets{% endif %}');
+  var geojson = {% include maps/{{ page.map.json }} %};
 
-  {% if page.map.kml %}
-    var runLayer = omnivore.kml('/maps/{{ page.map.kml }}')
-      .on('ready', function() {
-          // Center map on the plot.
-          map.fitBounds(runLayer.getBounds());
+  // TODO: scan the data for the LineString instead of looking in the first
+  // array item. Sometimes it's a marker.
+  var mapStart = [
+    geojson.features[0].geometry.geometries[0].coordinates[0][0],
+    geojson.features[0].geometry.geometries[0].coordinates[0][1],
+  ];
+  var zoomStart = {{ page.map.zoom | default: 12 }};
 
-          // Set the styles for the plot.
-          runLayer.setStyle({
-            opacity: .75,
-            weight: 6
-          });
+  // Initialize map.
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/{{ page.map.style | default: 'streets-v11' }}',
+    center: mapStart,
+    zoom: zoomStart,
+  });
 
-          // Tooltip for markers.
-          // @see https://www.mapbox.com/mapbox.js/example/v1.0.0/omnivore-kml-tooltip/
-          runLayer.eachLayer(function(layer) {
-            layer.bindPopup('<h3>' + (layer.feature.properties.name || '') + '</h3><p>' + (layer.feature.properties.description || '') + '</p>');
-          });
-      })
-      .addTo(map);
-  {% else %}
-    var geocoder = L.mapbox.geocoder('mapbox.places');
-    geocoder.query('{{ page.map.location }}', showMap);
+  // Do anything else here.
+  map.on('load', function () {
+    // @see https://docs.mapbox.com/mapbox-gl-js/example/zoomto-linestring/
+    map.addSource('LineString', {
+      'type': 'geojson',
+      'data': geojson,
+    });
 
-    function showMap(err, data) {
-      // if (data.lbounds) {
-      //     map.fitBounds(data.lbounds);
-      //     var marker = L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
-      // } else if (data.latlng) {
-        map.setView([data.latlng[0], data.latlng[1]], {{ page.map.zoom }});
-        L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
-      // }
-    }
-  {% endif %}
+    map.addLayer({
+      'id': 'LineString',
+      'type': 'line',
+      'source': 'LineString',
+      'layout': {
+        'line-join': 'round',
+        'line-cap': 'round',
+      },
+      'paint': {
+        'line-color': '#36f',
+        'line-width': 5,
+      },
+    });
+
+    // resize map when window gets resized
+    window.addEventListener('resize', function () {
+      debounce(map.resize());
+    });
+  });
+
 </script>

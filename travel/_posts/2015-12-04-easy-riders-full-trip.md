@@ -4,7 +4,7 @@ location:
   country: Vietnam
 
 map:
-  kml: easy-rider-full-trip.kml
+  json: easy-rider-full-trip.json
 
 tags:
 - motorbikes

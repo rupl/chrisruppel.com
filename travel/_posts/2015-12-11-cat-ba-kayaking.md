@@ -5,8 +5,8 @@ location:
   country: Vietnam
 
 map:
-  kml: cat-ba-kayaking.kml
-  style: mapbox.satellite
+  json: cat-ba-kayaking.json
+  style: satellite-v9
 
 gallery:
 - gridtype: col-3
