@@ -45,7 +45,32 @@
       },
     });
 
+    //
+    // Zoom to GeoJSON bounds
+    //
+    // TODO: figure out how to pull this generically out of the files.
+    //
+    var coordinates = geojson.features[0].geometry.geometries[0].coordinates;
+    var boundsPadding = window.innerWidth > 600 ? 50 : 20;
+
+    // Pass the first coordinates in the LineString to `lngLatBounds` &
+    // wrap each coordinate pair in `extend` to include them in the bounds
+    // result. A variation of this technique could be applied to zooming
+    // to the bounds of multiple Points or Polygon geomteries - it just
+    // requires wrapping all the coordinates with the extend method.
+    var bounds = coordinates.reduce(
+      function (bounds, coord) {
+        return bounds.extend(coord);
+      },
+      new mapboxgl.LngLatBounds(coordinates[0], coordinates[0])
+    );
+    map.fitBounds(bounds, {
+      padding: boundsPadding,
+    });
+
+    //
     // resize map when window gets resized
+    //
     window.addEventListener('resize', function () {
       debounce(map.resize());
     });
