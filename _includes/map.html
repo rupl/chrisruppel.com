@@ -32,7 +32,7 @@
   // Initialize map.
   var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/{{ page.map.style | default: 'streets-v11' }}',
+    style: 'mapbox://styles/mapbox/{{ page.map.style | default: 'basic-v9' }}',
     center: mapStart,
     zoom: zoomStart,
   });
@@ -56,6 +56,20 @@
         'line-color': '#36f',
         'line-width': 5,
       },
+    });
+
+    map.addSource('places', {
+      'type': 'geojson',
+      'data': geojson,
+    });
+    map.addLayer({
+      'id': 'places',
+      'type': 'symbol',
+      'source': 'places',
+      'layout': {
+        'icon-image': 'circle-15',
+        'icon-allow-overlap': true,
+      }
     });
 
     //
@@ -84,6 +98,48 @@
     );
     map.fitBounds(bounds, {
       padding: boundsPadding,
+    });
+
+    //
+    // Set placemarks and popups
+    //
+    map.on('click', 'places', function (e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var title = (e.features[0].properties.name)
+        ? '<h3>' + e.features[0].properties.name + '</h3>'
+        : '';
+      var description = (e.features[0].properties.description)
+        ? '<p>' + e.features[0].properties.description + '</p>'
+        : '';
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      // Calculate offset. I must be doing something wrong because it's related
+      // to the map height at any breakpoint.
+      var verticalOffset = -450;
+      if (window.innerWidth > 550) { verticalOffset = -600; }
+      if (window.innerWidth > 800) { verticalOffset = -600; }
+      if (window.innerWidth > 1100) { verticalOffset = -800; }
+
+      new mapboxgl.Popup({offset: [140, verticalOffset]})
+        .setLngLat(coordinates)
+        .setHTML(title + description)
+        .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+      map.getCanvas().style.cursor = '';
     });
 
     //
