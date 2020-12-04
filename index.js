@@ -46,6 +46,7 @@ app.use(helmet.contentSecurityPolicy({
   directives:  {
     defaultSrc: ["'self'"],
     scriptSrc:  ["'self'", "*.mapbox.com", "codepen.io", "*.codepen.io", "analytics.chrisruppel.com", "'unsafe-inline'", "'unsafe-eval'"],
+    workerSrc:  ["'self'", "*.mapbox.com", "blob:"],
     styleSrc:   ["'self'", "*.mapbox.com", "fonts.googleapis.com", "'unsafe-inline'"],
     imgSrc:     ["'self'", "*.mapbox.com", "assets.chrisruppel.com", "analytics.chrisruppel.com", "data:", "blob:"],
     connectSrc: ["'self'", "*.mapbox.com", "assets.chrisruppel.com"],
