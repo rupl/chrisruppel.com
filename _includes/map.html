@@ -1,43 +1,153 @@
 {% include map-include.html %}
 
 <!-- mapbox container -->
-<div id="map-init" class="map"> </div>
+<div id="map" class="map"></div>
 
 <!-- mapbox init -->
 <script>
-  var map = L.mapbox.map('map-init', '{% if page.map.style %}{{ page.map.style }}{% else %}mapbox.streets{% endif %}');
+  var geojson = {% include maps/{{ page.map.json }} %};
+  var geoJsonLineStrings = geojson.features.filter(f => f.geometry.type === 'LineString');
+  if (geoJsonLineStrings.length === 0) {
+    geoJsonLineStrings = geojson.features[0].geometry.geometries.filter(f => f.type === 'LineString')
+  }
 
-  {% if page.map.kml %}
-    var runLayer = omnivore.kml('/maps/{{ page.map.kml }}')
-      .on('ready', function() {
-          // Center map on the plot.
-          map.fitBounds(runLayer.getBounds());
+  // Init values.
+  //
+  // Since I haven't figured out how to normalize the geoJSON format, pull coords
+  // from two possible locations....
+  var mapStart;
+  if (typeof geoJsonLineStrings[0].geometry !== 'undefined') {
+    mapStart = [
+      geoJsonLineStrings[0].geometry.coordinates[0][0],
+      geoJsonLineStrings[0].geometry.coordinates[0][1],
+    ];
+  } else if (typeof geoJsonLineStrings[0].coordinates !== 'undefined') {
+    mapStart = [
+      geoJsonLineStrings[0].coordinates[0][0],
+      geoJsonLineStrings[0].coordinates[0][1],
+    ];
+  }
+  var zoomStart = {{ page.map.zoom | default: 12 }};
 
-          // Set the styles for the plot.
-          runLayer.setStyle({
-            opacity: .75,
-            weight: 6
-          });
+  // Initialize map.
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/{{ page.map.style | default: 'basic-v9' }}',
+    center: mapStart,
+    zoom: zoomStart,
+  });
 
-          // Tooltip for markers.
-          // @see https://www.mapbox.com/mapbox.js/example/v1.0.0/omnivore-kml-tooltip/
-          runLayer.eachLayer(function(layer) {
-            layer.bindPopup('<h3>' + (layer.feature.properties.name || '') + '</h3><p>' + (layer.feature.properties.description || '') + '</p>');
-          });
-      })
-      .addTo(map);
-  {% else %}
-    var geocoder = L.mapbox.geocoder('mapbox.places');
-    geocoder.query('{{ page.map.location }}', showMap);
+  // Do anything else here.
+  map.on('load', function () {
+    // @see https://docs.mapbox.com/mapbox-gl-js/example/zoomto-linestring/
+    map.addSource('LineString', {
+      'type': 'geojson',
+      'data': geojson,
+    });
+    map.addLayer({
+      'id': 'LineString',
+      'type': 'line',
+      'source': 'LineString',
+      'layout': {
+        'line-join': 'round',
+        'line-cap': 'round',
+      },
+      'paint': {
+        'line-color': '#36f',
+        'line-width': 5,
+      },
+    });
 
-    function showMap(err, data) {
-      // if (data.lbounds) {
-      //     map.fitBounds(data.lbounds);
-      //     var marker = L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
-      // } else if (data.latlng) {
-        map.setView([data.latlng[0], data.latlng[1]], {{ page.map.zoom }});
-        L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
-      // }
+    map.addSource('places', {
+      'type': 'geojson',
+      'data': geojson,
+    });
+    map.addLayer({
+      'id': 'places',
+      'type': 'symbol',
+      'source': 'places',
+      'layout': {
+        'icon-image': 'circle-15',
+        'icon-allow-overlap': true,
+      }
+    });
+
+    //
+    // Zoom to GeoJSON bounds
+    //
+    //
+    // Again with the lack of normalization...
+    var boundsPadding = window.innerWidth > 600 ? 50 : 20;
+    var coordinates;
+    if (typeof geoJsonLineStrings[0].geometry !== 'undefined') {
+      coordinates = geoJsonLineStrings.map(set => set.geometry.coordinates).flat();
+    } else if (typeof geoJsonLineStrings[0].coordinates !== 'undefined') {
+      coordinates = geoJsonLineStrings.map(set => set.coordinates).flat();
     }
-  {% endif %}
+
+    // Pass the first coordinates in the LineString to `lngLatBounds` &
+    // wrap each coordinate pair in `extend` to include them in the bounds
+    // result. A variation of this technique could be applied to zooming
+    // to the bounds of multiple Points or Polygon geomteries - it just
+    // requires wrapping all the coordinates with the extend method.
+    var bounds = coordinates.reduce(
+      function (bounds, coord) {
+        return bounds.extend(coord);
+      },
+      new mapboxgl.LngLatBounds(coordinates[0], coordinates[0])
+    );
+    map.fitBounds(bounds, {
+      padding: boundsPadding,
+    });
+
+    //
+    // Set placemarks and popups
+    //
+    map.on('click', 'places', function (e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var title = (e.features[0].properties.name)
+        ? '<h3>' + e.features[0].properties.name + '</h3>'
+        : '';
+      var description = (e.features[0].properties.description)
+        ? '<p>' + e.features[0].properties.description + '</p>'
+        : '';
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      // Calculate offset. I must be doing something wrong because it's related
+      // to the map height at any breakpoint.
+      var verticalOffset = -450;
+      if (window.innerWidth > 550) { verticalOffset = -600; }
+      if (window.innerWidth > 800) { verticalOffset = -600; }
+      if (window.innerWidth > 1100) { verticalOffset = -800; }
+
+      new mapboxgl.Popup({offset: [140, verticalOffset]})
+        .setLngLat(coordinates)
+        .setHTML(title + description)
+        .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    //
+    // Resize map when window gets resized
+    //
+    window.addEventListener('resize', function () {
+      debounce(map.resize());
+    });
+  });
+
 </script>

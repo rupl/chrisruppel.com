@@ -7,7 +7,8 @@ location:
 photosphere: xmas-cave.jpg
 
 map:
-  kml: cave-lodge_three-cave-trek.kml
+  json: cave-lodge_three-cave-trek.json
+  style: satellite-v9
 
 gallery:
 - gridtype: tall

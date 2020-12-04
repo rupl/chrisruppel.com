@@ -5,7 +5,7 @@ location:
   prep: at
 
 map:
-  kml: cave-lodge_big-knob.kml
+  json: cave-lodge_big-knob.json
 
 gallery:
 - gridtype: tall

@@ -5,7 +5,7 @@ location:
   country: Vietnam
 
 map:
-  kml: easy-rider-day-3.kml
+  json: easy-rider-day-3.json
 
 gallery:
 - gridtype: tall

@@ -23,6 +23,7 @@
     "snyk": "^1.71.0"
   },
   "devDependencies": {
+    "@mapbox/togeojson": "^0.16.0",
     "autoprefixer": "^7.2.6",
     "axios": ">=0.18.1",
     "browser-sync": "^2.23.6",
@@ -43,6 +44,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "lodash.template": ">=4.5.0",
+    "map-stream": "0.0.7",
     "nodemon": "^1.17.3",
     "run-sequence": "^2.2.1",
     "screenfull": "^3.3.2",
@@ -50,7 +52,8 @@
     "system-font-css": "^2.0.2",
     "tar": ">=4.4.2",
     "three": "^0.80.1",
-    "tunnel-agent": ">=0.6.0"
+    "tunnel-agent": ">=0.6.0",
+    "xmldom": "^0.3.0"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",

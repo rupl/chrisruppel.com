@@ -5,7 +5,8 @@ location:
   country: Germany
 
 map:
-  kml: beautiful-quarantine-bike-ride.kml
+  json: beautiful-quarantine-bike-ride.json
+  zoom: 12
 
 gallery:
 - gridtype: col-2

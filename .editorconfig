@@ -18,5 +18,8 @@ insert_final_newline = true
 [_includes/*.html]
 insert_final_newline = false
 
+[_includes/maps/*.json]
+insert_final_newline = false
+
 [*.md]
 trim_trailing_whitespace = false

@@ -5,7 +5,7 @@ location:
   country: Myanmar
 
 map:
-  kml: yangon-circular-railway.kml
+  json: yangon-circular-railway.json
 
 gallery:
 - gridtype: col-3

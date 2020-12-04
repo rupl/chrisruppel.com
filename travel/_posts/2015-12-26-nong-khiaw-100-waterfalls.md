@@ -5,8 +5,8 @@ location:
   country: Laos
 
 map:
-  kml: nong-khiaw-100-waterfalls.kml
-  style: mapbox.satellite
+  json: nong-khiaw-100-waterfalls.json
+  style: satellite-v9
 
 gallery:
 - gridtype: col-3
