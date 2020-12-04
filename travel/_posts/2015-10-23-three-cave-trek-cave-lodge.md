@@ -8,6 +8,7 @@ photosphere: xmas-cave.jpg
 
 map:
   json: cave-lodge_three-cave-trek.json
+  style: satellite-v9
 
 gallery:
 - gridtype: tall

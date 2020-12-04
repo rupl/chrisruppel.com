@@ -7,6 +7,7 @@ location:
 map:
   json: kalaw-trekking-full-trip.json
   style: satellite-v9
+  zoom: 11
 
 tags:
 - trekking
