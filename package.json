@@ -25,7 +25,7 @@
   "devDependencies": {
     "@mapbox/togeojson": "^0.16.0",
     "autoprefixer": "^7.2.6",
-    "axios": ">=0.18.1",
+    "axios": ">=0.21.1",
     "browser-sync": "^2.23.6",
     "chalk": "^2.4.2",
     "cssnano": "^3.10.0",
