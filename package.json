@@ -50,7 +50,7 @@
     "screenfull": "^3.3.2",
     "set-value": ">=2.0.1",
     "system-font-css": "^2.0.2",
-    "tar": ">=4.4.2",
+    "tar": ">=5.0.10",
     "three": "^0.80.1",
     "tunnel-agent": ">=0.6.0",
     "xmldom": "^0.3.0"
