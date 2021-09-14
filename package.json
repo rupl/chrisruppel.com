@@ -48,7 +48,7 @@
     "nodemon": "^1.17.3",
     "run-sequence": "^2.2.1",
     "screenfull": "^3.3.2",
-    "set-value": ">=2.0.1",
+    "set-value": ">=4.0.1",
     "system-font-css": "^2.0.2",
     "tar": ">=4.4.2",
     "three": "^0.80.1",
