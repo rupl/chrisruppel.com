@@ -53,7 +53,7 @@
     "tar": ">=5.0.10",
     "three": "^0.80.1",
     "tunnel-agent": ">=0.6.0",
-    "xmldom": "^0.3.0"
+    "xmldom": "^0.6.0"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
