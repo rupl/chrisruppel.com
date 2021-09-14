@@ -51,7 +51,7 @@
     "set-value": ">=4.0.1",
     "system-font-css": "^2.0.2",
     "tar": ">=5.0.10",
-    "three": "^0.80.1",
+    "three": "^0.125.0",
     "tunnel-agent": ">=0.6.0",
     "xmldom": "^0.3.0"
   },
