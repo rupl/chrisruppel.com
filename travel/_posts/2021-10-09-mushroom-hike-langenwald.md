@@ -9,7 +9,7 @@ gallery:
 - src: mushroom-hunting-heimatpfad-1.jpg
   alt: White mushroom in green grass.
   bgpos: 100% 50%
-  comment: Coprinus comatus
+  comment: Coprinus comatus — photo by Karin Ruppel
 - src: mushroom-hunting-heimatpfad-2.jpg
   alt: Purple mushroom in green moss.
   comment: Laccaria amethystina
