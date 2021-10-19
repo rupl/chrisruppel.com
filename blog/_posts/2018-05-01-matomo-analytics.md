@@ -9,7 +9,12 @@ tags:
 - tracking
 ---
 
-Around the time I published my thoughts on [Brave Payments](/blog/brave-payments/) I realized that despite my enthusiasm for a tracking-free web, I was still relying on multiple services that tracked my visitors. How rude!
+<br>
+<aside class="warning">
+  <p><ins class="update" datetime="2021-10-19"><strong>I've totally removed all analytics from my website.</strong> I'll leave this post up because I do think Matomo is better than GA or another tech-surveillance giant, but the best tracking is none at all.</ins></p>
+</aside>
+
+Around the time I published my thoughts on [Brave Payments](/blog/brave-rewards/) I realized that despite my enthusiasm for a tracking-free web, I was still relying on multiple services that tracked my visitors. How rude!
 
 I looked around for alternatives and found Piwik, which recently rebranded to [Matomo](https://matomo.org). It's a drop-in replacement for Google Analytics, or <abbr title="Google Analytics">GA</abbr> for short. However, it's a far more private option since the data stays within my domain.
 

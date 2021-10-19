@@ -76,10 +76,5 @@ defaults:
 # blank array for use within templates
 array: []
 
-# Matomo self-hosted analytics
-matomo:
-  url: https://analytics.chrisruppel.com
-  id: '2'
-
 # Mapbox
 mapboxToken: 'pk.eyJ1IjoicnVwbCIsImEiOiI3NDc5MWQ4ZWNjMTg1ZmZlYWQ5ZjMwMWVkNjI2MTJlZCJ9.Szn0ysZDc6AjmhKnxf8PkA'

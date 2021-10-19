@@ -6,13 +6,15 @@ permalink: /about/site/
 ### Tech
 
 * **Gulp** for task manager for development and parts of deployment.
-* **Sass** for light preprocessing of CSS.
+* **Sass** for light preprocessing of CSS.
 * **Jekyll** for content management and site generator.
 * **Mapbox** for displaying maps and GPS data.
 * **Express** for server.
 * **GitHub** for code hosting and deployment.
-* **Heroku** for web hosting and deployment.
+* **Heroku** for web hosting and deployment.
 * **S3** for image hosting.
+
+**This site does not store any information about you.** If you submit a webmention, we dutifully record it at your request. If you view a map or video embed, those third parties might store information about you.
 
 ### Content
 

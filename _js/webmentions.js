@@ -67,9 +67,6 @@
         // Wait a moment and reload Webmentions in case the new one already
         // finished processing
         setTimeout(webmentionsList, 1000);
-
-        // Log result to analytics
-        _paq.push(['trackEvent', 'Webmentions', 'submit', window.location.pathname, wmStatus]);
       });
     }
   }

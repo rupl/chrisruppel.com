@@ -35,9 +35,6 @@ if ('content' in document.createElement('template')) {
         // Process gallery images
         var photos = next_trip.querySelectorAll('.photo');
         processGalleryPhotos(photos);
-
-        // Log to analytics
-        _paq.push(['trackEvent', 'TripListing', 'lazyload', 'more']);
       }
 
       // If there's no content, disable the button.
@@ -45,9 +42,6 @@ if ('content' in document.createElement('template')) {
         loadmore.textContent = 'You reached the end!';
         loadmore.classList.add('btn--disabled');
         loadmore.removeEventListener('click', loadMore);
-
-        // Log to analytics
-        _paq.push(['trackEvent', 'TripListing', 'lazyload', 'all']);
       }
     });
   }

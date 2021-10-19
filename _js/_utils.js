@@ -36,22 +36,6 @@ function blurAll() {
   document.body.removeChild(tmp);
 }
 
-
-//
-// Avoid analytics errors during local development.
-//
-// When browser targets are modern enough, use `...args` in func sig and pass it
-// directly to console.debug instead of the `[].slice` hack to regain ability to
-// compare typed variables during debugging.
-//
-var _paq = window._paq || function () {};
-if (typeof _paq.push !== 'function') {
-  _paq.push = function (/*...args*/) {
-    console.log('🐛 Matomo would have logged:', /*...args*/[].slice.call(arguments).join(' '));
-  };
-}
-
-
 // Debounce
 function debounce(func) {
   var wait = arguments.length <= 1 || arguments[1] === undefined ? 100 : arguments[1];

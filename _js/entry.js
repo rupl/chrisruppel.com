@@ -123,11 +123,9 @@
             if (cacheButton.dataset.state === 'update') {
               cacheButton.innerText = 'Article updated!';
               displayMessage('Offline article has been updated. Glad it\'s useful!');
-              _paq.push(['trackEvent', 'Offline', 'updated', currentPath]);
             } else {
               cacheButton.innerText = 'Article saved!';
               displayMessage('Article is now available offline. Hope it comes in handy!');
-              _paq.push(['trackEvent', 'Offline', 'saved', currentPath]);
             }
 
             // Log the event.
@@ -145,7 +143,6 @@
 
             // Log the event.
             console.error(error.message);
-            _paq.push(['trackEvent', 'Offline', 'error', currentPath]);
           });
 
           // Now save images to cache. We won't treat failure so strictly this
