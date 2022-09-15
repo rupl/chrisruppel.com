@@ -11,9 +11,9 @@ bodyclass: page--work
 <p>I've helped some big brands achieve their performance goals while producing sites that hold up to prime-time levels of traffic.</p>
 
 <ul class="clients">
-{% for client in clients limit:6 %}
-  <li class="client client--{{ client.class }}" style="background-image: url(/svg/work/logos/{{ client.src }})">
-    <span class="element-invisible">{{ client.alt }}.</span>
+{% for client in collections.clients limit:6 %}
+  <li class="client client--{{ client.data.class }}" style="background-image: url(/svg/work/logos/{{ client.data.src }})">
+    <span class="element-invisible">{{ client.data.alt }}</span>
   </li>
 {% endfor %}
 </ul>

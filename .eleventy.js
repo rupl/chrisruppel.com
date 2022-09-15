@@ -40,6 +40,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('calendar', collection =>
     collection.getFilteredByGlob('calendar/_posts/*.md')
       .sort((a, b) => b.date - a.date));
+  eleventyConfig.addCollection('clients', collection =>
+    collection.getFilteredByGlob('clients/_posts/*.md')
+      .sort((a, b) => a.data.order - b.data.order));
 
   //
   // Markdown
