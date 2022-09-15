@@ -60,7 +60,7 @@
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
-    "start": "eleventy && node ./index.js",
+    "build": "eleventy",
     "dev": "eleventy --serve",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect",
