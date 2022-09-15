@@ -4,7 +4,7 @@ title: Debug non-secure localhost with a proxy
 tags:
 - debugging
 - testing
-- service worker
+- serviceworker
 
 summary: Certain new features of the Web Platform require a secure origin, complicating local development and testing. Use a network proxy to make testing localhost on real devices easy!
 ---
@@ -17,7 +17,7 @@ While debugging and testing the new [offline content button](https://chrisruppel
 
 This time the Service Worked failed to register, and the error was the same in multiple browsers: the Service Worker cannot be loaded from an insecure origin.
 
-```
+```sh
 // Chrome 50
 DOMException: Only secure origins are allowed (see: https://goo.gl/Y0ZkNV).
 

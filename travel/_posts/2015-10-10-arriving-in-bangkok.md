@@ -52,7 +52,7 @@ Instead, we napped. And sat in a park. And got a thai massage.
 
 The second day we got a little more ambitious, walking along a main road and eating the best fried rice we've ever had from a lively woman cooking at a cart. We saw a corner temple flanked by malls on either side, digital billboards bigger than Times Square, tons of traffic that truly tests the nerves, and numerous signs that we were completely hopeless to decode.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 To head towards the tourist district, we hopped on the Chao Phraya Express Boat. Just like an underground metro, passengers hop on and off at the many quick stops they make along the river docks. It even has a diagram showing the various "lines" available and which stops they make.
 

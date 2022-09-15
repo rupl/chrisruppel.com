@@ -34,7 +34,7 @@ The second picture shows Anna, Lina, and myself enjoying the waterfall. We'd bee
 
 I avoided the rock by climbing down the dry part, stepping completely over the moss, and sitting in the moss-free waterfall. The swift moving water prevents build-up or something.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 I'd just like to say that there really is a good 5 meters between me and the bottom. The picture doesn't show it. If it worked the way the picture showed it, this would have been a non-story.
 

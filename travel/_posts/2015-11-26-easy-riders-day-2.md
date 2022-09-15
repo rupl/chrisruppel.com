@@ -6,6 +6,7 @@ location:
 
 map:
   json: easy-rider-day-2.json
+  zoom: 10
 
 gallery:
 - gridtype: tall
@@ -61,7 +62,7 @@ We had a good night's sleep and woke up early excited to hit the road again. Aft
 
 This particular neighborhood was not in the highlands, but directly in the middle of a larger Vietnamese town. So although they used traditional houses, many aspects of their life had been modernized. Ut promised us we'd see the real minority way of life on the third day.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 We started heading out of town. After a while we came to our first stop: women harvesting coffee. It took us a while to find them in the middle of a field, but Ut knew they were there. As we walked up, they started squealing and smiling and waving their hands frantically. They clearly weren't scared, but I couldn't imagine what kind of commotion we were causing.
 
@@ -73,7 +74,7 @@ After leaving the harvest we found a group of people who were drying the beans. 
 
 Once they were put through the shredder there was a relatively easy task of spreading them to dry in the sun. Once again I helped by spreading a new tarp with two young men and then taking the hoe and spreading beans as they got spit out of the shredder.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Another stop was a waterfall in a national park. It was a short, easy hike down to the falls, so Ut and Bom stayed behind to just sit back and take a break. Karin and I walked around a little bit, watched a couple take some wedding photos with the waterfall as a backdrop, and otherwise enjoyed the scenery. Some guy took great interest in me and I ended up posing for about 5 photos.
 
@@ -91,7 +92,7 @@ Karin couldn't bear to see it, so after we checked into the bungalows Ut disappe
 
 Bom took us back into the woods and we found some rocks that were clearly a fire pit. We split a piece of pine wood up, laid charcoals down, and got a fire going. Eventually Ut came back, grinning and holding a skinned chicken by the feet. We carved a spit out of a branch with the pocket knife and got the chicken roasting over our fire.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 Somewhere in the middle of all this I realized that hey, it's Thanksgiving in the US! I told them I was so excited to have such a special Thanksgiving dinner. When I told them they just grinned and said it's another day in Vietnam.
 

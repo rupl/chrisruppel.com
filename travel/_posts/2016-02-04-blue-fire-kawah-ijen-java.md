@@ -51,7 +51,7 @@ gallery2:
 tags:
 - danger
 - trekking
-- volcanos
+- volcanoes
 - maps
 
 summary: We made a treacherous night hike up to Mount Ijen and into a crater that is home to a sulfur volcano with blue flames!
@@ -75,7 +75,7 @@ The road was very steep but in complete darkness it's easy to forget about what 
 
 Here's our path up. I used satellite data because it turns out there's unusually high-quality imagery for this area. **Try zooming in!** Note that the large cloud over the crater is not a water vapor cloud; that's a cloud of sulphuric gas.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 After an hour of hiking we came across a sign that said "VISITORS ARE PROHIBITED GOING DOWN ON CRATER DANGEROUS" and, just to be sure, a second sign reading "BEWARE TOXIC GAS" — it's pretty clear that the flood of tourists heading down into this crater are not really supposed to be here, but the promise of this natural wonder was just too much.
 
@@ -85,12 +85,12 @@ The trail was harrowing. An occasional cloud of sulphuric gas stung our eyes, th
 
 Finally, after 400m downward we'd made the descent and were treated to quite a sight: three bright blue flames coming out of the ground! It was very hard to capture the flames themselves, but it was truly a sight!
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 We did a bit of reading and based on others' experiences we came on a low-activity night, but we were *far* from disappointed. The combustion is a natural process driven by the pressure of the gas, so apparently the there are days with no visible flames at all. However, the flames can be much stronger and brighter, so have a look at these [National Geographic photos of Kawah Ijen by Olivier Grunwald](http://news.nationalgeographic.com/news/2014/01/140130-kawah-ijen-blue-flame-volcanoes-sulfur-indonesia-pictures/) to get a better sense of what we saw with our own eyes.
 
 After hiking back out of the crater we sat on the ridge waiting for the sun to rise. As it became light we were surprised to finally see our surroundings: a huge sulphuric acid lake colored bright green, with the billowing smoke giving its surroundings a faint yellow tint.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 We ate a few snacks and absorbed the scene for a half hour before starting our hike back down the mountain. It was quite a treat hiking up at night and coming back down during the day... almost like two completely different trips! Both the surrounding forest and the mountain-lined horizon were beautiful, peaceful scenery to end the hike.

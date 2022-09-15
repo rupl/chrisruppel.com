@@ -3,7 +3,6 @@ title: Sightseeing
 location:
   region: Lisbon
   country: Portugal
-layout: gallery
 
 gallery:
 - gridtype: col-3
@@ -42,5 +41,7 @@ tags:
 
 summary: We skipped a conference day and saw some of Lisbon.
 ---
+
+{% include 'gallery.html' %}
 
 I got some good sights walking around with Matt and Chrissy. We went to Almada via bus and hiked up to _Santuário de Cristo Rei_, then over to Tarquin-Paradise Beach to get some sun.

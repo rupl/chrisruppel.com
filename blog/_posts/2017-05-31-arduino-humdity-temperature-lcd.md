@@ -9,7 +9,7 @@ tags:
 - gardening
 ---
 
-My friend [Afra](http://afranoubarzadeh.se/) invited me to participate in a conference in Sweden involving sustainable urban greenhouse solutions. <em lang="sv">[Så Ett Frö](http://saettfro.com/vaxthus/)</em> (_Plant a Seed_) is a collaboration with [HSB Living Lab](https://www.hsb.se/hsblivinglab/), a 10-year-long experiment which uses technology to help build more sustainable housing building.
+My friend Afra invited me to participate in a conference in Sweden involving sustainable urban greenhouse solutions. <em lang="sv">Så Ett Frö</em> (_Plant a Seed_) is a collaboration with [HSB Living Lab](https://www.hsb.se/hsblivinglab/), a 10-year-long experiment which uses technology to help build more sustainable housing building.
 
 My job was to automate a small greenhouse using my budding Arduino skills. The main objective of <em lang="sv">Så Ett Frö</em> is education amongst grades 7-9. So for now we haven't spent time calculating economic value or carbon footprint. Future iterations will hopefully allow us to tackle these engineering issues which will make the greenhouse more sustainable.
 

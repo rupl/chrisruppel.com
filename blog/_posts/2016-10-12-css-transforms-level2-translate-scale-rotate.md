@@ -31,9 +31,11 @@ Ever since [I first dove into CSS Transforms](https://rupl.github.io/unfold/) I 
 
 ## Shorthand needed
 
-It seems I wasn't the only one subconsciously wanting this shortcut. Sometime after [Lea Verou suggested](https://twitter.com/LeaVerou/status/487350702386479105) that it's a quirk of the syntax and not the developer mindset, a small addition to the CSS Transforms spec was developed: [CSS Transforms Level 2 (draft)](https://drafts.csswg.org/css-transforms-2/).
+It seems I wasn't the only one subconsciously wanting this shortcut. Sometime after [Lea Verou suggested](https://twitter.com/LeaVerou/status/487350702386479105) that it's a quirk of the syntax and not the developer mindset, a small addition to the CSS Transforms Level 2 spec was developed: [individual transform properties](https://www.w3.org/TR/css-transforms-2/#individual-transforms).
 
-Although the spec is not remotely finalized, Chrome 53 has already shipped the feature behind the [Experimental Web Platform features](chrome://flags/#enable-experimental-web-platform-features) flag, so this new syntax can be tested today.
+<ins class="update" datetime="2021-11-09">The spec is no longer draft</ins>
+
+Although the spec is not 100% finalized, many browsers have shipped this to their stable channel. This new syntax can be easily tested today.
 
 <iframe width="100%" height="220" src="/sandbox/css-transforms-level2-example1/" frameborder="0"></iframe>
 
@@ -76,6 +78,7 @@ You might have noticed this if you've ever applied multiple transforms in an ord
 ```
 
 <iframe width="100%" height="250" src="/sandbox/css-transforms-level2-example2/" frameborder="0"></iframe>
+
 <small class="caption">_[Example 2](/sandbox/css-transforms-level2-example2/), comparing two `transform` syntaxes to shorthand._</small>
 
 In this case, the `.classic` transform rotates before translating, meaning the translation moves your element 45px to the right, **but at an angle of 45 degrees**. And it only becomes more complicated when there are animated 3D transforms involved...
@@ -129,6 +132,7 @@ Notice in the `.classic` CSS, we have to specify _the entire transform_ every ti
 With the shorthand, not only is there less duplication, but starting properties can be completely omitted since they naturally default to `0`. That leaves us with a clean, unambiguous definition of our animation.
 
 <iframe width="100%" height="300" src="/sandbox/css-transforms-level2-example3/" frameborder="0"></iframe>
+
 <small class="caption">_[Example 3](/sandbox/css-transforms-level2-example3/), classic, shorthand, and CSS Animations combined._</small>
 
 At the time of writing, the shorthand syntax for 3D rotation is not supported even in Chrome. But I took the opportunity to mix everything together. The third example uses `transform: rotate3d()` to set the rotation, and yet the shorthand syntax in the animation keyframes _still_ intelligently applies the transforms in the proper order.
@@ -159,6 +163,6 @@ typeof(document.querySelector('body').style.translate) !== 'undefined';
 
 ## Should I use this?
 
-**No.** It's not even listed on caniuse yet ;)
+Maybe. Although many browsers support it in 2022, it won't work in older browsers at all.
 
 But keep it in mind and someday simple transforms will be easier to author and more flexible to manipulate. Until then, just stick with the reliable syntax offered by the `transform` property.

@@ -41,7 +41,7 @@ Aside from beach hopping, Katie and I got to do a lot together. She tends two sc
 
 We set up a farm stand one day at the elementary school garden in Chillmark, and another day went to tend the bigger middle school garden in West Tisbury. I just helped with easy stuff that the kids normally do, like watering.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 The veggies we took home were incredible! Combined with the approximately 20 hens that she and John raise on their property, we had delicious and diverse skillets of eggs every morning I was there. We even ate outside while the chickens grazed around us. 
 

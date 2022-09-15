@@ -11,7 +11,7 @@ tags:
 summary: A tech overview of my side project for creating art on the web.
 ---
 
-At its core, [bustashape](https://bustashape.com) is a combo of two libraries: hammer.js and socket.io. You interact with the shapes using hammer.js and socket.io broadcasts all the changes you make to others instantly. The result is a shared drawing space that stays in sync across all connected devices.
+At its core, [bustashape](https://bustashape.art) is a combo of two libraries: hammer.js and socket.io. You interact with the shapes using hammer.js and socket.io broadcasts all the changes you make to others instantly. The result is a shared drawing space that stays in sync across all connected devices.
 
 ### hammer.js
 
@@ -19,9 +19,9 @@ At its core, [bustashape](https://bustashape.com) is a combo of two libraries: h
 
 ### Socket.io
 
-[Socket.io](http://socket.io/) enables real-time interactivity between both a server and other peer clients. The "Hello, World!" app on the socket.io website is a [real-time chat client](http://socket.io/get-started/chat/), just like IRC or Slack. Multiple users can connect and type messages which are seen by anyone in the chat room, and it's a small amount of work to send private messages as well.
+[Socket.io](https://socket.io/) enables real-time interactivity between both a server and other peer clients. The "Hello, World!" app on the socket.io website is a [real-time chat client](https://socket.io/get-started/chat/), just like IRC or Slack. Multiple users can connect and type messages which are seen by anyone in the chat room, and it's a small amount of work to send private messages as well.
 
-Bustashape is also built on the concept of rooms. Instead of one shared drawing board, we have any number of boards active on the site depending on who is there. If you decide to create a room called [#bananas](https://bustashape.com/#bananas) it will exist until you and all other participants leave.
+Bustashape is also built on the concept of rooms. Instead of one shared drawing board, we have any number of boards active on the site depending on who is there. If you decide to create a room called [#bananas](https://bustashape.art/#bananas) it will exist until you and all other participants leave.
 
 ### Combining the two libraries
 
@@ -69,6 +69,6 @@ On a laptop, just use the `s` key to quickly save a drawing that you've created.
 
 ### 🔷 Try it out! 🔷
 
-That's the basic overview of how bustashape works. But don't just read this post, [go try bustashape](https://bustashape.com)! I promise you've have fun.
+That's the basic overview of how bustashape works. But don't just read this post, [go try bustashape](https://bustashape.art)! I promise you've have fun.
 
 If you want to hack on it, [the code is on GitHub](https://github.com/rupl/bustashape/). We have lots of fun ideas for the future and would love to hear from others too!

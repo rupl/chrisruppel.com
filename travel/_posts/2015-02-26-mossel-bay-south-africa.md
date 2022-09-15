@@ -33,7 +33,7 @@ We found a charming <abbr title="Bed and Breakfast">B&B</abbr> called [Lillies &
 
 We found these strange slugs all over the beach feeding on jellyfish. Karin couldn't stand to look at them, and dubbed them "grossies"
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 The next morning we planned to hit the road again, momentarily tempted to stay another day when Gaby cooked us our spectacular three-course breakfast: beginning with fruits, cereal, and yogurt; toast with a number of delicious homemade spreads; and finally Gaby offered us eggs, mushrooms, and bacon.
 

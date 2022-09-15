@@ -4,25 +4,28 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": "14.18.1",
-    "npm": "8.1.0"
+    "node": "^14.20.0",
+    "npm": "^8.19.0"
   },
   "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
     "compression": "^1.7.2",
     "concurrent-transform": "^1.0.0",
     "express": "^4.16.3",
     "express-sslify": "^1.0.1",
     "helmet": "^3.12.0",
+    "highlight.js": "^11.6.0",
     "html-entities": "^1.2.1",
     "js-yaml": ">=3.13.1",
     "json-query": "^2.2.2",
     "lodash": ">=4.17.21",
+    "markdown-it": "^13.0.1",
     "microformat-node": "^2.0.1",
-    "node-fetch": "^2.6.1",
     "pg": "^7.4.1",
     "snyk": "^1.71.0"
   },
   "devDependencies": {
+    "@11ty/eleventy-cache-assets": "^2.3.0",
     "@mapbox/togeojson": "^0.16.0",
     "autoprefixer": "^7.2.6",
     "axios": ">=0.21.2",
@@ -57,8 +60,8 @@
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
-    "start": "bundle exec jekyll build --config=_config.yml && node ./index.js",
-    "dev": "node_modules/.bin/gulp jekyll; nodemon index.js",
+    "start": "eleventy && node ./index.js",
+    "dev": "eleventy --serve",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect",
     "imgs-test": "aws s3 sync ./_site/img s3://assets.chrisruppel.com/img --region eu-central-1 --acl public-read --dryrun",

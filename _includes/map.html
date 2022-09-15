@@ -1,11 +1,12 @@
-{% include map-include.html %}
+{% include 'map-include.html' %}
 
 <!-- mapbox container -->
 <div id="map" class="map"></div>
 
 <!-- mapbox init -->
 <script>
-  var geojson = {% include maps/{{ page.map.json }} %};
+  {% capture mapPath %}maps/{{ map.json }}{% endcapture %}
+  var geojson = {% include mapPath %};
   var geoJsonLineStrings = geojson.features.filter(f => f.geometry.type === 'LineString');
   if (geoJsonLineStrings.length === 0) {
     geoJsonLineStrings = geojson.features[0].geometry.geometries.filter(f => f.type === 'LineString')
@@ -27,12 +28,12 @@
       geoJsonLineStrings[0].coordinates[0][1],
     ];
   }
-  var zoomStart = {{ page.map.zoom | default: 12 }};
+  var zoomStart = {{ map.zoom | default: 12 }};
 
   // Initialize map.
   var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/{{ page.map.style | default: 'basic-v9' }}',
+    style: 'mapbox://styles/mapbox/{{ map.style | default: 'satellite-v9' }}',
     center: mapStart,
     zoom: zoomStart,
   });
@@ -104,29 +105,16 @@
     // Set placemarks and popups
     //
     map.on('click', 'places', function (e) {
-      var coordinates = e.features[0].geometry.coordinates.slice();
+      console.log(e);
+      var coordinates = e.lngLat;
       var title = (e.features[0].properties.name)
-        ? '<h3>' + e.features[0].properties.name + '</h3>'
+        ? '<h3 style="font-size: 1rem;">' + e.features[0].properties.name + '</h3>'
         : '';
       var description = (e.features[0].properties.description)
-        ? '<p>' + e.features[0].properties.description + '</p>'
+        ? '<p style="font-size: .8rem;">' + e.features[0].properties.description + '</p>'
         : '';
 
-      // Ensure that if the map is zoomed out such that multiple
-      // copies of the feature are visible, the popup appears
-      // over the copy being pointed to.
-      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
-
-      // Calculate offset. I must be doing something wrong because it's related
-      // to the map height at any breakpoint.
-      var verticalOffset = -450;
-      if (window.innerWidth > 550) { verticalOffset = -600; }
-      if (window.innerWidth > 800) { verticalOffset = -600; }
-      if (window.innerWidth > 1100) { verticalOffset = -800; }
-
-      new mapboxgl.Popup({offset: [140, verticalOffset]})
+      new mapboxgl.Popup({offset: [0, -12]})
         .setLngLat(coordinates)
         .setHTML(title + description)
         .addTo(map);

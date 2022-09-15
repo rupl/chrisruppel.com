@@ -4,7 +4,7 @@ title: Practical uses for the Physical Web
 tags:
 - mobile
 - physical web
-- service worker
+- serviceworker
 
 summary: A few practical uses for Physical Web beacons that can benefit regular people.
 ---

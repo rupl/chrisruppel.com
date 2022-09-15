@@ -37,4 +37,4 @@ tags:
 summary: I took part in an art festival in Sweden called Vetenskapsfestivalen Göteborg.
 ---
 
-Just a week after returning from our trip, I was off on another adventure! This time I was working, [running an installation of bustashape at Vetfest](/blog/bustashape-vetenskapsfestivalen-gothenburg-2016/) with [Afra Noubarzadeh](http://afranoubarzadeh.se/). We spent most of the week in the tents of the festival, but luckily on the free days the weather was nice and we got to walk around the city center a little bit.
+Just a week after returning from our trip, I was off on another adventure! This time I was working, [running an installation of bustashape at Vetfest](/blog/bustashape-vetenskapsfestivalen-gothenburg-2016/) with Afra Noubarzadeh. We spent most of the week in the tents of the festival, but luckily on the free days the weather was nice and we got to walk around the city center a little bit.

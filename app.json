@@ -12,9 +12,6 @@
       "url": "https://github.com/mcollina/heroku-buildpack-graphicsmagick"
     },
     {
-      "url": "heroku/ruby"
-    },
-    {
       "url": "heroku/nodejs"
     }
   ]

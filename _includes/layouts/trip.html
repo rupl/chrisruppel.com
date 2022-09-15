@@ -1,0 +1,38 @@
+---
+layout: page
+---
+
+<article class="h-entry entry--main entry--trip" id="{{ path | replace: 'travel/_posts/','' | replace: '.md','' }}">
+  <header>
+    <h1 class="title--main p-name">{{ title }}</h1>
+    <h2 class="subtitle">
+      <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%b %d, %Y' }}</time>
+      {% if location %}
+        <span class="where p-location h-adr">
+          {% include 'location-microformat.html' %}
+        </span>
+      {% endif %}
+    </h2>
+  </header>
+
+  <aside class="intro summary p-summary">{{ summary }}</aside>
+
+  <div class="story e-content">
+    {{ content | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&amp;', '&' | replace: '<pre><code>', '' | replace: '</code></pre>', '' }}
+    <div class="the-end" aria-label="The End."></div>
+  </div>
+
+  <div class="go">
+    {% for link in pagination %}
+      <a class="btn btn--prev" href="{{ link.href.previous }}" title="{{ link.page.previous.data.title }}{% if link.page.previous.data.location %} {% include 'location.html', location=link.page.previous.data.location %}{% endif %}">Prev trip</a>
+      <a class="btn btn--back" href="/travel/">Travel</a>
+      <a class="btn btn--next" href="{{ link.href.next }}" title="{{ link.page.next.data.title }}{% if link.page.next.data.location %} {% include 'location.html', location=link.page.next.data.location %}{% endif %}">Prev trip</a>
+    {% endfor %}
+  </div>
+
+  {% if comments %}
+    {% include 'webmentions.html' %}
+  {% endif %}
+
+  {% include 'entry-meta.html' %}
+</article>

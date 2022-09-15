@@ -47,10 +47,10 @@ tags:
 summary: Phadeng Peak is a steep, moderate hike that ends with a great view of Nong Khiaw and the upstream river toward Muang Ngoy.
 ---
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 We had a great hike up and down. We took it very easy and made it to the top in about two hours, then hustled back down in the darkness in under one.
 
 It was very nice at the top despite being a bit hazy. It made the sunbeams very easy to see as the sun got lower in the sky. Once we got to the top I managed to take one of the cleanest photospheres yet! Check it out:
 
-{% include photosphere.html photosphere=page.photosphere %}
+{% include 'photosphere.html' %}

@@ -99,6 +99,7 @@
   .p-comment {
     // Webmention content
     .e-content {
+      margin: 1em 0;
       border-left: 1em solid #ccc;
       padding-left: 1em;
     }
@@ -107,6 +108,7 @@
     footer {
       font-family: monospace;
       font-size: .8em;
+      letter-spacing: -.75px;
       text-align: right;
       opacity: .9;
 

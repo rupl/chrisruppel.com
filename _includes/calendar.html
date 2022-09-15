@@ -6,7 +6,7 @@
 {% capture first_availability %}soon{% endcapture %}
 
 {% capture calendar %}
-  {% for slot in site.categories.calendar reversed %}
+  {% for slot in collections.calendar reversed %}
     {% capture nowunix %}{{ 'now' | date: '%s' }}{% endcapture %}
     {% capture slottime %}{{ slot.date | date: '%s' }}{% endcapture %}
     {% if slottime < nowunix %}
@@ -16,13 +16,13 @@
         Output one entry for each Calendar post.
       {% endcomment %}
       <li
-        class="slot slot--{{ slot.status }}{% if slot.status != 'full' %} slot--available{% endif %}"
-        title="{{ slot.date | date: '%b %Y' }}: {{ slot.status }}"
+        class="slot slot--{{ slot.data.status }}{% if slot.data.status != 'full' %} slot--available{% endif %}"
+        title="{{ slot.date | date: '%b %Y' }}: {{ slot.data.status }}"
       >{{ slot.date | date: '%b' }}</li>
       {% comment %}
         Store first month of availability for output within heading.
       {% endcomment %}
-      {% if slot.status != 'full' and first_availability == 'soon' %}{% capture first_availability %}in <strong class="availability__date">{{ slot.date | date: '%B' }}</strong>{% endcapture %}{% endif %}
+      {% if slot.data.status != 'full' and first_availability == 'soon' %}{% capture first_availability %}in <strong class="availability__date">{{ slot.date | date: '%B' }}</strong>{% endcapture %}{% endif %}
     {% endif %}
   {% endfor %}
 {% endcapture %}

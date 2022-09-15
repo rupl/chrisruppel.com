@@ -21,4 +21,4 @@ This is the full three-day path of our trek from Kalaw to Inle Lake wetlands. If
 
 _For daily accounts of this trek, see the following entries: [Day 1](/travel/kalaw-trekking-day-1/), [Day 2](/travel/kalaw-trekking-day-2/), [Day 3](/travel/kalaw-trekking-day-3/)_
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}

@@ -51,9 +51,9 @@ Our first stop was the Hospital Cave, a cave which was finished during the "Amer
 
 The rooms of the cave were mostly empty, but a few had mannequins set up which was pretty creepy. We walked around and used our imagination to see what it might have been like as a busy wartime hospital.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 After seeing the cave we continued up the road to the national park. There were several paths but we chose the path to the peak. After a relatively light hike we reached the top. It was a great reward especially for such a light hike. Stunning view in all directions!
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 

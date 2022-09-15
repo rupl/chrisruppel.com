@@ -56,7 +56,7 @@ We met a Dutch couple in our hostel on the first day and they suggested a self-d
 
 We awoke surprisingly easily and off we went. Sander, the Dutch guy, said that at night he read that Borobudur's price almost doubles for sunrise (400,000 IDR), then goes back to the normal price of 280,000 IDR after sunrise. We decided to go to a higher hill to watch the morning start. We got there a bit late, but it was beautiful nontheless (and the sunrise was pretty cloudy so we didn't miss a whole lot by being 15 minutes late).
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 The other tip that Sander had gotten was to make a fake student ID and present it when buying a ticket. It would get you a 50% discount bringing the attraction's price down to a much more reasonable 140,000 IDR. He and his girlfriend had already prepared them, but also said that they'd used them before to secure a discount for a whole group, so we didn't feel it necessary to make our own.
 
@@ -64,11 +64,11 @@ When we got to the entrance, we found out that making one for Karin and myself m
 
 In we went, alongside three schools of children who arrived while we worked out the ticket situation. We tried to walk as fast as possible to maybe get up there before the kids, but we didn't make it. Luckily one side of the temple was free of kids climbing all around so we hastily took some photos during that window of time.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 There were many school groups there and every. single. kid. wanted a photo with us. We tried to solve it by taking big group photos but that just encouraged them even more. They were very enthusiastic so it was fun to receive so much attention for about 20 minutes.
 
-{% include gallery.html gallery=page.gallery3 %}
+{% include 'gallery.html', gallery: gallery3 %}
 
 After a while we got a bit weary of posing for so many photos. Many kids became even more ambitious as we left the temple and went through the museum then finally through the "exit" which must be the world's largest gift shop, a 20-minute walk through various market stands. We actually had to start telling them no and being assertive about it after the 5th group of kids "secretly" snapped a photo of themselves with us in the background.
 

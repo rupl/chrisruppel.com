@@ -36,7 +36,7 @@ Finally we made the uneventful hour-long ride over to Koh Lipe, which is about 4
 
 Once we arrived we knew we'd made a great choice. Koh Lipe is a stunning paradise of an island!
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 After being ferried to the shore (it's quite shallow so our speedboat couldn't pull up to the beach), we were dropped off at the immigration desk. The entire group restlessly waited around with no instructions. It was very hot and everyone had to simply wait and watch all the other people enjoy the beach while we stood there waiting for our passports to be returned to us.
 

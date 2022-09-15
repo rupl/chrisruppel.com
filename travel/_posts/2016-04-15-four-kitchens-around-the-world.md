@@ -79,6 +79,6 @@ Starting with my very first trip abroad, I've collected a picture of myself in m
 
 There are a few countries missing (which I assure you I felt very guilty about), but within this threadbare company t-shirt is the story of my world travels 💞
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 This collection is my way of saying thanks to Four Kitchens for the incredible impact they had on my life. Thanks especially to Todd and Aaron for fostering such a welcoming, positive workplace, and thank you to my fellow web chefs, both past and present, for the good times! 

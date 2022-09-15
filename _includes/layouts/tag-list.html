@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section aria-labelledby="tag-list">
+  <h1 id="tag-list" class="title title--page">#{{ tag | downcase | replace: ' ','' }}</h1>
+  <div class="elsewhere">
+    <a class="alt" href="{{ site.url }}/{{ type }}/tags/">(see all {{ type }} tags)</a>
+  </div>
+
+  <p class="intro summary">{{ type | capitalize }} entries involving {{ tag | downcase }}.</p>
+
+  <div class="trip-list">
+    {% for post in page.posts %}
+      {% if post.category == page.category %}
+        {% include 'trip-listing.html', trip: post %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<div class="go">
+  <a class="btn btn--back" href="/{{ tag }}/">{{ tag | capitalize }}</a>
+  <a class="btn btn--back" href="/">Back to the Front</a>
+</div>

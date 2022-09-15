@@ -42,10 +42,10 @@ We hopped on the motorbikes and drove out of town around 11am. We saw storm clou
 
 Finally, after a couple more stops to avoid getting pelted by raindrops, we made it to the tubing place... but it was closed! For the first time ever on our trip, a business decided to close down for safety reasons. We were glad they made that choice, but sad we couldn't do the tubing. They told us we could walk down and check out the entrance if we wanted to. We were even more disappointed when we saw what excitement we could have had:
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 After checking things out, we started our trip back to Yogyakarta. Unfortunately it was raining even harder, but the time of day meant that we _had_ to go back or potentially be driving part of the trip in the dark. So we bought a few cheap ponchos and made the scary, wet, crazy mountain drive back to town.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 We ended up being _very_ glad that we'd gotten the ponchos. The rain never let up. Drops stung our face constantly as we sped through the mountains and back into Yogyakarta. But after 90 minutes of teeth-gritting, tense riding that took us within arm's reach of buses, trucks, and other swarms of motorbikes, we finally made it back safely to our hostel.

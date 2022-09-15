@@ -6,6 +6,7 @@ location:
 
 map:
   json: easy-rider-day-3.json
+  zoom: 10
 
 gallery:
 - gridtype: tall
@@ -70,7 +71,7 @@ summary: Day 3 of our Easy Rider tour took us through the mountains to visit the
 
 On our third and final day, we "slept in" and started around 8:30. The plan was exciting: we were taking a set of roads so tiny and unkept that they don't show up on most maps (although Galileo had it! Ut and Bom were impressed). On these roads we'd see many groups of [ethnic minorities](https://en.wikipedia.org/wiki/List_of_ethnic_groups_in_Vietnam) and learn how the people of the highlands live.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 We stopped at a farm with many trees planted in orderly rows. Around the trees were boxes. Bom stopped us at one tree with a bowl of white liquid attached to it, and we knew it was a rubber tree. We were getting good at this! Next he directed us over to a man walking amongst the boxes and as we got closer the sound gave it away: bees!
 
@@ -80,7 +81,7 @@ She asked if we could try the honey and he said yes, so we stuck our fingers dir
 
 After that we hopped on the motorbikes to head for the highlands. It started raining so we put on the gear and I took some video because it was not intense enough going 80kph in the rain :)
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 We finally beat one set of clouds and it became easier to stop along the roads again. We came to a beautiful spot in between two mountains and as we pulled over I smelled something like vinegar. After our previous trips I'd become accustomed to noting the smells when we stopped; it can tell you a lot about what's happening in the area.
 
@@ -94,7 +95,7 @@ The bamboo farmer was really happy to talk to us and exchanged numbers with Ut i
 
 They were happy to do so and only had one question: why if I am so healthy am I unable to produce children? Vietnamese either think Karin should be pregnant or they tell me _I look pregnant_, not sure which is worse :p
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 After the bamboo farm we stopped in the minority village. It was fun to play with the kids and very inefficiently communicate with a great-grandmother who was there. I observed a child do some Vietnamese spelling homework — their language is unique to their culture and sometimes even the settlement, so learning Vietnamese is a second language to them. The older adults Ut talked to had only basic Vietnamese skills and the conversations have to be slow and basic. I know that feeling from my first few months living in Germany!
 

@@ -48,9 +48,9 @@ summary: We went kayaking in the ocean around Cat Ba Island! We kayaked around s
 
 Our last full day on Cat Ba island the sun actually came out! We'd already planned to rent a kayak and it was a delight to feel the sunshine as we paddled along. I had Galileo recording the whole time and have the map set to satellite so it's easier to see the fishing village:
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 It was a bit hard to take good photos because we were A) kayaking in the ocean with waves and currents, and B) the salt water dried on both the phone and GoPro quite quickly and left huge smudges every time. Many of the photos are blurry but we got a few good ones.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 

@@ -3,7 +3,6 @@ title: Stone and Tile
 location:
   region: Lisbon
   country: Portugal
-layout: gallery
 
 gallery:
 - gridtype: col-3
@@ -36,5 +35,7 @@ tags:
 
 summary: Lisbon is a city full of beautiful stone and tile work, with a surprise waiting around every corner.
 ---
+
+{% include 'gallery.html' %}
 
 I visited Lisbon for DrupalDevDays 2018. Instead of staying near the venue we booked something in the tourist area and got to enjoy our walks through the city each day to and from the conference.

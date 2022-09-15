@@ -7,7 +7,7 @@ tags:
 - drupal
 - javascript
 - pwa
-- service worker
+- serviceworker
 ---
 
 Announcing a new Drupal module: [Progressive Web App](https://www.drupal.org/project/pwa)!
@@ -42,7 +42,7 @@ Offering visibility to the Service Worker wasn't an option, so we went the other
 
 That means the `install` event should have a reasonable chance of caching a  usable page including CSS and JS, while only requiring a site admin to specify a list of URLs they want cached like so:
 
-```
+```sh
 /
 /about
 /offline

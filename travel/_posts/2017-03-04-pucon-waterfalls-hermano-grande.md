@@ -75,7 +75,7 @@ We took off, bouncing shoulder to shoulder in his 4-wheeler as we drove toward a
 
 His property only contains about 30 feed of the riverfront, but the neighbors are friendly and don't mind too much if you go on a hike. The sun was very high as we began walking, and the water took on a brilliant green as the sun cut deep into the water.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 We had fun checking out the first few as we walked along the river and even jumped into the pool of <em lang="es">Hermano Chico</em>. Although it was slow-flowing there, it was still a thrill because the water leads to ever-bigger waterfalls, but there were lots of branches to grab onto after jumping so we went for a cold plunge to beat the heat.
 
@@ -85,7 +85,7 @@ We scurried down some paths, clearing them with some shears we'd brought as we m
 
 Until finally we came to the big one.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 This thing was _enormous_. Loud. Wet from spray. And it had really done a number on the rocks that had been in its way. The stone we sat on was so smooth it was shiny, a product of endless, swift-flowing water over the eons.
 
@@ -97,7 +97,7 @@ We hung out for over an hour, enjoying the scene and exploring a bit, and though
 
 We dropped our bags so we could move faster, and made a very quick zig-zag descent down the steep trail, switching back about every 50 meters until we made it to the rock. And what a treat it was!
 
-{% include gallery.html gallery=page.gallery3 %}
+{% include 'gallery.html', gallery: gallery3 %}
 
 Even Hector had not come this far, so we all experienced this view of the waterfall for the first time together. It was absolutely stunning! The pictures just can't capture the raw power you could feel coming from this waterfall.
 

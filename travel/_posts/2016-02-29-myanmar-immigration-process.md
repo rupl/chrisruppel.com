@@ -67,7 +67,7 @@ Once we had the PDFs, we asked the front desk of our hostel if we could print th
 
 Here's what the letter looks like. I blacked out the confidential bits on mine:
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 ### Step 4: Book inbound and outbound flights
 
@@ -91,7 +91,7 @@ Maybe it was because of the 4 hour delay ¯\\\_(ツ)\_/¯
 
 Anyway, during the flight you'll receive customs forms. Don't bring the usual stuff: drugs, fruits, loads of money, live chickens, etc. The visa number described on the forms is called your **Approval Number** on the eVisa Approval. Aside from that the form was straightforward.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Your departure card is the left section of the second form (the section containing the word "NOTICE"). **Hold onto this piece of paper until you are stamped out of the country.** In other countries (e.g. Thailand, Singapore) we ask the immigration staff staple it into our passports, but Burmese immigration did not do this for us. So just hold onto that paper no matter what! 
 

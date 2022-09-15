@@ -57,8 +57,8 @@ A few of the places we went were common stops on other tours, but our guides too
 
 We laid on beaches, swam in bays, and tried a bit of snorkeling, although the coral is not so spectacular in this area.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Our last stop of the day was a small island, so small that a quick hike up to the top made for an excellent viewpoint. We got up there in about 5 minutes, peeked around for just a moment because it was so hot, then scampered back down to jump into the cool ocean water.
 
-{% include photosphere.html photosphere=page.photosphere %}
+{% include 'photosphere.html' %}

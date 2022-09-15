@@ -3,15 +3,15 @@ layout: page
 comments: true
 ---
 
-<article class="h-entry entry--main {% if page.has-link == true %}entry--link{% else %}entry--blog{% endif %}">
+<article class="h-entry entry--main {% if haslink == true %}entry--link{% else %}entry--blog{% endif %}">
   <header>
-    <h1 class="title--main p-name">{{ page.title }}</h1>
+    <h1 class="title--main p-name">{{ title }}</h1>
   </header>
 
-  <aside class="intro summary p-summary">{{ page.summary }}</aside>
+  <aside class="intro summary p-summary">{{ summary }}</aside>
 
   <div class="e-content">
-    {{ content }}
+    {{ content | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&amp;', '&' | replace: '<pre><code>  <picture', '<picture' | replace: '</figure></code></pre>', '</figure>' }}
     <div class="the-end" aria-label="End of article."></div>
   </div>
 
@@ -37,9 +37,9 @@ comments: true
     {% endif %}
   </div>
 
-  {% if page.comments %}
-    {% include webmentions.html %}
+  {% if comments %}
+    {% include 'webmentions.html' %}
   {% endif %}
 
-  {% include entry-meta.html %}
+  {% include 'entry-meta.html' %}
 </article>

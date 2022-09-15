@@ -50,7 +50,7 @@ Indeed, the island is about 1km in diameter and we've seen zero fuel-powered veh
 
 The island has a _very_ relaxed atmosphere. It only took a couple hours' walking around and overhearing music at several bars before we nicknamed Gili Air after its official soundtrack: _Jack Johnson Island_.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 We found a really great place to stay called [Goodtimes Bungalows](https://www.tripadvisor.com/Hotel_Review-g664667-d9770221-Reviews-Goodtimes_Bungalows-Gili_Air_Gili_Islands_Lombok_West_Nusa_Tenggara.html). It's run by a Norwegian family and they are some of the friendliest, most generous hosts we've met on our whole trip.
 

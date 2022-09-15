@@ -1,17 +1,19 @@
-<article class="trip--teaser teaser--gallery{% if include.trip.quote.text %} teaser--quote{% endif %}" id="{{ include.trip.path | replace: 'travel/_posts/','' | replace: '.md','' }}">
+<article class="trip--teaser teaser--gallery{% if trip.data.quote.text %} teaser--quote{% endif %}" id="{{ trip.date | date: '%Y-%m-%d' }}-{{ trip.url | replace: '/travel/','' | replace: '/','' }}">
   <h2 class="title--main">
-    <time datetime="{{ include.trip.date | date: '%Y-%m-%d' }}">{{ include.trip.date | date: "%b %d, %Y" }}</time>
-    <a rel="bookmark" href="{{ site.url }}{{ include.trip.url }}">{{ include.trip.title }}</a>
-    {% if include.trip.location %}<span class="where">{% include location.html location=include.trip.location %}</span>{% endif %}
+    <time datetime="{{ trip.date | date: '%Y-%m-%d' }}">{{ trip.date | date: "%b %d, %Y" }}</time>
+    <a rel="bookmark" href="{{ site.url }}{{ trip.url }}">{{ trip.data.title }}</a>
+    {% if trip.data.location %}<span class="where">{% include 'location.html', location: trip.data.location %}</span>{% endif %}
   </h2>
 
-  {% if include.trip.summary %}
-    <p class="summary">{{ include.trip.summary }}</p>
+  {% if trip.data.summary %}
+    <p class="summary">{{ trip.data.summary }}</p>
   {% endif %}
 
-  {% if include.trip.quote %}
-    {% include quote.html quote=include.trip.quote %}
+  {% if trip.data.quote %}
+    {% include 'quote.html', quote: trip.data.quote %}
   {% endif %}
 
-  {% include gallery.html gallery=include.trip.gallery %}
+  {% if trip.data.gallery %}
+    {% include 'gallery.html', gallery: trip.data.gallery %}
+  {% endif %}
 </article>

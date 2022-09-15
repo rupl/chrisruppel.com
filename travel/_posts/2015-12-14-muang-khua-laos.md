@@ -40,7 +40,7 @@ gallery2:
 
 tags:
 - hostels
-- night life
+- nightlife
 
 summary: After our crazy bus ride into Laos, the first stop was luckily the small, laid-back town of Muang Khua. We stayed here several days to recharge and relax.
 ---
@@ -53,7 +53,7 @@ While using the ATM that was right near the bus stop, a man approached us with a
 
 After getting our money we agreed we should check it out, so we went over to him and said we wanted to see the place. He smiled again and said to follow him, and started slowly walking us over a large suspension bridge to his hostel.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 We quickly checked in and he told us there was a family dinner at 6pm every night. "We eat da bamboo, da vegetables, da rice, and da WHISKEY" — it was delicious! The whole hostel gathered for dinner and we had a great time meeting everyone. The whiskey was actually rice <del datetime="2015-12-18">wine</del>, and every time we drank we said "lao-Lao!"
 
@@ -61,7 +61,7 @@ We quickly checked in and he told us there was a family dinner at 6pm every nigh
 
 As if that weren't enough, we wandered next door and sang Lao karaoke with a few locals for over an hour. Their videos had latin-character phoenetic subtitles so that we could sing along with them despite not knowing a word of the language. It was a riot and we could see that we really made their night by giving it an honest try. Unforgettable night!
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 It turns out the greeting in Laos is "sabaidee" — strikingly similar to our favorite mantra we learned in Pai: "sabai, sabai." It means something different in Laos but from the moment we first arrived we knew we would love it here.
 

@@ -45,7 +45,7 @@ We started from the central station but you can start from anywhere. Both direct
 
 On the train we found ourselves greeted by many smiling faces. I think people are always happy to see tourists in a place that is dominated primarily by locals. We didn't take too many photos and just enjoyed the ride. Here's the path we took (counter-clockwise):
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 We initially sat across a little old lady who we smiled at warmly. Her smile back was unforgettable; she was just beaming. She offered us some oranges that she bought on the train and although our language barrier was 100%, we could see that she liked us and it made us feel nice.
 
@@ -55,7 +55,7 @@ Much like the third-class train from Bangkok to Ayutthaya, this train (dubbed "o
 
 Most impressive was a woman carrying a large plate of sliced watermelon on her head. She sold many pieces, with the train moving pretty quick by the time she finished. No matter! We saw her casually step down and a moment later we were passing her as she walked calmly on the sidewalk, not a single hint of imbalance as the watermelons remained perched on top of her head.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 As we got to the northern side of the loop the city thinned out and we saw a bit of the countryside. There were many fields of vegetables, but none were familiar enough to identify.
 

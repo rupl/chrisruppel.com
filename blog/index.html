@@ -9,24 +9,24 @@ layout: page
 
   <div id="blog-list" class="blog-list">
     <!-- Load some initial content -->
-    {% for post in site.categories.blog %}
+    {% for post in collections.blog %}
       <article class="teaser--title">
         <header>
           <h2 class="title--main">
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>
-            {% if post.link %}
-              <div class="link--external"><a target="_blank" rel="noopener" href="{{ post.link }}">{{ post.title }}</a></div>
+            {% if post.data.link %}
+              <div class="link--external"><a target="_blank" rel="noopener" href="{{ post.data.link }}">{{ post.data.title }}</a></div>
             {% else %}
-              <a href="{{ post.url }}">{{ post.title }}</a>
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
             {% endif %}
           </h2>
         </header>
 
         <p class="summary">
-          {% if post.summary %}
-            {{ post.summary }}
+          {% if post.data.summary %}
+            {{ post.data.summary }}
           {% else %}
-            {{ post.content | strip_html | truncatewords: 47, '...' }} <a href="{{ post.url }}">Read more</a>
+            {{ post.templateContent | strip_html | truncatewords: 27, '...' | replace: '.', '.&nbsp;' }} <a href="{{ post.url }}">Read more</a>
           {% endif %}
         </p>
       </article>

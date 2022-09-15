@@ -4,20 +4,20 @@
   way I knew how to force the space was with &nbsp; at the end of each output.
 {% endcomment %}
 {% capture location_full %}
-{% if include.prep != null %}
-  {{ include.prep }}
- {% elsif include.prep == null and include.location.prep != null %}
-  {{ include.location.prep }}
+{% if prep != null %}
+  {{ prep }}
+ {% elsif prep == null and location.prep != null %}
+  {{ location.prep }}
  {% else %}
   in
  {% endif %}
 
-{% if include.location.locality %}
-{{ include.location.locality }}{% if include.location.region or include.location.country %}, {% endif %}
+{% if location.locality %}
+{{ location.locality }}{% if location.region or location.country %}, {% endif %}
 {% endif %}
-{% if include.location.region %}
-{{ include.location.region }}{% if include.location.country %}, {% endif %}
+{% if location.region %}
+{{ location.region }}{% if location.country %}, {% endif %}
 {% endif %}
-{% if include.location.country %}{{ include.location.country }}{% endif %}
-{% if include.location.locality == null and include.location.region == null and include.location.country == null and include.location.place %}{{ include.location.place }}{% endif %}
+{% if location.country %}{{ location.country }}{% endif %}
+{% if location.locality == null and location.region == null and location.country == null and location.place %}{{ location.place }}{% endif %}
 {% endcapture %}{{ location_full | strip_newlines | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' }}

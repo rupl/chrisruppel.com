@@ -3,7 +3,6 @@ title: Strolling through the fields
 location:
   region: Tiengen
   country: Germany
-layout: gallery
 
 gallery:
 - gridtype: col-3
@@ -31,5 +30,7 @@ tags:
 - family
 - travel at home
 ---
+
+{% include 'gallery.html' %}
 
 We spent one of the nicer fall days taking a stroll through the fields around Karin's neighborhood where she grew up. There are lots of animals and barns for a kiddo to enjoy, and many homes sell veggies and wine directly.

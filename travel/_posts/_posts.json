@@ -1,0 +1,6 @@
+{
+  "type": "travel",
+  "layout": "trip",
+  "permalink": "/travel/{{ page.fileSlug }}/",
+  "comments": true
+}

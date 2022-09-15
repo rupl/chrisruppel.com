@@ -32,7 +32,7 @@ Next, we stopped in a church in Flieden and talked to a priest. He became quite 
 
 After that, we drove to Laugendorf, the alleged birthplace of our ancestor. However, no one in this tiny farming community had heard the name; it seems the Ruppels were either gone for many generations, or hadn't been there at all.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Finally, we drove to Steinbach, the hometown of our ancestor's wife. Here we actually found quite a bit of information about her side of the family. By randomly asking folks who were doing yardwork or taking walks outside, we found ourselves directed to the house of another chronicling enthusiast.
 

@@ -1,0 +1,6 @@
+{
+  "type": "blog",
+  "layout": "blog",
+  "permalink": "/blog/{{ page.fileSlug }}/",
+  "comments": true
+}

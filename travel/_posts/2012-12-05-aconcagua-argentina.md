@@ -42,4 +42,3 @@ tags:
 
 summary: Starting from Mendoza, we took a day trip to see Cerro Aconcagua, the highest peak in the Americas.
 ---
-

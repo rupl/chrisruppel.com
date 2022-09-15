@@ -48,7 +48,7 @@ With GA one would have to wrap the tracking code with custom JS to check the `na
 
 Modern GA has no option for tracking users with JS disabled. As absurd as it seems, yes there are people who do this, including myself. The web is just a lot faster that way, especially on a phone. I use Brave to browse with JS disabled by default.
 
-Matomo can provide a `<noscript>` containing an image tag when the user has disabled JS. It will still respect the DNT header in this mode as well.
+Matomo can provide a `&lt;noscript>` containing an image tag when the user has disabled JS. It will still respect the DNT header in this mode as well.
 
 ## Event tracking
 

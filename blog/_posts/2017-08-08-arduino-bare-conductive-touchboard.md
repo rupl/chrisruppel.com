@@ -56,7 +56,7 @@ I had a look through the MIDI demos and they have very polished, clearly documen
 
 While it was fun to try the board out, the real magic happens when it's connected to the real world somehow. My first painting was quick, just so I could try the board out:
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 It worked on the first try. I just made sure none of the lines of paint touched, and had good connections to each electrode. The board advises you to use the `RESET` button often when adding or changing the paint, as it triggers the calibration step on the board. In my experience the reset process is error-proof. 
 

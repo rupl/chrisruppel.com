@@ -22,6 +22,9 @@ gallery:
   type: wide
 
 summary: Due to a minor flight complication we were only in Singapore for 18 hours and did not get to explore as much as we wanted. It was nice to use fast internet, drink tap water, and throw our TP in the toilet for one night though.
+
+tags:
+  - airports
 ---
 
 Singapore is a fascinating place. It was basically created out of thin air, and although it does have some strange restrictions it's a clean, diverse, well-functioning city/country.

@@ -7,6 +7,7 @@ location:
 map:
   json: beautiful-quarantine-bike-ride.json
   zoom: 12
+  style: satellite-v9
 
 gallery:
 - gridtype: col-2
@@ -35,8 +36,8 @@ Like any sensible person, I've been spending a lot of time at home. But as our n
 
 I managed almost 20k and couldn't believe how delightful it was. Most of the way I'd biked at one time or another, but I did like finding the paths near the A5. The trails are a bit dusty since they're pouring new gravel on many of them, but it was mostly empty and the trees provided great shade.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 I will definitely enjoy exploring those paths more in the future. Of course, a few pics of my adventure:
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}

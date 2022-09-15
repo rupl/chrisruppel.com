@@ -32,7 +32,7 @@ The beginning of March brought a new school year for the southern hemisphere, so
 
 There were just a handful of other vacationers at this point. We sat on the dock and had the whole thing to ourselves for a while. We sunned ourselves and I admired the clear water as I peeked through the boards of the dock while laying on my stomach.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Eventually another couple our age came dirt-biking over and stopped on the dock. The guy got out two snorkeling masks and jumped in. He told Karin his girlfriend didn't want to do it, so if we were interested we could use the mask and snorkel around. He was looking for mussels to eat.
 

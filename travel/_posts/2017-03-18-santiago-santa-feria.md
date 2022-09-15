@@ -19,7 +19,7 @@ gallery:
 tags:
 - festivals
 - music
-- night life
+- nightlife
 
 summary: We watched a Santa Feria concert onstage!
 ---

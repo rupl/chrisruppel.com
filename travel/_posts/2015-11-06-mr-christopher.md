@@ -22,7 +22,7 @@ summary: Lessons learned from getting medical treatment for a moderately infecte
 
 This unofficial advice is just to tell our story. Maybe it will help you too.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 ### Look after your own issues
 

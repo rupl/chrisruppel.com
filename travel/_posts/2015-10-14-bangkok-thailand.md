@@ -47,10 +47,10 @@ tags:
 summary: We did a lot of walking around in Bangkok. Here are some of the things we saw over the course of a few days.
 ---
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Finally, here's a photosphere of the Jim Thompson House Museum. This guy was quite a character, serving in the US military but falling in love with Thailand during his service. He came back, re-ignited the Thai silk industry, and did a lot to promote Thai culture. His death is still unexplained, but his estate was used to start a foundation to continue preserving the old way of producing silk and other aspects of Thai culture.
 
 Here's the "lobby" of the museum, which is actually the courtyard between six houses he bought and transformed into one house:
 
-{% include photosphere.html photosphere=page.photosphere %}
+{% include 'photosphere.html' %}

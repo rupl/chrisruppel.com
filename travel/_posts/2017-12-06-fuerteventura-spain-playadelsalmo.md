@@ -3,7 +3,6 @@ title: Playa Del Salmo
 location:
   region: Fuerteventura
   country: Spain
-layout: gallery
 
 gallery:
 - gridtype: col-2-short
@@ -31,6 +30,8 @@ tags:
 
 summary: We escaped from winter in Fuerteventura, one of the Canary Islands.
 ---
+
+{% include 'gallery.html' %}
 
 Playa Jandía is a beach near the south tip of the island. Flanked by massive sand dunes, it is a very shallow, gradual beach. The tide can swallow 150m of coast as it rises and falls. The dunes are allegedly a nature preserve, but that doesn't stop people from climbing up them. I didn't do it because the signs said not to, but it was tempting.
 

@@ -64,10 +64,10 @@ tags:
 summary: Day 2 of our three-day trek involved a hike along the highlands with a nice long break at a swimming hole. We walked over 18km and slept in a Buddhist monastery.
 ---
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Day 2 was the hardest of the three. Distance-wise, we walked the farthest and also the most uphill. The main problem for Karin and me was that we both wore the wrong socks on the first day and developed blisters that made walking uncomfortable. It wasn't so bad that we slowed the group down, but we both had a bit of first-aid to administer at the end of the day once we reached the monastery.
 
 Sleeping in the monastery was really nice. The chilly mountain air made us snuggle into our blankets. Since it was a clear night and I was sleeping near the windows, I drifted off staring at the stars.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}

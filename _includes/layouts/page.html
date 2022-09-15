@@ -1,9 +1,9 @@
 {% capture title %}
-{% if page.title %}{{ page.title }}{% endif %}
-{% if page.location %} {% include location.html location=page.location %}{% endif %}
-{% if page.category == 'travel' %} 🌍 {% endif %}
-{% if page.tag %}#{{ page.tag | replace: ' ','' | downcase }} {% endif %}
-{% if page.category == 'blog' %} — {% endif %}
+{% if title %}{{ title }}{% endif %}
+{% if location %} {% include 'location.html' %}{% endif %}
+{% if category == 'travel' %} 🌍 {% endif %}
+{% if tag %}#{{ tag | replace: ' ','' | downcase }} {% endif %}
+{% if category == 'blog' %} — {% endif %}
 {% endcapture %}
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
@@ -27,7 +27,7 @@
     <link rel="pgpkey" href="/pgp.pub">
 
     <!-- webmention endpoint -->
-    <link rel="webmention" href="{{ site.url }}/webmentions/post/" />
+    <link rel="webmention" href="{{ webmention-url }}" />
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="Chris' Travels" href="{{ site.url }}/travel.xml">
@@ -46,17 +46,17 @@
     <link rel="preconnect" href="{{ site.img-host }}">
   {% endif %}
 
-  {% if page.meta != null %}
+  {% if meta != null %}
     <!-- Social tags -->
     <meta name="twitter:dnt" content="on">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rupl">
     <meta name="twitter:creator" content="@rupl">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:title" content="{{ page.title | escape | strip_newlines }}{% if page.location %} {% include location.html location=page.location %}{% endif %}">
-    <meta property="og:description" content="{% if page.summary %}{{ page.summary | strip_html | escape }}{% else %}{{ page.content | truncatewords: 50, '...' | strip_html | escape }}{% endif %}">
-    <meta property="og:image" content="{{ site.img-host }}/img/travel/{% if page.gallery[0].src %}{{ page.gallery[0].src }}{% else %}{{ page.gallery[1].src }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ url }}">
+    <meta property="og:title" content="{{ title | escape | strip_newlines }}{% if location %} {% include 'location.html' %}{% endif %}">
+    <meta property="og:description" content="{% if summary %}{{ summary | strip_html | strip_newlines | escape }}{% else %}{{ content | truncatewords: 44, '...' | strip_html | escape }}{% endif %}">
+    <meta property="og:image" content="{{ site.img-host }}/img/travel/{% if gallery[0].src %}{{ gallery[0].src }}{% else %}{{ gallery[1].src }}{% endif %}">
   {% endif %}
 
   {% if site.development == false %}
@@ -77,7 +77,7 @@
       }
     </script>
   </head>
-  <body class="{{ page.bodyclass }}">
+  <body class="{{ bodyclass }}">
     <main>
       {{ content }}
     </main>
@@ -90,9 +90,9 @@
           srcset="/static/chris-ruppel-2015@512x512.jpg 2x">
 
         <p class="p-role p-note">
-          Hello, I'm <a class="p-name fn u-url" href="{{ site.url }}">Chris Ruppel</a>,
+          Hello, I'm <a rel="author me" class="p-name fn u-url" href="{{ site.url }}">Chris Ruppel</a>,
           a frontend <span class="p-category">developer</span>, digital <span class="p-category">artist</span>, and world <span class="p-category">traveler</span>
-          last seen {% include last-seen.html %}. <a href="{{ site.url }}/work/">Hire me!</a><br>
+          last seen {% include 'last-seen.html', prep: 'around' %}. <a href="{{ site.url }}/work/">Hire me!</a><br>
         </p>
         <p class="colophon">
           <a href="{{ site.license-url }}">&#169; {{'now' | date: '%Y'}} Chris Ruppel</a> —
@@ -107,7 +107,7 @@
     </div>
 
     <script async defer src="/js/main.min.js"></script>
-    {% if page.photosphere %}<script async defer src="/js/photosphere.min.js"></script>{% endif %}
-    {% if page.js %}<script async defer src="/js/{{ page.js }}"></script>{% endif %}
+    {% if photosphere %}<script async defer src="/js/photosphere.min.js"></script>{% endif %}
+    {% if js %}<script async defer src="/js/{{ js }}"></script>{% endif %}
   </body>
 </html>

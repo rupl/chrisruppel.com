@@ -42,7 +42,7 @@ They started out as an exploration operation, having [explored and discovered do
 
 Over time the operation grew to be what it is today, offering travelers the experience of a lifetime up in the most northern edge of Thailand possible (which means the weather is superb!). The lodge is a home base for a huge array of activites: caving, kayaking, hiking and trekking, swimming, sunrise hikes, and more.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 The pictures don't do this place justice. They can't capture the creaking of teak wood everywhere you walk, the crackling of bamboo hammocks as people lazily read books in the afternoon, and at night the chirping of crickets and the occasional _BWOOOMP_ of the frogs. It's such a relaxing, peaceful place in the day, and packed with really fun and interesting travelers at night. 
 

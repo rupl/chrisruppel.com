@@ -62,7 +62,7 @@ gallery2:
 tags:
 - trekking
 - mountains
-- volcanos
+- volcanoes
 
 summary: We hiked to the tree line of Volcán Villarica starting from a creek outside Pucón in order to find a grove of Araucaria.
 ---
@@ -75,7 +75,7 @@ The whole morning while hiking upwards, the clouds obscured Volcán Villarica, l
 
 There was forest on either side of us, but our hike was over rocks. A river of stone amongst a sea of green. The path had a pleasant incline; constant but not so steep to wear you out. It runs from the top of the volcano all the way down to the lake. The entire thing can be covered on foot, although you'd need a couple days to make the whole journey.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 Hector wasn't 100% sure where to find the trees, and admitted that he'd been unable to find them one other time he'd come out here hiking. But we were hopeful we'd find them and the scenery was interesting enough on its own.
 
@@ -85,7 +85,7 @@ These trees absolutely tower over the rest! They grow about one centimeter per y
 
 We split up and all had a moment of solitude amongst the trees. They were absolutely gorgeous, and the light breeze provided both the perfect ambiance within the trees, and a wonderful cooling effect after we'd hiked up the open path in the sun.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 On the way back down of course the clouds cleared up, meaning we all walked down the mountain with one eye looking backwards. But we took the opportunity to snap some group photos with the prized mountain in the background.
 

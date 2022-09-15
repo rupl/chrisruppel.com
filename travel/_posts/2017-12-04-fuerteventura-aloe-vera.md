@@ -35,7 +35,7 @@ On the way home from Corralejo we stopped at an Aloe Vera farm we'd heard about 
 
 Just by luck we were the sole visitors! A man peeked out and came over to welcome us. He asked where we were from and we said Germany and US respectively. It turned out the man was born in Florida, raised in Italy, and now working as a watersports instructor on the island. He said I was the first person from the US in a long while and was excited to speak english with us.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 He gave us the tour of the aloe vera plantation, which is short but informative, then we went on to try the various products. They start you out with a piece of pure aloe cut straight from a plant. After a long day at the beach it felt really nice to rub the healing liquid all over our arms and neck.
 

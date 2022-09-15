@@ -6,6 +6,7 @@ location:
 
 map:
   json: easy-rider-day-1.json
+  zoom: 10
 
 gallery:
 - gridtype: tall
@@ -75,19 +76,19 @@ The next day we strapped our bags to the bikes and hopped on, wondering if we'd 
 
 On our first day, we basically did a day-trip of Da Lat. Ut and Bom took us to coffee farms, a café serving the famous "weasel coffee" (weasels help process the beans by eating and pooping them out), a silk factory, the Elephant Waterfalls, and a temple.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 After all of that, we got further out of town, riding along the countryside and stopping occasionally at a farm or fruit stand to sample the wares of the people there. Ut and Bom seemed like old friends with everyone we met, but insisted that they know nobody out here, and it's just the Vietnamese way. 
 
 People would let us into their houses, give us a taste of coffee beans, persimmon, or whatever else they were producing on their farm.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Ut told us that they don't have a schedule or specific location for the various things they show us, they just stop when they see a good spot. For instance, when we stopped at the coffee farmer's house, Ut said he smelled the rice wine as we passed and knew what the guy would be up to. After he mentioned it, I started occasionally smelling that same smell as we passed a coffee field, and got the feel for the land in a way that I would have totally overlooked if not for his commentary on how they conduct the tour.
 
 One really fun surprise was a boat crossing! We were just riding along and out of nowhere is a river with no bridge. At first I didn't understand, but there were three boats each positioned under a rope that stretched across the river. Before we knew it, we were on the boats with people heaving us all the way across the river. How cool!
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 After the bridge crossing, we stopped less frequently and drove faster for longer stretches. After getting used to the bike for most of the day, it was quite fun to go fast! As the sun got lower, we stopped at a bridge to watch it dip below the horizon, then spent another hour racing toward our goal for the night, Lak Lake.
 

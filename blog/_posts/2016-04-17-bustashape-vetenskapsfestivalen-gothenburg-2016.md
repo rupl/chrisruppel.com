@@ -27,12 +27,10 @@ tags:
 - web sockets
 ---
 
-I had the pleasure of participating in [Vetenskapsfestivalen Göteborg 2016](http://vetenskapsfestivalen.se/in-english/) (Vetfest for short). [Afra](http://afranoubarzadeh.se/) and I took part in an installation centering around [bustashape](https://bustashape.com), a site we're working on together.
+I had the pleasure of participating in [Vetenskapsfestivalen Göteborg 2016](https://vetenskapsfestivalen.se/) (Vetfest for short). Afra and I took part in an installation centering around [bustashape](https://bustashape.art), a site we're working on together.
 
 Bustashape allows people to create art together on a digital canvas using whatever is in their pocket. It's a perfect fit for Vetfest, which centers around the intersection of art and technology. We brought TVs, tablets, smartphones, and laptops to the festival, and allowed passerby to contribute to a digital canvas displayed on a big-screen TV.
 
 The results were astounding! Understandably, most peoples' initial reaction was confusion, and many shapes were randomly pushed about. But out of chaos came something beautiful. Here are a few posters we created from all the various works that people made over the course of the festival:
 
-{% include gallery.html gallery=page.gallery %}
-
-<ins class="update" datetime="2016-04-19"><a href="http://afranoubarzadeh.se/bustashape_vetfest.html">Read Afra's thoughts on the event!</a></ins>
+{% include 'gallery.html' %}

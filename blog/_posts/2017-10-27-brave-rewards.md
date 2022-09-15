@@ -50,7 +50,7 @@ These simple metrics are applied to your browsing to create the payout list for 
 
 Take a look at my payments screen for October. As long as you keep a balance in your wallet, it will automatically make payments each month:
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 As you can see, I spent a significant portion of my time this month learning Vue. Brave recognizes this and both CSS Tricks and the vue.js website will receive the _lion's share_ of my budget, provided they register with [Brave Creators](https://creators.brave.com/) to receive payments (formerly called Brave Publishers when article was originally published).
 

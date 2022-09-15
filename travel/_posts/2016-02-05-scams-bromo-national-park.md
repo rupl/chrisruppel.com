@@ -29,7 +29,7 @@ We were with some other people who ended up proceeding into the park and they al
 
 However, part of the group did perservere, walking up the trail themselves and later emailed us reporting that they had a great time despite the volcano itself being closed due to geothermal activity.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 If you have time and patience **I would recommend taking the local bus from Probolinggo to Bromo in the morning** which allows you the time to wait for a full bus (meaning price is a respectable 35-50K IDR) _and_ avoid paying park entrance fee. When you arrive you'll have time to shop around for a homestay instead of taking the first one that you find.
 

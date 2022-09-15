@@ -40,4 +40,4 @@ One new thing we did was a mud bath. Unfortunately we took no pictures but it wa
 
 We enjoyed the downtime, but Nha Trang is a pretty neutral place overall. After a couple days moved on via nightbus to Hội An.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}

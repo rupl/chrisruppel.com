@@ -36,5 +36,5 @@ tags:
 - beer
 - food
 
-summary: When I think of Brussels two things come to mind — the best beer in the world, and great food to soak it up.
+summary: 'Thinking of Brussels two things come to mind: the best beer in the world, and great food to soak it up.'
 ---

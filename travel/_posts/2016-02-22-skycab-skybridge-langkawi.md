@@ -46,7 +46,7 @@ We arrived at 7:30 after we heard that lines can form up to an hour before the p
 
 The nice thing was that the admission is controlled and they actually honor the order the tickets are purchased, so the entire way up we were first! First gondola, first to see the viewpoints, and first to enter the bridge for the day! We enjoyed our precious three minutes of solitude before a caravan of selfie-sticks arrived.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 It was quite windy. While Karin was jumping barefoot for her photo one of her sandals almost flew off the bridge into the abyss.
 
@@ -54,6 +54,6 @@ Before we'd finished giggling about our close call, the wind took my sunglasses 
 
 After enjoying the scenery for a half hour, we made our way back down. The view was stunning, with mountains on one side and ocean on the other.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 When we came back down the mountain, the park was absolutely packed with people. The line for the SkyCab had at least 100 people, with another crowd in line for tickets. If you want to see the SkyBridge, get up early and skip the lines, then take a nap afterward with all the time you saved.

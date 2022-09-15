@@ -70,13 +70,13 @@ summary: We took a tour to the 100 Waterfalls. It was a moderate hike with a bea
 
 We almost didn't go on this trek due to the intense rain that poured down in the morning. We figured it would be cancelled, but they sent us off anyway. Although it was rainy in the morning, it cleared up and the sky was lightly overcast for most of the day. It turned out to be alright; we were still sweating as we hiked the trail.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 The biggest surprise were the leeches. They never made mention of it while describing the trek, and the guide only mentioned it when it was finally necessary. We were all a little paranoid, especially after we started finding them on our legs. A couple of us got stuck by them but it's really not painful... an ant bite is much worse in comparison. But still, leeches are _gross_.
 
 The actual hike through the falls lasted about 35 minutes. The water is fast-running over the rocks and you can walk practically anywhere as you make your way up. Many of the rocks had small footholes that had been carved in so often we just walked up the sides of rocks that were as tall as us. It was very beautiful and probably the easiest part of the hike. The water also prevented the leeches from hanging out so we didn't have to worry about that for a while either. Score!
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Once we made it to the top we were pretty soaked. We admired the waterfall for a short time and then started our "descent" which was more like sliding down the mud paths while holding two bamboo sticks to stabilize ourselves. Karin fell the most and was deemed the "winner" of our hike downward, while I  placed second. We were filthy by the end, but it was good fun.
 

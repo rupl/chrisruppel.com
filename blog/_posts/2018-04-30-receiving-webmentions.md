@@ -17,6 +17,8 @@ My motivations for receiving Webmentions are to participate in [IndieWeb](https:
 
 ## My implementation
 
+<ins class="update" datetime="2022-09-15">I've converted the site to Eleventy and gotten rid of my node.js server, so I had to switch to <a href="https://webmention.io">webmention.io</a> in the process. I've left the explanation her for posterity:</ins>
+
 The nuts and bolts are often specific to your existing tech stack, but mine is a pretty common one for frontend developers: statically generated site, served by Express. I thought about [going with a Jekyll plugin like Lewis](https://lewisnyman.co.uk/blog/indie-web-camp-2015/), but in the end I decided to add a PostgreSQL DB to manage the Webmentions themselves, and manage them separately from my static site generator. I may want to switch generators in the future, and it's one less piece that has to be rebuilt at the time of migration.
 
 Since I'm already using Express to serve my site, adding new endpoints is a snap. I added two routes: `webmentions/get` and `webmentions/post`. I suppose they could be combined into one but I'm a complete newbie to API design so maybe chime in below and tell me if my setup is completely daft 😁

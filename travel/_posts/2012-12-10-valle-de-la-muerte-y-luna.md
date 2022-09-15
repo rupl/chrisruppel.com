@@ -69,7 +69,7 @@ Both names were fitting. There was almost no life able to survive in this climat
 
 The trade-off: bright red of the desert filling the eye to the horizon.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 We first went atop a small-ish mountain in a van. We walked around and looked at all there was to see. Pablo pointed out the one plant, rica-rica, that was able to survive on the very infrequent precipitation that falls here.
 
@@ -81,6 +81,6 @@ Our last stop was another valley: _Valle de la Luna_ (Valley of the Moon). Like 
 
 The sunset was the climax of the tour. We hiked up a mountain and had a superb view:
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 Afterwards we hiked back down the mountain and took a quiet ride back into town. We found a restaurant right around the corner called Café Export, had a good meal, and went to bed early to prepare for the next day's adventure.

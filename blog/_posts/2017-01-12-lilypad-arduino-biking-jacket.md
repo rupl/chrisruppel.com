@@ -48,7 +48,7 @@ Ever since I found the LilyPad, I have had this project in mind. It was one of t
 
 Here are some pictures of the jacket with some notes I jotted down during the project. Below the photos I included more details if you're interested in the actual construction and coding of the jacket.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 I used [Leah Buechley's instructables.com tutorial](https://www.instructables.com/id/turn-signal-biking-jacket/) as my guide, and it is a great walk-through that I need not reproduce. If you want to build one for yourself, use her tutorial. Then you can revisit this post to see my modifications and code samples.
 

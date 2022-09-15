@@ -63,13 +63,13 @@ Her friend left on the morning ferry and she was having a "downtime day" before 
 
 Karin was happy to sun herself on the beach but I joined her snorkeling. You can see Koh Kra, a tiny island from the Sunrise beach, and it looks like a fantastic snorkel spot, so we set our sights on it and swam out. Mirthe was equipped with a GoPro so luckily we got some photos of this dive!
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Once we made it we were rewarded with an exclusive view of Koh Lipe made even more sweet by the timing of our swim. The sun was directly overhead and lit up the ocean just perfect! We walked around the two tiny (I mean _tiny_) beaches on this island and decided which spot was prime for more snorkeling.
 
 I wasn't so hot on the idea, but Mirte wanted to swim around the whole island. But we'd come so far already I swallowed my concern and we dove back in. This island, not bothered by more than 10 people per day, was absolute prime snorkeling water! We saw beautiful, scary, lovely sea life in the water:
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 We saw much more than these photos show (it always seems to work that way when you're diving). I saw my first large jellyfish and was glad that the current was not bringing them towards us when I spotted them.
 

@@ -6,7 +6,7 @@ summary: Using the Service Worker offline cache to progressively enhance static 
 tags:
 - offline
 - javascript
-- service worker
+- serviceworker
 ---
 
 In a previous article, I detailed how my website visitors can [see an offline content list](/blog/service-worker-offline-content-list/) so they can find saved content quickly when they hit my offline page. This post demonstrates an alternative approach to building the list manually, instead using a static list of content and hiding any uncached content.

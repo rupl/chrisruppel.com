@@ -1,11 +1,10 @@
 {% capture filed %}
-  <a rel="author" class="h-card p-author u-url" href="{{ site.url }}">Chris Ruppel</a> filed this <strong class="p-category">{{ include.categories[0] }}</strong> entry
-  {% if page.category == 'blog' %}
-    on <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%B %d, %Y' }}</time>
-  {% endif %}
-  {% if include.tags.size > 0 %}
+  <a rel="author me" class="h-card p-author u-url" href="{{ site.url }}">Chris Ruppel</a>
+  filed this <strong class="p-category">{{ type }}</strong> entry on
+  <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%B %d, %Y' }}</time>
+  {% if tags.size > 0 %}
     under
-    {% include tags.html category=page.category tags=include.tags %}
+    {% include 'tags.html' %}
   {% endif %}
 {% endcapture %}
 

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Hire
 permalink: /work/
 bodyclass: page--work
@@ -10,7 +11,7 @@ bodyclass: page--work
 <p>I've helped some big brands achieve their performance goals while producing sites that hold up to prime-time levels of traffic.</p>
 
 <ul class="clients">
-{% for client in site.clients limit:6 %}
+{% for client in clients limit:6 %}
   <li class="client client--{{ client.class }}" style="background-image: url(/svg/work/logos/{{ client.src }})">
     <span class="element-invisible">{{ client.alt }}.</span>
   </li>
@@ -21,7 +22,7 @@ bodyclass: page--work
 <p>Want more info right away? <a href="/work/services/">Read about my services.</a></p>
 
 <div id="calendar" data-autoupdate="true">
-  {% include calendar.html %}
+  {% include 'calendar.html' %}
 </div>
 
 <br><br>

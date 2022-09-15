@@ -59,7 +59,7 @@ Unlike most folks we skipped the cable car and began the hike up Table Mountain.
 
 Shortly after lunch, we approached a beautiful gulch which we thought was the actual India Venster. The view was stunning and we were happily taking photos left and right:
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 After a while, though, it became clear that we weren't on the trail anymore. We hadn't seen another soul, save for the fellow that passed us at lunch... but we'd caught up with him and he joined our party. He was Dutch, named Anthony.
 
@@ -77,7 +77,7 @@ After several unplanned hours of trudging along, we finally hit level ground, ma
 
 Marching on another 20 minutes we found a sign for... the India Venster 😆
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 It wasn't too long until we were back in the thick of the tourism near the cable car. We gladly blended into the crowd, grabbing ice cream and drinks, feeling lucky to be alive. Our cable car ride to the bottom was pleasantly uneventful.
 

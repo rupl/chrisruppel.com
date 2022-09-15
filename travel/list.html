@@ -10,8 +10,8 @@ layout: page
   <p class="intro summary">Here are all the places I've been. Almost. <small><a class="alt" href="{{ site.url }}/travel/">Browse with photos.</a></small></p>
 
   <div class="trip-list">
-    {% for trip in site.categories.travel %}
-      {% include trip-listing.html trip=trip %}
+    {% for trip in collections.travel %}
+      {% include 'trip-listing.html' %}
     {% endfor %}
   </div>
 

@@ -24,7 +24,7 @@ They are very popular because of their ease of use and myriad of applications. W
 
 Before getting started with `node-pixel` make sure to follow the instructions to flash your Arduino with the proper firmware. I used the node.js module called [interchange](https://www.npmjs.com/package/nodebots-interchange) and it installed onto my Arduino Uno R3 without a hitch.
 
-```
+```sh
 interchange install git+https://github.com/ajfisher/node-pixel -a uno --firmata
 ```
 
@@ -71,7 +71,7 @@ board.on("ready", function() {
 
 Put this code into a file called `hello-neopixel.js` and then execute it on your command line like so:
 
-```
+```sh
 node hello-neopixel.js
 ```
 

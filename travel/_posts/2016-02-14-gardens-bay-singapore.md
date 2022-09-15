@@ -28,7 +28,7 @@ gallery:
 tags:
 - artwork
 - parks
-- night life
+- nightlife
 
 summary: We enjoyed a popular light show in one of Singapore's parks, Gardens By the Bay.
 ---
@@ -43,7 +43,7 @@ Once night fell, we took back to the streets in search of a popular activity: on
 
 The park has about 20 so-called "super trees" which have live vegetation on the trunks, but solar panels on top. There are a couple pedestrian bridges linking some of the super trees together and it was a really dramatic park to impress all the visitors that gather each night.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 After that we went and saw a second show involving water misters, projectors, and lasers. It was also fun, but we really preferred the tree displays. Both shows were totally free to the public.
 

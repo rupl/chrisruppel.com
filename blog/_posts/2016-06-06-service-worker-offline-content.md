@@ -4,7 +4,7 @@ title: Offline Content with Service Worker
 tags:
 - offline
 - javascript
-- service worker
+- serviceworker
 
 summary: Learn how to add content to the Service Worker cache at the request of the visitor, then serve it offline.
 ---
@@ -69,7 +69,7 @@ It's also worth noting that [`navigator.onLine`](https://developer.mozilla.org/e
 
 ### Collecting assets from the DOM
 
-Jake's short example uses an endpoint to collect the necessary URLs and build the array for the cache, but I opted to collect everything straight from the DOM. The main reason was because of responsive images. The cache contents will by definition be used on the same device, so instead of caching all possibilities within the `srcset` of each image, I just grabbed the `currentSrc` of each one. I'm using Picturefill so that property exists whether the browser natively supports `<picture>` or not.
+Jake's short example uses an endpoint to collect the necessary URLs and build the array for the cache, but I opted to collect everything straight from the DOM. The main reason was because of responsive images. The cache contents will by definition be used on the same device, so instead of caching all possibilities within the `srcset` of each image, I just grabbed the `currentSrc` of each one. I'm using Picturefill so that property exists whether the browser natively supports `&lt;picture>` or not.
 
 Building on the previous example, our `pageResources` will now contain the URL of each image that was visible when the button was pressed:
 

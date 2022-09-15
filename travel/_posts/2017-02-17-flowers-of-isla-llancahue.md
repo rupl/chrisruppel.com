@@ -55,16 +55,16 @@ tags:
 summary: Some typical flowers of southern Chile.
 ---
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 The Copihue (koh-pea-way) is the national flower of Chile and visitors always love seeing them. Since my previous trip only took me to Santiago and the desert, I'd never seen them before. They are plentiful on the family island, growing on vines and found either solitary or in big bunches.
 
 Some friends of the family told me that they can be eaten raw or carmelized in a pan. Eaten raw they taste mostly like iceberg lettuce, but slightly sweeter. They have their own sugar so they carmelize to a brown color when thrown in a hot pan. I fried them over the grill with coconut oil, zuchini, onions, and a few chiles. They were a great side!
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 The other special flower in this region are the hydrangeas. Although they grow well in many regions of the world, the nearby Volcano Villarica makes the ones in this area special. The ash from the volcano creates acidity in the soil that allow the flowers to bloom in brilliant shades of blue and purple. If the conditions are absent, the flowers still bloom white. But in Pucón, Coñaripe, and other volcano cities you are treated to deep, beautiful shades of hydrangea.
 
-{% include gallery.html gallery=page.gallery3 %}
+{% include 'gallery.html', gallery: gallery3 %}
 
 These last photos are of some other flowers on Isla Llancahue itself. Although not as renown as the others, they still make the family house special, attracting bees and hummingbirds.

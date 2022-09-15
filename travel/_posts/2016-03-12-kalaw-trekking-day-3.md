@@ -62,19 +62,19 @@ summary: Day 3 of our three-day trek involved a 14km hike within the Inle Lake p
 
 After sleeping in the monastery, we left for our final day of trekking. Lucky for us it was the easy day, with a relatively short 14km trek. We didn't break as much, but since it was all a gradual downhill walk we didn't mind so much.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 The landscape started out mountainous but quickly turned into dry red dirt as we entered the park zone. After three hours of hiking downhill through the beautiful red area, we entered the wetlands.
 
 The scenery quickly changed to lush green fields which was very noticeable since the rest of the trek had been through dry areas. We walked through many fields that had crops currently growing.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Before we knew it we arrived at our lunch spot, which was the end of our trek. We enjoyed one more meal from our chef and said our goodbyes to Yelay.
 
 Yelay arranged a sightseeing tour for us that would take us through the canals surrounding Inle Lake before being ferried north of the lake to Nyaung Shwe.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 After arriving at Nyaung Shwe we all found our hostels (and our bags!), and the group decided to meet once again for dinner to say an official goodbye. Our group was fun, and we were happy to share the time together!
 

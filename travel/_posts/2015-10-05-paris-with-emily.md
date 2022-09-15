@@ -42,8 +42,8 @@ tags:
 summary: The first stop on our trip to Asia was actually Paris! My cousin Emily had just moved there and we wanted to get a visit in before leaving for 6 months.
 ---
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
-The catacombs were so cool that I was moved to try out a slick new feature I saw on [Helior Colorado's site](http://places.helior.info/): **interactive photo spheres**. Just drag the photo to look around!
+The catacombs were so cool that I was moved to try out a slick new feature I saw on [Helior Colorado's site](https://places.helior.info/): **interactive photo spheres**. Just drag the photo to look around!
 
-{% include photosphere.html photosphere=page.photosphere %}
+{% include 'photosphere.html' %}

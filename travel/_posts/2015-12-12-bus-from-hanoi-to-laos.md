@@ -62,7 +62,7 @@ Within the Dien Bien Phu bus station we walked around for only a moment before f
 
 This is the "nightmare" part of the trip that everyone complains about online. I wouldn't say it's that bad, but it can wear on the nerves. The bus is slow, stops frequently to pick up packages and passengers carrying the most broad selection of possessions imagineable, and in general is kind of scary as you travel up and down the mountains on sometimes skinny roads.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 When things were loaded or unloaded, we often were asked to help do the work. On this trip you're not a passenger, you're a participant.
 
@@ -86,4 +86,4 @@ We were so utterly relieved when we got to [Muang Khua](/travel/muang-khua-laos/
 
 <ins class="update" datetime="2015-12-16">After a few days of hanging out in Muang Khua and thumbing through the Lonely Planet for Laos, we found a small but very funny note about this town. It says "if you came from Vietnam via bus.. relax, you're in Laos now." Glad to know we're not the only ones who've felt this way!</ins>
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}

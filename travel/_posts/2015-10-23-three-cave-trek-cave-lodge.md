@@ -54,18 +54,18 @@ Our party was on the large side: 8 people including our guide. We started out at
 
 Off we went! Here's our path for the day, with the three caves marked:
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 Each cave had a generous hike in between. We walked upwards, downwards, and slid through mud as we navigated hills, mountains, and beautiful patches of jungle:
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 The first and last cave were larger dry caves, and the middle one was a small, tight cave with a fast-running stream of water. We crawled through it of course, soaking all of our clothes and our hiking shoes in the process.
 
 The two bigger caves were very interesting, both live, with lots of interesting formations. I tried to take photos but in the pitch black of the cave sometimes the photos are a little fuzzy:
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Finally, I couldn't resist but I attempted a photosphere inside the Christmas Cave, named for it's sparkly white formations. It turned out pretty cool!
 
-{% include photosphere.html photosphere=page.photosphere %}
+{% include 'photosphere.html' %}

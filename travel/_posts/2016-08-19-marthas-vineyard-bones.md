@@ -42,7 +42,7 @@ Friday was too hot for John to work the tree-cutting job he had, so his crew got
 
 The fish they had in mind is a Bonito, or bones as they called them. It's a plentiful, unendangered fish that normally yields about 5 pounds of sushi-grade filet. John made his first catch of the year almost immediately after casting!
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 AK is especially fond of these fish. Indeed, his boat is called the _SS Bone_! After a quick start, we only ended up with the two fish. But for one day it was plenty. One went to a local restaurant to pay for gas money and other expenses, and the second was prepared and served as sashimi at a party we had that evening.
 

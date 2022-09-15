@@ -46,4 +46,4 @@ What we all _did_ have in mind though, was food. Since it was a joint birthday c
 
 Every morning we ate breakfast on the balcony of the AirBnB and enjoyed the view of the neighborhood. The good life!
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}

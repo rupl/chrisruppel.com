@@ -1,14 +1,15 @@
 ---
-title: "Resonate.is a music streaming co-op"
+title: "Resonate, a music streaming co-op"
 
 layout: link
-link: https://resonate.is/about/
+link: https://resonate.coop
 
 tags:
 - music
+- coop
 ---
 
-I joined [@resonatecoop](https://twitter.com/@resonatecoop) yesterday.
+I joined [@resonatecoop](https://twitter.com/resonatecoop) yesterday.
 
 I never signed up for any music streaming until now, because they're all clearly scams preying on both listeners and artists:
 
@@ -19,4 +20,4 @@ Resonate aims to overturn both these trends. You join as a co-op member and pay 
 
 On the streaming side they call it "stream2own" which allows you to slowly purchase a track over time by streaming it several times.
 
-There's great music up there and this really feels like what the internet is supposed to be! [Check it out!](https://resonate.is/about/)
+There's great music up there and this really feels like what the internet is supposed to be! [Check it out!](https://resonate.coop)

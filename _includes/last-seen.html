@@ -1,1 +1,4 @@
-{% for trip in site.categories.travel %}{% if trip.location %}{% include location.html location=trip.location prep='around' %}{% break %}{% endif %}{% endfor %}
+{%- for trip in collections.travel -%}
+  {%- include 'location.html', location: trip.data.location -%}
+  {%- break -%}
+{%- endfor -%}

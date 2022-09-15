@@ -1,10 +1,29 @@
 <section class="webmentions" id="webmentions">
-  <form method="POST" action="{{ site.url }}/webmentions/post/" class="webmentions__submit">
-    <p class="webmentions__explainer">Have you linked to this page from your site? Submit the URL here and it will appear in the list below:</p>
+  <form method="POST" action="{{ site.webmention-url }}" class="webmentions__submit">
+    <p class="webmentions__explainer">Have you linked to this page from your site? Submit the URL and it will appear below:</p>
     <input type="url" name="source" placeholder="https://yoursite.com" required>
     <input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
     <input type="submit" value="Mention">
     <p class="webmentions__message" aria-live="polite">&nbsp;</p>
   </form>
-  <div class="webmentions__list" data-webmention-target="{{ site.url }}{{ page.url }}"></div>
+
+  <div class="webmentions__list">
+    {% for mention in webmentions %}
+      {%- if mention.wm-target contains page.url -%}
+        <article class="p-comment h-entry" id="{{ mention.wm-id }}">
+          {% if mention.name %}
+            <h3><a href="{{ mention.wm-source }}">{{ mention.name }}</a></h3>
+          {% endif %}
+          {% assign plaintext = '<p>' | append: mention.content.text | append: '</p>' %}
+          <div class="e-content">{{ mention.content.html | default: plaintext }}</div>
+          <footer>
+            Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="{% if mention.author.url %}{{ mention.author.url }}{% else %}{{ mention.wm-source }}{% endif %}">{{ mention.author.name }}</a></cite>
+            {% assign pubdate = mention.published | split: 'T' %}
+            on <time class="dt-published" datetime="{{ mention.published }}">{{ pubdate[0] }}</time>
+            <a href="#comment-{{ mention.wm-id }}" rel="bookmark" title="Permalink to this comment">#</a>
+          </footer>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
 </section>

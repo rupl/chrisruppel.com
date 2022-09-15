@@ -50,6 +50,6 @@ His name is Ya, and although we're less than two weeks into our trip, it will be
 
 The other two in the photos are Anna and Lina. We checked in and shortly afterward they did too. We heard them speaking German and recognized the accents coming from our neck of the woods. We struck it up with them and ended up sticking together for a while.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 We will never forget Ya. He was more than a host, he was a true friend.

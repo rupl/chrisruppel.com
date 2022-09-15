@@ -32,7 +32,7 @@ I got my breakout board from SparkFun. They have nice embedded sensors that sign
 
 **`SIG` is the moisture reading.** The sensor outputs a signal based on two main factors: the input voltage and the moisture level of the soil. It should be hooked up to an analog pin in order to read the signal properly. In my photos and code samples I used analog `A0` pin to read the signal.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 Once everything is connected you are ready to program the Arduino!
 

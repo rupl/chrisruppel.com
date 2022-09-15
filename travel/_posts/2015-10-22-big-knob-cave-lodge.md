@@ -49,8 +49,8 @@ The maps at the lodge simply say "if you follow these reigiously, i.e. with a bi
 
 After a short diversion attempting to find the path around the corn fields, we got to the top based on out instructions. It's quite a view!
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 I have been trying out [Galileo offline maps](https://galileo-app.com/) to track our hikes and managed to capture some decent data despite the foliage and other factors that can muddy up GPS readings. Here's our path through the town and up the small mountain called Big Knob:
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}

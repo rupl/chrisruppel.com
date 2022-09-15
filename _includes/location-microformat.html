@@ -1,18 +1,18 @@
 {% capture location_full %}
-  {% if include.prep != null %}
-    {{ include.prep }}
-  {% elsif include.prep == null and include.location.prep != null %}
-    {{ include.location.prep }}
+  {% if prep != null %}
+    {{ prep }}
+  {% elsif prep == null and location.prep != null %}
+    {{ location.prep }}
   {% else %}
     in
   {% endif %}
 
-  {% if include.location.locality %}
-    <span class="h-locality">{{ include.location.locality }}</span>{% if include.location.region or include.location.country %}, {% endif %}
+  {% if location.locality %}
+    <span class="h-locality">{{ location.locality }}</span>{% if location.region or location.country %}, {% endif %}
   {% endif %}
-  {% if include.location.region %}
-    <span class="h-region">{{ include.location.region }}</span>{% if include.location.country %}, {% endif %}
+  {% if location.region %}
+    <span class="h-region">{{ location.region }}</span>{% if location.country %}, {% endif %}
   {% endif %}
-  {% if include.location.country %}<span class="h-country-name">{{ include.location.country }}</span>{% endif %}
-  {% if include.location.locality == null and include.location.region == null and include.location.country == null and include.location.place %}<span class="h-card"><span class="p-name">{{ include.location.place }}</span></span>{% endif %}
+  {% if location.country %}<span class="h-country-name">{{ location.country }}</span>{% endif %}
+  {% if location.locality == null and location.region == null and location.country == null and location.place %}<span class="h-card"><span class="p-name">{{ location.place }}</span></span>{% endif %}
 {% endcapture %}{{ location_full | strip_newlines | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' }}

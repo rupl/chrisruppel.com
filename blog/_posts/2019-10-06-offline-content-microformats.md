@@ -6,7 +6,7 @@ summary: Build rich, informative offline content lists using the structured data
 tags:
 - offline
 - javascript
-- service worker
+- serviceworker
 ---
 
 In a previous article, I detailed how my website visitors can [see an offline content list](/blog/service-worker-offline-content-list/) so they can find saved content quickly when they hit my offline page.

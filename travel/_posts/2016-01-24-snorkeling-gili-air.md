@@ -35,7 +35,7 @@ However, we heard from many folks that Gili Air is the place to snorkel. We got 
 
 I took some photos with my phone in the shallow water, but since I lost the GoPro in Padang Bay I didn't have a camera that could really stay under for a good length of time.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 However, after our second morning of snorkeling we came back during the rain shower. Jarle asked how it was and I said that today, once again, I was a bit intimidated by the sea urchins because I was alone. He jumped up out of his seat and said he'd be happy to go whenever I wanted, how about now?
 

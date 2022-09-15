@@ -47,7 +47,7 @@ gallery2:
 
 tags:
 - city walking
-- night life
+- nightlife
 
 summary: Freiburg was my first stop after DrupalCon Munich. Little did I know it would be the best place on my trip through Europe! This day was the catalyst for my moving to Europe to be with Karin.
 ---
@@ -60,13 +60,13 @@ Stephanie had a friend in a town I'd never heard of, Freiburg. She had stayed th
 
 Her friend's name was Roni (short for Ve<u>roni</u>ka). Roni was happy to show us around Freiburg, taking us to all their best sights: Freiburger Münster, Schlossberg, Martinstor, and Bertholdsbrunnen.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 When we got back from a day of walking, her roommate Karin had come home. They were actually cousins as well as roommates. Something about her caught my eye immediately. She was also unintentionally sassy in a way that only foreign speakers of English can be.
 
 We were interested in dinner and drinks, but since it was Sunday the Germans were not too keen to go out. Karin, however, said that she'd had a bad day and could definitely use a drink. Since none of us knew what bars might be open on Sunday we were happy for the local knowledge, and off we went.
 
-{% include gallery.html gallery=page.gallery2 %}
+{% include 'gallery.html', gallery: gallery2 %}
 
 We ate at a Laos restaurant then after two unsuccessful attempts at other places went to a bar called Schlappen. Luckily we snapped a pic while there!
 

@@ -1,6 +1,6 @@
-{% if include.gallery.size > 0 %}
-<figure class="gallery {% if include.gallery[0].type != null %} {{ include.gallery[0].type }}{% else %} {% if include.gallery[0].gridtype %}grid-{{ include.gallery[0].gridtype }}{% else %}grid-tall{% endif %}{% endif %}">
-  {%- for item in include.gallery -%}
+{% if gallery.size > 0 %}
+<figure class="gallery {% if gallery[0].type != null %} {{ gallery[0].type }}{% else %} {% if gallery[0].gridtype %}grid-{{ gallery[0].gridtype }}{% else %}grid-tall{% endif %}{% endif %}">
+  {%- for item in gallery -%}
     {%- if item.src != null -%}
       {% capture imgsrc_320 %}{{ site.img-host }}/img/travel@320/{{ item.src }}{% endcapture %}
       {% capture imgsrc_640 %}{{ site.img-host }}/img/travel@640/{{ item.src }}{% endcapture %}
@@ -46,7 +46,7 @@
             If its size is unspecified, check the gallery type to see how wide
             the image is.
           {% endcomment %}
-          {%- case include.gallery[0].gridtype -%}
+          {%- case gallery[0].gridtype -%}
             {% when "col-3" %}
               30vw
             {% when "col-2" or "col-2-short" or "tall" %}
@@ -66,7 +66,7 @@
                   {{ imgsrc_orig }} 1280w"
           sizes="{{ imgsize_big }},
                  {{ imgsize_small }}"
-          style="{% if item.bgpos != null %}object-position: {{ item.bgpos }};{% endif %}">
+          style="{%- if item.bgpos != null -%}object-position: {{ item.bgpos }};{%- endif -%}">
       </picture>
 
     {%- endif -%}

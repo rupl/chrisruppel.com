@@ -8,7 +8,7 @@ summary: "✒ Styleguide for chrisruppel.com"
 
 This is a paragraph of text. It's just regular text and should be followed by another paragraph or two so I can check spacing in between them. I'd love to use some filler text or copy/paste the same thing but writing real content is more natural.
 
-This is a second paragraph with **bold text for emphasis**. It's generated using markdown to make sure it's consistent with regular articles. Next comes an `<hr>` tag to separate sections of paragraphs.
+This is a second paragraph with **bold text for emphasis**. It's generated using markdown to make sure it's consistent with regular articles. Next comes an `&lt;hr>` tag to separate sections of paragraphs.
 
 ---
 
@@ -39,7 +39,7 @@ One more paragraph to break the blockquotes up and ensure they're not interferin
 
 One more paragraph to break the blockquotes up and ensure they're not interfering with each other within the styleguide.
 
-<ins class="update" datetime="2016-01-01"><p>This is an update to an entry. It unfortunately cannot be created with markdown but at least having this in the styleguide lets me check on it</p></ins>
+<ins class="update" datetime="2016-01-01">This is an update to an entry. It unfortunately cannot be created with markdown but at least having this in the styleguide lets me check on it</ins>
 
 # Heading level 1
 
@@ -53,11 +53,11 @@ One more paragraph to break the blockquotes up and ensure they're not interferin
 
 ###### Heading level 6
 
-Let's use some code blocks. Here's an `inline-code.block` and using Prism you can also syntax-highlight multiple types of code:
+Let's use some code blocks. Try a "p" tag `&lt;p>` I should NOT be on a new line. Here's an `inline-code.block` and using Prism you can also syntax-highlight multiple types of code:
 
 ```html
-<!-- HTML -->
-<p>This is HTML <em>markup</em></p>
+<!-- Visible HTML comment -->
+<p>This is HTML <em>markup</em>.</p>
 ```
 
 ```css

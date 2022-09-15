@@ -7,8 +7,6 @@ location:
 
 map:
   json: kalaw-trekking-day1.json
-  style: satellite-v9
-  zoom: 12
 
 gallery:
 - gridtype: col-2-short
@@ -69,10 +67,10 @@ The next morning we got up, had our free breakfast, and started trekking at 9:30
 
 We left the center of town on foot and went south. We stopped occasionally to inspect vegetation or take in the views. This time of year is very dry, and what we lacked in green vegetation we made up by having nice, solid dry paths to walk on.
 
-{% include gallery.html gallery=page.gallery %}
+{% include 'gallery.html' %}
 
 We weaved through the hills, stopping at viewpoints and enjoying the scenery. It was dry and desolate feeling, but still alive with activity of the local animals and people. We were, however, the only group on our trail and it felt very special to be out there without running into other trekkers, especially since this tour is so popular. We walked a little over 18km on the first day, mostly toward the south, slowly making our way higher into the mountains.
 
-{% include map.html map=page.map %}
+{% include 'map.html' %}
 
 Finally we arrived at our destination for the day: a small mountain village with no running water and a handful of lightbulbs as the only evidence of modern technology. Tired from our trek, we ate a delicious dinner and after Yelay did a handful of card tricks for us, we plunged into our bed quarters at 8:30 and fell asleep immediately.

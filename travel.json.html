@@ -1,0 +1,45 @@
+---
+layout: null
+permalink: /travel.json
+---
+{
+  "trips": [{% for trip in collections.travel %}
+    {
+      "id": "{{ trip.date | date: '%Y-%m-%d' | escape }}-{{ trip.fileSlug }}",
+      "url": "{{ site.url }}{{ trip.url }}",
+      "layout": "{{ trip.data.layout }}",
+      "title": "{{ trip.data.title | escape }}",
+      "location": {
+        "locality": "{{ trip.data.location.locality | escape }}",
+        "region": "{{ trip.data.location.region | escape }}",
+        "country": "{{ trip.data.location.country | escape }}",
+        "place": "{{ trip.data.location.place | escape }}",
+        "prep": "{{ trip.data.location.prep | escape }}"
+      },
+      "date": "{{ trip.date | date: '%Y-%m-%d' | escape }}",
+      {% if trip.data.map %}"map": {
+        "location": "{{ trip.data.map.location | escape }}",
+        "zoom": "{{ trip.data.map.zoom | escape }}",
+        "json": "{{ trip.data.map.json | escape }}",
+        "style": "{{ trip.data.map.style | escape }}"
+      },
+      {%- else -%}"map": null,
+      {% endif %}
+      "summary": "{{ trip.data.summary | escape }}",
+      {% comment %}"content": "{{ trip.templateContent | strip_html | strip_newlines | escape }}",{% endcomment %}
+      "gallery-gridtype": "{{ trip.data.gallery[0].gridtype }}",
+      "gallery": [{% for photo in trip.data.gallery offset:1 %}
+        {
+          "type": "{{ photo.type }}",
+          "src": "{{ photo.src }}",
+          "alt": "{{ photo.alt | escape }}",
+          "bgpos": "{{ photo.bgpos }}",
+          "bgpad": "{{ photo.bgpad }}",
+          "comment": "{{ photo.comment | escape }}"
+        }
+        {% if forloop.last %}{% else %},{% endif %}
+      {% endfor %}]
+    }
+    {% if forloop.last %}{% else %},{% endif %}
+  {% endfor %}]
+}

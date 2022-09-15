@@ -12,7 +12,7 @@ Brad Frost [combined &lt;picture&gt; and the prefers-reduced-motion media query]
 
 ## Dark mode imagery
 
-Why not use some other media queries in `<picture>`?
+Why not use some other media queries in `&lt;picture>`?
 
 ```html
 <picture>

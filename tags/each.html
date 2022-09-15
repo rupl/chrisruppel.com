@@ -1,0 +1,31 @@
+---
+title: ''
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - travel
+    - blog
+permalink: /tags/{{ tag }}/
+---
+
+<section aria-labelledby="tag-list">
+  <h1 id="tag-list" class="title title--page">#{{ tag | downcase | replace: ' ','' }}</h1>
+  <div class="elsewhere">
+    {% comment %}<a class="alt" href="{{ site.url }}/tags/">(see all tags)</a>{% endcomment %}
+  </div>
+
+  <p class="intro summary">Entries involving {{ tag | downcase }}.</p>
+
+  <div class="trip-list">
+  {% assign taglist = collections[tag] | reverse %}
+  {% for post in taglist %}
+    {% include 'trip-listing.html', trip: post %}
+  {% endfor %}
+  </div>
+</section>
+
+<div class="go">
+  <a class="btn btn--back" href="/">Back to the Front</a>
+</div>
