@@ -3,8 +3,7 @@ module.exports = function() {
 
   return {
     'name': 'Chris Ruppel',
-    'debug': prod ? false : true,
-    'development': prod ? false : true,
+    'mode': prod ? 'prod' : 'debug',
     'url': prod ? 'https://chrisruppel.com' : 'http://localhost:8080',
     'img-host': 'https://assets.chrisruppel.com',
     'license-url': 'https://github.com/rupl/chrisruppel.com/blob/master/LICENSE.md',
