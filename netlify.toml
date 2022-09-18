@@ -1,0 +1,24 @@
+#
+# Netlify-specific configuration
+#
+
+#
+# Redirects
+#
+[[redirects]]
+  from = "/portfolio"
+  to = "/work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/brave-payments/"
+  to = "/blog/brave-rewards/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/brave-payments-github-pages/"
+  to = "/blog/brave-rewards-github-pages/"
+  status = 301
+  force = true
