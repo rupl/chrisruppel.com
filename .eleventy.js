@@ -3,8 +3,9 @@ const markdownIt = require('markdown-it');
 
 module.exports = function(eleventyConfig) {
   // Define layout aliases. All paths relative to _includes
-  eleventyConfig.addLayoutAlias('default', 'layouts/default.html');
+  eleventyConfig.addLayoutAlias('about', 'layouts/about.html');
   eleventyConfig.addLayoutAlias('blog', 'layouts/blog.html');
+  eleventyConfig.addLayoutAlias('default', 'layouts/default.html');
   eleventyConfig.addLayoutAlias('gallery', 'layouts/gallery.html');
   eleventyConfig.addLayoutAlias('link', 'layouts/link.html');
   eleventyConfig.addLayoutAlias('naked', 'layouts/naked.html');

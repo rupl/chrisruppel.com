@@ -3,17 +3,17 @@ layout: default
 ---
 
 <header>
-  <h1 class="title--main">{{ page.title }}</h1>
+  <h1 class="title--main">{{ title }}</h1>
 </header>
 
 {{ content }}
 
 <div class="go">
-  {% if page.permalink == '/about/' %}
+  {% if permalink == '/about/' %}
     <a class="btn btn--info" href="/about/site/">About this site</a>
-  {% elsif page.permalink == '/about/site/' %}
+  {% elsif permalink == '/about/site/' %}
     <a class="btn btn--info" href="/about/">About me</a>
   {% endif %}
 
-    <a class="btn btn--back" href="/">Back to the Front</a>
+  <a class="btn btn--back" href="/">Back to the Front</a>
 </div>

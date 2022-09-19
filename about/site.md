@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: about
 title: About this site
 permalink: /about/site/
 ---
@@ -10,9 +10,8 @@ permalink: /about/site/
 * **Sass** for light preprocessing of CSS.
 * **Eleventy** for static site generation.
 * **Mapbox** for displaying maps and GPS data.
-* **Express** for server.
 * **GitHub** for code hosting and deployment.
-* **Heroku** for web hosting and deployment.
+* **Netlify** for web hosting and deployment.
 * **S3** for image hosting.
 
 **This site does not store any information about you as a visitor.** If you submit a webmention, it is dutifully recorded at your request. If you view a map or video embed, those third parties might store information about you.
