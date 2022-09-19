@@ -22,13 +22,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./static/');
 
   //
-  // Allow dynamic partial paths, so that maps can be dynamically included.
-  //
-  eleventyConfig.setLiquidOptions({
-    dynamicPartials: true,
-  });
-
-  //
   // Collections
   //
   eleventyConfig.addCollection('travel', collection =>
