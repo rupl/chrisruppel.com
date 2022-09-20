@@ -34,7 +34,7 @@ app.use(helmet());
 if (NODE_ENV === 'production') {
   var hsts_days = 90;
   app.use(helmet.hsts({
-    maxAge: (hsts_days * 60 * 60 * 24 * 1000),
+    maxAge: (hsts_days * 60 * 60 * 24),
     includeSubdomains: true,
     preload: true
   }));

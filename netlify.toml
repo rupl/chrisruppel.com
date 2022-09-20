@@ -3,6 +3,16 @@
 #
 
 #
+# Headers
+#
+[[headers]]
+  # Global headers
+  for = "/*"
+  [headers.values]
+    # HSTS
+    Strict-Transport-Security = "max-age=7776000; includeSubDomains; preload"
+
+#
 # Redirects
 #
 [[redirects]]
