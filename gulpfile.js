@@ -15,7 +15,6 @@ var reload = bs.reload;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass')(require('sass'));
 var sourcemaps = require('gulp-sourcemaps');
-var prefix = require('autoprefixer');
 var concat = require('gulp-concat');
 var cssnano = require('cssnano');
 var postcss = require('gulp-postcss');
@@ -52,10 +51,6 @@ gulp.task('sass', () => {
     .pipe(gulpif(!isProduction, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      prefix({
-        browsers: ['last 2 versions'],
-        cascade: false,
-      }),
       cssnano(),
     ]))
     .pipe(rename('main.min.css'))
