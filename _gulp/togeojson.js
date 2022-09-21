@@ -1,7 +1,7 @@
 var fs = require('fs');
 var map = require('map-stream');
 var togeojson = require('@mapbox/togeojson');
-var DOMParser = require('xmldom').DOMParser;
+var DOMParser = require('@xmldom/xmldom').DOMParser;
 
 var toGeoJson = function() {
   return map(function(file, cb) {
