@@ -30,14 +30,14 @@ var isProduction = process.env.NODE_ENV === 'production';
 
 
 //——————————————————————————————————————————————————————————————————————————————
-// Jekyll
+// Eleventy
 //——————————————————————————————————————————————————————————————————————————————
-function jekyllDev() {
-  bs.notify('Jekyll building...');
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml', '--drafts'], {stdio: 'inherit'})
+function eleventyDev() {
+  bs.notify('Eleventy building...');
+  return spawn('npm', ['run', 'build'], {stdio: 'inherit'})
     .on('close', reload);
 };
-module.exports['jekyll-dev'] = jekyllDev;
+module.exports['11ty-dev'] = eleventyDev;
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -57,7 +57,7 @@ gulp.task('sass', () => {
     .pipe(gulpif(!isProduction, sourcemaps.write('./')))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
-    .pipe(gulp.dest('_includes')) // for the Jekyll include
+    .pipe(gulp.dest('_includes')) // for the site includes
     .pipe(reload({stream: true}));
 });
 module.exports.sass = gulp.series('sass');
@@ -244,13 +244,6 @@ gulp.task('kml-to-geojson', () => {
 
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for deployment to live server.
-//
-// No longer running Jekyll as part of build-deploy in order to run this as
-// postinstall after node buildpack is set up. We also don't run all image tasks
-// since most of them are hosted on S3 now.
-//
-// This is run as postinstall before slug gets compiled. Jekyll gets generated
-// before spinning up the Express.js process.
 //——————————————————————————————————————————————————————————————————————————————
 const buildDeployTask = gulp.task('build-deploy', gulp.parallel('sass', 'js', 'image-svg', 'image-photosphere', 'kml-to-geojson'));
 module.exports['build-deploy'] = buildDeployTask;
@@ -260,7 +253,7 @@ module.exports['build-deploy'] = buildDeployTask;
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('build-dev', gulp.series(
   gulp.parallel('sass', 'js', 'image-resize'),
-  jekyllDev,
+  eleventyDev,
 ));
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -289,7 +282,7 @@ gulp.task('watch', (done) => {
   gulp.watch('_js/sw/*', gulp.series('js-sw'));
   gulp.watch('_js/*', gulp.series('js-main'));
   gulp.watch('_js/custom/*', gulp.series('js-custom'));
-  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], jekyllDev);
+  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], eleventyDev);
   done();
 });
 
