@@ -1,8 +1,8 @@
 <section class="webmentions" id="webmentions">
   <form method="POST" action="{{ site.webmention-url }}" class="webmentions__submit">
     <p class="webmentions__explainer">Have you linked to this page from your site? Submit the URL and it will appear below:</p>
-    <input type="url" name="source" placeholder="https://yoursite.com" required>
     <input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
+    <input type="url" name="source" placeholder="https://yoursite.com" required>
     <input type="submit" value="Mention">
     <p class="webmentions__message" aria-live="polite">&nbsp;</p>
   </form>
