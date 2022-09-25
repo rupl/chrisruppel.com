@@ -9,11 +9,7 @@ gallery:
 - src: lisbon-1.jpg
   alt: Back of Santuário de Cristo Rei
   comment: Santuário de Cristo Rei inspired by the famous statue in Rio, built a few decades after the original.
-  type: tall-half half
-- src: lisbon-2.jpg
-  alt: Looking up at the statue from underneath.
-  comment: Looking up at the statue from underneath.
-  type: tall-half half
+  type: tall
 - src: lisbon-3.jpg
   alt: Abandoned house.
 - src: lisbon-4.jpg
