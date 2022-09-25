@@ -8,8 +8,11 @@
   </form>
 
   <div class="webmentions__list">
+    <h2>Webmentions</h2>
+    {% assign wmFound = false %}
     {% for mention in webmentions %}
       {%- if mention.wm-target contains page.url -%}
+        {% assign wmFound = true %}
         <article class="p-comment h-entry" id="{{ mention.wm-id }}">
           {% if mention.name %}
             <h3><a href="{{ mention.wm-source }}">{{ mention.name }}</a></h3>
@@ -25,5 +28,6 @@
         </article>
       {% endif %}
     {% endfor %}
+    {% if wmFound != true %}<p>None yet. Add yours!</p>{% endif %}
   </div>
 </section>
