@@ -21,6 +21,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./static/');
   eleventyConfig.addPassthroughCopy('./svg/');
   eleventyConfig.addPassthroughCopy('./static/');
+  eleventyConfig.addPassthroughCopy('./.well-known/');
 
   //
   // Collections
