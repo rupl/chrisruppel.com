@@ -5,7 +5,7 @@ module.exports = function() {
     'name': 'Chris Ruppel',
     'mode': prod ? 'prod' : 'debug',
     'url': prod ? 'https://chrisruppel.com' : 'http://localhost:8080',
-    'img-host': 'https://assets.chrisruppel.com',
+    'img-host': prod ? 'https://assets.chrisruppel.com' : '',
     'license-url': 'https://github.com/rupl/chrisruppel.com/blob/master/LICENSE.md',
     'feedback-url': 'https://github.com/rupl/chrisruppel.com/issues/new?title=[Visitor+Feedback]+Your+title+here&body=Your+feedback+goes+here.+Thanks+for+taking+the+time+to+help+improve+my+website.&labels=Feedback',
     'mapboxToken': process.env.MAPBOX_TOKEN,
