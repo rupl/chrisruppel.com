@@ -7,11 +7,11 @@ pagination:
   filter:
     - travel
     - blog
-permalink: /tags/{{ tag }}/
+permalink: "/tags/{{ tag | replace: ' ','-' }}/"
 ---
 
 <section aria-labelledby="tag-list">
-  <h1 id="tag-list" class="title title--page">#{{ tag | downcase | replace: ' ','' }}</h1>
+  <h1 id="tag-list" class="title title--page">#{{ tag | downcase | replace: ' ','-' }}</h1>
   <div class="elsewhere">
     {% comment %}<a class="alt" href="{{ site.url }}/tags/">(see all tags)</a>{% endcomment %}
   </div>
