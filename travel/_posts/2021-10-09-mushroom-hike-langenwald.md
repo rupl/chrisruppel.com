@@ -28,6 +28,7 @@ tags:
   - camping
   - hiking
   - forests
+  - mushrooms
 
 summary: Hunting for mushrooms along the Kniebser Heimatpfad
 ---
