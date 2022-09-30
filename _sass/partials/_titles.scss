@@ -6,15 +6,14 @@
 
 .title--main {
   @include font-heading;
+  margin-block-end: 0.5rem;
 }
 
 .subtitle {
   @include font-copy;
-  font-style: italic;
-  font-weight: 300;
+  margin-block-end: 2rem;
   opacity: .8;
-  letter-spacing: -1px;
-  word-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .title--page {

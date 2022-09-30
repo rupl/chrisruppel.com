@@ -6,13 +6,11 @@
 .entry--main {
   padding-bottom: 132px; // for the entry-meta
 
-  .title--main {
-    float: left;
-    margin-right: 1em;
-  }
   .subtitle {
-    float: right;
-    vertical-align: text-bottom;
+    margin-block-start: 0;
+    font-family: Fira Code, monospace;
+    font-size: .666em;
+    font-weight: 300;
   }
 
   .story {

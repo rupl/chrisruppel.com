@@ -5,15 +5,15 @@ layout: page
 <article class="h-entry entry--main entry--trip" id="{{ path | replace: 'travel/_posts/','' | replace: '.md','' }}">
   <header>
     <h1 class="title--main p-name">{{ title }}</h1>
-    <h2 class="subtitle">
-      <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%b %d, %Y' }}</time>
-      {% if location %}
-        <span class="where p-location h-adr">
-          {% include 'location-microformat.html' %}
-        </span>
-      {% endif %}
-    </h2>
   </header>
+  <div class="subtitle">
+    <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+    {% if location %}
+      <span class="where p-location h-adr">
+        {% include 'location-microformat.html' %}
+      </span>
+    {% endif %}
+  </div>
 
   <aside class="intro summary p-summary">{{ summary }}</aside>
 
