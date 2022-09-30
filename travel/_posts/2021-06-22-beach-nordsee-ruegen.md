@@ -33,12 +33,11 @@ gallery:
     bgpos: 33% 50%
 
 tags:
-  - camping
+  - beaches
   - family
-  - forests
-  - lakes
+  - islands
 
-summary: Family camping near a lake in Germany.
+summary: Family time on an island in the Baltic Sea just off the German coast.
 ---
 
 We didn't feel comfortable leaving Germany for vacation so we settled on Rügen, a common getaway island just off the mainland on the Baltic Sea.

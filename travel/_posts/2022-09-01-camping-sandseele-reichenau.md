@@ -1,5 +1,5 @@
 ---
-title: Camping
+title: Beach camping
 location:
   locality: Reichenau
   country: Germany
@@ -32,9 +32,10 @@ gallery:
     bgpad: 66%
 
 tags:
+  - beaches
   - camping
   - family
-  - forests
+  - islands
   - lakes
 
 summary: Family camping on an island in Bodensee, the lake which borders Germany, Switzerland, and Austria.
