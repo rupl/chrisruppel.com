@@ -1,6 +1,6 @@
 <article class="teaser--title" data-url="{{ site.url }}{{ trip.url }}">
   <h2 class="title--main">
-    <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
+    <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %-d, %Y" }}</time>
     <a href="{{ trip.url }}">{{ trip.data.title }}</a>
     {% if trip.data.location %}<span class="where">{% include 'location.html', location: trip.data.location %}</span>{% endif %}
   </h2>

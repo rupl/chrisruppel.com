@@ -1,7 +1,7 @@
 {% capture filed %}
   <a rel="author me" class="h-card p-author u-url" href="{{ site.url }}">Chris Ruppel</a>
   filed this <strong class="p-category">{{ type }}</strong> entry on
-  <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%B %d, %Y' }}</time>
+  <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%B %-d, %Y' }}</time>
   {% if tags.size > 0 %}
     under
     {% include 'tags.html' %}
