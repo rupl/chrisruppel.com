@@ -76,7 +76,7 @@ gulp.task('js-main', () => {
     ])
     .pipe(plumber())
     .pipe(concat('main.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));

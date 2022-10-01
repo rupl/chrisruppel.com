@@ -1,0 +1,16 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Search
+//——————————————————————————————————————————————————————————————————————————————
+input[name="search"] {
+  width: 100%;
+  border: 4px solid #aaa;
+  border-radius: 3px;
+  font-size: 1.25em;
+  transition: transform .1666s ease-in;
+}
+
+input[name="search"]:focus {
+  outline: none;
+  border: 4px solid black;
+  transform: scale(1.05);
+}
