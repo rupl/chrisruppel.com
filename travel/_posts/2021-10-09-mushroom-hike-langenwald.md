@@ -22,7 +22,7 @@ gallery:
     alt: ''
     type: wide
     bgpad: 50%
-    comment: Clavulinopsis fusiformis
+    comment: Calocera viscosa (yellow stagshorn)
 
 tags:
   - camping
