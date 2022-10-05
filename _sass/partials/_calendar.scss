@@ -1,6 +1,10 @@
 //
 // Work availability calendar
 //
+:root {
+  --cal-radius: 0;
+}
+
 .availability {
   display: flex;
   flex-direction: row;
@@ -13,7 +17,6 @@
   border-radius: 7px; // at some point white corners appeared, quick fix instead of complicating CSS vars
   box-shadow: 5px 5px 15px rgba(#000, .16);
   transition: box-shadow .1666s linear;
-  --cal-radius: 0;
 
   // Big-screen styles
   @media (min-width: 600px) {
@@ -83,5 +86,10 @@
   &--open {
     background: #6c6;
     cursor: context-menu;
+  }
+
+  // Labels (the full month name and status is in HTML)
+  &::after {
+    content: attr(data-label);
   }
 }

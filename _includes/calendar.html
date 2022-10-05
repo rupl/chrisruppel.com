@@ -10,7 +10,9 @@
     {% capture nowunix %}{{ 'now' | date: '%s' }}{% endcapture %}
     {% capture slottime %}{{ slot.date | date: '%s' }}{% endcapture %}
     {% if slottime < nowunix %}
-      <li class="slot slot--past">{{ slot.date | date: '%b' }}<br></li>
+      <li class="slot slot--past" data-label="{{ slot.date | date: '%b' }}">
+        <span class="element-invisible">{{ slot.date | date: '%B' }}: {{ slot.data.status }}</span>
+      </li>
     {% else if slottime > nowunix %}
       {% comment %}
         Output one entry for each Calendar post.
@@ -18,7 +20,10 @@
       <li
         class="slot slot--{{ slot.data.status }}{% if slot.data.status != 'full' %} slot--available{% endif %}"
         title="{{ slot.date | date: '%b %Y' }}: {{ slot.data.status }}"
-      >{{ slot.date | date: '%b' }}</li>
+        data-label="{{ slot.date | date: '%b' }}"
+      >
+        <span class="element-invisible">{{ slot.date | date: '%B' }}: {{ slot.data.status }}</span>
+      </li>
       {% comment %}
         Store first month of availability for output within heading.
       {% endcomment %}
