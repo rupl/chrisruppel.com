@@ -11,8 +11,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('naked', 'layouts/naked.html');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.html');
   eleventyConfig.addLayoutAlias('quote', 'layouts/quote.html');
-  eleventyConfig.addLayoutAlias('tag-cloud', 'layouts/tag-cloud.html');
-  eleventyConfig.addLayoutAlias('tag-list', 'layouts/tag-list.html');
   eleventyConfig.addLayoutAlias('trip', 'layouts/trip.html');
 
   // Set directories to pass through to the dist folder
@@ -38,6 +36,28 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('clients', collection =>
     collection.getFilteredByGlob('clients/_posts/*.md')
       .sort((a, b) => a.data.order - b.data.order));
+  eleventyConfig.addCollection('tagList', collection => {
+    let tagCounts = new Map();
+    collection.getAllSorted().forEach(function(item) {
+      if('tags' in item.data) {
+        let tags = item.data.tags;
+        if (typeof tags === 'string') {
+          tags = [tags];
+        }
+
+        for (const tag of tags) {
+          if (tagCounts.has(tag)) {
+            count = tagCounts.get(tag);
+            tagCounts.set(tag, ++count);
+          } else {
+            tagCounts.set(tag, 1);
+          }
+        }
+      }
+    });
+
+    return tagCounts.entries();
+  });
 
   //
   // Markdown

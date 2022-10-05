@@ -1,20 +1,16 @@
 ---
 title: ''
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - travel
-    - blog
-    - tag
 ---
 
 <section aria-labelledby="tag-list">
   <h1 id="tag-list" class="title title--page">Tags</h1>
   <ul class="tag-list">
-    <p>Tag cloud TBD</p>
-    <!-- TBD -->
+    {% for tag in collections.tagList %}
+      {% assign label = tag[0] | replace: ' ','-' %}
+      <li class="tag" style="--tag-weight: {{ tag[1] }};">
+        <a rel="tag" href="/tags/{{ label }}/">{{ label }}</a>
+      </li>
+    {% endfor %}
   </ul>
 </section>
 
