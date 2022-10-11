@@ -29,6 +29,7 @@ gallery:
     bgpos: 50% 0%
 
 tags:
+- food
 - foraging
 - mushrooms
 ---
