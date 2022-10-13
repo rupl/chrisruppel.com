@@ -44,8 +44,9 @@ tags:
 - forests
 - hiking
 - mushrooms
+- travel at home
 ---
 
-For my birthday Karin reserved me a mushroom hike with [Dennis Regul](https://pilz.schule/), a local mushroom guide. He offers guided hikes at various times in the year, and autumn happens to be prime time for foraging. I was able to learn quite a bit about local varieties to be found in our area. We hiked around the hills on the edge of town just south of Wiehre.
+For my birthday Karin reserved me a [mushroom hike with Dennis Regul](https://pilz.schule/), a local mushroom guide. He offers guided hikes at various times in the year, and autumn happens to be prime time for foraging. I was able to learn quite a bit about local varieties to be found in our area. We hiked around the hills on the edge of town just south of Wiehre.
 
 {% include 'gallery.html' %}
