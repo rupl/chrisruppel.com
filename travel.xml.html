@@ -1,5 +1,6 @@
 ---
 layout: null
+permalink: /travel.xml
 ---
 <?xml version="1.0" encoding="utf-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -12,13 +13,13 @@ layout: null
     <managingEditor>chris.ruppel@gmail.com (Chris Ruppel)</managingEditor>
     <webMaster>chris.ruppel@gmail.com (Chris Ruppel)</webMaster>
 
-    {% for trip in site.categories.travel limit:20 %}
+    {% for trip in collections.travel limit:20 %}
     <item>
-      <title>{{ trip.title }}</title>
+      <title>{{ trip.data.title }}</title>
       <link>{{ site.url }}{{ trip.url }}</link>
-      <description>{{ trip.summary | xml_escape }}</description>
+      <description>{{ trip.data.summary | escape }}</description>
       <guid isPermaLink="true">{{ site.url }}{{ trip.url }}</guid>
-      <pubDate>{{ trip.date | date_to_rfc822 }}</pubDate>
+      <pubDate>{{ trip.date | date: '%Y-%m-%d 12:00:00' }}</pubDate>
     </item>
     {% endfor %}
 
