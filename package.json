@@ -17,7 +17,7 @@
   "devDependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@mapbox/togeojson": "^0.16.0",
-    "@xmldom/xmldom": "^0.8.3",
+    "@xmldom/xmldom": "^0.8.4",
     "axios": ">=0.21.2",
     "browser-sync": "^2.23.6",
     "chalk": "^2.4.2",
