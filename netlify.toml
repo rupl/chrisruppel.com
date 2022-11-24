@@ -45,3 +45,9 @@ sandbox     'allow-scripts' 'allow-same-origin' 'allow-popups' 'allow-forms';
   to = '/blog/brave-rewards-github-pages/'
   status = 301
   force = true
+
+[[redirects]]
+  from = '/.well-known/pay'
+  to = '$ilp.uphold.com/BGG9gLz6k9z9'
+  status = 302
+  force = true
