@@ -73,3 +73,17 @@ Let's use some code blocks. Try a "p" tag `&lt;p>` I should NOT be on a new line
   return true;
 })();
 ```
+
+## Forms
+
+<form name="contact" method="POST">
+  <label>Your Name:</label>
+  <input type="text" name="name">
+  <label>Your Email:</label>
+  <input type="email" name="email">
+  <label>Your website:</label>
+  <input type="url" name="url">
+  <label>Message:</label>
+  <textarea name="message" placeholder="What's on your mind?"></textarea>
+  <div class="actions"><button type="submit">Send message</button><button type="reset">Reset</button></div>
+</form>
