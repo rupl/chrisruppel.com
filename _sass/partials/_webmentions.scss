@@ -30,6 +30,8 @@
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 2em;
+  padding: 0;
+  background: transparent;
 
   .webmentions__explainer {
     flex: 1 0 100%;
