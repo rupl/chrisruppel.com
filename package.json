@@ -48,7 +48,7 @@
     "postinstall": "node_modules/.bin/gulp build-deploy",
     "build": "eleventy",
     "dev": "eleventy --serve",
-    "imgs-test": "aws s3 sync ./_site/img s3://assets.chrisruppel.com/img --region eu-central-1 --acl public-read --dryrun",
-    "imgs-sync": "aws s3 sync ./_site/img s3://assets.chrisruppel.com/img --region eu-central-1 --acl public-read"
+    "imgs-test": "aws s3 sync ./_site/img s3://assets-chrisruppel-com/img --endpoint-url=$S3_ENDPOINT --region auto --acl public-read --dryrun",
+    "imgs-sync": "aws s3 sync ./_site/img s3://assets-chrisruppel-com/img --endpoint-url=$S3_ENDPOINT --region auto --acl public-read"
   }
 }
