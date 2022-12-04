@@ -5,6 +5,7 @@ summary: Learning to program Arduino in the open. This experiment involved the J
 
 video:
   src: bustashape-arduino-johnnyfive-neopixel.mp4
+  poster: bustashape-arduino-johnnyfive-neopixel.png
 
 tags:
 - arduino
