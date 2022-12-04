@@ -3,14 +3,11 @@
 //
 .webmentions {
   font-size: .9em;
-  padding: 1em 2em;
+  padding: .01em 2em;
   margin-bottom: 2em;
   background: #eee;
   border-radius: 5px;
-
-  .is--offline & {
-    display: none;
-  }
+  position: relative;
 }
 
 .webmentions__loading,
@@ -22,6 +19,17 @@
   transform: translate(-50%, -50%);
 }
 
+.webmentions__learn {
+  display: inline-block;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: .8rem;
+  color: #333;
+  font-style: italic;
+  text-decoration: none;
+  border-bottom: 1px solid #aaa;
+}
 
 //
 // Form to submit a new Webmention
@@ -32,10 +40,6 @@
   margin-bottom: 2em;
   padding: 0;
   background: transparent;
-
-  .webmentions__explainer {
-    flex: 1 0 100%;
-  }
 
   input[name="source"] {
     flex: 1 0 75%;
@@ -91,6 +95,7 @@
 //
 .webmentions__list {
   min-height: 2em;
+  padding-bottom: 1rem;
   position: relative;
 
   //

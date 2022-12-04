@@ -1,14 +1,17 @@
-<section class="webmentions" id="webmentions">
+<section class="webmentions" id="webmentions" aria-labelledby="webmentions-heading">
+  <h2 id="webmentions-heading">Webmentions</h2>
+  <p class="webmentions__explainer">Have you linked to this page from your site? Submit your URL and it will appear below.</p>
+  <a class="webmentions__learn" href="https://indieweb.org/Webmention">what's this? 🤨</a>
+
   <form method="POST" action="{{ site.webmention-url }}" class="webmentions__submit">
-    <p class="webmentions__explainer">Have you linked to this page from your site? Submit the URL and it will appear below:</p>
     <input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
     <input type="url" name="source" placeholder="https://yoursite.com" required>
     <input type="submit" value="Mention">
-    <p class="webmentions__message" aria-live="polite">&nbsp;</p>
+    <div class="webmentions__message" aria-live="polite"></div>
   </form>
 
   <div class="webmentions__list">
-    <h2>Webmentions</h2>
+    <h3>Mentioned by</h3>
     {% assign wmFound = false %}
     {% for mention in webmentions %}
       {%- if mention.wm-target contains page.url -%}
@@ -28,6 +31,6 @@
         </article>
       {% endif %}
     {% endfor %}
-    {% if wmFound != true %}<p>None yet. Add yours!</p>{% endif %}
+    {% if wmFound != true %}<p>No one yet. Add yours!</p>{% endif %}
   </div>
 </section>
