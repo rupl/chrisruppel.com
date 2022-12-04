@@ -14,7 +14,7 @@ permalink: /about/site/
 * **Netlify** for web hosting and deployment.
 * **S3** for image hosting.
 
-**This site does not store any information about you as a visitor.** If you submit a webmention, your interaction is dutifully recorded at your request. If you view a map or video embed, those third parties probably store information about you. I'm working on eliminating those integrations.
+**This site does not store any information about you as a visitor.** If you submit a webmention, your interaction is dutifully recorded at your request. If you view an embedded map, those third parties probably store information about you. All images and video are self-hosted.
 
 ### Content
 

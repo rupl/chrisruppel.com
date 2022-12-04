@@ -15,9 +15,11 @@ em {
 }
 
 //
-// Fluid images by default
+// Fluid images/media by default
 //
-img {
+img,
+video {
+  width: 100%;
   max-width: 100%;
   height: auto;
 }

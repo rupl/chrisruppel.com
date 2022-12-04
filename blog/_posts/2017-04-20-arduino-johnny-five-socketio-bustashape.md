@@ -3,6 +3,9 @@ title: Powering NeoPixels with Johnny Five and Socket.io
 
 summary: Learning to program Arduino in the open. This experiment involved the Johnny Five platform and Socket.io, allowing me to power an Adafruit NeoPixel from my pet project bustashape.
 
+video:
+  src: bustashape-arduino-johnnyfive-neopixel.mp4
+
 tags:
 - arduino
 - bustashape
@@ -19,9 +22,7 @@ This was very exciting to me, because [bustashape](https://bustashape.com) also 
 
 Here's a video showing each step in the process. If you'd like, read below to see how I progressed to the final demo.
 
-<div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/d0ymYJeW9wU" frameborder="0" allowfullscreen></iframe>
-</div>
+{% include 'video.html' %}
 
 ## Limit the canvas
 

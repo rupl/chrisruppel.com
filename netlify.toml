@@ -20,9 +20,7 @@ style-src   'self' *.mapbox.com fonts.googleapis.com 'unsafe-inline';
 img-src     'self' *.mapbox.com assets.chrisruppel.com data: blob:;
 connect-src 'self' *.mapbox.com assets.chrisruppel.com;
 font-src    'self' fonts.gstatic.com;
-object-src  youtube.com youtube-nocookie.com;
-media-src   youtube.com youtube-nocookie.com;
-frame-src   'self' https://www.youtube.com https://www.youtube-nocookie.com codepen.io;
+frame-src   'self' codepen.io;
 sandbox     'allow-scripts' 'allow-same-origin' 'allow-popups' 'allow-forms';
     '''
 #
