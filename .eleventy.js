@@ -1,42 +1,42 @@
 const hljs = require('highlight.js');
 const markdownIt = require('markdown-it');
 
-module.exports = function(eleventyConfig) {
+module.exports = function(config) {
   // Define layout aliases. All paths relative to _includes
-  eleventyConfig.addLayoutAlias('about', 'layouts/about.html');
-  eleventyConfig.addLayoutAlias('blog', 'layouts/blog.html');
-  eleventyConfig.addLayoutAlias('default', 'layouts/default.html');
-  eleventyConfig.addLayoutAlias('gallery', 'layouts/gallery.html');
-  eleventyConfig.addLayoutAlias('link', 'layouts/link.html');
-  eleventyConfig.addLayoutAlias('naked', 'layouts/naked.html');
-  eleventyConfig.addLayoutAlias('page', 'layouts/page.html');
-  eleventyConfig.addLayoutAlias('quote', 'layouts/quote.html');
-  eleventyConfig.addLayoutAlias('trip', 'layouts/trip.html');
+  config.addLayoutAlias('about', 'layouts/about.html');
+  config.addLayoutAlias('blog', 'layouts/blog.html');
+  config.addLayoutAlias('default', 'layouts/default.html');
+  config.addLayoutAlias('gallery', 'layouts/gallery.html');
+  config.addLayoutAlias('link', 'layouts/link.html');
+  config.addLayoutAlias('naked', 'layouts/naked.html');
+  config.addLayoutAlias('page', 'layouts/page.html');
+  config.addLayoutAlias('quote', 'layouts/quote.html');
+  config.addLayoutAlias('trip', 'layouts/trip.html');
 
   // Set directories to pass through to the dist folder
-  eleventyConfig.addPassthroughCopy('./css/');
-  eleventyConfig.addPassthroughCopy('./js/');
-  eleventyConfig.addPassthroughCopy('./static/');
-  eleventyConfig.addPassthroughCopy('./svg/');
-  eleventyConfig.addPassthroughCopy('./static/');
-  eleventyConfig.addPassthroughCopy('./.well-known/');
+  config.addPassthroughCopy('./css/');
+  config.addPassthroughCopy('./js/');
+  config.addPassthroughCopy('./static/');
+  config.addPassthroughCopy('./svg/');
+  config.addPassthroughCopy('./static/');
+  config.addPassthroughCopy('./.well-known/');
 
   //
   // Collections
   //
-  eleventyConfig.addCollection('travel', collection =>
+  config.addCollection('travel', collection =>
     collection.getFilteredByGlob('travel/_posts/*.md')
       .sort((a, b) => b.date - a.date));
-  eleventyConfig.addCollection('blog', collection =>
+  config.addCollection('blog', collection =>
     collection.getFilteredByGlob('blog/_posts/*.md')
       .sort((a, b) => b.date - a.date));
-  eleventyConfig.addCollection('calendar', collection =>
+  config.addCollection('calendar', collection =>
     collection.getFilteredByGlob('calendar/_posts/*.md')
       .sort((a, b) => b.date - a.date));
-  eleventyConfig.addCollection('clients', collection =>
+  config.addCollection('clients', collection =>
     collection.getFilteredByGlob('clients/_posts/*.md')
       .sort((a, b) => a.data.order - b.data.order));
-  eleventyConfig.addCollection('tagList', collection => {
+  config.addCollection('tagList', collection => {
     let tagCounts = new Map();
     collection.getAllSorted().forEach(function(item) {
       if('tags' in item.data) {
@@ -77,7 +77,7 @@ module.exports = function(eleventyConfig) {
       return ''; // use external default escaping
     },
   };
-  eleventyConfig.setLibrary("md", markdownIt(mdOptions));
+  config.setLibrary("md", markdownIt(mdOptions));
 
   return {
     dir: {
