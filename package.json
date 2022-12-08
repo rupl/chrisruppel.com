@@ -12,7 +12,10 @@
     "concurrent-transform": "^1.0.0",
     "highlight.js": "^11.6.0",
     "markdown-it": "^13.0.1",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "postcss": "^8.4.19",
+    "postcss-csso": "^6.0.1",
+    "postcss-import": "^15.0.1"
   },
   "devDependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
@@ -36,7 +39,6 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "map-stream": "0.0.7",
-    "postcss": "^8.4.16",
     "run-sequence": "^2.2.1",
     "sass": "^1.54.9",
     "screenfull": "^3.3.2",

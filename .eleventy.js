@@ -1,5 +1,8 @@
 const hljs = require('highlight.js');
 const markdownIt = require('markdown-it');
+const postcss = require('postcss');
+const postcssImport = require('postcss-import');
+const postcssMin = require('postcss-csso');
 
 module.exports = function(config) {
   // Define layout aliases. All paths relative to _includes
@@ -14,7 +17,6 @@ module.exports = function(config) {
   config.addLayoutAlias('trip', 'layouts/trip.html');
 
   // Set directories to pass through to the dist folder
-  config.addPassthroughCopy('./css/');
   config.addPassthroughCopy('./js/');
   config.addPassthroughCopy('./static/');
   config.addPassthroughCopy('./svg/');
@@ -77,7 +79,32 @@ module.exports = function(config) {
       return ''; // use external default escaping
     },
   };
-  config.setLibrary("md", markdownIt(mdOptions));
+  config.setLibrary('md', markdownIt(mdOptions));
+
+  //
+  // CSS Pipeline
+  //
+  config.addTemplateFormats('css');
+  config.addExtension('css', {
+    outputFileExtension: 'css',
+    compile: async (content, path) => {
+      return async (data) => {
+        // `data` holds the full data cascade. CSS was getting output inside the
+        // default HTML template so we set it to null here.
+        data.layout = null;
+
+        // PostCSS
+        let output = await postcss([
+          postcssImport,
+          postcssMin,
+        ]).process(content, {
+          from: path,
+        });
+
+        return output.css;
+      }
+    },
+  });
 
   return {
     dir: {

@@ -1,0 +1,52 @@
+/**
+ * Utilities, helpers, etc.
+ */
+@import 'partials/reset.css';
+@import 'partials/utilities.css';
+@import 'partials/animations.css';
+
+/**
+ * Site-wide styles.
+ *
+@import 'partials/type';
+@import 'partials/general';
+@import 'partials/status';
+@import 'partials/footer';
+@import 'partials/forms';
+ */
+
+/**
+ * Content-specific styles.
+ *
+@import 'partials/titles';
+@import 'partials/intro';
+@import 'partials/front';
+@import 'partials/work';
+@import 'partials/calendar';
+@import 'partials/travel';
+@import 'partials/entry';
+@import 'partials/entry-meta';
+@import 'partials/trip-teaser';
+@import 'partials/blog';
+@import 'partials/quote';
+@import 'partials/links';
+@import 'partials/go';
+@import 'partials/uid';
+@import 'partials/filed';
+@import 'partials/tag';
+@import 'partials/tag-list';
+@import 'partials/prism';
+@import 'partials/prism-cr';
+@import 'partials/offline';
+@import 'partials/webmentions';
+@import 'partials/search';
+ */
+
+/**
+ * Media
+ *
+@import 'partials/media';
+@import 'partials/gallery';
+@import 'partials/photosphere';
+@import 'partials/maps';
+ */

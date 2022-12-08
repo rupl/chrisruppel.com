@@ -1,7 +1,6 @@
-//
-// Animations that need to be shared across components.
-//
-
+/**
+ * Animations that need to be shared across components.
+ */
 
 @keyframes fade-in {
   0% {
