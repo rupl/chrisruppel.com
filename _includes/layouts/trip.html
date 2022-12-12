@@ -23,11 +23,20 @@ layout: page
   </div>
 
   <div class="go">
-    {% for link in pagination %}
-      <a class="btn btn--prev" href="{{ link.href.previous }}" title="{{ link.page.previous.data.title }}{% if link.page.previous.data.location %} {% include 'location.html', location=link.page.previous.data.location %}{% endif %}">Prev trip</a>
-      <a class="btn btn--back" href="/travel/">Travel</a>
-      <a class="btn btn--next" href="{{ link.href.next }}" title="{{ link.page.next.data.title }}{% if link.page.next.data.location %} {% include 'location.html', location=link.page.next.data.location %}{% endif %}">Prev trip</a>
-    {% endfor %}
+    {% comment %}
+      My collection seems to be backwards according to 11ty so the variables and
+      the eleventy filters do NOT match.
+    {% endcomment %}
+    {% assign previousPost = collections.travel | getNextCollectionItem: page %}
+    {% assign nextPost = collections.travel | getPreviousCollectionItem: page %}
+
+    {% if previousPost.url %}
+      <a class="btn btn--prev" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">Previous post</a>
+    {% endif %}
+    <a class="btn btn--back" href="/travel/">Travel</a>
+    {% if nextPost.url %}
+      <a class="btn btn--next" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">Next post</a>
+    {% endif %}
   </div>
 
   {% if comments %}
