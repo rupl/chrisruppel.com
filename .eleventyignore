@@ -3,14 +3,6 @@ LICENSE.md
 package.json
 package-lock.json
 gulpfile.js
-Gemfile
-Gemfile.lock
 node_modules
-.bundle
-update
-Procfile
-vendor
-index.js
 bin
-app.json
 __NOTES.md
