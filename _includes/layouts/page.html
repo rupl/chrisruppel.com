@@ -1,10 +1,10 @@
-{% capture title %}
+{%- capture title %}
 {% if title %}{{ title }}{% endif %}
 {% if location %} {% include 'location.html' %}{% endif %}
 {% if category == 'travel' %} 🌍 {% endif %}
 {% if tag %}#{{ tag | replace: ' ','' | downcase }} {% endif %}
 {% if category == 'blog' %} — {% endif %}
-{% endcapture %}
+{% endcapture -%}
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
   <head>
