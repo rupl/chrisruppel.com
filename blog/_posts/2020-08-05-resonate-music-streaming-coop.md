@@ -1,7 +1,6 @@
 ---
 title: "Resonate, a music streaming co-op"
 
-layout: link
 link: https://resonate.coop
 
 tags:

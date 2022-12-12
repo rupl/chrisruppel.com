@@ -3,7 +3,7 @@ layout: page
 comments: true
 ---
 
-<article class="h-entry entry--main {% if haslink == true %}entry--link{% else %}entry--blog{% endif %}">
+<article class="h-entry entry--main {% if link %}h-as-reply{% endif %}">
   <header>
     <h1 class="title--main p-name">{{ title }}</h1>
   </header>
@@ -14,6 +14,12 @@ comments: true
   <aside class="intro summary p-summary">{{ summary }}</aside>
 
   <div class="e-content">
+    {% if link %}
+      <div class="link--external">
+        <a class="u-in-reply-to" href="{{ link }}">{{ title }}</a>
+      </div>
+    {% endif %}
+
     {{ content | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&amp;', '&' | replace: '<pre><code>  <picture', '<picture' | replace: '</figure></code></pre>', '</figure>' }}
     <div class="the-end" aria-label="End of article."></div>
   </div>

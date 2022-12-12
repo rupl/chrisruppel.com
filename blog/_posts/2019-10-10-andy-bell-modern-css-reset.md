@@ -1,7 +1,6 @@
 ---
 title: A modern CSS Reset by Andy Bell
 
-layout: link
 link: https://hankchizljaw.com/wrote/a-modern-css-reset/
 
 tags:
