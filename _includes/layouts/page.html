@@ -37,13 +37,13 @@
     <!-- Web Monetization -->
     <meta name="monetization" content="$chrisruppel.com">
 
-    <!-- Preload CSS/Fonts -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/portlligatslab/v8/LDIpaoiQNgArA8kR7ulhZ8P_NYOsg70R9gOIifM.woff2" as="font" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/ptsansnarrow/v11/BngRUXNadjH0qYEzV7ab-oWlsbCLwR2oefDofMY.woff2" as="font" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab&display=swap">
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Port+Lligat+Slab&display=swap">
 
-    <!-- Performance-related tags -->
   {% if site.img-host != '' %}
+    <!-- Warm up the CDN connection -->
     <link rel="preconnect" href="{{ site.img-host }}">
   {% endif %}
 
