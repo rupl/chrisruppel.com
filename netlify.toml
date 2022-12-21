@@ -1,9 +1,8 @@
 #———————————————————————————————————————————————————————————————————————————————
 # Netlify-specific configuration
-#
 #———————————————————————————————————————————————————————————————————————————————
+
 # Headers
-#
 [[headers]]
   # Global headers
   for = '/*'
@@ -25,7 +24,8 @@ sandbox     'allow-scripts' 'allow-same-origin' 'allow-popups' 'allow-forms';
 
 #———————————————————————————————————————————————————————————————————————————————
 # Redirects
-#
+#———————————————————————————————————————————————————————————————————————————————
+
 # Historical
 [[redirects]]
   from = '/portfolio'
@@ -42,6 +42,7 @@ sandbox     'allow-scripts' 'allow-same-origin' 'allow-popups' 'allow-forms';
   to = '/blog/brave-rewards-github-pages/'
   status = 301
   force = true
+
 # Web Monetization
 [[redirects]]
   from = '/.well-known/pay'
