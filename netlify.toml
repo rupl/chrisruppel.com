@@ -49,3 +49,9 @@ sandbox     'allow-scripts' 'allow-same-origin' 'allow-popups' 'allow-forms';
   to = 'https://ilp.uphold.com/BGG9gLz6k9z9'
   status = 302
   force = true
+
+# Fediverse discovery
+[[redirects]]
+  from = "/.well-known/webfinger"
+  to = "https://mastodon.social/.well-known/webfinger?resource=acct:rupl@mastodon.social"
+  status = 200
