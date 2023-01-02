@@ -3,6 +3,10 @@ title: Collecting Brave Rewards on GitHub Pages
 
 summary: A guide to verify your USER.github.io domain with Brave Creators.
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/940925878518861827
+
 tags:
 - ads
 - browsers

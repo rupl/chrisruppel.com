@@ -54,6 +54,12 @@ tags:
 - volcanoes
 - maps
 
+syndication:
+- type: Facebook
+  href: https://www.facebook.com/chris.ruppel/posts/10105950796972098?pnref=story
+- type: Twitter
+  href: https://twitter.com/rupl/status/695638291220008960
+
 summary: We made a treacherous night hike up to Mount Ijen and into a crater that is home to a sulfur volcano with blue flames!
 ---
 

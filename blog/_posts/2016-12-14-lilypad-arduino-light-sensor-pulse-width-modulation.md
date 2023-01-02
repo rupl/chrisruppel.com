@@ -3,6 +3,10 @@ title: LilyPad Arduino and light sensors
 
 summary: Learning how to program Arduino in the open. This experiment involved a light sensor and pulse width modulation.
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/809100980432289796
+
 tags:
 - lilypad
 - arduino
