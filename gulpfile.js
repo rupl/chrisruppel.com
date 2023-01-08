@@ -25,8 +25,8 @@ var changed = require('gulp-changed');
 var toGeoJson = require('./_gulp/togeojson.js');
 
 // Deployment debugging
-log(c.yellow('Detected environment: ' + c.black.bgYellow((process.env.NODE_ENV || 'local'))));
-var isProduction = process.env.NODE_ENV === 'production';
+log(c.yellow('Detected environment: ' + c.black.bgYellow((process.env.ELEVENTY_ENV || 'local'))));
+var isProduction = process.env.ELEVENTY_ENV === 'production';
 
 
 //——————————————————————————————————————————————————————————————————————————————
