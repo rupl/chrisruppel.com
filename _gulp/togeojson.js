@@ -10,7 +10,7 @@ var toGeoJson = function() {
     try {
       var kml = new DOMParser().parseFromString(fs.readFileSync(file.path, 'utf8'));
       var converted = togeojson.kml(kml);
-      file.contents = new Buffer(JSON.stringify(converted));
+      file.contents = new Buffer.from(JSON.stringify(converted));
     } catch (err) {
       gulpError = err;
     }
