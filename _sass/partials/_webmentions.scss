@@ -119,6 +119,15 @@
       padding-left: 1em;
     }
 
+    .e-content a {
+      display: inline-block;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1;
+    }
+
     // Webmention meta
     footer {
       font-family: monospace;
