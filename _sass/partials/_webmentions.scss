@@ -20,11 +20,21 @@
 }
 
 .webmentions__learn {
-  display: inline-block;
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
+  display: block;
   font-size: .8rem;
+}
+
+@media screen and (min-width: 600px) {
+  .webmentions__learn {
+    display: inline-block;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    margin: 0;
+  }
+}
+
+.webmentions__learn a {
   color: #333;
   font-style: italic;
   text-decoration: none;
@@ -118,6 +128,7 @@
       opacity: .9;
 
       position: relative;
-      top: -.5em;  }
+      top: -.5em;
+    }
   }
 }

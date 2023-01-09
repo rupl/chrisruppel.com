@@ -1,7 +1,7 @@
 <section class="webmentions" id="webmentions" aria-labelledby="webmentions-heading">
   <h2 id="webmentions-heading">Webmentions</h2>
+  <p class="webmentions__learn"><a href="https://indieweb.org/Webmention">what's this? 🤨</a></p>
   <p class="webmentions__explainer">Have you linked to this page from your site? Submit your URL and it will appear below.</p>
-  <a class="webmentions__learn" href="https://indieweb.org/Webmention">what's this? 🤨</a>
 
   <form method="POST" action="{{ site.webmention-url }}" class="webmentions__submit">
     <input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
