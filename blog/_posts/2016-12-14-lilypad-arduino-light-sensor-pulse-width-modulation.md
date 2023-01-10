@@ -52,7 +52,7 @@ This simple program is a great starting point for experimentation with PWM. By u
 
 ## Light sensors
 
-After I finished my sister's gift, a few spare parts were left over and I put them in a box in storage while I [went backpacking](/travel/list/). Recently while cleaning I found the box of unused components and rediscovered the light sensor.
+After I finished my sister's gift, a few spare parts were left over and I put them in a box in storage while I [went backpacking](/travel/). Recently while cleaning I found the box of unused components and rediscovered the light sensor.
 
 As I dove into the sensor's workings I was surprised to find how much complexity can be hidden behind a seemingly simple circuit. But its ability to provide variable input is the perfect complement to the PWM-enabled LED we just coded.
 

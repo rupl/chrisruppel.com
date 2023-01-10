@@ -4,22 +4,20 @@ permalink: /travel/
 layout: page
 ---
 
-<section aria-labelledby="travel">
-  <h1 id="travel" class="title title--main">Travel</h1>
-  <p class="intro summary">Just another travel blog. <small><a class="alt" href="/travel/list/">Browse without photos.</a></small></p>
 
-  <div id="trip-list" class="trip-list">
-    <!-- Load some initial content -->
-    {% for trip in collections.travel limit:2 %}
-      {% include 'gallery-list-item.html' %}
+<section aria-labelledby="travel-list">
+  <h1 id="travel-list" class="title--main title--page">Travel</h1>
+  <p class="intro summary">Here some places I've been.</p>
+
+  <div class="search">
+    <input type="text" name="search" placeholder="search...">
+    <p class="search__summary" id="search-summary">Showing all results.</p>
+  </div>
+
+  <div class="trip-list">
+    {% for trip in collections.travel %}
+      {% include 'trip-listing.html' %}
     {% endfor %}
-
-    <!-- The rest will come from JS using this template -->
-    <template id="trip-list-lazyload">
-      {% for trip in collections.travel offset:2 %}
-        {% include 'gallery-list-item.html' %}
-      {% endfor %}
-    </template>
   </div>
 
   <div class="go">

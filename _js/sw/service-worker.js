@@ -6,7 +6,7 @@
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v2.0.0',
+  cache_version: 'main_v2.0.1',
   offline_assets: [
     '/',
     '/offline/',
@@ -14,7 +14,7 @@ var SW = {
     '/work/services/',
     '/about/',
     '/about/site/',
-    '/travel/list/',
+    '/travel/',
     '/css/main.min.css',
     '/js/main.min.js',
     '/static/chris-ruppel-2015@384x384.jpg',
