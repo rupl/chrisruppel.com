@@ -6,7 +6,7 @@
 // Config
 var OFFLINE_ARTICLE_PREFIX = 'chrisruppel-offline--';
 var SW = {
-  cache_version: 'main_v2.0.0',
+  cache_version: 'main_v2.0.1',
   offline_assets: [
     '/',
     '/offline/',
@@ -14,7 +14,7 @@ var SW = {
     '/work/services/',
     '/about/',
     '/about/site/',
-    '/travel/list/',
+    '/travel/',
     '/css/main.min.css',
     '/js/main.min.js',
     '/static/chris-ruppel-2015@384x384.jpg',
@@ -138,7 +138,7 @@ self.addEventListener('fetch', function(event) {
   // in the background so that the next page load will be fresh. We only want
   // to manage first-party assets for now.
   //
-  // @see http://12devsofxmas.co.uk/2016/01/day-9-service-worker-santas-little-performance-helper/
+  // @see https://12devsofxmas.co.uk/2016/01/day-9-service-worker-santas-little-performance-helper/
   else if (requestIsAsset) {
     event.respondWith(staleWhileRevalidate(event.request));
   }
@@ -264,7 +264,7 @@ function staleWhileRevalidate(request) {
 
 // Polyfill for window.location
 //
-// @see http://stackoverflow.com/a/21553982/175551
+// @see https://stackoverflow.com/a/21553982/175551
 function getLocation(href) {
   var match = href.match(/^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)(\/[^?#]*)(\?[^#]*|)(#.*|)$/);
 

@@ -35,14 +35,14 @@
       searchSummary.innerHTML = `Showing <strong>${numResults} trip${numResults === 1 ? '' : 's'}</strong>`;
 
       // Update URL
-      history.pushState({s: search}, '', `/travel/list/?s=${search}`);
+      history.pushState({s: search}, '', `${window.location.pathname}?s=${search}`);
     } else {
       // Show all items
       items.forEach(trip => trip.classList.remove('trip--hidden'));
-      searchSummary.innerHTML = '';
+      searchSummary.innerHTML = 'Showing all results.';
 
       // Update URL
-      history.pushState({s: ''}, '', '/travel/list/');
+      history.pushState({s: ''}, '', `${window.location.pathname}`);
     }
   }
 

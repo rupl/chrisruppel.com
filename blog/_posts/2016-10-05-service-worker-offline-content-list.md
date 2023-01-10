@@ -89,6 +89,6 @@ Really though, that's it! If you wanted to get really fancy, you could pull an i
 
 Try it out by using the *Save Article Offline* button below, then temporarily disabling your network to see the Offline page. Let me know in the comments if you have any questions or ideas to improve the code!
 
-<p><ins class="update" datetime="2017-11-13">I've implemented a second approach on my site which <a href="/blog/service-worker-offline-content-list-filter/">filters static HTML to show only cached content</a>. You can try it out on my <a href="/travel/list/">travel list</a>.</ins></p>
+<p><ins class="update" datetime="2017-11-13">I've implemented a second approach on my site which <a href="/blog/service-worker-offline-content-list-filter/">filters static HTML to show only cached content</a>. You can try it out on my <a href="/travel/">travel list</a>.</ins></p>
 
 <p><ins class="update" datetime="2019-09-05">Remy Sharp built a similar, but much nicer formatted list on his <a href="https://remysharp.com/2019/09/05/offline-listings">offline page using the cached HTML itself</a>. Great idea!</ins></p>

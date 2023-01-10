@@ -64,7 +64,7 @@ In addition to the fabric glue used to insulate the exposed electronics, I used 
 
 Unlike my normal environment of a web browser, this jacket has a mere two pushbuttons as an interface. That means there are four total states for the hardware. Using these wisely was a programming challenge, not from a syntax standpoint, but usability.
 
-The original code that went with the project can [currently be found only on archive.org](http://web.archive.org/web/20150922011154/http://web.media.mit.edu/~leah/LilyPad/build/turn_signal_code.txt) but I have some similar code that I created with the original as reference.
+The original code that went with the project can [currently be found only on archive.org](https://web.archive.org/web/20150922011154/http://web.media.mit.edu/~leah/LilyPad/build/turn_signal_code.txt) but I have some similar code that I created with the original as reference.
 
 Something I learned from Leah's code is using a read command within a `while` statement, which effectively pauses execution until specific input is received. This allows us to respond to both buttons being pushed, or just one. Here is an _incomplete example block_ showing this technique:
 

@@ -49,7 +49,7 @@ tags:
 summary: We hiked the India Venster on Table Mountain on our first day in South Africa. It was an unintentionally intense hike because we went off the trail.
 ---
 
-Capetown was the beginning of our trip through South Africa. We picked it because Mark had just moved there. We wanted to visit him after [his trip](http://tunafish.es) took him from Austin all the way down to Patagonia and back to Durban.
+Capetown was the beginning of our trip through South Africa. We picked it because Mark had just moved there. We wanted to visit him after his trip took him from Austin all the way down to Patagonia and back to South Africa.
 
 Our first full day, Mark wanted to take us hiking. There was a concert near Table Mountain that evening so we were going to meet some friends after hiking around the mountain for the afternoon. He picked the _India Venster_, one of the more difficult — but beautiful — trails on Table Mountain.
 

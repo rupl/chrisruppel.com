@@ -33,6 +33,11 @@ sandbox     'allow-scripts' 'allow-same-origin' 'allow-popups' 'allow-forms';
   status = 301
   force = true
 [[redirects]]
+  from = '/travel/list'
+  to = '/travel'
+  status = 301
+  force = true
+[[redirects]]
   from = '/blog/brave-payments/'
   to = '/blog/brave-rewards/'
   status = 301

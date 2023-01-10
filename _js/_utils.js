@@ -25,7 +25,7 @@ NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn
 //
 // Blur all form fields
 //
-// @see http://stackoverflow.com/a/29237391/175551
+// @see https://stackoverflow.com/a/29237391/175551
 //
 function blurAll() {
   var tmp = document.createElement("input");
