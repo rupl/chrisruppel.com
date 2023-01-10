@@ -94,7 +94,7 @@
       // stored when the save button is pushed. Maybe this number is possible to
       // generate without incurring extra downloading.
       //
-      // @see http://stackoverflow.com/questions/1310378/determining-image-file-size-dimensions-via-javascript
+      // @see https://stackoverflow.com/questions/1310378/determining-image-file-size-dimensions-via-javascript
 
       // 'Save Offline' functionality.
       cacheButton.on('click', function(event) {

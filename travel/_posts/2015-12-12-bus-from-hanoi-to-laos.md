@@ -44,7 +44,7 @@ We were somewhat amazed that we got to Hanoi without having to fork over any "un
 
 ### Get to My Dinh bus station
 
-Our bus dropped us off at some random bus station, whose name I forgot. But the station we needed was My Dinh (we found the route from [travelfish](http://www.travelfish.org/board/post/laos/26400_overland-travel-from-hanoi-to-luang-prabang-via-bus----seeking-detailed-information--)). So we hailed a cab, luckily we bumped into two others we'd met in Mui Ne and split it four ways. The cab was 360,000 VND in total for a 26km ride. Sheesh! For comparison, the whole journey (bus/ferry/bus) had only cost 210,000 per person at this point. Make that 300,000 each now.
+Our bus dropped us off at some random bus station, whose name I forgot. But the station we needed was My Dinh. So we hailed a cab, luckily we bumped into two others we'd met in Mui Ne and split it four ways. The cab was 360,000 VND in total for a 26km ride. Sheesh! For comparison, the whole journey (bus/ferry/bus) had only cost 210,000 per person at this point. Make that 300,000 each now.
 
 ### Plan for money issues
 

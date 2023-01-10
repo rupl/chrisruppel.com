@@ -52,7 +52,7 @@ tags:
 summary: Freiburg was my first stop after DrupalCon Munich. Little did I know it would be the best place on my trip through Europe! This day was the catalyst for my moving to Europe to be with Karin.
 ---
 
-After a fun week in Munich, it was time to relax and have some time of my own to explore parts of the EU. [Morten](http://morten.dk) was very excited for me to come and vowed to deliver an unforgettable week of travel. I'd booked my outbound flight in Amsterdam so as long as I made it there everything in between was up for grabs.
+After a fun week in Munich, it was time to relax and have some time of my own to explore parts of the EU. [Morten](https://morten.dk) was very excited for me to come and vowed to deliver an unforgettable week of travel. I'd booked my outbound flight in Amsterdam so as long as I made it there everything in between was up for grabs.
 
 Morten had declined to mention there would be a third person in our group.. to neither her nor me, 😆. That is how I met [Stephanie](https://twitter.com/stephelhajj).
 

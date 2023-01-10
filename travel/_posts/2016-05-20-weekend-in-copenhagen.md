@@ -32,4 +32,4 @@ tags:
 summary: I went to Copenhagen to speak at a local Drupal event, play boardgames, and maybe have a beer or two.
 ---
 
-Morten asked me to speak at a local Drupal event, so I made a nice weekend trip out of it. It was at the main football stadium! I statyed a few extra days just to hang out. One day we spent five hours at [Bastard Café](http://bastardcafe.dk/) playing games. It's an awesome, family-friendly place!
+Morten asked me to speak at a local Drupal event, so I made a nice weekend trip out of it. It was at the main football stadium! I statyed a few extra days just to hang out. One day we spent five hours at [Bastard Café](https://bastardcafe.dk/) playing games. It's an awesome, family-friendly place!

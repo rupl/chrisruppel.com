@@ -42,7 +42,7 @@ gallery:
   comment: Day 1 — Our post-kayaking group photo.
   type: wide
   bgpad: 45%
-- caption: Credit — all GoPro helmet photos taken by <a href="http://www.reiskrabbels.nl/reisblog/lisanneopreis/#!/reisblog/">Lisanne Schaafsma</a>
+- caption: Credit — all GoPro helmet photos taken by Lisanne Schaafsma
 
 tags:
 - kayaking

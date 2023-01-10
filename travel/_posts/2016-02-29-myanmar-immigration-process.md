@@ -33,7 +33,7 @@ tags:
 summary: The immigration process for Burma is relatively hassle-free if you're prepared ahead of time. Learn from our experience!
 ---
 
-While backpacking through Thailand, Laos, and Vietnam, we met many people who planned to move on to Burma ([controversially renamed Myanmar in 1989](http://news.bbc.co.uk/2/hi/uk_news/magazine/7013943.stm)). After some quality time on the beaches of Indonesia, Malaysia, and Thailand, we were excited to return to backpackers' territory.
+While backpacking through Thailand, Laos, and Vietnam, we met many people who planned to move on to Burma (renamed Myanmar in 1989). After some quality time on the beaches of Indonesia, Malaysia, and Thailand, we were excited to return to backpackers' territory.
 
 We had a few small hiccups in the process of applying and receiving our visas so let me share the story for any travelers looking to visit this country.
 
@@ -45,9 +45,9 @@ It's a pretty simple process that ended up being less hassle than a Vietnamese v
 
 First step is to get an eVisa. Do this before you book your flight, because there's a 50USD non-refundable application fee. It's unlikely, but if they reject your application and you already booked a flight, that's two non-refundable fees you paid.
 
-[Go to the official Ministry of Immigration website](http://evisa.moip.gov.mm/) to apply for your visa. Don't do it through an agency. The official application process is very fast, with most people receiving approval within 1-3 days. So anyone promising to expidite it is just taking you for some money.
+[Go to the official Ministry of Immigration website](https://evisa.moip.gov.mm/) to apply for your visa. Don't do it through an agency. The official application process is very fast, with most people receiving approval within 1-3 days. So anyone promising to expidite it is just taking you for some money.
 
-Be sure to read the [Tourist Visa requirements for Myanmar](http://evisa.moip.gov.mm/NoticetoTourists.aspx). They're pretty ordinary; you basically need a digital passport photo, a major credit card to pay, and a passport which is valid for at least 6 months after your actual date of entry (NOT the date of eVisa application). There's also a list of the 100 countries who can receive a visa. That's a lot less than many countries so double check to find your passport on the list!
+Be sure to read the [Tourist Visa requirements for Myanmar](https://evisa.moip.gov.mm/tourist/message). They're pretty ordinary; you basically need a digital passport photo, a major credit card to pay, and a passport which is valid for at least 6 months after your actual date of entry (NOT the date of eVisa application). There's also a list of the 100 countries who can receive a visa. That's a lot less than many countries so double check to find your passport on the list!
 
 Make sure to pick your port of entry carefully. You have to enter at the airport you pick, so shop around for airline tickets before submitting your application. **Yangon often has cheaper tickets** than the other two since it handles the bulk of tourist entries.
 
@@ -85,7 +85,7 @@ When you apply for the visa, you must pick one of three international airports a
 
 We were required to produce approval letters before boarding our flight operated by AirAsia. They must fly you back if you have to return, so they won't let you on the plane without your papers.
 
-The flight was mostly uneventful save for the fact that it felt more like a local bus. People walking against the stream of traffic as we boarded, standing during take-off, spitting in the aisles during the flight, opening overhead bins during landing and taxi, trampling each other to leave the plane the moment the seatbelt sign was off... it was the most hectic crowd I've ever seen on a plane.
+The flight was mostly uneventful save for the fact that it felt more like a local bus. People walking against the stream of traffic as we boarded, standing during take-off, spitting betel nut into the aisles during the flight, opening overhead bins during landing and taxi, trampling each other to leave the plane the moment the seatbelt sign was off... it was the most hectic crowd I've ever seen on a plane.
 
 Maybe it was because of the 4 hour delay ¯\\\_(ツ)\_/¯
 

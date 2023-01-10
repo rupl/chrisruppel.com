@@ -36,7 +36,7 @@ tags:
 summary: We tried to go white-water tubing through a cave, but the rainy season got the best of us once again 😦
 ---
 
-After our trip to Borobudur the day before, we planned to go tubing with [Sander and Tamara](http://latitude-zero.com) at Kalisuci Cave Tubing. Not just an ordinary float, this tubing trip promises white-water rapids in a dark cave. Sounded exciting!
+After our trip to Borobudur the day before, we planned to go tubing with Sander and Tamara at Kalisuci Cave Tubing. Not just an ordinary float, this tubing trip promises white-water rapids in a dark cave. Sounded exciting!
 
 We hopped on the motorbikes and drove out of town around 11am. We saw storm clouds ahead but decided it's best to just keep going and see how the weather is when we arrive at the tubing place. Once we hit the actual mountain roads, the rain started coming down. We stopped in a café to try and let the rain pass, but after a half hour's wait we caught up to the rain in less than 5 minutes.
 

@@ -15,7 +15,7 @@ tags:
 - advice
 ---
 
-Before [Mark went to travel through South America](http://tunafish.es), he recommended a book he'd read and re-read which had helped him decide, prepare, and ultimately travel the world with nothing but a backpack.
+Before Mark went to travel through South America, he recommended a book he'd read and re-read which had helped him decide, prepare, and ultimately travel the world with nothing but a backpack.
 
 It's entitled _[Vagabonding](https://vagabonding.net/)_.
 

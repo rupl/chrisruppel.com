@@ -51,7 +51,7 @@ tags:
 summary: I went on an impromptu snorkeling dive on our last day in Koh Lipe and saw some really fantastic sea life.
 ---
 
-The story actually starts the previous day. We were just bobbing in the waves during the afternoon when I overturned a rather large rock in the water. I didn't think much of it, but about 5 seconds afterward a very long [slender needlefish](http://www.ecologyasia.com/verts/fishes/slender-needlefish.htm) went skipping about the surface of the water, coming inches from my body and really giving me a startle!
+The story actually starts the previous day. We were just bobbing in the waves during the afternoon when I overturned a rather large rock in the water. I didn't think much of it, but about 5 seconds afterward a very long [slender needlefish](https://www.ecologyasia.com/verts/fishes/slender-needlefish.htm) went skipping about the surface of the water, coming inches from my body and really giving me a startle!
 
 I shouted in surprise and two Dutch ladies near us became alert and asked if I was ok. I said yeah a pretty big snake or fish just scared me, but I think I scared him first. We spotted it, confirmed it was a fish, and everyone agreed it was large enough to warrant my reaction 😅 we talked to them for a moment but then went about our business.
 
