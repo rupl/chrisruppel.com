@@ -1,12 +1,11 @@
-{% if gallery.size > 0 %}
-<figure class="gallery {% if gallery[0].type != null %} {{ gallery[0].type }}{% else %} {% if gallery[0].gridtype %}grid-{{ gallery[0].gridtype }}{% else %}grid-tall{% endif %}{% endif %}">
+{%- if gallery.size > 0 -%}
+<figure class="gallery {% if gallery[0].type != null %}{{ gallery[0].type }}{%- else -%}{% if gallery[0].gridtype %} grid-{{ gallery[0].gridtype }}{% else %} grid-tall{% endif %}{% endif -%}">
   {%- for item in gallery -%}
     {%- if item.src != null -%}
-      {% capture imgsrc_320 %}{{ site.img-host }}/img/travel@320/{{ item.src }}{% endcapture %}
-      {% capture imgsrc_640 %}{{ site.img-host }}/img/travel@640/{{ item.src }}{% endcapture %}
-      {% capture imgsrc_orig %}{{ site.img-host }}/img/travel/{{ item.src }}{% endcapture %}
-
-      {% comment %}
+      {%- capture imgsrc_320 %}{{ site.img-host }}/img/travel@320/{{ item.src }}{% endcapture -%}
+      {%- capture imgsrc_640 %}{{ site.img-host }}/img/travel@640/{{ item.src }}{% endcapture -%}
+      {%- capture imgsrc_orig %}{{ site.img-host }}/img/travel/{{ item.src }}{% endcapture -%}
+      {%- comment -%}
         Image sizes are somewhat complicated to determine, but since we generate
         HTML from the gallery YML we have most of the info we need to dynamically
         determine how wide each image is at any window size.
@@ -14,12 +13,11 @@
         Things that might drift out of sync and need to be checked periodically:
         - Gallery breakpoints. What window sizes cause galleries to be linear
           instead of "tiled" sets of images?
-      {% endcomment %}
-
-      {% capture imgsize_small %}calc(100vw - 4% - 1em){% endcapture %}
+      {%- endcomment -%}
+      {%- capture imgsize_small %}calc(100vw - 4% - 1em){%- endcapture -%}
       {%- capture imgsize_big -%}(min-width: 500px)
         {%- if item.type contains "wide" or item.type contains "tall" or item.type contains "two-third" -%}
-          {% comment %}
+          {%- comment -%}
             When the image is wide, it always takes up the full width no matter
             what layout or breakpoint we're at. Force it to be the full width.
 
@@ -31,35 +29,33 @@
             to higher-res, so fibbing and calling it wide suits our needs.
 
             Formula: 100vw - <main>-padding - gallery_padding - photo-margin
-          {% endcomment %}
+          {%- endcomment -%}
           calc(100vw - 2em - 8% - 2%)
         {%- elsif item.type contains "half" -%}
-          {% comment %}
+          {%- comment -%}
             Similar to wide, when image is half size, we know how much space it
             takes up on larger breakpoints without looking at gallery type.
 
             Formula: 50vw - <main>-padding - gallery_padding - photo-margins
-          {% endcomment %}
+          {%- endcomment -%}
           calc(50vw - 2em - 8% - 4%)
         {%- else -%}
-          {% comment %}
+          {%- comment -%}
             If its size is unspecified, check the gallery type to see how wide
             the image is.
-          {% endcomment %}
+          {%- endcomment -%}
           {%- case gallery[0].gridtype -%}
-            {% when "col-3" %}
+            {%- when "col-3" -%}
               30vw
-            {% when "col-2" or "col-2-short" or "tall" %}
+            {%- when "col-2" or "col-2-short" or "tall" -%}
               40vw
           {%- endcase -%}
         {%- endif -%}
       {%- endcapture -%}
-
-      <picture class="photo {% if item.type != null %}{{ item.type }}{% endif %}"
-        {% if item.comment %}data-comment="{{ item.comment | escape }}"{% endif %}
+      <picture class="photo {% if item.type != null %}{{ item.type }}{%- endif -%}"
+        {%- if item.comment -%}data-comment="{{ item.comment | escape }}"{%- endif -%}
         style="{%- if item.bgpad != null -%}padding-bottom: {{ item.bgpad }};{%- endif -%}
                {%- if item.width -%}width: {{ item.width }};{%- endif -%}">
-
         <img alt="{{ item.alt | escape }}"
           srcset="{{ imgsrc_320 }} 320w,
                   {{ imgsrc_640 }} 640w,
@@ -68,11 +64,10 @@
                  {{ imgsize_small }}"
           style="{%- if item.bgpos != null -%}object-position: {{ item.bgpos }};{%- endif -%}">
       </picture>
-
     {%- endif -%}
-    {% if item.caption != null %}
+    {%- if item.caption != null -%}
       <figcaption>{{ item.caption }}</figcaption>
-    {% endif %}
+    {%- endif -%}
   {%- endfor -%}
 </figure>
-{% endif %}
+{%- endif -%}
