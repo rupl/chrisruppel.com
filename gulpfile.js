@@ -34,7 +34,7 @@ var isProduction = process.env.ELEVENTY_ENV === 'production';
 //——————————————————————————————————————————————————————————————————————————————
 function eleventyDev() {
   bs.notify('Eleventy building...');
-  return spawn('npm', ['run', 'build'], {stdio: 'inherit'})
+  return spawn('npm', ['run', 'build', '--incremental'], {stdio: 'inherit'})
     .on('close', reload);
 };
 module.exports['11ty-dev'] = eleventyDev;
