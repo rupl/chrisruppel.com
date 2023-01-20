@@ -8,7 +8,7 @@
     "npm": "^8.19.3"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.0-beta.1",
     "concurrent-transform": "^1.0.0",
     "highlight.js": "^11.6.0",
     "markdown-it": "^13.0.1",
@@ -47,7 +47,7 @@
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
     "build": "eleventy",
-    "dev": "eleventy --serve",
+    "dev": "eleventy --serve --incremental --ignore-initial",
     "imgs-test": "aws s3 sync ./_site/img s3://assets-chrisruppel-com/img --endpoint-url=$S3_ENDPOINT --region auto --acl public-read --dryrun",
     "imgs-sync": "aws s3 sync ./_site/img s3://assets-chrisruppel-com/img --endpoint-url=$S3_ENDPOINT --region auto --acl public-read"
   }
