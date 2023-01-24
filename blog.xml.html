@@ -15,11 +15,11 @@ permalink: /blog.xml
 
     {% for post in collections.blog %}
     <item>
-      <title>{{ post.title }}</title>
+      <title>{{ post.data.title }}</title>
       <link>{{ site.url }}{{ post.url }}</link>
       <description>{{ post.data.summary | escape }}</description>
       <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-      <pubDate>{{ post.date }}</pubDate>
+      <pubDate>{{ post.date | date: '%a, %d %b %Y %H:%M:%S %z' }}</pubDate>
     </item>
     {% endfor %}
 
