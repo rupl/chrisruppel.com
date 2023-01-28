@@ -50,7 +50,7 @@ So in a nutshell, the on-page JS just sets every entry to be disabled, then look
 
 Once a person has saved a couple articles, they will see this when visiting my site offline. I also included a message explaining that the list is truncated, with a link to display every entry:
 
-<center><img width="317" height="558" src="{{ site.img-host }}/img/blog/service-worker-offline-content-list-filter-1.png" alt="Screenshot of an offline content list in Nexus 5X"/></center>
+<center><img width="317" height="558" src="{{ site.img-host }}/img/service-worker-offline-content-list-filter-1.png" alt="Screenshot of an offline content list in Nexus 5X"/></center>
 
 For now, mine only alters the list when offline. However, the cache can be read any time and other enhancements could be useful even when a connection is available, for example to show an icon next to entries that will be available offline. 
 

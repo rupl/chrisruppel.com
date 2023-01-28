@@ -106,7 +106,7 @@ We noticed when the readings dropped to single digits that the last character in
 
 After everything was connected and running properly, this is what we saw on our display. We tested that it worked by cupping the sensor in our hands and blowing into them. Human breath is warm and humid so the numbers should both go up after a few breaths of air.
 
-<img src="{{ site.img-host }}/img/blog/arduino-dht11-lcd.jpg" alt="Arduino Uno with DHT11 temperature and humidity sensor data displayed on LCD">
+<img src="{{ site.img-host }}/img/arduino-dht11-lcd.jpg" alt="Arduino Uno with DHT11 temperature and humidity sensor data displayed on LCD">
 
 ## More advanced uses of the LCD
 

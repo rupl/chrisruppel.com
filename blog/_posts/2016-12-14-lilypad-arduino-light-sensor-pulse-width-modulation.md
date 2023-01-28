@@ -62,7 +62,7 @@ But first, we have to connect the sensor to the Arduino with wires. I've made th
 * The `+` and `-` power terminals are used to power the sensor. Connect both `+` terminals with one wire, then both `-` terminals with another.
 * The LilyPad's on-board LED is the output, internally referred to as pin `13`. It requires no extra wiring since it is on the Arduino.
 
-<img src="{{ site.img-host }}/img/blog/arduino-light-sensor-1.jpg" alt="Photo of LilyPad Arduino with light sensor connected as input."/>
+<img src="{{ site.img-host }}/img/arduino-light-sensor-1.jpg" alt="Photo of LilyPad Arduino with light sensor connected as input."/>
 
 The sensor outputs a signal as a 10-bit number, which is 2<sup>10</sup> or 1024 in the familiar base-10 system we use day-to-day. So the sensor output has a range of 0-1023 inclusive, with 0 meaning no light is detected, and 1023 meaning it detects a bright light similar to a clear, sunny afternoon.
 

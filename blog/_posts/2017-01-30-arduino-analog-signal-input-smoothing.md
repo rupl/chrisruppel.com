@@ -17,7 +17,7 @@ I am a beginner with Arduino. While experimenting with various sensors I came to
 
 I also have a [soil moisture sensor](/blog/arduino-soil-moisture-sensor/) which provides consistent readings when the signal is strong, but produces oscillations when the signal is on the low end of its range. Here's a screenshot of the plotter wavering about the 400 range:
 
-<center><img src="{{ site.img-host }}/img/blog/arduino-soil-moisture-sensor-oscillation.png" alt="Screenshot of Arduino Serial Plotter displaying a signal which oscillates between 430 and 490"></center>
+<center><img src="{{ site.img-host }}/img/arduino-soil-moisture-sensor-oscillation.png" alt="Screenshot of Arduino Serial Plotter displaying a signal which oscillates between 430 and 490"></center>
 
 Both types of signal noise can be stabilized using _input smoothing_.
 
