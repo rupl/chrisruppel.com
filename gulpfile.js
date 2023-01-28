@@ -132,8 +132,8 @@ module.exports.js = jsTask;
 
 // Image derivative: 320
 gulp.task('image-320', () => {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
-    .pipe(changed('_site/img/travel@320'))
+  return gulp.src(['_img/*', '!_img/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
+    .pipe(changed('_site/img@320'))
     .pipe(parallel(
       resize({
         width: 320,
@@ -151,13 +151,13 @@ gulp.task('image-320', () => {
     .pipe(rename({
       dirname: ''
     }))
-    .pipe(gulp.dest('_site/img/travel@320'));
+    .pipe(gulp.dest('_site/img@320'));
 });
 
 // Image derivative: 640
 gulp.task('image-640', () => {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
-    .pipe(changed('_site/img/travel@640'))
+  return gulp.src(['_img/*', '!_img/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
+    .pipe(changed('_site/img@640'))
     .pipe(parallel(
       resize({
         width: 640,
@@ -175,19 +175,19 @@ gulp.task('image-640', () => {
     .pipe(rename({
       dirname: ''
     }))
-    .pipe(gulp.dest('_site/img/travel@640'));
+    .pipe(gulp.dest('_site/img@640'));
 });
 
 // Original images
 gulp.task('image-original', () => {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
-    .pipe(changed('_site/img/travel'))
+  return gulp.src(['_img/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
+    .pipe(changed('_site/img'))
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
       imagemin.optipng({optimizationLevel: 5}),
     ]))
-    .pipe(gulp.dest('_site/img/travel'));
+    .pipe(gulp.dest('_site/img'));
 });
 
 // Photospheres
@@ -217,19 +217,7 @@ gulp.task('image-svg', () => {
     .pipe(gulp.dest('svg'));
 });
 
-// Blog images - some stuff just isn't gallery-friendly.
-gulp.task('image-blog', () => {
-  return gulp.src(['_img/blog/*', '!_img/blog/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
-    .pipe(changed('_site/img/blog'))
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-    ]))
-    .pipe(gulp.dest('_site/img/blog'));
-});
-
-const imageResizeTask = gulp.task('image-resize', gulp.parallel('image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg', 'image-blog'));
+const imageResizeTask = gulp.task('image-resize', gulp.parallel('image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg'));
 module.exports['image-resize'] = imageResizeTask;
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -274,9 +262,8 @@ gulp.task('browser-sync', () => {
 gulp.task('watch', (done) => {
   log(c.yellow('Waiting for changes...'));
   gulp.watch('_sass/**/*.scss', gulp.series('sass'));
-  gulp.watch('_img/blog/*', gulp.series('image-blog'));
   gulp.watch('_img/photosphere/*', gulp.series('image-photosphere'));
-  gulp.watch('_img/travel/*', gulp.parallel('image-original', 'image-320', 'image-640'));
+  gulp.watch('_img/*', gulp.parallel('image-original', 'image-320', 'image-640'));
   gulp.watch('_svg/*', gulp.series('image-svg'));
   gulp.watch('_js/threejs/*', gulp.series('js-sphere'));
   gulp.watch('_js/sw/*', gulp.series('js-sw'));
