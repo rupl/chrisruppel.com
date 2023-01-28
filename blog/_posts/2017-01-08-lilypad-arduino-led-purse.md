@@ -17,7 +17,7 @@ First things first, you have to have an object which provides a good foundation 
 
 I couldn't dissect it without buying it first, but I found one with a firm inner layer that felt fit to support the LilyPad plus a battery. It turned out to be perfect. I found a sturdy, sewing-friendly grid pattern once I cut open the outer fabric of the purse:
 
-<img src="{{ site.img-host }}/img/blog/lilypad-arduino-purse-1.jpg" alt="Purse with LilyPad Arduino and battery sewn into place">
+<img src="{{ site.img-host }}/img/lilypad-arduino-purse-1.jpg" alt="Purse with LilyPad Arduino and battery sewn into place">
 
 Really though, if you attempt a project using the wrong garment, it will make things hard to build or impractical to wear once the project is complete. Take care to select a good base for your project!
 
@@ -39,7 +39,7 @@ Subsequent projects were far easier to execute by gluing first, then sewing the 
 
 Remember to follow your sketch. Do not deviate! You can see my photo where I did not sketch first and relied on a hand-drawing I had for reference. The thread coming from terminal 3 ended up crossing <abbr title="ground">GND</abbr> and I shorted the LEDs until I pulled all the thread out and started over.
 
-<img src="{{ site.img-host }}/img/blog/lilypad-arduino-purse-2.jpg" alt="All circuits sewn into place, with terminals 2 and 3 providing positive signal, and a GND wire which forks into two paths.">
+<img src="{{ site.img-host }}/img/lilypad-arduino-purse-2.jpg" alt="All circuits sewn into place, with terminals 2 and 3 providing positive signal, and a GND wire which forks into two paths.">
 
 ## Programming your circuits
 
@@ -88,7 +88,7 @@ void loop() {
 
 Uploading the program to the LilyPad sets up an endless cycle which looks something like this:
 
-<center><img src="{{ site.img-host }}/img/blog/lilypad-arduino-led-purse.gif" alt="looping GIF of the LEDs blinking"></center>
+<center><img src="{{ site.img-host }}/img/lilypad-arduino-led-purse.gif" alt="looping GIF of the LEDs blinking"></center>
 
 The fun part is that each time I visit her, I can reprogram the Arduino to do something different! I could even stitch new sensors on or add a button. There are plenty of terminals left on the Arduino. Code-wise, I could add [pulse width modulation](/blog/lilypad-arduino-light-sensor-pulse-width-modulation//#blinking-vs-fading-leds) so the LEDs fade on and off instead of just blinking.
 

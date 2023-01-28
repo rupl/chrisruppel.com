@@ -17,7 +17,7 @@ Arduino IDE has a **Serial Plotter** which is a fantastic debugging tool to comp
 
 As of version 1.6.6 the IDE comes with a built in plotter that accepts a stream of numbers from `Serial.println` and graphs them over time, auto-scaling the Y-axis to include your highest and lowest sample values.
 
-<img src="{{ site.img-host }}/img/blog/arduino-serial-plotter.gif" alt="Screenshot of Arduino IDE v1.6.16 serial plotter."/>
+<img src="{{ site.img-host }}/img/arduino-serial-plotter.gif" alt="Screenshot of Arduino IDE v1.6.16 serial plotter."/>
 
 As a visually-oriented person this made me so happy to find! If you're debugging analog sensor data, I'd highly recommend enabling the plotter to make sense of the readings. It also makes easy work of determining when you have unsteady input, as I had in my previous post. If the plotter shows inconsistent data, producing jagged lines, then perhaps it's time to try input smoothing to achieve a less noisy, smoother line in the plotter.
 
@@ -53,4 +53,4 @@ void loop() {
 
 I used tabs to separate the values in this example because it improves the formatting of the text-based Serial Monitor too. Here is an animated GIF of the plotter displaying all three values as I wave the accelerometer chip around:
 
-<center><img src="{{ site.img-host }}/img/blog/arduino-plotter-three-inputs.gif" alt="animated GIF of serial plotter screen capture"></center>
+<center><img src="{{ site.img-host }}/img/arduino-plotter-three-inputs.gif" alt="animated GIF of serial plotter screen capture"></center>
