@@ -1,4 +1,4 @@
-<article class="teaser--title" data-url="{{ site.url }}{{ trip.url }}" data-search="[{{ trip.data.title }}][{%- include 'location.html', location: trip.data.location -%}][{{ trip.data.tags | join: ' ' }}][{% if trip.data.map.json != nil %}has-map{% endif %}][{% if trip.data.photosphere != nil %}has-photosphere{% endif %}]">
+<article class="teaser--title search-item" data-url="{{ site.url }}{{ trip.url }}" data-search="[{{ trip.data.title }}][{%- include 'location.html', location: trip.data.location -%}][{{ trip.data.tags | join: ' ' }}][{% if trip.data.map.json != nil %}has-map{% endif %}][{% if trip.data.photosphere != nil %}has-photosphere{% endif %}]">
   <h2 class="title--main">
     <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %-d, %Y" }}</time>
     <a href="{{ trip.url }}">{{ trip.data.title }}</a>
