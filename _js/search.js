@@ -9,11 +9,11 @@
   /**
    * Read value of search bar and filter results accordingly.
    */
-  function handleSearch() {
-    // Set up our search term in lowercase
-    let search = searchInput.value.toLowerCase();
+  function handleSearch(updateUrl = true) {
+    if (searchInput) {
+      // Set up our search term in lowercase
+      let search = searchInput.value.toLowerCase();
 
-    if (search) {
       // Filter arrays by processing the data-search attribute convert to lower,
       // and match each space-separated string.
       //
@@ -36,14 +36,9 @@
       searchSummary.innerHTML = `Showing <strong>${numResults} result${numResults === 1 ? '' : 's'}</strong>`;
 
       // Update URL
-      history.pushState({filter: search}, '', `${window.location.pathname}?filter=${search}`);
-    } else {
-      // Show all items
-      items.forEach(trip => trip.classList.remove('element-hidden'));
-      searchSummary.innerHTML = 'Showing all results.';
-
-      // Update URL
-      history.pushState({filter: ''}, '', `${window.location.pathname}`);
+      if (updateUrl) {
+        history.pushState({filter: search}, '', `${window.location.pathname}?filter=${search}`);
+      }
     }
   }
 
@@ -51,8 +46,16 @@
    * If both search bar and a state exist, populate the search bar.
    */
   function populateSearch(ev) {
-    if (searchInput && ev.state) {
+    // Check for
+    if (searchInput === null) {
+      return;
+    }
+
+    // See what our event has and either apply the state, or reset.
+    if (ev?.state?.filter) {
       searchInput.value = ev.state.filter;
+    } else {
+      searchInput.value = '';
     }
   }
 
@@ -62,7 +65,7 @@
   // When the back button is used, update search bar
   window.addEventListener('popstate', (ev) => {
     populateSearch(ev);
-    handleSearch();
+    handleSearch(false);
   });
 
   // When page is loaded, check for a query and react to it.
@@ -75,15 +78,17 @@
     // Now populate the URL bar
     populateSearch({
       state: {
-        filter: filter,
+        filter,
       },
     });
 
     // Manually run the event listener for the search bar since populating via
     // JS doesn't trigger `keyup` events.
-    let initialSearch = searchInput.value.toLowerCase();
-    if (searchInput && initialSearch) {
-      handleSearch();
+    if (searchInput !== null) {
+      let initialSearch = searchInput.value.toLowerCase();
+      if (searchInput && initialSearch) {
+        handleSearch(false);
+      }
     }
   });
 })();
