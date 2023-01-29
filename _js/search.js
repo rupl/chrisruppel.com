@@ -80,7 +80,8 @@
 
     // Manually run the event listener for the search bar since populating via
     // JS doesn't trigger `keyup` events.
-    if (searchInput) {
+    let initialSearch = searchInput.value.toLowerCase();
+    if (searchInput && initialSearch) {
       handleSearch();
     }
   });
