@@ -15,8 +15,7 @@
           instead of "tiled" sets of images?
       {%- endcomment -%}
       {%- capture imgsize_small %}calc(100vw - 4% - 1em){%- endcapture -%}
-      {%- capture imgsize_big -%}(min-width: 500px)
-        {%- if item.type contains "wide" or item.type contains "tall" or item.type contains "two-third" -%}
+      {%- capture imgsize_big -%}(min-width: 500px) {% if item.type contains "wide" or item.type contains "tall" or item.type contains "two-third" -%}
           {%- comment -%}
             When the image is wide, it always takes up the full width no matter
             what layout or breakpoint we're at. Force it to be the full width.
@@ -53,7 +52,7 @@
         {%- endif -%}
       {%- endcapture -%}
       <picture class="photo {% if item.type != null %}{{ item.type }}{%- endif -%}"
-        {%- if item.comment -%}data-comment="{{ item.comment | escape }}"{%- endif -%}
+        {%- if item.comment %} data-comment="{{ item.comment | escape }}" {% endif -%}
         style="{%- if item.bgpad != null -%}padding-bottom: {{ item.bgpad }};{%- endif -%}
                {%- if item.width -%}width: {{ item.width }};{%- endif -%}">
         <img alt="{{ item.alt | escape }}"
