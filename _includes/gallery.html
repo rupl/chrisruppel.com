@@ -61,6 +61,7 @@
                   {{ imgsrc_orig }} 1280w"
           sizes="{{ imgsize_big }},
                  {{ imgsize_small }}"
+          src="{{ imgsrc_orig }}"
           style="{%- if item.bgpos != null -%}object-position: {{ item.bgpos }};{%- endif -%}">
       </picture>
     {%- endif -%}
