@@ -57,7 +57,7 @@ tags:
 summary: Day 1 of our three-day trek took us south of Kalaw into the mountains. We walked over 18km and stopped to sleep in a mountain village.
 ---
 
-One of the main backpacker activities in central Burma is a three-day trek from Kalaw to Inle Lake. Kalaw is a nice, laid-back town (in stark contrast to the bigger cities). For our one night stay we picked [Golden Kalaw](http://www.tripadvisor.com/Hotel_Review-g1016308-d1536822-Reviews-Golden_Kalaw_Inn-Kalaw_Shan_State.html), a great hotel run by a friendly lady who was helpful in every possible way.
+One of the main backpacker activities in central Burma is a three-day trek from Kalaw to Inle Lake. Kalaw is a nice, laid-back town (in stark contrast to the bigger cities). For our one night stay we picked [Golden Kalaw](https://www.tripadvisor.com/Hotel_Review-g1016308-d1536822-Reviews-Golden_Kalaw_Inn-Kalaw_Shan_State.html), a great hotel run by a friendly lady who was helpful in every possible way.
 
 They clearly get a lot of backpackers looking to trek and she had it all laid out for us: hotels and bus tickets from Inle Lake, maps of various treks, and even competing trekking offers. So convenient! We talked to others who did not have such a nice experience so I have to recommend this place if you're stopping in Kalaw before trekking. Within 30 minutes of arriving in Kalaw we had the next 4 days figured out! A rare occasion on the road, so it felt nice.
 

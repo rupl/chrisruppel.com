@@ -20,7 +20,7 @@ After enabling users to selectively save content offline, I pumped my fist and c
 But over time, I began to feel like it wasn't enough. I have a generic [Offline page](/offline/) that is primarily used by the Service Worker when an uncached URL is visited. I felt like adding the user's saved articles to this page is really helpful, showing them the right content in the moment of need.
 
 <!-- lol, this still works -->
-<center><img width="317" height="558" src="{{ site.img-host }}/img/blog/service-worker-offline-content-list-1.png" alt="Screenshot of an offline content list in Nexus 5X"/></center>
+<center><img width="317" height="558" src="{{ site.img-host }}/img/service-worker-offline-content-list-1.png" alt="Screenshot of an offline content list in Nexus 5X"/></center>
 
 Luckily, there's not so much code needed to pull this off. The code below relies on the fact that all the user-saved caches have the same naming convention. All I have to do is loop through the caches and find any entries with the offline prefix:
 
@@ -89,6 +89,6 @@ Really though, that's it! If you wanted to get really fancy, you could pull an i
 
 Try it out by using the *Save Article Offline* button below, then temporarily disabling your network to see the Offline page. Let me know in the comments if you have any questions or ideas to improve the code!
 
-<p><ins class="update" datetime="2017-11-13">I've implemented a second approach on my site which <a href="/blog/service-worker-offline-content-list-filter/">filters static HTML to show only cached content</a>. You can try it out on my <a href="/travel/list/">travel list</a>.</ins></p>
+<p><ins class="update" datetime="2017-11-13">I've implemented a second approach on my site which <a href="/blog/service-worker-offline-content-list-filter/">filters static HTML to show only cached content</a>. You can try it out on my <a href="/travel/">travel list</a>.</ins></p>
 
 <p><ins class="update" datetime="2019-09-05">Remy Sharp built a similar, but much nicer formatted list on his <a href="https://remysharp.com/2019/09/05/offline-listings">offline page using the cached HTML itself</a>. Great idea!</ins></p>

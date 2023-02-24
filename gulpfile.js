@@ -19,14 +19,14 @@ var concat = require('gulp-concat');
 var cssnano = require('cssnano');
 var postcss = require('gulp-postcss');
 var uglify = require('gulp-uglify');
-var resize = require('gulp-image-resize');
+var resize = require('gulp-sharp-responsive');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 var toGeoJson = require('./_gulp/togeojson.js');
 
 // Deployment debugging
-log(c.yellow('Detected environment: ' + c.black.bgYellow((process.env.NODE_ENV || 'local'))));
-var isProduction = process.env.NODE_ENV === 'production';
+log(c.yellow('Detected environment: ' + c.black.bgYellow((process.env.ELEVENTY_ENV || 'local'))));
+var isProduction = process.env.ELEVENTY_ENV === 'production';
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -34,7 +34,7 @@ var isProduction = process.env.NODE_ENV === 'production';
 //——————————————————————————————————————————————————————————————————————————————
 function eleventyDev() {
   bs.notify('Eleventy building...');
-  return spawn('npm', ['run', 'build'], {stdio: 'inherit'})
+  return spawn('npm', ['run', 'build', '--incremental'], {stdio: 'inherit'})
     .on('close', reload);
 };
 module.exports['11ty-dev'] = eleventyDev;
@@ -128,67 +128,100 @@ module.exports.js = jsTask;
 
 //——————————————————————————————————————————————————————————————————————————————
 // Resize images
+//
+// Although they are identical and could technically be crammed into one task,
+// each size is split out into a task so that I can enjoy the benefits of
+// gulp-changed for local development. These tasks don't run anywhere except
+// my local machine when I generate them once and push to an S3 bucket.
 //——————————————————————————————————————————————————————————————————————————————
+gulp.task('image-resize-320', () => {
+  let DEST = '_site/img/img@320';
 
-// Image derivative: 320
-gulp.task('image-320', () => {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
-    .pipe(changed('_site/img/travel@320'))
-    .pipe(parallel(
-      resize({
-        width: 320,
-        crop: false,
-        upscale: false,
-        quality: 0.5,
-      }),
-      os.cpus().length
-    ))
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-    ]))
-    .pipe(rename({
-      dirname: ''
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+    .pipe(changed(DEST, { extension: '.jpeg' }))
+    .pipe(resize({
+      formats: [
+        {
+          width: 320,
+          format: 'jpeg',
+          jpegOptions: {quality: 80, progressive: true },
+          rename: { extname: '.jpeg' },
+        },
+        {
+          width: 320,
+          format: 'webp',
+        },
+      ]
     }))
-    .pipe(gulp.dest('_site/img/travel@320'));
+    .pipe(gulp.dest(DEST));
 });
 
-// Image derivative: 640
-gulp.task('image-640', () => {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
-    .pipe(changed('_site/img/travel@640'))
-    .pipe(parallel(
-      resize({
-        width: 640,
-        crop: false,
-        upscale: false,
-        quality: 0.5,
-      }),
-      os.cpus().length
-    ))
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-    ]))
-    .pipe(rename({
-      dirname: ''
+gulp.task('image-resize-640', () => {
+  let DEST = '_site/img/img@640';
+
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+    .pipe(changed(DEST, { extension: '.jpeg' }))
+    .pipe(resize({
+      formats: [
+        {
+          width: 640,
+          format: 'jpeg',
+          jpegOptions: {quality: 80, progressive: true },
+          rename: { extname: '.jpeg' },
+        },
+        {
+          width: 640,
+          format: 'webp',
+        },
+      ]
     }))
-    .pipe(gulp.dest('_site/img/travel@640'));
+    .pipe(gulp.dest(DEST));
 });
 
-// Original images
-gulp.task('image-original', () => {
-  return gulp.src(['_img/travel/*', '!_img/travel/{IMG_,DSC_,DSCF,GOPR,Frame,P1}*'])
-    .pipe(changed('_site/img/travel'))
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-    ]))
-    .pipe(gulp.dest('_site/img/travel'));
+gulp.task('image-resize-960', () => {
+  let DEST = '_site/img/img@960';
+
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+    .pipe(changed(DEST, { extension: '.jpeg' }))
+    .pipe(resize({
+      formats: [
+        {
+          width: 960,
+          format: 'jpeg',
+          jpegOptions: {quality: 80, progressive: true },
+          rename: { extname: '.jpeg' },
+        },
+        {
+          width: 960,
+          format: 'webp',
+        },
+      ]
+    }))
+    .pipe(gulp.dest(DEST));
 });
+
+gulp.task('image-resize-1280', () => {
+  let DEST = '_site/img/img@1280';
+
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+    .pipe(changed(DEST, { extension: '.jpeg' }))
+    .pipe(resize({
+      formats: [
+        {
+          width: 1280,
+          format: 'jpeg',
+          jpegOptions: {quality: 80, progressive: true },
+          rename: { extname: '.jpeg' },
+        },
+        {
+          width: 1280,
+          format: 'webp',
+        },
+      ]
+    }))
+    .pipe(gulp.dest(DEST));
+});
+
 
 // Photospheres
 gulp.task('image-photosphere', () => {
@@ -208,29 +241,20 @@ gulp.task('image-svg', () => {
     .pipe(changed('svg'))
     .pipe(imagemin([
       imagemin.svgo({
-          plugins: [
-              {removeViewBox: true},
-              {cleanupIDs: false}
-          ]
+        plugins: [
+          {removeViewBox: true},
+          {cleanupIDs: false},
+        ]
       })
     ]))
     .pipe(gulp.dest('svg'));
 });
 
-// Blog images - some stuff just isn't gallery-friendly.
-gulp.task('image-blog', () => {
-  return gulp.src(['_img/blog/*', '!_img/blog/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
-    .pipe(changed('_site/img/blog'))
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-    ]))
-    .pipe(gulp.dest('_site/img/blog'));
-});
+const resizeTask = gulp.task('image-resize', gulp.parallel('image-resize-320', 'image-resize-640', 'image-resize-960', 'image-resize-1280'));
+module.exports['image-resize'] = resizeTask;
 
-const imageResizeTask = gulp.task('image-resize', gulp.parallel('image-320', 'image-640', 'image-original', 'image-photosphere', 'image-svg', 'image-blog'));
-module.exports['image-resize'] = imageResizeTask;
+const imageTask = gulp.task('images', gulp.parallel('image-photosphere', 'image-svg'));
+module.exports['images'] = imageTask;
 
 //——————————————————————————————————————————————————————————————————————————————
 // Convert KML to GeoJSON
@@ -252,7 +276,7 @@ module.exports['build-deploy'] = buildDeployTask;
 // Build site for local development.
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('build-dev', gulp.series(
-  gulp.parallel('sass', 'js', 'image-resize'),
+  gulp.parallel('sass', 'js', 'images'),
   eleventyDev,
 ));
 
@@ -274,9 +298,8 @@ gulp.task('browser-sync', () => {
 gulp.task('watch', (done) => {
   log(c.yellow('Waiting for changes...'));
   gulp.watch('_sass/**/*.scss', gulp.series('sass'));
-  gulp.watch('_img/blog/*', gulp.series('image-blog'));
   gulp.watch('_img/photosphere/*', gulp.series('image-photosphere'));
-  gulp.watch('_img/travel/*', gulp.parallel('image-original', 'image-320', 'image-640'));
+  gulp.watch('_img/*.{jpg,jpeg,png}', gulp.parallel('image-resize'));
   gulp.watch('_svg/*', gulp.series('image-svg'));
   gulp.watch('_js/threejs/*', gulp.series('js-sphere'));
   gulp.watch('_js/sw/*', gulp.series('js-sw'));

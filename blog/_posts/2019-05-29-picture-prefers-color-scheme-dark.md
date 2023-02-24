@@ -25,8 +25,8 @@ Let's see it in action:
 
 <figure>
 <picture>
-  <source srcset="{{ site.img-host }}/img/blog/picture-mq-dark.jpg" media="(prefers-color-scheme: dark)">
-  <img src="{{ site.img-host }}/img/blog/picture-mq-original.jpg">
+  <source srcset="{{ site.img-host }}/img/picture-mq-dark.jpg" media="(prefers-color-scheme: dark)">
+  <img src="{{ site.img-host }}/img/picture-mq-original.jpg">
 </picture>
 <figcaption><small class="caption"><code>&lt;picture&gt;</code> element with a <code>prefers-color-scheme</code> media query.</small></figcaption>
 </figure>

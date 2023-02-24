@@ -17,9 +17,9 @@ tags:
 - web sockets
 ---
 
-Shortly after getting Johnny Five running on my Arduino Uno, I found this excellent [article by Ricardo Filipe](http://blog.ricardofilipe.com/post/getting-started-arduino-johhny-five). He used Johnny Five and Socket.io to make a simple interface that controls a LED with red, blue, and green channels.
+Shortly after getting Johnny Five running on my Arduino Uno, I found this excellent [article by Ricardo Filipe](https://web.archive.org/web/20191221174927/http://blog.ricardofilipe.com/post/getting-started-arduino-johhny-five). He used Johnny Five and Socket.io to make a simple interface that controls a LED with red, blue, and green channels.
 
-This was very exciting to me, because [bustashape](https://bustashape.com) also uses socket.io, and I have always had a pipe dream in my head, to free bustashape from the web and let it live in other less conventional displays, such as LED arrays. Same principle, but more fun!
+This was very exciting to me, because [bustashape](https://bustashape.art) also uses socket.io, and I have always had a pipe dream in my head, to free bustashape from the web and let it live in other less conventional displays, such as LED arrays. Same principle, but more fun!
 
 Here's a video showing each step in the process. If you'd like, read below to see how I progressed to the final demo.
 

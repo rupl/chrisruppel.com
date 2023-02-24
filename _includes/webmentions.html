@@ -1,7 +1,7 @@
 <section class="webmentions" id="webmentions" aria-labelledby="webmentions-heading">
   <h2 id="webmentions-heading">Webmentions</h2>
+  <p class="webmentions__learn"><a href="https://indieweb.org/Webmention">what's this? 🤨</a></p>
   <p class="webmentions__explainer">Have you linked to this page from your site? Submit your URL and it will appear below.</p>
-  <a class="webmentions__learn" href="https://indieweb.org/Webmention">what's this? 🤨</a>
 
   <form method="POST" action="{{ site.webmention-url }}" class="webmentions__submit">
     <input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
@@ -23,9 +23,9 @@
           {% assign plaintext = '<p>' | append: mention.content.text | append: '</p>' %}
           <div class="e-content">{{ mention.content.html | default: plaintext }}</div>
           <footer>
-            Mentioned by <cite class="h-card p-author"><a class="u-url p-name" href="{% if mention.author.url %}{{ mention.author.url }}{% else %}{{ mention.wm-source }}{% endif %}">{{ mention.author.name }}</a></cite>
+            Mentioned by <cite class="h-card p-author"><a class="{% if mention.author.url %}u-url{% endif %} p-name" {% if mention.author.url %}href="{{ mention.author.url }}"{% endif %}>{{ mention.author.name }}</a></cite>
             {% assign pubdate = mention.published | split: 'T' %}
-            on <time class="dt-published" datetime="{{ mention.published }}">{{ pubdate[0] }}</time>
+            on <a href="{{ mention.wm-source }}" class="u-url" ><time class="dt-published" datetime="{{ mention.published }}">{{ pubdate[0] }}</time></a>
             <a href="#comment-{{ mention.wm-id }}" rel="bookmark" title="Permalink to this comment">#</a>
           </footer>
         </article>

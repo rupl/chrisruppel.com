@@ -19,7 +19,7 @@ permalink: /travel.xml
       <link>{{ site.url }}{{ trip.url }}</link>
       <description>{{ trip.data.summary | escape }}</description>
       <guid isPermaLink="true">{{ site.url }}{{ trip.url }}</guid>
-      <pubDate>{{ trip.date | date: '%Y-%m-%d 12:00:00' }}</pubDate>
+      <pubDate>{{ trip.date | date: '%a, %d %b %Y %H:%M:%S %z' }}</pubDate>
     </item>
     {% endfor %}
 

@@ -1,7 +1,6 @@
 ---
 title: ASPIRE to build better websites
 
-layout: link
 link: https://www.filamentgroup.com/lab/aspire/
 
 tags:

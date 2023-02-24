@@ -54,6 +54,12 @@ tags:
 - volcanoes
 - maps
 
+syndication:
+- type: Facebook
+  href: https://www.facebook.com/chris.ruppel/posts/10105950796972098?pnref=story
+- type: Twitter
+  href: https://twitter.com/rupl/status/695638291220008960
+
 summary: We made a treacherous night hike up to Mount Ijen and into a crater that is home to a sulfur volcano with blue flames!
 ---
 
@@ -87,7 +93,7 @@ Finally, after 400m downward we'd made the descent and were treated to quite a s
 
 {% include 'gallery.html' %}
 
-We did a bit of reading and based on others' experiences we came on a low-activity night, but we were *far* from disappointed. The combustion is a natural process driven by the pressure of the gas, so apparently the there are days with no visible flames at all. However, the flames can be much stronger and brighter, so have a look at these [National Geographic photos of Kawah Ijen by Olivier Grunwald](http://news.nationalgeographic.com/news/2014/01/140130-kawah-ijen-blue-flame-volcanoes-sulfur-indonesia-pictures/) to get a better sense of what we saw with our own eyes.
+We did a bit of reading and based on others' experiences we came on a low-activity night, but we were *far* from disappointed. The combustion is a natural process driven by the pressure of the gas, so apparently the there are days with no visible flames at all. However, the flames can be much stronger and brighter, so have a look at these [National Geographic photos of Kawah Ijen by Olivier Grunwald](https://www.nationalgeographic.com/science/article/140130-kawah-ijen-blue-flame-volcanoes-sulfur-indonesia-pictures) to get a better sense of what we saw with our own eyes.
 
 After hiking back out of the crater we sat on the ridge waiting for the sun to rise. As it became light we were surprised to finally see our surroundings: a huge sulphuric acid lake colored bright green, with the billowing smoke giving its surroundings a faint yellow tint.
 

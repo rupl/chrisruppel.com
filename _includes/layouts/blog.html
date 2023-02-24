@@ -3,7 +3,7 @@ layout: page
 comments: true
 ---
 
-<article class="h-entry entry--main {% if haslink == true %}entry--link{% else %}entry--blog{% endif %}">
+<article class="entry--main {% if link %}h-as-reply{% endif %}">
   <header>
     <h1 class="title--main p-name">{{ title }}</h1>
   </header>
@@ -14,6 +14,12 @@ comments: true
   <aside class="intro summary p-summary">{{ summary }}</aside>
 
   <div class="e-content">
+    {% if link %}
+      <div class="link--external">
+        <a class="u-in-reply-to" href="{{ link }}">{{ title }}</a>
+      </div>
+    {% endif %}
+
     {{ content | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&amp;', '&' | replace: '<pre><code>  <picture', '<picture' | replace: '</figure></code></pre>', '</figure>' }}
     <div class="the-end" aria-label="End of article."></div>
   </div>
@@ -31,12 +37,19 @@ comments: true
   {% endif %}
 
   <div class="go">
-    {% if page.previous_in_category.url %}
-      <a class="btn btn--prev" href="{{ page.previous_in_category.url }}" title="{{ page.previous_in_category.title }}{% if page.previous_in_category.location %} {% include location.html location=page.previous_in_category.location %}{% endif %}">Prev post</a>
+    {% comment %}
+      My collection seems to be backwards according to 11ty so the variables and
+      the eleventy filters do NOT match.
+    {% endcomment %}
+    {% assign previousPost = collections.blog | getNextCollectionItem: page %}
+    {% assign nextPost = collections.blog | getPreviousCollectionItem: page %}
+
+    {% if previousPost.url %}
+      <a class="btn btn--prev" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">Previous post</a>
     {% endif %}
     <a class="btn btn--back" href="/blog/">Blog</a>
-    {% if page.next_in_category.url %}
-      <a class="btn btn--next" href="{{ page.next_in_category.url }}" title="{{ page.next_in_category.title }}{% if page.next_in_category.location %} {% include location.html location=page.next_in_category.location %}{% endif %}">Next post</a>
+    {% if nextPost.url %}
+      <a class="btn btn--next" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">Next post</a>
     {% endif %}
   </div>
 

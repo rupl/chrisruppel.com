@@ -3,21 +3,26 @@ title: Receiving Webmentions
 
 summary: I've moved exclusively to Webmentions instead of using a more traditional commenting system. Respond to this entry by linking to it from your own website!
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/991259412621873153
+
 tags:
 - indieweb
 - privacy
 - web standards
+- webmentions
 ---
 
-[Webmentions](https://webmention.net) are the "commenting system" of the IndieWeb, a set of conventions and web standards that allow more structured independent publishing on the web.
+[Webmentions](https://indieweb.org/Webmention) are the "commenting system" of the IndieWeb, a set of conventions and web standards that allow more structured independent publishing on the web.
 
 Although there's an official [W3C Recommendation](https://www.w3.org/TR/webmention/), I followed this [guide on GitHub](https://github.com/converspace/webmention/blob/master/README.md) to understand the requirements of the spec, and found some [code from Jeremy](https://adactio.com/journal/6495) to be quite helpful in helping me decide how to implement it on my own site.
 
-My motivations for receiving Webmentions are to participate in [IndieWeb](https://indiewebify.me) and also to reduce my third-party tracking. I'd been relying on [webmention.io](https://webmention.io) to get started quickly, but they're also a third-party. By removing Disqus and replacing with self-hosted Webmentions, I have officially eliminated all 3rd party requests. Huzzah!
+My motivations for receiving Webmentions are to participate in [IndieWeb](https://indiewebify.me) and also to reduce my third-party tracking. By removing Disqus and replacing with Webmentions, I have officially eliminated all 3rd party requests from my site. Huzzah!
 
 ## My implementation
 
-<ins class="update" datetime="2022-09-15">I've converted the site to Eleventy and gotten rid of my node.js server, so I had to switch to <a href="https://webmention.io">webmention.io</a> in the process. I've left the explanation her for posterity:</ins>
+<ins class="update" datetime="2022-09-15">I've converted the site to Eleventy and gotten rid of my node.js server, so I had to switch to <a href="https://webmention.io">webmention.io</a> in the process. I've left the explanation here for posterity:</ins>
 
 The nuts and bolts are often specific to your existing tech stack, but mine is a pretty common one for frontend developers: statically generated site, served by Express. I thought about [going with a Jekyll plugin like Lewis](https://lewisnyman.co.uk/blog/indie-web-camp-2015/), but in the end I decided to add a PostgreSQL DB to manage the Webmentions themselves, and manage them separately from my static site generator. I may want to switch generators in the future, and it's one less piece that has to be rebuilt at the time of migration.
 

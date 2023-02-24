@@ -3,6 +3,10 @@ title: LilyPad Arduino and light sensors
 
 summary: Learning how to program Arduino in the open. This experiment involved a light sensor and pulse width modulation.
 
+syndication:
+- type: Twitter
+  href: https://twitter.com/rupl/status/809100980432289796
+
 tags:
 - lilypad
 - arduino
@@ -48,7 +52,7 @@ This simple program is a great starting point for experimentation with PWM. By u
 
 ## Light sensors
 
-After I finished my sister's gift, a few spare parts were left over and I put them in a box in storage while I [went backpacking](/travel/list/). Recently while cleaning I found the box of unused components and rediscovered the light sensor.
+After I finished my sister's gift, a few spare parts were left over and I put them in a box in storage while I [went backpacking](/travel/). Recently while cleaning I found the box of unused components and rediscovered the light sensor.
 
 As I dove into the sensor's workings I was surprised to find how much complexity can be hidden behind a seemingly simple circuit. But its ability to provide variable input is the perfect complement to the PWM-enabled LED we just coded.
 
@@ -58,7 +62,7 @@ But first, we have to connect the sensor to the Arduino with wires. I've made th
 * The `+` and `-` power terminals are used to power the sensor. Connect both `+` terminals with one wire, then both `-` terminals with another.
 * The LilyPad's on-board LED is the output, internally referred to as pin `13`. It requires no extra wiring since it is on the Arduino.
 
-<img src="{{ site.img-host }}/img/blog/arduino-light-sensor-1.jpg" alt="Photo of LilyPad Arduino with light sensor connected as input."/>
+<img src="{{ site.img-host }}/img/arduino-light-sensor-1.jpg" alt="Photo of LilyPad Arduino with light sensor connected as input."/>
 
 The sensor outputs a signal as a 10-bit number, which is 2<sup>10</sup> or 1024 in the familiar base-10 system we use day-to-day. So the sensor output has a range of 0-1023 inclusive, with 0 meaning no light is detected, and 1023 meaning it detects a bright light similar to a clear, sunny afternoon.
 
