@@ -2,9 +2,18 @@
 <figure class="gallery {% if gallery[0].type != null %}{{ gallery[0].type }}{%- else -%}{% if gallery[0].gridtype %} grid-{{ gallery[0].gridtype }}{% else %} grid-tall{% endif %}{% endif -%}">
   {%- for item in gallery -%}
     {%- if item.src != null -%}
-      {%- capture imgsrc_320 %}{{ site.img-host }}/img/img@320/{{ item.src }}{% endcapture -%}
-      {%- capture imgsrc_640 %}{{ site.img-host }}/img/img@640/{{ item.src }}{% endcapture -%}
-      {%- capture imgsrc_orig %}{{ site.img-host }}/img/{{ item.src }}{% endcapture -%}
+      {% capture filename %}{{ item.src | split: '.' | first }}{% endcapture %}
+
+      {%- capture webp_320  %}{{ site.img-host }}/img/img@320/{{ filename }}.webp{% endcapture -%}
+      {%- capture webp_640  %}{{ site.img-host }}/img/img@640/{{ filename }}.webp{% endcapture -%}
+      {%- capture webp_960  %}{{ site.img-host }}/img/img@960/{{ filename }}.webp{% endcapture -%}
+      {%- capture webp_1280 %}{{ site.img-host }}/img/img@1280/{{ filename }}.webp{% endcapture -%}
+
+      {%- capture jpeg_320  %}{{ site.img-host }}/img/img@320/{{ filename }}.jpeg{% endcapture -%}
+      {%- capture jpeg_640  %}{{ site.img-host }}/img/img@640/{{ filename }}.jpeg{% endcapture -%}
+      {%- capture jpeg_960  %}{{ site.img-host }}/img/img@960/{{ filename }}.jpeg{% endcapture -%}
+      {%- capture jpeg_1280 %}{{ site.img-host }}/img/img@1280/{{ filename }}.jpeg{% endcapture -%}
+
       {%- comment -%}
         Image sizes are somewhat complicated to determine, but since we generate
         HTML from the gallery YML we have most of the info we need to dynamically
@@ -14,8 +23,8 @@
         - Gallery breakpoints. What window sizes cause galleries to be linear
           instead of "tiled" sets of images?
       {%- endcomment -%}
-      {%- capture imgsize_small %}calc(100vw - 4% - 1em){%- endcapture -%}
-      {%- capture imgsize_big -%}(min-width: 500px) {% if item.type contains "wide" or item.type contains "tall" or item.type contains "two-third" -%}
+      {%- capture sizes_small %}calc(100vw - 4% - 1em){%- endcapture -%}
+      {%- capture sizes_big -%}(min-width: 500px) {% if item.type contains "wide" or item.type contains "tall" or item.type contains "two-third" -%}
           {%- comment -%}
             When the image is wide, it always takes up the full width no matter
             what layout or breakpoint we're at. Force it to be the full width.
@@ -55,12 +64,15 @@
         {%- if item.comment %} data-comment="{{ item.comment | escape }}" {% endif -%}
         style="{%- if item.bgpad != null -%}padding-bottom: {{ item.bgpad }};{%- endif -%}
                {%- if item.width -%}width: {{ item.width }};{%- endif -%}">
+        <source
+          type="image/webp"
+          srcset="{{ webp_320 }} 320w, {{ webp_640 }} 640w, {{ webp_960 }} 960w, {{ webp_1280 }} 1280w"
+          sizes="{{ sizes_big }}, {{ sizes_small }}">
+        <source
+          srcset="{{ jpeg_320 }} 320w, {{ jpeg_640 }} 640w, {{ jpeg_960 }} 960w, {{ jpeg_1280 }} 1280w"
+          sizes="{{ sizes_big }}, {{ sizes_small }}">
         <img alt="{{ item.alt | escape }}"
-          srcset="{{ imgsrc_320 }} 320w,
-                  {{ imgsrc_640 }} 640w,
-                  {{ imgsrc_orig }} 1280w"
-          sizes="{{ imgsize_big }},
-                 {{ imgsize_small }}"
+          src="{{ jpeg_1280 }}"
           style="{%- if item.bgpos != null -%}object-position: {{ item.bgpos }};{%- endif -%}">
       </picture>
     {%- endif -%}
