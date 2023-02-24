@@ -1,0 +1,16 @@
+.site-footer {
+  font-size: 18px;
+  position: relative;
+}
+
+.site-footer::after {
+  content: '';
+  border-inline-end: 1px solid currentColor;
+  position: absolute;
+  inset: 1.5rem 0;
+  opacity: .1;
+}
+
+.site-footer a {
+  color: inherit;
+}

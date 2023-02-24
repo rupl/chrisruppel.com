@@ -1,18 +1,20 @@
 /**
  * Utilities, helpers, etc.
  */
+@import 'partials/vars.css';
 @import 'partials/reset.css';
 @import 'partials/utilities.css';
 @import 'partials/animations.css';
 @import 'partials/layout.css';
 @import 'partials/type.css';
+@import 'partials/footer.css';
+@import 'partials/entry.css';
 
 /**
  * Site-wide styles.
  *
 @import 'partials/general';
 @import 'partials/status';
-@import 'partials/footer';
 @import 'partials/forms';
  */
 

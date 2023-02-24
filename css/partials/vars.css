@@ -1,0 +1,15 @@
+:root {
+  /**
+   * Colors
+   */
+  --color: #111;
+  --color-bg: #fff;
+
+  /**
+   * Qualified fonts
+   *
+   * @see http://www.zachleat.com/web/mitt-romney-webfont-problem/
+   */
+  --font-heading: 'Londrina Solid', Helvetica, serif;
+  --font-copy: 'PT Sans Narrow', 'system-ui', sans-serif;
+}

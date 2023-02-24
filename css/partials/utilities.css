@@ -64,16 +64,6 @@
 }
 
 /**
- * Qualified fonts
- *
- * @see http://www.zachleat.com/web/mitt-romney-webfont-problem/
- */
-:root {
-  --font-heading: 'Port Lligat Slab', Georgia, Helvetica, serif;
-  --font-copy: 'PT Sans Narrow', 'system-ui', sans-serif;
-}
-
-/**
  * The Stack
  *
  * @see https://every-layout.dev/layouts/stack/
