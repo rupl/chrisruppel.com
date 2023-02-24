@@ -5,7 +5,7 @@
  */
 (function iife() {
   // Listen for form submissions and validate before POSTing.
-  var wmSubmitForm = $('.webmentions__submit');
+  var wmSubmitForm = $('.webmentions__form');
   if (wmSubmitForm) {
     wmSubmitForm.addEventListener('submit', wmSubmit);
   }
@@ -15,9 +15,9 @@
    */
   function wmSubmit(e) {
     var wmEndpoint = $('#webmentions form').getAttribute('action');
-    var wmTarget = $('.webmentions__submit input[name="target"]');
-    var wmSource = $('.webmentions__submit input[name="source"]');
-    var wmSubmit = $('.webmentions__submit input[type="submit"]');
+    var wmTarget = $('.webmentions__form input[name="target"]');
+    var wmSource = $('.webmentions__form input[name="source"]');
+    var wmSubmit = $('.webmentions__form input[type="submit"]');
     var wmMsg = $('.webmentions__message');
     var wmStatus = '';
 

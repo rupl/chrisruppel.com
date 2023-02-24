@@ -8,9 +8,12 @@
 @import 'partials/layout.css';
 @import 'partials/type.css';
 @import 'partials/footer.css';
+
 @import 'partials/entry.css';
 @import 'partials/media.css';
 @import 'partials/gallery.css';
+@import 'partials/prism.css';
+@import 'partials/webmentions.css';
 
 /**
  * Site-wide styles.

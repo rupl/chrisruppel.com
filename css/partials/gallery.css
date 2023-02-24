@@ -10,9 +10,9 @@
 #photosphere,
 .gallery,
 .media {
+  max-width: var(--content-max);
   width: 100%;
-  margin: 1em 0;
-  padding: 4%;
+  padding: 1.5rem;
   background: #000;
   border-radius: 4px
 }
@@ -27,7 +27,7 @@
   padding-top: 1em;
   opacity: .6;
   color: #ddd;
-  font-size: 80%;
+  font-size: 90%;
   font-style: italic;
   text-align: center
 }

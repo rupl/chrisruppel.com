@@ -1,4 +1,6 @@
 .layout {
+  max-width: var(--layout-max);
+  height: 100%;
   display: flex;
   flex-flow: column nowrap;
   gap: 0;
@@ -9,7 +11,8 @@ footer[role="contentinfo"] {
   padding: 1.5rem;
 }
 
-@media (min-width: 1100px) {
+/* var(--layout-max) */
+@media (min-width: 1460px) {
   .layout {
     flex-flow: row nowrap;
   }
@@ -18,6 +21,6 @@ footer[role="contentinfo"] {
   }
   footer[role="contentinfo"] {
     order: -1;
-    flex: 0 0 320px;
+    flex: 0 0 var(--footer-max);
   }
 }

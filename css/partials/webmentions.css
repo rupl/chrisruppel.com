@@ -1,0 +1,44 @@
+.webmentions {
+  background: #0001;
+  padding: var(--section-padding) calc(var(--section-padding) * 2);
+  position: relative;
+}
+
+.webmentions__list {
+  --flow-space: 2.5rem;
+  padding-block-end: 1.5rem;
+}
+
+.webmentions__form {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.webmentions__url {
+  max-width: 500px;
+  flex: 1 0 auto;
+  border: 2px solid #111;
+  border-radius: 5px 0 0 5px;
+  font-family: Fira Code, monospace;
+  font-size: 90%;
+  letter-spacing: -1px;
+}
+
+.webmentions__submit {
+  flex: 0 0 auto;
+  border: 2px solid #111;
+  border-radius: 0 5px 5px 0;
+  padding: 0 1rem;
+  background: #111;
+  color: #fff;
+}
+
+.webmentions__url:focus,
+.webmentions__submit:focus {
+  outline: 4px solid #fff;
+}
+
+.p-comment {
+  border-inline-start: var(--section-padding) solid #0001;
+  padding-inline-start: var(--section-padding);
+}

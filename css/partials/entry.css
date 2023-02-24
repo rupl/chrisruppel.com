@@ -1,4 +1,5 @@
 .subtitle {
+  margin-block-start: 0;
   font-family: Fira Code, monospace;
   font-size: .8em;
   letter-spacing: -1px;
@@ -9,6 +10,7 @@
   margin-block: 1.5rem;
   max-width: 40ch;
   opacity: .666;
+  font-family: var(--font-heading);
   font-size: 1.2em;
-  font-style: italic;
+  line-height: 1.2;
 }

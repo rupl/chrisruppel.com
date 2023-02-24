@@ -1,5 +1,18 @@
 :root {
   /**
+   * Layout
+   */
+  --layout-max: 1440px;
+  --content-max: calc(1100px + 3rem);
+  --footer-max: 320px;
+  --section-padding: 1rem;
+
+  /**
+   * The Stack
+   */
+  --flow-space: 1.5rem;
+
+  /**
    * Colors
    */
   --color: #111;
@@ -11,6 +24,6 @@
    *
    * @see http://www.zachleat.com/web/mitt-romney-webfont-problem/
    */
-  --font-heading: 'Londrina Solid', Helvetica, serif;
+  --font-heading: 'Port Lligat Slab', Helvetica, serif;
   --font-copy: 'PT Sans Narrow', 'system-ui', sans-serif;
 }

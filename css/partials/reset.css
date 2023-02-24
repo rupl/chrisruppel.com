@@ -52,8 +52,8 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture {
-  width: 100%;
+picture,
+video {
   max-width: 100%;
   height: auto;
   display: block;
@@ -66,6 +66,11 @@ textarea,
 select {
   /* @TODO: this rule causes a template error when 11ty processes this file. */
   font: inherit;
+}
+
+pre[class*=language-] {
+  max-width: var(--content-max);
+  font-size: 18px;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
