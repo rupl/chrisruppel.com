@@ -1,5 +1,5 @@
 {%- if gallery.size > 0 -%}
-<figure class="gallery {% if gallery[0].type != null %}{{ gallery[0].type }}{%- else -%}{% if gallery[0].gridtype %} grid-{{ gallery[0].gridtype }}{% else %} grid-tall{% endif %}{% endif -%}">
+<figure class="clearfix gallery {% if gallery[0].type != null %}{{ gallery[0].type }}{%- else -%}{% if gallery[0].gridtype %} grid-{{ gallery[0].gridtype }}{% else %} grid-tall{% endif %}{% endif -%}">
   {%- for item in gallery -%}
     {%- if item.src != null -%}
       {% capture filename %}{{ item.src | split: '.' | first }}{% endcapture %}

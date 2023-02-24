@@ -9,6 +9,8 @@
 @import 'partials/type.css';
 @import 'partials/footer.css';
 @import 'partials/entry.css';
+@import 'partials/media.css';
+@import 'partials/gallery.css';
 
 /**
  * Site-wide styles.

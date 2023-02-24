@@ -1,0 +1,272 @@
+/**
+ * Galleries.
+ *
+ * The sass was naturally too convoluted to extract. So here's the compiled CSS
+ * for now. Maybe one day I can have all the things with CSS Grid but it does
+ * still seem tricky to specify heights of individual rows of photos, which is
+ * fairly trivial via classes when outputting from front matter.
+ */
+
+#photosphere,
+.gallery,
+.media {
+  width: 100%;
+  margin: 1em 0;
+  padding: 4%;
+  background: #000;
+  border-radius: 4px
+}
+
+#photosphere .caption,
+#photosphere .fullscreen,
+.gallery .caption,
+.gallery figcaption,
+.media .caption {
+  display: block;
+  clear: both;
+  padding-top: 1em;
+  opacity: .6;
+  color: #ddd;
+  font-size: 80%;
+  font-style: italic;
+  text-align: center
+}
+
+@media (min-width:1100px) {
+
+  #photosphere .caption,
+  #photosphere .fullscreen,
+  .gallery .caption,
+  .gallery figcaption,
+  .media .caption {
+    margin: 0 20%
+  }
+}
+
+#photosphere .caption em,
+#photosphere .fullscreen em,
+.gallery .caption em,
+.gallery figcaption em,
+.media .caption em {
+  white-space: nowrap
+}
+
+#photosphere .caption a,
+#photosphere .fullscreen a,
+.gallery .caption a,
+.gallery figcaption a,
+.media .caption a {
+  color: inherit
+}
+
+.gallery figcaption {
+  flex-basis: 100%
+}
+
+.photo {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: transform .25s ease-in-out
+}
+
+.photo img {
+  object-fit: cover;
+  color: transparent;
+  line-height: 1.5;
+  background: #fff
+}
+
+.photo img,
+.photo img:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 5em
+}
+
+.photo img:before {
+  content: "";
+  display: block;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  background: linear-gradient(to top left, #fff, #ddd)
+}
+
+.photo img:after {
+  content: "Image: "attr(alt);
+  display: block;
+  position: absolute;
+  font-style: italic;
+  color: #222;
+  top: .5em;
+  right: .5em;
+  bottom: .5em;
+  left: .5em
+}
+
+@media (min-width:500px) {
+  .photo img:after {
+    font-size: .8em
+  }
+}
+
+.photo[data-comment]:after {
+  font-size: .9em;
+  content: attr(data-comment);
+  color: #fff;
+  background: rgba(0, 0, 0, .66);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  transform: translateY(100%);
+  transition: transform .33333s ease-in-out
+}
+
+@media (min-width:500px) {
+  .photo[data-comment]:after {
+    font-size: .7em
+  }
+}
+
+.photo[data-comment].photo--caption:after,
+.photo[data-comment]:hover:after {
+  transform: translateY(0)
+}
+
+.grid-col-2 .photo,
+.grid-col-2-short .photo,
+.grid-col-3 .photo,
+.grid-float .photo,
+.grid-tall .photo {
+  float: left;
+  width: 98%;
+  padding-bottom: 98%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 5%
+}
+
+@media (min-width:500px) {
+
+  .grid-col-2 .photo,
+  .grid-col-2-short .photo,
+  .grid-col-3 .photo,
+  .grid-float .photo,
+  .grid-tall .photo {
+    margin-bottom: 2%
+  }
+}
+
+.grid-col-2 .photo.wide,
+.grid-col-2-short .photo.wide,
+.grid-col-3 .photo.wide,
+.grid-float .photo.wide,
+.grid-tall .photo.wide {
+  float: none;
+  clear: both;
+  width: 98%;
+  padding-bottom: 33.3333333333%
+}
+
+.grid-col-2 .tall,
+.grid-col-2-short .tall,
+.grid-col-3 .tall,
+.grid-float .tall,
+.grid-tall .tall {
+  padding-bottom: 160%
+}
+
+@media (min-width:500px) {
+
+  .grid-col-2 .photo.half,
+  .grid-col-2-short .photo.half,
+  .grid-col-3 .photo.half,
+  .grid-float .photo.half,
+  .grid-tall .photo.half {
+    width: 48%
+  }
+
+  .grid-col-2 .photo.one-third,
+  .grid-col-2-short .photo.one-third,
+  .grid-col-3 .photo.one-third,
+  .grid-float .photo.one-third,
+  .grid-tall .photo.one-third {
+    width: 31.3333333333%
+  }
+
+  .grid-col-2 .photo.two-third,
+  .grid-col-2-short .photo.two-third,
+  .grid-col-3 .photo.two-third,
+  .grid-float .photo.two-third,
+  .grid-tall .photo.two-third {
+    width: 64.6666666667%
+  }
+
+  .grid-col-2 .photo.tall,
+  .grid-col-2-short .photo.tall,
+  .grid-col-3 .photo.tall,
+  .grid-float .photo.tall,
+  .grid-tall .photo.tall {
+    padding-bottom: 103.9%
+  }
+
+  .grid-col-2 .photo.tall-half,
+  .grid-col-2-short .photo.tall-half,
+  .grid-col-3 .photo.tall-half,
+  .grid-float .photo.tall-half,
+  .grid-tall .photo.tall-half {
+    padding-bottom: 50.95%
+  }
+}
+
+@media (min-width:500px) {
+
+  .grid-col-2 .photo,
+  .grid-col-2-short .photo,
+  .grid-tall .photo {
+    width: 48%;
+    padding-bottom: 51%
+  }
+}
+
+@media (min-width:500px) {
+
+  .grid-col-2-short .photo,
+  .grid-col-3 .photo {
+    padding-bottom: 33.3333333333%
+  }
+
+  .grid-col-3 .photo {
+    width: 31.3333333333%
+  }
+
+  .grid-col-3 .tall {
+    width: 64.6666666667%
+  }
+}
+
+@media (min-width:500px) {
+  .grid-tall .photo {
+    width: 48%;
+    padding-bottom: 33.3333333333%
+  }
+}
+
+#photosphere {
+  cursor: move
+}
+
+#photosphere .fullscreen {
+  display: none;
+  cursor: zoom-in;
+  text-decoration: underline
+}
+
+.fullscreen #photosphere .fullscreen {
+  display: block
+}
