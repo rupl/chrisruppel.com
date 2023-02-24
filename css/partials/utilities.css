@@ -67,12 +67,17 @@
  * Qualified fonts
  *
  * @see http://www.zachleat.com/web/mitt-romney-webfont-problem/
- *
-@mixin font-heading() {
-  font-family: 'Port Lligat Slab', Georgia, Helvetica, serif;
+ */
+:root {
+  --font-heading: 'Port Lligat Slab', Georgia, Helvetica, serif;
+  --font-copy: 'PT Sans Narrow', 'system-ui', sans-serif;
 }
 
-@mixin font-copy() {
-  font-family: 'PT Sans Narrow', 'system-ui', sans-serif;
-}
+/**
+ * The Stack
+ *
+ * @see https://every-layout.dev/layouts/stack/
  */
+.stack > * + * {
+  margin-block-start: 1.5rem;
+}

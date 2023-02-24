@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+
+@media (min-width: 700px) {
+  .layout {
+    flex-flow: row nowrap;
+    max-width: 1280px;
+  }
+  footer[role="contentinfo"] {
+    order: -1;
+    flex: 0 1 400px;
+  }
+}

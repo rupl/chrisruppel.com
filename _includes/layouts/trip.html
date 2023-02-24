@@ -17,7 +17,7 @@ layout: page
 
   <aside class="intro summary p-summary">{{ summary }}</aside>
 
-  <div class="story e-content">
+  <div class="story e-content stack">
     {{ content | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&amp;', '&' | replace: '<pre><code>', '' | replace: '</code></pre>', '' }}
     <div class="the-end" aria-label="The End."></div>
   </div>

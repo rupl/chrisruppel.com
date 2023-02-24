@@ -4,11 +4,12 @@
 @import 'partials/reset.css';
 @import 'partials/utilities.css';
 @import 'partials/animations.css';
+@import 'partials/layout.css';
+@import 'partials/type.css';
 
 /**
  * Site-wide styles.
  *
-@import 'partials/type';
 @import 'partials/general';
 @import 'partials/status';
 @import 'partials/footer';
