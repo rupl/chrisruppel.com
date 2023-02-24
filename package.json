@@ -4,8 +4,8 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": "^v18.13.0",
-    "npm": "^8.19.3"
+    "node": "^18.14.2",
+    "npm": "^9.5.0"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-beta.1",
@@ -33,6 +33,7 @@
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^5.1.0",
+    "gulp-sharp-responsive": "github:rupl/gulp-sharp-responsive#main",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "map-stream": "0.0.7",
