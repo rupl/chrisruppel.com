@@ -25,5 +25,6 @@
    * @see http://www.zachleat.com/web/mitt-romney-webfont-problem/
    */
   --font-heading: 'Port Lligat Slab', Helvetica, serif;
-  --font-copy: 'PT Sans Narrow', 'system-ui', sans-serif;
+  --font-copy: 'PT Sans Narrow', sans-serif;
+  --font-mono: Fira Code, Courier New, monospace;
 }

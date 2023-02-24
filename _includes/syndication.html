@@ -1,10 +1,10 @@
-{% capture output %}
 {% if syndication.size > 0 %}
-  <ul class="syndication">
+<div class="syndication">
+  <h3>Syndicated elsewhere:</h3>
+  <ul class="syndication__list">
   {% for link in syndication %}
     <li><a rel="syndication" class="u-syndication type-{{ link.type | downcase }}" href="{{ link.href }}">{{ link.type }}</a></li>
   {% endfor %}
   </ul>
+</div>
 {% endif %}
-{% endcapture %}
-{{ output | strip_newlines }}

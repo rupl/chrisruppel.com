@@ -1,6 +1,6 @@
 .subtitle {
   margin-block-start: 0;
-  font-family: Fira Code, monospace;
+  font-family: var(--font-mono);
   font-size: .8em;
   letter-spacing: -1px;
   opacity: .8;
@@ -13,4 +13,35 @@
   font-family: var(--font-heading);
   font-size: 1.2em;
   line-height: 1.2;
+}
+
+.entry-meta {
+  margin-block: var(--flow-space);
+  padding: var(--section-padding);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  background: #0001;
+}
+
+.meta__url-label,
+.meta .u-url {
+  cursor: pointer;
+}
+
+.meta .u-url {
+  max-width: 100%;
+}
+
+.syndication {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.syndication__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
 }

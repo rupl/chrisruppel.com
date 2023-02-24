@@ -2,8 +2,8 @@
 title: ''
 ---
 
-<section aria-labelledby="tag-list">
-  <h1 id="tag-list" class="title title--page">Tags</h1>
+<section aria-labelledby="tag-list-title">
+  <h1 id="tag-list-title" class="title title--page">Tags</h1>
   <ul class="tag-list">
     {% for tag in collections.tagList %}
       {% assign label = tag[0] | replace: ' ','-' %}
