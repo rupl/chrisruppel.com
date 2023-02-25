@@ -32,7 +32,6 @@
 }
 
 .go .btn--next {
-  padding-inline-start: 0;
   padding-inline-end: 1em;
 }
 .go .btn--next::after {

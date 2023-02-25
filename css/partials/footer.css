@@ -1,8 +1,10 @@
 .site-footer {
   font-size: 18px;
   position: relative;
+  text-align: right;
 }
 
+/* separator */
 .site-footer::after {
   content: '';
   border-inline-end: 1px solid currentColor;
@@ -13,4 +15,14 @@
 
 .site-footer a {
   color: inherit;
+}
+
+.site-footer img {
+  display: initial;
+  position: relative;
+  z-index: 1;
+  border-radius: 250px 750px 250px 750px /
+                 750px 250px 750px 250px;
+  animation: wobble 25s ease-in-out alternate infinite;
+  transition: transform .5s ease-in;
 }

@@ -5,15 +5,17 @@ permalink: /work/
 bodyclass: page--work
 ---
 
+<div class="stack">
+
 <h1 class="title--main">Hire me!</h1>
 
 <p>I specialize in <strong>frontend development</strong> and <strong>frontend performance</strong>. I'm a seasoned Drupal developer and have experience building frontends and design systems for sites of all sizes.</p>
 <p>I've helped some big brands achieve their goals while producing sites that hold up to prime-time levels of traffic.</p>
 
-<ul class="clients">
+<ul class="clients" role="list">
 {% for client in collections.clients limit:6 %}
   <li class="client client--{{ client.data.class }}" style="background-image: url(/svg/work/logos/{{ client.data.src }})">
-    <span class="element-invisible">{{ client.data.alt }}</span>
+    <span class="visually-hidden">{{ client.data.alt }}</span>
   </li>
 {% endfor %}
 </ul>
@@ -30,4 +32,6 @@ bodyclass: page--work
 <div class="go">
   <a class="btn btn--mail" href="/contact">Contact me</a>
   <a class="btn btn--back" href="/">Back to the Front</a>
+</div>
+
 </div>
