@@ -4,7 +4,7 @@ permalink: /blog/
 layout: page
 ---
 
-<section aria-labelledby="blog">
+<section aria-labelledby="blog" class="stack">
   <h1 id="blog" class="title--main">Blog</h1>
 
   <div class="search">
@@ -12,7 +12,7 @@ layout: page
     <p class="search__summary" id="search-summary">Showing all results.</p>
   </div>
 
-  <div id="blog-list" class="blog-list">
+  <div id="blog-list" class="blog-list stack">
     {% for post in collections.blog %}
       <article class="teaser--title search-item" data-search="[{{ post.data.title }}][{{ post.data.summary | strip_html }}][{%- if post.data.location -%}{%- include 'location.html', location: post.data.location -%}{%- endif -%}][{{ post.data.tags | join: ' ' }}][{% if post.data.map.json != nil %}has-map{% endif %}][{% if post.data.photosphere != nil %}has-photosphere{% endif %}]">
         <header>
@@ -30,7 +30,7 @@ layout: page
           {% if post.data.summary %}
             {{ post.data.summary }}
           {% else %}
-            {{ post.templateContent | strip_html | truncatewords: 27, '...' | replace: '.', '.&nbsp;' }} <a href="{{ post.url }}">Read more</a>
+            {{ post.data.content | strip_html | truncatewords: 27, '...' | replace: '.', '.&nbsp;' }} <a href="{{ post.url }}">Read more</a>
           {% endif %}
         </p>
       </article>
@@ -39,6 +39,5 @@ layout: page
 
   <div class="go">
     <a class="btn btn--back" href="/">Back to the front</a>
-    {% comment %}<a class="btn btn--load" href="{{ site.url }}/blog/archives/">Blog archives</a>{% endcomment %}
   </div>
 </section>
