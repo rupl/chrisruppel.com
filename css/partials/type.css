@@ -75,7 +75,7 @@ hr {
   max-width: calc(var(--text-max) - 20ch);
   height: var(--hr-height);
   margin-block: var(--flow-space);
-  margin-inline: auto;
+  margin-inline: 10ch;
   color: #888;
   border: 1px solid currentColor;
   border-width: 1px 0;
