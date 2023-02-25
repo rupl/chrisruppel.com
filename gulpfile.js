@@ -269,7 +269,7 @@ gulp.task('kml-to-geojson', () => {
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for deployment to live server.
 //——————————————————————————————————————————————————————————————————————————————
-const buildDeployTask = gulp.task('build-deploy', gulp.parallel('sass', 'js', 'image-svg', 'image-photosphere', 'kml-to-geojson'));
+const buildDeployTask = gulp.task('build-deploy', gulp.parallel('js', 'image-svg', 'image-photosphere', 'kml-to-geojson'));
 module.exports['build-deploy'] = buildDeployTask;
 
 //——————————————————————————————————————————————————————————————————————————————
