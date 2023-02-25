@@ -4,6 +4,7 @@
    */
   --layout-max: 1440px;
   --content-max: calc(1100px + 3rem);
+  --text-max: 70ch;
   --footer-max: 320px;
   --section-padding: 1rem;
 
@@ -18,6 +19,11 @@
   --color: #111;
   --color-bg: #fff;
   --color-gallery-bg: #000;
+
+  /**
+   * Type
+   */
+  --hr-height: 3px;
 
   /**
    * Qualified fonts

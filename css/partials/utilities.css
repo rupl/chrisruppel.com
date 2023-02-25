@@ -21,7 +21,7 @@
  *
  * @see https://git.drupalcode.org/project/drupal/-/blob/dfacc85499fa63d65993f260e956d4e82e9c4f0f/core/modules/system/css/components/hidden.module.css#L18-33
  */
-.vidually-hidden {
+.visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;

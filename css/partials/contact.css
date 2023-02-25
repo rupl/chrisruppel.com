@@ -1,0 +1,44 @@
+.contact {
+  max-width: 70%;
+  background: #0001;
+  padding: var(--section-padding) calc(var(--section-padding) * 2);
+  font-size: 22px;
+}
+
+.contact > * {
+  display: block;
+}
+
+.contact label {
+  cursor: pointer;
+}
+
+.contact input,
+.contact textarea {
+  --flow-space: 0;
+  width: 100%;
+  border: 3px solid #1116;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #111f;
+}
+.contact button {
+  border: none;
+  background: #111;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.contact button:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.contact [type="reset"] {
+  opacity: .7;
+}

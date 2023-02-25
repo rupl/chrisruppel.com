@@ -3,28 +3,25 @@ layout: page
 title: Contact me
 ---
 
-<h1>Contact me</h1>
+<div class="stack">
+  <h1 class="title--main">Contact me</h1>
 
-<form name="contact" action="/contact/thanks/" method="POST" data-netlify="true">
-  <label>Name</label>
-  <input type="text" name="name">
+  <form class="contact stack" name="contact" action="/contact/thanks/" method="POST" data-netlify="true">
+    <label for="c-name">Name</label>
+    <input id="c-name" type="text" name="name" placeholder="Your name">
 
-  <label class="required">Email</label>
-  <input type="email" name="email" required>
+    <label for="c-email" class="required">Email</label>
+    <input id="c-email" type="email" name="email" required placeholder="you@example.com">
 
-  <label>Website</label>
-  <input type="url" name="url">
+    <label for="c-url">Website</label>
+    <input id="c-url" type="url" name="url" placeholder="https://example.com">
 
-  <label class="required">Message</label>
-  <textarea name="message" placeholder="What's on your mind?" required></textarea>
+    <label for="c-message" class="required">Message</label>
+    <textarea id="c-message" name="message" placeholder="What's on your mind?" required></textarea>
 
-  <div class="actions">
-    <button type="submit">Send message</button>
-    <button type="reset">Reset</button>
-  </div>
-</form>
-
-<br>
-<br>
-<br>
-<br>
+    <div class="actions">
+      <button type="submit">Send message</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</div>

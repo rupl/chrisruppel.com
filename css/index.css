@@ -9,12 +9,16 @@
 @import 'partials/type.css';
 @import 'partials/footer.css';
 
+@import 'partials/site-nav.css';
 @import 'partials/entry.css';
 @import 'partials/media.css';
 @import 'partials/gallery.css';
 @import 'partials/prism.css';
+@import 'partials/go.css';
 @import 'partials/webmentions.css';
 @import 'partials/tags.css';
+
+@import 'partials/contact.css';
 
 /**
  * Site-wide styles.

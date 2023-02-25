@@ -3,7 +3,7 @@ layout: page
 comments: true
 ---
 
-<article class="entry--main {% if link %}h-as-reply{% endif %}">
+<article class="entry--main stack {% if link %}h-as-reply{% endif %}">
   <header>
     <h1 class="title--main p-name">{{ title }}</h1>
   </header>
@@ -24,18 +24,6 @@ comments: true
     <div class="the-end" aria-label="End of article."></div>
   </div>
 
-  {% if page.links != null %}
-  <aside class="links">
-    <h2 id="links" class="element-invisible">Links</h2>
-      <p>If you liked this article check these links out:</p>
-      <ul>
-        {% for link in page.links %}
-          <li><a class="type-{{ link.type }}" href="{{ link.href }}">{{ link.text }}</a></li>
-        {% endfor %}
-      </ul>
-  </aside>
-  {% endif %}
-
   <div class="go">
     {% comment %}
       My collection seems to be backwards according to 11ty so the variables and
@@ -45,11 +33,11 @@ comments: true
     {% assign nextPost = collections.blog | getPreviousCollectionItem: page %}
 
     {% if previousPost.url %}
-      <a class="btn btn--prev" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">Previous post</a>
+      <a class="btn btn--prev" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">Prev<span class="visually-hidden">ious post</span></a>
     {% endif %}
     <a class="btn btn--back" href="/blog/">Blog</a>
     {% if nextPost.url %}
-      <a class="btn btn--next" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">Next post</a>
+      <a class="btn btn--next" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">Next<span class="visually-hidden"> post</span></a>
     {% endif %}
   </div>
 

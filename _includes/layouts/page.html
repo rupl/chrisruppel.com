@@ -80,7 +80,7 @@
   </head>
   <body class="h-entry {{ bodyclass }}">
     <div class="layout">
-      <main>
+      <main id="main" role="main">
         {{ content }}
       </main>
       <footer role="contentinfo" class="site-footer p-author h-card vcard">
@@ -99,6 +99,9 @@
             Find me on <a rel="me" href="https://mastodon.social/@rupl">Mastodon</a>,
             or <a href="{{ site.url }}/work/">hire me!</a>
           </p>
+
+          {% include 'site-nav.html' %}
+
           <p class="colophon">
             <a href="{{ site.license-url }}">&#169; {{'now' | date: '%Y'}} Chris Ruppel</a> —
             <a href="{{ site.feedback-url }}">Got feedback?</a>

@@ -1,0 +1,74 @@
+.go {
+  display: flex;
+  flex-flow: row wrap;
+  gap: .5rem;
+}
+
+.go .btn,
+.go button {
+  border: none;
+  background: #0001;
+  border-block-end: 4px solid #0003;
+  padding-inline-start: 1rem;
+  color: #000;
+  text-decoration: none;
+  text-shadow: .5px .5px 0 #fff;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+
+.go .btn::before,
+.go .btn::after {
+  display: inline-block;
+  position: relative;
+}
+
+.go .btn--prev::before {
+  content: '←';
+  left: -5px;
+}
+.go .btn--prev:hover::before {
+  animation: bounce-left .333s ease-out;
+}
+
+.go .btn--next {
+  padding-inline-start: 0;
+  padding-inline-end: 1em;
+}
+.go .btn--next::after {
+  content: '→';
+  right: -5px;
+}
+.go .btn--next:hover::after {
+  animation: bounce-right .333s ease-out;
+}
+
+.go .btn--back::before {
+  content: '↑';
+  left: -5px;
+}
+.go .btn--back:hover::before {
+  animation: bounce-up .333s ease-out;
+}
+
+.go .btn--offline {
+  padding-inline-start: 2rem;
+}
+.go .btn--offline::before {
+  content: '💾';
+  left: -10px;
+}
+.go .btn--offline:hover::before {
+  animation: wiggle 1s ease-out;
+}
+
+.go .btn--mail {
+  padding-inline-start: 2rem;
+}
+.go .btn--mail::before {
+  content: '📨';
+  left: -10px;
+}
+.go .btn--mail:hover::before {
+  animation: wiggle 1s ease-out;
+}

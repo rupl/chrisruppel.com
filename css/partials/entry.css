@@ -15,6 +15,18 @@
   line-height: 1.2;
 }
 
+.the-end {
+  margin: 1.25em 0;
+  padding: 0;
+  font-size: 1.32em;
+  text-align: center;
+}
+
+.the-end::after {
+  content: ' × \00a0\00a0 × \00a0\00a0 ×';
+  speak: none;
+}
+
 .entry-meta {
   margin-block: var(--flow-space);
   padding: var(--section-padding);

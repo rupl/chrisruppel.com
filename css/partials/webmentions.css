@@ -17,7 +17,8 @@
 .webmentions__url {
   max-width: 500px;
   flex: 1 0 auto;
-  border: 2px solid #111;
+  border: 3px solid #1116;
+  border-inline-end: 0;
   border-radius: 5px 0 0 5px;
   font-family: var(--font-mono);
   font-size: 90%;
@@ -26,16 +27,21 @@
 
 .webmentions__submit {
   flex: 0 0 auto;
-  border: 2px solid #111;
+  border: 3px solid #111;
   border-radius: 0 5px 5px 0;
   padding: 0 1rem;
   background: #111;
   color: #fff;
 }
 
-.webmentions__url:focus,
+.webmentions__url:focus {
+  outline: none;
+  border-color: #000;
+}
+
 .webmentions__submit:focus {
-  outline: 4px solid #fff;
+  outline: none;
+  text-decoration: underline;
 }
 
 .p-comment {

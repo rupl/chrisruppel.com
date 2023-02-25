@@ -23,4 +23,8 @@ footer[role="contentinfo"] {
     order: -1;
     flex: 0 0 var(--footer-max);
   }
+  footer[role="contentinfo"] a {
+    position: relative;
+    z-index: 1;
+  }
 }

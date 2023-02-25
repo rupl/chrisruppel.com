@@ -13,7 +13,7 @@ body {
 
 p {
   line-height: 1.4;
-  max-width: 70ch;
+  max-width: var(--text-max);
 }
 
 strong {
@@ -70,6 +70,29 @@ blockquote {
   }
 }
 
+hr {
+  --flow-space: 3rem;
+  max-width: calc(var(--text-max) - 20ch);
+  height: var(--hr-height);
+  margin-block: var(--flow-space);
+  margin-inline: auto;
+  color: #888;
+  border: 1px solid currentColor;
+  border-width: 1px 0;
+  position: relative;
+  overflow: visible;
+}
+
+/* Section symbol */
+hr::after {
+  content: '§';
+  background: white;
+  padding: 0 .4em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(calc(-50% + (var(--hr-height) / 2)));
+}
+
 /**
  * Main content area.
  *
@@ -83,6 +106,18 @@ main h1,
 main h2,
 main h3 {
   font-family: var(--font-heading);
+}
+
+main h1 {
+  font-size: 1.75em;
+}
+
+main h2 {
+  font-size: 1.5em;
+}
+
+main h2 {
+  font-size: 1.25em;
 }
 
 main h4 {
