@@ -9,16 +9,17 @@ map:
   style: satellite-v9
 
 gallery:
-- gridtype: col-3
+- gridtype: col-2-short
 - src: java-kawah-ijen-1.jpg
   alt: Sign reading "BEWARE TOXIC GAS"
   comment: These signs were not deterring anyone.
 - src: java-kawah-ijen-2.jpg
   alt: A worker carrying raw sulphur on his back.
   comment: The strongest workers can carry up to 90kg of sulphur in one trip. Some do two trips per day.
-- src: java-kawah-ijen-5.gif
-  alt: Animation of a blue flame.
-  comment: This was my best attempt to capture the flames using burst photos reassembled into a GIF.
+# NOTE: the new image pipeline doesn't handle GIFs yet.
+# - src: java-kawah-ijen-5.gif
+#   alt: Animation of a blue flame.
+#   comment: This was my best attempt to capture the flames using burst photos reassembled into a GIF.
 - src: java-kawah-ijen-3.jpg
   alt: Two people wearing gas masks.
   comment: The only special equipment we had were these gas masks. Goggles would have been good too, but since most people only had simple surgical masks we felt pretty well-off.
