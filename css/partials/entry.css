@@ -44,6 +44,7 @@
   max-width: 100%;
 }
 
+/* wrap title and links on one line */
 .syndication {
   display: flex;
   flex-flow: row nowrap;
@@ -51,9 +52,14 @@
   gap: 1rem;
 }
 
+/* wrap links on one line */
 .syndication__list {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   gap: 1rem;
+}
+
+.syndication__list li {
+  flex: 0 0 auto;
 }

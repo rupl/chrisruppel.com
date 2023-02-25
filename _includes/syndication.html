@@ -1,7 +1,7 @@
 {% if syndication.size > 0 %}
 <div class="syndication">
   <h3>Syndicated elsewhere:</h3>
-  <ul class="syndication__list">
+  <ul class="syndication__list" role="list">
   {% for link in syndication %}
     <li><a rel="syndication" class="u-syndication type-{{ link.type | downcase }}" href="{{ link.href }}">{{ link.type }}</a></li>
   {% endfor %}

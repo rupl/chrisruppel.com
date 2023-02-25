@@ -7,15 +7,16 @@
 }
 
 .site-nav li {
-  padding: .5rem;
-  background: #0001;
-  border-bottom: 4px solid transparent;
 }
 
 .site-nav a {
+  display: block;
+  padding: .5rem;
+  background: #0001;
   text-decoration: none;
+  border-bottom: 4px solid transparent;
 }
 
-.site-nav li:has(.active) {
+.site-nav a.active {
   border-color: #0003;
 }

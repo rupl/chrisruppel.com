@@ -173,6 +173,6 @@ board.on("ready", function() {
 
 If all goes well, you should see something like this GIF. Johnny Five is alive!
 
-<center><img src="{{ site.img-host }}/img/neopixel-12r-chase.gif" alt="Animated GIF of the NeoPixel"></center>
+<img src="{{ site.img-host }}/img/neopixel-12r-chase.gif" alt="Animated GIF of the NeoPixel">
 
 In a future article, I'll take this to the next step: demonstrating how Johnny Five can respond to other events within a JavaScript application, allowing us to use our phones to interact with Arduino.

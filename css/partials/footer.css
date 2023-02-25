@@ -26,3 +26,7 @@
   animation: wobble 25s ease-in-out alternate infinite;
   transition: transform .5s ease-in;
 }
+
+.site-footer .site-nav {
+  justify-content: flex-end;
+}
