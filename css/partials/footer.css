@@ -4,13 +4,10 @@
   text-align: right;
 }
 
-/* separator */
-.site-footer::after {
-  content: '';
-  border-inline-end: 1px solid currentColor;
-  position: absolute;
-  inset: 1.5rem 0 1.5rem auto;
-  opacity: .1;
+.site-footer .wrapper {
+  max-width: 400px;
+  margin-inline-start: auto;
+  margin-inline-end: 0;
 }
 
 .site-footer a {
@@ -29,4 +26,15 @@
 
 .site-footer .site-nav {
   justify-content: flex-end;
+}
+
+@media (min-width: 1460px) {
+  /* separator */
+  .site-footer::after {
+    content: '';
+    border-inline-end: 1px solid currentColor;
+    position: absolute;
+    inset: 1.5rem 0 1.5rem auto;
+    opacity: .1;
+  }
 }
