@@ -11,7 +11,7 @@
     {% capture slottime %}{{ slot.date | date: '%s' }}{% endcapture %}
     {% if slottime < nowunix %}
       <li class="slot slot--past" data-label="{{ slot.date | date: '%b' }}">
-        <span class="element-invisible">{{ slot.date | date: '%B' }}: {{ slot.data.status }}</span>
+        <span class="visually-hidden">{{ slot.date | date: '%B' }}: {{ slot.data.status }}</span>
       </li>
     {% else if slottime > nowunix %}
       {% comment %}
@@ -22,7 +22,7 @@
         title="{{ slot.date | date: '%b %Y' }}: {{ slot.data.status }}"
         data-label="{{ slot.date | date: '%b' }}"
       >
-        <span class="element-invisible">{{ slot.date | date: '%B' }}: {{ slot.data.status }}</span>
+        <span class="visually-hidden">{{ slot.date | date: '%B' }}: {{ slot.data.status }}</span>
       </li>
       {% comment %}
         Store first month of availability for output within heading.
