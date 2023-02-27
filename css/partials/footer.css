@@ -9,7 +9,7 @@
   content: '';
   border-inline-end: 1px solid currentColor;
   position: absolute;
-  inset: 1.5rem 0;
+  inset: 1.5rem 0 1.5rem auto;
   opacity: .1;
 }
 
