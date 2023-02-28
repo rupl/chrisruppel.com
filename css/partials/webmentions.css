@@ -11,14 +11,16 @@
 
 .webmentions__form {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 
 .webmentions__url {
+  min-width: 100px;
   max-width: 500px;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   border: 3px solid #1116;
-  border-radius: 5px 5px 0 0;
+  border-inline-end: 0;
+  border-radius: 5px 0 0 5px;
   font-family: var(--font-mono);
   font-size: 90%;
   letter-spacing: -1px;
@@ -28,10 +30,9 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 100%;
   flex: 0 0 auto;
   border: 3px solid #111;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 5px 5px 0;
   padding: 0 1rem;
   background: #111;
   color: #fff;
@@ -50,36 +51,22 @@
 .p-comment {
   border-inline-start: var(--section-padding) solid #0001;
   padding-inline-start: var(--section-padding);
-}
 
-.p-comment .e-content {
-  overflow-x: hidden;
-}
+  .e-content {
+    overflow-x: hidden;
 
-.p-comment .e-content a {
-  white-space: nowrap;
-}
+    & a {
+      white-space: nowrap;
+    }
 
-.p-comment footer {
-  font-family: var(--font-mono);
-  font-size: .75em;
-  letter-spacing: -1px;
-}
+    & footer {
+      font-family: var(--font-mono);
+      font-size: .75em;
+      letter-spacing: -1px;
+    }
 
-.p-comment footer a {
-  white-space: nowrap;
-}
-
-@media (min-width: 456px) {
-  .webmentions__form {
-    flex-flow: row nowrap;
-  }
-  .webmentions__url {
-    border-inline-end: 0;
-    border-radius: 5px 0 0 5px;
-  }
-  .webmentions__submit {
-    width: auto;
-    border-radius: 0 5px 5px 0;
+    & footer a {
+      white-space: nowrap;
+    }
   }
 }
