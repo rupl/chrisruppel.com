@@ -2,6 +2,7 @@ const hljs = require('highlight.js');
 const markdownIt = require('markdown-it');
 const postcss = require('postcss');
 const postcssImport = require('postcss-import');
+const postcssNesting = require('postcss-nesting');
 const postcssMin = require('postcss-csso');
 
 module.exports = function(config) {
@@ -96,6 +97,7 @@ module.exports = function(config) {
         // PostCSS
         let output = await postcss([
           postcssImport,
+          postcssNesting,
           postcssMin,
         ]).process(content, {
           from: path,
