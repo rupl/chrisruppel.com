@@ -1,0 +1,101 @@
+/**
+ * Work availability calendar
+ */
+:root {
+  --cal-radius: 0;
+}
+
+.availability {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  gap: 1rem 0;
+
+  max-width: 1072px;
+  margin: 0;
+  padding: 0;
+  border-radius: 7px;
+  transition: box-shadow .1666s linear;
+
+  /* Big-screen styles */
+  @media (min-width: 640px) {
+    box-shadow: 5px 5px 15px #0002;
+    margin-bottom: 2rem;
+    flex-wrap: nowrap;
+    gap: 0;
+    --cal-radius: 7px;
+  }
+
+  &:hover {
+    box-shadow: 5px 5px 15px rgba(#000, .25);
+  }
+}
+
+/* Draw attention to first available hire date when cursor is nearby */
+.availability__date {
+  display: inline-block;
+
+  .intro:hover & {
+    animation: wiggle 1s ease-in-out;
+  }
+}
+
+/**
+ * Calendar slot styles
+ */
+.slot {
+  display: block;
+  flex: 1 0 16.666%;
+  width: 100%;
+  margin: 0;
+  padding: 1em .333em;
+  border: .5px solid #0005;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  text-align: center;
+  font-size: .8em;
+  transition: border-color .1666s linear;
+
+  @media (min-width: 640px) {
+    flex: 0 1 auto;
+  }
+
+  &:hover {
+    border-color: #0008;
+  }
+
+  /* Formatting for wide screens */
+  &:first-child {
+    border-left-width: 1px;
+    border-radius: var(--cal-radius) 0 0 var(--cal-radius);
+  }
+  &:last-child {
+    border-right-width: 1px;
+    border-radius: 0 var(--cal-radius) var(--cal-radius) 0;
+  }
+
+  /* Labels (the full month name and status is in HTML) */
+  &::after {
+    content: attr(data-label);
+  }
+}
+
+/* Availability styles */
+.slot--past {
+  color: #666;
+  background: #ccc;
+  cursor: not-allowed;
+}
+.slot--full {
+  background: #e64;
+  cursor: not-allowed;
+}
+.slot--half {
+  background: #ec3;
+  cursor: context-menu;
+}
+.slot--open {
+  background: #6c6;
+  cursor: context-menu;
+}
