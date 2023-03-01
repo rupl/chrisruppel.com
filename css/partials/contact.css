@@ -28,12 +28,19 @@
     border-color: #111f;
   }
 
+  .actions {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0;
+  }
+
   & button {
     border: none;
     background: #111;
     color: #fff;
     padding: 0 1.25rem;
     line-height: 2;
+    opacity: .7;
   }
 
   & button:focus {
@@ -41,12 +48,15 @@
     text-decoration: underline;
   }
 
-  & [type="submit"] {
+  & button[type=submit] {
+    opacity: 1;
+  }
+
+  .actions :first-child {
     border-radius: 5px 0 0 5px;
   }
 
-  & [type="reset"] {
-    opacity: .7;
+  .actions :last-child {
     border-radius: 0 5px 5px 0;
   }
 
