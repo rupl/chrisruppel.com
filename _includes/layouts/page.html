@@ -3,7 +3,7 @@
 {% if location %} {% include 'location.html' %}{% endif %}
 {% if category == 'travel' %} 🌍 {% endif %}
 {% if tag %}#{{ tag | replace: ' ','' | downcase }} {% endif %}
-{% if category == 'blog' %} — {% endif %}
+{% if category != 'travel' %} - {% endif %}
 {% endcapture -%}
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
