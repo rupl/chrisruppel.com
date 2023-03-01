@@ -14,6 +14,11 @@
   color: inherit;
 }
 
+.site-footer .face-link:focus {
+  outline: none;
+  filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000);
+}
+
 .site-footer img {
   display: initial;
   position: relative;
