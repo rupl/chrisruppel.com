@@ -1,44 +1,57 @@
 .contact {
-  max-width: 70%;
-  background: #0001;
-  padding: var(--section-padding) calc(var(--section-padding) * 2);
-  font-size: 22px;
-}
+  & form {
+    background: #0001;
+    padding: var(--section-padding) calc(var(--section-padding) * 2);
+  }
 
-.contact > * {
-  display: block;
-}
+  & form > * {
+    display: block;
+  }
 
-.contact label {
-  cursor: pointer;
-}
+  & label {
+    cursor: pointer;
+  }
 
-.contact input,
-.contact textarea {
-  --flow-space: 0;
-  width: 100%;
-  border: 3px solid #1116;
-  border-radius: 3px;
-  font-family: var(--font-mono);
-}
+  & input,
+  & textarea {
+    --flow-space: 0;
+    width: 100%;
+    max-width: 600px;
+    border: 3px solid #1116;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+  }
 
-.contact input:focus,
-.contact textarea:focus {
-  outline: none;
-  border-color: #111f;
-}
-.contact button {
-  border: none;
-  background: #111;
-  color: #fff;
-  padding: 0 2rem;
-}
+  & input:focus,
+  & textarea:focus {
+    outline: none;
+    border-color: #111f;
+  }
 
-.contact button:focus {
-  outline: none;
-  text-decoration: underline;
-}
+  & button {
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 0 1.25rem;
+    line-height: 2;
+  }
 
-.contact [type="reset"] {
-  opacity: .7;
+  & button:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+
+  & [type="submit"] {
+    border-radius: 5px 0 0 5px;
+  }
+
+  & [type="reset"] {
+    opacity: .7;
+    border-radius: 0 5px 5px 0;
+  }
+
+
+  @media (min-width: 600px) {
+    font-size: 24px;
+  }
 }
