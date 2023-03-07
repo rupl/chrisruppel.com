@@ -276,7 +276,7 @@ module.exports['build-deploy'] = buildDeployTask;
 // Build site for local development.
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('build-dev', gulp.series(
-  gulp.parallel('sass', 'js', 'images'),
+  gulp.parallel('js', 'images'),
   eleventyDev,
 ));
 
@@ -297,7 +297,6 @@ gulp.task('browser-sync', () => {
 // Watch Files For Changes
 gulp.task('watch', (done) => {
   log(c.yellow('Waiting for changes...'));
-  gulp.watch('_sass/**/*.scss', gulp.series('sass'));
   gulp.watch('_img/photosphere/*', gulp.series('image-photosphere'));
   gulp.watch('_img/*.{jpg,jpeg,png}', gulp.parallel('image-resize'));
   gulp.watch('_svg/*', gulp.series('image-svg'));
@@ -305,7 +304,7 @@ gulp.task('watch', (done) => {
   gulp.watch('_js/sw/*', gulp.series('js-sw'));
   gulp.watch('_js/*', gulp.series('js-main'));
   gulp.watch('_js/custom/*', gulp.series('js-custom'));
-  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], eleventyDev);
+  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', 'css/**/*.css', '!_site/**/*.*'], eleventyDev);
   done();
 });
 
