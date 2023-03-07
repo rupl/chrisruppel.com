@@ -14,6 +14,10 @@
   color: inherit;
 }
 
+.site-footer .p-note {
+  --flow-space: .5rem;
+}
+
 /* default focus styles use h-entry/layout to make a strong selector */
 .h-entry .layout .site-footer .face-link:focus {
   background: none;
