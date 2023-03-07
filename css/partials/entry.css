@@ -63,3 +63,24 @@
 .syndication__list li {
   flex: 0 0 auto;
 }
+
+/**
+ * Entry metadata: Unique ID
+ */
+
+label[for="uid"] {
+  font-size: 1em;
+}
+
+#uid {
+  width: calc(100% - 4em);
+  font-size: calc(1em / 27 * 24);
+  letter-spacing: -.75px;
+  border: 1px solid #ffffff;
+
+  &:focus {
+    outline: 2px solid black;
+    border-color: black;
+    color: #111;
+  }
+}
