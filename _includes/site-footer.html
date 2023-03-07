@@ -1,0 +1,27 @@
+<footer role="contentinfo" class="site-footer p-author h-card vcard">
+  <section class="wrapper stack">
+    <a class="face-link" href="{{ site.url }}">
+      <img alt="my face" class="me u-photo"
+        width="120" height="120"
+        loading="lazy" lazyload="1"
+        src="/static/chris-ruppel-2015@384x384.jpg"
+        srcset="/static/chris-ruppel-2015@512x512.jpg 2x">
+    </a>
+
+    <p class="p-role p-note">
+      Hello, I'm <a rel="author me" class="p-name fn u-url" href="{{ site.url }}">Chris Ruppel</a>,
+      a frontend <span class="p-category">developer</span>,
+      digital <span class="p-category">artist</span>,
+      and <span class="p-category">traveler</span>.
+      Find me on <a rel="me" href="https://mastodon.social/@rupl">Mastodon</a>,
+      or <a href="{{ site.url }}/work/">hire me!</a>
+    </p>
+
+    {% include 'site-nav.html' %}
+
+    <p class="colophon">
+      <a href="{{ site.license-url }}">&#169; {{'now' | date: '%Y'}} Chris Ruppel</a> —
+      <a href="{{ site.feedback-url }}">Got feedback?</a>
+    </p>
+  </section>
+</footer>
