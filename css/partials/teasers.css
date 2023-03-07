@@ -1,0 +1,26 @@
+.teaser--title {
+  .wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .title--main {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-weight: 300;
+  }
+
+  .where {
+    font-size: .8em;
+  }
+
+  .summary {
+    order: 99;
+  }
+
+  & footer {
+    color: rgba(#000, .5);
+    font-family: var(--font-mono);
+    font-size: calc(1em * 18 / 27);
+  }
+}
