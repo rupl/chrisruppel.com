@@ -23,6 +23,19 @@ em {
   font-style: italic;
 }
 
+/* classes just make the selector stronger without overdoing it */
+.h-entry .layout a,
+.h-entry .layout button {
+  &:focus {
+    background: var(--color);
+    color: var(--color-bg);
+    border-color: var(--color-bg);
+    outline: 2px solid var(--color);
+    outline-offset: 0;
+    text-shadow: none;
+  }
+}
+
 /* Superscript shouldn't disrupt line-height */
 sup {
   vertical-align: top;

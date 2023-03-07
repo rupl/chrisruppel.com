@@ -13,7 +13,7 @@
   padding-inline-start: 1rem;
   color: #000;
   text-decoration: none;
-  text-shadow: .5px .5px 0 #fff;
+  text-shadow: .5px .5px 1px #ffff;
   padding: .5rem 1rem;
   cursor: pointer;
 }
