@@ -71,3 +71,13 @@
 .stack > * + * {
   margin-block-start: var(--flow-space);
 }
+
+/**
+ * Balanced text.
+ *
+ * This is intended for short (<4 lines) of text like headings, that they
+ * automatically wrap attractively instead of filling their horizontal space.
+ */
+.balance {
+  text-wrap: balance;
+}

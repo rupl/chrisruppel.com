@@ -4,7 +4,7 @@ permalink: /blog/
 layout: page
 ---
 
-<section aria-labelledby="blog" class="stack">
+<section aria-labelledby="blog" class="listing stack">
   <h1 id="blog" class="title--main">Blog</h1>
 
   <div class="search">
@@ -12,7 +12,7 @@ layout: page
     <p class="search__summary" id="search-summary">Showing all results.</p>
   </div>
 
-  <div id="blog-list" class="listing blog-list stack">
+  <div id="blog-list" class="listing--blog stack">
     {% for post in collections.blog %}
       <article class="teaser--title search-item" data-search="[{{ post.data.title }}][{{ post.data.summary | strip_html }}][{%- if post.data.location -%}{%- include 'location.html', location: post.data.location -%}{%- endif -%}][{{ post.data.tags | join: ' ' }}][{% if post.data.map.json != nil %}has-map{% endif %}][{% if post.data.photosphere != nil %}has-photosphere{% endif %}]">
         <div class="wrapper">
@@ -32,6 +32,9 @@ layout: page
 
           <footer>
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+            {% if post.data.tags.size > 0 %}
+              {% include 'tags.html', tags: post.data.tags %}
+            {% endif %}
           </footer>
         </div>
       </article>

@@ -1,9 +1,21 @@
-input[name=search] {
-  max-width: 50ch;
-  width: 100%;
+.listing {
+  & input[name=search] {
+    max-width: 50ch;
+    width: 100%;
 
-  &:focus {
-    border-color: transparent;
-    outline: 4px solid var(--color);
+    &:focus {
+      border-color: transparent;
+      outline: 4px solid var(--color);
+    }
+  }
+
+  /* When offline, hide uncached entries. */
+  &.is-offline .teaser--title {
+    display: none;
+  }
+
+  /* When offline, restore cached entries. */
+  &.is-offline .teaser--title.is-cached {
+    display: block;
   }
 }
