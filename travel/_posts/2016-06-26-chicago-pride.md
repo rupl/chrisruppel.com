@@ -22,6 +22,7 @@ gallery:
   comment: Happy!
 
 tags:
+- events
 - festivals
 
 js: 2016-06-26-chicago-pride.js

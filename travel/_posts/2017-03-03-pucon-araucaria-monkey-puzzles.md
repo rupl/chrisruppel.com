@@ -60,8 +60,8 @@ gallery2:
   comment: We could only imagine this is what it looked like if we could open the ground up.
 
 tags:
-- trekking
 - mountains
+- trekking
 - volcanoes
 
 summary: We hiked to the tree line of Volcán Villarica starting from a creek outside Pucón in order to find a grove of Araucaria.

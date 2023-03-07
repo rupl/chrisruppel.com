@@ -27,6 +27,7 @@ gallery:
   bgpad: 40%
 
 tags:
+- city walking
 - festivals
 
 summary: By coincidence, DrupalCon was exactly the same week as <em>La Mercè</em>, an annual festival in Barcelona. We were treated to extraordinary nightlife almost the entire time we were there.

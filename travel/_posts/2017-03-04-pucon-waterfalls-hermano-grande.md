@@ -16,7 +16,6 @@ gallery2:
   alt: Man jumping into river from a tall rock.
   comment: John takes the plunge near Hermano Chico.
 
-
 gallery:
 - gridtype: col-2
 - src: hermano-grande-4.jpg
@@ -63,8 +62,8 @@ gallery3:
 
 tags:
 - trekking
-- waterfalls
 - viewpoints
+- waterfalls
 
 summary: We explored Hector's private property and found a waterfall viewpoint like none other.
 ---

@@ -20,6 +20,7 @@ gallery:
 
 tags:
 - churches
+- friends
 
 summary: We visited a chapel filled with skulls while in Milan.
 ---

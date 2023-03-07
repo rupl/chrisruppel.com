@@ -40,11 +40,11 @@ gallery:
 
 
 tags:
+- animals
 - beaches
 - boats
 - islands
 - tours
-- animals
 
 summary: We took a popular half-day tour that brings visitors to three different islands in the Langkawi area.
 ---

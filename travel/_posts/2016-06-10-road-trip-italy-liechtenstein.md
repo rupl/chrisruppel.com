@@ -26,6 +26,7 @@ gallery:
 
 tags:
 - road trips
+- transport
 
 summary: We went on a road trip to Italy with my cousin Emily. She suggested that we swing through Liechtenstein on the way.
 ---

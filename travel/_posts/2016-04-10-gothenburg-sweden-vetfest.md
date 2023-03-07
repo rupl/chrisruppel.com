@@ -30,9 +30,10 @@ gallery:
   bgpad: 50%
 
 tags:
-- festivals
-- events
+- artwork
 - city walking
+- events
+- festivals
 
 summary: I took part in an art festival in Sweden called Vetenskapsfestivalen Göteborg.
 ---

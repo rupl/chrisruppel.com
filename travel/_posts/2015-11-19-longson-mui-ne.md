@@ -39,7 +39,7 @@ gallery:
   alt: Silhouettes of two people.
   comment: Shadow picture!
   type: half
-- caption: Credit — Lightning storm photo taken by <a href="https://www.facebook.com/longsonmuinebeachclub/">Hayden from Longson Mui Ne</a>
+- caption: Credit — Lightning storm photo taken by <a href="https://www.facebook.com/longsonmuinebeachclub/">Hayden from Longson Mui Ne</a>
 
 tags:
 - beaches

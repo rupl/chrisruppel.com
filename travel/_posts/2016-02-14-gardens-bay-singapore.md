@@ -27,8 +27,8 @@ gallery:
 
 tags:
 - artwork
-- parks
 - nightlife
+- parks
 
 summary: We enjoyed a popular light show in one of Singapore's parks, Gardens By the Bay.
 ---

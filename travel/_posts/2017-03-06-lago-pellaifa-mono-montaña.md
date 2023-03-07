@@ -24,9 +24,9 @@ gallery:
   comment: This underwater tree trunk is the last shot using my LifeProof case, which let a bunch of water in while taking the photo!
 
 tags:
+- animals
 - lakes
 - trekking
-- animals
 
 summary: We had a lazy day at the lake after our adventures in Pucón.
 ---

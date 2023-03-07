@@ -60,10 +60,10 @@ gallery:
   bgpos: 50% 80%
 
 tags:
+- maps
 - tours
 - trekking
 - waterfalls
-- maps
 
 syndication:
 - type: Facebook

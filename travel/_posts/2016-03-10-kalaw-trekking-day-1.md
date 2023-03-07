@@ -49,10 +49,10 @@ gallery:
 
 tags:
 - hostels
-- trekking
-- tours
-- viewpoints
 - maps
+- tours
+- trekking
+- viewpoints
 
 summary: Day 1 of our three-day trek took us south of Kalaw into the mountains. We walked over 18km and stopped to sleep in a mountain village.
 ---

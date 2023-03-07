@@ -38,8 +38,8 @@ gallery:
   bgpad: 51%
 
 tags:
-- hostels
 - friends
+- hostels
 
 summary: We stayed at the Ayothaya Riverside House and made many great new friends.
 ---

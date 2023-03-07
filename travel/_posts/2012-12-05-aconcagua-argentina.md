@@ -37,8 +37,8 @@ gallery:
 - caption: Hiking around Cerro Aconcagua was beautiful but watch out.. the altitude will catch you off guard if you're not careful. Drink water, bring snacks, and wear lots of sunscreen.
 
 tags:
-- trekking
 - mountains
+- trekking
 
 summary: Starting from Mendoza, we took a day trip to see Cerro Aconcagua, the highest peak in the Americas.
 ---

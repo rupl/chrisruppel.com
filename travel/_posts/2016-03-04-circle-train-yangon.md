@@ -33,8 +33,8 @@ gallery:
   comment: We finally exited the train about two stops before making it back to the central station and walked back to our hostel.
 
 tags:
-- transport
 - maps
+- transport
 
 summary: The Yangon circular railway is a local train that makes a large loop around the city. It's great for people-watching and seeing parts of Yangon that aren't polished for tourism.
 ---

@@ -33,6 +33,7 @@ gallery2:
   alt: Three plates of pasta.
   comment: Our last meal was a table of pasta with Johnny the Eagle (my elementary school mascot). The school is doing a summer vacation photo series so we took him on our trip.
 - caption: A glimpse of our Italian food tour.
+
 tags:
 - city walking
 - food

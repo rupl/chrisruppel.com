@@ -18,8 +18,8 @@ gallery:
 photosphere: copenhagen-art-dome.jpg
 
 tags:
-- friends
 - city walking
+- friends
 
 summary: I went to Copenhagen to help a friend clean out an old storage shed from his university days and we saw a bit of the city too.
 ---

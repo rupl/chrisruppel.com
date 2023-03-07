@@ -22,8 +22,8 @@ gallery:
   type: tall-half
 
 tags:
-- friends
 - beer
+- friends
 - music
 
 summary: We went to a show featuring the very talented David Diers, playing some rock at the Texas Keeper just outside Austin.

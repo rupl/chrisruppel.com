@@ -49,8 +49,8 @@ gallery3:
   comment: Roses also line the garden fence to the delight of the bees.
 
 tags:
-- nature
 - food
+- nature
 
 summary: Some typical flowers of southern Chile.
 ---

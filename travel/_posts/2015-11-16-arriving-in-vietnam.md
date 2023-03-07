@@ -42,8 +42,8 @@ gallery:
 
 tags:
 - beer
-- parks
 - nightlife
+- parks
 
 summary: Ho Chi Minh City was quite the change of pace after our slow weeks in Thailand. It's a crazy, pulsing city that is no place for a newbie traveler. We had a blast checking it out and acting young for a few days.
 ---

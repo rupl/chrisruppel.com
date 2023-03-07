@@ -35,8 +35,8 @@ gallery:
   type: wide
 
 tags:
-- sunsets
 - artwork
+- sunsets
 
 summary: One of our favorite things to do at Grandma's is sunset walks in the nearby cemetery. This time we also made rubbings of the oldest headstones.
 ---

@@ -21,6 +21,7 @@ gallery:
   comment: The main tourist bridge had these beautiful fish lanterns.
 
 tags:
+- city walking
 - markets
 - nightlife
 

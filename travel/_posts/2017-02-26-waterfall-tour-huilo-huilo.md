@@ -28,8 +28,8 @@ gallery:
   comment: At the end of the day we stopped at a lake to eat empanadas and enjoy the sun.
 
 tags:
-- trekking
 - tours
+- trekking
 - waterfalls
 
 summary: We took a waterfall tour that took us to many points around the seven lakes, including the Huilo Huilo Biological Reserve.

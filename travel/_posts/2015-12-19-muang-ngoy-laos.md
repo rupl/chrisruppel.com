@@ -38,9 +38,9 @@ gallery:
   bgpad: 50%
 
 tags:
+- sunsets
 - trekking
 - viewpoints
-- sunsets
 
 summary: Our only full day in Muang Ngoy was spent hiking. We hiked to a nearby cave and village, then went on a separate hike to see the sunset.
 ---

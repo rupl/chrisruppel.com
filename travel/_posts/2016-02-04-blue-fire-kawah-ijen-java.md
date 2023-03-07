@@ -51,9 +51,9 @@ gallery2:
 
 tags:
 - danger
+- maps
 - trekking
 - volcanoes
-- maps
 
 syndication:
 - type: Facebook

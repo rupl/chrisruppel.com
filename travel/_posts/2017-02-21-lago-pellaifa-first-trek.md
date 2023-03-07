@@ -38,9 +38,9 @@ gallery:
   bgpad: 42%
 
 tags:
-- trekking
-- lakes
 - animals
+- lakes
+- trekking
 
 summary: We hiked to nearby Lago Pellaifa on a hot day.
 ---

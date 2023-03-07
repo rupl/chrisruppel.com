@@ -48,8 +48,9 @@ gallery:
 - caption: Credit&#58; all photos taken by <a href="https://tsmith.com/">Taylor Smith</a> and <a href="https://matthewgrill.com">Matt Grill</a>.
 
 tags:
-- friends
 - city walking
+- friends
+- travel at home
 
 syndication:
 - type: Twitter

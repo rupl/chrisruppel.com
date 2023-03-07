@@ -49,9 +49,9 @@ gallery:
 tags:
 - deserts
 - mountains
+- thermal baths
 - tours
 - trekking
-- thermal baths
 
 summary: Our third day in San Pedro was the best of all! We visited the Geysers del Tatio, an extremely active area of geysers high up in the mountains.
 ---

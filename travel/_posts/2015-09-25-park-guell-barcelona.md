@@ -29,6 +29,7 @@ gallery:
   type: wide
 
 tags:
+- city walking
 - parks
 
 summary: Parc Güell is an expansive, hilly park in the middle of town offering great views of the city and fun experiences with musicians of all types.

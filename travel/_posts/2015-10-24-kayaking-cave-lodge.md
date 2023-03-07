@@ -46,6 +46,7 @@ gallery:
 
 tags:
 - kayaking
+- tours
 
 summary: We went kayaking twice in a row because it was so much fun! We did a short 2-hour and long 5-hour trip. The long one had a bit of caving thrown in for good measure.
 ---

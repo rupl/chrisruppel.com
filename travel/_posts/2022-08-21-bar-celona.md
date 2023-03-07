@@ -30,6 +30,7 @@ gallery:
 
 tags:
   - city walking
+  - friends
   - nightlife
 
 summary: The best way to cool down during Barcelona summer nights.

@@ -18,8 +18,8 @@ gallery:
   comment: Finishing up as the sun hangs in the sky.
 
 tags:
-- friends
 - food
+- friends
 
 summary: I spent some time with one of my good Purdue friends in Houston. While I was there he whipped up a special treat — six racks of ribs on his smoker!
 ---

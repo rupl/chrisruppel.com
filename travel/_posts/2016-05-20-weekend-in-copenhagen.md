@@ -25,9 +25,9 @@ gallery:
   type: wide
 
 tags:
+- city walking
 - events
 - speaking
-- city walking
 
 summary: I went to Copenhagen to speak at a local Drupal event, play boardgames, and maybe have a beer or two.
 ---

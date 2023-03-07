@@ -21,8 +21,8 @@ gallery:
   comment: View from Old Town Bridge Tower looking toward the city center.
 
 tags:
-- friends
 - city walking
+- family
 
 summary: We took our family friends to Prague for a weekend.
 ---

@@ -21,8 +21,8 @@ gallery:
   type: two-third
 
 tags:
-- friends
 - food
+- friends
 
 summary: Next stop as I slowly inched my way back to Europe was Maine. I flew into Boston and my old colleague Ian was kind enough to drive all the way down and pick me up to visit this quiet area of the east coast.
 ---

@@ -39,9 +39,9 @@ gallery:
   type: wide
 
 tags:
+- animals
 - lakes
 - trekking
-- animals
 
 summary: We spent an afternoon hiking to Lago Pellaifa and found a secluded little cove to relax at.
 ---

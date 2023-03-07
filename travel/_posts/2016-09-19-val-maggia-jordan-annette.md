@@ -44,6 +44,7 @@ gallery:
 
 tags:
 - camping
+- friends
 - mountains
 
 summary: We took Jordan and Annette to our favorite camping spot in Switzerland and went up the valley into the mountains.

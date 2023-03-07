@@ -33,6 +33,7 @@ gallery:
 
 tags:
 - boats
+- friends
 - islands
 
 summary: I tagged along with John and his friend as they fished for Bonitos

@@ -23,9 +23,10 @@ gallery:
   comment: Our tunes for the afternoon.
 
 tags:
-- friends
-- festivals
 - beer
+- events
+- festivals
+- friends
 - speaking
 
 summary: We stopped by Oktoberfest in the Prater after attending DrupalCon Vienna.
