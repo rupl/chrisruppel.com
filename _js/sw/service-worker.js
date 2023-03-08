@@ -15,6 +15,7 @@ var SW = {
     '/about/',
     '/about/site/',
     '/travel/',
+    '/blog/',
     '/css/index.css',
     '/js/main.min.js',
     '/static/chris-ruppel-2015@384x384.jpg',
