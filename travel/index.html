@@ -8,11 +8,11 @@ layout: page
   <h1 id="travel-list" class="title--main">Travel</h1>
 
   <div class="search">
-    <input type="text" name="search" placeholder="search...">
+    <input class="search__input" type="text" name="search" placeholder="search...">
     <p class="search__summary" id="search-summary">Showing all results.</p>
   </div>
 
-  <div class="listing--travel stack">
+  <div class="listing__list listing--travel stack">
     {% for trip in collections.travel %}
       {% include 'trip-listing.html' %}
     {% endfor %}

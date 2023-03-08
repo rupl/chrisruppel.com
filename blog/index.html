@@ -8,11 +8,11 @@ layout: page
   <h1 id="blog" class="title--main">Blog</h1>
 
   <div class="search">
-    <input type="text" name="search" placeholder="search...">
+    <input type="text" class="search__input" name="search" placeholder="search...">
     <p class="search__summary" id="search-summary">Showing all results.</p>
   </div>
 
-  <div id="blog-list" class="listing--blog stack">
+  <div id="blog-list" class="listing__list listing--blog stack">
     {% for post in collections.blog %}
       <article class="teaser--title search-item" data-search="[{{ post.data.title }}][{{ post.data.summary | strip_html }}][{%- if post.data.location -%}{%- include 'location.html', location: post.data.location -%}{%- endif -%}][{{ post.data.tags | join: ' ' }}][{% if post.data.map.json != nil %}has-map{% endif %}][{% if post.data.photosphere != nil %}has-photosphere{% endif %}]">
         <div class="wrapper">

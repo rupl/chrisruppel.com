@@ -12,7 +12,7 @@ permalink: "/tags/{{ tag | replace: ' ','-' }}/"
 
   <p class="intro summary">Entries involving {{ tag | downcase }}. <a class="alt" href="{{ site.url }}/tags/">See all tags.</a></p>
 
-  <div class="listing--tags stack">
+  <div class="listing__list listing--tags stack">
   {% assign taglist = collections[tag] | reverse %}
   {% for post in taglist %}
     {% include 'trip-listing.html', trip: post %}

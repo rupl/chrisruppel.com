@@ -1,5 +1,5 @@
 .listing {
-  & input[name=search] {
+  .search__input {
     max-width: 50ch;
     width: 100%;
 
@@ -7,6 +7,10 @@
       border-color: transparent;
       outline: 4px solid var(--color);
     }
+  }
+
+  .listing__list {
+    --flow-space: 2.5rem
   }
 
   /* When offline, hide uncached entries. */
