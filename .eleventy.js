@@ -69,16 +69,6 @@ module.exports = function(config) {
     html: true,
     breaks: false,
     linkify: false,
-    highlight: function (str, lang) {
-      if (lang && hljs.getLanguage(lang)) {
-        try {
-          // Run the highlighter and then escape HTML entities.
-          return hljs.highlight(str, { language: lang }).value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-        } catch (__) {}
-      }
-
-      return ''; // use external default escaping
-    },
   };
   config.setLibrary('md', markdownIt(mdOptions));
 
