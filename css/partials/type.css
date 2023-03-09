@@ -49,19 +49,20 @@ abbr[title] {
   margin-right: .5em;
   text-decoration: none;
   position: relative;
-}
-abbr[title]:after {
-  content: '(?)';
-  vertical-align: top;
-  line-height: 0;
-  font-family: serif;
-  font-size: 0.5em;
-  font-weight: 700;
-  letter-spacing: 0;
 
-  position: absolute;
-  top: .5em;
-  right: -1.25em;
+  &:after {
+    content: '(?)';
+    vertical-align: top;
+    line-height: 0;
+    font-family: serif;
+    font-size: 0.5em;
+    font-weight: 700;
+    letter-spacing: 0;
+
+    position: absolute;
+    top: .5em;
+    right: -1.25em;
+  }
 }
 
 /* italicize any foreign-language abbreviations */
@@ -75,9 +76,8 @@ blockquote {
   padding: .1em 1em;
   margin: 0 .5em;
   background: rgba(#000, .1);
-}
-@media (min-width: 600px) {
-  blockquote {
+
+  @media (min-width: 600px) {
     margin: 0 1em 0 2em;
   }
 }
@@ -93,17 +93,18 @@ hr {
   border-width: 1px 0;
   position: relative;
   overflow: visible;
+
+  /* Section symbol */
+  &::after {
+    content: '§';
+    background: white;
+    padding: 0 .4em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(-50% + (var(--hr-height) / 2)));
+  }
 }
 
-/* Section symbol */
-hr::after {
-  content: '§';
-  background: white;
-  padding: 0 .4em;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(calc(-50% + (var(--hr-height) / 2)));
-}
 
 /**
  * Main content area.
@@ -162,11 +163,12 @@ main ins.update {
   font-style: italic;
   color: #444;
   text-decoration: none;
-}
-main ins.update::before {
-  content: "Update " attr(datetime) ": ";
-  font-weight: 500;
-  color: black;
+
+  &::before {
+    content: "Update " attr(datetime) ": ";
+    font-weight: 500;
+    color: black;
+  }
 }
 
 /* Subdue stricken text */
@@ -176,15 +178,16 @@ main del {
   opacity: .5;
   transition: opacity .2s ease-in-out;
   position: relative;
-}
-main del::after {
-  content: ' ';
-  position: absolute;
-  bottom: .55em;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid #000;
-  transition: transform .2s ease-in-out;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    bottom: .55em;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #000;
+    transition: transform .2s ease-in-out;
+  }
 }
 
 /* Highlight inserted text after deletions */
@@ -206,8 +209,8 @@ del + .oops {
 }
 
 /* Default styles for code blocks. The syntax highlighter will override most
-of this once it has run. */
-main code {
+of this once it has run. The selector is designed to work with prism.js */
+main :not(pre) > code {
   display: inline-block;
   font-weight: 400;
   padding: 0 .2em;
@@ -220,9 +223,8 @@ main aside.note {
   margin: 0 1em;
   font-style: italic;
   opacity: .9;
-}
-@media (min-width: 1147px) {
-  main aside.note {
+
+  @media (min-width: 1147px) {
     margin: 0 3em;
   }
 }
@@ -233,9 +235,8 @@ main aside.info {
   padding: .2em 5%;
   background-color: rgba(#79f, .4);
   border-radius: 7px;
-}
-@media (min-width: 1147px) {
-  main aside.info {
+
+  @media (min-width: 1147px) {
     width: 110%;
     margin-left: -5%; /* match L/R padding above */
   }
@@ -247,14 +248,13 @@ main aside.warning {
   padding: .2em 5%;
   background-color: rgba(#fd0, .4);
   border-radius: 7px;
-}
-@media (min-width: 1147px) {
-  main aside.warning {
+
+  @media (min-width: 1147px) {
     width: 110%;
     margin-left: -5%; /* match L/R padding above */
-  }
 
-  main aside.warning > p::before {
-    content: '⚠ ';
+    > p::before {
+      content: '⚠ ';
+    }
   }
 }
