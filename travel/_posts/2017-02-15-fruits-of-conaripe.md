@@ -26,7 +26,7 @@ gallery:
   comment: We found wild plums right by the island
 - src: conaripe-fruits-6.jpg
   alt: Blackberry branch with berries in all stages of development.
-  comment: The blackberries are the most plentiful and tastiest as well. Here is a branch with berries in all stages of growth — ripening red berries, ripe black, and the moldy shrunken ones have already gone bad.
+  comment: The blackberries are the most plentiful and tastiest as well. Here is a branch with berries in all stages of growth — ripening red berries, ripe black, and the moldy shrunken ones have already gone bad.
 
 tags:
 - farming

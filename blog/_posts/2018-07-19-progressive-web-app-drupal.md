@@ -14,8 +14,8 @@ Announcing a new Drupal module: [Progressive Web App](https://www.drupal.org/pro
 
 As the name suggests, it brings foundational aspects of a Progressive Web App (PWA) to any Drupal 7 site. With [almost one million Drupal 7 sites](https://www.drupal.org/project/usage/drupal) out there, the module aims to bring modern mobile functionality in the form of:
 
-* **Offline support** — the module provides a modest Service Worker which adapts automatically to your Drupal site, providing an offline experience with very little configuration needed.
-* **Add to Homescreen** — the module also provides a `manifest.json` with all the required metadata to warrant the homescreen prompt.
+* **Offline support:** the module provides a modest Service Worker which adapts automatically to your Drupal site, providing an offline experience with very little configuration needed.
+* **Add to Homescreen:** the module also provides a `manifest.json` with all the required metadata to warrant the homescreen prompt.
 
 If that sounds interesting to you, go try the [PWA Drupal module](https://www.drupal.org/project/pwa). Or continue reading for more tech details.
 

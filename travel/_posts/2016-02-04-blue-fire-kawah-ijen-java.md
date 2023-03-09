@@ -33,7 +33,7 @@ gallery2:
 - gridtype: col-2
 - src: java-kawah-ijen-6.jpg
   alt: View of the Ijen crater from the ridge.
-  comment: We were treated to a big surprise as the sun rose — the crater has a huge green lake which we didn't even know was there during the hike downward! It's boiling-hot hydrochloric acid, so don't go swimming.
+  comment: We were treated to a big surprise as the sun rose — the crater has a huge green lake which we didn't even know was there during the hike downward! It's boiling-hot hydrochloric acid, so don't go swimming.
   type: wide
   bgpad: 55%
 - src: java-kawah-ijen-7.jpg
@@ -84,7 +84,7 @@ Here's our path up. I used satellite data because it turns out there's unusually
 
 {% include 'map.html' %}
 
-After an hour of hiking we came across a sign that said "VISITORS ARE PROHIBITED GOING DOWN ON CRATER DANGEROUS" and, just to be sure, a second sign reading "BEWARE TOXIC GAS" — it's pretty clear that the flood of tourists heading down into this crater are not really supposed to be here, but the promise of this natural wonder was just too much.
+After an hour of hiking we came across a sign that said "VISITORS ARE PROHIBITED GOING DOWN ON CRATER DANGEROUS" and, just to be sure, a second sign reading "BEWARE TOXIC GAS" — it's pretty clear that the flood of tourists heading down into this crater are not really supposed to be here, but the promise of this natural wonder was just too much.
 
 Armed with gas masks, we waited for a group with a guide to pass us and followed them down the very steep trail into the crater, made even worse by loose rocks all coated with a film of white powder from the sulphuric gas constantly erupting out of the earth.
 

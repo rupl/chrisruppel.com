@@ -25,5 +25,5 @@ tags:
 - markets
 - nightlife
 
-summary: Hoi An is known for two things — a night market featuring hand-made silk lanterns, and its tailor shops.
+summary: Hoi An is known for two things — a night market featuring hand-made silk lanterns, and its tailor shops.
 ---

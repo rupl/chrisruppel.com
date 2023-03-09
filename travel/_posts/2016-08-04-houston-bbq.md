@@ -21,5 +21,5 @@ tags:
 - food
 - friends
 
-summary: I spent some time with one of my good Purdue friends in Houston. While I was there he whipped up a special treat — six racks of ribs on his smoker!
+summary: I spent some time with one of my good Purdue friends in Houston. While I was there he whipped up a special treat — six racks of ribs on his smoker!
 ---
