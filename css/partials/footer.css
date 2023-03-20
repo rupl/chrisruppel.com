@@ -19,7 +19,7 @@
 }
 
 /* default focus styles use h-entry/layout to make a strong selector */
-.h-entry .layout .site-footer .face-link:focus {
+.h-entry .layout .site-footer .face-link:focus-visible {
   background: none;
   outline: none;
   filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000);
