@@ -19,7 +19,13 @@
   background-size: 70%;
 }
 
-
 .client--unocha {
   background-size: 45%;
+}
+
+.page--work {
+  .go {
+    justify-content: flex-start;
+    margin-block: 3.5rem;
+  }
 }
