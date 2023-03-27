@@ -33,6 +33,7 @@ gallery:
 
 tags:
 - boats
+- food
 - friends
 - islands
 
