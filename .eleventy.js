@@ -1,4 +1,3 @@
-const hljs = require('highlight.js');
 const markdownIt = require('markdown-it');
 const postcss = require('postcss');
 const postcssImport = require('postcss-import');
