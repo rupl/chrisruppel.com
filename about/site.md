@@ -4,21 +4,20 @@ title: About this site
 permalink: /about/site/
 ---
 
+**This site does not store any information about you as a visitor.**
+
+If you submit a webmention, your interaction is dutifully recorded at your request. If you view an embedded map, those third parties probably store information about you. All images and video are self-hosted.
+
 ### Tech
 
-* **Gulp** for task manager for development and parts of deployment.
-* **Sass** for light preprocessing of CSS.
 * **Eleventy** for static site generation.
 * **Mapbox** for displaying maps and GPS data.
 * **GitHub** for code hosting and deployment.
 * **Netlify** for web hosting and deployment.
-* **S3** for image hosting.
-
-**This site does not store any information about you as a visitor.** If you submit a webmention, your interaction is dutifully recorded at your request. If you view an embedded map, those third parties probably store information about you. All images and video are self-hosted.
 
 ### Content
 
-All original content is licensed [CC BY-NC-SA 3.0 US](https://creativecommons.org/licenses/by-nc-sa/3.0/us/). Basically, you're free to use or remix the content, but give me visible credit on your copy.
+All original content is licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Basically, you're free to use or remix the content for non-commercial purposes, but give me visible credit on your copy.
 
 ### Code
 
