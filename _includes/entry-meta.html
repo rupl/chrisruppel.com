@@ -1,7 +1,8 @@
-<footer class="entry-meta">
-  <section>
-    <label for="uid">URL:</label>
-    <input id="uid" class="u-url url u-uid uid bookmark" type="url" size="52" readonly value="{{ site.url }}{{ page.url }}">
+<footer class="entry-meta meta">
+  <section class="stack">
+    <label class="meta__url-label" for="uid">URL:
+      <input id="uid" class="u-url url u-uid uid bookmark" type="url" size="52" readonly value="{{ site.url }}{{ page.url }}">
+    </label>
     {% include 'filed.html' %}
     {% include 'syndication.html' %}
   </section>

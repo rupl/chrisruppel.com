@@ -2,7 +2,7 @@
 _site
 .publish
 img
-css
+css/*min.css*
 js
 svg
 _includes/main.min.css

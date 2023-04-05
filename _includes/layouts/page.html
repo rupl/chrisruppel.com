@@ -3,7 +3,7 @@
 {% if location %} {% include 'location.html' %}{% endif %}
 {% if category == 'travel' %} 🌍 {% endif %}
 {% if tag %}#{{ tag | replace: ' ','' | downcase }} {% endif %}
-{% if category == 'blog' %} — {% endif %}
+{% if category != 'travel' %} - {% endif %}
 {% endcapture -%}
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
@@ -40,7 +40,7 @@
     <!-- Preconnect Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Port+Lligat+Slab&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Port+Lligat+Slab&family=Fira+Code&display=swap" onload="this.rel='stylesheet'">
 
   {% if site.img-host != '' %}
     <!-- Warm up the CDN connection -->
@@ -60,12 +60,8 @@
     <meta property="og:image" content="{{ site.img-host }}/img/travel/{% if gallery[0].src %}{{ gallery[0].src }}{% else %}{{ gallery[1].src }}{% endif %}">
   {% endif %}
 
-  {% if site.mode == 'prod' %}
-    <style type="text/css">{% include 'main.min.css' %}</style>
-  {% else %}
-    <!-- load using <link> on local so I can inject new styles -->
-    <link rel="stylesheet" href="/css/main.min.css" type="text/css">
-  {% endif %}
+    <!-- main site styles -->
+    <link rel="stylesheet" href="/css/index.css" type="text/css">
 
     <script>
       // JS is able to start executing.
@@ -79,38 +75,19 @@
     </script>
   </head>
   <body class="h-entry {{ bodyclass }}">
-    <main>
-      {{ content }}
-    </main>
-    <footer role="contentinfo" class="p-author h-card vcard">
-      <section>
-        <img alt="my face" class="me u-photo"
-          width="120" height="120"
-          loading="lazy" lazyload="1"
-          src="/static/chris-ruppel-2015@384x384.jpg"
-          srcset="/static/chris-ruppel-2015@512x512.jpg 2x">
-
-        <p class="p-role p-note">
-          Hello, I'm <a rel="author me" class="p-name fn u-url" href="{{ site.url }}">Chris Ruppel</a>,
-          a frontend <span class="p-category">developer</span>,
-          digital <span class="p-category">artist</span>,
-          and <span class="p-category">traveler</span>.
-          Find me on <a rel="me" href="https://mastodon.social/@rupl">Mastodon</a>,
-          or <a href="{{ site.url }}/work/">hire me!</a>
-        </p>
-        <p class="colophon">
-          <a href="{{ site.license-url }}">&#169; {{'now' | date: '%Y'}} Chris Ruppel</a> —
-          <a href="{{ site.feedback-url }}">Got feedback?</a>
-        </p>
-      </section>
-    </footer>
+    <div class="layout">
+      <main id="main" role="main">
+        {{ content }}
+      </main>
+      {% include 'site-footer.html' %}
+    </div>
 
     <div id="status" role="alert" aria-live="assertive">
       <p id="message"></p>
-      <button class="dismiss"><span class="element-invisible">Close this message</span></button>
+      <button class="dismiss"><span class="visually-hidden">Close this message</span></button>
     </div>
 
-    <script async defer src="/js/main.min.js"></script>
+    <script defer src="/js/main.min.js"></script>
     {% if photosphere %}<script async defer src="/js/photosphere.min.js"></script>{% endif %}
     {% if js %}<script async defer src="/js/{{ js }}"></script>{% endif %}
   </body>

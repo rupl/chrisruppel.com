@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<article class="entry--main entry--trip" id="{{ path | replace: 'travel/_posts/','' | replace: '.md','' }}">
+<article class="entry--main entry--trip stack" id="{{ path | replace: 'travel/_posts/','' | replace: '.md','' }}">
   <header>
     <h1 class="title--main p-name">{{ title }}</h1>
   </header>
@@ -17,7 +17,7 @@ layout: page
 
   <aside class="intro summary p-summary">{{ summary }}</aside>
 
-  <div class="story e-content">
+  <div class="story e-content stack">
     {{ content | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&amp;', '&' | replace: '<pre><code>', '' | replace: '</code></pre>', '' }}
     <div class="the-end" aria-label="The End."></div>
   </div>
@@ -31,11 +31,11 @@ layout: page
     {% assign nextPost = collections.travel | getPreviousCollectionItem: page %}
 
     {% if previousPost.url %}
-      <a class="btn btn--prev" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">Previous post</a>
+      <a class="btn btn--prev" href="{{ previousPost.url }}" title="{{ previousPost.data.title }}">Prev<span class="visually-hidden">ious trip</span></a>
     {% endif %}
-    <a class="btn btn--back" href="/travel/">Travel</a>
+    <a class="btn btn--back" href="/travel/"><span class="visually-hidden">Back to</span>Travel</a>
     {% if nextPost.url %}
-      <a class="btn btn--next" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">Next post</a>
+      <a class="btn btn--next" href="{{ nextPost.url }}" title="{{ nextPost.data.title }}">Next<span class="visually-hidden"> trip</span></a>
     {% endif %}
   </div>
 

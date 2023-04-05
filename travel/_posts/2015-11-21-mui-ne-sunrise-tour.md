@@ -34,6 +34,7 @@ gallery:
 - caption: The tour was ok, but if you stay at Longson just get up before the sunrise and sit on the beach for free. The village and fairy stream were nice stops.
 
 tags:
+- sunsets
 - tours
 
 summary: We went on a sunrise tour in Mui Ne. We saw the white and red sand dunes, as well as the mysterious Fairy Stream.

@@ -1,16 +1,15 @@
-<section class="webmentions" id="webmentions" aria-labelledby="webmentions-heading">
+<section class="webmentions stack" id="webmentions" aria-labelledby="webmentions-heading">
   <h2 id="webmentions-heading">Webmentions</h2>
-  <p class="webmentions__learn"><a href="https://indieweb.org/Webmention">what's this? 🤨</a></p>
-  <p class="webmentions__explainer">Have you linked to this page from your site? Submit your URL and it will appear below.</p>
+  <p class="webmentions__explainer">Have you linked to this page from your site? Submit your URL and it will appear below. <a href="https://indieweb.org/Webmention">Learn more.</a></p>
 
-  <form method="POST" action="{{ site.webmention-url }}" class="webmentions__submit">
+  <form method="POST" action="{{ site.webmention-url }}" class="webmentions__form">
     <input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
-    <input type="url" name="source" placeholder="https://yoursite.com" required>
-    <input type="submit" value="Mention">
+    <input type="url" name="source" placeholder="https://yoursite.com" required class="webmentions__url"><!--
+    --><input type="submit" value="Mention" class="webmentions__submit">
     <div class="webmentions__message" aria-live="polite"></div>
   </form>
 
-  <div class="webmentions__list">
+  <div class="webmentions__list stack">
     <h3>Mentioned by</h3>
     {% assign wmFound = false %}
     {% for mention in webmentions %}

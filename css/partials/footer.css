@@ -1,0 +1,51 @@
+.site-footer {
+  font-size: 18px;
+  position: relative;
+  text-align: right;
+}
+
+.site-footer .wrapper {
+  max-width: 400px;
+  margin-inline-start: auto;
+  margin-inline-end: 0;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+.site-footer .p-note {
+  --flow-space: .5rem;
+}
+
+/* default focus styles use h-entry/layout to make a strong selector */
+.h-entry .layout .site-footer .face-link:focus-visible {
+  background: none;
+  outline: none;
+  filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000);
+}
+
+.site-footer img {
+  display: initial;
+  position: relative;
+  z-index: 1;
+  border-radius: 250px 750px 250px 750px /
+                 750px 250px 750px 250px;
+  animation: wobble 25s ease-in-out alternate infinite;
+  transition: transform .5s ease-in;
+}
+
+.site-footer .site-nav {
+  justify-content: flex-end;
+}
+
+@media (min-width: 1460px) {
+  /* separator */
+  .site-footer::after {
+    content: '';
+    border-inline-end: 1px solid currentColor;
+    position: absolute;
+    inset: 1.5rem 0 1.5rem auto;
+    opacity: .1;
+  }
+}

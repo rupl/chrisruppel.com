@@ -1,0 +1,6 @@
+.media {
+  margin: 1em 0;
+  padding: 4%;
+  background: var(--color-gallery-bg);
+  border-radius: 4px;
+}

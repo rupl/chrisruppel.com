@@ -28,8 +28,8 @@ gallery:
 
 tags:
 - friends
-- mountains
 - lakes
+- mountains
 
 summary: We went with our good friend Lena to her hometown of Mittenwald.
 ---

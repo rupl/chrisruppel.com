@@ -42,8 +42,8 @@ gallery:
   type: wide
 
 tags:
-- friends
 - beaches
+- family
 - islands
 
 summary: The last stop on my US tour was Martha's Vineyard where my sister Katie lives year-round.

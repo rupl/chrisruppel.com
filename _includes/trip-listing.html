@@ -1,9 +1,25 @@
-<article class="teaser--title search-item" data-url="{{ site.url }}{{ trip.url }}" data-search="[{{ trip.data.title }}][{%- include 'location.html', location: trip.data.location -%}][{{ trip.data.tags | join: ' ' }}][{% if trip.data.map.json != nil %}has-map{% endif %}][{% if trip.data.photosphere != nil %}has-photosphere{% endif %}]">
-  <h2 class="title--main">
-    <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %-d, %Y" }}</time>
-    <a href="{{ trip.url }}">{{ trip.data.title }}</a>
-    {% if trip.data.location %}<span class="where">{% include 'location.html', location: trip.data.location %}</span>{% endif %}
-    {% if trip.data.map.json != nil %}🗺{% endif %}
-    {% if trip.data.photosphere != nil %}🌐{% endif %}
-  </h2>
+<article class="teaser--title search-item" data-url="{{ site.url }}{{ trip.url }}" data-search="[{{ trip.date | date: "%Y-%m-%d" }}][{{ trip.data.title }}][{%- include 'location.html', location: trip.data.location -%}][{{ trip.data.tags | join: ' ' }}][{% if trip.data.map.json != nil %}has-map{% endif %}][{% if trip.data.photosphere != nil %}has-photosphere{% endif %}]">
+  <div class="wrapper">
+    <h2 class="title--main">
+      <a href="{{ trip.url }}">{{ trip.data.title }}</a>
+      {% if trip.data.location %}<span class="where">{% include 'location.html', location: trip.data.location %}</span>{% endif %}
+    </h2>
+
+    <p class="summary">
+      {% if trip.data.summary %}
+        {{ trip.data.summary }}
+      {% elsif trip.data.content %}
+        {{ trip.data.content | strip_html | truncatewords: 27, '...' | replace: '.', '.&nbsp;' }} <a href="{{ trip.url }}">Read more</a>
+      {% endif %}
+    </p>
+
+    <footer>
+      <time datetime="{{ trip.date | date: "%Y-%m-%d" }}">{{ trip.date | date: "%b %d, %Y" }}</time>
+      {% if trip.data.tags.size > 0 %}
+        {% include 'tags.html', tags: trip.data.tags %}
+      {% endif %}
+      {% if trip.data.map.json != nil %}🗺{% endif %}
+      {% if trip.data.photosphere != nil %}🌐{% endif %}
+    </footer>
+  </div>
 </article>

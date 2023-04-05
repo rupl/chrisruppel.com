@@ -1,0 +1,36 @@
+:root {
+  /**
+   * Layout
+   */
+  --layout-max: 1440px;
+  --content-max: calc(1100px + 3rem);
+  --text-max: 70ch;
+  --footer-max: 320px;
+  --section-padding: 1rem;
+
+  /**
+   * The Stack
+   */
+  --flow-space: 1.5rem;
+
+  /**
+   * Colors
+   */
+  --color: #111;
+  --color-bg: #fff;
+  --color-gallery-bg: #000;
+
+  /**
+   * Type
+   */
+  --hr-height: 3px;
+
+  /**
+   * Qualified fonts
+   *
+   * @see http://www.zachleat.com/web/mitt-romney-webfont-problem/
+   */
+  --font-heading: 'Port Lligat Slab', Helvetica, serif;
+  --font-copy: 'PT Sans Narrow', sans-serif;
+  --font-mono: Fira Code, Courier New, monospace;
+}

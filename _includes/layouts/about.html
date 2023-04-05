@@ -2,18 +2,22 @@
 layout: default
 ---
 
-<header>
-  <h1 class="title--main">{{ title }}</h1>
-</header>
+<div class="stack">
+  <header>
+    <h1 class="title--main">{{ title }}</h1>
+  </header>
 
-{{ content }}
+  <div class="e-content stack">
+    {{ content }}
 
-<div class="go">
-  {% if permalink == '/about/' %}
-    <a class="btn btn--info" href="/about/site/">About this site</a>
-  {% elsif permalink == '/about/site/' %}
-    <a class="btn btn--info" href="/about/">About me</a>
-  {% endif %}
+    <div class="go">
+      {% if permalink == '/about/' %}
+        <a class="btn btn--info" href="/about/site/">About this site</a>
+      {% elsif permalink == '/about/site/' %}
+        <a class="btn btn--info" href="/about/">About me</a>
+      {% endif %}
 
-  <a class="btn btn--back" href="/">Back to the Front</a>
+      <a class="btn btn--back" href="/">Back to the Front</a>
+    </div>
+  </div>
 </div>

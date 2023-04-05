@@ -4,41 +4,44 @@ permalink: /blog/
 layout: page
 ---
 
-<section aria-labelledby="blog">
+<section aria-labelledby="blog" class="listing stack">
   <h1 id="blog" class="title--main">Blog</h1>
 
   <div class="search">
-    <input type="text" name="search" placeholder="search...">
+    <input type="text" class="search__input" name="search" placeholder="search...">
     <p class="search__summary" id="search-summary">Showing all results.</p>
   </div>
 
-  <div id="blog-list" class="blog-list">
+  <div id="blog-list" class="listing__list listing--blog stack">
     {% for post in collections.blog %}
       <article class="teaser--title search-item" data-search="[{{ post.data.title }}][{{ post.data.summary | strip_html }}][{%- if post.data.location -%}{%- include 'location.html', location: post.data.location -%}{%- endif -%}][{{ post.data.tags | join: ' ' }}][{% if post.data.map.json != nil %}has-map{% endif %}][{% if post.data.photosphere != nil %}has-photosphere{% endif %}]">
-        <header>
-          <h2 class="title--main">
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-            {% if post.data.link %}
-              <div class="link--external"><a target="_blank" rel="noopener" href="{{ post.data.link }}">{{ post.data.title }}</a></div>
-            {% else %}
+        <div class="wrapper">
+          <header>
+            <h2 class="title--main">
               <a href="{{ post.url }}">{{ post.data.title }}</a>
-            {% endif %}
-          </h2>
-        </header>
+            </h2>
+          </header>
 
-        <p class="summary">
-          {% if post.data.summary %}
-            {{ post.data.summary }}
-          {% else %}
-            {{ post.templateContent | strip_html | truncatewords: 27, '...' | replace: '.', '.&nbsp;' }} <a href="{{ post.url }}">Read more</a>
-          {% endif %}
-        </p>
+          <p class="summary">
+            {% if post.data.summary %}
+              {{ post.data.summary }}
+            {% elsif post.data.content %}
+              {{ post.data.content | strip_html | truncatewords: 27, '...' | replace: '.', '.&nbsp;' }} <a href="{{ post.url }}">Read more</a>
+            {% endif %}
+          </p>
+
+          <footer>
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+            {% if post.data.tags.size > 0 %}
+              {% include 'tags.html', tags: post.data.tags %}
+            {% endif %}
+          </footer>
+        </div>
       </article>
     {% endfor %}
   </div>
 
   <div class="go">
     <a class="btn btn--back" href="/">Back to the front</a>
-    {% comment %}<a class="btn btn--load" href="{{ site.url }}/blog/archives/">Blog archives</a>{% endcomment %}
   </div>
 </section>

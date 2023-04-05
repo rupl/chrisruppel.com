@@ -23,14 +23,14 @@ gallery:
   comment: The image on the bill for comparison.
 - src: ha-long-bay-5.jpg
   alt: Sunset in Ha Long Bay
-  comment: The sun set before we got off our "ferry" — we felt dumb for falling for it, but it was a really nice ride in the end.
+  comment: The sun set before we got off our "ferry" — we felt dumb for falling for it, but it was a really nice ride in the end.
   type: wide
 
 tags:
 - boats
-- tours
 - scams
 - sunsets
+- tours
 
 syndication:
 - type: Twitter

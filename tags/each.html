@@ -7,20 +7,21 @@ pagination:
 permalink: "/tags/{{ tag | replace: ' ','-' }}/"
 ---
 
-<section aria-labelledby="tag-list">
-  <h1 id="tag-list" class="title title--page">#{{ tag | downcase | replace: ' ','-' }}</h1>
+<section aria-labelledby="tag-list-title" class="listing stack">
+  <h1 id="tag-list-title" class="title--main">#{{ tag | downcase | replace: ' ','-' }}</h1>
 
   <p class="intro summary">Entries involving {{ tag | downcase }}. <a class="alt" href="{{ site.url }}/tags/">See all tags.</a></p>
 
-  <div class="trip-list">
+  <div class="listing__list listing--tags stack">
   {% assign taglist = collections[tag] | reverse %}
   {% for post in taglist %}
     {% include 'trip-listing.html', trip: post %}
   {% endfor %}
   </div>
+
+  <div class="go">
+    <a class="btn btn--back" href="/tags/">All tags</a>
+    <a class="btn btn--back" href="/">Back to the Front</a>
+  </div>
 </section>
 
-<div class="go">
-  <a class="btn btn--back" href="/tags/">All tags</a>
-  <a class="btn btn--back" href="/">Back to the Front</a>
-</div>

@@ -22,7 +22,7 @@ gallery:
   comment: We could not figure out what this was so we showed the picture to our host at the guesthouse. He said he calls it Bulu Babi, and a quick Google search confirmed that it is a type of sea urchin.
 - src: bali-padang-wsb-5.jpg
   alt: Underwater panoramic photo of the beach.
-  comment: Achievement Unlocked — underwater pano.
+  comment: Achievement Unlocked — underwater pano.
   type: wide
 - src: bali-padang-wsb-6.jpg
   alt: Man swimming underwater.

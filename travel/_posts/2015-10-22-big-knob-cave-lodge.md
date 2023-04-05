@@ -35,10 +35,10 @@ gallery:
   type: wide
 
 tags:
-- trekking
-- viewpoints
 - animals
 - maps
+- viewpoints
+- trekking
 
 syndication:
 - type: Twitter

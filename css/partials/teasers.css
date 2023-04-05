@@ -1,0 +1,29 @@
+.teaser--title {
+  .wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .title--main {
+    margin-block-start: 0;
+    margin-block-end: .25em;
+    font-weight: 300;
+    line-height: 1.1;
+  }
+
+  .where {
+    font-size: .75em;
+  }
+
+  .summary {
+    order: 99;
+    font-size: .85em;
+    opacity: .8;
+  }
+
+  & footer {
+    color: rgba(#000, .5);
+    font-family: var(--font-mono);
+    font-size: calc(1em * 18 / 27);
+  }
+}

@@ -1,5 +1,5 @@
 ---
-title: Botanic Garden
+title: Botanic Gardens
 location:
   locality: Fort Worth
   region: Texas
@@ -13,6 +13,7 @@ gallery:
     bgpad: 75%
 
 tags:
+  - family
   - gardens
 
 summary: We went for a family outing to the renowned gardens and greenhouse near downtown.

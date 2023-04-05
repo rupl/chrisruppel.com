@@ -1,0 +1,31 @@
+.clients[role="list"] {
+  max-width: var(--text-max);
+  margin-block: 2.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  animation: fade-in 1s ease-in-out;
+}
+
+.client {
+  flex: 1 0 33.3333%;
+  min-width: 160px;
+  min-height: 160px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+
+.client--unocha {
+  background-size: 45%;
+}
+
+.page--work {
+  .go {
+    justify-content: flex-start;
+    margin-block: 3.5rem;
+  }
+}

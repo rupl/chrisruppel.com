@@ -4,17 +4,15 @@ permalink: /travel/
 layout: page
 ---
 
-
-<section aria-labelledby="travel-list">
-  <h1 id="travel-list" class="title--main title--page">Travel</h1>
-  <p class="intro summary">Here some places I've been.</p>
+<section aria-labelledby="travel-list" class="listing stack">
+  <h1 id="travel-list" class="title--main">Travel</h1>
 
   <div class="search">
-    <input type="text" name="search" placeholder="search...">
+    <input class="search__input" type="text" name="search" placeholder="search...">
     <p class="search__summary" id="search-summary">Showing all results.</p>
   </div>
 
-  <div class="trip-list">
+  <div class="listing__list listing--travel stack">
     {% for trip in collections.travel %}
       {% include 'trip-listing.html' %}
     {% endfor %}

@@ -21,7 +21,7 @@ gallery:
   comment: The after shot.
 
 tags:
-- friends
+- family
 - parks
 
 summary: We took a trip to the local water park while I stayed with my family in Texas.

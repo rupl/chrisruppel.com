@@ -8,10 +8,13 @@ layout: gallery
 gallery:
 - gridtype: col-2-short
 - src: back-in-freiburg.jpg
-  alt: 
+  alt: Two people smiling at the camera with a church in the background.
   type: wide
   bgpad: 60%
 - caption: Our first picture back in Freiburg and the last pic of the trip.
+
+tags:
+  - travel at home
 
 summary: We made it back safe and sound to Freiburg!
 ---

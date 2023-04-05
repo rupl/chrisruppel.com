@@ -88,7 +88,7 @@ void loop() {
 
 Uploading the program to the LilyPad sets up an endless cycle which looks something like this:
 
-<center><img src="{{ site.img-host }}/img/lilypad-arduino-led-purse.gif" alt="looping GIF of the LEDs blinking"></center>
+<img src="{{ site.img-host }}/img/lilypad-arduino-led-purse.gif" alt="looping GIF of the LEDs blinking">
 
 The fun part is that each time I visit her, I can reprogram the Arduino to do something different! I could even stitch new sensors on or add a button. There are plenty of terminals left on the Arduino. Code-wise, I could add [pulse width modulation](/blog/lilypad-arduino-light-sensor-pulse-width-modulation//#blinking-vs-fading-leds) so the LEDs fade on and off instead of just blinking.
 

@@ -18,6 +18,7 @@ gallery:
   type: wide
 
 tags:
+- friends
 - lakes
 - mountains
 - viewpoints

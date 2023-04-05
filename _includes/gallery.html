@@ -1,5 +1,5 @@
 {%- if gallery.size > 0 -%}
-<figure class="gallery {% if gallery[0].type != null %}{{ gallery[0].type }}{%- else -%}{% if gallery[0].gridtype %} grid-{{ gallery[0].gridtype }}{% else %} grid-tall{% endif %}{% endif -%}">
+<figure class="clearfix gallery {% if gallery[0].type != null %}{{ gallery[0].type }}{%- else -%}{% if gallery[0].gridtype %} grid-{{ gallery[0].gridtype }}{% else %} grid-tall{% endif %}{% endif -%}">
   {%- for item in gallery -%}
     {%- if item.src != null -%}
       {% capture filename %}{{ item.src | split: '.' | first }}{% endcapture %}
@@ -23,7 +23,7 @@
         - Gallery breakpoints. What window sizes cause galleries to be linear
           instead of "tiled" sets of images?
       {%- endcomment -%}
-      {%- capture sizes_small %}calc(100vw - 4% - 1em){%- endcapture -%}
+      {%- capture sizes_small %}calc(100vw - 3rem - 3rem){%- endcapture -%}
       {%- capture sizes_big -%}(min-width: 500px) {% if item.type contains "wide" or item.type contains "tall" or item.type contains "two-third" -%}
           {%- comment -%}
             When the image is wide, it always takes up the full width no matter
@@ -36,17 +36,17 @@
             Two-third is the same deal. It takes up more room and should default
             to higher-res, so fibbing and calling it wide suits our needs.
 
-            Formula: 100vw - <main>-padding - gallery_padding - photo-margin
+            Formula: 100vw - main-padding - gallery_padding - photo-margin
           {%- endcomment -%}
-          calc(100vw - 2em - 8% - 2%)
+          calc(100vw - 3rem - 3rem - 2%)
         {%- elsif item.type contains "half" -%}
           {%- comment -%}
             Similar to wide, when image is half size, we know how much space it
             takes up on larger breakpoints without looking at gallery type.
 
-            Formula: 50vw - <main>-padding - gallery_padding - photo-margins
+            Formula: 50vw - main-padding - gallery_padding - photo-margin 2x
           {%- endcomment -%}
-          calc(50vw - 2em - 8% - 4%)
+          calc(50vw - 3rem - 3rem - 4%)
         {%- else -%}
           {%- comment -%}
             If its size is unspecified, check the gallery type to see how wide
@@ -54,9 +54,9 @@
           {%- endcomment -%}
           {%- case gallery[0].gridtype -%}
             {%- when "col-3" -%}
-              30vw
+              calc(33vw - 3rem - 3rem - 6%)
             {%- when "col-2" or "col-2-short" or "tall" -%}
-              40vw
+              calc(50vw - 3rem - 3rem - 4%)
           {%- endcase -%}
         {%- endif -%}
       {%- endcapture -%}

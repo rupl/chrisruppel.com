@@ -1,0 +1,10 @@
+.page--front {
+  .go {
+    justify-content: flex-start;
+    margin-block: 2.5rem;
+  }
+
+  .listing .listing--front {
+    --flow-space: 1rem;
+  }
+}

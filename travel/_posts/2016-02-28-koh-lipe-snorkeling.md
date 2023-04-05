@@ -43,10 +43,10 @@ gallery2:
   comment: Doesn't this look like a rose?
 
 tags:
+- animals
 - beaches
 - islands
 - snorkeling
-- animals
 
 summary: I went on an impromptu snorkeling dive on our last day in Koh Lipe and saw some really fantastic sea life.
 ---

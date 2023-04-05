@@ -23,6 +23,7 @@ gallery:
   comment: Last picture in Laos as we cross the border!
 
 tags:
+- immigration
 - transport
 
 summary: We took a night train from Laos back to Bangkok so we could catch a flight to Indonesia. It was a fun, safe, cheap way to travel!

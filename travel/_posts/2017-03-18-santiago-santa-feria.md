@@ -24,4 +24,4 @@ tags:
 summary: We watched a Santa Feria concert onstage!
 ---
 
-Our family friends in Santiago have a cumbia band called [Santa Feria](https://santaferia.cl/). We came back to spend a few days with them and there happened to be a big show in Santiago so we watched them from the stage!
+Our family friends in Santiago have a cumbia band called [Santa Feria](https://santaferia.cl). We came back to spend a few days with them and there happened to be a big show in Santiago so we watched them from the stage!

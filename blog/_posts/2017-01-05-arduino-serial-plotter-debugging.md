@@ -53,4 +53,4 @@ void loop() {
 
 I used tabs to separate the values in this example because it improves the formatting of the text-based Serial Monitor too. Here is an animated GIF of the plotter displaying all three values as I wave the accelerometer chip around:
 
-<center><img src="{{ site.img-host }}/img/arduino-plotter-three-inputs.gif" alt="animated GIF of serial plotter screen capture"></center>
+<img src="{{ site.img-host }}/img/arduino-plotter-three-inputs.gif" alt="animated GIF of serial plotter screen capture">

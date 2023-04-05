@@ -26,8 +26,8 @@
       const notMatching = [...new Set(items.filter(x => !matchSubset.has(x)))];
 
       // Remove/add classes as needed.
-      isMatching.forEach(trip => trip.classList.remove('element-hidden'));
-      notMatching.forEach(trip => trip.classList.add('element-hidden'));
+      isMatching.forEach(trip => trip.classList.remove('hidden'));
+      notMatching.forEach(trip => trip.classList.add('hidden'));
 
       // Count results.
       const numResults = isMatching.length;

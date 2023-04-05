@@ -28,13 +28,13 @@ gallery:
   comment: At the end of the day we stopped at a lake to eat empanadas and enjoy the sun.
 
 tags:
-- trekking
 - tours
+- trekking
 - waterfalls
 
 summary: We took a waterfall tour that took us to many points around the seven lakes, including the Huilo Huilo Biological Reserve.
 ---
 
-The tour description promised lots of hiking and trekking, but they drove around from point to point. We were expecting something more physical but when we saw the other groups — composed mostly of families with children — we decided it was just our adventurous spirit that was out of place 😄
+The tour description promised lots of hiking and trekking, but they drove around from point to point. We were expecting something more physical but when we saw the other groups — composed mostly of families with children — we decided it was just our adventurous spirit that was out of place 😄
 
 Some other stops on the tour are a lake with boat rentals, a brewery, and this very strange tree-covered hotel hidden in the forest.

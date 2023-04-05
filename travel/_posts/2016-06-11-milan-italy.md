@@ -28,11 +28,12 @@ gallery2:
   comment: We had delicious pizza by the slice at a charming, boistrous local pizzeria in our AirBnB neighborhood.
 - src: milan-6.jpg
   alt: Plates of bread and cheese.
-  comment: German bread from Freiburg with italian fixin's — salami, brie, smoked scamorza, provologne, and basil pesto.
+  comment: German bread from Freiburg with italian fixin's — salami, brie, smoked scamorza, provologne, and basil pesto.
 - src: milan-7.jpg
   alt: Three plates of pasta.
   comment: Our last meal was a table of pasta with Johnny the Eagle (my elementary school mascot). The school is doing a summer vacation photo series so we took him on our trip.
 - caption: A glimpse of our Italian food tour.
+
 tags:
 - city walking
 - food

@@ -20,8 +20,10 @@ gallery:
   bgpad: 40%
 
 tags:
+- family
 - lakes
 - swimming
+- travel at home
 
 summary: We used some of our last summer days to go swimming in a nearby lake.
 ---

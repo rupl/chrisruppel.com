@@ -31,6 +31,7 @@ gallery:
 
 tags:
 - boats
+- family
 - farming
 - islands
 

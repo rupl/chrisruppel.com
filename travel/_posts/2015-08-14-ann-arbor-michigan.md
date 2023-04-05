@@ -23,9 +23,9 @@ gallery:
   bgpos: 30% 0
 
 tags:
-- kayaking
-- friends
 - food
+- friends
+- kayaking
 
 summary: We visited Jordan and Annette in Ann Arbor, Michigan. We had a fun week of hiking, canoeing, and furniture-building.
 ---

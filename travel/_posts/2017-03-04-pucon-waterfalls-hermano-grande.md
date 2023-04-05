@@ -16,7 +16,6 @@ gallery2:
   alt: Man jumping into river from a tall rock.
   comment: John takes the plunge near Hermano Chico.
 
-
 gallery:
 - gridtype: col-2
 - src: hermano-grande-4.jpg
@@ -63,13 +62,13 @@ gallery3:
 
 tags:
 - trekking
-- waterfalls
 - viewpoints
+- waterfalls
 
 summary: We explored Hector's private property and found a waterfall viewpoint like none other.
 ---
 
-After our successful hike to the Araucaria, Hector gave us a few options, one of which was a "more jungly waterfall hike" — after the dry heat of the previous day we were all loving the sound of waterfalls.
+After our successful hike to the Araucaria, Hector gave us a few options, one of which was a "more jungly waterfall hike" — after the dry heat of the previous day we were all loving the sound of waterfalls.
 
 We took off, bouncing shoulder to shoulder in his 4-wheeler as we drove toward a small piece of land he owned. The land is still undeveloped, but on its edge runs a river containing a series of waterfalls.
 
@@ -105,6 +104,6 @@ It felt quite special seeing a hidden, unknown waterfall, especially after being
 
 ---
 
-We actually ended the day by going to more thermal baths up in the mountains. The owner was a friend of Hector's — an american named Daniel-san — and he let us come in for a night swim despite closing at 8pm. He gave us all hugs because according to him "you never know if it's you last chance to get a hug" — given where we'd just been it was sound advice!
+We actually ended the day by going to more thermal baths up in the mountains. The owner was a friend of Hector's — an american named Daniel-san — and he let us come in for a night swim despite closing at 8pm. He gave us all hugs because according to him "you never know if it's you last chance to get a hug" — given where we'd just been it was sound advice!
 
 We washed away the aches of hiking in the natural thermal pools, floating on our backs and counting shooting stars as the Milky Way hung above us.

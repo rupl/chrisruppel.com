@@ -1,0 +1,40 @@
+<footer role="contentinfo" class="site-footer p-author h-card vcard">
+  <section class="wrapper stack">
+    <a class="face-link" href="{{ site.url }}">
+      <img alt="my face" class="me u-photo u-logo"
+        width="120" height="120"
+        loading="lazy" lazyload="1"
+        src="/static/chris-ruppel-2015@384x384.jpg"
+        srcset="/static/chris-ruppel-2015@512x512.jpg 2x">
+    </a>
+
+    <div class="p-role p-note stack">
+      <p>Hello, I'm <a rel="author me" class="p-name fn u-url" href="{{ site.url }}/about/">Chris Ruppel</a>.</p>
+      <p class="balance">
+        I'm into <span class="p-category">frontend development</span>,
+        <span class="p-category">gardening</span>,
+        <span class="p-category">mycology</span>,
+        <span class="p-category">sustainable energy</span>, and
+        <span class="p-category">sci<span class="visually-hidden">ence</span>-fi<span class="visually-hidden">ction</span></span>.
+      </p>
+      <p class="balance">
+        I oppose racism, sexism, fascism, ableism, homophobia, transphobia, and capitalism.
+      </p>
+      <p class="balance">
+        Find me on <a rel="me" href="https://mastodon.social/@rupl">Mastodon</a>,
+        <a rel="me" href="https://github.com/rupl">GitHub</a>, or
+        <a rel="me" href="https://drupal.org/u/rupl">Drupal</a>.
+      </p>
+      <p>
+        My pronouns are <span class="p-pronoun h-pronoun">he</span>/<span class="p-pronoun h-pronoun">him</span>.
+      </p>
+    </div>
+
+    {% include 'site-nav.html' %}
+
+    <p class="colophon">
+      <a href="{{ site.license-url }}">&#169; {{'now' | date: '%Y'}} Chris Ruppel</a> —
+      <a href="{{ site.feedback-url }}">Got feedback?</a>
+    </p>
+  </section>
+</footer>

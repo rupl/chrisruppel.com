@@ -26,6 +26,7 @@ gallery:
 
 
 tags:
+- city walking
 - food
 - friends
 

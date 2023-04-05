@@ -144,9 +144,9 @@ Once you are taking readings, it's important to figure out what the bounds for y
 * 0-45 — completely dry soil
 * 890 — immediately after watering dry soil
 * 875 — second day
-* 872 — third day
-* 823 — fourth day
-* 460 — fifth day
+* 872 — third day
+* 823 — fourth day
+* 460 — fifth day
 
 This sharp drop on the last day indicates to me that most of the soil surrounding my sensor is pretty dry. There is probably some moisture near the bottom of the pot, but if the sensor is pushed deeply enough into the dirt, then it's a good indication that the plant actually needs some water.
 

@@ -1,0 +1,50 @@
+/**
+ * Individual tags
+ */
+a[rel="tag"] {
+  color: #333;
+}
+
+a[rel="tag"]::before {
+  content: '#';
+  text-decoration: none;
+}
+
+
+/**
+ * Tag cloud
+ */
+.tag-list {
+  max-width: 800px;
+  clear: both;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+  list-style: none;
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-list li {
+  margin: 0;
+  order: calc(0 - var(--tag-weight));
+}
+
+.tag-list a {
+  flex: 1 0 10%;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: max(calc(var(--tag-weight) / 10 * .7em), .7em);
+  color: inherit;
+  white-space: nowrap;
+  word-spacing: -.6em;
+}
+
+/* When the last line only has a couple tags, push them all to the side
+instead of spacing them out evenly. */
+.tag-list a:last-child {
+  flex-basis: 50%;
+}

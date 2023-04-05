@@ -18,13 +18,13 @@ gallery:
   comment: The view during breakfast.
 - src: ayothaya-riverside-3.jpg
   alt: People sticking their feet in a river.
-  comment: Ya treated us to his version of a Thai "fish spa" — he feeds the fish every day and lets them know he's coming by sticking his feet in. The other two ladies are Anna and Lina from Germany, who we met when we arrived.
+  comment: Ya treated us to his version of a Thai "fish spa" — he feeds the fish every day and lets them know he's coming by sticking his feet in. The other two ladies are Anna and Lina from Germany, who we met when we arrived.
 - src: ayothaya-riverside-6.jpg
   alt: People singing songs and playing guitar.
   comment: Ya said the price of our dinner was that we had to sing songs with him. It was a really great way to break the ice and goof off with him.
 - src: ayothaya-riverside-7.jpg
   alt: Man burning paper with a cigarette.
-  comment: Ya taught us a "drinking" game — burn the toilet paper with a cigarette but don't let the coin fall in. Loser drinks a glass of warm water, which is a real punishment in the Thai summer!
+  comment: Ya taught us a "drinking" game — burn the toilet paper with a cigarette but don't let the coin fall in. Loser drinks a glass of warm water, which is a real punishment in the Thai summer!
   bgpos: 0 42%
 - src: ayothaya-riverside-5.jpg
   alt: A boat anchored in place with evening sun shining on it.
@@ -38,8 +38,8 @@ gallery:
   bgpad: 51%
 
 tags:
-- hostels
 - friends
+- hostels
 
 summary: We stayed at the Ayothaya Riverside House and made many great new friends.
 ---

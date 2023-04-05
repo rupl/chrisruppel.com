@@ -26,8 +26,8 @@ gallery:
   bgpad: 36%
 
 tags:
-- friends
 - city walking
+- friends
 - viewpoints
 
 summary: We surprised one of Karin's friends with a visit. While there we did a little bit of city walking too.

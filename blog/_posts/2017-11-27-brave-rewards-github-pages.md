@@ -47,7 +47,7 @@ Register your subdomain by following the instructions at the [Brave Creators por
 
 They will guide you through some account setup, then give you the choice of either DNS or file upload verification. We're using the file upload method.
 
-### Step 2: Create root GitHub Pages site
+### Step 2: Create root GitHub Pages site
 
 GitHub allows people who [create a repo with the name `USER.github.io`](https://pages.github.com/#user-site) to control the root of their GitHub Pages space. It's static website hosting, so you can place files in any directory you want.
 

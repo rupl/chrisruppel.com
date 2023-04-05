@@ -1,0 +1,83 @@
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be collapsible details that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ *
+ * @see https://git.drupalcode.org/project/drupal/-/blob/dfacc85499fa63d65993f260e956d4e82e9c4f0f/core/modules/system/css/components/hidden.module.css#L6-16
+ */
+.hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ *
+ * @see https://git.drupalcode.org/project/drupal/-/blob/dfacc85499fa63d65993f260e956d4e82e9c4f0f/core/modules/system/css/components/hidden.module.css#L18-33
+ */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+/**
+ * The .focusable class extends the .visually-hidden class to allow
+ * the element to be focusable when navigated to via the keyboard.
+ *
+ * @see https://git.drupalcode.org/project/drupal/-/blob/dfacc85499fa63d65993f260e956d4e82e9c4f0f/core/modules/system/css/components/hidden.module.css#L35-46
+ */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  position: static !important;
+  overflow: visible;
+  clip: auto;
+  width: auto;
+  height: auto;
+}
+
+/**
+ * Hide visually and from screen readers, but maintain layout.
+ *
+ * @see https://git.drupalcode.org/project/drupal/-/blob/dfacc85499fa63d65993f260e956d4e82e9c4f0f/core/modules/system/css/components/hidden.module.css#L48-53
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/**
+ * Float-clearing.
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * The Stack
+ *
+ * @see https://every-layout.dev/layouts/stack/
+ */
+.stack > * + * {
+  margin-block-start: var(--flow-space);
+}
+
+/**
+ * Balanced text.
+ *
+ * This is intended for short (<4 lines) of text like headings, that they
+ * automatically wrap attractively instead of filling their horizontal space.
+ */
+.balance {
+  text-wrap: balance;
+}

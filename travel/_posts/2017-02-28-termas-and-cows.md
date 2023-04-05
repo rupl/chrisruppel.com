@@ -31,8 +31,8 @@ gallery:
   alt: Two more cows.
 
 tags:
-- thermal baths
 - animals
+- thermal baths
 
 summary: We walked to a nearby thermal bath on a rainy day.
 ---

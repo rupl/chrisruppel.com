@@ -28,8 +28,8 @@ gallery:
   type: wide
 
 tags:
-- hostels
 - beaches
+- hostels
 
 summary: Our stop at Buccaneers was our last of the trip because it was so great! We stayed several days longer than we planned. It's a beautiful community situated across the entire side of a mountain facing the coast of Cintsa Bay.
 ---

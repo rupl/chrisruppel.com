@@ -19,8 +19,7 @@ After enabling users to selectively save content offline, I pumped my fist and c
 
 But over time, I began to feel like it wasn't enough. I have a generic [Offline page](/offline/) that is primarily used by the Service Worker when an uncached URL is visited. I felt like adding the user's saved articles to this page is really helpful, showing them the right content in the moment of need.
 
-<!-- lol, this still works -->
-<center><img width="317" height="558" src="{{ site.img-host }}/img/service-worker-offline-content-list-1.png" alt="Screenshot of an offline content list in Nexus 5X"/></center>
+<img width="317" height="558" src="{{ site.img-host }}/img/service-worker-offline-content-list-1.png" alt="Screenshot of an offline content list in Nexus 5X"/>
 
 Luckily, there's not so much code needed to pull this off. The code below relies on the fact that all the user-saved caches have the same naming convention. All I have to do is loop through the caches and find any entries with the offline prefix:
 

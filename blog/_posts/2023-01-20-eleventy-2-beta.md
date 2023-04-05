@@ -1,6 +1,8 @@
 ---
 title: Congrats, Eleventy team!
 
+summary: A warm round of applause for the new release.
+
 tags:
 - eleventy
 ---

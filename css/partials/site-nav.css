@@ -1,0 +1,22 @@
+.site-nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  font-size: 18px;
+  gap: .5rem;
+}
+
+.site-nav li {
+}
+
+.site-nav a {
+  display: block;
+  padding: .5rem;
+  background: #0001;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+.site-nav a.active {
+  border-color: #0003;
+}

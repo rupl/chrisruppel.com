@@ -51,9 +51,10 @@ gallery2:
 - caption: Bom and Ut treated us to an unexpectedly legit Thanksgiving dinner!
 
 tags:
+- food
+- maps
 - motorbikes
 - tours
-- maps
 
 summary: Day 2 of our Easy Rider tour brought us to many stages of the coffee production process, a waterfall, and an unexpected Thanksgiving feast!
 ---

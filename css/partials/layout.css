@@ -1,0 +1,30 @@
+.layout {
+  max-width: var(--layout-max);
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0;
+}
+
+main,
+footer[role="contentinfo"] {
+  padding: 1.5rem;
+}
+
+/* var(--layout-max) */
+@media (min-width: 1460px) {
+  .layout {
+    flex-flow: row nowrap;
+  }
+  main {
+    flex: 1 1 100%;
+  }
+  footer[role="contentinfo"] {
+    order: -1;
+    flex: 0 0 var(--footer-max);
+  }
+  footer[role="contentinfo"] a {
+    position: relative;
+    z-index: 1;
+  }
+}

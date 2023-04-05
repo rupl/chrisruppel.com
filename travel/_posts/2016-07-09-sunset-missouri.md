@@ -20,7 +20,6 @@ gallery:
 
 tags:
 - sunsets
-- artwork
 
 summary: We saw a gorgeous sunset while driving back from Illinois to Texas.
 ---
