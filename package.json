@@ -45,7 +45,7 @@
     "screenfull": "^3.3.2",
     "system-font-css": "^2.0.2",
     "tar": ">=5.0.10",
-    "three": "^0.80.1"
+    "three": "^0.125.0"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/gulp build-deploy",
