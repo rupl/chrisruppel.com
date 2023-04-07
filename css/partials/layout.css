@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 .layout {
   max-width: var(--layout-max);
   height: 100%;
@@ -8,13 +12,13 @@
 
 main,
 footer[role="contentinfo"] {
-  padding: 1.5rem;
+  padding: var(--flow-space);
 }
 
-/* var(--layout-max) */
-@media (min-width: 1460px) {
+@media (min-width: 1200px) {
   .layout {
     flex-flow: row nowrap;
+    align-items: stretch;
   }
   main {
     flex: 1 1 100%;

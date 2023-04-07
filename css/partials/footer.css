@@ -5,7 +5,7 @@
 }
 
 .site-footer .wrapper {
-  max-width: 400px;
+  max-width: var(--footer-max);
   margin-inline-start: auto;
   margin-inline-end: 0;
 }
@@ -39,9 +39,17 @@
   justify-content: flex-end;
 }
 
-@media (min-width: 1460px) {
+@media (min-width: 1200px) {
+  .site-footer .wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: var(--flow-space);
+    max-width: var(--footer-max);
+  }
+
   /* separator */
-  .site-footer::after {
+  .site-footer .wrapper::after {
     content: '';
     border-inline-end: 1px solid currentColor;
     position: absolute;
