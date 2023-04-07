@@ -22,4 +22,8 @@ THE SOFTWARE.
 
 # Content license
 
-All content is [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/us/) unless otherwise specified.
+All original content is licensed [CC BY-NC-SA 4.0][cc-by-nc-sa-4] unless otherwise specified. Basically,
+you're free to use or remix the content for non-commercial purposes, but give
+me visible credit on your copy.
+
+  [cc-by-nc-sa-4]: https://creativecommons.org/licenses/by-nc-sa/4.0/
