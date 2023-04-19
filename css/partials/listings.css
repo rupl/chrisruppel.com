@@ -1,4 +1,26 @@
 .listing {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-block-end: var(--flow-space);
+
+  .site-nav {
+    order: -1;
+    margin-block: 0;
+  }
+
+  .site-nav ul {
+    justify-content: flex-start;
+    margin-block-end: var(--flow-space);
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .site-nav a {
+    color: inherit;
+  }
+
   .search__input {
     max-width: 50ch;
     width: 100%;
