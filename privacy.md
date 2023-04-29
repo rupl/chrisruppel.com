@@ -1,7 +1,7 @@
 ---
 layout: about
 title: Privacy
-permalink: /privacy
+permalink: /privacy/
 ---
 
 **This site does not store any information about you as a visitor.**
