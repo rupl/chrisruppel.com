@@ -19,4 +19,4 @@ By using the HTML itself to populate an offline list, we skip any need for index
 
 I've already implemented this on my offline page using title, URL, summary, and time published. But with enough microformatted data you could leverage tags, or selectively pull out rich content like images. The possibilities are endless!
 
-I'm already loving how this looks on my [offline page](/offline). Save this article before visiting if you want to see it in action. 👇
+I'm already loving how this looks on my [offline page](/offline/). Save this article before visiting if you want to see it in action. 👇

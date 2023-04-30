@@ -54,4 +54,4 @@ Once a person has saved a couple articles, they will see this when visiting my s
 
 For now, mine only alters the list when offline. However, the cache can be read any time and other enhancements could be useful even when a connection is available, for example to show an icon next to entries that will be available offline. 
 
-Try it out by using the *Save Article Offline* button below, then visiting the [Offline page](/offline). Let me know in the comments if you have any questions or ideas to improve the code.
+Try it out by using the *Save Article Offline* button below, then visiting the [Offline page](/offline/). Let me know in the comments if you have any questions or ideas to improve the code.
