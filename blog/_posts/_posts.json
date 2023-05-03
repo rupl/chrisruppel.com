@@ -2,5 +2,6 @@
   "type": "blog",
   "layout": "blog",
   "permalink": "/blog/{{ page.fileSlug }}/",
+  "meta": true,
   "comments": true
 }
