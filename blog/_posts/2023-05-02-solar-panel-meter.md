@@ -16,6 +16,10 @@ gallery:
     bgpad: 60%
     bgpos: 50% 25%
 
+syndication:
+  - type: Mastodon
+    href: https://mastodon.social/@rupl/110298290204205664
+
 tags:
 - balkonsolar
 - diy
