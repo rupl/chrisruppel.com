@@ -15,6 +15,12 @@ gallery:
     type: wide
     bgpad: 60%
     bgpos: 50% 25%
+  - src: solar-meter-2.jpeg
+    alt: A digital meter for solar panels mounted on a wall outside a window, viewed from inside the window.
+    comment: Mounted on the wall, visible from our living room couch.
+    type: wide
+    bgpad: 60%
+    bgpos: 50% 25%
 
 syndication:
   - type: Mastodon
@@ -28,7 +34,7 @@ tags:
 - sustainable energy
 ---
 
-Pretty easy addition to our balcony solar setup, which is grid-tie. I spliced it in near the wall outlet and will attach it next to the window so that we can read it from inside the living room.
+Pretty easy addition to our balcony solar setup, which is grid-tie. I spliced it in near the wall outlet and mounted it on the wall just outside the window so that we can read it from inside the living room.
 
 {% include 'gallery.html' %}
 
