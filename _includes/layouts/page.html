@@ -54,7 +54,8 @@
     <meta property="og:url" content="{{ site.url }}{{ url }}">
     <meta property="og:title" content="{{ title | escape | strip_newlines }}{% if location %} {% include 'location.html' %}{% endif %}">
     <meta property="og:description" content="{% if summary %}{{ summary | strip_html | strip_newlines | escape }}{% else %}{{ content | truncatewords: 44, '...' | strip_html | escape }}{% endif %}">
-    <meta property="og:image" content="{{ site.img-host }}/img/img@640/{% if gallery[0].src %}{{ gallery[0].src }}{% else %}{{ gallery[1].src }}{% endif %}">
+    {% capture social_filename %}{%- if gallery[0].src %}{{ gallery[0].src | split: '.' | first }}{% else %}{{ gallery[1].src | split: '.' | first }}{% endif -%}{% endcapture -%}
+    <meta property="og:image" content="{{ site.img-host }}/img/img@640/{{ social_filename }}.jpeg">
   {% endif %}
 
     <!-- main site styles -->
