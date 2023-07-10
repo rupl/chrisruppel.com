@@ -17,10 +17,10 @@ bodyclass: page--front
   <a class="btn btn--work" href="/work/">Hire Me!</a>
 </nav>
 
-<section aria-labelledby="blog" class="listing stack">
+<div class="listing stack">
   <h1 id="blog" class="title--main">Latest posts</h1>
 
-  <div id="blog-list" class="blog-list listing__list listing--front stack" data-autoupdate="true">
+  <ul role="list" id="blog-list" class="blog-list listing__list listing--front stack" data-autoupdate="true">
     {% include 'blog-latest.html' %}
-  </div>
-</section>
+  </ul>
+</div>
