@@ -2,11 +2,8 @@ body {
   color: var(--color);
   background: var(--color-bg);
   font-family: var(--font-copy);
-  font-size: 20px;
-
-  @media (min-width: 600px) {
-    font-size: 27px;
-  }
+  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.6875rem);
 }
 
 

@@ -1,4 +1,8 @@
 .page--front {
+  .hello.intro {
+    margin-block-start: .5rem;
+  }
+
   .go {
     justify-content: flex-start;
     margin-block: 2.5rem;
