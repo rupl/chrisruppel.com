@@ -39,27 +39,11 @@ sup {
 }
 
 /* Acronymns and abbreviations should indicate that the expanded meaning can be
-seen by displaying a (?) which will reveal title text on mouseover. */
+seen by underlining, which will reveal title text on mouseover. */
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
-  margin-right: .5em;
   text-decoration: none;
-  position: relative;
-
-  &:after {
-    content: '(?)';
-    vertical-align: top;
-    line-height: 0;
-    font-family: serif;
-    font-size: 0.5em;
-    font-weight: 700;
-    letter-spacing: 0;
-
-    position: absolute;
-    top: .5em;
-    right: -1.25em;
-  }
 }
 
 /* italicize any foreign-language abbreviations */
