@@ -26,11 +26,6 @@
   text-align: center;
 }
 
-.the-end::after {
-  content: ' × \00a0\00a0 × \00a0\00a0 ×';
-  speak: none;
-}
-
 .entry-meta {
   margin-block: var(--flow-space);
   padding: var(--section-padding);
