@@ -11,7 +11,7 @@ comments: true
     <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%b %-d, %Y' }}</time>
   </div>
 
-  <aside class="intro summary p-summary">{{ summary }}</aside>
+  <aside class="intro summary p-summary" aria-label="Summary">{{ summary }}</aside>
 
   <div class="e-content stack">
     {% if link %}
