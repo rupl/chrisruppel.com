@@ -72,3 +72,7 @@
 .go .btn--mail:hover::before {
   animation: wiggle 1s ease-out;
 }
+
+.go .btn[disabled] {
+  background-color: #0002;
+}
