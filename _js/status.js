@@ -1,19 +1,14 @@
 //
 // Status notifications
 //
-(function iife() {
-  // Hide status messages when dismissed.
-  $('#status .dismiss').on('click', function() {
-    $('#status').classList.remove('is-displayed');
-  });
-})();
-
-//
 // Sets a message and triggers the notification to be visible.
+// The message will be hidden after a few seconds.
 //
 function displayMessage(message) {
+  $('#status').setAttribute('aria-hidden', 'false');
   $('#message').innerText = message;
-  $('#status').classList.add('is-displayed');
+  $('#status').classList.add('is--displayed');
+  setTimeout(hideMessage, 4000);
 }
 
 //
@@ -24,4 +19,15 @@ function displayMessage(message) {
 //
 function appendMessage(message) {
   $('#message').innerText += ' ' + message;
+}
+
+//
+// Hide status bar
+//
+// It doesn't affect the contents, so no SR announcements will be made.
+//
+function hideMessage() {
+  $('#status').classList.remove('is--displayed');
+  $('#message').innetText = '';
+  $('#status').setAttribute('aria-hidden', 'true');
 }
