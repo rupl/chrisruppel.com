@@ -11,7 +11,7 @@ html, body {
 }
 
 main,
-footer[role="contentinfo"] {
+.site-footer {
   padding: var(--flow-space);
 }
 
@@ -23,11 +23,11 @@ footer[role="contentinfo"] {
   main {
     flex: 1 1 100%;
   }
-  footer[role="contentinfo"] {
+  .site-footer {
     order: -1;
     flex: 0 0 var(--footer-max);
   }
-  footer[role="contentinfo"] a {
+  .site-footer a {
     position: relative;
     z-index: 1;
   }

@@ -6,21 +6,21 @@ bodyclass: page--front
 ---
 
 <p class="hello intro p-role">
-  I'm <strong>Chris Ruppel</strong>.<br>
-  I'm a <span class="p-category">developer</span> at <abbr class="p-org" title="United Nations Office for the Coordination of Humanitarian Affairs">UN OCHA</abbr>.<br>
+  I'm <strong>Chris Ruppel</strong>.<br aria-hidden="true">
+  I'm a <span class="p-category">developer</span> at <span class="p-org" aria-label="United Nations Office for the Coordination of Humanitarian Affairs" title="United Nations Office for the Coordination of Humanitarian Affairs">UN OCHA</span><br aria-hidden="true">
   I was last seen {% include 'last-seen.html', prep: 'around' %}.<br>
 </p>
 
-<nav class="go">
+<nav class="go" aria-label="Main">
   <a class="btn btn--blog" href="/blog/">On the Internet</a>
   <a class="btn btn--travel" href="/travel/">On the Road</a>
   <a class="btn btn--work" href="/work/">Hire Me!</a>
 </nav>
 
-<section aria-labelledby="blog" class="listing stack">
+<div class="listing stack">
   <h1 id="blog" class="title--main">Latest posts</h1>
 
-  <div id="blog-list" class="blog-list listing__list listing--front stack" data-autoupdate="true">
+  <ul role="list" id="blog-list" class="blog-list listing__list listing--front stack" data-autoupdate="true">
     {% include 'blog-latest.html' %}
-  </div>
-</section>
+  </ul>
+</div>

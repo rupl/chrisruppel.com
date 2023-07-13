@@ -77,7 +77,7 @@
       var pageCache = caches.match(currentURL);
       pageCache.then(function updateButtonText(response) {
         if (typeof response !== 'undefined') {
-          cacheButton.innerText = 'Update saved article';
+          cacheButton.innerText = 'Update article';
           cacheButton.dataset.state = 'update';
         }
       });
@@ -103,7 +103,6 @@
         // Update UI to indicate pending action.
         blurAll();
         cacheButton.classList.add('btn--working');
-        cacheButton.innerText = 'Fetching content...';
         cacheButton.disabled = true;
 
         // Open cache. If cache already exists it overwrites existing files.
@@ -119,12 +118,10 @@
             cacheButton.classList.remove('btn--working');
             cacheButton.classList.add('btn--success');
 
-            // Provide feedback to user and log event in analytics.
+            // Provide feedback to user.
             if (cacheButton.dataset.state === 'update') {
-              cacheButton.innerText = 'Article updated!';
               displayMessage('Offline article has been updated. Glad it\'s useful!');
             } else {
-              cacheButton.innerText = 'Article saved!';
               displayMessage('Article is now available offline. Hope it comes in handy!');
             }
 
@@ -138,8 +135,7 @@
             // Update UI to indicate failure. boo.
             cacheButton.classList.remove('btn--working');
             cacheButton.classList.add('btn--failed');
-            cacheButton.innerText = 'Couldn\'t save article';
-            displayMessage('The article could not be saved offline. Refresh and try again?');
+            displayMessage('Sorry! The article could not be saved offline.');
 
             // Log the event.
             console.error(error.message);

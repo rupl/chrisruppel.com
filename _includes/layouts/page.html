@@ -6,7 +6,7 @@
 {% if category != 'travel' %} - {% endif %}
 {% endcapture -%}
 <!DOCTYPE html>
-<html class="no-js" lang="en-US">
+<html class="no-js" lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>{{ title | strip_newlines }} {{ site.name }}</title>
@@ -74,15 +74,14 @@
   </head>
   <body class="h-entry {{ bodyclass }}">
     <div class="layout">
-      <main id="main" role="main">
+      <main id="main" aria-label="Content">
         {{ content }}
       </main>
       {% include 'site-footer.html' %}
     </div>
 
-    <div id="status" role="alert" aria-live="assertive">
+    <div id="status" role="status">
       <p id="message"></p>
-      <button class="dismiss"><span class="visually-hidden">Close this message</span></button>
     </div>
 
     <script defer src="/js/main.min.js"></script>

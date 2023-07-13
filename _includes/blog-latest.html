@@ -1,4 +1,5 @@
 {% for post in collections.blog limit:5 %}
+<li>
   <article class="teaser--title" data-url="{{ site.url }}{{ post.url }}">
     <header>
       <h2 class="title--main">
@@ -12,4 +13,5 @@
       {% endif %}
     </footer>
   </article>
+</li>
 {% endfor %}

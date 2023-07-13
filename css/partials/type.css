@@ -2,11 +2,8 @@ body {
   color: var(--color);
   background: var(--color-bg);
   font-family: var(--font-copy);
-  font-size: 20px;
-
-  @media (min-width: 600px) {
-    font-size: 27px;
-  }
+  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.6875rem);
 }
 
 
@@ -42,27 +39,11 @@ sup {
 }
 
 /* Acronymns and abbreviations should indicate that the expanded meaning can be
-seen by displaying a (?) which will reveal title text on mouseover. */
+seen by underlining, which will reveal title text on mouseover. */
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
-  margin-right: .5em;
   text-decoration: none;
-  position: relative;
-
-  &:after {
-    content: '(?)';
-    vertical-align: top;
-    line-height: 0;
-    font-family: serif;
-    font-size: 0.5em;
-    font-weight: 700;
-    letter-spacing: 0;
-
-    position: absolute;
-    top: .5em;
-    right: -1.25em;
-  }
 }
 
 /* italicize any foreign-language abbreviations */
@@ -149,8 +130,8 @@ main h6 {
   font-size: .9em;
 }
 
-ul:not([class]) li,
-ol:not([class]) li {
+ul:not([class],[role]) li,
+ol:not([class],[role]) li {
   line-height: 1.2;
   font-size: 95%;
   margin-right: 5%;
