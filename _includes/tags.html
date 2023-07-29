@@ -1,5 +1,5 @@
 <span class="tags">
   {% for tag in tags %}
-    <a rel="tag" class="p-category" href="/tags/{{ tag | replace: ' ','-' | downcase }}/"><span aria-hidden="true">#</span><span class="visually-hidden">hashtag</span>{{ tag | replace: ' ','-' | downcase }}</a>
+    <a rel="tag" class="p-category" href="/tags/{{ tag | replace: ' ','-' | downcase }}/"><span class="visually-hidden">hashtag</span><span aria-hidden="true">#</span>{{ tag | replace: ' ','-' | downcase }}</a>
   {% endfor %}
 </span>
