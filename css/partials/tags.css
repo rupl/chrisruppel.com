@@ -3,6 +3,7 @@
  */
 a[rel="tag"] {
   color: #333;
+  white-space: nowrap;
 }
 
 /**
