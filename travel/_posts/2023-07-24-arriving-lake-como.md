@@ -27,6 +27,7 @@ tags:
 - boats
 - lakes
 - road trips
+- viewpoints
 ---
 
 We took a road trip through Switzerland to Lake Como. It was a high-traffic trip with really long lines at the tunnels and a very heavy thunderstorm while coming down the mountain of Menaggio. But after all that, we managed to slide onto the ferry with literally one minute to spare!
