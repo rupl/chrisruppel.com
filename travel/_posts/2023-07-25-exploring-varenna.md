@@ -52,6 +52,7 @@ gallery3:
 
 tags:
 - city walking
+- food
 - lakes
 ---
 

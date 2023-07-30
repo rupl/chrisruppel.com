@@ -19,7 +19,7 @@ gallery:
     bgpad: 33%
   - src: ferry-lake-como-5.jpeg
     alt: A panoramic of Lake Como.
-    comment: The view form the corner bistro in Perledo, which is up the mountain from Varenna.
+    comment: The view from the corner bistro in Perledo, which is up the mountain from Varenna.
     type: wide
     bgpad: 30%
 
