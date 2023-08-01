@@ -1,18 +1,17 @@
 {%- capture title %}
 {% if title %}{{ title }}{% endif %}
-{% if location %} {% include 'location.html' %}{% endif %}
+{% if location %}{% include 'location.html' %}{% endif %}
 {% if category == 'travel' %} 🌍 {% endif %}
 {% if tag %}#{{ tag | replace: ' ','' | downcase }} {% endif %}
-{% if category != 'travel' %} - {% endif %}
 {% endcapture -%}
 <!DOCTYPE html>
 <html class="no-js" lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>{{ title | strip_newlines }} {{ site.name }}</title>
+    <title>{{ title | strip_newlines }} - {{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Personal website of Chris Ruppel, frontend developer.">
+    <meta name="description" content="Personal website of Chris Ruppel.">
     <link rel="home" href="{{ site.url }}">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="192x192" href="/static/chris-ruppel-2015-noborder@192x192.png">
@@ -52,7 +51,7 @@
     <meta name="twitter:creator" content="@rupl">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ url }}">
-    <meta property="og:title" content="{{ title | escape | strip_newlines }}{% if location %} {% include 'location.html' %}{% endif %}">
+    <meta property="og:title" content="{{ title | escape | strip_newlines }}">
     <meta property="og:description" content="{% if summary %}{{ summary | strip_html | strip_newlines | escape }}{% else %}{{ content | truncatewords: 44, '...' | strip_html | escape }}{% endif %}">
     {% capture social_filename %}{%- if gallery[0].src %}{{ gallery[0].src | split: '.' | first }}{% else %}{{ gallery[1].src | split: '.' | first }}{% endif -%}{% endcapture -%}
     <meta property="og:image" content="{{ site.img-host }}/img/img@640/{{ social_filename }}.jpeg">
