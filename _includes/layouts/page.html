@@ -59,10 +59,10 @@
 
   <!-- Site styles -->
   {%- capture criticalCss %}
-    {% include "css/index.css" %}
+    {% include "index.css" %}
   {% endcapture %}
   {% edge "liquid" criticalCss %}
-    {% if eleventy.edge.cookies.critical %}
+    {% if eleventy.edge.cookies.criticalLoaded %}
     <link rel="stylesheet" href="/css/index.css">
     {% else %}
     <style>{{ _ }}</style>

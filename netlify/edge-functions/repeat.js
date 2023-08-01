@@ -18,10 +18,10 @@ export default async (request, context) => {
         location: "/critical-css/",
       }
     });
-  } else if(!context.cookies.get("critical")) {
+  } else if(!context.cookies.get("criticalLoaded")) {
     // This new cookie value won’t be available until the next page request
     context.cookies.set({
-      name: "critical",
+      name: "criticalLoaded",
       value: 1,
       path: "/",
       httpOnly: true,
