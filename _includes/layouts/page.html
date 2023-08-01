@@ -57,8 +57,18 @@
     <meta property="og:image" content="{{ site.img-host }}/img/img@640/{{ social_filename }}.jpeg">
   {% endif %}
 
-    <!-- main site styles -->
-    <link rel="stylesheet" href="/css/index.css" type="text/css">
+  <!-- Site styles -->
+  {%- capture criticalCss %}
+    {% include "css/index.css" %}
+  {% endcapture %}
+  {% edge "liquid" criticalCss %}
+    {% if eleventy.edge.cookies.critical %}
+    <link rel="stylesheet" href="/css/index.css">
+    {% else %}
+    <style>{{ _ }}</style>
+    <link rel="stylesheet" href="/css/index.css" media="print" onload="this.media='all'">
+    {% endif %}
+  {% endedge %}
 
     <script>
       // JS is able to start executing.

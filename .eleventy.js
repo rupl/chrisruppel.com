@@ -3,8 +3,12 @@ const postcss = require('postcss');
 const postcssImport = require('postcss-import');
 const postcssNesting = require('postcss-nesting');
 const postcssMin = require('postcss-csso');
+const { EleventyEdgePlugin } = require("@11ty/eleventy");
 
 module.exports = function(config) {
+  // Plugins
+  config.addPlugin(EleventyEdgePlugin);
+
   // Define layout aliases. All paths relative to _includes
   config.addLayoutAlias('about', 'layouts/about.html');
   config.addLayoutAlias('blog', 'layouts/blog.html');
@@ -96,6 +100,7 @@ module.exports = function(config) {
       }
     },
   });
+
 
   return {
     dir: {
