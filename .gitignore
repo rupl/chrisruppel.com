@@ -27,7 +27,7 @@ npm-debug.log
 .DS_Store
 
 # Local Netlify folder
-.netlify
+netlify
 
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
