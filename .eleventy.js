@@ -1,8 +1,4 @@
 const markdownIt = require('markdown-it');
-const postcss = require('postcss');
-const postcssImport = require('postcss-import');
-const postcssNesting = require('postcss-nesting');
-const postcssMin = require('postcss-csso');
 const { EleventyEdgePlugin } = require("@11ty/eleventy");
 
 module.exports = function(config) {
@@ -74,33 +70,6 @@ module.exports = function(config) {
     linkify: false,
   };
   config.setLibrary('md', markdownIt(mdOptions));
-
-  //
-  // CSS Pipeline
-  //
-  config.addTemplateFormats('css');
-  config.addExtension('css', {
-    outputFileExtension: 'css',
-    compile: async (content, path) => {
-      return async (data) => {
-        // `data` holds the full data cascade. CSS was getting output inside the
-        // default HTML template so we set it to null here.
-        data.layout = null;
-
-        // PostCSS
-        let output = await postcss([
-          postcssImport,
-          postcssNesting,
-          postcssMin,
-        ]).process(content, {
-          from: path,
-        });
-
-        return output.css;
-      }
-    },
-  });
-
 
   return {
     dir: {

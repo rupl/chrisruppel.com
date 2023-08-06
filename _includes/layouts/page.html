@@ -16,6 +16,19 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="192x192" href="/static/chris-ruppel-2015-noborder@192x192.png">
 
+    <!-- Site styles -->
+    {%- capture criticalCss %}
+      {% include "index.min.css" %}
+    {% endcapture %}
+    {% edge "liquid" criticalCss %}
+      {% if eleventy.edge.cookies.criticalLoaded %}
+        <link rel="stylesheet" href="/css/index.min.css">
+      {% else %}
+        <style>{{ _ }}</style>
+        <link rel="stylesheet" href="/css/index.min.css" media="print" onload="this.media='all'">
+      {% endif %}
+    {% endedge %}
+
     <!-- indieweb sign-in -->
     <link rel="me" href="{{ site.url }}">
     <link rel="me" href="https://rupl.github.io">
@@ -56,19 +69,6 @@
     {% capture social_filename %}{%- if gallery[0].src %}{{ gallery[0].src | split: '.' | first }}{% else %}{{ gallery[1].src | split: '.' | first }}{% endif -%}{% endcapture -%}
     <meta property="og:image" content="{{ site.img-host }}/img/img@640/{{ social_filename }}.jpeg">
   {% endif %}
-
-  <!-- Site styles -->
-  {%- capture criticalCss %}
-    {% include "index.css" %}
-  {% endcapture %}
-  {% edge "liquid" criticalCss %}
-    {% if eleventy.edge.cookies.criticalLoaded %}
-    <link rel="stylesheet" href="/css/index.css">
-    {% else %}
-    <style>{{ _ }}</style>
-    <link rel="stylesheet" href="/css/index.css" media="print" onload="this.media='all'">
-    {% endif %}
-  {% endedge %}
 
     <script>
       // JS is able to start executing.
