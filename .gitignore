@@ -28,7 +28,6 @@ npm-debug.log
 
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
-netlify/edge-functions/eleventy-edge.js
 
 # Local Netlify folder
 .netlify
