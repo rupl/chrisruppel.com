@@ -5,7 +5,7 @@ img
 css/*min.css*
 js
 svg
-_includes/main.min.css
+_includes/index.min.css
 /service-worker.js
 *.css.map
 
