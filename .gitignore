@@ -13,6 +13,9 @@ _includes/main.min.css
 .env
 _config.dev.yml
 
+# Ignore new images during local development
+_img
+
 # Ignore asset caches
 .jekyll-metadata
 .jekyll-assets-cache
