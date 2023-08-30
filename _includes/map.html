@@ -9,7 +9,7 @@
   var geojson = {% include mapPath %};
   var geoJsonLineStrings = geojson.features.filter(f => f.geometry.type === 'LineString');
   if (geoJsonLineStrings.length === 0) {
-    geoJsonLineStrings = geojson.features[0].geometry.geometries.filter(f => f.type === 'LineString')
+    geoJsonLineStrings = geojson.features[geojson.features.length-1].geometry.geometries.filter(f => f.type === 'LineString')
   }
 
   // Init values.
