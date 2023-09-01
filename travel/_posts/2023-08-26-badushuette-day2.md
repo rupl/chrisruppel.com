@@ -24,7 +24,7 @@ gallery:
     bgpad: 25%
   - src: badushuette-day2-4.jpeg
     alt: 
-    comment: The other two proceed down towards Oberallppass.
+    comment: The other two proceed down towards Oberalppass.
     type: tall-half
     bgpos: 50% 30%
   - src: badushuette-day2-5.jpeg
