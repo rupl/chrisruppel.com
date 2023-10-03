@@ -36,7 +36,7 @@
     "map-stream": "0.0.7",
     "markdown-it": "^13.0.1",
     "node-fetch": "^2.6.7",
-    "postcss": "^8.4.19",
+    "postcss": "^8.4.31",
     "postcss-csso": "^6.0.1",
     "postcss-import": "^15.0.1",
     "postcss-nesting": "^11.2.1",
