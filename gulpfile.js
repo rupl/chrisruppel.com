@@ -13,11 +13,11 @@ var os = require('os');
 var bs = require('browser-sync');
 var reload = bs.reload;
 var rename = require('gulp-rename');
-var sass = require('gulp-sass')(require('sass'));
-var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
-var cssnano = require('cssnano');
 var postcss = require('gulp-postcss');
+var postcssImport = require('postcss-import');
+var postcssNesting = require('postcss-nesting');
+var postcssMin = require('postcss-csso');
 var uglify = require('gulp-uglify');
 var resize = require('gulp-sharp-responsive');
 var imagemin = require('gulp-imagemin');
@@ -41,26 +41,24 @@ module.exports['11ty-dev'] = eleventyDev;
 
 
 //——————————————————————————————————————————————————————————————————————————————
-// Sass
+// CSS pipeline
 //——————————————————————————————————————————————————————————————————————————————
-gulp.task('sass', () => {
-  bs.notify('sass-main compiling...');
+gulp.task('css', () => {
+  bs.notify('css compiling...');
 
-  return gulp.src('_sass/styles.scss')
-    .pipe(plumber())
-    .pipe(gulpif(!isProduction, sourcemaps.init()))
-    .pipe(sass().on('error', sass.logError))
+  return gulp.src('css/index.css')
     .pipe(postcss([
-      cssnano(),
+      postcssImport(),
+      postcssNesting(),
+      postcssMin(),
     ]))
-    .pipe(rename('main.min.css'))
-    .pipe(gulpif(!isProduction, sourcemaps.write('./')))
+    .pipe(rename('index.min.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
-    .pipe(gulp.dest('_includes')) // for the site includes
+    .pipe(gulp.dest('_includes')) // for Eleventy Edge to inline
     .pipe(reload({stream: true}));
 });
-module.exports.sass = gulp.series('sass');
+module.exports.css = gulp.series('css');
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -269,14 +267,14 @@ gulp.task('kml-to-geojson', () => {
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for deployment to live server.
 //——————————————————————————————————————————————————————————————————————————————
-const buildDeployTask = gulp.task('build-deploy', gulp.parallel('js', 'image-svg', 'image-photosphere', 'kml-to-geojson'));
+const buildDeployTask = gulp.task('build-deploy', gulp.parallel('css', 'js', 'image-svg', 'image-photosphere', 'kml-to-geojson'));
 module.exports['build-deploy'] = buildDeployTask;
 
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for local development.
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('build-dev', gulp.series(
-  gulp.parallel('js', 'images'),
+  gulp.parallel('css', 'js', 'images'),
   eleventyDev,
 ));
 
@@ -297,6 +295,7 @@ gulp.task('browser-sync', () => {
 // Watch Files For Changes
 gulp.task('watch', (done) => {
   log(c.yellow('Waiting for changes...'));
+  gulp.watch('css/**/*.css', gulp.series('css'));
   gulp.watch('_img/photosphere/*', gulp.series('image-photosphere'));
   gulp.watch('_img/*.{jpg,jpeg,png}', gulp.parallel('image-resize'));
   gulp.watch('_svg/*', gulp.series('image-svg'));
@@ -304,7 +303,7 @@ gulp.task('watch', (done) => {
   gulp.watch('_js/sw/*', gulp.series('js-sw'));
   gulp.watch('_js/*', gulp.series('js-main'));
   gulp.watch('_js/custom/*', gulp.series('js-custom'));
-  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', 'css/**/*.css', '!_site/**/*.*'], eleventyDev);
+  gulp.watch(['_config*', '**/*.{md,html}', 'travel.{xml,json}', 'maps/*.kml', '!_site/**/*.*'], eleventyDev);
   done();
 });
 

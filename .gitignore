@@ -5,7 +5,7 @@ img
 css/*min.css*
 js
 svg
-_includes/main.min.css
+_includes/index.min.css
 /service-worker.js
 *.css.map
 
@@ -28,6 +28,9 @@ npm-debug.log
 
 # Ignore other stuff
 .DS_Store
+
+# Eleventy Edge Build Data files
+netlify/edge-functions/_generated
 
 # Local Netlify folder
 .netlify
