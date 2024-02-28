@@ -8,17 +8,17 @@ tags:
 - web standards
 ---
 
-Brad Frost [combined &lt;picture&gt; and the prefers-reduced-motion media query](http://bradfrost.com/blog/post/reducing-motion-with-the-picture-element/) to achieve delightfully simple and effective results. I immediately imagined the possibilites of using media queries that don't relate to the viewport size.
+Brad Frost [combined picture and the prefers-reduced-motion media query](http://bradfrost.com/blog/post/reducing-motion-with-the-picture-element/) to achieve delightfully simple and effective results. I immediately imagined the possibilites of using media queries that don't relate to the viewport size.
 
 ## Dark mode imagery
 
 Why not use some other media queries in `&lt;picture>`?
 
 ```html
-<picture>
-  <source srcset="dark.jpg" media="(prefers-color-scheme: dark)">
-  <img src="original.jpg">
-</picture>
+&lt;picture>
+  &lt;source srcset="dark.jpg" media="(prefers-color-scheme: dark)">
+  &lt;img src="original.jpg">
+&lt;/picture>
 ```
 
 Let's see it in action:
@@ -28,7 +28,7 @@ Let's see it in action:
   <source srcset="{{ site.img-host }}/img/picture-mq-dark.jpg" media="(prefers-color-scheme: dark)">
   <img src="{{ site.img-host }}/img/picture-mq-original.jpg">
 </picture>
-<figcaption><small class="caption"><code>&lt;picture&gt;</code> element with a <code>prefers-color-scheme</code> media query.</small></figcaption>
+<figcaption><small class="caption">This picture element is rendered with a <code>prefers-color-scheme</code> media query.</small></figcaption>
 </figure>
 
 <strong>Try it using your OS preferences for dark mode!</strong>
@@ -39,7 +39,7 @@ The [WebKit blog](https://webkit.org/blog/8840/dark-mode-support-in-webkit/) has
 
 <style type="text/css">
   @media (prefers-color-scheme: dark) {
-    html,main {
+    html,body,main {
       background: #222;
       color: #ccc;
     }
@@ -47,8 +47,15 @@ The [WebKit blog](https://webkit.org/blog/8840/dark-mode-support-in-webkit/) has
       color: #222;
       background: #666;
     }
-    main .e-content a {
+    main .e-content a,
+    aside.webmentions a,
+    footer.meta a {
       color: #36f;
+    }
+    .go .btn,
+    .site-nav a {
+      background: #fffd;
+      color: #000;
     }
   }
 </style>
