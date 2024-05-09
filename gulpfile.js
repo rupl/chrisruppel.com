@@ -304,7 +304,6 @@ gulp.task('watch', (done) => {
   log(c.yellow('Waiting for changes...'));
   gulp.watch('_img/photosphere/*', gulp.series('image-photosphere'));
   gulp.watch('_img/*.{jpg,jpeg,png}', gulp.parallel('image-resize'));
-  gulp.watch('_svg/*', gulp.series('image-svg'));
   gulp.watch('_js/threejs/*', gulp.series('js-sphere'));
   gulp.watch('_js/sw/*', gulp.series('js-sw'));
   gulp.watch('_js/*', gulp.series('js-main'));
