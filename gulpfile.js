@@ -229,9 +229,21 @@ gulp.task('image-resize-1280', () => {
 
 // Photospheres
 gulp.task('image-photosphere', () => {
-  return gulp.src(['_img/photosphere/*.jpg'])
-    .pipe(changed('_site/img/photosphere'))
-    .pipe(gulp.dest('_site/img/photosphere'));
+  let DEST = '_site/img/photosphere';
+
+  return gulp.src(['_img/photosphere/*.jpg'], { encoding: false })
+    .pipe(changed(DEST, { extension: '.jpeg' }))
+    .pipe(resize({
+      formats: [
+        {
+          width: 4000,
+          format: 'jpeg',
+          jpegOptions: {quality: 80, progressive: true },
+          rename: { extname: '.jpeg' },
+        },
+      ]
+    }))
+    .pipe(gulp.dest(DEST));
 });
 
 const resizeTask = gulp.task('image-resize', gulp.parallel('image-resize-320', 'image-resize-640', 'image-resize-960', 'image-resize-1280', 'image-photosphere'));

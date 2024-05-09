@@ -4,7 +4,7 @@ location:
   locality: Nong Khiaw
   country: Laos
 
-photosphere: phadeng-peak.jpg
+photosphere: phadeng-peak.jpeg
 
 gallery:
 - gridtype: tall

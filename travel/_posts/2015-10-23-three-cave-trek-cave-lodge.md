@@ -4,7 +4,7 @@ location:
   place: Cave Lodge
   prep: at
 
-photosphere: xmas-cave.jpg
+photosphere: xmas-cave.jpeg
 
 map:
   json: cave-lodge_three-cave-trek.json
