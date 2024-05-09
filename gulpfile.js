@@ -20,7 +20,6 @@ var cssnano = require('cssnano');
 var postcss = require('gulp-postcss');
 var minify = require('gulp-minify');
 var resize = require('gulp-sharp-responsive');
-var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 var toGeoJson = require('./_gulp/togeojson.js');
 
@@ -230,36 +229,13 @@ gulp.task('image-resize-1280', () => {
 
 // Photospheres
 gulp.task('image-photosphere', () => {
-  return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
+  return gulp.src(['_img/photosphere/*.jpg'])
     .pipe(changed('_site/img/photosphere'))
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-    ]))
     .pipe(gulp.dest('_site/img/photosphere'));
 });
 
-// SVG icons
-gulp.task('image-svg', () => {
-  return gulp.src(['_svg/**/*'])
-    .pipe(changed('svg'))
-    .pipe(imagemin([
-      imagemin.svgo({
-        plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false},
-        ]
-      })
-    ]))
-    .pipe(gulp.dest('svg'));
-});
-
-const resizeTask = gulp.task('image-resize', gulp.parallel('image-resize-320', 'image-resize-640', 'image-resize-960', 'image-resize-1280'));
+const resizeTask = gulp.task('image-resize', gulp.parallel('image-resize-320', 'image-resize-640', 'image-resize-960', 'image-resize-1280', 'image-photosphere'));
 module.exports['image-resize'] = resizeTask;
-
-const imageTask = gulp.task('images', gulp.parallel('image-photosphere', 'image-svg'));
-module.exports['images'] = imageTask;
 
 //——————————————————————————————————————————————————————————————————————————————
 // Convert KML to GeoJSON
@@ -274,14 +250,14 @@ gulp.task('kml-to-geojson', () => {
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for deployment to live server.
 //——————————————————————————————————————————————————————————————————————————————
-const buildDeployTask = gulp.task('build-deploy', gulp.parallel('js', 'image-svg', 'image-photosphere', 'kml-to-geojson'));
+const buildDeployTask = gulp.task('build-deploy', gulp.parallel('js', 'image-photosphere', 'kml-to-geojson'));
 module.exports['build-deploy'] = buildDeployTask;
 
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for local development.
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('build-dev', gulp.series(
-  gulp.parallel('js', 'images'),
+  gulp.parallel('js'),
   eleventyDev,
 ));
 
