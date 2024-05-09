@@ -52,7 +52,7 @@
     }
 
     // See what our event has and either apply the state, or reset.
-    if (ev?.state?.filter) {
+    if (ev && ev.state && ev.state.filter) {
       searchInput.value = ev.state.filter;
     } else {
       searchInput.value = '';

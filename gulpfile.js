@@ -18,7 +18,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var cssnano = require('cssnano');
 var postcss = require('gulp-postcss');
-var uglify = require('gulp-uglify');
+var minify = require('gulp-minify');
 var resize = require('gulp-sharp-responsive');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
@@ -75,8 +75,13 @@ gulp.task('js-main', () => {
       '_js/*.js'
     ])
     .pipe(plumber())
-    .pipe(concat('main.min.js'))
-    // .pipe(uglify())
+    .pipe(concat('main.js'))
+    .pipe(minify({
+      ext:{
+        src:'.js',
+        min:'.min.js'
+      },
+    }))
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
@@ -93,7 +98,7 @@ gulp.task('js-sphere', () => {
     ])
     .pipe(plumber())
     .pipe(concat('photosphere.min.js'))
-    .pipe(uglify())
+    .pipe(minify())
     .pipe(gulp.dest('js'))
     .pipe(gulp.dest('_site/js'))
     .pipe(reload({stream: true}));
