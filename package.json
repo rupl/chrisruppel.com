@@ -7,8 +7,6 @@
     "node": "^20.12.2",
     "npm": "^10.5.0"
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-cache-assets": "^2.3.0",
@@ -26,6 +24,7 @@
     "gulp-if": "^3.0.0",
     "gulp-image-resize": "^0.13.0",
     "gulp-imagemin": "^6.1.1",
+    "gulp-minify": "^3.1.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^1.2.2",
