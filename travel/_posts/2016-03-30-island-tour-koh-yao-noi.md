@@ -5,7 +5,7 @@ location:
   country: Thailand
   prep: near
 
-photosphere: koh-yao-noi-tour.jpg
+photosphere: koh-yao-noi-tour.jpeg
 
 gallery:
 - gridtype: col-3

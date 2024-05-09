@@ -4,7 +4,7 @@ location:
   locality: Bangkok
   country: Thailand
 
-photosphere: jim-thompson-house.jpg
+photosphere: jim-thompson-house.jpeg
 
 gallery:
 - gridtype: tall

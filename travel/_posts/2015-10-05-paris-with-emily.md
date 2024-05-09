@@ -4,7 +4,7 @@ location:
   locality: Paris
   country: France
 
-photosphere: paris-catacombs.jpg
+photosphere: paris-catacombs.jpeg
 
 gallery:
 - gridtype: tall

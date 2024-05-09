@@ -15,7 +15,7 @@ gallery:
   comment: This art installation used life jackets of refugees arriving in Europe. Each life jacket is a real human story.
   type: two-third
 
-photosphere: copenhagen-art-dome.jpg
+photosphere: copenhagen-art-dome.jpeg
 
 tags:
 - city walking

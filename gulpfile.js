@@ -20,7 +20,6 @@ var cssnano = require('cssnano');
 var postcss = require('gulp-postcss');
 var minify = require('gulp-minify');
 var resize = require('gulp-sharp-responsive');
-var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 var toGeoJson = require('./_gulp/togeojson.js');
 
@@ -142,7 +141,7 @@ module.exports.js = jsTask;
 gulp.task('image-resize-320', () => {
   let DEST = '_site/img/img@320';
 
-  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'], { encoding: false })
     .pipe(changed(DEST, { extension: '.jpeg' }))
     .pipe(resize({
       formats: [
@@ -164,7 +163,7 @@ gulp.task('image-resize-320', () => {
 gulp.task('image-resize-640', () => {
   let DEST = '_site/img/img@640';
 
-  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'], { encoding: false })
     .pipe(changed(DEST, { extension: '.jpeg' }))
     .pipe(resize({
       formats: [
@@ -186,7 +185,7 @@ gulp.task('image-resize-640', () => {
 gulp.task('image-resize-960', () => {
   let DEST = '_site/img/img@960';
 
-  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'], { encoding: false })
     .pipe(changed(DEST, { extension: '.jpeg' }))
     .pipe(resize({
       formats: [
@@ -208,7 +207,7 @@ gulp.task('image-resize-960', () => {
 gulp.task('image-resize-1280', () => {
   let DEST = '_site/img/img@1280';
 
-  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'], { encoding: false })
     .pipe(changed(DEST, { extension: '.jpeg' }))
     .pipe(resize({
       formats: [
@@ -230,36 +229,25 @@ gulp.task('image-resize-1280', () => {
 
 // Photospheres
 gulp.task('image-photosphere', () => {
-  return gulp.src(['_img/photosphere/*', '!_img/photosphere/{IMG_,DSC_,DSCF,GOPR,Frame}*'])
-    .pipe(changed('_site/img/photosphere'))
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-    ]))
-    .pipe(gulp.dest('_site/img/photosphere'));
+  let DEST = '_site/img/photosphere';
+
+  return gulp.src(['_img/photosphere/*.jpg'], { encoding: false })
+    .pipe(changed(DEST, { extension: '.jpeg' }))
+    .pipe(resize({
+      formats: [
+        {
+          width: 4000,
+          format: 'jpeg',
+          jpegOptions: {quality: 80, progressive: true },
+          rename: { extname: '.jpeg' },
+        },
+      ]
+    }))
+    .pipe(gulp.dest(DEST));
 });
 
-// SVG icons
-gulp.task('image-svg', () => {
-  return gulp.src(['_svg/**/*'])
-    .pipe(changed('svg'))
-    .pipe(imagemin([
-      imagemin.svgo({
-        plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false},
-        ]
-      })
-    ]))
-    .pipe(gulp.dest('svg'));
-});
-
-const resizeTask = gulp.task('image-resize', gulp.parallel('image-resize-320', 'image-resize-640', 'image-resize-960', 'image-resize-1280'));
+const resizeTask = gulp.task('image-resize', gulp.parallel('image-resize-320', 'image-resize-640', 'image-resize-960', 'image-resize-1280', 'image-photosphere'));
 module.exports['image-resize'] = resizeTask;
-
-const imageTask = gulp.task('images', gulp.parallel('image-photosphere', 'image-svg'));
-module.exports['images'] = imageTask;
 
 //——————————————————————————————————————————————————————————————————————————————
 // Convert KML to GeoJSON
@@ -274,14 +262,14 @@ gulp.task('kml-to-geojson', () => {
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for deployment to live server.
 //——————————————————————————————————————————————————————————————————————————————
-const buildDeployTask = gulp.task('build-deploy', gulp.parallel('js', 'image-svg', 'image-photosphere', 'kml-to-geojson'));
+const buildDeployTask = gulp.task('build-deploy', gulp.parallel('js', 'image-photosphere', 'kml-to-geojson'));
 module.exports['build-deploy'] = buildDeployTask;
 
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for local development.
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('build-dev', gulp.series(
-  gulp.parallel('js', 'images'),
+  gulp.parallel('js'),
   eleventyDev,
 ));
 
@@ -304,7 +292,6 @@ gulp.task('watch', (done) => {
   log(c.yellow('Waiting for changes...'));
   gulp.watch('_img/photosphere/*', gulp.series('image-photosphere'));
   gulp.watch('_img/*.{jpg,jpeg,png}', gulp.parallel('image-resize'));
-  gulp.watch('_svg/*', gulp.series('image-svg'));
   gulp.watch('_js/threejs/*', gulp.series('js-sphere'));
   gulp.watch('_js/sw/*', gulp.series('js-sw'));
   gulp.watch('_js/*', gulp.series('js-main'));
