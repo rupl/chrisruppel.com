@@ -7,8 +7,8 @@
   # Global headers
   for = '/*'
   [headers.values]
-    # HSTS
-    Strict-Transport-Security = 'max-age=7776000; includeSubDomains; preload'
+    # HSTS: 190 days to bump it over 6 months.
+    Strict-Transport-Security = 'max-age=16416000; includeSubDomains; preload'
     # CSP (report-only for testing)
     Content-Security-Policy-Report-Only = '''
 default-src 'self';
