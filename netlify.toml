@@ -21,6 +21,10 @@ font-src    'self' fonts.gstatic.com;
 frame-src   'self' codepen.io;
 sandbox     'allow-scripts' 'allow-same-origin' 'allow-popups' 'allow-forms';
     '''
+    # Allow site to iframe itself. Sometimes I use iframes for code examples.
+    X-Frame-Options = 'SAMEORIGIN'
+    # More secure frame assets
+    X-Content-Type-Options = 'nosniff'
 
 #———————————————————————————————————————————————————————————————————————————————
 # Redirects
