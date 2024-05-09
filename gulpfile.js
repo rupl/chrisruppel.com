@@ -141,7 +141,7 @@ module.exports.js = jsTask;
 gulp.task('image-resize-320', () => {
   let DEST = '_site/img/img@320';
 
-  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'], { encoding: false })
     .pipe(changed(DEST, { extension: '.jpeg' }))
     .pipe(resize({
       formats: [
@@ -163,7 +163,7 @@ gulp.task('image-resize-320', () => {
 gulp.task('image-resize-640', () => {
   let DEST = '_site/img/img@640';
 
-  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'], { encoding: false })
     .pipe(changed(DEST, { extension: '.jpeg' }))
     .pipe(resize({
       formats: [
@@ -185,7 +185,7 @@ gulp.task('image-resize-640', () => {
 gulp.task('image-resize-960', () => {
   let DEST = '_site/img/img@960';
 
-  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'], { encoding: false })
     .pipe(changed(DEST, { extension: '.jpeg' }))
     .pipe(resize({
       formats: [
@@ -207,7 +207,7 @@ gulp.task('image-resize-960', () => {
 gulp.task('image-resize-1280', () => {
   let DEST = '_site/img/img@1280';
 
-  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'])
+  return gulp.src(['_img/*.{jpg,jpeg,png}', '!_img/photosphere/*'], { encoding: false })
     .pipe(changed(DEST, { extension: '.jpeg' }))
     .pipe(resize({
       formats: [
