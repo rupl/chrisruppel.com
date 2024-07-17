@@ -31,6 +31,10 @@ gallery2:
     alt: A man stacks solar panels against the fountain in Freiburg's Rathausplatz
     comment: Keeping things organized.
 
+syndication:
+  - type: Mastodon
+    href: https://mastodon.social/@rupl/112800728346097230
+
 tags:
 - balkonsolar
 - diy
