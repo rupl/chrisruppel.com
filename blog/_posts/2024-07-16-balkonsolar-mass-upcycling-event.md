@@ -24,12 +24,14 @@ gallery2:
   - src: solar-upcycling-2.jpeg
     alt: Wide angle photo of the event with a single solar panel standing as an example near the middle of the photo.
     comment: I helped put together the example bracket in the center of the photo.
-  - src: solar-upcycling-3.jpeg
-    alt: TV crew interviews a volunteer holding a solar panel, with several solar panels laying around them on the cobblestone.
-    comment: TV interview in progress.
+  - src: solar-upcycling-6.jpeg
+    alt: Chris is pictured connecting the solar panel to the inverter.
+    comment: I'm connecting newly-crimped MC4 connectors to the inverter.
+    bgpad: 70%
   - src: solar-upcycling-4.jpeg
     alt: A man stacks solar panels against the fountain in Freiburg's Rathausplatz
     comment: Keeping things organized.
+    bgpad: 70%
 
 syndication:
   - type: Mastodon
