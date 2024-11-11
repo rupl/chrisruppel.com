@@ -45,16 +45,17 @@
 
   {% if meta != null %}
     <!-- Social tags -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <meta name="twitter:dnt" content="on">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rupl">
     <meta name="twitter:creator" content="@rupl">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ url }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{{ title | escape | strip_newlines }}">
     <meta property="og:description" content="{% if summary %}{{ summary | strip_html | strip_newlines | escape }}{% else %}{{ content | truncatewords: 44, '...' | strip_html | escape }}{% endif %}">
     {% capture social_filename %}{%- if gallery[0].src %}{{ gallery[0].src | split: '.' | first }}{% else %}{{ gallery[1].src | split: '.' | first }}{% endif -%}{% endcapture -%}
-    <meta property="og:image" content="{{ site.img-host }}/img/img@640/{{ social_filename }}.jpeg">
+    {% if social_filename != '' %}<meta property="og:image" content="{{ site.img-host }}/img/img@640/{{ social_filename }}.jpeg">{% endif %}
     <meta property="fediverse:creator" content="@rupl@mastodon.social" />
   {% endif %}
 
