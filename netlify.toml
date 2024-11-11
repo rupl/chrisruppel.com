@@ -51,6 +51,10 @@
   to = '/blog/brave-rewards-github-pages/'
   status = 301
   force = true
+[[redirects]]
+  from = '/blog/tags/*'
+  to = '/tags/:splat'
+  status = 301
 
 # Web Monetization
 [[redirects]]
