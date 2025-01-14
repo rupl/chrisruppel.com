@@ -9,6 +9,15 @@
   padding-block-end: 1.5rem;
 }
 
+.webmentions__list ul {
+  margin-inline: 0;
+}
+
+.webmentions__list li {
+  margin-block: 1.5rem;
+  padding: 0;
+}
+
 .webmentions__form {
   display: flex;
   flex-flow: row nowrap;

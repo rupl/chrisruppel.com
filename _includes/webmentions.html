@@ -13,7 +13,7 @@
   <div class="webmentions__list stack">
     <h3>Mentioned by</h3>
     {% assign wmFound = false %}
-    <ul aria-label="Web mentions">
+    <ul aria-label="Web mentions" role="list">
     {% for mention in webmentions %}
       {%- if mention.wm-target contains page.url -%}
         {% assign wmFound = true %}
