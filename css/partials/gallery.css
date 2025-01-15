@@ -19,8 +19,8 @@
 }
 
 .media {
-  max-width: attr(data-width);
-  width: 100%;
+  max-width: 100%;
+  width: attr(data-width);
 }
 
 #photosphere .caption,
