@@ -1,6 +1,14 @@
-<div class="video">
+<figure class="media" {% if video.width != nil %}style="width: {{ video.width }}"{% endif %}>
   <video controls playsinline
     src="{{ site.img-host }}/img/media/{{ video.src }}"
-    poster="{{ site.img-host }}/img/media/{{ video.poster }}">
+    {% if video.poster != nil %}poster="{{ site.img-host }}/img/media/{{ video.poster }}"{% endif %}>
   </video>
-</div>
+  {% if video.width != nil %}
+  <style>
+    video {
+      width: {{ video.width }};
+    }
+  </style>
+  {% endif %}
+  {% if video.caption != nil %}<figcaption class="caption">{{ video.caption }}</figcaption>{% endif %}
+</figure>

@@ -18,6 +18,11 @@
   border-radius: 4px
 }
 
+.media {
+  max-width: attr(data-width);
+  width: 100%;
+}
+
 #photosphere .caption,
 #photosphere .fullscreen,
 .gallery .caption,
@@ -38,8 +43,7 @@
   #photosphere .caption,
   #photosphere .fullscreen,
   .gallery .caption,
-  .gallery figcaption,
-  .media .caption {
+  .gallery figcaption {
     margin: 0 20%
   }
 }
