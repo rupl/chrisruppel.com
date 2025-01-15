@@ -195,10 +195,11 @@ del + .oops {
 of this once it has run. The selector is designed to work with prism.js */
 main :not(pre) > code {
   display: inline-block;
-  font-weight: 400;
   padding: 0 .2em;
   border-radius: .2em;
   background: #ddd;
+  font-size: .8em;
+  font-weight: 400;
 }
 
 main aside.note {
