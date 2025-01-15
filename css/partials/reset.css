@@ -33,6 +33,11 @@ ul[role="list"] {
   list-style-type: none;
 }
 
+ul[role="list"] li {
+  margin: 0;
+  padding: 0;
+}
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
