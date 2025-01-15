@@ -10,11 +10,12 @@
 }
 
 .webmentions__list ul {
+  margin-block-start: 1rem;
   margin-inline: 0;
 }
 
-.webmentions__list li {
-  margin-block: 1.5rem;
+.webmentions__list li + li {
+  margin-block-start: 1rem;
   padding: 0;
 }
 
