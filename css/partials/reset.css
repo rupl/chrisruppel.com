@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+/* Allow transitions that involve keywords such as `auto` */
+:root {
+  interpolate-size: allow-keywords;
+}
+
 /* Remove default margin */
 body,
 h1,
