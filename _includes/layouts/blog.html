@@ -21,6 +21,11 @@ comments: true
     {% endif %}
 
     {{ content | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&amp;', '&' | replace: '<pre><code>  <picture', '<picture' | replace: '</figure></code></pre>', '</figure>' }}
+
+    {% if work-cta != nil %}
+      {% include 'work-cta.html' %}
+    {% endif %}
+
     <div class="the-end">
       <span class="visually-hidden">End of post.</span>
       <span aria-hidden="true">× × ×</span>
