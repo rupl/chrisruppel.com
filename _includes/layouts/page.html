@@ -22,6 +22,7 @@
     <link rel="me" href="https://rupl.github.io">
     <link rel="me authn" href="https://github.com/rupl">
     <link rel="me" href="https://mastodon.social/@rupl">
+    <link rel="me" href="https://pixelfed.social/@rupl">
     <link rel="pgpkey" href="/pgp.pub">
 
     <!-- webmention endpoint -->
@@ -46,10 +47,7 @@
 
   {% if meta != null %}
     <!-- Social tags -->
-    <meta name="twitter:dnt" content="on">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@rupl">
-    <meta name="twitter:creator" content="@rupl">
+    <meta property="og:site_name" content="Chris Ruppel">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{{ title | escape | strip_newlines }}">
