@@ -13,6 +13,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Personal website of Chris Ruppel.">
     <link rel="home" href="{{ site.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="192x192" href="/static/chris-ruppel-2015-noborder@192x192.png">
 
@@ -45,7 +46,6 @@
 
   {% if meta != null %}
     <!-- Social tags -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <meta name="twitter:dnt" content="on">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rupl">
