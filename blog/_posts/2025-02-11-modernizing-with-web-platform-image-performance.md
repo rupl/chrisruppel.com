@@ -16,6 +16,7 @@ work-cta: true
 tags:
 - css
 - javascript
+- performance
 - web platform
 ---
 
