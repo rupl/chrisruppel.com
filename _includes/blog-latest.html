@@ -7,7 +7,7 @@
       </h2>
     </header>
     <footer>
-      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b %Y" }}</time>
       {% if post.data.tags.size > 0 %}
         {% include 'tags.html', tags: post.data.tags %}
       {% endif %}

@@ -1,0 +1,34 @@
+.work-cta {
+  max-width: var(--text-max);
+  border: 5px solid #ddd;
+  background: #eee;
+  border-radius: 11px;
+  padding: 1em;
+  font-size: 1.125em;
+  text-align: center;
+  position: relative;
+
+  .title--badge {
+    text-align: end;
+    background: #abf;
+    border: 2px solid #36f;
+    border-radius: 5px;
+    padding-inline: 1em;
+    font-family: var(--font-copy);
+    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 2.5vw, 1.6875rem);
+    position: absolute;
+    top: -.8em;
+    right: -1em;
+    transform: rotate(8deg);
+  }
+
+  .work-cta__intro {
+    padding-inline: calc(var(--section-padding) * 2);
+    text-wrap: balance;
+  }
+
+  &.contact form {
+    background: none;
+  }
+}

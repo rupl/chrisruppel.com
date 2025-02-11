@@ -54,14 +54,16 @@ abbr[lang] {
 blockquote {
   font-style: italic;
   opacity: .8;
-  padding: .1em 1em;
-  margin: 0 .5em;
-  background: rgba(#000, .1);
-
-  @media (min-width: 600px) {
-    margin: 0 1em 0 2em;
-  }
+  margin-inline: 1em;
+  padding-block: .1em;
+  padding-inline: 1em;
+  border-inline-start: 1em solid #ddd;
 }
+
+blockquote p + p {
+  margin-block-start: .5em;
+}
+
 
 hr {
   --flow-space: 3rem;
@@ -193,10 +195,12 @@ del + .oops {
 of this once it has run. The selector is designed to work with prism.js */
 main :not(pre) > code {
   display: inline-block;
-  font-weight: 400;
   padding: 0 .2em;
   border-radius: .2em;
   background: #ddd;
+  font-family: var(--font-mono);
+  font-size: .8em;
+  font-weight: 400;
 }
 
 main aside.note {

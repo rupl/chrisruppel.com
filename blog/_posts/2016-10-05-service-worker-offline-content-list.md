@@ -3,6 +3,8 @@ title: Displaying a user's offline content list
 
 summary: Learn how to display a list of user-saved articles when they return to your website while offline.
 
+work-cta: true
+
 tags:
 - offline
 - javascript

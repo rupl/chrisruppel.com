@@ -25,7 +25,7 @@
   filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000);
 }
 
-.site-footer img {
+.site-footer .face-link img {
   display: initial;
   position: relative;
   z-index: 1;
@@ -39,7 +39,51 @@
   justify-content: flex-end;
 }
 
+.site-footer .social-links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .25rem;
+}
+
+.site-footer .social-link {
+  display: block;
+  flex: 0 0 36px;
+}
+
+.site-footer .social-link--drupal {
+  margin-inline-start: .1rem;
+}
+
+.site-footer .social-link--pixelfed {
+  flex-basis: 44px;
+}
+
+.site-footer .social-link a {
+  display: block;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  line-height: 0;
+}
+
+.site-footer .social-link a svg {
+  display: block;
+}
+
+.site-footer .social-link a:focus-visible {
+  border-color: black;
+}
+
+.site-footer .social-link--pixelfed a:focus-visible #icon--pf-bg {
+  fill: black;
+}
+
+
 @media (min-width: 1200px) {
+  /**
+   * Fixed-position column on desktop layout
+   */
   .site-footer .wrapper {
     position: fixed;
     top: 0;

@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+/* Allow transitions that involve keywords such as `auto` */
+:root {
+  interpolate-size: allow-keywords;
+}
+
 /* Remove default margin */
 body,
 h1,
@@ -31,6 +36,11 @@ ul[role="list"] {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+ul[role="list"] li {
+  margin: 0;
+  padding: 0;
 }
 
 /* Set core root defaults */

@@ -3,6 +3,8 @@ title: Progressive Web Apps for all Drupal sites
 
 summary: Announcing a new Drupal module that enhances your existing site with drop-in support for Progressive Web App functionality.
 
+work-cta: true
+
 tags:
 - drupal
 - javascript
