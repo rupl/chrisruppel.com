@@ -7,9 +7,9 @@ video:
   src: intersection-observer-in-action.mp4
   caption: A screencast showing how all three popup images get lazy-loaded; two show up quite quickly, but one only loads after scrolling down the page and revealing the link which will trigger its popup.
 
-# syndication:
-  # - type: Mastodon
-    # href: https://mastodon.social/@rupl/XXX
+syndication:
+  - type: Mastodon
+    href: https://mastodon.social/@rupl/113985477566108627
 
 work-cta: true
 
