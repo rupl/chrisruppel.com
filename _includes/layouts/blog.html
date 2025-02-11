@@ -8,7 +8,7 @@ comments: true
     <h1 class="title--main p-name">{{ title }}</h1>
   </header>
   <div class="subtitle">
-    <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+    <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%-d %b %Y' }}</time>
   </div>
 
   <aside class="intro summary p-summary" aria-label="Summary">{{ summary }}</aside>
