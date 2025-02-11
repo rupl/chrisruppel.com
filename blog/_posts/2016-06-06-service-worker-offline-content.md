@@ -6,6 +6,8 @@ tags:
 - javascript
 - serviceworker
 
+work-cta: true
+
 summary: Learn how to add content to the Service Worker cache at the request of the visitor, then serve it offline.
 ---
 

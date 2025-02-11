@@ -3,6 +3,8 @@ title: Enhancing HTML with Service Worker Cache
 
 summary: Using the Service Worker offline cache to progressively enhance static content.
 
+work-cta: true
+
 tags:
 - offline
 - javascript

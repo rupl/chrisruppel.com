@@ -3,6 +3,8 @@ title: "CSS Transforms Level 2: shorthand properties"
 
 summary: A preview of an upcoming web standard that lets you use a shorter, more reliable syntax for simple CSS Transforms.
 
+work-cta: true
+
 tags:
 - css
 - web standards

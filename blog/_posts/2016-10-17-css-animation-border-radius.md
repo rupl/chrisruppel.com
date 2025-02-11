@@ -7,6 +7,8 @@ syndication:
 - type: Twitter
   href: https://twitter.com/rupl/status/787986342949089281
 
+work-cta: true
+
 tags:
 - css
 - animation
