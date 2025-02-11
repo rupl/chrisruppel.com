@@ -198,6 +198,7 @@ main :not(pre) > code {
   padding: 0 .2em;
   border-radius: .2em;
   background: #ddd;
+  font-family: var(--font-mono);
   font-size: .8em;
   font-weight: 400;
 }
