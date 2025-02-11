@@ -44,20 +44,39 @@
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap: .5rem;
+  gap: .25rem;
 }
 
 .site-footer .social-link {
   display: block;
-  flex: 0 0 32px;
+  flex: 0 0 36px;
+}
+
+.site-footer .social-link--drupal {
+  margin-inline-start: .1rem;
 }
 
 .site-footer .social-link--pixelfed {
-  flex-basis: 42px;
+  flex-basis: 44px;
 }
 
 .site-footer .social-link a {
   display: block;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  line-height: 0;
+}
+
+.site-footer .social-link a svg {
+  display: block;
+}
+
+.site-footer .social-link a:focus-visible {
+  border-color: black;
+}
+
+.site-footer .social-link--pixelfed a:focus-visible #icon--pf-bg {
+  fill: black;
 }
 
 
