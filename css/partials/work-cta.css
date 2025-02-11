@@ -4,6 +4,8 @@
   background: #eee;
   border-radius: 11px;
   padding: 1em;
+  font-size: 1.125em;
+  text-align: center;
   position: relative;
 
   .title--badge {
@@ -16,13 +18,14 @@
     font-size: 1.5rem;
     font-size: clamp(1.25rem, 2.5vw, 1.6875rem);
     position: absolute;
-    top: -1em;
+    top: -.8em;
     right: -1em;
-    transform: rotate(6deg);
+    transform: rotate(8deg);
   }
 
   .work-cta__intro {
     padding-inline: calc(var(--section-padding) * 2);
+    text-wrap: balance;
   }
 
   &.contact form {
