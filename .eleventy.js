@@ -12,6 +12,7 @@ module.exports = function(config) {
   config.addLayoutAlias('gallery', 'layouts/gallery.html');
   config.addLayoutAlias('link', 'layouts/link.html');
   config.addLayoutAlias('naked', 'layouts/naked.html');
+  config.addLayoutAlias('none', 'layouts/none.html');
   config.addLayoutAlias('page', 'layouts/page.html');
   config.addLayoutAlias('quote', 'layouts/quote.html');
   config.addLayoutAlias('trip', 'layouts/trip.html');
