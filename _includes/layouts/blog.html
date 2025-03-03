@@ -23,6 +23,7 @@ comments: true
     {{ content | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&quot;', '"' | replace: '&amp;', '&' | replace: '<pre><code>  <picture', '<picture' | replace: '</figure></code></pre>', '</figure>' }}
 
     {% if work-cta != nil %}
+      <br>
       {% include 'work-cta.html' %}
     {% endif %}
 
