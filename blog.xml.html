@@ -3,25 +3,27 @@ layout: null
 permalink: /blog.xml
 ---
 <?xml version="1.0" encoding="utf-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <atom:link href="{{ site.url }}/blog.xml" rel="self" type="application/rss+xml" />
+<feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ site.name }}'s Blog</title>
-    <link>{{ site.url }}/blog/</link>
-    <description>Chris Ruppel's blog. Web development, digital art, and everything in between.</description>
-    <language>en</language>
-    <managingEditor>chris.ruppel@gmail.com (Chris Ruppel)</managingEditor>
-    <webMaster>chris.ruppel@gmail.com (Chris Ruppel)</webMaster>
+    <link href="{{ site.url }}/blog.xml" rel="self" />
+    <link href="{{ site.url }}" />
+    <id>{{ site.url }}/</id>
+    <subtitle>Chris Ruppel's blog — web developer and aspiring solarpunk.</subtitle>
+    <updated>{{'now' | date: '%Y-%m-%dT%H:%M:%S+01:00'}}</updated>
+    <author>
+      <name>Chris Ruppel</name>
+    </author>
 
     {% for post in collections.blog %}
-    <item>
+    <entry>
       <title>{{ post.data.title }}</title>
-      <link>{{ site.url }}{{ post.url }}</link>
-      <description>{{ post.data.summary | escape }}</description>
-      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-      <pubDate>{{ post.date | date: '%a, %d %b %Y %H:%M:%S %z' }}</pubDate>
-    </item>
+      <link href="{{ site.url }}{{ post.url }}" />
+      <id>{{ site.url }}{{ post.url }}</id>
+      <summary>{% if post.data.summary %}{{ post.data.summary | escape }}{% else %}{{ post.data.title | escape }}{% endif %}</summary>
+      <updated>{{ post.date | date: '%Y-%m-%dT%H:%M:%S+01:00' }}</updated>
+      <content type="html">
+        {{- post.content | escape | strip -}}
+      </content>
+    </entry>
     {% endfor %}
-
-  </channel>
-</rss>
+</feed>
