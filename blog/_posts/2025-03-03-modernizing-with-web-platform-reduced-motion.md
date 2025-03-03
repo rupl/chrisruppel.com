@@ -1,6 +1,6 @@
 ---
 title: 'Modernizing with the Web Platform: Reduced Motion'
-summary: Demonstrating how the modern Web Platform can drastically simplify and enrich an old codebase.
+summary: Demonstrating how the modern Web Platform can simplify motion reduction on an old codebase.
 
 video:
   width: 600px
