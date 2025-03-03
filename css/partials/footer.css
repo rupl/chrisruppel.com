@@ -52,12 +52,21 @@
   flex: 0 0 36px;
 }
 
+.site-footer .social-link--mastodon {
+  position: relative;
+  top: 2px;
+}
+
 .site-footer .social-link--drupal {
   margin-inline-start: .1rem;
 }
 
 .site-footer .social-link--pixelfed {
   flex-basis: 44px;
+}
+
+.site-footer .social-link--rss svg {
+  border-radius: 3px;
 }
 
 .site-footer .social-link a {
