@@ -1,0 +1,8 @@
+---
+layout: none
+permalink: robots.txt
+---
+{% for bot in bots %}
+User-agent: {{ bot }}
+Disallow: /
+{% endfor %}
