@@ -115,7 +115,7 @@ The settings page is an HTML form which has some JavaScript event handlers attac
 
 ```js
 animationCheckbox.addEventListener('change', (ev) => {
-  // Add or remove the data attribute on the <html> element.
+  // Add or remove the data attribute on the &lt;html> element.
   if (ev.target.checked) {
     root.removeAttribute('data-reduce-motion');
   } else {
@@ -136,7 +136,7 @@ The CSS to drive the JS-driven data attribute has to be altered slightly; one of
  * Reduced motion via JS-powered settings.
  *
  * Same exact behavior as MQ but with the JS-powered settings that look for the
- * data-reduce-motion attribute on the root element <html>.
+ * data-reduce-motion attribute on the root element &lt;html>.
  */
 html[data-reduce-motion] {
   /* repeat the contents of the media query block from before */
