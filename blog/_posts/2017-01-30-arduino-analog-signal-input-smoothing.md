@@ -3,6 +3,8 @@ title: Arduino analog signals and input smoothing
 
 summary: Stabilize inconsistent analog input signals with input smoothing. Some basic math operations help us collect more reliable data.
 
+work-cta: true
+
 tags:
 - arduino
 - electronics

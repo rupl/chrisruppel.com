@@ -3,6 +3,29 @@ title: LilyPad Arduino LED Purse
 
 summary: Learning how to program Arduino in the open. This project used the LilyPad Arduino to decorate a purse with LEDs.
 
+# this will be social image
+gallery:
+  - src: lilypad-arduino-purse-2.jpeg
+    type: wide
+    bgpad: 100%
+    alt: All circuits sewn into place, with LilyPad terminals 2 and 3 providing positive signal, and a GND wire which forks into two paths.
+    caption: The final stitching pattern with positive and ground lines overlaid to show the flow of current.
+
+gallery2:
+  - src: lilypad-arduino-purse-1.jpeg
+    type: wide
+    bgpad: 100%
+    bgpos: 50% 100%
+    alt: Pink purse with LilyPad Arduino and battery sewn into place
+
+gallery3:
+  - src: lilypad-arduino-led-purse.gif
+    type: wide
+    bgpad: 100%
+    alt: Pink purse with LilyPad Arduino and battery sewn into place
+
+updated: '2025-03-04T10:35:00+01:00'
+
 tags:
 - lilypad
 - arduino
@@ -17,7 +40,7 @@ First things first, you have to have an object which provides a good foundation 
 
 I couldn't dissect it without buying it first, but I found one with a firm inner layer that felt fit to support the LilyPad plus a battery. It turned out to be perfect. I found a sturdy, sewing-friendly grid pattern once I cut open the outer fabric of the purse:
 
-<img src="{{ site.img-host }}/img/lilypad-arduino-purse-1.jpg" alt="Purse with LilyPad Arduino and battery sewn into place">
+{% include 'gallery.html', gallery: gallery2 %}
 
 Really though, if you attempt a project using the wrong garment, it will make things hard to build or impractical to wear once the project is complete. Take care to select a good base for your project!
 
@@ -39,7 +62,7 @@ Subsequent projects were far easier to execute by gluing first, then sewing the 
 
 Remember to follow your sketch. Do not deviate! You can see my photo where I did not sketch first and relied on a hand-drawing I had for reference. The thread coming from terminal 3 ended up crossing <abbr title="ground">GND</abbr> and I shorted the LEDs until I pulled all the thread out and started over.
 
-<img src="{{ site.img-host }}/img/lilypad-arduino-purse-2.jpg" alt="All circuits sewn into place, with terminals 2 and 3 providing positive signal, and a GND wire which forks into two paths.">
+{% include 'gallery.html' %}
 
 ## Programming your circuits
 
@@ -88,7 +111,7 @@ void loop() {
 
 Uploading the program to the LilyPad sets up an endless cycle which looks something like this:
 
-<img src="{{ site.img-host }}/img/lilypad-arduino-led-purse.gif" alt="looping GIF of the LEDs blinking">
+<img src="{{ site.img-host }}/img/lilypad-arduino-led-purse.gif" alt="looping animation of the two halves of the heart blinking in sequence">
 
 The fun part is that each time I visit her, I can reprogram the Arduino to do something different! I could even stitch new sensors on or add a button. There are plenty of terminals left on the Arduino. Code-wise, I could add [pulse width modulation](/blog/lilypad-arduino-light-sensor-pulse-width-modulation//#blinking-vs-fading-leds) so the LEDs fade on and off instead of just blinking.
 

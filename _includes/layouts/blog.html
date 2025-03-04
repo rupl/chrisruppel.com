@@ -8,7 +8,11 @@ comments: true
     <h1 class="title--main p-name">{{ title }}</h1>
   </header>
   <div class="subtitle">
-    <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d 12:00:00' }}">{{ page.date | date: '%-d %b %Y' }}</time>
+    <span class="visually-hidden">First pubished on</span>
+    <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%dT12:00:00Z' }}">{{ page.date | date: '%-d %b %Y' }}</time>
+    {%- if updated -%}
+      , <small><em>last updated <time class="dt-updated" datetime="{{ updated | date: '%Y-%m-%dT%H:%M:%SZ' }}">{{ updated | date: '%-d %b %Y' }}</time></em></small>
+    {% endif -%}
   </div>
 
   <aside class="intro summary p-summary" aria-label="Summary">{{ summary }}</aside>

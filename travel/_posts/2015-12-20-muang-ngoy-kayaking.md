@@ -42,6 +42,7 @@ gallery:
 
 tags:
 - kayaking
+- rivers
 - sunsets
 - transport
 
