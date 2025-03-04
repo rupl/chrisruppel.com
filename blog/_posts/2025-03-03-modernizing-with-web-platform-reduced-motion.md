@@ -7,9 +7,9 @@ video:
   src: devilsgame-prefers-reduced-motion-media-query.mp4
   caption: A screencast showing enabling the `prefers-reduced-motion` CSS Media Query has a real-time effect on the web page, disabling all motion including CSS Transitions, CSS Animations, and animated GIFs.
 
-# syndication:
-  # - type: Mastodon
-    # href: https://mastodon.social/@rupl/XXX
+syndication:
+  - type: Mastodon
+    href: https://mastodon.social/@rupl/114104410772329715
 
 work-cta: true
 
