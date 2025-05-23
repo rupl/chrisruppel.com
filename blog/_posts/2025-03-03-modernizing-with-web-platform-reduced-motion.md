@@ -33,9 +33,7 @@ This is part two of a series about the power of the modern Web Platform. I wrote
 
 In 2018 I was hired to build a web prototype for what the client hoped to turn into iOS/Android apps down the road. It is billed as [DevilsGame, an immersive cyber novel](https://devilsgame.com) — different than an ebook, but ultimately long-form reading that takes advantage of its home on the web, with links to both real and fictional websites that bring the story to life.
 
-I produced a PWA with paywalled content so people can begin reading for free, but have to purchase the entire story. The client was quite happy with it, but wanted to focus on native apps after it was feature-complete. A separate firm was hired to manage that effort, which proved to be expensive and slow-going compared to the agility of a website.
-
-After several years they came back to me asking if we could invest even more in the PWA. The web platform had added some very nice capabilities in the mean time. So I gave the old codebase a solid audit and came back with a plan to improve performance, accessibility, and overall UX.
+I produced a Progressive Web App (PWA) with paywalled content so people can begin reading for free, but have to purchase the entire story. The client was quite happy with it, and after several years they came back to me asking if we could invest even more in the PWA. The web platform had added some very nice capabilities in the mean time. So I gave the old codebase a solid audit and came back with a plan to improve performance, accessibility, and overall UX.
 
 This article will focus on reducing motion for accessibility purposes.
 
