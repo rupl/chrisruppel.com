@@ -17,6 +17,7 @@ tags:
 - accessibility
 - css
 - javascript
+- pwa
 - web platform
 ---
 

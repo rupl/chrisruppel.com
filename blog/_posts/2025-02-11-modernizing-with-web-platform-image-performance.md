@@ -17,6 +17,7 @@ tags:
 - css
 - javascript
 - performance
+- pwa
 - web platform
 ---
 
