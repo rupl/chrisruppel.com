@@ -25,7 +25,7 @@ This is part two of a series about the power of the modern Web Platform. I wrote
 
 - Part 1: [Image performance](/blog/modernizing-with-web-platform-image-performance/)
 - **Part 2: Reduced motion in CSS and images (this article)**
-- Part 3: Web Share API
+- Part 3: [Web Share API](/blog/modernizing-with-web-platform-web-share-api/)
 - Part 4: HTML5 Dialog for popups and status messages
 - Part 5: Paywall-aware Service Worker and Cache storage
 

@@ -24,8 +24,8 @@ tags:
 This is part one of a series about the power of the modern Web Platform. I wrote each article based on the learnings from a project built in 2018, then refreshed in 2024.
 
 - **Part 1: Image performance (this article)**
-- Part 2: Reduced motion in CSS and images
-- Part 3: Web Share API
+- Part 2: [Reduced motion in CSS and images](/blog/modernizing-with-web-platform-reduced-motion/)
+- Part 3: [Web Share API](/blog/modernizing-with-web-platform-web-share-api/)
 - Part 4: HTML5 Dialog for popups and status messages
 - Part 5: Paywall-aware Service Worker and Cache storage
 
