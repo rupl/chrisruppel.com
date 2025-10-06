@@ -42,32 +42,109 @@
   map.on('load', function () {
     // @see https://docs.mapbox.com/mapbox-gl-js/example/zoomto-linestring/
     map.addSource('LineString', {
-      'type': 'geojson',
-      'data': geojson,
+      type: 'geojson',
+      data: geojson,
+      lineMetrics: true,
     });
+
+    //
+    // Elevation data
+    //
+    // We'll use this twice. Once to paint the map line, and another time to
+    // draw a sparkline. Compute the data so that later events have it ready.
+    //
+    const elevation = [];
+    for(const k in geojson.features) {
+      const data = geojson.features[k];
+      if (data.geometry.type  === 'GeometryCollection') {
+        // debug
+        // console.log(data.properties.name);
+        // console.log(data.geometry.geometries[0].coordinates.map(c => c[2]));
+
+        elevation.push(...data.geometry.geometries[0].coordinates.map(c => c[2]));
+
+        // debug: 11ty sparkline
+        // console.log(`https://v1.sparkline.11ty.dev/300x100/${[...data.geometry.geometries[0].coordinates.map(c => Math.floor(c[2]))].join(',')}/%23000000/`);
+      }
+    }
+
+    //
+    // Populate elevation gradient
+    //
+    function populateElevationGradient(data) {
+      // Basic elevation stats. We need them a few times.
+      const stats = {
+        length: data.length,
+        max: Math.round(data.reduce((prev, current) => (prev && prev > current) ? prev : current)),
+        min: Math.round(data.reduce((prev, current) => (prev && prev < current) ? prev : current)),
+      };
+      stats.range = stats.max - stats.min;
+
+      // Convert absolute elevation to range of percentages.
+      const percentages = data.map(e => (((e - stats.min) / stats.range * 100).toFixed(2)));
+
+      // Build gradient. It's green at lowest and red at highest. It will draw
+      // any number of peaks, not just a linear gradient.
+      const gradient = [];
+      let previousStep;
+      for (j = 0; j < percentages.length; j++) {
+        // By using toFixed(2), we are deduplicating the data as well, cutting
+        // it down to a 100-step gradient. In practice this will drop a lot of
+        // elevation precision, but for my mapping needs it works just fine.
+        //
+        // Increase toFixed() to increase precision of gradient
+        const thisStep = Number((j/percentages.length).toFixed(2));
+
+        // Push to our gradient array.
+        if (thisStep !== previousStep) {
+          gradient.push(thisStep);
+          gradient.push(`hsl(${95 - Math.floor(percentages[j])}, 100%, 52%)`);
+        }
+
+        // Prep for next loop.
+        previousStep = thisStep;
+      }
+
+      // console.log('gradient', gradient);
+      return gradient;
+    }
+
     map.addLayer({
-      'id': 'LineString',
-      'type': 'line',
-      'source': 'LineString',
-      'layout': {
+      id: 'LineString',
+      type: 'line',
+      source: 'LineString',
+      layout: {
         'line-join': 'round',
         'line-cap': 'round',
       },
-      'paint': {
+      paint: {
         'line-color': '#36f',
         'line-width': 5,
+        {% if map.elevation == true %}
+        'line-gradient': [
+          'interpolate',
+          ['linear'],
+          ['line-progress'],
+          ...populateElevationGradient(elevation)
+        ]
+        {% endif %}
       },
+      layout: {
+        'line-cap': 'round',
+        'line-join': 'round'
+      }
     });
 
     map.addSource('places', {
-      'type': 'geojson',
-      'data': geojson,
+      type: 'geojson',
+      data: geojson,
     });
+
     map.addLayer({
-      'id': 'places',
-      'type': 'symbol',
-      'source': 'places',
-      'layout': {
+      id: 'places',
+      type: 'symbol',
+      source: 'places',
+      layout: {
         'icon-image': 'circle-15',
         'icon-allow-overlap': true,
       }
@@ -89,7 +166,7 @@
     // Pass the first coordinates in the LineString to `lngLatBounds` &
     // wrap each coordinate pair in `extend` to include them in the bounds
     // result. A variation of this technique could be applied to zooming
-    // to the bounds of multiple Points or Polygon geomteries - it just
+    // to the bounds of multiple Points or Polygon geometries - it just
     // requires wrapping all the coordinates with the extend method.
     var bounds = coordinates.reduce(
       function (bounds, coord) {

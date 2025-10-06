@@ -8,6 +8,7 @@ summary: I went on a two-day hut hike with a friend in the Rätikon mountains of
 
 map:
   json: schesaplanahuette-2025.json
+  elevation: true
 
 gallery:
   - src: schesaplanahuette-social.jpeg
