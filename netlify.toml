@@ -11,15 +11,15 @@
     Strict-Transport-Security = 'max-age=16416000; includeSubDomains; preload'
     # CSP (report-only for testing)
     Content-Security-Policy-Report-Only = '''
-      default-src 'self';
-      script-src  'self' *.mapbox.com codepen.io *.codepen.io 'unsafe-inline' 'unsafe-eval';
-      worker-src  'self' *.mapbox.com blob:;
-      style-src   'self' *.mapbox.com fonts.googleapis.com 'unsafe-inline';
-      img-src     'self' *.mapbox.com assets.chrisruppel.com data: blob:;
-      connect-src 'self' *.mapbox.com assets.chrisruppel.com;
-      font-src    'self' fonts.gstatic.com;
-      frame-src   'self' codepen.io;
-      sandbox     allow-scripts allow-same-origin allow-popups allow-forms;
+default-src 'self';
+script-src  'self' *.mapbox.com codepen.io *.codepen.io 'unsafe-inline' 'unsafe-eval';
+worker-src  'self' *.mapbox.com blob:;
+style-src   'self' *.mapbox.com fonts.googleapis.com 'unsafe-inline';
+img-src     'self' *.mapbox.com assets.chrisruppel.com data: blob:;
+connect-src 'self' *.mapbox.com assets.chrisruppel.com;
+font-src    'self' fonts.gstatic.com;
+frame-src   'self' codepen.io;
+sandbox     allow-scripts allow-same-origin allow-popups allow-forms;
     '''
     # Allow site to iframe itself. Sometimes I use iframes for code examples.
     X-Frame-Options = 'SAMEORIGIN'
