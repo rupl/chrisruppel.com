@@ -8,6 +8,7 @@ summary: I went on a two-day hike in the Alps with friends.
 
 map:
   json: badushuette-day1.json
+  elevation: true
 
 gallery:
   - gridtype: col-2
